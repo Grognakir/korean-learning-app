@@ -1,0 +1,393 @@
+{
+  "textbook_id": "inha_book_1",
+  "lesson_number": 1,
+  "title": "인사와 소개",
+  "pages": [
+    {
+      "page_number": null,
+      "page_role": "lesson_opening",
+      "source_photo": "photo_1",
+      "blocks": [
+        {
+          "type": "lesson_toc",
+          "sections": [
+            { "key": "준비하기 1", "items": [
+              { "label": "인사하기", "block_ref": "text-greeting-dialogue" },
+              { "label": "N입니다 / N입니까?", "block_ref": "grammar-1" },
+              { "label": "N이/가", "block_ref": "grammar-2" },
+              { "label": "N은/는①", "block_ref": "grammar-3" }
+            ] },
+            { "key": "준비하기 2", "items": [
+              { "label": "자기소개하기", "block_ref": null },
+              { "label": "N이/가 아니다", "block_ref": null },
+              { "label": "N도", "block_ref": null }
+            ] },
+            { "key": "말하기", "items": [
+              { "label": "자기소개하기", "block_ref": null }
+            ] },
+            { "key": "듣고 말하기", "items": [
+              { "label": "자기소개를 듣고 말하기", "block_ref": null }
+            ] },
+            { "key": "읽고 말하기", "items": [
+              { "label": "친구를 소개하는 글을 읽고 말하기", "block_ref": null }
+            ] },
+            { "key": "쓰기", "items": [
+              { "label": "친구를 소개하는 글 쓰기", "block_ref": null }
+            ] },
+            { "key": "문화 이해하기", "items": [
+              { "label": "머리를 숙이고 인사하기", "block_ref": null }
+            ] }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 10,
+      "page_role": "content",
+      "source_photo": "photo_2",
+      "blocks": [
+        {
+          "id": "text-greeting-dialogue",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "인사하기",
+          "illustration": {
+            "storage_path": "illustration_0_handshake.png",
+            "original_kind": "photo"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "101",
+          "speakers": ["왕루", "자르갈"],
+          "lines": [
+            { "speaker": "왕루", "text": "안녕하십니까? 처음 뵙겠습니다." },
+            { "speaker": "자르갈", "text": "네, 안녕하십니까? 저는 자르갈입니다. 처음 뵙겠습니다. 이름이 무엇입니까?", "emphasized": ["이름이 무엇입니까?"] },
+            { "speaker": "왕루", "text": "제 이름은 왕루입니다. 자르갈 씨는 어느 나라 사람입니까?", "emphasized": ["어느 나라 사람입니까?"] },
+            { "speaker": "자르갈", "text": "저는 몽골 사람입니다. 왕루 씨는 어디에서 왔습니까?", "emphasized": ["어디에서 왔습니까?"] },
+            { "speaker": "왕루", "text": "저는 중국에서 왔습니다. 만나서 반갑습니다.", "emphasized": ["만나서 반갑습니다."] },
+            { "speaker": "자르갈", "text": "만나서 반갑습니다." }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "Слова к 준비하기1",
+          "related_text_ref": "text-greeting-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            { "ko": "처음", "translation_ru": "впервые" },
+            { "ko": "뵙다", "translation_ru": "смотреть (вежл. — видеть)" },
+            { "ko": "네", "translation_ru": "да" },
+            { "ko": "저", "translation_ru": "я" },
+            { "ko": "이름", "translation_ru": "имя" },
+            { "ko": "무엇", "translation_ru": "что?" },
+            { "ko": "제", "translation_ru": "мой" },
+            { "ko": "씨", "translation_ru": "уважительное обращение (после имени)" },
+            { "ko": "나라", "translation_ru": "страна" },
+            { "ko": "사람", "translation_ru": "человек" },
+            { "ko": "어디", "translation_ru": "где? откуда?" },
+            { "ko": "만나다", "translation_ru": "встречать(ся)" },
+            { "ko": "반갑다", "translation_ru": "рад(а) познакомиться" },
+            { "ko": "안녕하십니까", "translation_ru": "здравствуйте (формальное приветствие)" },
+            { "ko": "어느", "translation_ru": "какой, который (при выборе)" },
+            { "ko": "몽골", "translation_ru": "Монголия" },
+            { "ko": "중국", "translation_ru": "Китай" },
+            { "ko": "오다", "translation_ru": "приходить, приезжать" },
+            { "ko": "왔", "translation_ru": "пришёл/приехал — прошедшее время от 오다 (неправильный глагол)" }
+          ]
+        },
+        {
+          "id": "hint-junbihagi1-expr",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-greeting-dialogue",
+          "items": [
+            { "kind": "phrase", "text": "처음 뵙겠습니다", "translation_ru": "Очень приятно познакомиться (при первой встрече)" },
+            { "kind": "phrase", "text": "만나서 반갑습니다", "translation_ru": "Рад(а) встрече" },
+            { "kind": "phrase", "text": "어디에서 왔습니까?", "translation_ru": "Откуда вы приехали?" },
+            { "kind": "pattern", "text": "N에서 왔습니다", "translation_ru": "Я приехал(а) из N — шаблон: [место] + 에서 왔습니다" },
+            { "kind": "pattern", "text": "어느 N: 어느 나라 사람입니까?", "translation_ru": "Какой/какая N — шаблон; пример «어느 나라 사람입니까?» = «Из какой вы страны?»" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 11,
+      "page_role": "content",
+      "source_photo": "photo_3",
+      "blocks": [
+        {
+          "id": "table-country-names",
+          "toc_section": "준비하기 1",
+          "type": "reference_table",
+          "title": "나라 이름",
+          "columns": ["한국", "중국", "일본", "몽골", "베트남", "캄보디아", "필리핀", "러시아", "카자흐스탄", "키르기스스탄", "케냐", "사우디아라비아", "영국", "프랑스", "미국", "캐나다"],
+          "note": "в оригинале рядом с каждой страной — флаг"
+        },
+        {
+          "id": "illus-greeting-1",
+          "toc_section": "준비하기 1",
+          "type": "illustration",
+          "storage_path": null,
+          "caption": "Женщина машет рукой уходящему мальчику (прощание)",
+          "original_kind": "illustration",
+          "pair_id": "greeting-1"
+        },
+        {
+          "id": "hint-greeting-1",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "greeting_phrase",
+          "related_text_ref": null,
+          "pair_id": "greeting-1",
+          "items": [
+            { "kind": "phrase", "text": "안녕히 가십시오.", "translation_ru": "До свидания (говорит остающийся уходящему)" }
+          ]
+        },
+        {
+          "id": "illus-greeting-2",
+          "toc_section": "준비하기 1",
+          "type": "illustration",
+          "storage_path": null,
+          "caption": "Та же сцена прощания — слова остающегося человека",
+          "original_kind": "illustration",
+          "pair_id": "greeting-2"
+        },
+        {
+          "id": "hint-greeting-2",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "greeting_phrase",
+          "related_text_ref": null,
+          "pair_id": "greeting-2",
+          "items": [
+            { "kind": "phrase", "text": "안녕히 계십시오.", "translation_ru": "До свидания (говорит уходящий остающемуся)" }
+          ]
+        },
+        {
+          "id": "illus-greeting-3",
+          "toc_section": "준비하기 1",
+          "type": "illustration",
+          "storage_path": null,
+          "caption": "Дети с воздушными шарами и тортом — день рождения",
+          "original_kind": "illustration",
+          "pair_id": "greeting-3"
+        },
+        {
+          "id": "hint-greeting-3",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "greeting_phrase",
+          "related_text_ref": null,
+          "pair_id": "greeting-3",
+          "items": [
+            { "kind": "phrase", "text": "축하합니다.", "translation_ru": "Поздравляю!" }
+          ]
+        },
+        {
+          "id": "illus-greeting-4",
+          "toc_section": "준비하기 1",
+          "type": "illustration",
+          "storage_path": null,
+          "caption": "Мужчина заботливо помогает даме — сцена благодарности",
+          "original_kind": "illustration",
+          "pair_id": "greeting-4"
+        },
+        {
+          "id": "hint-greeting-4",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "greeting_phrase",
+          "related_text_ref": null,
+          "pair_id": "greeting-4",
+          "items": [
+            { "kind": "phrase", "text": "고맙습니다.", "translation_ru": "Спасибо" },
+            { "kind": "phrase", "text": "감사합니다.", "translation_ru": "Спасибо (более формально)" }
+          ]
+        },
+        {
+          "id": "illus-greeting-5",
+          "toc_section": "준비하기 1",
+          "type": "illustration",
+          "storage_path": null,
+          "caption": "Мальчик у разбитого окна рядом с плюшевым медведем — извинение",
+          "original_kind": "illustration",
+          "pair_id": "greeting-5"
+        },
+        {
+          "id": "hint-greeting-5",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "greeting_phrase",
+          "related_text_ref": null,
+          "pair_id": "greeting-5",
+          "items": [
+            { "kind": "phrase", "text": "미안합니다.", "translation_ru": "Извините" },
+            { "kind": "phrase", "text": "죄송합니다.", "translation_ru": "Прошу прощения (более формально)" }
+          ]
+        },
+        {
+          "id": "illus-greeting-6",
+          "toc_section": "준비하기 1",
+          "type": "illustration",
+          "storage_path": null,
+          "caption": "Отец успокаивает сына у разбитого окна — «ничего страшного»",
+          "original_kind": "illustration",
+          "pair_id": "greeting-6"
+        },
+        {
+          "id": "hint-greeting-6",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "greeting_phrase",
+          "related_text_ref": null,
+          "pair_id": "greeting-6",
+          "items": [
+            { "kind": "phrase", "text": "괜찮습니다.", "translation_ru": "Всё в порядке / ничего страшного" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 12,
+      "page_role": "content",
+      "source_photo": "photo_4",
+      "blocks": [
+        {
+          "id": "grammar-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N입니다 / N입니까?",
+          "section": "1",
+          "explanation": null,
+          "examples": [
+            "가: 이름이 무엇입니까?\n나: 저는 왕루입니다.",
+            "가: 왕루 씨는 어느 나라 사람입니까?\n나: 저는 중국 사람입니다."
+          ]
+        },
+        {
+          "id": "exercise-1a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["왕루", "자르갈"],
+            "dialogue": [
+              "가: 처음 뵙겠습니다. 저는 왕루입니다. 이름이 무엇입니까?",
+              "나: 제 이름은 자르갈입니다. 만나서 반갑습니다.",
+              "가: 만나서 반갑습니다."
+            ]
+          },
+          "items": [
+            { "given": ["아멜리", "파하드"] },
+            { "given": ["최수지", "오위노"] },
+            { "given": ["로빈", "흐엉"] }
+          ]
+        },
+        {
+          "id": "exercise-1b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["몽골 / 왕루", "중국"],
+            "dialogue": [
+              "가: 저는 몽골 사람입니다. 왕루 씨는 어느 나라 사람입니까?",
+              "나: 저는 중국 사람입니다. 만나서 반갑습니다.",
+              "가: 만나서 반갑습니다."
+            ]
+          },
+          "items": [
+            { "given": ["중국 / 파하드", "사우디"] },
+            { "given": ["일본 / 아멜리", "프랑스"] },
+            { "given": ["태국 / 흐엉", "베트남"] }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 13,
+      "page_role": "content",
+      "source_photo": "photo_5",
+      "blocks": [
+        {
+          "id": "grammar-2",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N이/가",
+          "section": "2",
+          "explanation": null,
+          "examples": [
+            "가: 이름이 무엇입니까?\n나: 제 이름은 파하드입니다.\n가: 파하드 씨는 어디에서 왔습니까?\n나: 저는 사우디에서 왔습니다."
+          ]
+        },
+        {
+          "id": "grammar-3",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N은/는①",
+          "section": "3",
+          "explanation": null,
+          "examples": [
+            "저는 파하드입니다.",
+            "선생님은 한국 사람입니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 14,
+      "page_role": "content",
+      "source_photo": "photo_6",
+      "blocks": [
+        {
+          "id": "exercise-2a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2, 3",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["왕루", "파하드"],
+            "dialogue": [
+              "가: 저는 왕루입니다. 이름이 무엇입니까?",
+              "나: 제 이름은 파하드입니다."
+            ]
+          },
+          "items": [
+            { "given": ["아멜리", "로빈"] },
+            { "given": ["최수지", "오위노"] },
+            { "given": ["자르갈", "흐엉"] }
+          ]
+        },
+        {
+          "id": "exercise-3a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2, 3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["왕루 씨 / 중국", "중국"],
+            "dialogue": [
+              "가: 왕루 씨는 중국 사람입니까?",
+              "나: 네, 저는 중국 사람입니다."
+            ]
+          },
+          "items": [
+            { "given": ["로빈 씨 / 미국", "미국"] },
+            { "given": ["아멜리 씨 / 프랑스", "프랑스"] },
+            { "given": ["파하드 씨 / 사우디", "사우디"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  padding-right: 28px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab,
+.tabActive {
+  border-radius: 100px;
+  padding: 7px 14px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--stone);
+}
+
+.tabActive {
+  border: 1px solid var(--ink);
+  background: #fff;
+  color: var(--ink);
+}
+
+.aiSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.aiRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.aiInput {
+  flex: 1;
+  min-width: 160px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 14px;
+  background: #fff;
+}
+
+.aiInput:focus {
+  outline: 2px solid color-mix(in srgb, var(--blue) 35%, transparent);
+  outline-offset: 1px;
+}
+
+.error {
+  color: var(--red);
+  font-size: 14px;
+}

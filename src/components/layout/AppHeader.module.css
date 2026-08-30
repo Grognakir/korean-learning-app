@@ -1,0 +1,118 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.brand {
+  grid-column: 1;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.navCenter {
+  grid-column: 2;
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+
+.navStub {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--stone);
+  cursor: default;
+}
+
+.navLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.headerRight {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconButton {
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 0;
+  background: none;
+  color: var(--stone);
+  cursor: default;
+  overflow: visible;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.iconButton svg {
+  display: block;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.userMenu {
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 6px 14px;
+  background: none;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.logout {
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 6px 14px;
+  background: none;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/*
+ * Мобильный паттерн: центр-меню переезжает в BottomTabBar, а
+ * имя/шестерёнка/выход сворачиваются в UserMenu. Порог держать в
+ * синхроне с BottomTabBar.module.css/UserMenu.module.css — 1000px.
+ */
+@media (max-width: 1000px) {
+  .navCenter {
+    display: none;
+  }
+
+  .headerActions {
+    display: none;
+  }
+}

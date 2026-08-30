@@ -1,0 +1,16 @@
+.add {
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 7px 16px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add:hover {
+  border-color: var(--ink);
+}

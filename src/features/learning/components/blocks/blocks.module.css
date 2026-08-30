@@ -1,0 +1,297 @@
+.block {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-margin-top: 24px;
+  overflow: visible;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* lesson_toc */
+.tocSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tocKey {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.tocItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  border-radius: 100px;
+  padding: 4px 10px;
+}
+
+.chipLink {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.chipGrammar {
+  color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 12%, var(--paper-2));
+}
+
+.chipContent {
+  color: var(--green);
+  background: color-mix(in srgb, var(--green) 12%, var(--paper-2));
+}
+
+/* text */
+.audio {
+  width: 100%;
+  height: 34px;
+  margin-bottom: 6px;
+}
+
+.line {
+  display: flex;
+  gap: 10px;
+}
+
+.speaker {
+  flex-shrink: 0;
+  min-width: 44px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.lineText {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.emphasized {
+  background: rgba(31, 78, 140, 0.1);
+  border-radius: 3px;
+  padding: 0 2px;
+  font-weight: 600;
+}
+
+/* vocab_list */
+.vocabItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  overflow: visible;
+}
+
+.vocabItem {
+  position: relative;
+  overflow: visible;
+  z-index: 0;
+  width: auto;
+}
+
+.vocabItem:hover,
+.vocabItem:focus-within {
+  z-index: 2;
+}
+
+.vocabKo {
+  display: inline-block;
+  border: none;
+  border-radius: 100px;
+  padding: 5px 12px;
+  background: var(--paper-2);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.vocabTranslation {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  transform: translateX(-50%);
+  z-index: 3;
+  width: max-content;
+  max-width: min(200px, 70vw);
+  padding: 6px 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  box-shadow: var(--card-shadow);
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.12s ease,
+    visibility 0.12s ease;
+}
+
+.vocabItem:hover .vocabTranslation,
+.vocabItem:focus-within .vocabTranslation {
+  opacity: 1;
+  visibility: visible;
+}
+
+.inlineVocab {
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0 1px;
+}
+
+.inlineVocab .vocabKo {
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  background: none;
+  border-radius: 0;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
+/* hint attached under text */
+.textHint {
+  border-top: 1px solid var(--line);
+  margin-top: 6px;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.textHintGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* hint */
+.hintItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hintChip {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--amber);
+  background: rgba(180, 128, 42, 0.1);
+  border-radius: 100px;
+  padding: 6px 12px;
+}
+
+/* illustration */
+.illustrationImage {
+  width: 100%;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--line);
+}
+
+.illustrationPlaceholder {
+  width: 100%;
+  max-width: 320px;
+  min-height: 100px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-control);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  color: var(--stone);
+  font-size: 13px;
+  text-align: center;
+}
+
+.caption {
+  font-size: 12.5px;
+  color: var(--stone);
+}
+
+/* reference_table */
+.tableColumns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.note {
+  font-size: 12px;
+  color: var(--stone);
+}
+
+/* grammar_point */
+.pattern {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.example {
+  white-space: pre-line;
+  font-size: 14.5px;
+  line-height: 1.6;
+  background: var(--paper-2);
+  border-radius: var(--radius-control);
+  padding: 8px 12px;
+}
+
+/* grammar_exercise */
+.prompt {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.exerciseDialogue {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--paper-2);
+  border-radius: var(--radius-control);
+  padding: 10px 12px;
+}
+
+.exerciseItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exerciseItem {
+  font-size: 13.5px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 5px 12px;
+}

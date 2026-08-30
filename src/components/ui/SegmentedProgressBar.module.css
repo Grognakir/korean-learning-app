@@ -1,0 +1,35 @@
+.bar {
+  display: flex;
+  gap: 3px;
+  height: 12px;
+  border-radius: 100px;
+  overflow: hidden;
+  background: var(--paper-2);
+}
+
+.segment {
+  display: block;
+  border-radius: 3px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

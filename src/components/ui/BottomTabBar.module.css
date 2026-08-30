@@ -1,0 +1,40 @@
+.bar {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 14px;
+  color: var(--stone);
+  text-decoration: none;
+}
+
+.tabIcon {
+  flex-shrink: 0;
+}
+
+.tabLabel {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Порог держать в синхроне с page.module.css/UserMenu.module.css — 1000px */
+@media (max-width: 1000px) {
+  .bar {
+    display: flex;
+  }
+}
