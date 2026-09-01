@@ -7,7 +7,7 @@ import { registerSchema, loginSchema } from "./schemas";
 
 export async function signUp(formData: FormData) {
   const parsed = registerSchema.safeParse({
-    username: formData.get("username"),
+    username: formData.get("display_name"),
     email: formData.get("email"),
     password: formData.get("password"),
   });

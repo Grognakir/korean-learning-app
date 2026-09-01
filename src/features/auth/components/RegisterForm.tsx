@@ -33,7 +33,7 @@ export function RegisterForm() {
           <span>Имя</span>
           <input
             type="text"
-            name="username"
+            name="display_name"
             required
             minLength={2}
             maxLength={32}
