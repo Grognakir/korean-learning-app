@@ -18,6 +18,18 @@ const REFERENCE_DIR = join(process.cwd(), "docs/reference");
 const PLAN = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
 
+// Порядок соответствует table-country-names.columns в lesson-01.json.
+const FLAG_CODES = [
+  "kr", "cn", "jp", "mn", "vn", "kh", "ph", "ru",
+  "kz", "kg", "ke", "sa", "gb", "fr", "us", "ca",
+];
+
+// Порядок соответствует phrase-gallery-greetings.items в lesson-01.json.
+const GREETING_GALLERY_CODES = [
+  "greeting-1", "greeting-2", "greeting-3",
+  "greeting-4", "greeting-5", "greeting-6",
+];
+
 type LessonPage = {
   page_number: number | null;
   page_role: string;
@@ -108,6 +120,29 @@ async function main() {
     "inha_book_1/audio/101.mp3",
     "audio/mpeg",
   );
+
+  // Флаги для таблицы "나라 이름" (준비하기 1) — уменьшенные копии
+  // (макс. сторона 200px) в image/flags/, оригиналы в исходном
+  // разрешении, загруженные пользователем, лежат рядом как *_flag.png.
+  for (const code of FLAG_CODES) {
+    await uploadAsset(
+      join(REFERENCE_DIR, `inha_book_1_book/image/flags/${code}.png`),
+      `inha_book_1/flags/${code}.png`,
+      "image/png",
+    );
+  }
+
+  // Иллюстрации галереи приветственных фраз (준비하기 1) — уменьшенные
+  // копии (макс. сторона 600px) в image/lesson_1_web/, оригиналы в
+  // исходном разрешении, загруженные пользователем, лежат рядом в
+  // image/lesson_1/ (корейские имена файлов, только для справки).
+  for (const code of GREETING_GALLERY_CODES) {
+    await uploadAsset(
+      join(REFERENCE_DIR, `inha_book_1_book/image/lesson_1_web/${code}.png`),
+      `inha_book_1/lesson_1/${code}.png`,
+      "image/png",
+    );
+  }
 
   console.log("Готово.");
 }

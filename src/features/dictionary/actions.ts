@@ -27,6 +27,23 @@ export async function generateWordDraftAction(input: string) {
   }
 }
 
+// Форма payload для save_word/update_word — см. миграцию
+// 20260901120000_dictionary_ownership.sql.
+function toPayload(draft: WordDraft) {
+  return {
+    headword: draft.headword,
+    reading: draft.reading,
+    partOfSpeech: draft.partOfSpeech,
+    translation: draft.translation,
+    notes: draft.notes,
+    examples: draft.examples,
+    categories: draft.categories,
+  };
+}
+
+// Слово, категории, перевод, заметки и примеры пишутся одной транзакцией
+// внутри RPC: раньше это были отдельные запросы, и упавший на середине
+// сценарий оставлял в базе слово без перевода.
 export async function saveWord(draft: WordDraft) {
   const parsed = wordDraftSchema.safeParse(draft);
   if (!parsed.success) {
@@ -39,70 +56,53 @@ export async function saveWord(draft: WordDraft) {
   } = await supabase.auth.getUser();
   if (!user) return { error: "Нужно войти" };
 
-  const { data: word, error: wordError } = await supabase
+  const { error } = await supabase.rpc("save_word", {
+    payload: toPayload(parsed.data),
+  });
+  if (error) return { error: error.message };
+
+  return { success: true as const };
+}
+
+export async function updateWord(wordId: string, draft: WordDraft) {
+  const parsed = wordDraftSchema.safeParse(draft);
+  if (!parsed.success) {
+    return { error: parsed.error.issues[0].message };
+  }
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Нужно войти" };
+
+  const { error } = await supabase.rpc("update_word", {
+    target_word_id: wordId,
+    payload: toPayload(parsed.data),
+  });
+  if (error) return { error: error.message };
+
+  return { success: true as const };
+}
+
+export async function deleteWord(wordId: string) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Нужно войти" };
+
+  // Дочерние строки уходят по on delete cascade. Фильтр по владельцу
+  // здесь не вместо RLS, а чтобы отличить «нет прав» от «уже удалено»:
+  // без него запрос вернул бы пустой результат в обоих случаях.
+  const { data, error } = await supabase
     .from("words")
-    .insert({
-      owner_user_id: user.id,
-      headword: parsed.data.headword,
-      reading: parsed.data.reading,
-      part_of_speech: parsed.data.partOfSpeech,
-    })
-    .select()
-    .single();
-  if (wordError) return { error: wordError.message };
-
-  const categoryIds: string[] = [];
-  for (const name of parsed.data.categories) {
-    const { data: existing } = await supabase
-      .from("categories")
-      .select("id")
-      .ilike("name", name)
-      .maybeSingle();
-    let categoryId = existing?.id;
-    if (!categoryId) {
-      const { data: created, error: createError } = await supabase
-        .from("categories")
-        .insert({ name })
-        .select()
-        .single();
-      if (createError) return { error: createError.message };
-      categoryId = created.id;
-    }
-    categoryIds.push(categoryId);
-  }
-
-  if (categoryIds.length) {
-    const { error } = await supabase.from("word_categories").insert(
-      categoryIds.map((category_id) => ({
-        word_id: word.id,
-        category_id,
-      })),
-    );
-    if (error) return { error: error.message };
-  }
-
-  const { error: translationError } = await supabase
-    .from("translations")
-    .insert({ word_id: word.id, text: parsed.data.translation });
-  if (translationError) return { error: translationError.message };
-
-  if (parsed.data.notes) {
-    const { error } = await supabase
-      .from("word_notes")
-      .insert({ word_id: word.id, text: parsed.data.notes });
-    if (error) return { error: error.message };
-  }
-
-  if (parsed.data.examples.length) {
-    const { error } = await supabase.from("word_examples").insert(
-      parsed.data.examples.map((e) => ({
-        word_id: word.id,
-        kr: e.kr,
-        ru: e.ru,
-      })),
-    );
-    if (error) return { error: error.message };
-  }
+    .delete()
+    .eq("id", wordId)
+    .eq("owner_user_id", user.id)
+    .select("id");
+  if (error) return { error: error.message };
+  if (!data?.length) return { error: "Слово не найдено" };
 
   return { success: true as const };
 }

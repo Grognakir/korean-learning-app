@@ -1,0 +1,31 @@
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  width: 100%;
+}
+
+.tab,
+.tabActive {
+  flex: 1;
+  padding: 7px 6px;
+  border-radius: calc(var(--radius-control) - 4px);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tab {
+  color: var(--ink-soft);
+}
+
+.tabActive {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--card-shadow);
+}

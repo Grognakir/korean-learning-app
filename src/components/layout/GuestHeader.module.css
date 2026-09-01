@@ -48,7 +48,7 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 1000px) {
+@media (--to-compact) {
   .navCenter {
     display: none;
   }

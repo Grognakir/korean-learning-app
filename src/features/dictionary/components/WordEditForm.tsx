@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import {
   PART_OF_SPEECH_LABELS,
 } from "@/features/dictionary/partOfSpeechLabels";
@@ -18,6 +18,8 @@ type WordEditFormProps = {
   initialDraft?: Partial<WordDraft>;
   onSave: (draft: WordDraft) => Promise<{ error?: string; success?: true }>;
   onSaved: () => void;
+  submitLabel?: string;
+  footer?: ReactNode;
 };
 
 const emptyExample = { kr: "", ru: "" };
@@ -45,6 +47,8 @@ export function WordEditForm({
   initialDraft,
   onSave,
   onSaved,
+  submitLabel = "Добавить",
+  footer,
 }: WordEditFormProps) {
   const [state, setState] = useState(() => buildInitialState(initialDraft));
   const [error, setError] = useState<string | null>(null);
@@ -125,7 +129,7 @@ export function WordEditForm({
       <label className={styles.field}>
         <span className={styles.label}>Слово</span>
         <input
-          className={styles.input}
+          className={`${styles.input} kr`}
           value={state.headword}
           onChange={(e) =>
             setState((prev) => ({ ...prev, headword: e.target.value }))
@@ -193,7 +197,7 @@ export function WordEditForm({
           {state.examples.map((ex, i) => (
             <li key={i} className={styles.exampleRow}>
               <input
-                className={styles.input}
+                className={`${styles.input} kr`}
                 placeholder="Корейский"
                 value={ex.kr}
                 onChange={(e) => updateExample(i, "kr", e.target.value)}
@@ -265,8 +269,10 @@ export function WordEditForm({
       {error && <p className={styles.error}>{error}</p>}
 
       <Button type="submit" disabled={saving}>
-        {saving ? "Сохраняем…" : "Добавить"}
+        {saving ? "Сохраняем…" : submitLabel}
       </Button>
+
+      {footer}
     </form>
   );
 }

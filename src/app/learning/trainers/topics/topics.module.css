@@ -1,0 +1,27 @@
+.sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+}
+
+.sectionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sectionCardTitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sectionCardMeta {
+  font-size: 13px;
+  color: var(--ink-soft);
+}

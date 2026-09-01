@@ -26,7 +26,7 @@
 }
 
 .tocKey {
-  font-size: 13px;
+  font-size: var(--kr-font-sm);
   font-weight: 700;
   color: var(--ink-soft);
 }
@@ -38,7 +38,7 @@
 }
 
 .chip {
-  font-size: 12.5px;
+  font-size: var(--kr-font-xs);
   color: var(--ink-soft);
   background: var(--paper-2);
   border-radius: 100px;
@@ -80,7 +80,7 @@
 }
 
 .lineText {
-  font-size: 15px;
+  font-size: var(--kr-font-md);
   line-height: 1.5;
 }
 
@@ -120,7 +120,7 @@
   color: var(--ink);
   font: inherit;
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--kr-font-sm);
   text-align: left;
   cursor: pointer;
 }
@@ -247,9 +247,36 @@
   color: var(--stone);
 }
 
+.countryGrid {
+  display: grid;
+  /* auto-fit: при ширине блока ~884px (max-width: var(--content-wide) минус
+     отступы wrap и padding .block) даёт 8 колонок на широком экране (16
+     стран = 2 ряда), и адаптивно уменьшает число колонок при сужении —
+     без media query и без "прыжков" сетки на конкретных порогах. */
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 12px;
+}
+
+.countryCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  gap: 6px;
+}
+
+.countryFlag {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
 /* grammar_point */
 .pattern {
-  font-size: 19px;
+  font-size: var(--kr-font-lg);
   font-weight: 700;
 }
 
@@ -261,7 +288,7 @@
 
 .example {
   white-space: pre-line;
-  font-size: 14.5px;
+  font-size: var(--kr-font-md);
   line-height: 1.6;
   background: var(--paper-2);
   border-radius: var(--radius-control);
@@ -270,7 +297,7 @@
 
 /* grammar_exercise */
 .prompt {
-  font-size: 13px;
+  font-size: var(--kr-font-sm);
   color: var(--ink-soft);
 }
 
@@ -286,12 +313,171 @@
 .exerciseItems {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
 }
 
 .exerciseItem {
-  font-size: 13.5px;
+  font-size: var(--kr-font-sm);
   border: 1px solid var(--line);
   border-radius: 100px;
   padding: 5px 12px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.exerciseItemActive {
+  background: var(--paper-2);
+}
+
+.exerciseItemCorrect {
+  composes: exerciseItem;
+  border-color: var(--green);
+  color: var(--green);
+  background: color-mix(in srgb, var(--green) 10%, #fff);
+}
+
+.exerciseItemIncorrect {
+  composes: exerciseItem;
+  border-color: var(--red);
+  color: var(--red);
+  background: color-mix(in srgb, var(--red) 10%, #fff);
+}
+
+.blank {
+  border: none;
+  border-bottom: 2px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: var(--kr-font-md);
+  text-align: center;
+  padding: 0 2px;
+  margin: 0 1px;
+}
+
+.blank:focus {
+  outline: none;
+  border-bottom-color: var(--blue);
+}
+
+.blankCorrect {
+  composes: blank;
+  border-bottom-color: var(--green);
+  color: var(--green);
+}
+
+.blankIncorrect {
+  composes: blank;
+  border-bottom-color: var(--red);
+  color: var(--red);
+}
+
+/* phrase_gallery */
+.phraseGalleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.phraseGalleryCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  /* Порог "обе фразы не помещаются в ряд" считаем от ширины самой
+     карточки (не вьюпорта) — она меняется вместе с числом колонок сетки
+     (3 → 2 → 1), поэтому именно контейнерный запрос, не media. */
+  container-type: inline-size;
+}
+
+.phraseGalleryImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--line);
+}
+
+.phraseGalleryPhrases {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  overflow: visible;
+}
+
+.phrasePair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  overflow: visible;
+}
+
+.phrasePairSlot {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.phraseArrow {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  background: var(--paper-2);
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.phraseArrow:hover {
+  background: var(--line);
+  color: var(--ink);
+}
+
+/* Уже в самой карточке (не вьюпорте) не хватает места на обе фразы в ряд —
+   прячем неактивный слот целиком (вместе с его стрелкой) и показываем
+   стрелку у активного слота. */
+@container (max-width: 240px) {
+  .phrasePair[data-active="0"] .phrasePairSlot:last-child {
+    display: none;
+  }
+
+  .phrasePair[data-active="1"] .phrasePairSlot:first-child {
+    display: none;
+  }
+
+  .phraseArrow {
+    display: inline-flex;
+  }
+}
+
+/* grammar_exercise: та же круглая стрелка, что у phrase_gallery, но всегда
+   видна, когда активна (видимость управляется React-условием, не
+   контейнерным запросом) — composes должен идти после .phraseArrow в
+   файле, иначе display:none оттуда победит по порядку каскада при equal
+   specificity. */
+.exerciseBackArrow {
+  composes: phraseArrow;
+  display: inline-flex;
+}
+
+@media (max-width: 720px) {
+  .phraseGalleryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .phraseGalleryGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

@@ -39,8 +39,8 @@ export function LessonToc({
                   itemIndex ===
                   section.items.findIndex((entry) => entry.block_ref != null);
                 const href = isFirstLinked
-                  ? `/learning/${lessonNumber}/${encodeURIComponent(section.key)}`
-                  : `/learning/${lessonNumber}/${encodeURIComponent(section.key)}#${item.block_ref}`;
+                  ? `/learning/plans/${lessonNumber}/${encodeURIComponent(section.key)}`
+                  : `/learning/plans/${lessonNumber}/${encodeURIComponent(section.key)}#${item.block_ref}`;
                 return (
                   <Link
                     key={item.label}

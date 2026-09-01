@@ -9,10 +9,10 @@ import styles from "./AppHeader.module.css";
 export function AppHeader({ username }: { username: string }) {
   return (
     <header className={styles.header}>
-      <div className={styles.brand}>
+      <Link href="/" className={styles.brand}>
         <TaegeukIcon size={22} />
         <span>한국어 공부</span>
-      </div>
+      </Link>
       <nav className={styles.navCenter} aria-label="Разделы приложения">
         {NAV_SECTIONS.map(({ label, href }) =>
           href ? (
@@ -31,13 +31,9 @@ export function AppHeader({ username }: { username: string }) {
           <span className={styles.userMenu} title="Скоро — меню профиля">
             {username} ▾
           </span>
-          <button
-            type="button"
-            className={styles.iconButton}
-            title="Скоро — настройки"
-          >
+          <Link href="/settings" className={styles.iconButton} title="Настройки">
             <SettingsIcon />
-          </button>
+          </Link>
           <form action={signOut}>
             <button type="submit" className={styles.logout}>
               Выйти

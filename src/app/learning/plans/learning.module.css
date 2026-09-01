@@ -1,0 +1,114 @@
+.page {
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 28px 20px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.backLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  font-size: var(--kr-font-xl);
+  font-weight: 700;
+}
+
+.lessonList {
+  --lesson-min: 90px;
+  --lesson-gap: 10px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--lesson-min), 1fr));
+  gap: var(--lesson-gap);
+}
+
+.lessonList > li {
+  min-width: 0;
+}
+
+.lessonLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--card-shadow);
+  padding: 14px 10px;
+  font-weight: 600;
+  font-size: var(--kr-font-md);
+  text-decoration: none;
+  color: var(--ink);
+  text-align: center;
+}
+
+.lessonList > .lessonItemWide {
+  grid-column: span var(--span, 2);
+}
+
+.lessonLinkWide {
+  justify-content: flex-start;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.lessonStub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  padding: 14px 10px;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--stone);
+  cursor: default;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (--to-compact) {
+  .wrap {
+    padding-bottom: 76px;
+  }
+}

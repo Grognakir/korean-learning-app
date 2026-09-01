@@ -9,7 +9,10 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "import:textbook": "tsx scripts/import-textbook.ts",
-    "import:dictionary": "tsx scripts/import-dictionary.ts"
+    "import:dictionary": "tsx scripts/import-dictionary.ts",
+    "import:phrases": "tsx scripts/import-phrases.ts",
+    "import:grammar": "tsx scripts/import-grammar.ts",
+    "import:topic-quiz": "tsx scripts/import-topic-quiz.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
@@ -21,11 +24,14 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@csstools/postcss-global-data": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.2",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^11.5.1",
     "tsx": "^4.23.12",
     "typescript": "^5"
   },

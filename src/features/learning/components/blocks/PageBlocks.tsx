@@ -5,6 +5,7 @@ import { VocabList } from "./VocabList";
 import { Hint } from "./Hint";
 import { Illustration } from "./Illustration";
 import { ReferenceTable } from "./ReferenceTable";
+import { PhraseGallery } from "./PhraseGallery";
 import { GrammarPoint } from "./GrammarPoint";
 import { GrammarExercise } from "./GrammarExercise";
 
@@ -110,6 +111,8 @@ export function PageBlocks({
             return <Illustration key={i} id={block.id} block={block} />;
           case "reference_table":
             return <ReferenceTable key={i} id={block.id} block={block} />;
+          case "phrase_gallery":
+            return <PhraseGallery key={i} id={block.id} block={block} />;
           case "grammar_point":
             return <GrammarPoint key={i} id={block.id} block={block} />;
           case "grammar_exercise":

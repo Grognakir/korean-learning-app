@@ -7,7 +7,7 @@ import styles from "./AuthForm.module.css";
 
 type State = { error?: string } | undefined;
 
-export function LoginForm() {
+export function LoginForm({ notice }: { notice?: string }) {
   const [state, formAction, pending] = useActionState<State, FormData>(
     async (_prevState, formData) => signIn(formData),
     undefined,
@@ -16,6 +16,7 @@ export function LoginForm() {
   return (
     <div className={styles.panel}>
       <h1 className={styles.title}>Вход</h1>
+      {notice && <p className={styles.error}>{notice}</p>}
       <form action={formAction} className={styles.form}>
         <label className={styles.field}>
           <span>Email</span>

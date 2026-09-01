@@ -1,6 +1,7 @@
 import "server-only";
 import type { PartOfSpeech, WordDraft } from "./types";
 import { PART_OF_SPEECH_TAGS } from "./types";
+import { llmExamplesSchema } from "./schemas";
 
 function buildSystemPrompt(categories: string[]) {
   return `Ты помощник, который составляет карточки корейских слов для учебного словаря.
@@ -94,8 +95,9 @@ function parseDraft(text: string, input: string): WordDraft {
   if (!obj.kr || !obj.translation || !obj.category) {
     throw new Error("В ответе не хватает полей");
   }
-  if (!Array.isArray(obj.examples) || obj.examples.length === 0) {
-    throw new Error("Нет примеров");
+  const examples = llmExamplesSchema.safeParse(obj.examples);
+  if (!examples.success) {
+    throw new Error("LLM вернула некорректные примеры");
   }
   const rawPos = obj.partOfSpeech as string | null | undefined;
   const partOfSpeech = PART_OF_SPEECH_TAGS.includes(rawPos as PartOfSpeech)
@@ -107,7 +109,7 @@ function parseDraft(text: string, input: string): WordDraft {
     partOfSpeech,
     translation: String(obj.translation),
     notes: obj.notes ? String(obj.notes) : null,
-    examples: obj.examples as { kr: string; ru: string }[],
+    examples: examples.data,
     categories: [String(obj.category)],
     isNewCategory: Boolean(obj.newCategory),
   };

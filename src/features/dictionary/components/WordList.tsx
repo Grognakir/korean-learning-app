@@ -1,7 +1,24 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { createClient } from "@/lib/supabase/client";
+import { escapeLike } from "@/lib/supabase/escapeLike";
+import { useDebouncedValue } from "@/lib/useDebouncedValue";
+import {
+  DEFAULT_STATE,
+  useDictionaryCache,
+} from "@/features/dictionary/DictionaryCacheContext";
+import { formatReading } from "@/features/dictionary/formatReading";
+import { buildPageNumbers } from "@/features/dictionary/pagination";
+import { usePagedQuery } from "@/features/dictionary/usePagedQuery";
+import { getPreserveDictionaryFilters } from "@/features/settings/dictionaryFiltersPreference";
 import {
   PART_OF_SPEECH_LABELS,
   partOfSpeechLabel,
@@ -10,10 +27,11 @@ import {
 import {
   PART_OF_SPEECH_TAGS,
   type CategoryOption,
-  type PartOfSpeech,
   type Word,
 } from "@/features/dictionary/types";
 import { Select } from "@/components/ui/Select";
+import { EditWordModal } from "./EditWordModal";
+import { ListError } from "./ListError";
 import styles from "./WordList.module.css";
 
 const PAGE_SIZE_OPTIONS = [10, 15, 20, 25, 30, 50, 100] as const;
@@ -63,15 +81,25 @@ function ViewIcon() {
 type WordListProps = {
   categories: CategoryOption[];
   userId: string | null;
-  refreshKey?: number;
+  onWordChanged: () => void;
 };
 
-function formatReading(reading: string): string {
-  return reading
-    .replace(/[/|,;]+/g, " ")
-    .replace(/[^a-zA-Z\s]/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
+function EditIcon() {
+  return (
+    <svg
+      className={styles.editIcon}
+      viewBox="0 0 16 16"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M11.2 2.8a1.6 1.6 0 0 1 2.3 2.3L6 12.6l-3 .7.7-3 7.5-7.5Z"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 }
 
 const POS_DUPLICATE_CATEGORIES = new Set([
@@ -92,10 +120,12 @@ function WordCard({
   word,
   expanded,
   onToggle,
+  onEdit,
 }: {
   word: Word;
   expanded: boolean;
   onToggle: () => void;
+  onEdit: (() => void) | null;
 }) {
   const translations = word.translations.map((t) => t.text).join(", ");
   const categoryNames = word.word_categories
@@ -245,67 +275,78 @@ function WordCard({
 
   return (
     <article className={expanded ? styles.cardExpanded : styles.card}>
-      {hasDetails ? (
-        <button
-          type="button"
-          className={styles.cardHeader}
-          onClick={onToggle}
-          aria-expanded={expanded}
-        >
-          {body}
-        </button>
-      ) : (
-        <div className={styles.cardHeader}>{body}</div>
-      )}
+      <div className={styles.cardHeaderRow}>
+        {hasDetails ? (
+          <button
+            type="button"
+            className={styles.cardHeader}
+            onClick={onToggle}
+            aria-expanded={expanded}
+          >
+            {body}
+          </button>
+        ) : (
+          <div className={styles.cardHeader}>{body}</div>
+        )}
+        {onEdit && (
+          <button
+            type="button"
+            className={styles.editButton}
+            onClick={onEdit}
+            aria-label={`Изменить слово ${word.headword}`}
+          >
+            <EditIcon />
+          </button>
+        )}
+      </div>
       {details}
     </article>
   );
 }
 
-function buildPageNumbers(current: number, total: number): (number | "…")[] {
-  if (total <= 7) {
-    return Array.from({ length: total }, (_, i) => i + 1);
-  }
-  const pages = new Set<number>([
-    1,
-    2,
-    3,
-    total,
-    current,
-    current - 1,
-    current + 1,
-  ]);
-  const sorted = [...pages]
-    .filter((p) => p >= 1 && p <= total)
-    .sort((a, b) => a - b);
-  const result: (number | "…")[] = [];
-  for (let i = 0; i < sorted.length; i++) {
-    if (i > 0 && sorted[i] - sorted[i - 1] > 1) result.push("…");
-    result.push(sorted[i]);
-  }
-  return result;
-}
+export function WordList({ categories, userId, onWordChanged }: WordListProps) {
+  const {
+    state,
+    setState,
+    getCachedResults,
+    setCachedResults,
+    clearResultsCache,
+    resultsGeneration,
+  } = useDictionaryCache();
+  const {
+    query,
+    sortDir,
+    pageSize,
+    page,
+    partOfSpeech,
+    categoryId,
+    ownership,
+    openPanel,
+    expandedId,
+  } = state;
 
-export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) {
-  const [query, setQuery] = useState("");
-  const [debouncedQuery, setDebouncedQuery] = useState("");
-  const [sortDir, setSortDir] = useState<"asc" | "desc">(DEFAULT_SORT_DIR);
-  const [pageSize, setPageSize] = useState<number>(DEFAULT_PAGE_SIZE);
-  const [page, setPage] = useState(1);
-  const [partOfSpeech, setPartOfSpeech] = useState<PartOfSpeech | "">("");
-  const [categoryId, setCategoryId] = useState("");
-  const [ownership, setOwnership] = useState<Ownership>("all");
-  const [openPanel, setOpenPanel] = useState<"filters" | "view" | null>(null);
-  const [words, setWords] = useState<Word[]>([]);
-  const [totalCount, setTotalCount] = useState(0);
-  const [resolvedFetchKey, setResolvedFetchKey] = useState("");
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [rawDebouncedQuery, setDebouncedQuery] = useDebouncedValue(query, 300);
+  const debouncedQuery = rawDebouncedQuery.trim();
+  const [editingWord, setEditingWord] = useState<Word | null>(null);
   const filtersRef = useRef<HTMLDivElement>(null);
+  const prevUserIdRef = useRef(userId);
+
+  // Сброс фильтров при заходе на страницу, если пользователь не включил
+  // их сохранение.
+  useLayoutEffect(() => {
+    if (!getPreserveDictionaryFilters()) {
+      setState(DEFAULT_STATE);
+      setDebouncedQuery("");
+      clearResultsCache();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- mount-only reset
+  }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setDebouncedQuery(query.trim()), 300);
-    return () => clearTimeout(timer);
-  }, [query]);
+    if (prevUserIdRef.current === userId) return;
+    prevUserIdRef.current = userId;
+    clearResultsCache();
+  }, [userId, clearResultsCache]);
 
   useEffect(() => {
     if (!openPanel) return;
@@ -314,13 +355,13 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
       const target = e.target as HTMLElement;
       if (filtersRef.current && !filtersRef.current.contains(target)) {
         if (target.closest("[data-select-menu]")) return;
-        setOpenPanel(null);
+        setState({ openPanel: null });
       }
     };
 
     document.addEventListener("mousedown", handlePointerDown);
     return () => document.removeEventListener("mousedown", handlePointerDown);
-  }, [openPanel]);
+  }, [openPanel, setState]);
 
   const fetchKey = useMemo(
     () =>
@@ -333,7 +374,6 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
         categoryId,
         ownership,
         userId,
-        refreshKey,
       }),
     [
       debouncedQuery,
@@ -344,13 +384,10 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
       categoryId,
       ownership,
       userId,
-      refreshKey,
     ],
   );
 
-  useEffect(() => {
-    let cancelled = false;
-
+  const run = useCallback(() => {
     const embed = categoryId
       ? "word_categories!inner(categories!inner(id, name))"
       : "word_categories(categories(id, name))";
@@ -365,31 +402,43 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
       .order("headword", { ascending: sortDir === "asc" })
       .range((page - 1) * pageSize, page * pageSize - 1);
 
-    if (debouncedQuery) q = q.ilike("headword", `%${debouncedQuery}%`);
+    if (debouncedQuery) {
+      q = q.ilike("headword", `%${escapeLike(debouncedQuery)}%`);
+    }
     if (partOfSpeech) q = q.eq("part_of_speech", partOfSpeech);
     if (categoryId) q = q.eq("word_categories.category_id", categoryId);
     if (ownership === "global") q = q.is("owner_user_id", null);
     if (ownership === "mine" && userId) q = q.eq("owner_user_id", userId);
 
-    q.then(({ data, count, error }) => {
-      if (cancelled) return;
-      if (error) {
-        console.error("WordList:", error.message);
-        setWords([]);
-        setTotalCount(0);
-      } else {
-        setWords((data ?? []) as unknown as Word[]);
-        setTotalCount(count ?? 0);
-      }
-      setResolvedFetchKey(fetchKey);
-    });
+    return q;
+  }, [
+    categoryId,
+    debouncedQuery,
+    ownership,
+    page,
+    pageSize,
+    partOfSpeech,
+    sortDir,
+    userId,
+  ]);
 
-    return () => {
-      cancelled = true;
-    };
-  }, [fetchKey, categoryId, debouncedQuery, ownership, page, pageSize, partOfSpeech, sortDir, userId]);
+  const cache = useMemo(
+    () => ({
+      get: getCachedResults,
+      set: setCachedResults,
+      generation: resultsGeneration,
+    }),
+    [getCachedResults, setCachedResults, resultsGeneration],
+  );
 
-  const loading = fetchKey !== resolvedFetchKey;
+  const {
+    rows: words,
+    totalCount,
+    loading,
+    error,
+    retry,
+  } = usePagedQuery<Word>({ cacheKey: fetchKey, label: "WordList", run, cache });
+
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
   const hasListFilters =
     Boolean(debouncedQuery) ||
@@ -404,26 +453,27 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
     Boolean(partOfSpeech) || Boolean(categoryId) || ownership !== "all";
   const hasNonDefaultView =
     sortDir !== DEFAULT_SORT_DIR || pageSize !== DEFAULT_PAGE_SIZE;
-  const showEmpty =
-    !loading && words.length === 0 && fetchKey === resolvedFetchKey;
-
-  const resetPage = () => setPage(1);
+  const showEmpty = !loading && !error && words.length === 0;
 
   const resetFilters = () => {
-    setPartOfSpeech("");
-    setCategoryId("");
-    setOwnership("all");
-    resetPage();
+    setState({
+      partOfSpeech: "",
+      categoryId: "",
+      ownership: "all",
+      page: 1,
+    });
   };
 
   const resetView = () => {
-    setSortDir(DEFAULT_SORT_DIR);
-    setPageSize(DEFAULT_PAGE_SIZE);
-    resetPage();
+    setState({
+      sortDir: DEFAULT_SORT_DIR,
+      pageSize: DEFAULT_PAGE_SIZE,
+      page: 1,
+    });
   };
 
   const togglePanel = (panel: "filters" | "view") => {
-    setOpenPanel((current) => (current === panel ? null : panel));
+    setState({ openPanel: openPanel === panel ? null : panel });
   };
 
   return (
@@ -436,9 +486,7 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
             placeholder="Слово на корейском…"
             value={query}
             onChange={(e) => {
-              setQuery(e.target.value);
-              setExpandedId(null);
-              resetPage();
+              setState({ query: e.target.value, expandedId: null, page: 1 });
             }}
             autoComplete="off"
             aria-label="Поиск по словарю"
@@ -492,8 +540,7 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
                   aria-label="Часть речи"
                   value={partOfSpeech}
                   onChange={(v) => {
-                    setPartOfSpeech(v as PartOfSpeech | "");
-                    resetPage();
+                    setState({ partOfSpeech: v, page: 1 });
                   }}
                   options={[
                     { value: "", label: "Все" },
@@ -511,8 +558,7 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
                   aria-label="Источник"
                   value={ownership}
                   onChange={(v) => {
-                    setOwnership(v as Ownership);
-                    resetPage();
+                    setState({ ownership: v as Ownership, page: 1 });
                   }}
                   options={[
                     { value: "all", label: "Все слова" },
@@ -528,8 +574,7 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
                   aria-label="Категория"
                   value={categoryId}
                   onChange={(v) => {
-                    setCategoryId(v);
-                    resetPage();
+                    setState({ categoryId: v, page: 1 });
                   }}
                   options={[
                     { value: "", label: "Все" },
@@ -563,8 +608,7 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
                   aria-label="Сортировка"
                   value={sortDir}
                   onChange={(v) => {
-                    setSortDir(v as "asc" | "desc");
-                    resetPage();
+                    setState({ sortDir: v as "asc" | "desc", page: 1 });
                   }}
                   options={[
                     { value: "asc", label: "А → Я" },
@@ -579,8 +623,7 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
                   aria-label="Количество слов"
                   value={String(pageSize)}
                   onChange={(v) => {
-                    setPageSize(Number(v));
-                    resetPage();
+                    setState({ pageSize: Number(v), page: 1 });
                   }}
                   options={PAGE_SIZE_OPTIONS.map((size) => ({
                     value: String(size),
@@ -605,6 +648,8 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
 
       {loading && <p className={styles.hint}>Загружаем…</p>}
 
+      {error && <ListError onRetry={retry} />}
+
       {showEmpty && (
         <p className={styles.hint}>
           {hasListFilters ? "Ничего не найдено" : "Слов пока нет"}
@@ -620,7 +665,14 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
                   word={word}
                   expanded={expandedId === word.id}
                   onToggle={() =>
-                    setExpandedId((id) => (id === word.id ? null : word.id))
+                    setState({
+                      expandedId: expandedId === word.id ? null : word.id,
+                    })
+                  }
+                  onEdit={
+                    userId && word.owner_user_id === userId
+                      ? () => setEditingWord(word)
+                      : null
                   }
                 />
               </li>
@@ -632,7 +684,7 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
               type="button"
               className={styles.pageBtn}
               disabled={page <= 1}
-              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              onClick={() => setState({ page: Math.max(1, page - 1) })}
               aria-label="Предыдущая страница"
             >
               ‹
@@ -649,7 +701,7 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
                   className={
                     item === page ? styles.pageBtnActive : styles.pageBtn
                   }
-                  onClick={() => setPage(item)}
+                  onClick={() => setState({ page: item })}
                   aria-current={item === page ? "page" : undefined}
                 >
                   {item}
@@ -660,7 +712,9 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
               type="button"
               className={styles.pageBtn}
               disabled={page >= totalPages}
-              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              onClick={() =>
+                setState({ page: Math.min(totalPages, page + 1) })
+              }
               aria-label="Следующая страница"
             >
               ›
@@ -668,6 +722,14 @@ export function WordList({ categories, userId, refreshKey = 0 }: WordListProps) 
           </nav>
         </>
       )}
+
+      <EditWordModal
+        open={editingWord !== null}
+        word={editingWord}
+        categories={categories}
+        onClose={() => setEditingWord(null)}
+        onWordChanged={onWordChanged}
+      />
     </div>
   );
 }

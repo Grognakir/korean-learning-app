@@ -32,8 +32,8 @@
   font-weight: 600;
 }
 
-/* Порог держать в синхроне с page.module.css/UserMenu.module.css — 1000px */
-@media (max-width: 1000px) {
+/* Порог --to-compact объявлен в src/styles/media.css */
+@media (--to-compact) {
   .bar {
     display: flex;
   }

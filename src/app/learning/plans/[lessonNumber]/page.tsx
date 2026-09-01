@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { notFound } from "next/navigation";
+import { displayName, requireUser } from "@/features/auth/requireUser";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
@@ -39,14 +39,12 @@ export default async function LessonPage({
   const { lessonNumber: lessonNumberParam } = await params;
   const lessonNumber = Number(lessonNumberParam);
 
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
+  // Number("abc") — NaN: без проверки страница рендерила «Урок NaN».
+  if (!Number.isInteger(lessonNumber) || lessonNumber < 1) {
+    notFound();
   }
+
+  const { supabase, user } = await requireUser();
 
   const [{ data: profile }, { data: rawPages }, { data: lesson }] =
     await Promise.all([
@@ -67,7 +65,7 @@ export default async function LessonPage({
         .maybeSingle(),
     ]);
 
-  const username = profile?.username ?? user.email ?? "Пользователь";
+  const username = displayName(profile, user);
   const pages = (rawPages ?? []) as TextbookPageRow[];
   const lessonTitle = lesson?.title ?? null;
 
@@ -76,7 +74,7 @@ export default async function LessonPage({
       <div className={styles.pageShell}>
         <AppHeader username={username} />
         <main className={styles.wrap}>
-          <Link href="/learning" className={styles.backLink}>
+          <Link href="/learning/plans" className={styles.backLink}>
             ← К списку уроков
           </Link>
           <p className={styles.emptyState}>Урок {lessonNumber} скоро появится.</p>
@@ -94,7 +92,7 @@ export default async function LessonPage({
       <AppHeader username={username} />
 
       <main className={styles.wrap}>
-        <Link href="/learning" className={styles.backLink}>
+        <Link href="/learning/plans" className={styles.backLink}>
           ← К списку уроков
         </Link>
 

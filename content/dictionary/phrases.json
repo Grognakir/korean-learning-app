@@ -1,0 +1,1060 @@
+{
+  "phrases": [
+    {
+      "external_id": "phrase-여기요!",
+      "phrase_kr": "여기요!",
+      "reading": "yeogiyo!",
+      "translation": "Извините! (позвать официанта)",
+      "usage_note": "Чтобы привлечь внимание персонала.",
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-메뉴판 좀 주세요.",
+      "phrase_kr": "메뉴판 좀 주세요.",
+      "reading": "menyupan jom juseyo.",
+      "translation": "Дайте, пожалуйста, меню.",
+      "usage_note": null,
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-이거 주세요.",
+      "phrase_kr": "이거 주세요.",
+      "reading": "igeo juseyo.",
+      "translation": "Дайте это, пожалуйста.",
+      "usage_note": "Удобно, указывая пальцем на меню.",
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-두 명이에요.",
+      "phrase_kr": "두 명이에요.",
+      "reading": "du myeong-ieyo.",
+      "translation": "Нас двое.",
+      "usage_note": "Ответ на вопрос о числе человек.",
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-이거 매워요?",
+      "phrase_kr": "이거 매워요?",
+      "reading": "igeo maewoyo?",
+      "translation": "Это острое?",
+      "usage_note": null,
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-고기 빼 주세요.",
+      "phrase_kr": "고기 빼 주세요.",
+      "reading": "gogi ppae juseyo.",
+      "translation": "Уберите, пожалуйста, мясо.",
+      "usage_note": null,
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-물 좀 주세요.",
+      "phrase_kr": "물 좀 주세요.",
+      "reading": "mul jom juseyo.",
+      "translation": "Принесите, пожалуйста, воды.",
+      "usage_note": null,
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-하나 더 주세요.",
+      "phrase_kr": "하나 더 주세요.",
+      "reading": "hana deo juseyo.",
+      "translation": "Ещё одну порцию, пожалуйста.",
+      "usage_note": null,
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-포장해 주세요.",
+      "phrase_kr": "포장해 주세요.",
+      "reading": "pojanghae juseyo.",
+      "translation": "Заверните с собой, пожалуйста.",
+      "usage_note": null,
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-포장이에요.",
+      "phrase_kr": "포장이에요.",
+      "reading": "pojang-ieyo.",
+      "translation": "На вынос.",
+      "usage_note": "Ответ на вопрос «здесь или с собой».",
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-계산해 주세요.",
+      "phrase_kr": "계산해 주세요.",
+      "reading": "gyesanhae juseyo.",
+      "translation": "Посчитайте, пожалуйста (принесите счёт).",
+      "usage_note": null,
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-잘 먹었습니다.",
+      "phrase_kr": "잘 먹었습니다.",
+      "reading": "jal meogeosseumnida.",
+      "translation": "Спасибо, было вкусно.",
+      "usage_note": "Говорят после еды.",
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-카드 되나요?",
+      "phrase_kr": "카드 되나요?",
+      "reading": "kadeu doenayo?",
+      "translation": "Можно расплатиться картой?",
+      "usage_note": null,
+      "category": "Ресторан и кафе"
+    },
+    {
+      "external_id": "phrase-택시 좀 불러주세요.",
+      "phrase_kr": "택시 좀 불러주세요.",
+      "reading": "taeksi jom bulleojuseyo.",
+      "translation": "Вызовите, пожалуйста, такси.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-이 주소로 가주세요.",
+      "phrase_kr": "이 주소로 가주세요.",
+      "reading": "i jusoro gajuseyo.",
+      "translation": "Отвезите по этому адресу, пожалуйста.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-여기로 가주세요.",
+      "phrase_kr": "여기로 가주세요.",
+      "reading": "yeogiro gajuseyo.",
+      "translation": "Отвезите сюда, пожалуйста.",
+      "usage_note": "Удобно вместе с картой/адресом на экране.",
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-공항까지 가주세요.",
+      "phrase_kr": "공항까지 가주세요.",
+      "reading": "gonghangkkaji gajuseyo.",
+      "translation": "Довезите до аэропорта, пожалуйста.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-얼마나 걸려요?",
+      "phrase_kr": "얼마나 걸려요?",
+      "reading": "eolmana geollyeoyo?",
+      "translation": "Сколько времени займёт?",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-얼마예요?",
+      "phrase_kr": "얼마예요?",
+      "reading": "eolmayeyo?",
+      "translation": "Сколько стоит?",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-여기서 세워주세요.",
+      "phrase_kr": "여기서 세워주세요.",
+      "reading": "yeogiseo sewojuseyo.",
+      "translation": "Остановите здесь, пожалуйста.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-좀 더 빨리 가주세요.",
+      "phrase_kr": "좀 더 빨리 가주세요.",
+      "reading": "jom deo ppalli gajuseyo.",
+      "translation": "Поезжайте, пожалуйста, побыстрее.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-카드로 계산할게요.",
+      "phrase_kr": "카드로 계산할게요.",
+      "reading": "kadeuro gyesanhalgeyo.",
+      "translation": "Я оплачу картой.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-트렁크 좀 열어주세요.",
+      "phrase_kr": "트렁크 좀 열어주세요.",
+      "reading": "teureongkeu jom yeoreojuseyo.",
+      "translation": "Откройте, пожалуйста, багажник.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-여기 세워도 돼요?",
+      "phrase_kr": "여기 세워도 돼요?",
+      "reading": "yeogi sewodo dwaeyo?",
+      "translation": "Можно здесь остановиться?",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-영수증 주세요.",
+      "phrase_kr": "영수증 주세요.",
+      "reading": "yeongsujeung juseyo.",
+      "translation": "Дайте, пожалуйста, чек.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-반대 방향으로 가주세요.",
+      "phrase_kr": "반대 방향으로 가주세요.",
+      "reading": "bandae banghyangeuro gajuseyo.",
+      "translation": "Поезжайте, пожалуйста, в обратную сторону.",
+      "usage_note": null,
+      "category": "Такси"
+    },
+    {
+      "external_id": "phrase-병원에 가야 해요.",
+      "phrase_kr": "병원에 가야 해요.",
+      "reading": "byeongwone gaya haeyo.",
+      "translation": "Мне нужно в больницу.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-근처에 병원이 있어요?",
+      "phrase_kr": "근처에 병원이 있어요?",
+      "reading": "geuncheoe byeongwoni isseoyo?",
+      "translation": "Здесь поблизости есть больница?",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-머리가 아파요.",
+      "phrase_kr": "머리가 아파요.",
+      "reading": "meoriga apayo.",
+      "translation": "У меня болит голова.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-배가 아파요.",
+      "phrase_kr": "배가 아파요.",
+      "reading": "baega apayo.",
+      "translation": "У меня болит живот.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-목이 아파요.",
+      "phrase_kr": "목이 아파요.",
+      "reading": "mogi apayo.",
+      "translation": "У меня болит горло.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-열이 있어요.",
+      "phrase_kr": "열이 있어요.",
+      "reading": "yeori isseoyo.",
+      "translation": "У меня температура.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-기침이 나요.",
+      "phrase_kr": "기침이 나요.",
+      "reading": "gichimi nayo.",
+      "translation": "У меня кашель.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-어지러워요.",
+      "phrase_kr": "어지러워요.",
+      "reading": "eojireowoyo.",
+      "translation": "У меня кружится голова.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-알레르기가 있어요.",
+      "phrase_kr": "알레르기가 있어요.",
+      "reading": "allereugiga isseoyo.",
+      "translation": "У меня аллергия.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-진통제 있어요?",
+      "phrase_kr": "진통제 있어요?",
+      "reading": "jintongje isseoyo?",
+      "translation": "У вас есть обезболивающее?",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-처방전 없이 살 수 있어요?",
+      "phrase_kr": "처방전 없이 살 수 있어요?",
+      "reading": "cheobangjeon eopsi sal su isseoyo?",
+      "translation": "Можно купить без рецепта?",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-이 약은 어떻게 먹어요?",
+      "phrase_kr": "이 약은 어떻게 먹어요?",
+      "reading": "i yageun eotteoke meogeoyo?",
+      "translation": "Как принимать это лекарство?",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-하루에 몇 번 먹어요?",
+      "phrase_kr": "하루에 몇 번 먹어요?",
+      "reading": "harue myeot beon meogeoyo?",
+      "translation": "Сколько раз в день принимать?",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-보험 있어요.",
+      "phrase_kr": "보험 있어요.",
+      "reading": "boheom isseoyo.",
+      "translation": "У меня есть страховка.",
+      "usage_note": null,
+      "category": "Больница и аптека"
+    },
+    {
+      "external_id": "phrase-이거 얼마예요?",
+      "phrase_kr": "이거 얼마예요?",
+      "reading": "igeo eolmayeyo?",
+      "translation": "Сколько это стоит?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-좀 깎아 주세요.",
+      "phrase_kr": "좀 깎아 주세요.",
+      "reading": "jom kkakka juseyo.",
+      "translation": "Сделайте, пожалуйста, скидку.",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-할인돼요?",
+      "phrase_kr": "할인돼요?",
+      "reading": "harindwaeyo?",
+      "translation": "Есть скидка?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-이거 입어봐도 돼요?",
+      "phrase_kr": "이거 입어봐도 돼요?",
+      "reading": "igeo ibeobwado dwaeyo?",
+      "translation": "Можно это примерить?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-다른 색 있어요?",
+      "phrase_kr": "다른 색 있어요?",
+      "reading": "dareun saek isseoyo?",
+      "translation": "Есть другой цвет?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-더 큰 사이즈 있어요?",
+      "phrase_kr": "더 큰 사이즈 있어요?",
+      "reading": "deo keun saijeu isseoyo?",
+      "translation": "Есть размер побольше?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-더 작은 사이즈 있어요?",
+      "phrase_kr": "더 작은 사이즈 있어요?",
+      "reading": "deo jageun saijeu isseoyo?",
+      "translation": "Есть размер поменьше?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-그냥 구경하는 거예요.",
+      "phrase_kr": "그냥 구경하는 거예요.",
+      "reading": "geunyang gugyeonghaneun geoyeyo.",
+      "translation": "Я просто смотрю.",
+      "usage_note": "Ответ продавцу, если помощь не нужна.",
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-현금만 받아요?",
+      "phrase_kr": "현금만 받아요?",
+      "reading": "hyeongeumman badayo?",
+      "translation": "Вы принимаете только наличные?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-봉투 주세요.",
+      "phrase_kr": "봉투 주세요.",
+      "reading": "bongtu juseyo.",
+      "translation": "Дайте, пожалуйста, пакет.",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-이거 환불하고 싶어요.",
+      "phrase_kr": "이거 환불하고 싶어요.",
+      "reading": "igeo hwanbulhago sipeoyo.",
+      "translation": "Я хочу вернуть это и получить деньги.",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-영수증 있어요?",
+      "phrase_kr": "영수증 있어요?",
+      "reading": "yeongsujeung isseoyo?",
+      "translation": "У вас есть чек?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-면세 되나요?",
+      "phrase_kr": "면세 되나요?",
+      "reading": "myeonse doenayo?",
+      "translation": "Можно оформить tax-free?",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-선물 포장해 주세요.",
+      "phrase_kr": "선물 포장해 주세요.",
+      "reading": "seonmul pojanghae juseyo.",
+      "translation": "Заверните это как подарок, пожалуйста.",
+      "usage_note": null,
+      "category": "Магазин и покупки"
+    },
+    {
+      "external_id": "phrase-탑승 수속은 어디서 해요?",
+      "phrase_kr": "탑승 수속은 어디서 해요?",
+      "reading": "tapseung susogeun eodiseo haeyo?",
+      "translation": "Где регистрация на рейс?",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-창가 자리로 주세요.",
+      "phrase_kr": "창가 자리로 주세요.",
+      "reading": "changga jariro juseyo.",
+      "translation": "Место у окна, пожалуйста.",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-통로 자리로 주세요.",
+      "phrase_kr": "통로 자리로 주세요.",
+      "reading": "tongno jariro juseyo.",
+      "translation": "Место у прохода, пожалуйста.",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-짐이 하나예요.",
+      "phrase_kr": "짐이 하나예요.",
+      "reading": "jimi hanayeyo.",
+      "translation": "У меня один чемодан.",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-이 짐은 부칠 거예요.",
+      "phrase_kr": "이 짐은 부칠 거예요.",
+      "reading": "i jimeun buchil geoyeyo.",
+      "translation": "Этот багаж я сдаю.",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-탑승구가 어디예요?",
+      "phrase_kr": "탑승구가 어디예요?",
+      "reading": "tapseunggu-ga eodiyeyo?",
+      "translation": "Где выход на посадку?",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-몇 시에 탑승해요?",
+      "phrase_kr": "몇 시에 탑승해요?",
+      "reading": "myeot sie tapseunghaeyo?",
+      "translation": "Во сколько посадка?",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-비행기가 연착됐어요?",
+      "phrase_kr": "비행기가 연착됐어요?",
+      "reading": "bihaenggiga yeonchakdwaesseoyo?",
+      "translation": "Рейс задержан?",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-짐을 잃어버렸어요.",
+      "phrase_kr": "짐을 잃어버렸어요.",
+      "reading": "jimeul ireobeoryeosseoyo.",
+      "translation": "Я потерял(а) багаж.",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-환승은 어디서 해요?",
+      "phrase_kr": "환승은 어디서 해요?",
+      "reading": "hwanseungeun eodiseo haeyo?",
+      "translation": "Где пересадка?",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-여권 여기 있어요.",
+      "phrase_kr": "여권 여기 있어요.",
+      "reading": "yeogwon yeogi isseoyo.",
+      "translation": "Вот мой паспорт.",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-담요 좀 주세요.",
+      "phrase_kr": "담요 좀 주세요.",
+      "reading": "damyo jom juseyo.",
+      "translation": "Дайте, пожалуйста, плед.",
+      "usage_note": "В самолёте.",
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-입국 신고서 어떻게 써요?",
+      "phrase_kr": "입국 신고서 어떻게 써요?",
+      "reading": "ipguk singoseo eotteoke sseoyo?",
+      "translation": "Как заполнить иммиграционную карту?",
+      "usage_note": null,
+      "category": "Аэропорт и самолёт"
+    },
+    {
+      "external_id": "phrase-체크인하고 싶어요.",
+      "phrase_kr": "체크인하고 싶어요.",
+      "reading": "chekeuinhago sipeoyo.",
+      "translation": "Я хочу заселиться.",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-예약했어요.",
+      "phrase_kr": "예약했어요.",
+      "reading": "yeyakhaesseoyo.",
+      "translation": "У меня есть бронь.",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-체크아웃 몇 시예요?",
+      "phrase_kr": "체크아웃 몇 시예요?",
+      "reading": "chekeuaut myeot siyeyo?",
+      "translation": "Во сколько выселение?",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-방을 바꿀 수 있어요?",
+      "phrase_kr": "방을 바꿀 수 있어요?",
+      "reading": "bangeul bakkul su isseoyo?",
+      "translation": "Можно поменять номер?",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-와이파이 비밀번호가 뭐예요?",
+      "phrase_kr": "와이파이 비밀번호가 뭐예요?",
+      "reading": "waipai bimilbeonhoga mwoyeyo?",
+      "translation": "Какой пароль от вай-фая?",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-짐을 맡길 수 있어요?",
+      "phrase_kr": "짐을 맡길 수 있어요?",
+      "reading": "jimeul matgil su isseoyo?",
+      "translation": "Можно оставить багаж на хранение?",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-수건 좀 더 주세요.",
+      "phrase_kr": "수건 좀 더 주세요.",
+      "reading": "sugeon jom deo juseyo.",
+      "translation": "Дайте, пожалуйста, ещё полотенец.",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-방 청소해 주세요.",
+      "phrase_kr": "방 청소해 주세요.",
+      "reading": "bang cheongsohae juseyo.",
+      "translation": "Уберите, пожалуйста, номер.",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-조식은 몇 시부터예요?",
+      "phrase_kr": "조식은 몇 시부터예요?",
+      "reading": "josigeun myeot sibuteoyeyo?",
+      "translation": "Во сколько начинается завтрак?",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-근처에 편의점 있어요?",
+      "phrase_kr": "근처에 편의점 있어요?",
+      "reading": "geuncheoe pyeoneujeom isseoyo?",
+      "translation": "Здесь рядом есть круглосуточный магазин?",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-하루 더 묵고 싶어요.",
+      "phrase_kr": "하루 더 묵고 싶어요.",
+      "reading": "haru deo mukgo sipeoyo.",
+      "translation": "Я хочу остаться ещё на одну ночь.",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-체크아웃할게요.",
+      "phrase_kr": "체크아웃할게요.",
+      "reading": "chekeuauthalgeyo.",
+      "translation": "Я выселяюсь.",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-에어컨이 안 돼요.",
+      "phrase_kr": "에어컨이 안 돼요.",
+      "reading": "eeokeoni an dwaeyo.",
+      "translation": "Кондиционер не работает.",
+      "usage_note": null,
+      "category": "Отель"
+    },
+    {
+      "external_id": "phrase-지하철역이 어디예요?",
+      "phrase_kr": "지하철역이 어디예요?",
+      "reading": "jihacheollyeogi eodiyeyo?",
+      "translation": "Где станция метро?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-버스 정류장이 어디예요?",
+      "phrase_kr": "버스 정류장이 어디예요?",
+      "reading": "beoseu jeongnyujangi eodiyeyo?",
+      "translation": "Где автобусная остановка?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-이 버스 명동 가요?",
+      "phrase_kr": "이 버스 명동 가요?",
+      "reading": "i beoseu myeongdong gayo?",
+      "translation": "Этот автобус едет в Мёндон?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-어디서 갈아타요?",
+      "phrase_kr": "어디서 갈아타요?",
+      "reading": "eodiseo garatayo?",
+      "translation": "Где мне сделать пересадку?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-표는 어디서 사요?",
+      "phrase_kr": "표는 어디서 사요?",
+      "reading": "pyoneun eodiseo sayo?",
+      "translation": "Где купить билет?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-교통카드 어디서 충전해요?",
+      "phrase_kr": "교통카드 어디서 충전해요?",
+      "reading": "gyotongkadeu eodiseo chungjeonhaeyo?",
+      "translation": "Где пополнить транспортную карту?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-다음 역이 어디예요?",
+      "phrase_kr": "다음 역이 어디예요?",
+      "reading": "daeum yeogi eodiyeyo?",
+      "translation": "Какая следующая станция?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-여기서 내려야 돼요?",
+      "phrase_kr": "여기서 내려야 돼요?",
+      "reading": "yeogiseo naeryeoya dwaeyo?",
+      "translation": "Мне нужно выходить здесь?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-막차가 몇 시예요?",
+      "phrase_kr": "막차가 몇 시예요?",
+      "reading": "makchaga myeot siyeyo?",
+      "translation": "Во сколько последний поезд или автобус?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-이 자리 비어 있어요?",
+      "phrase_kr": "이 자리 비어 있어요?",
+      "reading": "i jari bieo isseoyo?",
+      "translation": "Это место свободно?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-반대편으로 가야 돼요.",
+      "phrase_kr": "반대편으로 가야 돼요.",
+      "reading": "bandaepyeoneuro gaya dwaeyo.",
+      "translation": "Мне нужно на противоположную сторону.",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-급행이에요?",
+      "phrase_kr": "급행이에요?",
+      "reading": "geuphaengieyo?",
+      "translation": "Это скоростной поезд или автобус?",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-도착하면 알려주세요.",
+      "phrase_kr": "도착하면 알려주세요.",
+      "reading": "dochakhamyeon allyeojuseyo.",
+      "translation": "Скажите, пожалуйста, когда приедем.",
+      "usage_note": null,
+      "category": "Общественный транспорт"
+    },
+    {
+      "external_id": "phrase-저기요, 말씀 좀 여쭤봐도 돼요?",
+      "phrase_kr": "저기요, 말씀 좀 여쭤봐도 돼요?",
+      "reading": "jeogiyo, malsseum jom yeojjwobwado dwaeyo?",
+      "translation": "Извините, можно вас спросить?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-여기가 어디예요?",
+      "phrase_kr": "여기가 어디예요?",
+      "reading": "yeogiga eodiyeyo?",
+      "translation": "Где я нахожусь?",
+      "usage_note": "Что это за место.",
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-이 근처에 화장실이 있어요?",
+      "phrase_kr": "이 근처에 화장실이 있어요?",
+      "reading": "i geuncheoe hwajangsili isseoyo?",
+      "translation": "Здесь рядом есть туалет?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-여기서 멀어요?",
+      "phrase_kr": "여기서 멀어요?",
+      "reading": "yeogiseo meoreoyo?",
+      "translation": "Это далеко отсюда?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-걸어서 갈 수 있어요?",
+      "phrase_kr": "걸어서 갈 수 있어요?",
+      "reading": "georeoseo gal su isseoyo?",
+      "translation": "Можно дойти пешком?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-어떻게 가요?",
+      "phrase_kr": "어떻게 가요?",
+      "reading": "eotteoke gayo?",
+      "translation": "Как туда добраться?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-지금 몇 시예요?",
+      "phrase_kr": "지금 몇 시예요?",
+      "reading": "jigeum myeot siyeyo?",
+      "translation": "Который сейчас час?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-사진 좀 찍어 주시겠어요?",
+      "phrase_kr": "사진 좀 찍어 주시겠어요?",
+      "reading": "sajin jom jjigeo jusigesseoyo?",
+      "translation": "Не могли бы вы нас сфотографировать?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-한국어를 잘 못해요.",
+      "phrase_kr": "한국어를 잘 못해요.",
+      "reading": "hangugeoreul jal motaeyo.",
+      "translation": "Я плохо говорю по-корейски.",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-영어 할 줄 아세요?",
+      "phrase_kr": "영어 할 줄 아세요?",
+      "reading": "yeongeo hal jul aseyo?",
+      "translation": "Вы говорите по-английски?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-천천히 말씀해 주세요.",
+      "phrase_kr": "천천히 말씀해 주세요.",
+      "reading": "cheoncheonhi malsseumhae juseyo.",
+      "translation": "Говорите, пожалуйста, помедленнее.",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-다시 한번 말씀해 주세요.",
+      "phrase_kr": "다시 한번 말씀해 주세요.",
+      "reading": "dasi hanbeon malsseumhae juseyo.",
+      "translation": "Повторите, пожалуйста, ещё раз.",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-도와주시겠어요?",
+      "phrase_kr": "도와주시겠어요?",
+      "reading": "dowajusigesseoyo?",
+      "translation": "Не могли бы вы мне помочь?",
+      "usage_note": null,
+      "category": "Вопрос на улице и просьба о помощи"
+    },
+    {
+      "external_id": "phrase-안녕하세요.",
+      "phrase_kr": "안녕하세요.",
+      "reading": "annyeonghaseyo.",
+      "translation": "Здравствуйте.",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-제 이름은 지나예요.",
+      "phrase_kr": "제 이름은 지나예요.",
+      "reading": "je ireumeun jinayeyo.",
+      "translation": "Меня зовут Джина.",
+      "usage_note": "Вместо имени подставьте своё.",
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-만나서 반가워요.",
+      "phrase_kr": "만나서 반가워요.",
+      "reading": "mannaseo bangawoyo.",
+      "translation": "Приятно познакомиться.",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-어디서 오셨어요?",
+      "phrase_kr": "어디서 오셨어요?",
+      "reading": "eodiseo osyeosseoyo?",
+      "translation": "Откуда вы приехали?",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-저는 러시아에서 왔어요.",
+      "phrase_kr": "저는 러시아에서 왔어요.",
+      "reading": "jeoneun reosiaeseo wasseoyo.",
+      "translation": "Я приехал(а) из России.",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-한국에 얼마나 계세요?",
+      "phrase_kr": "한국에 얼마나 계세요?",
+      "reading": "hanguge eolmana gyeseyo?",
+      "translation": "Сколько вы пробудете в Корее?",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-나이가 어떻게 되세요?",
+      "phrase_kr": "나이가 어떻게 되세요?",
+      "reading": "naiga eotteoke doeseyo?",
+      "translation": "Сколько вам лет?",
+      "usage_note": "Вежливая форма.",
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-연락처 좀 알려주세요.",
+      "phrase_kr": "연락처 좀 알려주세요.",
+      "reading": "yeollakcheo jom allyeojuseyo.",
+      "translation": "Дайте, пожалуйста, ваш контакт.",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-카톡 아이디가 뭐예요?",
+      "phrase_kr": "카톡 아이디가 뭐예요?",
+      "reading": "katok aidiga mwoyeyo?",
+      "translation": "Какой у вас ID в KakaoTalk?",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-나중에 또 봐요.",
+      "phrase_kr": "나중에 또 봐요.",
+      "reading": "najunge tto bwayo.",
+      "translation": "Увидимся ещё.",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-다음에 같이 밥 먹어요.",
+      "phrase_kr": "다음에 같이 밥 먹어요.",
+      "reading": "daeume gachi bap meogeoyo.",
+      "translation": "Давайте как-нибудь вместе поедим.",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-축하해요!",
+      "phrase_kr": "축하해요!",
+      "reading": "chukhahaeyo!",
+      "translation": "Поздравляю!",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-몸 조심하세요.",
+      "phrase_kr": "몸 조심하세요.",
+      "reading": "mom josimhaseyo.",
+      "translation": "Берегите себя.",
+      "usage_note": null,
+      "category": "Знакомство и small talk"
+    },
+    {
+      "external_id": "phrase-도와주세요!",
+      "phrase_kr": "도와주세요!",
+      "reading": "dowajuseyo!",
+      "translation": "Помогите!",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-경찰을 불러주세요.",
+      "phrase_kr": "경찰을 불러주세요.",
+      "reading": "gyeongchareul bulleojuseyo.",
+      "translation": "Вызовите, пожалуйста, полицию.",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-구급차를 불러주세요.",
+      "phrase_kr": "구급차를 불러주세요.",
+      "reading": "gugeupchareul bulleojuseyo.",
+      "translation": "Вызовите, пожалуйста, скорую.",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-불이야!",
+      "phrase_kr": "불이야!",
+      "reading": "buriya!",
+      "translation": "Пожар!",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-지갑을 잃어버렸어요.",
+      "phrase_kr": "지갑을 잃어버렸어요.",
+      "reading": "jigabeul ireobeoryeosseoyo.",
+      "translation": "Я потерял(а) кошелёк.",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-여권을 잃어버렸어요.",
+      "phrase_kr": "여권을 잃어버렸어요.",
+      "reading": "yeogwoneul ireobeoryeosseoyo.",
+      "translation": "Я потерял(а) паспорт.",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-핸드폰을 도난당했어요.",
+      "phrase_kr": "핸드폰을 도난당했어요.",
+      "reading": "haendeuponeul donandanghaesseoyo.",
+      "translation": "У меня украли телефон.",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-길을 잃었어요.",
+      "phrase_kr": "길을 잃었어요.",
+      "reading": "gireul ireosseoyo.",
+      "translation": "Я заблудился(-лась).",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-한국어를 못해요, 도와주세요.",
+      "phrase_kr": "한국어를 못해요, 도와주세요.",
+      "reading": "hangugeoreul motaeyo, dowajuseyo.",
+      "translation": "Я не говорю по-корейски, помогите, пожалуйста.",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-대사관이 어디예요?",
+      "phrase_kr": "대사관이 어디예요?",
+      "reading": "daesagwani eodiyeyo?",
+      "translation": "Где посольство?",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-다쳤어요.",
+      "phrase_kr": "다쳤어요.",
+      "reading": "dachyeosseoyo.",
+      "translation": "Я поранился(-лась).",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-숨을 못 쉬어요.",
+      "phrase_kr": "숨을 못 쉬어요.",
+      "reading": "sumeul mot swieoyo.",
+      "translation": "Мне трудно дышать.",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    },
+    {
+      "external_id": "phrase-여기 응급 상황이에요.",
+      "phrase_kr": "여기 응급 상황이에요.",
+      "reading": "yeogi eunggeup sanghwang-ieyo.",
+      "translation": "Здесь экстренная ситуация.",
+      "usage_note": null,
+      "category": "Экстренные ситуации"
+    }
+  ]
+}

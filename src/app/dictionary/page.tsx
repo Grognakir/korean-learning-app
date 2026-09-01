@@ -12,10 +12,21 @@ export default async function DictionaryPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { data: categories } = await supabase
-    .from("categories")
-    .select("id, name")
-    .order("name");
+  const [
+    { data: categories },
+    { data: phraseCategoryRows },
+    { data: grammarCategoryRows },
+  ] = await Promise.all([
+    supabase.from("categories").select("id, name").order("name"),
+    supabase.from("phrases").select("category").not("category", "is", null),
+    supabase.from("grammar_points").select("category"),
+  ]);
+  const phraseCategories = Array.from(
+    new Set((phraseCategoryRows ?? []).map((r) => r.category as string)),
+  ).sort((a, b) => a.localeCompare(b, "ru"));
+  const grammarCategories = Array.from(
+    new Set((grammarCategoryRows ?? []).map((r) => r.category as string)),
+  ).sort((a, b) => a.localeCompare(b, "ru"));
 
   let username: string | null = null;
   if (user) {
@@ -34,6 +45,8 @@ export default async function DictionaryPage() {
       <main className={styles.wrap}>
         <DictionaryPageClient
           categories={categories ?? []}
+          phraseCategories={phraseCategories}
+          grammarCategories={grammarCategories}
           userId={user?.id ?? null}
         />
       </main>

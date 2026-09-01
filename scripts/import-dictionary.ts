@@ -38,16 +38,39 @@ async function main() {
 
   console.log(`Категорий: ${source.categories.length}, слов: ${source.words.length}`);
 
-  const { data: categoryRows, error: categoriesError } = await supabase
+  // Глобальные категории уникальны по lower(name) частичным индексом
+  // (owner_user_id is null) — такую уникальность PostgREST не умеет
+  // указать в on_conflict, поэтому вставляем только недостающие.
+  const { data: existingCategories, error: existingError } = await supabase
     .from("categories")
-    .upsert(
-      source.categories.map((name) => ({ name })),
-      { onConflict: "name" },
-    )
-    .select();
-  if (categoriesError) throw categoriesError;
+    .select("id, name")
+    .is("owner_user_id", null);
+  if (existingError) throw existingError;
 
-  const categoryIdByName = new Map(categoryRows.map((c) => [c.name, c.id]));
+  const categoryIdByLowerName = new Map(
+    (existingCategories ?? []).map((c) => [c.name.toLowerCase(), c.id]),
+  );
+
+  const missing = source.categories.filter(
+    (name) => !categoryIdByLowerName.has(name.toLowerCase()),
+  );
+  if (missing.length > 0) {
+    const { data: created, error: createError } = await supabase
+      .from("categories")
+      .insert(missing.map((name) => ({ name, owner_user_id: null })))
+      .select();
+    if (createError) throw createError;
+    for (const c of created ?? []) {
+      categoryIdByLowerName.set(c.name.toLowerCase(), c.id);
+    }
+  }
+
+  const categoryIdByName = new Map(
+    source.categories.map((name) => [
+      name,
+      categoryIdByLowerName.get(name.toLowerCase())!,
+    ]),
+  );
 
   for (const word of source.words) {
     const { data: wordRow, error: wordError } = await supabase

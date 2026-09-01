@@ -8,7 +8,7 @@
 .wrap {
   flex: 1;
   width: 100%;
-  max-width: 720px;
+  max-width: var(--content-wide);
   margin: 0 auto;
   padding: 28px 20px 96px;
   display: flex;
@@ -41,27 +41,42 @@
   gap: 8px;
 }
 
-.typeTabActive {
-  border: 1px solid var(--ink);
+.typeTab,
+.typeTabActive,
+.typeTabStub {
+  font: inherit;
   border-radius: 100px;
   padding: 7px 16px;
   font-size: 13px;
   font-weight: 600;
+}
+
+.typeTab {
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  background: transparent;
+  cursor: pointer;
+}
+
+.typeTab:hover {
+  border-color: var(--ink-soft);
+  color: var(--ink);
+}
+
+.typeTabActive {
+  border: 1px solid var(--ink);
   color: var(--ink);
   background: #fff;
+  cursor: pointer;
 }
 
 .typeTabStub {
   border: 1px solid var(--line);
-  border-radius: 100px;
-  padding: 7px 16px;
-  font-size: 13px;
-  font-weight: 600;
   color: var(--stone);
   cursor: default;
 }
 
-@media (max-width: 1000px) {
+@media (--to-compact) {
   .wrap {
     padding-bottom: 76px;
   }

@@ -1,0 +1,46 @@
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  padding-right: 28px;
+}
+
+.dangerZone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.deleteButton {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--red);
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  text-decoration: underline;
+}
+
+.confirmText {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.confirmRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.error {
+  color: var(--red);
+  font-size: 14px;
+}

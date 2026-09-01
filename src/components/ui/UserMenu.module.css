@@ -48,11 +48,16 @@
   border-radius: var(--radius-control);
   padding: 9px 10px;
   background: none;
-  color: var(--stone);
+  color: var(--ink);
   font-size: 13.5px;
   font-weight: 600;
   text-align: left;
-  cursor: default;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background: var(--paper-2);
 }
 
 .menuItemDanger {
@@ -72,8 +77,8 @@
   background: var(--paper-2);
 }
 
-/* Порог держать в синхроне с page.module.css/BottomTabBar.module.css — 1000px */
-@media (max-width: 1000px) {
+/* Порог --to-compact объявлен в src/styles/media.css */
+@media (--to-compact) {
   .root {
     display: block;
   }

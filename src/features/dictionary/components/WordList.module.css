@@ -148,8 +148,14 @@
   border-color: color-mix(in srgb, var(--ink) 22%, var(--line));
 }
 
+.cardHeaderRow {
+  display: flex;
+  align-items: flex-start;
+}
+
 .cardHeader {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   border: none;
   background: none;
   padding: 12px 14px;
@@ -164,6 +170,27 @@
 
 div.cardHeader {
   cursor: default;
+}
+
+.editButton {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 12px 14px 12px 4px;
+  color: var(--stone);
+  cursor: pointer;
+}
+
+.editButton:hover {
+  color: var(--ink);
+}
+
+.editIcon {
+  width: 15px;
+  height: 15px;
 }
 
 .cardBody {
@@ -182,7 +209,7 @@ div.cardHeader {
 }
 
 .headword {
-  font-size: 18px;
+  font-size: var(--kr-font-lg);
   font-weight: 700;
   line-height: 1.25;
 }
@@ -297,7 +324,7 @@ div.cardHeader {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 14px;
+  font-size: var(--kr-font-md);
   padding-left: 10px;
   border-left: 2px solid var(--line);
 }
@@ -313,7 +340,7 @@ div.cardHeader {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: 14px;
+  font-size: var(--kr-font-md);
   color: var(--ink-soft);
   line-height: 1.4;
 }

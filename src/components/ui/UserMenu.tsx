@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { signOut } from "@/features/auth/actions";
 import styles from "./UserMenu.module.css";
 
@@ -46,14 +47,14 @@ export function UserMenu({ username }: { username: string }) {
       {open && (
         <div className={styles.menu} role="menu">
           <p className={styles.menuUsername}>{username}</p>
-          <button
-            type="button"
+          <Link
+            href="/settings"
             className={styles.menuItem}
-            disabled
-            title="Скоро — настройки"
+            role="menuitem"
+            onClick={() => setOpen(false)}
           >
             Настройки
-          </button>
+          </Link>
           <form action={signOut}>
             <button type="submit" className={styles.menuItemDanger}>
               Выйти

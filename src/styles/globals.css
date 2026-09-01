@@ -51,9 +51,16 @@ body {
   flex-direction: column;
   background: var(--paper);
   color: var(--ink);
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family: var(
+    --font-ui-active,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif
+  );
   -webkit-font-smoothing: antialiased;
 }
 
@@ -62,10 +69,27 @@ a {
 }
 
 .kr {
-  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  /* !important осознанно: .kr — не обычный компонентный класс, а
+     утилита-аннотация "этот текст на корейском", которая обязана
+     побеждать всегда. Без него у неё та же специфичность (0,1,0), что и у
+     локальных классов компонентов (`.vocabKo`, `.input` и т.п.),
+     использующих `font: inherit` (сбрасывает и font-family) — при равной
+     специфичности выигрывает тот, что позже в бандле, а это не всегда
+     .kr. Из-за этого выбор шрифта в настройках не применялся, например,
+     к vocab-чипам на страницах уроков. */
+  font-family: var(
+      --font-kr-active,
+      "Apple SD Gothic Neo",
+      "Malgun Gothic",
+      "Noto Sans KR",
+      sans-serif
+    ) !important;
   word-break: keep-all;
 }
 
-button {
+button,
+input,
+textarea,
+select {
   font: inherit;
 }

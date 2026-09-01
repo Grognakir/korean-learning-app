@@ -14,6 +14,18 @@
     0 8px 24px rgba(28, 27, 25, 0.08);
   --radius-panel: 16px;
   --radius-control: 12px;
+  --content-wide: 960px;
+
+  /* Fluid-шкала для корейского текста: минимум держит текущий размер (на
+     узких экранах ничего не мельче, чем было), vw-часть плавно добавляет
+     размер на широких экранах — без media query и без резких скачков. */
+  --kr-font-xs: clamp(12.5px, 0.35vw + 11.7px, 13.5px);
+  --kr-font-sm: clamp(13px, 0.5vw + 12px, 15px);
+  --kr-font-md: clamp(15px, 0.6vw + 13.5px, 17px);
+  --kr-font-lg: clamp(18px, 0.9vw + 16px, 21px);
+  --kr-font-xl: clamp(22px, 1.1vw + 19px, 25px);
+  --kr-font-hero: clamp(24px, 1.6vw + 20px, 30px);
+
   --scrollbar-size: 8px;
   --scrollbar-thumb: color-mix(in srgb, var(--stone) 55%, var(--line));
   --scrollbar-thumb-hover: var(--stone);

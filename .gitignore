@@ -37,6 +37,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# локальное состояние Claude Code (сессии, лок-файлы, launch.json для превью)
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# сканы учебника — крупные, в репозиторий не кладём
+docs/reference/inha_book_1_book/image/

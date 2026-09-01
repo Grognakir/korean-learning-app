@@ -8,7 +8,7 @@
 .wrap {
   flex: 1;
   width: 100%;
-  max-width: 480px;
+  max-width: var(--content-wide);
   margin: 0 auto;
   padding: 28px 20px 96px;
   display: flex;
@@ -30,54 +30,69 @@
   gap: 4px;
 }
 
-.eyebrow {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--stone);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 .title {
   font-size: 22px;
   font-weight: 700;
 }
 
-.lessonList {
-  list-style: none;
+.emptyState {
+  color: var(--ink-soft);
+}
+
+.modeGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
 }
 
-.lessonLink {
-  display: block;
+.modeCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-panel);
-  box-shadow: var(--card-shadow);
-  padding: 14px 16px;
-  font-weight: 600;
   text-decoration: none;
-  color: var(--ink);
-  text-align: center;
+  color: inherit;
+  container-type: inline-size;
 }
 
-.lessonItemWide {
-  grid-column: 1 / -1;
-}
-
-.lessonLinkWide {
-  text-align: left;
-}
-
-.lessonStub {
+.modeCardImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   display: block;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-panel);
-  padding: 14px 16px;
-  font-weight: 600;
-  color: var(--stone);
-  cursor: default;
-  text-align: center;
+}
+
+@container (min-width: 480px) {
+  .modeCardImage {
+    aspect-ratio: 3 / 1;
+    max-height: 168px;
+  }
+}
+
+.modeCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px 14px;
+  min-width: 0;
+}
+
+.modeCardTitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modeCardDescription {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+@media (--to-compact) {
+  .wrap {
+    padding-bottom: 76px;
+  }
 }

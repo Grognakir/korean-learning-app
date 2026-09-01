@@ -5,7 +5,8 @@ import { NextResponse, type NextRequest } from "next/server";
 // "/learning" — материал раздела «Обучение» открыт только залогиненным
 // (docs/dev_docs/3-dictionary-and-learning.md §1.3, ADR-0002); страницы
 // внутри тоже проверяют сессию сами, это дополнительный уровень защиты.
-const PROTECTED_PREFIXES: string[] = ["/learning"];
+// "/settings" — шрифты и прочие предпочтения профиля.
+const PROTECTED_PREFIXES: string[] = ["/learning", "/settings"];
 
 export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({ request });

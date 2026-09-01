@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.retry {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.retry:hover {
+  text-decoration: underline;
+}

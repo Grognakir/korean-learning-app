@@ -87,10 +87,32 @@ export type IllustrationBlock = ContentBlockBase & {
   imageUrl?: string | null;
 };
 
+export type PhraseGalleryItem = {
+  storage_path: string | null;
+  caption: string;
+  phrases: { text: string; translation_ru: string }[];
+  imageUrl?: string | null;
+};
+
+/**
+ * Объединяет то, что раньше было парами illustration+hint (одна картинка —
+ * одна/несколько готовых фраз) в одну карточку сетки, а не два отдельных
+ * блока подряд — см. историю правок 1 урока (準備하기 1, прощание/спасибо/
+ * извинение и т.п.).
+ */
+export type PhraseGalleryBlock = ContentBlockBase & {
+  type: "phrase_gallery";
+  title?: string;
+  items: PhraseGalleryItem[];
+};
+
 export type ReferenceTableBlock = ContentBlockBase & {
   type: "reference_table";
   title: string;
   columns: string[];
+  translations?: string[];
+  flags?: (string | null)[];
+  flagUrls?: (string | null)[];
   note?: string;
 };
 
@@ -118,6 +140,7 @@ export type Block =
   | HintBlock
   | IllustrationBlock
   | ReferenceTableBlock
+  | PhraseGalleryBlock
   | GrammarPointBlock
   | GrammarExerciseBlock;
 

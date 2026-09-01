@@ -9,11 +9,15 @@ import {
   type CSSProperties,
 } from "react";
 import { createPortal } from "react-dom";
+import { plural } from "@/lib/plural";
 import styles from "./Select.module.css";
 
 export type SelectOption = {
   value: string;
   label: string;
+  preview?: string;
+  previewClassName?: string;
+  previewStyle?: CSSProperties;
 };
 
 type MenuCoords = {
@@ -80,6 +84,16 @@ export function Select({
   const selected = options.find((o) => o.value === value);
   const label = selected?.label ?? placeholder;
 
+  const previewEl = (option: SelectOption | undefined, className: string) =>
+    option?.preview ? (
+      <span
+        className={[className, option.previewClassName].filter(Boolean).join(" ")}
+        style={option.previewStyle}
+      >
+        {option.preview}
+      </span>
+    ) : null;
+
   const updateCoords = useCallback(() => {
     if (triggerRef.current) {
       setCoords(menuCoordsFromTrigger(triggerRef.current));
@@ -136,8 +150,11 @@ export function Select({
         aria-controls={listId}
         aria-label={ariaLabel}
       >
-        <span className={selected ? styles.triggerLabel : styles.placeholder}>
-          {label}
+        <span className={styles.triggerMain}>
+          <span className={selected ? styles.triggerLabel : styles.placeholder}>
+            {label}
+          </span>
+          {previewEl(selected, styles.triggerPreview)}
         </span>
         <Chevron />
       </button>
@@ -172,7 +189,8 @@ export function Select({
                       setOpen(false);
                     }}
                   >
-                    {option.label}
+                    <span className={styles.optionLabel}>{option.label}</span>
+                    {previewEl(option, styles.optionPreview)}
                   </button>
                 </li>
               );
@@ -213,7 +231,11 @@ export function MultiSelect({
       ? placeholder
       : values.length === 1
         ? (options.find((o) => o.value === values[0])?.label ?? values[0])
-        : `${values.length} категории`;
+        : `${values.length} ${plural(values.length, [
+            "категория",
+            "категории",
+            "категорий",
+          ])}`;
 
   const updateCoords = useCallback(() => {
     if (triggerRef.current) {

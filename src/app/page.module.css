@@ -81,7 +81,7 @@
 .main {
   flex: 1;
   width: 100%;
-  max-width: 480px;
+  max-width: var(--content-wide);
   margin: 0 auto;
   padding: 28px 20px 40px;
   display: flex;
@@ -158,10 +158,10 @@
 
 /*
  * Мобильный паттерн для гостевой шапки: центр-меню переезжает в
- * BottomTabBar. Порог держать в синхроне с BottomTabBar.module.css —
- * 1000px. Авторизованная шапка — см. AppHeader.module.css.
+ * BottomTabBar. Авторизованная шапка — см. AppHeader.module.css.
+ * Порог --to-compact объявлен в src/styles/media.css.
  */
-@media (max-width: 1000px) {
+@media (--to-compact) {
   .wrap {
     padding-bottom: 76px;
   }

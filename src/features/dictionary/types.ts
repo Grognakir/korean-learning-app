@@ -28,6 +28,32 @@ export type WordDraft = {
   isNewCategory?: boolean;
 };
 
+export type GrammarPoint = {
+  id: string;
+  pattern: string;
+  short_desc: string | null;
+  category: string;
+  grammar_group: string | null;
+  lesson_label: string | null;
+  lessons: number[] | null;
+  explanation: string | null;
+  usage: string[] | null;
+  rules: string[] | null;
+  examples: { kr: string; ru: string }[];
+  vocab: { kr: string; ru: string }[] | null;
+  owner_user_id: string | null;
+};
+
+export type Phrase = {
+  id: string;
+  phrase_kr: string;
+  reading: string | null;
+  translation: string;
+  usage_note: string | null;
+  category: string | null;
+  owner_user_id: string | null;
+};
+
 export type Word = {
   id: string;
   headword: string;
