@@ -6,7 +6,7 @@ import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import styles from "../learning.module.css";
 
 export default async function TrainersPage() {
-  const { username } = await requireUserWithProfile();
+  const { username, activeLanguage } = await requireUserWithProfile();
 
   return (
     <div className={styles.page}>
@@ -37,20 +37,22 @@ export default async function TrainersPage() {
               </p>
             </div>
           </Link>
-          <Link href="/learning/trainers/topics" className={styles.modeCard}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/learning/topics.jpg"
-              alt=""
-              className={styles.modeCardImage}
-            />
-            <div className={styles.modeCardBody}>
-              <span className={`${styles.modeCardTitle} kr`}>Отработка тем</span>
-              <p className={styles.modeCardDescription}>
-                Тесты с выбором ответа по конкретным темам грамматики и лексики.
-              </p>
-            </div>
-          </Link>
+          {activeLanguage === "ko" && (
+            <Link href="/learning/trainers/topics" className={styles.modeCard}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/learning/topics.jpg"
+                alt=""
+                className={styles.modeCardImage}
+              />
+              <div className={styles.modeCardBody}>
+                <span className={`${styles.modeCardTitle} kr`}>Отработка тем</span>
+                <p className={styles.modeCardDescription}>
+                  Тесты с выбором ответа по конкретным темам грамматики и лексики.
+                </p>
+              </div>
+            </Link>
+          )}
         </div>
       </main>
 

@@ -1,16 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import type { CategoryOption } from "@/features/dictionary/types";
+import type { CategoryOption, Language } from "@/features/dictionary/types";
 import { AddWordModal } from "./AddWordModal";
 import styles from "./AddWordButton.module.css";
 
 type AddWordButtonProps = {
   categories: CategoryOption[];
+  language: Language;
   onWordAdded: () => void;
 };
 
-export function AddWordButton({ categories, onWordAdded }: AddWordButtonProps) {
+export function AddWordButton({
+  categories,
+  language,
+  onWordAdded,
+}: AddWordButtonProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -22,6 +27,7 @@ export function AddWordButton({ categories, onWordAdded }: AddWordButtonProps) {
         open={open}
         onClose={() => setOpen(false)}
         categories={categories}
+        language={language}
         onWordAdded={onWordAdded}
       />
     </>

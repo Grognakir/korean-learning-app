@@ -11,17 +11,21 @@ const MODES = [
     title: "Планы",
     description: "Учебники и уроки по плану обучения — шаг за шагом.",
     image: "/images/learning/plans.jpg",
+    koOnly: true,
   },
   {
     href: "/learning/trainers",
     title: "Тренажёры",
     description: "Отработка и повторение — тренировки без привязки к уроку.",
     image: "/images/learning/trainers.jpg",
+    koOnly: false,
   },
 ];
 
 export default async function LearningPage() {
-  const { username } = await requireUserWithProfile();
+  const { username, activeLanguage } = await requireUserWithProfile();
+  // «Планы» — только корейский учебник, для английского трека его нет.
+  const modes = MODES.filter((mode) => !mode.koOnly || activeLanguage === "ko");
 
   return (
     <div className={styles.page}>
@@ -29,7 +33,7 @@ export default async function LearningPage() {
       <main className={styles.wrap}>
         <h1 className={styles.title}>Обучение</h1>
         <div className={styles.modeGrid}>
-          {MODES.map((mode) => (
+          {modes.map((mode) => (
             <Link key={mode.href} href={mode.href} className={styles.modeCard}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={mode.image} alt="" className={styles.modeCardImage} />

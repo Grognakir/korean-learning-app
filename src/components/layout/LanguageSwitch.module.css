@@ -1,0 +1,39 @@
+.root {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  background: transparent;
+}
+
+.option,
+.optionActive {
+  font: inherit;
+  border: none;
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.option {
+  color: var(--ink-soft);
+  background: transparent;
+}
+
+.option:hover {
+  color: var(--ink);
+}
+
+.optionActive {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.rootLg .option,
+.rootLg .optionActive {
+  padding: 10px 20px;
+  font-size: 15px;
+}

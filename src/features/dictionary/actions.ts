@@ -5,6 +5,9 @@ import { generateWordDraft } from "./ai";
 import { wordDraftSchema } from "./schemas";
 import type { WordDraft } from "./types";
 
+// AI-подсказка (ai.ts) заточена под корейский — UI прячет вкладку "Через
+// AI" в английском треке, но фильтр здесь на всякий случай не зависит от
+// того, что показывает клиент.
 export async function generateWordDraftAction(input: string) {
   if (!input.trim()) return { error: "Введите слово" };
 
@@ -14,7 +17,10 @@ export async function generateWordDraftAction(input: string) {
   } = await supabase.auth.getUser();
   if (!user) return { error: "Нужно войти" };
 
-  const { data: categoryRows } = await supabase.from("categories").select("name");
+  const { data: categoryRows } = await supabase
+    .from("categories")
+    .select("name")
+    .eq("language", "ko");
 
   try {
     const draft = await generateWordDraft(
@@ -29,7 +35,7 @@ export async function generateWordDraftAction(input: string) {
 
 // Форма payload для save_word/update_word — см. миграцию
 // 20260901120000_dictionary_ownership.sql.
-function toPayload(draft: WordDraft) {
+function toPayload(draft: WordDraft, language?: string) {
   return {
     headword: draft.headword,
     reading: draft.reading,
@@ -38,6 +44,7 @@ function toPayload(draft: WordDraft) {
     notes: draft.notes,
     examples: draft.examples,
     categories: draft.categories,
+    ...(language ? { language } : {}),
   };
 }
 
@@ -56,8 +63,16 @@ export async function saveWord(draft: WordDraft) {
   } = await supabase.auth.getUser();
   if (!user) return { error: "Нужно войти" };
 
+  // Язык нового слова — активный трек пользователя, читаем на сервере,
+  // а не доверяем клиенту (save_word сам подставит 'ko', если не передать).
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("active_language")
+    .eq("id", user.id)
+    .single();
+
   const { error } = await supabase.rpc("save_word", {
-    payload: toPayload(parsed.data),
+    payload: toPayload(parsed.data, profile?.active_language ?? "ko"),
   });
   if (error) return { error: error.message };
 

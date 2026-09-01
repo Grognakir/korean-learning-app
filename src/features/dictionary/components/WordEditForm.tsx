@@ -7,6 +7,7 @@ import {
 import {
   PART_OF_SPEECH_TAGS,
   type CategoryOption,
+  type Language,
   type WordDraft,
 } from "@/features/dictionary/types";
 import { Button } from "@/components/ui/Button";
@@ -15,6 +16,7 @@ import styles from "./WordEditForm.module.css";
 
 type WordEditFormProps = {
   categories: CategoryOption[];
+  language: Language;
   initialDraft?: Partial<WordDraft>;
   onSave: (draft: WordDraft) => Promise<{ error?: string; success?: true }>;
   onSaved: () => void;
@@ -44,12 +46,14 @@ function buildInitialState(initialDraft?: Partial<WordDraft>) {
 
 export function WordEditForm({
   categories,
+  language,
   initialDraft,
   onSave,
   onSaved,
   submitLabel = "Добавить",
   footer,
 }: WordEditFormProps) {
+  const krClass = language === "ko" ? "kr" : "";
   const [state, setState] = useState(() => buildInitialState(initialDraft));
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -122,14 +126,14 @@ export function WordEditForm({
       {state.correctedFrom && (
         <p className={styles.correctedBanner}>
           Вы ввели «{state.correctedFrom}» — похоже, это опечатка, исправлено
-          на «<span className="kr">{state.headword}</span>»
+          на «<span className={krClass}>{state.headword}</span>»
         </p>
       )}
 
       <label className={styles.field}>
         <span className={styles.label}>Слово</span>
         <input
-          className={`${styles.input} kr`}
+          className={`${styles.input} ${krClass}`}
           value={state.headword}
           onChange={(e) =>
             setState((prev) => ({ ...prev, headword: e.target.value }))
@@ -197,8 +201,8 @@ export function WordEditForm({
           {state.examples.map((ex, i) => (
             <li key={i} className={styles.exampleRow}>
               <input
-                className={`${styles.input} kr`}
-                placeholder="Корейский"
+                className={`${styles.input} ${krClass}`}
+                placeholder={language === "ko" ? "Корейский" : "Английский"}
                 value={ex.kr}
                 onChange={(e) => updateExample(i, "kr", e.target.value)}
               />

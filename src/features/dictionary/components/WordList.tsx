@@ -27,6 +27,7 @@ import {
 import {
   PART_OF_SPEECH_TAGS,
   type CategoryOption,
+  type Language,
   type Word,
 } from "@/features/dictionary/types";
 import { Select } from "@/components/ui/Select";
@@ -81,6 +82,7 @@ function ViewIcon() {
 type WordListProps = {
   categories: CategoryOption[];
   userId: string | null;
+  language: Language;
   onWordChanged: () => void;
 };
 
@@ -107,7 +109,9 @@ const POS_DUPLICATE_CATEGORIES = new Set([
   "Вопросительные слова",
   "Числительные",
   "Частицы",
+  "Предлоги",
   "Союзы и связки",
+  "Союзы",
   "Соединительные окончания",
   "Счётные слова",
   "Глаголы",
@@ -189,7 +193,9 @@ function WordCard({
           <ul className={styles.examples}>
             {word.word_examples.map((ex, i) => (
               <li key={i} className={styles.example}>
-                <span className="kr">{ex.kr}</span>
+                <span className={word.language === "ko" ? "kr" : undefined}>
+                  {ex.kr}
+                </span>
                 <span className={styles.exampleRu}>{ex.ru}</span>
               </li>
             ))}
@@ -228,9 +234,13 @@ function WordCard({
                 glossIndex === -1 ? "" : rel.value.slice(glossIndex + 1);
               return (
                 <li key={`rel-${i}`}>
-                  <span className="kr">{word.headword}</span>{" "}
+                  <span className={word.language === "ko" ? "kr" : undefined}>
+                    {word.headword}
+                  </span>{" "}
                   {rel.label === "антоним" ? "↔" : "="}{" "}
-                  <span className="kr">{relWord}</span>
+                  <span className={word.language === "ko" ? "kr" : undefined}>
+                    {relWord}
+                  </span>
                   {gloss && ` ${gloss}`}
                 </li>
               );
@@ -245,7 +255,11 @@ function WordCard({
             {realForms.map((form, i) => (
               <li key={i}>
                 {form.label && <span>{form.label}: </span>}
-                <span className={`${styles.formValue} kr`}>{form.value}</span>
+                <span
+                  className={`${styles.formValue} ${word.language === "ko" ? "kr" : ""}`}
+                >
+                  {form.value}
+                </span>
               </li>
             ))}
           </ul>
@@ -258,7 +272,11 @@ function WordCard({
     <>
       <div className={styles.cardBody}>
         <div className={styles.titleRow}>
-          <span className={`${styles.headword} kr`}>{word.headword}</span>
+          <span
+            className={`${styles.headword} ${word.language === "ko" ? "kr" : ""}`}
+          >
+            {word.headword}
+          </span>
           {reading && <span className={styles.reading}>{reading}</span>}
         </div>
         {translations && (
@@ -304,7 +322,12 @@ function WordCard({
   );
 }
 
-export function WordList({ categories, userId, onWordChanged }: WordListProps) {
+export function WordList({
+  categories,
+  userId,
+  language,
+  onWordChanged,
+}: WordListProps) {
   const {
     state,
     setState,
@@ -330,6 +353,7 @@ export function WordList({ categories, userId, onWordChanged }: WordListProps) {
   const [editingWord, setEditingWord] = useState<Word | null>(null);
   const filtersRef = useRef<HTMLDivElement>(null);
   const prevUserIdRef = useRef(userId);
+  const prevLanguageRef = useRef(language);
 
   // Сброс фильтров при заходе на страницу, если пользователь не включил
   // их сохранение.
@@ -347,6 +371,16 @@ export function WordList({ categories, userId, onWordChanged }: WordListProps) {
     prevUserIdRef.current = userId;
     clearResultsCache();
   }, [userId, clearResultsCache]);
+
+  // Категории теперь языко-скопированы — оставшийся categoryId/partOfSpeech
+  // от другого трека тихо даст пустой список вместо ошибки, поэтому сбрасываем
+  // языко-специфичные фильтры при переключении трека.
+  useEffect(() => {
+    if (prevLanguageRef.current === language) return;
+    prevLanguageRef.current = language;
+    clearResultsCache();
+    setState({ categoryId: "", partOfSpeech: "", page: 1 });
+  }, [language, clearResultsCache, setState]);
 
   useEffect(() => {
     if (!openPanel) return;
@@ -374,6 +408,7 @@ export function WordList({ categories, userId, onWordChanged }: WordListProps) {
         categoryId,
         ownership,
         userId,
+        language,
       }),
     [
       debouncedQuery,
@@ -384,6 +419,7 @@ export function WordList({ categories, userId, onWordChanged }: WordListProps) {
       categoryId,
       ownership,
       userId,
+      language,
     ],
   );
 
@@ -396,9 +432,10 @@ export function WordList({ categories, userId, onWordChanged }: WordListProps) {
     let q = supabase
       .from("words")
       .select(
-        `id, headword, reading, part_of_speech, owner_user_id, translations(text), ${embed}, word_examples(kr, ru), word_notes(text), word_forms(label, value)`,
+        `id, headword, reading, part_of_speech, owner_user_id, language, translations(text), ${embed}, word_examples(kr, ru), word_notes(text), word_forms(label, value)`,
         { count: "exact" },
       )
+      .eq("language", language)
       .order("headword", { ascending: sortDir === "asc" })
       .range((page - 1) * pageSize, page * pageSize - 1);
 
@@ -414,6 +451,7 @@ export function WordList({ categories, userId, onWordChanged }: WordListProps) {
   }, [
     categoryId,
     debouncedQuery,
+    language,
     ownership,
     page,
     pageSize,
@@ -483,7 +521,7 @@ export function WordList({ categories, userId, onWordChanged }: WordListProps) {
           <input
             type="search"
             className={styles.searchInput}
-            placeholder="Слово на корейском…"
+            placeholder={language === "ko" ? "Слово на корейском…" : "Слово на английском…"}
             value={query}
             onChange={(e) => {
               setState({ query: e.target.value, expandedId: null, page: 1 });

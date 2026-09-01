@@ -33,7 +33,7 @@ function CardBack({ word }: { word: Word }) {
         <ul className={styles.examples}>
           {examples.map((ex, i) => (
             <li key={i} className={styles.example}>
-              <span className="kr">{ex.kr}</span>
+              <span className={word.language === "ko" ? "kr" : undefined}>{ex.kr}</span>
               <span className={styles.exampleRu}>{ex.ru}</span>
             </li>
           ))}
@@ -172,7 +172,7 @@ export function FlashcardSession({ queue }: Props) {
           type="button"
           className={styles.card}
           onClick={() => setFlipped(false)}
-          aria-label="Вернуться к корейскому слову"
+          aria-label="Вернуться к слову"
         >
           <CardBack word={word} />
         </button>
@@ -183,7 +183,11 @@ export function FlashcardSession({ queue }: Props) {
           onClick={() => setFlipped(true)}
           aria-label="Показать ответ"
         >
-          <span className={`${styles.headword} kr`}>{word.headword}</span>
+          <span
+            className={`${styles.headword} ${word.language === "ko" ? "kr" : ""}`}
+          >
+            {word.headword}
+          </span>
           {reading ? <span className={styles.reading}>{reading}</span> : null}
           <span className={styles.hint}>Нажмите, чтобы перевернуть</span>
         </button>

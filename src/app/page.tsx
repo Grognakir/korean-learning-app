@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/Button";
 import { StreakBadge } from "@/components/ui/StreakBadge";
 import { SegmentedProgressBar } from "@/components/ui/SegmentedProgressBar";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
+import { LanguageSwitch } from "@/components/layout/LanguageSwitch";
+import { getActiveLanguage } from "@/features/language/getActiveLanguage";
 import styles from "./page.module.css";
 
 /**
@@ -73,6 +75,7 @@ export default async function HomePage() {
     .single();
 
   const username = profile?.username ?? user.email ?? "Пользователь";
+  const activeLanguage = await getActiveLanguage();
 
   return (
     <div className={styles.page}>
@@ -83,6 +86,8 @@ export default async function HomePage() {
           <p className={styles.greeting}>Привет, {username} 👋</p>
           <StreakBadge days={MOCK.streakDays} />
         </div>
+
+        <LanguageSwitch initialLanguage={activeLanguage} size="lg" />
 
         <section className={styles.wordsCard}>
           <div className={styles.taegeukEdge} />

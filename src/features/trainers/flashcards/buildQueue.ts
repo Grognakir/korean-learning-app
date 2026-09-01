@@ -1,5 +1,5 @@
 import type { createClient } from "@/lib/supabase/server";
-import type { Word } from "@/features/dictionary/types";
+import type { Language, Word } from "@/features/dictionary/types";
 import { fetchAllRows } from "@/lib/supabase/fetchAll";
 import { resolveRelatedWordPairs, type RelatedPair } from "./relatedWords";
 
@@ -8,7 +8,7 @@ import { resolveRelatedWordPairs, type RelatedPair } from "./relatedWords";
 // word_notes/word_forms), только без пагинации: тренажёру нужен весь пул
 // кандидатов сразу, а не постранично.
 const WORD_SELECT =
-  "id, headword, reading, part_of_speech, owner_user_id, translations(text), word_categories(categories(id, name)), word_examples(kr, ru), word_notes(text), word_forms(label, value)";
+  "id, headword, reading, part_of_speech, owner_user_id, language, translations(text), word_categories(categories(id, name)), word_examples(kr, ru), word_notes(text), word_forms(label, value)";
 
 export type FlashcardQueueItem = { word: Word; isNew: boolean };
 
@@ -16,6 +16,7 @@ export async function buildFlashcardQueue(
   supabase: Awaited<ReturnType<typeof createClient>>,
   userId: string,
   newCardsLimit: number,
+  language: Language,
   options: { categoryIds?: string[] } = {},
 ): Promise<FlashcardQueueItem[]> {
   const now = new Date().toISOString();
@@ -50,8 +51,11 @@ export async function buildFlashcardQueue(
     ? dueWordIds.filter((id) => categoryWordIds!.has(id))
     : dueWordIds;
 
+  // word_progress не хранит язык — due-карты могут принадлежать другому
+  // треку (переключились с корейского на английский), поэтому fetchWords
+  // всё равно фильтрует по language, чтобы чужие due-карты не всплыли.
   const dueWords = dueIdsInScope.length
-    ? await fetchWords(supabase, dueIdsInScope)
+    ? await fetchWords(supabase, dueIdsInScope, language)
     : [];
 
   // Кандидаты в "новые" — только id, без join'ов: пул может быть большим
@@ -65,6 +69,7 @@ export async function buildFlashcardQueue(
     supabase
       .from("words")
       .select("id")
+      .eq("language", language)
       .or(`owner_user_id.is.null,owner_user_id.eq.${userId}`)
       .range(from, to),
   );
@@ -159,6 +164,7 @@ const ID_CHUNK_SIZE = 150;
 async function fetchWords(
   supabase: Awaited<ReturnType<typeof createClient>>,
   ids: string[],
+  language?: Language,
 ): Promise<Word[]> {
   const chunks: string[][] = [];
   for (let i = 0; i < ids.length; i += ID_CHUNK_SIZE) {
@@ -167,16 +173,14 @@ async function fetchWords(
 
   const results = await Promise.all(
     chunks.map((chunk) =>
-      fetchAllRows<Word>((from, to) =>
-        supabase
-          .from("words")
-          .select(WORD_SELECT)
-          .in("id", chunk)
-          .range(from, to) as unknown as PromiseLike<{
+      fetchAllRows<Word>((from, to) => {
+        let query = supabase.from("words").select(WORD_SELECT).in("id", chunk);
+        if (language) query = query.eq("language", language);
+        return query.range(from, to) as unknown as PromiseLike<{
           data: Word[] | null;
           error: unknown;
-        }>,
-      ),
+        }>;
+      }),
     ),
   );
   return results.flat();

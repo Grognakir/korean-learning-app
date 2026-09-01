@@ -2,6 +2,7 @@ import "server-only";
 import { redirect } from "next/navigation";
 import type { User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
+import type { Language } from "@/features/dictionary/types";
 
 /**
  * Клиент Supabase и текущий пользователь; гостя уводит на /login.
@@ -26,14 +27,19 @@ export function displayName(
   return profile?.username ?? user.email ?? "Пользователь";
 }
 
-/** Частый случай: из профиля нужен только username. */
+/** Частый случай: из профиля нужны username и активный язык обучения. */
 export async function requireUserWithProfile() {
   const { supabase, user } = await requireUser();
   const { data: profile } = await supabase
     .from("profiles")
-    .select("username")
+    .select("username, active_language")
     .eq("id", user.id)
     .single();
 
-  return { supabase, user, username: displayName(profile, user) };
+  return {
+    supabase,
+    user,
+    username: displayName(profile, user),
+    activeLanguage: (profile?.active_language as Language | undefined) ?? "ko",
+  };
 }

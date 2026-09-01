@@ -8,12 +8,16 @@ import { CategorySelect } from "@/features/trainers/flashcards/components/Catego
 import { FlashcardSession } from "@/features/trainers/flashcards/components/FlashcardSession";
 import { FlashcardsHeader } from "@/features/trainers/flashcards/components/FlashcardsHeader";
 import { fetchAllRows } from "@/lib/supabase/fetchAll";
+import type { Language } from "@/features/dictionary/types";
 import layout from "../../learning.module.css";
 import styles from "./flashcards.module.css";
 
 type CategoryRow = {
   categories: { id: string; name: string } | { id: string; name: string }[] | null;
-  words: { owner_user_id: string | null } | { owner_user_id: string | null }[] | null;
+  words:
+    | { owner_user_id: string | null; language: string }
+    | { owner_user_id: string | null; language: string }[]
+    | null;
 };
 
 function asOne<T>(value: T | T[] | null | undefined): T | null {
@@ -44,16 +48,18 @@ export default async function FlashcardsMainPage({
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("username, srs_new_cards_per_session")
+    .select("username, srs_new_cards_per_session, active_language")
     .eq("id", user.id)
     .single();
   const username = displayName(profile, user);
   const newCardsLimit = profile?.srs_new_cards_per_session ?? 20;
+  const language: Language = (profile?.active_language as Language | undefined) ?? "ko";
 
   const rows = await fetchAllRows<CategoryRow>((from, to) =>
     supabase
       .from("word_categories")
-      .select("categories(id, name), words!inner(owner_user_id)")
+      .select("categories(id, name), words!inner(owner_user_id, language)")
+      .eq("words.language", language)
       .range(from, to),
   );
 
@@ -73,7 +79,7 @@ export default async function FlashcardsMainPage({
   const selectedCategoryIds = parseCategoryIds(categoriesParam).filter((id) =>
     categories.has(id),
   );
-  const queue = await buildFlashcardQueue(supabase, user.id, newCardsLimit, {
+  const queue = await buildFlashcardQueue(supabase, user.id, newCardsLimit, language, {
     categoryIds: selectedCategoryIds.length ? selectedCategoryIds : undefined,
   });
 
@@ -86,7 +92,7 @@ export default async function FlashcardsMainPage({
         </Link>
         <h1 className={layout.title}>Карточки слов</h1>
         <div className={styles.column}>
-          <FlashcardsHeader active="main" newCardsLimit={newCardsLimit} />
+          <FlashcardsHeader active="main" newCardsLimit={newCardsLimit} language={language} />
           <CategorySelect categories={categoryList} selectedIds={selectedCategoryIds} />
           <FlashcardSession
             key={selectedCategoryIds.slice().sort().join(",") || "all"}

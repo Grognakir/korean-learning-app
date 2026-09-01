@@ -8,3 +8,7 @@ export const fontPreferencesSchema = z.object({
   fontUi: z.enum(fontUiValues).nullable(),
   fontKr: z.enum(fontKrValues).nullable(),
 });
+
+export const activeLanguageSchema = z.object({
+  language: z.enum(["ko", "en"]),
+});

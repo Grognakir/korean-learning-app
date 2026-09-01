@@ -7,6 +7,7 @@ export const PART_OF_SPEECH_TAGS = [
   "numeral",
   "counter",
   "particle",
+  "preposition",
   "conjunction",
   "connective_ending",
   "question_word",
@@ -54,12 +55,15 @@ export type Phrase = {
   owner_user_id: string | null;
 };
 
+export type Language = "ko" | "en";
+
 export type Word = {
   id: string;
   headword: string;
   reading: string | null;
   part_of_speech: string | null;
   owner_user_id: string | null;
+  language: Language;
   translations: { text: string }[];
   word_categories: { categories: { id: string; name: string } }[];
   word_examples: { kr: string; ru: string }[];

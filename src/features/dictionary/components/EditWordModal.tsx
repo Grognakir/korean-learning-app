@@ -131,6 +131,7 @@ export function EditWordModal({
       <WordEditForm
         key={word.id}
         categories={categories}
+        language={word.language}
         initialDraft={wordToDraft(word)}
         onSave={(draft) => updateWord(word.id, draft)}
         onSaved={handleSaved}

@@ -2,6 +2,8 @@ import type { CSSProperties } from "react";
 import type { Metadata, Viewport } from "next";
 import { createClient } from "@/lib/supabase/server";
 import { DictionaryCacheProvider } from "@/features/dictionary/DictionaryCacheContext";
+import { ActiveLanguageProvider } from "@/features/language/ActiveLanguageContext";
+import type { Language } from "@/features/dictionary/types";
 import { fontVariables } from "@/styles/fonts";
 import { fontKrCssVar, fontUiCssVar } from "@/features/settings/fontOptions";
 import "@/styles/globals.css";
@@ -30,14 +32,16 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
 
   let fontUiVar: string | undefined;
   let fontKrVar: string | undefined;
+  let activeLanguage: Language = "ko";
   if (user) {
     const { data: profile } = await supabase
       .from("profiles")
-      .select("font_ui, font_kr")
+      .select("font_ui, font_kr, active_language")
       .eq("id", user.id)
       .single();
     fontUiVar = fontUiCssVar(profile?.font_ui ?? null);
     fontKrVar = fontKrCssVar(profile?.font_kr ?? null);
+    activeLanguage = (profile?.active_language as Language | undefined) ?? "ko";
   }
 
   return (
@@ -52,7 +56,9 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       }
     >
       <body>
-        <DictionaryCacheProvider>{children}</DictionaryCacheProvider>
+        <ActiveLanguageProvider language={activeLanguage}>
+          <DictionaryCacheProvider>{children}</DictionaryCacheProvider>
+        </ActiveLanguageProvider>
       </body>
     </html>
   );

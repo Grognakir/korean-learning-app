@@ -2,16 +2,27 @@ import Link from "next/link";
 import { signOut } from "@/features/auth/actions";
 import { SettingsIcon } from "@/components/icons/SettingsIcon";
 import { TaegeukIcon } from "@/components/icons/TaegeukIcon";
+import { EnglishIcon } from "@/components/icons/EnglishIcon";
 import { UserMenu } from "@/components/ui/UserMenu";
+import { LanguageSwitch } from "@/components/layout/LanguageSwitch";
+import { getActiveLanguage } from "@/features/language/getActiveLanguage";
 import { NAV_SECTIONS } from "./navSections";
 import styles from "./AppHeader.module.css";
 
-export function AppHeader({ username }: { username: string }) {
+const BRAND = {
+  ko: { Icon: TaegeukIcon, name: "한국어 공부" },
+  en: { Icon: EnglishIcon, name: "English Study" },
+} as const;
+
+export async function AppHeader({ username }: { username: string }) {
+  const language = await getActiveLanguage();
+  const { Icon, name } = BRAND[language];
+
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.brand}>
-        <TaegeukIcon size={22} />
-        <span>한국어 공부</span>
+        <Icon size={22} />
+        <span>{name}</span>
       </Link>
       <nav className={styles.navCenter} aria-label="Разделы приложения">
         {NAV_SECTIONS.map(({ label, href }) =>
@@ -28,6 +39,7 @@ export function AppHeader({ username }: { username: string }) {
       </nav>
       <div className={styles.headerRight}>
         <div className={styles.headerActions}>
+          <LanguageSwitch initialLanguage={language} />
           <span className={styles.userMenu} title="Скоро — меню профиля">
             {username} ▾
           </span>
