@@ -8,9 +8,15 @@
   background: #fff;
 }
 
-.navAccount {
+.navRight {
   grid-column: 3;
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navAccount {
   border: 1px solid var(--line);
   border-radius: 100px;
   padding: 7px 16px;

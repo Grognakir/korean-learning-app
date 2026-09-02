@@ -1,7 +1,9 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
+import { GUEST_LANGUAGE_COOKIE } from "@/features/language/getActiveLanguage";
 import { activeLanguageSchema, fontPreferencesSchema } from "./schemas";
 
 export async function updateFontPreferences(formData: FormData) {
@@ -42,7 +44,18 @@ export async function updateActiveLanguage(formData: FormData) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) return { error: "Нужно войти" };
+
+  // У гостя нет строки profiles — выбор языка живёт в cookie, не в БД.
+  if (!user) {
+    const cookieStore = await cookies();
+    cookieStore.set(GUEST_LANGUAGE_COOKIE, parsed.data.language, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: "lax",
+    });
+    revalidatePath("/", "layout");
+    return { success: true as const };
+  }
 
   const { error } = await supabase
     .from("profiles")

@@ -4,6 +4,7 @@ import { GuestHeader } from "@/components/layout/GuestHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { DictionaryPageClient } from "@/features/dictionary/components/DictionaryPageClient";
+import { readGuestLanguage } from "@/features/language/getActiveLanguage";
 import type { Language } from "@/features/dictionary/types";
 import styles from "./dictionary.module.css";
 
@@ -23,6 +24,8 @@ export default async function DictionaryPage() {
       .single();
     username = profile?.username ?? user.email ?? "Пользователь";
     language = (profile?.active_language as Language | undefined) ?? "ko";
+  } else {
+    language = await readGuestLanguage();
   }
 
   // Фразы/грамматика — только корейский контент, для английского трека эти

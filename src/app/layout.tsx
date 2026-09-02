@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { createClient } from "@/lib/supabase/server";
 import { DictionaryCacheProvider } from "@/features/dictionary/DictionaryCacheContext";
 import { ActiveLanguageProvider } from "@/features/language/ActiveLanguageContext";
+import { readGuestLanguage } from "@/features/language/getActiveLanguage";
 import type { Language } from "@/features/dictionary/types";
 import { fontVariables } from "@/styles/fonts";
 import { fontKrCssVar, fontUiCssVar } from "@/features/settings/fontOptions";
@@ -42,6 +43,8 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
     fontUiVar = fontUiCssVar(profile?.font_ui ?? null);
     fontKrVar = fontKrCssVar(profile?.font_kr ?? null);
     activeLanguage = (profile?.active_language as Language | undefined) ?? "ko";
+  } else {
+    activeLanguage = await readGuestLanguage();
   }
 
   return (

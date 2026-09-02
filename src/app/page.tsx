@@ -35,6 +35,8 @@ export default async function HomePage() {
   } = await supabase.auth.getUser();
 
   if (!user) {
+    const guestLanguage = await getActiveLanguage();
+
     return (
       <div className={styles.page}>
         <GuestHeader />
@@ -46,6 +48,8 @@ export default async function HomePage() {
               Приложение для изучения корейского
             </p>
           </div>
+
+          <LanguageSwitch initialLanguage={guestLanguage} size="lg" />
 
           <Link href="/dictionary" className={styles.dictionaryCard}>
             <div className={styles.taegeukEdge} />
