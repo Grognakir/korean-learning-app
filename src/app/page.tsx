@@ -39,11 +39,29 @@ export default async function HomePage() {
       <div className={styles.page}>
         <GuestHeader />
 
-        <main className={styles.wrap}>
-          <div className={styles.panel}>
+        <main className={styles.guestMain}>
+          <div className={styles.guestIntro}>
             <h1 className={styles.title}>한국어 공부</h1>
             <p className={styles.subtitle}>
               Приложение для изучения корейского
+            </p>
+          </div>
+
+          <Link href="/dictionary" className={styles.dictionaryCard}>
+            <div className={styles.taegeukEdge} />
+            <div className={styles.dictionaryCardBody}>
+              <h2 className={styles.cardTitle}>Открыть словарь</h2>
+              <p className={styles.dictionaryCardText}>
+                Слова, фразы и грамматика — можно смотреть и искать без
+                регистрации.
+              </p>
+            </div>
+          </Link>
+
+          <div className={styles.panel}>
+            <p className={styles.subtitle}>
+              Войдите, чтобы сохранять прогресс, проходить уроки и
+              тренажёры
             </p>
             <div className={styles.actions}>
               <Link href="/login" className={styles.primary}>

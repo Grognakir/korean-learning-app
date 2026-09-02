@@ -14,6 +14,44 @@
   padding: 24px;
 }
 
+.guestMain {
+  flex: 1;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.guestIntro {
+  text-align: center;
+}
+
+.dictionaryCard {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dictionaryCardBody {
+  padding: 20px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dictionaryCardText {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
 .panel {
   width: 100%;
   max-width: 360px;
@@ -167,6 +205,10 @@
   }
 
   .main {
+    padding-bottom: 76px;
+  }
+
+  .guestMain {
     padding-bottom: 76px;
   }
 }
