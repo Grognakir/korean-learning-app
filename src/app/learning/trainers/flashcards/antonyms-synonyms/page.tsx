@@ -1,37 +1,28 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { displayName, requireUser } from "@/features/auth/requireUser";
+import { getLearningContext } from "@/features/auth/getLearningContext";
+import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { buildRelatedWordsQueue } from "@/features/trainers/flashcards/buildQueue";
 import { FlashcardSession } from "@/features/trainers/flashcards/components/FlashcardSession";
 import { FlashcardsHeader } from "@/features/trainers/flashcards/components/FlashcardsHeader";
-import type { Language } from "@/features/dictionary/types";
 import layout from "../../../learning.module.css";
 import styles from "../flashcards.module.css";
 
 export default async function FlashcardsRelatedPage() {
-  const { supabase, user } = await requireUser();
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("username, srs_new_cards_per_session, active_language")
-    .eq("id", user.id)
-    .single();
-  const username = displayName(profile, user);
-  const newCardsLimit = profile?.srs_new_cards_per_session ?? 20;
-  const language: Language = (profile?.active_language as Language | undefined) ?? "ko";
+  const { supabase, user, username, newCardsLimit, activeLanguage: language } = await getLearningContext();
 
   // Антонимы/синонимы есть только для корейского словаря — прямой заход
   // по URL в английском режиме уводит на основной режим тренажёра.
   if (language === "en") redirect("/learning/trainers/flashcards");
 
-  const queue = await buildRelatedWordsQueue(supabase, user.id, newCardsLimit);
+  const queue = await buildRelatedWordsQueue(supabase, user?.id ?? null, newCardsLimit);
 
   return (
     <div className={layout.page}>
-      <AppHeader username={username} />
+      {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={`${layout.wrap} ${styles.wrap}`}>
         <Link href="/learning/trainers" className={layout.backLink}>
           ← Назад
@@ -43,7 +34,7 @@ export default async function FlashcardsRelatedPage() {
             newCardsLimit={newCardsLimit}
             language={language}
           />
-          <FlashcardSession queue={queue} />
+          <FlashcardSession guest={!user} key={`${user?.id ?? null}:${newCardsLimit}`} queue={queue} />
         </div>
       </main>
       <BottomTabBar sections={NAV_SECTIONS} />

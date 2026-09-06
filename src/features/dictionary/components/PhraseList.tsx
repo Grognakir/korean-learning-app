@@ -6,6 +6,7 @@ import { escapeLike } from "@/lib/supabase/escapeLike";
 import { useDebouncedValue } from "@/lib/useDebouncedValue";
 import { Select } from "@/components/ui/Select";
 import { buildPageNumbers } from "@/features/dictionary/pagination";
+import { useDictionaryPageCache } from "@/features/dictionary/DictionaryCacheContext";
 import { usePagedQuery } from "@/features/dictionary/usePagedQuery";
 import type { Phrase } from "@/features/dictionary/types";
 import { ListError } from "./ListError";
@@ -39,8 +40,10 @@ export function PhraseList({ categories }: { categories: string[] }) {
   const [category, setCategory] = useState("");
   const [page, setPage] = useState(1);
 
+  const cache = useDictionaryPageCache<Phrase>();
+
   const fetchKey = useMemo(
-    () => JSON.stringify({ debouncedQuery, category, page }),
+    () => JSON.stringify({ section: "phrases", debouncedQuery, category, page }),
     [debouncedQuery, category, page],
   );
 
@@ -68,7 +71,7 @@ export function PhraseList({ categories }: { categories: string[] }) {
     loading,
     error,
     retry,
-  } = usePagedQuery<Phrase>({ cacheKey: fetchKey, label: "PhraseList", run });
+  } = usePagedQuery<Phrase>({ cacheKey: fetchKey, label: "PhraseList", run, cache });
 
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
   const hasFilters = Boolean(debouncedQuery) || Boolean(category);

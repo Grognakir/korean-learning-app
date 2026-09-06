@@ -4,11 +4,13 @@ import {
   createContext,
   useCallback,
   useContext,
-  useRef,
+  useMemo,
   useState,
   type ReactNode,
 } from "react";
 import type { PagedEntry } from "@/features/dictionary/usePagedQuery";
+import { createPageCache, type PageResult } from "./pageCache";
+import type { PagedCache } from "./usePagedQuery";
 import type { Word } from "@/features/dictionary/types";
 
 type FilterState = {
@@ -44,40 +46,28 @@ type DictionaryCacheValue = {
   setCachedResults: (key: string, entry: ResultsEntry) => void;
   clearResultsCache: () => void;
   resultsGeneration: number;
+  pageCache: ReturnType<typeof createPageCache>;
+  requestCachedResults: (key: string, run: () => PromiseLike<PageResult>) => Promise<PageResult>;
 };
 
 const DictionaryCacheContext = createContext<DictionaryCacheValue | null>(null);
 
-const MAX_CACHE_ENTRIES = 8;
 
 export function DictionaryCacheProvider({ children }: { children: ReactNode }) {
   const [state, setStateRaw] = useState<FilterState>(DEFAULT_STATE);
   const [resultsGeneration, setResultsGeneration] = useState(0);
-  const cacheRef = useRef(new Map<string, ResultsEntry>());
+  const [pageCache] = useState(createPageCache);
 
   const setState = useCallback((patch: Partial<FilterState>) => {
     setStateRaw((prev) => ({ ...prev, ...patch }));
   }, []);
 
-  const getCachedResults = useCallback(
-    (key: string) => cacheRef.current.get(key),
-    [],
-  );
-
-  const setCachedResults = useCallback((key: string, entry: ResultsEntry) => {
-    const cache = cacheRef.current;
-    cache.delete(key);
-    cache.set(key, entry);
-    if (cache.size > MAX_CACHE_ENTRIES) {
-      const oldest = cache.keys().next().value;
-      if (oldest !== undefined) cache.delete(oldest);
-    }
-  }, []);
-
+  const getCachedResults = useCallback((key: string) => pageCache.get<Word>(key), [pageCache]);
+  const setCachedResults = useCallback((key: string, entry: ResultsEntry) => pageCache.set(key, entry), [pageCache]);
   const clearResultsCache = useCallback(() => {
-    cacheRef.current.clear();
+    pageCache.clear();
     setResultsGeneration((n) => n + 1);
-  }, []);
+  }, [pageCache]);
 
   return (
     <DictionaryCacheContext.Provider
@@ -88,6 +78,8 @@ export function DictionaryCacheProvider({ children }: { children: ReactNode }) {
         setCachedResults,
         clearResultsCache,
         resultsGeneration,
+        pageCache,
+        requestCachedResults: pageCache.request,
       }}
     >
       {children}
@@ -103,4 +95,14 @@ export function useDictionaryCache() {
     );
   }
   return ctx;
+}
+
+export function useDictionaryPageCache<T>(): PagedCache<T> {
+  const { pageCache, resultsGeneration } = useDictionaryCache();
+  return useMemo(() => ({
+    get: (key: string) => pageCache.get<T>(key),
+    set: (key: string, entry: PagedEntry<T>) => pageCache.set(key, entry),
+    request: pageCache.request,
+    generation: resultsGeneration,
+  }), [pageCache, resultsGeneration]);
 }

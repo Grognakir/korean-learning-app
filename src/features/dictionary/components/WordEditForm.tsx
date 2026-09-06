@@ -90,6 +90,7 @@ export function WordEditForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (saving) return;
     setError(null);
     setSaving(true);
 
@@ -110,15 +111,18 @@ export function WordEditForm({
       categories: categoryList,
     };
 
-    const result = await onSave(draft);
-    setSaving(false);
-
-    if (result.error) {
-      setError(result.error);
-      return;
+    try {
+      const result = await onSave(draft);
+      if (result.error) {
+        setError(result.error);
+        return;
+      }
+      onSaved();
+    } catch {
+      setError("Не удалось сохранить слово. Проверьте соединение и повторите.");
+    } finally {
+      setSaving(false);
     }
-
-    onSaved();
   };
 
   return (
@@ -270,7 +274,7 @@ export function WordEditForm({
         </div>
       </div>
 
-      {error && <p className={styles.error}>{error}</p>}
+      {error && <p className={styles.error} role="alert">{error}</p>}
 
       <Button type="submit" disabled={saving}>
         {saving ? "Сохраняем…" : submitLabel}

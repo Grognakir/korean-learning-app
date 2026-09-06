@@ -335,6 +335,7 @@ export function WordList({
     setCachedResults,
     clearResultsCache,
     resultsGeneration,
+    requestCachedResults,
   } = useDictionaryCache();
   const {
     query,
@@ -361,7 +362,6 @@ export function WordList({
     if (!getPreserveDictionaryFilters()) {
       setState(DEFAULT_STATE);
       setDebouncedQuery("");
-      clearResultsCache();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- mount-only reset
   }, []);
@@ -437,6 +437,7 @@ export function WordList({
       )
       .eq("language", language)
       .order("headword", { ascending: sortDir === "asc" })
+      .order("id", { ascending: true })
       .range((page - 1) * pageSize, page * pageSize - 1);
 
     if (debouncedQuery) {
@@ -465,8 +466,9 @@ export function WordList({
       get: getCachedResults,
       set: setCachedResults,
       generation: resultsGeneration,
+      request: requestCachedResults,
     }),
-    [getCachedResults, setCachedResults, resultsGeneration],
+    [getCachedResults, setCachedResults, resultsGeneration, requestCachedResults],
   );
 
   const {
@@ -478,6 +480,12 @@ export function WordList({
   } = usePagedQuery<Word>({ cacheKey: fetchKey, label: "WordList", run, cache });
 
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
+  useEffect(() => {
+    if (!loading && !error && page > totalPages) {
+      setState({ page: totalPages, expandedId: null });
+    }
+  }, [loading, error, page, totalPages, setState]);
+
   const hasListFilters =
     Boolean(debouncedQuery) ||
     Boolean(partOfSpeech) ||

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { displayName, requireUser } from "@/features/auth/requireUser";
+import { getLearningContext } from "@/features/auth/getLearningContext";
+import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
@@ -8,7 +9,6 @@ import { CategorySelect } from "@/features/trainers/flashcards/components/Catego
 import { FlashcardSession } from "@/features/trainers/flashcards/components/FlashcardSession";
 import { FlashcardsHeader } from "@/features/trainers/flashcards/components/FlashcardsHeader";
 import { fetchAllRows } from "@/lib/supabase/fetchAll";
-import type { Language } from "@/features/dictionary/types";
 import layout from "../../learning.module.css";
 import styles from "./flashcards.module.css";
 
@@ -44,16 +44,7 @@ export default async function FlashcardsMainPage({
   searchParams: Promise<{ categories?: string | string[] }>;
 }) {
   const { categories: categoriesParam } = await searchParams;
-  const { supabase, user } = await requireUser();
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("username, srs_new_cards_per_session, active_language")
-    .eq("id", user.id)
-    .single();
-  const username = displayName(profile, user);
-  const newCardsLimit = profile?.srs_new_cards_per_session ?? 20;
-  const language: Language = (profile?.active_language as Language | undefined) ?? "ko";
+  const { supabase, user, username, newCardsLimit, activeLanguage: language } = await getLearningContext();
 
   const rows = await fetchAllRows<CategoryRow>((from, to) =>
     supabase
@@ -66,7 +57,7 @@ export default async function FlashcardsMainPage({
   const categories = new Map<string, string>();
   for (const row of rows) {
     const word = asOne(row.words);
-    if (word?.owner_user_id !== null && word?.owner_user_id !== undefined) {
+    if (!word || (word.owner_user_id !== null && word.owner_user_id !== user?.id)) {
       continue;
     }
     const category = asOne(row.categories);
@@ -79,13 +70,13 @@ export default async function FlashcardsMainPage({
   const selectedCategoryIds = parseCategoryIds(categoriesParam).filter((id) =>
     categories.has(id),
   );
-  const queue = await buildFlashcardQueue(supabase, user.id, newCardsLimit, language, {
+  const queue = await buildFlashcardQueue(supabase, user?.id ?? null, newCardsLimit, language, {
     categoryIds: selectedCategoryIds.length ? selectedCategoryIds : undefined,
   });
 
   return (
     <div className={layout.page}>
-      <AppHeader username={username} />
+      {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={`${layout.wrap} ${styles.wrap}`}>
         <Link href="/learning/trainers" className={layout.backLink}>
           ← Назад
@@ -95,7 +86,8 @@ export default async function FlashcardsMainPage({
           <FlashcardsHeader active="main" newCardsLimit={newCardsLimit} language={language} />
           <CategorySelect categories={categoryList} selectedIds={selectedCategoryIds} />
           <FlashcardSession
-            key={selectedCategoryIds.slice().sort().join(",") || "all"}
+            guest={!user}
+            key={JSON.stringify([user?.id ?? null, language, newCardsLimit, selectedCategoryIds.slice().sort()])}
             queue={queue}
           />
         </div>

@@ -4,29 +4,13 @@ import { devSignIn } from "@/features/auth/actions";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
-import { Button } from "@/components/ui/Button";
-import { StreakBadge } from "@/components/ui/StreakBadge";
-import { SegmentedProgressBar } from "@/components/ui/SegmentedProgressBar";
+import { WordOverviewCard } from "@/features/dashboard/WordOverviewCard";
+import { getWordOverview } from "@/features/dashboard/wordOverview";
+import buttons from "@/components/ui/Button.module.css";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { LanguageSwitch } from "@/components/layout/LanguageSwitch";
 import { getActiveLanguage } from "@/features/language/getActiveLanguage";
 import styles from "./page.module.css";
-
-/**
- * Мок-данные для визуальной проверки макета из
- * docs/dev_docs/design/0-dashboard-home.md. Стрик и счётчики SRS требуют
- * агрегатов по review_events/progress (Roadmap п.5, 0-mvp.md), план обучения —
- * данных фазы 2 (3-dictionary-and-learning.md) — ни то ни другое ещё не
- * реализовано, поэтому здесь заглушки, а не запросы к БД.
- */
-const MOCK = {
-  streakDays: 5,
-  wordsLearned: 84,
-  wordsLearning: 23,
-  wordsAvailable: 41,
-  dueToday: 12,
-  plan: { title: "인하대학교", level: "2급", lesson: 5 },
-};
 
 export default async function HomePage() {
   const supabase = await createClient();
@@ -43,9 +27,9 @@ export default async function HomePage() {
 
         <main className={styles.guestMain}>
           <div className={styles.guestIntro}>
-            <h1 className={styles.title}>한국어 공부</h1>
+            <h1 className={styles.title}>{guestLanguage === "ko" ? "한국어 공부" : "English Study"}</h1>
             <p className={styles.subtitle}>
-              Приложение для изучения корейского
+              {guestLanguage === "ko" ? "Приложение для изучения корейского" : "Приложение для изучения английского"}
             </p>
           </div>
 
@@ -56,16 +40,18 @@ export default async function HomePage() {
             <div className={styles.dictionaryCardBody}>
               <h2 className={styles.cardTitle}>Открыть словарь</h2>
               <p className={styles.dictionaryCardText}>
-                Слова, фразы и грамматика — можно смотреть и искать без
-                регистрации.
+                {guestLanguage === "ko"
+                  ? "Слова, фразы и грамматика — можно смотреть и искать без регистрации."
+                  : "Английские слова и примеры — можно смотреть и искать без регистрации."}
               </p>
             </div>
           </Link>
 
+          <Link href="/learning" className={styles.primary}>Начать обучение</Link>
+
           <div className={styles.panel}>
             <p className={styles.subtitle}>
-              Войдите, чтобы сохранять прогресс, проходить уроки и
-              тренажёры
+              Войдите, чтобы сохранять прогресс и учиться по планам.
             </p>
             <div className={styles.actions}>
               <Link href="/login" className={styles.primary}>
@@ -98,6 +84,7 @@ export default async function HomePage() {
 
   const username = profile?.username ?? user.email ?? "Пользователь";
   const activeLanguage = await getActiveLanguage();
+  const overview = await getWordOverview(supabase, user.id, activeLanguage);
 
   return (
     <div className={styles.page}>
@@ -106,58 +93,22 @@ export default async function HomePage() {
       <main className={styles.main}>
         <div className={styles.greetingRow}>
           <p className={styles.greeting}>Привет, {username} 👋</p>
-          <StreakBadge days={MOCK.streakDays} />
         </div>
 
         <LanguageSwitch initialLanguage={activeLanguage} size="lg" />
 
-        <section className={styles.wordsCard}>
-          <div className={styles.taegeukEdge} />
-          <div className={styles.wordsCardBody}>
-            <h2 className={styles.cardTitle}>Слова</h2>
-            <SegmentedProgressBar
-              segments={[
-                {
-                  label: "изучено",
-                  value: MOCK.wordsLearned,
-                  colorVar: "--green",
-                },
-                {
-                  label: "изучается",
-                  value: MOCK.wordsLearning,
-                  colorVar: "--blue",
-                },
-                {
-                  label: "доступно",
-                  value: MOCK.wordsAvailable,
-                  colorVar: "--stone",
-                },
-              ]}
-            />
-            <p className={styles.dueCount}>
-              К повторению сегодня: <strong>{MOCK.dueToday}</strong>
-            </p>
-            <Button
-              variant="primary"
-              disabled
-              title="Заглушка — SRS-флоу флэшкарт ещё не реализован"
-            >
-              Повторять
-            </Button>
-          </div>
-        </section>
+        <WordOverviewCard overview={overview} />
 
         <section className={styles.planCard}>
           <p className={styles.planText}>
-            План {MOCK.plan.title} · {MOCK.plan.level}, {MOCK.plan.lesson}과
+            {activeLanguage === "ko" ? "Учебные материалы и упражнения" : "Пополняйте словарь для следующих тренировок"}
           </p>
-          <Button
-            variant="secondary"
-            disabled
-            title="Заглушка — раздел «Обучение» ещё не реализован"
+          <Link
+            href={activeLanguage === "ko" ? "/learning/plans" : "/dictionary"}
+            className={`${buttons.secondary} ${styles.actionLink}`}
           >
-            Продолжить
-          </Button>
+            {activeLanguage === "ko" ? "Открыть уроки" : "Открыть словарь"}
+          </Link>
         </section>
       </main>
 

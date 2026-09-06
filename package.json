@@ -12,7 +12,8 @@
     "import:dictionary": "tsx scripts/import-dictionary.ts",
     "import:phrases": "tsx scripts/import-phrases.ts",
     "import:grammar": "tsx scripts/import-grammar.ts",
-    "import:topic-quiz": "tsx scripts/import-topic-quiz.ts"
+    "import:topic-quiz": "tsx scripts/import-topic-quiz.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
@@ -25,15 +26,18 @@
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^4.0.0",
+    "@testing-library/react": "^16.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.2",
+    "jsdom": "^26.1.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^11.5.1",
     "tsx": "^4.23.12",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^3.2.7"
   },
   "packageManager": "pnpm@10.34.5"
 }

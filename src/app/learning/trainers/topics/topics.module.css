@@ -25,3 +25,7 @@
   font-size: 13px;
   color: var(--ink-soft);
 }
+
+.sessionWrap {
+  max-width: 680px;
+}

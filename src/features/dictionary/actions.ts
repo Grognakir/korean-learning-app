@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { generateWordDraft } from "./ai";
 import { wordDraftSchema } from "./schemas";
@@ -76,6 +77,7 @@ export async function saveWord(draft: WordDraft) {
   });
   if (error) return { error: error.message };
 
+  revalidatePath("/");
   return { success: true as const };
 }
 
@@ -97,6 +99,7 @@ export async function updateWord(wordId: string, draft: WordDraft) {
   });
   if (error) return { error: error.message };
 
+  revalidatePath("/");
   return { success: true as const };
 }
 
@@ -119,5 +122,6 @@ export async function deleteWord(wordId: string) {
   if (error) return { error: error.message };
   if (!data?.length) return { error: "Слово не найдено" };
 
+  revalidatePath("/");
   return { success: true as const };
 }

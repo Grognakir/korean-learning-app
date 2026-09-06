@@ -6,6 +6,7 @@ import { escapeLike } from "@/lib/supabase/escapeLike";
 import { useDebouncedValue } from "@/lib/useDebouncedValue";
 import { Select } from "@/components/ui/Select";
 import { buildPageNumbers } from "@/features/dictionary/pagination";
+import { useDictionaryPageCache } from "@/features/dictionary/DictionaryCacheContext";
 import { usePagedQuery } from "@/features/dictionary/usePagedQuery";
 import type { GrammarPoint } from "@/features/dictionary/types";
 import { ListError } from "./ListError";
@@ -132,8 +133,10 @@ export function GrammarList({ categories }: { categories: string[] }) {
   const [page, setPage] = useState(1);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
+  const cache = useDictionaryPageCache<GrammarPoint>();
+
   const fetchKey = useMemo(
-    () => JSON.stringify({ debouncedQuery, category, page }),
+    () => JSON.stringify({ section: "grammar", debouncedQuery, category, page }),
     [debouncedQuery, category, page],
   );
 
@@ -163,6 +166,7 @@ export function GrammarList({ categories }: { categories: string[] }) {
     cacheKey: fetchKey,
     label: "GrammarList",
     run,
+    cache,
   });
 
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));

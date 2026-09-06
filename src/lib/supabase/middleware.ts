@@ -1,12 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-// "/" сама решает, что показать (landing для гостя, дэшборд для авторизованного).
-// "/learning" — материал раздела «Обучение» открыт только залогиненным
-// (docs/dev_docs/3-dictionary-and-learning.md §1.3, ADR-0002); страницы
-// внутри тоже проверяют сессию сами, это дополнительный уровень защиты.
-// "/settings" — шрифты и прочие предпочтения профиля.
-const PROTECTED_PREFIXES: string[] = ["/learning", "/settings"];
+const PROTECTED_PREFIXES: string[] = ["/learning/plans", "/settings"];
 
 export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({ request });
@@ -37,7 +32,7 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const isProtected = PROTECTED_PREFIXES.some((p) =>
-    request.nextUrl.pathname.startsWith(p),
+    request.nextUrl.pathname === p || request.nextUrl.pathname.startsWith(`${p}/`),
   );
   if (isProtected && !user) {
     const url = request.nextUrl.clone();

@@ -14,21 +14,21 @@ export type FlashcardQueueItem = { word: Word; isNew: boolean };
 
 export async function buildFlashcardQueue(
   supabase: Awaited<ReturnType<typeof createClient>>,
-  userId: string,
+  userId: string | null,
   newCardsLimit: number,
   language: Language,
   options: { categoryIds?: string[] } = {},
 ): Promise<FlashcardQueueItem[]> {
   const now = new Date().toISOString();
 
-  const progressRows = await fetchAllRows<{ word_id: string; due_at: string }>(
+  const progressRows = userId ? await fetchAllRows<{ word_id: string; due_at: string }>(
     (from, to) =>
       supabase
         .from("word_progress")
         .select("word_id, due_at")
         .eq("user_id", userId)
         .range(from, to),
-  );
+  ) : [];
 
   const seenWordIds = new Set(progressRows.map((r) => r.word_id));
   const dueWordIds = progressRows
@@ -70,7 +70,7 @@ export async function buildFlashcardQueue(
       .from("words")
       .select("id")
       .eq("language", language)
-      .or(`owner_user_id.is.null,owner_user_id.eq.${userId}`)
+      .or(userId ? `owner_user_id.is.null,owner_user_id.eq.${userId}` : "owner_user_id.is.null")
       .range(from, to),
   );
 
@@ -95,21 +95,21 @@ export async function buildFlashcardQueue(
 // (иначе теряется смысл парного повторения).
 export async function buildRelatedWordsQueue(
   supabase: Awaited<ReturnType<typeof createClient>>,
-  userId: string,
+  userId: string | null,
   newCardsLimit: number,
 ): Promise<FlashcardQueueItem[]> {
   const pairs = await resolveRelatedWordPairs(supabase);
   if (!pairs.length) return [];
 
   const now = new Date().toISOString();
-  const progressRows = await fetchAllRows<{ word_id: string; due_at: string }>(
+  const progressRows = userId ? await fetchAllRows<{ word_id: string; due_at: string }>(
     (from, to) =>
       supabase
         .from("word_progress")
         .select("word_id, due_at")
         .eq("user_id", userId)
         .range(from, to),
-  );
+  ) : [];
   const progressByWord = new Map(progressRows.map((r) => [r.word_id, r.due_at]));
 
   const isNew = (wordId: string) => !progressByWord.has(wordId);

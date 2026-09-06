@@ -12,6 +12,7 @@ export type PagedCache<T> = {
   get: (key: string) => PagedEntry<T> | undefined;
   set: (key: string, entry: PagedEntry<T>) => void;
   generation: number;
+  request?: (key: string, run: () => PromiseLike<QueryResult>) => Promise<QueryResult>;
 };
 
 type QueryResult = {
@@ -39,17 +40,20 @@ type Options<T> = {
  * данные не запрашивались до сброса кэша.
  */
 export function usePagedQuery<T>({ cacheKey, label, run, cache }: Options<T>) {
-  const [result, setResult] = useState<(PagedEntry<T> & { key: string }) | null>(
-    null,
-  );
-  const [failure, setFailure] = useState<{ key: string; message: string } | null>(
-    null,
-  );
+  const [result, setResult] = useState<
+    (PagedEntry<T> & { key: string; generation: number }) | null
+  >(null);
+  const [failure, setFailure] = useState<{
+    key: string;
+    message: string;
+    generation: number;
+  } | null>(null);
   const [retryTick, setRetryTick] = useState(0);
 
   const generation = cache?.generation ?? 0;
   const cacheGet = cache?.get;
   const cacheSet = cache?.set;
+  const cacheRequest = cache?.request;
 
   useEffect(() => {
     if (cacheGet?.(cacheKey)) return;
@@ -59,12 +63,12 @@ export function usePagedQuery<T>({ cacheKey, label, run, cache }: Options<T>) {
     const fail = (message: string) => {
       if (cancelled) return;
       console.error(`${label}:`, message);
-      setFailure({ key: cacheKey, message });
+      setFailure({ key: cacheKey, message, generation });
     };
 
     // Обрыв сети приходит не полем error, а отказом промиса — без
     // catch список навсегда оставался бы в состоянии «Загружаем…».
-    Promise.resolve(run()).then(({ data, count, error }) => {
+    Promise.resolve().then(() => cacheRequest ? cacheRequest(cacheKey, run) : run()).then(({ data, count, error }) => {
       if (cancelled) return;
       if (error) {
         fail(error.message);
@@ -76,13 +80,13 @@ export function usePagedQuery<T>({ cacheKey, label, run, cache }: Options<T>) {
       };
       cacheSet?.(cacheKey, entry);
       setFailure(null);
-      setResult({ ...entry, key: cacheKey });
+      setResult({ ...entry, key: cacheKey, generation });
     }, (e: unknown) => fail(e instanceof Error ? e.message : String(e)));
 
     return () => {
       cancelled = true;
     };
-  }, [cacheKey, label, run, cacheGet, cacheSet, generation, retryTick]);
+  }, [cacheKey, label, run, cacheGet, cacheSet, cacheRequest, generation, retryTick]);
 
   const retry = useCallback(() => {
     setFailure(null);
@@ -90,8 +94,11 @@ export function usePagedQuery<T>({ cacheKey, label, run, cache }: Options<T>) {
   }, []);
 
   const entry =
-    cacheGet?.(cacheKey) ?? (result?.key === cacheKey ? result : null);
-  const error = failure?.key === cacheKey ? failure.message : null;
+    cacheGet?.(cacheKey) ??
+    (result?.key === cacheKey && result.generation === generation ? result : null);
+  const error = failure?.key === cacheKey && failure.generation === generation
+    ? failure.message
+    : null;
 
   return {
     rows: entry?.rows ?? [],

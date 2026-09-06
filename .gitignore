@@ -40,6 +40,9 @@ yarn-error.log*
 # локальное состояние Claude Code (сессии, лок-файлы, launch.json для превью)
 .claude/
 
+# локальное состояние Codex
+.Codex/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

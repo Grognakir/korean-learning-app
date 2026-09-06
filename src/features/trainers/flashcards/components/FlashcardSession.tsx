@@ -4,12 +4,14 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { formatReading } from "@/features/dictionary/formatReading";
 import type { Word } from "@/features/dictionary/types";
+import { SessionProgress } from "@/features/trainers/components/SessionProgress";
 import { plural } from "@/lib/plural";
 import { recordReview } from "../actions";
 import type { Sm2Rating } from "../sm2";
 import styles from "./FlashcardSession.module.css";
 
 type Props = {
+  guest?: boolean;
   queue: { word: Word; isNew: boolean }[];
 };
 
@@ -20,13 +22,17 @@ const RATINGS: { rating: Sm2Rating; label: string; className: string }[] = [
   { rating: "easy", label: "Легко", className: styles.easy },
 ];
 
-function CardBack({ word }: { word: Word }) {
+function CardBack({ word, reverse }: { word: Word; reverse: boolean }) {
   const translations = (word.translations ?? []).map((t) => t.text).filter(Boolean);
   const examples = word.word_examples ?? [];
 
   return (
     <div className={styles.back}>
-      {translations.length > 0 && (
+      {reverse && <>
+        <p className={`${styles.headword} ${word.language === "ko" ? "kr" : ""}`}>{word.headword}</p>
+        {word.reading && <p className={styles.reading}>{formatReading(word.reading)}</p>}
+      </>}
+      {!reverse && translations.length > 0 && (
         <p className={styles.translations}>{translations.join(", ")}</p>
       )}
       {examples.length > 0 && (
@@ -49,75 +55,22 @@ function CardBack({ word }: { word: Word }) {
 // подряд (эффект интервала важен и в пределах одной сессии).
 const REINSERT_AFTER = 4;
 
-type PendingReview = { wordId: string; rating: Sm2Rating };
-
-async function sendReview(review: PendingReview): Promise<boolean> {
-  try {
-    const result = await recordReview(review.wordId, review.rating);
-    if (result && "error" in result && result.error) {
-      console.error("FlashcardSession:", result.error);
-      return false;
-    }
-    return true;
-  } catch (e) {
-    console.error("FlashcardSession:", e);
-    return false;
-  }
-}
-
-export function FlashcardSession({ queue }: Props) {
+export function FlashcardSession({ queue, guest = false }: Props) {
   const [items, setItems] = useState(queue);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  // Оценки, которые так и не доехали до сервера. Держим их, чтобы
-  // прогресс SRS не терялся молча: раньше упавший запрос уходил только
-  // в консоль.
-  const pendingRef = useRef<PendingReview[]>([]);
-  const [pendingCount, setPendingCount] = useState(0);
-  const [retrying, setRetrying] = useState(false);
-
-  async function submit(review: PendingReview) {
-    // Одна автоматическая попытка: сеть в дороге моргает чаще, чем
-    // сервер отдаёт настоящую ошибку.
-    if (await sendReview(review)) return;
-    if (await sendReview(review)) return;
-    pendingRef.current = [...pendingRef.current, review];
-    setPendingCount(pendingRef.current.length);
-  }
-
-  async function retryPending() {
-    setRetrying(true);
-    const batch = pendingRef.current;
-    pendingRef.current = [];
-    const failed: PendingReview[] = [];
-    for (const review of batch) {
-      if (!(await sendReview(review))) failed.push(review);
-    }
-    pendingRef.current = [...failed, ...pendingRef.current];
-    setPendingCount(pendingRef.current.length);
-    setRetrying(false);
-  }
-
-  const pendingBanner = pendingCount > 0 && (
-    <div className={styles.pendingBanner} role="status">
-      <span>
-        Прогресс не сохранён: {pendingCount}{" "}
-        {plural(pendingCount, ["оценка", "оценки", "оценок"])}.
-      </span>
-      <button
-        type="button"
-        className={styles.pendingRetry}
-        onClick={() => void retryPending()}
-        disabled={retrying}
-      >
-        {retrying ? "Отправляем…" : "Повторить"}
-      </button>
-    </div>
-  );
+  const [direction, setDirection] = useState<"forward" | "reverse">("forward");
+  const savingRef = useRef(false);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (items.length === 0) {
     return (
-      <p className={styles.empty}>Пока нечего повторять. Загляните позже.</p>
+      <div className={styles.done}>
+        <h2 className={styles.doneTitle}>Всё повторено</h2>
+        <p className={styles.empty}>Пока нет карточек для этой подборки. Можно изменить категории или добавить слова в словарь.</p>
+        <Link href="/dictionary" className={styles.backLink}>Открыть словарь →</Link>
+      </div>
     );
   }
 
@@ -125,13 +78,14 @@ export function FlashcardSession({ queue }: Props) {
     const newCount = queue.filter((item) => item.isNew).length;
     return (
       <div className={styles.done}>
-        {pendingBanner}
+        <span className={styles.eyebrow}>Хорошая работа</span>
         <h2 className={styles.doneTitle}>Сессия завершена</h2>
+        <p className={styles.resultNumber}>{index}<span> {plural(index, guest ? ["ответ", "ответа", "ответов"] : ["ответ сохранён", "ответа сохранено", "ответов сохранено"])}</span></p>
         <p className={styles.doneText}>
           Карточек: {queue.length}, из них новых: {newCount}.
         </p>
-        <Link href="/learning/trainers/flashcards" className={styles.backLink}>
-          Назад
+        <Link href="/learning/trainers" className={styles.backLink}>
+          К тренажёрам →
         </Link>
       </div>
     );
@@ -139,42 +93,69 @@ export function FlashcardSession({ queue }: Props) {
 
   const { word } = items[index];
   const reading = word.reading ? formatReading(word.reading) : "";
+  const translations = (word.translations ?? []).map((item) => item.text).filter(Boolean).join(", ");
+  const reverse = direction === "reverse" && Boolean(translations);
 
-  function rate(rating: Sm2Rating) {
-    void submit({ wordId: word.id, rating });
+  async function rate(rating: Sm2Rating) {
+    if (savingRef.current) return;
+    savingRef.current = true;
+    setSaving(true);
+    setError(null);
 
-    if (rating === "again") {
-      setItems((prev) => {
-        const current = prev[index];
-        const rest = prev.slice(index + 1);
-        const insertAt = Math.min(REINSERT_AFTER, rest.length);
-        return [
-          ...prev.slice(0, index + 1),
-          ...rest.slice(0, insertAt),
-          current,
-          ...rest.slice(insertAt),
-        ];
-      });
+    try {
+      const result = guest ? { ok: true } : await recordReview(word.id, rating);
+      if (result.error) {
+        setError("Оценка не сохранена. Попробуйте нажать её ещё раз.");
+        return;
+      }
+
+      if (rating === "again") {
+        setItems((prev) => {
+          const current = { ...prev[index], isNew: false };
+          const rest = prev.slice(index + 1);
+          const insertAt = Math.min(REINSERT_AFTER, rest.length);
+          return [
+            ...prev.slice(0, index + 1),
+            ...rest.slice(0, insertAt),
+            current,
+            ...rest.slice(insertAt),
+          ];
+        });
+      }
+
+      setFlipped(false);
+      setIndex((i) => i + 1);
+    } catch {
+      setError("Не удалось сохранить оценку. Проверьте соединение и повторите.");
+    } finally {
+      savingRef.current = false;
+      setSaving(false);
     }
-
-    setFlipped(false);
-    setIndex((i) => i + 1);
   }
 
   return (
     <div className={styles.root}>
-      {pendingBanner}
-      <p className={styles.progress}>
-        {index + 1} / {items.length}
-      </p>
+      {guest && <p className={styles.doneText}>Тренировка без регистрации. <Link href="/login">Войдите</Link>, чтобы сохранять прогресс.</p>}
+      {error && <p className={styles.pendingBanner} role="alert">{error}</p>}
+      {saving && <p role="status">Сохраняем оценку…</p>}
+      <div className={styles.directions} role="group" aria-label="Направление карточек">
+        {(["forward", "reverse"] as const).map((value) => <button
+          key={value} type="button" aria-pressed={direction === value} disabled={saving}
+          className={direction === value ? styles.directionActive : styles.direction}
+          onClick={() => { setDirection(value); setFlipped(false); }}
+        >{value === "forward" ? "Слово → перевод" : "Перевод → слово"}</button>)}
+      </div>
+      <SessionProgress completed={index} total={items.length} label={items[index].isNew ? "Новое слово" : "Повторение"} />
       {flipped ? (
         <button
           type="button"
           className={styles.card}
+          disabled={saving}
           onClick={() => setFlipped(false)}
-          aria-label="Вернуться к слову"
+          aria-label="Скрыть ответ"
         >
-          <CardBack word={word} />
+          <span className={styles.eyebrow}>Ответ</span>
+          <CardBack word={word} reverse={reverse} />
         </button>
       ) : (
         <button
@@ -183,12 +164,11 @@ export function FlashcardSession({ queue }: Props) {
           onClick={() => setFlipped(true)}
           aria-label="Показать ответ"
         >
-          <span
-            className={`${styles.headword} ${word.language === "ko" ? "kr" : ""}`}
-          >
-            {word.headword}
+          <span className={styles.eyebrow}>{reverse ? "Вспомните слово" : "Вспомните перевод"}</span>
+          <span className={`${styles.headword} ${!reverse && word.language === "ko" ? "kr" : ""}`}>
+            {reverse ? translations : word.headword}
           </span>
-          {reading ? <span className={styles.reading}>{reading}</span> : null}
+          {!reverse && reading ? <span className={styles.reading}>{reading}</span> : null}
           <span className={styles.hint}>Нажмите, чтобы перевернуть</span>
         </button>
       )}
@@ -199,7 +179,8 @@ export function FlashcardSession({ queue }: Props) {
               key={item.rating}
               type="button"
               className={item.className}
-              onClick={() => rate(item.rating)}
+              disabled={saving}
+              onClick={() => void rate(item.rating)}
             >
               {item.label}
             </button>

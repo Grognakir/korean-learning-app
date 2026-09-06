@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import type { Metadata, Viewport } from "next";
 import { createClient } from "@/lib/supabase/server";
+import { DictionaryPreload } from "@/features/dictionary/DictionaryPreload";
 import { DictionaryCacheProvider } from "@/features/dictionary/DictionaryCacheContext";
 import { ActiveLanguageProvider } from "@/features/language/ActiveLanguageContext";
 import { readGuestLanguage } from "@/features/language/getActiveLanguage";
@@ -60,7 +61,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body>
         <ActiveLanguageProvider language={activeLanguage}>
-          <DictionaryCacheProvider>{children}</DictionaryCacheProvider>
+          <DictionaryCacheProvider key={`${user?.id ?? "guest"}:${activeLanguage}`}><DictionaryPreload userId={user?.id ?? null} language={activeLanguage} />{children}</DictionaryCacheProvider>
         </ActiveLanguageProvider>
       </body>
     </html>

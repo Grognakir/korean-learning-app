@@ -212,3 +212,10 @@
     padding-bottom: 76px;
   }
 }
+
+.actionLink {
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+  text-align: center;
+}

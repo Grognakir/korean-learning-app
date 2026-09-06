@@ -1,16 +1,17 @@
 import Link from "next/link";
-import { requireUserWithProfile } from "@/features/auth/requireUser";
+import { getLearningContext } from "@/features/auth/getLearningContext";
+import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import styles from "../learning.module.css";
 
 export default async function TrainersPage() {
-  const { username, activeLanguage } = await requireUserWithProfile();
+  const { username, activeLanguage } = await getLearningContext();
 
   return (
     <div className={styles.page}>
-      <AppHeader username={username} />
+      {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
 
       <main className={styles.wrap}>
         <Link href="/learning" className={styles.backLink}>
@@ -32,8 +33,8 @@ export default async function TrainersPage() {
             <div className={styles.modeCardBody}>
               <span className={`${styles.modeCardTitle} kr`}>Карточки слов</span>
               <p className={styles.modeCardDescription}>
-                Карточки как в Anki/Quizlet — слово нужно вспомнить, оценить и
-                повторить по расписанию.
+                Вспоминайте перевод или слово, оценивайте ответ и закрепляйте
+                его с помощью интервальных повторений.
               </p>
             </div>
           </Link>
@@ -48,7 +49,7 @@ export default async function TrainersPage() {
               <div className={styles.modeCardBody}>
                 <span className={`${styles.modeCardTitle} kr`}>Отработка тем</span>
                 <p className={styles.modeCardDescription}>
-                  Тесты с выбором ответа по конкретным темам грамматики и лексики.
+                  Тесты по грамматике и лексике с разбором ответов и повторением ошибок.
                 </p>
               </div>
             </Link>

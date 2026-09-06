@@ -1,0 +1,5 @@
+.root { display: grid; gap: 9px; }
+.row { display: flex; justify-content: space-between; gap: 12px; color: var(--ink-soft); font-size: 13px; font-weight: 600; }
+.track { height: 6px; background: var(--paper-2); overflow: hidden; border-radius: 100px; }
+.fill { display: block; height: 100%; background: var(--blue); border-radius: inherit; transition: width 180ms ease; }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }

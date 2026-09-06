@@ -69,19 +69,22 @@ export function EditWordModal({
   };
 
   const handleDelete = async () => {
-    if (!word) return;
+    if (!word || deleting) return;
     setDeleteError(null);
     setDeleting(true);
 
-    const result = await deleteWord(word.id);
-    setDeleting(false);
-
-    if (result.error) {
-      setDeleteError(result.error);
-      return;
+    try {
+      const result = await deleteWord(word.id);
+      if (result.error) {
+        setDeleteError(result.error);
+        return;
+      }
+      handleSaved();
+    } catch {
+      setDeleteError("Не удалось удалить слово. Проверьте соединение и повторите.");
+    } finally {
+      setDeleting(false);
     }
-
-    handleSaved();
   };
 
   if (!word) return null;
@@ -121,7 +124,7 @@ export function EditWordModal({
           Удалить слово
         </button>
       )}
-      {deleteError && <p className={styles.error}>{deleteError}</p>}
+      {deleteError && <p className={styles.error} role="alert">{deleteError}</p>}
     </div>
   );
 

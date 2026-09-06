@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { requireUserWithProfile } from "@/features/auth/requireUser";
+import { getLearningContext } from "@/features/auth/getLearningContext";
+import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
@@ -23,23 +24,23 @@ const MODES = [
 ];
 
 export default async function LearningPage() {
-  const { username, activeLanguage } = await requireUserWithProfile();
+  const { username, activeLanguage } = await getLearningContext();
   // «Планы» — только корейский учебник, для английского трека его нет.
   const modes = MODES.filter((mode) => !mode.koOnly || activeLanguage === "ko");
 
   return (
     <div className={styles.page}>
-      <AppHeader username={username} />
+      {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={styles.wrap}>
         <h1 className={styles.title}>Обучение</h1>
         <div className={styles.modeGrid}>
           {modes.map((mode) => (
-            <Link key={mode.href} href={mode.href} className={styles.modeCard}>
+            <Link key={mode.href} href={mode.href === "/learning/plans" && username === null ? "/login" : mode.href} className={styles.modeCard}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={mode.image} alt="" className={styles.modeCardImage} />
               <div className={styles.modeCardBody}>
                 <span className={`${styles.modeCardTitle} kr`}>{mode.title}</span>
-                <p className={styles.modeCardDescription}>{mode.description}</p>
+                <p className={styles.modeCardDescription}>{mode.description}{mode.href === "/learning/plans" && username === null ? " Доступно после входа." : ""}</p>
               </div>
             </Link>
           ))}

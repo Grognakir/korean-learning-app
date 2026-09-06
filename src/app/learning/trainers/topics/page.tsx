@@ -1,20 +1,19 @@
 import Link from "next/link";
-import { displayName, requireUser } from "@/features/auth/requireUser";
+import { getLearningContext } from "@/features/auth/getLearningContext";
+import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
+import { plural } from "@/lib/plural";
 import { TOPICS } from "@/features/trainers/topics/types";
 import layout from "../../learning.module.css";
 import styles from "./topics.module.css";
 
 export default async function TopicsPage() {
-  const { supabase, user } = await requireUser();
+  const { supabase, username } = await getLearningContext();
 
-  const [{ data: profile }, { data: counts }] = await Promise.all([
-    supabase.from("profiles").select("username").eq("id", user.id).single(),
-    supabase.from("topic_quiz_questions").select("topic"),
-  ]);
-  const username = displayName(profile, user);
+  const { data: counts, error } = await supabase.from("topic_quiz_questions").select("topic");
+  if (error) throw new Error("Не удалось загрузить темы");
 
   const countByTopic = new Map<string, number>();
   for (const row of counts ?? []) {
@@ -23,7 +22,7 @@ export default async function TopicsPage() {
 
   return (
     <div className={layout.page}>
-      <AppHeader username={username} />
+      {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={layout.wrap}>
         <Link href="/learning/trainers" className={layout.backLink}>
           ← Назад
@@ -38,7 +37,8 @@ export default async function TopicsPage() {
             >
               <span className={styles.sectionCardTitle}>{topic.label}</span>
               <span className={styles.sectionCardMeta}>
-                {countByTopic.get(topic.key) ?? 0} вопросов
+                {countByTopic.get(topic.key) ?? 0}{" "}
+                {plural(countByTopic.get(topic.key) ?? 0, ["вопрос", "вопроса", "вопросов"])}
               </span>
             </Link>
           ))}

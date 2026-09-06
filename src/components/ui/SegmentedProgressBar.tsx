@@ -9,8 +9,8 @@ type Segment = {
 export function SegmentedProgressBar({ segments }: { segments: Segment[] }) {
   return (
     <div>
-      <div className={styles.bar}>
-        {segments.map((segment) => (
+      <div className={styles.bar} aria-hidden="true">
+        {segments.filter((segment) => segment.value > 0).map((segment) => (
           <span
             key={segment.label}
             className={styles.segment}
