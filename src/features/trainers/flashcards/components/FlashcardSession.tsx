@@ -104,7 +104,7 @@ export function FlashcardSession({ queue, guest = false }: Props) {
 
     try {
       const result = guest ? { ok: true } : await recordReview(word.id, rating);
-      if (result.error) {
+      if ("error" in result && result.error) {
         setError("Оценка не сохранена. Попробуйте нажать её ещё раз.");
         return;
       }

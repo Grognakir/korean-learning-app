@@ -22,6 +22,7 @@ export default async function TrainersPage() {
           <h1 className={styles.title}>Тренажёры</h1>
         </div>
 
+        <p className={styles.modeCardDescription}>Выберите, что хотите потренировать: память, написание или грамматику.</p>
         <div className={styles.modeGrid}>
           <Link href="/learning/trainers/flashcards" className={styles.modeCard}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -37,6 +38,14 @@ export default async function TrainersPage() {
                 его с помощью интервальных повторений.
               </p>
             </div>
+          </Link>
+          <Link href="/learning/trainers/pairs" className={styles.modeCard}>
+            <div className={styles.modeCardPreview} aria-hidden="true">{activeLanguage === "ko" ? "가 ↔ А" : "A ↔ А"}</div>
+            <div className={styles.modeCardBody}><span className={styles.modeCardTitle}>Найди пары</span><p className={styles.modeCardDescription}>Соединяйте слова с переводами: 3 раунда по 4 пары.</p></div>
+          </Link>
+          <Link href="/learning/trainers/spelling" className={styles.modeCard}>
+            <div className={styles.modeCardPreview} aria-hidden="true">{activeLanguage === "ko" ? "가 + 나" : "A + B"}</div>
+            <div className={styles.modeCardBody}><span className={styles.modeCardTitle}>Собери слово</span><p className={styles.modeCardDescription}>Составляйте слова из букв или слогов. Подсказки и повтор сложных слов.</p></div>
           </Link>
           {activeLanguage === "ko" && (
             <Link href="/learning/trainers/topics" className={styles.modeCard}>

@@ -96,3 +96,7 @@
     padding-bottom: 76px;
   }
 }
+
+.modeCardPreview { aspect-ratio: 16 / 9; display: grid; place-items: center; background: linear-gradient(140deg, #e6effc, #f5f8fd 60%, #e8edf7); color: #1f4e8c; font-size: 38px; font-weight: 700; letter-spacing: .12em; }
+.modeCard:hover { border-color: #9ab5d8; }
+.modeCard:focus-visible { outline: 3px solid #759ed5; outline-offset: 3px; }
