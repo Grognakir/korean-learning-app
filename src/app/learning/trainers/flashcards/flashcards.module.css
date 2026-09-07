@@ -8,3 +8,40 @@
   gap: 16px;
   width: 100%;
 }
+
+.pageHead {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* На телефоне каждая строка чрома — это минус высота карточки, поэтому
+   «Назад» и заголовок делят одну строку, а сама сессия растягивается на
+   всю оставшуюся высоту экрана (см. FlashcardSession.module.css — там
+   карточка забирает свободное место, чтобы кнопки оценки не уезжали под
+   фолд). Порог — src/styles/media.css */
+@media (--to-compact) {
+  .pageHead {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  /* Высота страницы должна быть ограничена (не min-height), иначе flex
+     ниже нечего распределять и карточка не сожмётся. Если контент всё же
+     не влезет — страница прокрутится как обычно, overflow не режем. */
+  .fixedPage {
+    height: 100dvh;
+  }
+
+  .wrap,
+  .column {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .wrap {
+    padding-top: 16px;
+    gap: 14px;
+  }
+}

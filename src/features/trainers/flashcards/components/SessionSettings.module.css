@@ -1,0 +1,60 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Широкий экран: настройки всегда развёрнуты, кнопка не нужна. */
+.toggle {
+  display: none;
+}
+
+.panel,
+.panelOpen {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Порог --to-compact объявлен в src/styles/media.css */
+@media (--to-compact) {
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-control);
+    background: #fff;
+    font: inherit;
+    color: var(--ink-soft);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .summary {
+    font-size: 13px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .chevron,
+  .chevronOpen {
+    display: inline-flex;
+    flex-shrink: 0;
+    color: var(--stone);
+  }
+
+  .chevronOpen {
+    transform: rotate(180deg);
+  }
+
+  .panel {
+    display: none;
+  }
+}

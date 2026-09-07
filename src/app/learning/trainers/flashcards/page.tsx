@@ -8,6 +8,7 @@ import { buildFlashcardQueue } from "@/features/trainers/flashcards/buildQueue";
 import { CategorySelect } from "@/features/trainers/flashcards/components/CategorySelect";
 import { FlashcardSession } from "@/features/trainers/flashcards/components/FlashcardSession";
 import { FlashcardsHeader } from "@/features/trainers/flashcards/components/FlashcardsHeader";
+import { SessionSettings } from "@/features/trainers/flashcards/components/SessionSettings";
 import { fetchAllRows } from "@/lib/supabase/fetchAll";
 import layout from "../../learning.module.css";
 import styles from "./flashcards.module.css";
@@ -74,17 +75,28 @@ export default async function FlashcardsMainPage({
     categoryIds: selectedCategoryIds.length ? selectedCategoryIds : undefined,
   });
 
+  const selectedNames = selectedCategoryIds.map((id) => categories.get(id)!);
+  const summary = [
+    "Основной",
+    `${newCardsLimit} новых`,
+    selectedNames.length ? selectedNames.join(", ") : "Все категории",
+  ].join(" · ");
+
   return (
-    <div className={layout.page}>
+    <div className={`${layout.page} ${styles.fixedPage}`}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={`${layout.wrap} ${styles.wrap}`}>
-        <Link href="/learning/trainers" className={layout.backLink}>
-          ← Назад
-        </Link>
-        <h1 className={layout.title}>Карточки слов</h1>
+        <div className={styles.pageHead}>
+          <Link href="/learning/trainers" className={layout.backLink}>
+            ← Назад
+          </Link>
+          <h1 className={layout.title}>Карточки слов</h1>
+        </div>
         <div className={styles.column}>
-          <FlashcardsHeader active="main" newCardsLimit={newCardsLimit} language={language} />
-          <CategorySelect categories={categoryList} selectedIds={selectedCategoryIds} />
+          <SessionSettings summary={summary}>
+            <FlashcardsHeader active="main" newCardsLimit={newCardsLimit} language={language} />
+            <CategorySelect categories={categoryList} selectedIds={selectedCategoryIds} />
+          </SessionSettings>
           <FlashcardSession
             guest={!user}
             key={JSON.stringify([user?.id ?? null, language, newCardsLimit, selectedCategoryIds.slice().sort()])}

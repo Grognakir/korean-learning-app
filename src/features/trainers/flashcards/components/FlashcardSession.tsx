@@ -135,7 +135,7 @@ export function FlashcardSession({ queue, guest = false }: Props) {
 
   return (
     <div className={styles.root}>
-      {guest && <p className={styles.doneText}>Тренировка без регистрации. <Link href="/login">Войдите</Link>, чтобы сохранять прогресс.</p>}
+      {guest && <p className={styles.guestNote}>Без аккаунта прогресс не сохраняется. <Link href="/login">Войти</Link></p>}
       {error && <p className={styles.pendingBanner} role="alert">{error}</p>}
       {saving && <p role="status">Сохраняем оценку…</p>}
       <div className={styles.directions} role="group" aria-label="Направление карточек">

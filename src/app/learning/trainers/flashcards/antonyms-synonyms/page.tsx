@@ -8,6 +8,7 @@ import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { buildRelatedWordsQueue } from "@/features/trainers/flashcards/buildQueue";
 import { FlashcardSession } from "@/features/trainers/flashcards/components/FlashcardSession";
 import { FlashcardsHeader } from "@/features/trainers/flashcards/components/FlashcardsHeader";
+import { SessionSettings } from "@/features/trainers/flashcards/components/SessionSettings";
 import layout from "../../../learning.module.css";
 import styles from "../flashcards.module.css";
 
@@ -21,19 +22,23 @@ export default async function FlashcardsRelatedPage() {
   const queue = await buildRelatedWordsQueue(supabase, user?.id ?? null, newCardsLimit);
 
   return (
-    <div className={layout.page}>
+    <div className={`${layout.page} ${styles.fixedPage}`}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={`${layout.wrap} ${styles.wrap}`}>
-        <Link href="/learning/trainers" className={layout.backLink}>
-          ← Назад
-        </Link>
-        <h1 className={layout.title}>Карточки слов</h1>
+        <div className={styles.pageHead}>
+          <Link href="/learning/trainers" className={layout.backLink}>
+            ← Назад
+          </Link>
+          <h1 className={layout.title}>Карточки слов</h1>
+        </div>
         <div className={styles.column}>
-          <FlashcardsHeader
-            active="antonyms-synonyms"
-            newCardsLimit={newCardsLimit}
-            language={language}
-          />
+          <SessionSettings summary={`Антонимы/синонимы · ${newCardsLimit} новых`}>
+            <FlashcardsHeader
+              active="antonyms-synonyms"
+              newCardsLimit={newCardsLimit}
+              language={language}
+            />
+          </SessionSettings>
           <FlashcardSession guest={!user} key={`${user?.id ?? null}:${newCardsLimit}`} queue={queue} />
         </div>
       </main>
