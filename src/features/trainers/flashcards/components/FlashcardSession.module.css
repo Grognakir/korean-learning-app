@@ -62,10 +62,10 @@
 
 .card {
   width: 100%;
-  align-items: stretch;
+  align-items: center;
   font: inherit;
   color: inherit;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -89,10 +89,17 @@
   color: var(--stone);
 }
 
+/* Ответ центрируется так же, как слово на лицевой стороне. margin auto,
+   а не justify-content: center — при длинном ответе свободного места нет,
+   авто-отступы схлопываются в ноль, и текст остаётся прокручиваемым
+   сверху, тогда как центрирование обрезало бы ему начало. */
 .back {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 14px;
+  width: 100%;
+  margin-block: auto;
 }
 
 .translations {
@@ -106,7 +113,13 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
+  width: 100%;
+  /* Раньше примеры отбивались от ответа полоской слева; по центру такая
+     полоска смотрится кривой, поэтому отделяем их одной линией сверху. */
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
   font-size: var(--kr-font-md);
   color: var(--ink-soft);
   line-height: 1.4;
@@ -116,8 +129,6 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding-left: 10px;
-  border-left: 2px solid var(--line);
 }
 
 .exampleRu {
