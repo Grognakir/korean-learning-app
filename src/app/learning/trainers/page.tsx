@@ -4,6 +4,7 @@ import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
+import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
 import styles from "../learning.module.css";
 
 export default async function TrainersPage() {
@@ -14,13 +15,7 @@ export default async function TrainersPage() {
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
 
       <main className={styles.wrap}>
-        <Link href="/learning" className={styles.backLink}>
-          ← Назад
-        </Link>
-
-        <div className={styles.header}>
-          <h1 className={styles.title}>Тренажёры</h1>
-        </div>
+        <TrainerHeader href="/learning" title="Тренажёры" backLabel="К обучению" />
 
         <p className={styles.modeCardDescription}>Выберите, что хотите потренировать: память, написание или грамматику.</p>
         <div className={styles.modeGrid}>
@@ -49,8 +44,18 @@ export default async function TrainersPage() {
           </Link>
           {activeLanguage === "ko" && (
             <Link href="/learning/trainers/grammar" className={styles.modeCard}>
-              <div className={`${styles.modeCardPreview} kr`} aria-hidden="true">문법</div>
-              <div className={styles.modeCardBody}><span className={styles.modeCardTitle}>Грамматика</span><p className={styles.modeCardDescription}>Правило, сразу практика, смешанные задания и блиц на время.</p></div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/learning/grammar.jpg"
+                alt=""
+                className={styles.modeCardImage}
+              />
+              <div className={styles.modeCardBody}>
+                <span className={styles.modeCardTitle}>Грамматика</span>
+                <p className={styles.modeCardDescription}>
+                  Правило, сразу практика, смешанные задания и блиц на время.
+                </p>
+              </div>
             </Link>
           )}
           {activeLanguage === "ko" && (

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { GuestHeader } from "@/components/layout/GuestHeader";
@@ -14,6 +13,7 @@ import {
   type TopicKey,
   type TopicQuizQuestion,
 } from "@/features/trainers/topics/types";
+import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
 import layout from "../../../learning.module.css";
 import styles from "../topics.module.css";
 
@@ -45,10 +45,7 @@ export default async function TopicQuizPage({
     <div className={layout.page}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={`${layout.wrap} ${styles.sessionWrap}`}>
-        <Link href="/learning/trainers/topics" className={layout.backLink}>
-          ← Назад
-        </Link>
-        <h1 className={layout.title}>{label}</h1>
+        <TrainerHeader href="/learning/trainers/topics" title={label} backLabel="К списку тем" />
         <TopicQuizSession key={topic} questions={questions} />
       </main>
       <BottomTabBar sections={NAV_SECTIONS} />

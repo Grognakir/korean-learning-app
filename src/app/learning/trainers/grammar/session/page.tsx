@@ -9,6 +9,7 @@ import { grammarSearch, parseGrammarParams } from "@/features/trainers/grammar/a
 import { GrammarSession } from "@/features/trainers/grammar/components/GrammarSession";
 import { loadGrammarAreas, loadTrainerGrammars } from "@/features/trainers/grammar/loadGrammars";
 import { buildGrammarSession } from "@/features/trainers/grammar/session";
+import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
 import layout from "../../../learning.module.css";
 import styles from "@/features/trainers/grammar/components/GrammarTrainer.module.css";
 
@@ -34,8 +35,7 @@ export default async function GrammarSessionPage({ searchParams }: { searchParam
     <div className={layout.page}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={`${layout.wrap} ${styles.wrap}`}>
-        <Link href={setupHref} className={layout.backLink}>← Настройка сессии</Link>
-        <h1 className={layout.title}>Грамматика</h1>
+        <TrainerHeader href={setupHref} title="Грамматика" backLabel="К настройке сессии" />
         {session.study.length > 0 ? (
           <GrammarSession key={session.id} session={session} blitzSeconds={params.blitz} setupHref={setupHref} />
         ) : (

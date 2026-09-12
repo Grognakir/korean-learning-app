@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
@@ -10,6 +9,7 @@ import { FlashcardSession } from "@/features/trainers/flashcards/components/Flas
 import { FlashcardsHeader } from "@/features/trainers/flashcards/components/FlashcardsHeader";
 import { SessionSettings } from "@/features/trainers/flashcards/components/SessionSettings";
 import { fetchAllRows } from "@/lib/supabase/fetchAll";
+import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
 import layout from "../../learning.module.css";
 import styles from "./flashcards.module.css";
 
@@ -86,12 +86,7 @@ export default async function FlashcardsMainPage({
     <div className={`${layout.page} ${styles.fixedPage}`}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={`${layout.wrap} ${styles.wrap}`}>
-        <div className={styles.pageHead}>
-          <Link href="/learning/trainers" className={layout.backLink}>
-            ← Назад
-          </Link>
-          <h1 className={layout.title}>Карточки слов</h1>
-        </div>
+        <TrainerHeader href="/learning/trainers" title="Карточки слов" backLabel="К тренажёрам" />
         <div className={styles.column}>
           <SessionSettings summary={summary}>
             <FlashcardsHeader active="main" newCardsLimit={newCardsLimit} language={language} />

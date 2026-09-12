@@ -1,0 +1,54 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.back {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.back svg {
+  width: 17px;
+  height: 17px;
+}
+
+.back:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .back:hover {
+    border-color: var(--blue);
+    color: var(--ink);
+  }
+}
+
+.title {
+  min-width: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+/* Порог --to-compact объявлен в src/styles/media.css */
+@media (--to-compact) {
+  /* На телефоне кнопка — основной способ вернуться назад, поэтому зона
+     нажатия крупнее рекомендованных 44px. */
+  .back {
+    width: 44px;
+    height: 44px;
+  }
+}

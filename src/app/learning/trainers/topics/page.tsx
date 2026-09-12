@@ -6,6 +6,7 @@ import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { plural } from "@/lib/plural";
 import { TOPICS } from "@/features/trainers/topics/types";
+import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
 import layout from "../../learning.module.css";
 import styles from "./topics.module.css";
 
@@ -24,10 +25,7 @@ export default async function TopicsPage() {
     <div className={layout.page}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={layout.wrap}>
-        <Link href="/learning/trainers" className={layout.backLink}>
-          ← Назад
-        </Link>
-        <h1 className={layout.title}>Отработка тем</h1>
+        <TrainerHeader href="/learning/trainers" title="Отработка тем" backLabel="К тренажёрам" />
         <div className={styles.sectionGrid}>
           {TOPICS.map((topic) => (
             <Link

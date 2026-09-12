@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { AppHeader } from "@/components/layout/AppHeader";
@@ -8,6 +7,7 @@ import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { parseGrammarParams } from "@/features/trainers/grammar/areas";
 import { GrammarSetup } from "@/features/trainers/grammar/components/GrammarSetup";
 import { loadGrammarAreas } from "@/features/trainers/grammar/loadGrammars";
+import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
 import layout from "../../learning.module.css";
 import styles from "@/features/trainers/grammar/components/GrammarTrainer.module.css";
 
@@ -27,8 +27,7 @@ export default async function GrammarTrainerPage({ searchParams }: { searchParam
     <div className={layout.page}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={`${layout.wrap} ${styles.wrap}`}>
-        <Link href="/learning/trainers" className={layout.backLink}>← К тренажёрам</Link>
-        <h1 className={layout.title}>Грамматика</h1>
+        <TrainerHeader href="/learning/trainers" title="Грамматика" backLabel="К тренажёрам" />
         <p className={styles.description}>
           Разберите правило и сразу закрепите его, потом — смешанная практика по всем грамматикам сессии и блиц на время.
         </p>
