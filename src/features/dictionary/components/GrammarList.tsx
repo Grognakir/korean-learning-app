@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useMemo, useState } from "react";
+import { formatBold } from "@/lib/formatBold";
 import { createClient } from "@/lib/supabase/client";
 import { escapeLike } from "@/lib/supabase/escapeLike";
 import { useDebouncedValue } from "@/lib/useDebouncedValue";
@@ -13,13 +14,6 @@ import { ListError } from "./ListError";
 import styles from "./GrammarList.module.css";
 
 const PAGE_SIZE = 15;
-
-function formatBold(text: string): ReactNode[] {
-  const parts = text.split(/\*\*(.+?)\*\*/g);
-  return parts.map((part, i) =>
-    i % 2 === 1 ? <strong key={i}>{part}</strong> : part,
-  );
-}
 
 function GrammarCard({
   point,

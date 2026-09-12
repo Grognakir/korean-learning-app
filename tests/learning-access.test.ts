@@ -10,6 +10,7 @@ beforeEach(() => getUser.mockResolvedValue({ data: { user: null } }));
 it.each([
   "/learning", "/learning/trainers", "/learning/trainers/flashcards",
   "/learning/trainers/flashcards/antonyms-synonyms", "/learning/trainers/topics", "/learning/trainers/topics/habits",
+  "/learning/trainers/grammar", "/learning/trainers/grammar/session",
 ])("открывает гостю %s", async (path) => {
   const response = await updateSession(new NextRequest(`http://localhost${path}`));
   expect(response.headers.get("location")).toBeNull();

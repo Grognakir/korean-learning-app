@@ -48,6 +48,12 @@ export default async function TrainersPage() {
             <div className={styles.modeCardBody}><span className={styles.modeCardTitle}>Собери слово</span><p className={styles.modeCardDescription}>Составляйте слова из букв или слогов. Подсказки и повтор сложных слов.</p></div>
           </Link>
           {activeLanguage === "ko" && (
+            <Link href="/learning/trainers/grammar" className={styles.modeCard}>
+              <div className={`${styles.modeCardPreview} kr`} aria-hidden="true">문법</div>
+              <div className={styles.modeCardBody}><span className={styles.modeCardTitle}>Грамматика</span><p className={styles.modeCardDescription}>Правило, сразу практика, смешанные задания и блиц на время.</p></div>
+            </Link>
+          )}
+          {activeLanguage === "ko" && (
             <Link href="/learning/trainers/topics" className={styles.modeCard}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

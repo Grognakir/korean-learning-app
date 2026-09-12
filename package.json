@@ -13,6 +13,7 @@
     "import:phrases": "tsx scripts/import-phrases.ts",
     "import:grammar": "tsx scripts/import-grammar.ts",
     "import:topic-quiz": "tsx scripts/import-topic-quiz.ts",
+    "import:grammar-exercises": "tsx scripts/import-grammar-exercises.ts",
     "test": "vitest run"
   },
   "dependencies": {

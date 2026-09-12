@@ -1,0 +1,614 @@
+.wrap {
+  max-width: 560px;
+}
+
+.description,
+.empty {
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.session,
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.session {
+  flex: 1;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stages {
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stage,
+.stageActive,
+.stageDone {
+  flex: 1;
+  padding: 6px 4px;
+  border-radius: 100px;
+  background: var(--paper-2);
+  color: var(--stone);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stageActive {
+  background: var(--blue);
+  color: #fff;
+}
+
+.stageDone {
+  background: color-mix(in srgb, var(--green) 14%, #fff);
+  color: var(--green);
+}
+
+/* ── Карточки ──────────────────────────────────────────────── */
+.card,
+.ruleCard,
+.review,
+.resultCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: #fff;
+}
+
+.ruleCard {
+  border-top: 3px solid var(--blue);
+  box-shadow: var(--card-shadow);
+}
+
+.pattern {
+  font-size: var(--kr-font-hero);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.meaning {
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.explanation {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.sectionTitle {
+  margin: 14px 0 4px;
+  color: var(--stone);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card > .sectionTitle:first-child {
+  margin-top: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.list strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.examples li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 12px;
+  border-left: 2px solid var(--line);
+  font-size: var(--kr-font-md);
+}
+
+.exampleRu {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+/* ── Задания ───────────────────────────────────────────────── */
+.prompt {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.sentence {
+  font-size: var(--kr-font-lg);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.muted {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.task {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: color-mix(in srgb, var(--blue) 9%, #fff);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+}
+
+.input:disabled {
+  background: var(--paper);
+  color: var(--ink-soft);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.option,
+.optionOk,
+.optionBad {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  text-align: left;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.option:disabled,
+.optionOk,
+.optionBad {
+  cursor: default;
+}
+
+.optionOk {
+  border-color: var(--green);
+  background: color-mix(in srgb, var(--green) 14%, #fff);
+  color: var(--green);
+  font-weight: 600;
+}
+
+.optionBad {
+  border-color: var(--red);
+  background: color-mix(in srgb, var(--red) 10%, #fff);
+  color: var(--red);
+  font-weight: 600;
+}
+
+.match {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.matchItem,
+.matchSelected,
+.matchOk,
+.matchBad {
+  min-height: 58px;
+  padding: 10px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.matchSelected {
+  border-color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 9%, #fff);
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+
+.matchOk {
+  border-color: var(--green);
+  background: color-mix(in srgb, var(--green) 14%, #fff);
+  color: var(--green);
+  cursor: default;
+}
+
+.matchBad {
+  border-color: var(--red);
+  background: color-mix(in srgb, var(--red) 10%, #fff);
+  color: var(--red);
+}
+
+@media (hover: hover) {
+  .option:not(:disabled):hover,
+  .matchItem:hover {
+    border-color: var(--blue);
+  }
+}
+
+/* ── Разбор ────────────────────────────────────────────────── */
+.review {
+  gap: 8px;
+}
+
+.verdictOk,
+.verdictBad {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.verdictOk {
+  color: var(--green);
+}
+
+.verdictBad {
+  color: var(--red);
+}
+
+.yours {
+  font-size: 15px;
+}
+
+.yours s {
+  color: var(--stone);
+}
+
+.right {
+  color: var(--green);
+  font-size: 16px;
+}
+
+/* ── Блиц ──────────────────────────────────────────────────── */
+.clock,
+.clockLow {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: var(--paper-2);
+}
+
+.clock span,
+.clockLow span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--blue);
+}
+
+.clockLow span {
+  background: var(--amber);
+}
+
+.blitzPrompt {
+  padding: 18px 8px;
+  font-size: var(--kr-font-xl);
+  font-weight: 700;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.blitzOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.blitzOptions > button {
+  min-height: 62px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.note {
+  color: var(--stone);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ── Настройка ─────────────────────────────────────────────── */
+.setup {
+  padding: 4px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: #fff;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0 14px;
+}
+
+.field + .field {
+  border-top: 1px solid var(--line);
+}
+
+/* Высота строк поля фиксирована: значение может смениться подсказкой
+   (при «Сбросить» области исчезает ползунок), и без этого всё ниже
+   прыгало на несколько пикселей. */
+.fieldHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 20px;
+}
+
+.fieldLabel {
+  color: var(--stone);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fieldValue {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 32px;
+}
+
+.range small {
+  min-width: 1.4em;
+  color: var(--stone);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.range input {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--blue);
+}
+
+.fieldNote {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.segments {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
+  padding: 3px;
+  border-radius: var(--radius-control);
+  background: var(--paper-2);
+}
+
+.segment,
+.segmentActive {
+  padding: 7px 0;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.segmentActive {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(28, 27, 25, 0.1);
+}
+
+/* ── Итоги ─────────────────────────────────────────────────── */
+.resultCard {
+  border-top: 3px solid var(--green);
+  box-shadow: var(--card-shadow);
+}
+
+.eyebrow {
+  color: var(--stone);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.resultNumber {
+  color: var(--green);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.resultNumber span {
+  color: var(--ink-soft);
+  font-size: 20px;
+}
+
+.scoreGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.scoreGrid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: #fff;
+}
+
+.scoreGrid b {
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreGrid span {
+  color: var(--stone);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mistakes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mistakes li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.mistakes li:first-child {
+  padding-top: 4px;
+  border-top: 0;
+}
+
+/* ── Кнопка действия ───────────────────────────────────────── */
+/* Кнопка прилипает к низу экрана, чтобы после длинного правила или
+   разбора не приходилось листать до неё. */
+.dock {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding: 12px 0 calc(12px + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(to top, var(--paper) 75%, transparent);
+}
+
+.primary {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.session button:focus-visible,
+.session input:focus-visible,
+.primary:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Порог --to-compact объявлен в src/styles/media.css. На телефоне внизу
+   фиксированный BottomTabBar (61px + safe area) — кнопка встаёт над ним. */
+@media (--to-compact) {
+  .dock {
+    bottom: calc(61px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: 12px;
+  }
+}

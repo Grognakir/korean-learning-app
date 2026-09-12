@@ -18,6 +18,7 @@ export type SelectOption = {
   preview?: string;
   previewClassName?: string;
   previewStyle?: CSSProperties;
+  meta?: string;
 };
 
 type MenuCoords = {
@@ -209,6 +210,9 @@ type MultiSelectProps = {
   onChange: (values: string[]) => void;
   placeholder?: string;
   "aria-label"?: string;
+  countForms?: [string, string, string];
+  allLabel?: string;
+  bulkActions?: boolean;
 };
 
 export function MultiSelect({
@@ -217,6 +221,9 @@ export function MultiSelect({
   onChange,
   placeholder = "Выбрать",
   "aria-label": ariaLabel,
+  countForms = ["категория", "категории", "категорий"],
+  allLabel,
+  bulkActions = false,
 }: MultiSelectProps) {
   const [open, setOpen] = useState(false);
   const [coords, setCoords] = useState<MenuCoords | null>(null);
@@ -229,13 +236,11 @@ export function MultiSelect({
   const label =
     values.length === 0
       ? placeholder
-      : values.length === 1
-        ? (options.find((o) => o.value === values[0])?.label ?? values[0])
-        : `${values.length} ${plural(values.length, [
-            "категория",
-            "категории",
-            "категорий",
-          ])}`;
+      : allLabel && options.length > 1 && values.length === options.length
+        ? allLabel
+        : values.length === 1
+          ? (options.find((o) => o.value === values[0])?.label ?? values[0])
+          : `${values.length} ${plural(values.length, countForms)}`;
 
   const updateCoords = useCallback(() => {
     if (triggerRef.current) {
@@ -314,6 +319,24 @@ export function MultiSelect({
             style={menuStyle}
             data-select-menu=""
           >
+            {bulkActions && (
+              <div className={styles.bulkActions}>
+                <button
+                  type="button"
+                  disabled={values.length === options.length}
+                  onClick={() => onChange(options.map((o) => o.value))}
+                >
+                  Выбрать все
+                </button>
+                <button
+                  type="button"
+                  disabled={values.length === 0}
+                  onClick={() => onChange([])}
+                >
+                  Сбросить
+                </button>
+              </div>
+            )}
             <ul
               id={listId}
               className={styles.menuList}
@@ -341,6 +364,9 @@ export function MultiSelect({
                       aria-hidden="true"
                     />
                     {option.label}
+                    {option.meta !== undefined && (
+                      <span className={styles.optionMeta}>{option.meta}</span>
+                    )}
                   </button>
                 </li>
               );
