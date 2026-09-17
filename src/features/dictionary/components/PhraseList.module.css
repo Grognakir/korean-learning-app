@@ -32,6 +32,22 @@
   min-width: 160px;
 }
 
+/* flex:1 c basis 0 не отбирает место у соседнего flex:0 1 220px, пока
+   сумма базисов не превысит ширину строки — на узком экране это не
+   «сжатие» с учётом min-width, а рост searchInput в оставшиеся крохи
+   (~100px), категория стоит на полных 220px. Ниже --to-compact строка
+   просто в столбец, у обоих полная ширина. */
+@media (--to-compact) {
+  .searchRow {
+    flex-direction: column;
+  }
+
+  .categorySelect {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
 .hint {
   color: var(--ink-soft);
   font-size: 14px;
