@@ -29,4 +29,10 @@
   --scrollbar-size: 8px;
   --scrollbar-thumb: color-mix(in srgb, var(--stone) 55%, var(--line));
   --scrollbar-thumb-hover: var(--stone);
+
+  /* Высота мобильного BottomTabBar (без safe-area) — используется и им
+     самим, и любым фиксированным/sticky элементом над ним (см.
+     GrammarTrainer .dock), чтобы не держать магическое число в двух
+     местах и не расходиться на 1px, как уже случилось однажды. */
+  --mobile-tabbar-height: 62px;
 }

@@ -605,10 +605,11 @@
 }
 
 /* Порог --to-compact объявлен в src/styles/media.css. На телефоне внизу
-   фиксированный BottomTabBar (61px + safe area) — кнопка встаёт над ним. */
+   фиксированный BottomTabBar — кнопка встаёт над ним (--mobile-tabbar-height
+   в tokens.css, общая с самим BottomTabBar, чтобы высоты не расходились). */
 @media (--to-compact) {
   .dock {
-    bottom: calc(61px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(var(--mobile-tabbar-height) + env(safe-area-inset-bottom, 0px));
     padding-bottom: 12px;
   }
 }

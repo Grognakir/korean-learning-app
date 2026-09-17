@@ -8,6 +8,7 @@
   justify-content: center;
   gap: 32px;
   align-items: center;
+  min-height: var(--mobile-tabbar-height);
   padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
   background: #fff;
   border-top: 1px solid var(--line);
