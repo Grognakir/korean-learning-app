@@ -6,6 +6,7 @@ import type {
 } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
 import { LabelTranslation } from "./LabelTranslation";
+import { VocabChip } from "./VocabChip";
 import styles from "./blocks.module.css";
 
 type VocabItem = { ko: string; translation_ru: string };
@@ -56,27 +57,6 @@ function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
   }
 
   return selected.sort((a, b) => a.start - b.start);
-}
-
-function VocabChip({
-  text,
-  translation,
-  className,
-}: {
-  text: string;
-  translation: string;
-  className?: string;
-}) {
-  return (
-    <span className={`${styles.vocabItem} ${className ?? ""}`}>
-      <button type="button" className={`${styles.vocabKo} kr`}>
-        {text}
-      </button>
-      <span className={styles.vocabTranslation} role="tooltip">
-        {translation}
-      </span>
-    </span>
-  );
 }
 
 function LineText({

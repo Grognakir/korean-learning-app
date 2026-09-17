@@ -1,5 +1,6 @@
 import type { VocabListBlock } from "@/features/learning/types";
 import { LabelTranslation } from "./LabelTranslation";
+import { VocabChip } from "./VocabChip";
 import styles from "./blocks.module.css";
 
 export function VocabList({
@@ -17,14 +18,7 @@ export function VocabList({
       </span>
       <div className={styles.vocabItems}>
         {block.items.map((item, i) => (
-          <div key={`${item.ko}-${i}`} className={styles.vocabItem}>
-            <button type="button" className={`${styles.vocabKo} kr`}>
-              {item.ko}
-            </button>
-            <span className={styles.vocabTranslation} role="tooltip">
-              {item.translation_ru}
-            </span>
-          </div>
+          <VocabChip key={`${item.ko}-${i}`} text={item.ko} translation={item.translation_ru} />
         ))}
       </div>
     </div>

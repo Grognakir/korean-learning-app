@@ -1,5 +1,6 @@
 import type { ReferenceTableBlock } from "@/features/learning/types";
 import { LabelTranslation } from "./LabelTranslation";
+import { VocabChip } from "./VocabChip";
 import styles from "./blocks.module.css";
 
 export function ReferenceTable({
@@ -51,16 +52,15 @@ export function ReferenceTable({
                       className={styles.countryFlag}
                     />
                   )}
-                  <span className={styles.vocabItem}>
-                    <button type="button" className={`${styles.vocabKo} kr`}>
-                      {column}
-                    </button>
-                    {translation && (
-                      <span className={styles.vocabTranslation} role="tooltip">
-                        {translation}
-                      </span>
-                    )}
-                  </span>
+                  {translation ? (
+                    <VocabChip text={column} translation={translation} />
+                  ) : (
+                    <span className={styles.vocabItem}>
+                      <button type="button" className={`${styles.vocabKo} kr`}>
+                        {column}
+                      </button>
+                    </span>
+                  )}
                 </div>
               );
             })}

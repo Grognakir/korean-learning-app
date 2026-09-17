@@ -1,10 +1,17 @@
+"use client";
+
+import { useRef } from "react";
+import { clampTooltipToViewport } from "./tooltipClamp";
 import styles from "./blocks.module.css";
 
-// Та же ховер/фокус-механика, что у VocabChip (TextBlock.tsx) — просто
-// текст на русском вместо корейского слова, без JS-состояния.
 export function LabelInfo({ translation }: { translation: string }) {
+  const tooltipRef = useRef<HTMLSpanElement>(null);
+  const handleReveal = () => {
+    if (tooltipRef.current) clampTooltipToViewport(tooltipRef.current);
+  };
+
   return (
-    <span className={styles.labelInfo}>
+    <span className={styles.labelInfo} onMouseEnter={handleReveal} onFocus={handleReveal}>
       <button
         type="button"
         className={styles.labelInfoButton}
@@ -16,7 +23,7 @@ export function LabelInfo({ translation }: { translation: string }) {
           <rect x="7.25" y="7.1" width="1.5" height="5" rx="0.75" fill="currentColor" />
         </svg>
       </button>
-      <span className={styles.labelInfoTooltip} role="tooltip">
+      <span ref={tooltipRef} className={styles.labelInfoTooltip} role="tooltip">
         {translation}
       </span>
     </span>

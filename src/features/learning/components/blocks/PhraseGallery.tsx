@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { PhraseGalleryBlock } from "@/features/learning/types";
 import { LabelTranslation } from "./LabelTranslation";
+import { VocabChip } from "./VocabChip";
 import styles from "./blocks.module.css";
 
 type Phrase = { text: string; translation_ru: string };
@@ -36,16 +37,7 @@ function ChevronLeft() {
 }
 
 function PhraseVocabItem({ phrase }: { phrase: Phrase }) {
-  return (
-    <span className={styles.vocabItem}>
-      <button type="button" className={`${styles.vocabKo} kr`}>
-        {phrase.text}
-      </button>
-      <span className={styles.vocabTranslation} role="tooltip">
-        {phrase.translation_ru}
-      </span>
-    </span>
-  );
+  return <VocabChip text={phrase.text} translation={phrase.translation_ru} />;
 }
 
 /**
