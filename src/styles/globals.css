@@ -4,40 +4,51 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
-*::-webkit-scrollbar {
-  width: var(--scrollbar-size);
-  height: var(--scrollbar-size);
-}
+/* Кастомный скроллбар — только там, где есть мышь. На тач-устройствах
+   (даже широких, даже когда браузер уже поддерживает scrollbar-width)
+   он не оверлей, а постоянно занимает место и виден без наведения —
+   выглядит как чужеродный «нативный» бар, в т.ч. по горизонтали на
+   любом overflow-x контейнере. Обычный скрытый оверлей-скролл мобильных
+   браузеров подходит лучше и не требует переопределения. */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
 
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
+  *::-webkit-scrollbar {
+    width: var(--scrollbar-size);
+    height: var(--scrollbar-size);
+  }
 
-*::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border-radius: 100px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-*::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
+  *::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 100px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
 
-*::-webkit-scrollbar-corner {
-  background: transparent;
-}
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
 
-*::-webkit-scrollbar-button {
-  display: none;
-  width: 0;
-  height: 0;
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 html,
