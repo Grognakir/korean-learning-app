@@ -2,7 +2,6 @@ import { getLearningContext } from "@/features/auth/getLearningContext";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { loadPracticeWords } from "@/features/trainers/vocabulary/loadWords";
 import { makeSpellingItems } from "@/features/trainers/vocabulary/exercises";
 import { SpellingSession } from "@/features/trainers/vocabulary/SpellingSession";
@@ -20,6 +19,6 @@ export default async function PracticePage() {
       <p className={styles.description}>Вспоминайте написание по переводу. Соберите слово из знаков, а затем закрепите сложные слова.</p>
       <SpellingSession key={`${user?.id ?? "guest"}:${activeLanguage}`} initialItems={makeSpellingItems(words)} />
     </main>
-    <BottomTabBar sections={NAV_SECTIONS} />
+    <BottomTabBar />
   </div>;
 }

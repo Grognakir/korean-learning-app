@@ -1,6 +1,5 @@
 import { displayName, requireUser } from "@/features/auth/requireUser";
 import { AppHeader } from "@/components/layout/AppHeader";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { FontSettingsForm } from "@/features/settings/components/FontSettingsForm";
 import { PreserveFiltersToggle } from "@/features/settings/components/PreserveFiltersToggle";
@@ -26,7 +25,7 @@ export default async function SettingsPage() {
         />
         <PreserveFiltersToggle />
       </main>
-      <BottomTabBar sections={NAV_SECTIONS} />
+      <BottomTabBar />
     </div>
   );
 }

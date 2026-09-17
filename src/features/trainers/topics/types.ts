@@ -12,6 +12,7 @@ export const TOPICS = [
   { key: "shop", label: "Ресторан и магазин" },
   { key: "rules", label: "Правила поведения" },
   { key: "schedule", label: "Расписание" },
+  { key: "questions", label: "Вопросительные слова" },
 ] as const;
 
 export type TopicKey = (typeof TOPICS)[number]["key"];

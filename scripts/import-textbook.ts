@@ -12,11 +12,13 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!,
 );
 
-const CONTENT_DIR = join(process.cwd(), "docs/reference/inha_book_1_content");
-const REFERENCE_DIR = join(process.cwd(), "docs/reference");
+const REFERENCE_DIR = join(process.cwd(), "content/reference");
+const LESSON_DIR = join(REFERENCE_DIR, "inha_book_content/1급_lesson_01");
+const LESSON_DIR_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_01");
 
 const PLAN = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
+const TEXTBOOK_2 = { slug: "inha-2", level: 2, title: "새인하한국어2" };
 
 // Порядок соответствует table-country-names.columns в lesson-01.json.
 const FLAG_CODES = [
@@ -56,6 +58,44 @@ async function uploadAsset(
   console.log(`  storage: ${storagePath}`);
 }
 
+async function importLesson(textbookId: string, lessonPath: string) {
+  const lesson: LessonFile = JSON.parse(readFileSync(lessonPath, "utf-8"));
+
+  console.log(
+    `Импорт "${lesson.title}" (урок ${lesson.lesson_number}): ${lesson.pages.length} страниц`,
+  );
+
+  const { error: lessonError } = await supabase.from("lessons").upsert(
+    {
+      textbook_id: textbookId,
+      lesson_number: lesson.lesson_number,
+      title: lesson.title,
+    },
+    { onConflict: "textbook_id,lesson_number" },
+  );
+  if (lessonError) throw lessonError;
+
+  for (let pageIndex = 0; pageIndex < lesson.pages.length; pageIndex++) {
+    const page = lesson.pages[pageIndex];
+    const { error } = await supabase.from("textbook_pages").upsert(
+      {
+        textbook_id: textbookId,
+        page_index: pageIndex,
+        page_number: page.page_number,
+        lesson_number: lesson.lesson_number,
+        content: {
+          page_role: page.page_role,
+          source_photo: page.source_photo,
+          blocks: page.blocks,
+        },
+      },
+      { onConflict: "textbook_id,page_index" },
+    );
+    if (error) throw error;
+  }
+  console.log(`  textbook_pages: ${lesson.pages.length} строк`);
+}
+
 async function main() {
   const { data: plan, error: planError } = await supabase
     .from("learning_plans")
@@ -71,78 +111,72 @@ async function main() {
     .single();
   if (textbookError) throw textbookError;
 
-  const lessonPath = join(CONTENT_DIR, "lesson-01.json");
-  const lesson: LessonFile = JSON.parse(readFileSync(lessonPath, "utf-8"));
+  const { data: textbook2, error: textbook2Error } = await supabase
+    .from("textbooks")
+    .upsert({ ...TEXTBOOK_2, plan_id: plan.id }, { onConflict: "slug" })
+    .select()
+    .single();
+  if (textbook2Error) throw textbook2Error;
 
-  console.log(
-    `Импорт "${lesson.title}" (урок ${lesson.lesson_number}): ${lesson.pages.length} страниц`,
-  );
-
-  const { error: lessonError } = await supabase.from("lessons").upsert(
-    {
-      textbook_id: textbook.id,
-      lesson_number: lesson.lesson_number,
-      title: lesson.title,
-    },
-    { onConflict: "textbook_id,lesson_number" },
-  );
-  if (lessonError) throw lessonError;
-
-  for (let pageIndex = 0; pageIndex < lesson.pages.length; pageIndex++) {
-    const page = lesson.pages[pageIndex];
-    const { error } = await supabase.from("textbook_pages").upsert(
-      {
-        textbook_id: textbook.id,
-        page_index: pageIndex,
-        page_number: page.page_number,
-        lesson_number: lesson.lesson_number,
-        content: {
-          page_role: page.page_role,
-          source_photo: page.source_photo,
-          blocks: page.blocks,
-        },
-      },
-      { onConflict: "textbook_id,page_index" },
-    );
-    if (error) throw error;
-  }
-  console.log(`  textbook_pages: ${lesson.pages.length} строк`);
+  await importLesson(textbook.id, join(LESSON_DIR, "lesson-01.json"));
+  await importLesson(textbook2.id, join(LESSON_DIR_2, "lesson-01.json"));
 
   // Ассеты: только то, что реально используется этим уроком, не всё
   // содержимое справочных папок разом.
   await uploadAsset(
-    join(REFERENCE_DIR, "inha_book_1_book/image/illustration_0_handshake.png"),
+    join(LESSON_DIR, "img/illustration_0_handshake.png"),
     "inha_book_1/illustration_0_handshake.png",
     "image/png",
   );
   await uploadAsset(
-    join(REFERENCE_DIR, "inha_book_1_audio/101.mp3"),
+    join(REFERENCE_DIR, "inha_book_audio/1급_주교재/101.mp3"),
     "inha_book_1/audio/101.mp3",
     "audio/mpeg",
   );
 
   // Флаги для таблицы "나라 이름" (준비하기 1) — уменьшенные копии
-  // (макс. сторона 200px) в image/flags/, оригиналы в исходном
+  // (макс. сторона 200px) в img/flags/, оригиналы в исходном
   // разрешении, загруженные пользователем, лежат рядом как *_flag.png.
   for (const code of FLAG_CODES) {
     await uploadAsset(
-      join(REFERENCE_DIR, `inha_book_1_book/image/flags/${code}.png`),
+      join(LESSON_DIR, `img/flags/${code}.png`),
       `inha_book_1/flags/${code}.png`,
       "image/png",
     );
   }
 
   // Иллюстрации галереи приветственных фраз (준비하기 1) — уменьшенные
-  // копии (макс. сторона 600px) в image/lesson_1_web/, оригиналы в
-  // исходном разрешении, загруженные пользователем, лежат рядом в
-  // image/lesson_1/ (корейские имена файлов, только для справки).
+  // копии (макс. сторона 600px) в img/.
   for (const code of GREETING_GALLERY_CODES) {
     await uploadAsset(
-      join(REFERENCE_DIR, `inha_book_1_book/image/lesson_1_web/${code}.png`),
+      join(LESSON_DIR, `img/${code}.png`),
       `inha_book_1/lesson_1/${code}.png`,
       "image/png",
     );
   }
+
+  // 2급 1과: иллюстрации к обоим диалогам (сгенерированный пиксель-арт,
+  // не фото) и аудио к ним.
+  await uploadAsset(
+    join(LESSON_DIR_2, "img/illustration_1_handshake.png"),
+    "inha_book_2/illustration_1_handshake.png",
+    "image/png",
+  );
+  await uploadAsset(
+    join(LESSON_DIR_2, "img/illustration_2_classroom_intro.png"),
+    "inha_book_2/illustration_2_classroom_intro.png",
+    "image/png",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/201.mp3"),
+    "inha_book_2/audio/201.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/202.mp3"),
+    "inha_book_2/audio/202.mp3",
+    "audio/mpeg",
+  );
 
   console.log("Готово.");
 }

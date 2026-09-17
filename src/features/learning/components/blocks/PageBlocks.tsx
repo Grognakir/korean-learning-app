@@ -58,10 +58,12 @@ function hintsByRelatedText(
  */
 export function PageBlocks({
   blocks,
+  textbookSlug,
   lessonNumber,
   blockTypeById,
 }: {
   blocks: Block[];
+  textbookSlug?: string;
   lessonNumber?: number;
   blockTypeById?: Record<string, Block["type"]>;
 }) {
@@ -74,11 +76,12 @@ export function PageBlocks({
       {blocks.map((block, i) => {
         switch (block.type) {
           case "lesson_toc":
-            if (lessonNumber == null || !blockTypeById) return null;
+            if (textbookSlug == null || lessonNumber == null || !blockTypeById) return null;
             return (
               <LessonToc
                 key={i}
                 block={block}
+                textbookSlug={textbookSlug}
                 lessonNumber={lessonNumber}
                 blockTypeById={blockTypeById}
               />

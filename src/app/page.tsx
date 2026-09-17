@@ -3,7 +3,6 @@ import { createClient } from "@/lib/supabase/server";
 import { devSignIn } from "@/features/auth/actions";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { WordOverviewCard } from "@/features/dashboard/WordOverviewCard";
 import { getWordOverview } from "@/features/dashboard/wordOverview";
 import buttons from "@/components/ui/Button.module.css";
@@ -71,7 +70,7 @@ export default async function HomePage() {
           </div>
         </main>
 
-        <BottomTabBar sections={NAV_SECTIONS} />
+        <BottomTabBar />
       </div>
     );
   }
@@ -112,7 +111,7 @@ export default async function HomePage() {
         </section>
       </main>
 
-      <BottomTabBar sections={NAV_SECTIONS} />
+      <BottomTabBar />
     </div>
   );
 }

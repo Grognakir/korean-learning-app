@@ -2,7 +2,6 @@ import Link from "next/link";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { plural } from "@/lib/plural";
 import { TOPICS } from "@/features/trainers/topics/types";
@@ -42,7 +41,7 @@ export default async function TopicsPage() {
           ))}
         </div>
       </main>
-      <BottomTabBar sections={NAV_SECTIONS} />
+      <BottomTabBar />
     </div>
   );
 }

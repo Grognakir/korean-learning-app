@@ -1,4 +1,5 @@
 import { LoginForm } from "@/features/auth/components/LoginForm";
+import { BackHomeLink } from "../BackHomeLink";
 import styles from "../auth-layout.module.css";
 
 const NOTICES: Record<string, string> = {
@@ -15,6 +16,7 @@ export default async function LoginPage({
 
   return (
     <main className={styles.wrap}>
+      <BackHomeLink />
       <LoginForm notice={error ? NOTICES[error] : undefined} />
     </main>
   );

@@ -2,7 +2,6 @@ import { redirect } from "next/navigation";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { buildRelatedWordsQueue } from "@/features/trainers/flashcards/buildQueue";
 import { FlashcardSession } from "@/features/trainers/flashcards/components/FlashcardSession";
@@ -37,7 +36,7 @@ export default async function FlashcardsRelatedPage() {
           <FlashcardSession guest={!user} key={`${user?.id ?? null}:${newCardsLimit}`} queue={queue} />
         </div>
       </main>
-      <BottomTabBar sections={NAV_SECTIONS} />
+      <BottomTabBar />
     </div>
   );
 }

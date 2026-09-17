@@ -4,6 +4,8 @@ import type {
   TextBlock as TextBlockType,
   TextLine,
 } from "@/features/learning/types";
+import { LabelInfo } from "./LabelInfo";
+import { LabelTranslation } from "./LabelTranslation";
 import styles from "./blocks.module.css";
 
 type VocabItem = { ko: string; translation_ru: string };
@@ -126,7 +128,10 @@ function HintSection({ hint }: { hint: HintBlock }) {
     <div className={styles.textHint}>
       {phrases.length > 0 && (
         <div className={styles.textHintGroup}>
-          <span className={styles.label}>Готовые выражения</span>
+          <span className={styles.labelRow}>
+            <span className={`${styles.label} kr`}>표현</span>
+            <LabelTranslation translation="Выражения" />
+          </span>
           <div className={styles.vocabItems}>
             {phrases.map((item) => (
               <VocabChip
@@ -140,7 +145,10 @@ function HintSection({ hint }: { hint: HintBlock }) {
       )}
       {patterns.length > 0 && (
         <div className={styles.textHintGroup}>
-          <span className={styles.label}>Конструкции</span>
+          <span className={styles.labelRow}>
+            <span className={`${styles.label} kr`}>문형</span>
+            <LabelTranslation translation="Конструкции" />
+          </span>
           <div className={styles.vocabItems}>
             {patterns.map((item) => (
               <VocabChip
@@ -170,7 +178,10 @@ export function TextBlock({
   return (
     <div id={id} className={styles.block}>
       {block.title && (
-        <span className={`${styles.label} kr`}>{block.title}</span>
+        <span className={styles.labelRow}>
+          <span className={`${styles.dialogueTitle} kr`}>{block.title}</span>
+          {block.title_ru && <LabelInfo translation={block.title_ru} />}
+        </span>
       )}
       {block.illustration?.imageUrl && (
         // eslint-disable-next-line @next/next/no-img-element

@@ -2,7 +2,6 @@ import { redirect } from "next/navigation";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { parseGrammarParams } from "@/features/trainers/grammar/areas";
 import { GrammarSetup } from "@/features/trainers/grammar/components/GrammarSetup";
@@ -40,7 +39,7 @@ export default async function GrammarTrainerPage({ searchParams }: { searchParam
           <p className={styles.empty}>Упражнения по грамматике пока не добавлены.</p>
         )}
       </main>
-      <BottomTabBar sections={NAV_SECTIONS} />
+      <BottomTabBar />
     </div>
   );
 }

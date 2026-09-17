@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { shuffle } from "@/features/trainers/flashcards/buildQueue";
 import { shuffleOptions } from "@/features/trainers/topics/shuffleOptions";
@@ -48,7 +47,7 @@ export default async function TopicQuizPage({
         <TrainerHeader href="/learning/trainers/topics" title={label} backLabel="К списку тем" />
         <TopicQuizSession key={topic} questions={questions} />
       </main>
-      <BottomTabBar sections={NAV_SECTIONS} />
+      <BottomTabBar />
     </div>
   );
 }

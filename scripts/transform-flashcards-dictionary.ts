@@ -591,7 +591,7 @@ function main() {
     });
   }
 
-  // Слова из лексики учебника (docs/reference/inha_book_1_content/lesson-01.json,
+  // Слова из лексики учебника (content/reference/inha_book_content/1급_lesson_01/lesson-01.json,
   // блок vocab-junbihagi1), которых нет в источнике korean_flashcards —
   // проверено: ни 제, ни 씨, ни 안녕하십니까 там не встречаются вообще.
   // Добавляем вручную как обычные глобальные слова, тем же способом, что

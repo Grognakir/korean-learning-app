@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useActionState } from "react";
-import { signIn } from "../actions";
+import { devSignIn, signIn } from "../actions";
 import styles from "./AuthForm.module.css";
 
 type State = { error?: string } | undefined;
@@ -39,6 +39,13 @@ export function LoginForm({ notice }: { notice?: string }) {
       <p className={styles.footer}>
         Нет аккаунта? <Link href="/register">Зарегистрироваться</Link>
       </p>
+      {process.env.NODE_ENV !== "production" && (
+        <form action={devSignIn}>
+          <button type="submit" className={styles.devLogin}>
+            Логин в dev
+          </button>
+        </form>
+      )}
     </div>
   );
 }

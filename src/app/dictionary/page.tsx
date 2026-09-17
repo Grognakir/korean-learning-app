@@ -1,7 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { DictionaryPageClient } from "@/features/dictionary/components/DictionaryPageClient";
 import { readGuestLanguage } from "@/features/language/getActiveLanguage";
@@ -61,7 +60,7 @@ export default async function DictionaryPage() {
         />
       </main>
 
-      <BottomTabBar sections={NAV_SECTIONS} />
+      <BottomTabBar />
     </div>
   );
 }

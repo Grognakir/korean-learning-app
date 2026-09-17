@@ -1,7 +1,6 @@
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
-import { NAV_SECTIONS } from "@/components/layout/navSections";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { buildFlashcardQueue } from "@/features/trainers/flashcards/buildQueue";
 import { CategorySelect } from "@/features/trainers/flashcards/components/CategorySelect";
@@ -99,7 +98,7 @@ export default async function FlashcardsMainPage({
           />
         </div>
       </main>
-      <BottomTabBar sections={NAV_SECTIONS} />
+      <BottomTabBar />
     </div>
   );
 }

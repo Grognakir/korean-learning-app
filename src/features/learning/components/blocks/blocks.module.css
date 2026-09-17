@@ -11,24 +11,173 @@
 }
 
 .label {
-  font-size: 11px;
+  font-size: var(--kr-font-sm);
+  line-height: 1;
   font-weight: 700;
-  color: var(--stone);
+  color: var(--ink-soft);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
+.dialogueTitle {
+  font-size: var(--kr-font-sm);
+  line-height: 1;
+  font-weight: 700;
+  color: var(--stone);
+}
+
+.labelRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.labelTranslation {
+  font-size: var(--kr-font-xs);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--stone);
+  margin-left: 4px;
+}
+
+.labelInfo {
+  position: relative;
+  display: inline-flex;
+  overflow: visible;
+}
+
+.labelInfoButton {
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-content: end;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--stone);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Видимая иконка остаётся 15px (не расталкивает плотные строки лейблов),
+   но кликабельная область — псевдоэлемент без влияния на layout — растёт
+   до рекомендованных ~42px тач-таргета. */
+.labelInfoButton::before {
+  content: "";
+  position: absolute;
+  inset: -13.5px;
+}
+
+.labelInfoButton:hover,
+.labelInfoButton:focus-visible {
+  color: var(--blue);
+}
+
+.labelInfoTooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  transform: translateX(-50%);
+  z-index: 3;
+  width: max-content;
+  max-width: min(220px, 70vw);
+  padding: 6px 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  box-shadow: var(--card-shadow);
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.12s ease,
+    visibility 0.12s ease;
+}
+
+.labelInfo:hover .labelInfoTooltip,
+.labelInfo:focus-within .labelInfoTooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* lesson_toc */
-.tocSection {
+.tocRow {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tocRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tocRow:first-child {
+  padding-top: 0;
+}
+
+.tocRowMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tocRowText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.tocRowHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .tocKey {
-  font-size: var(--kr-font-sm);
+  font-size: var(--kr-font-md);
   font-weight: 700;
+  color: var(--ink);
+}
+
+.tocRowSubtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--kr-font-sm);
   color: var(--ink-soft);
+}
+
+.tocRowAction {
+  flex-shrink: 0;
+  font-size: var(--kr-font-sm);
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tocRowSoon {
+  flex-shrink: 0;
+  font-size: var(--kr-font-xs);
+  font-weight: 600;
+  color: var(--stone);
+  background: var(--paper-2);
+  border-radius: 100px;
+  padding: 3px 10px;
+  white-space: nowrap;
 }
 
 .tocItems {
@@ -211,8 +360,16 @@
 /* illustration */
 .illustrationImage {
   width: 100%;
+  max-height: 320px;
+  object-fit: cover;
   border-radius: var(--radius-control);
   border: 1px solid var(--line);
+}
+
+@media (--to-compact) {
+  .illustrationImage {
+    max-height: 220px;
+  }
 }
 
 .illustrationPlaceholder {
@@ -280,25 +437,88 @@
   font-weight: 700;
 }
 
+.grammarDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grammarSummary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.grammarSummary::-webkit-details-marker {
+  display: none;
+}
+
+.grammarToggleIcon {
+  width: var(--kr-font-lg);
+  height: var(--kr-font-lg);
+  flex-shrink: 0;
+  color: var(--blue);
+  transition: transform 0.15s ease;
+}
+
+.grammarDetails[open] .grammarToggleIcon {
+  transform: rotate(90deg);
+}
+
+.explanation {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border-radius: var(--radius-control);
+  padding: 10px 12px;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px 10px 28px;
+  background: var(--paper);
+  border-radius: var(--radius-control);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
 .examples {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  background: var(--paper-2);
+  border-radius: var(--radius-control);
+  padding: 10px 12px;
 }
 
 .example {
   white-space: pre-line;
   font-size: var(--kr-font-md);
   line-height: 1.6;
-  background: var(--paper-2);
-  border-radius: var(--radius-control);
-  padding: 8px 12px;
+}
+
+.example + .example {
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
 }
 
 /* grammar_exercise */
 .prompt {
   font-size: var(--kr-font-sm);
   color: var(--ink-soft);
+}
+
+.exerciseHint {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: -4px;
 }
 
 .exerciseDialogue {
@@ -310,6 +530,55 @@
   padding: 10px 12px;
 }
 
+.exerciseDialogueLabel {
+  composes: label;
+  margin-bottom: 2px;
+}
+
+.exerciseActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.exerciseCheck {
+  font-size: var(--kr-font-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-control);
+  padding: 7px 16px;
+  background: var(--blue);
+  color: #fff;
+  cursor: pointer;
+}
+
+.exerciseShowExample {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.exerciseResultCorrect,
+.exerciseResultIncorrect {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.exerciseResultCorrect {
+  color: var(--green);
+}
+
+.exerciseResultIncorrect {
+  color: var(--red);
+}
+
 .exerciseItems {
   display: flex;
   flex-wrap: wrap;
@@ -318,6 +587,9 @@
 }
 
 .exerciseItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: var(--kr-font-sm);
   border: 1px solid var(--line);
   border-radius: 100px;
@@ -327,8 +599,28 @@
   cursor: pointer;
 }
 
-.exerciseItemActive {
+.exerciseItemNumber {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
   background: var(--paper-2);
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.exerciseItemActive {
+  border-color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 10%, #fff);
+  font-weight: 700;
+}
+
+.exerciseItemActive .exerciseItemNumber {
+  background: var(--blue);
+  color: #fff;
 }
 
 .exerciseItemCorrect {
@@ -338,6 +630,11 @@
   background: color-mix(in srgb, var(--green) 10%, #fff);
 }
 
+.exerciseItemCorrect .exerciseItemNumber {
+  background: var(--green);
+  color: #fff;
+}
+
 .exerciseItemIncorrect {
   composes: exerciseItem;
   border-color: var(--red);
@@ -345,32 +642,53 @@
   background: color-mix(in srgb, var(--red) 10%, #fff);
 }
 
+.exerciseItemIncorrect .exerciseItemNumber {
+  background: var(--red);
+  color: #fff;
+}
+
+@media (--to-compact) {
+  .exerciseItems {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .exerciseItem {
+    border-radius: var(--radius-control);
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px 12px;
+  }
+}
+
 .blank {
-  border: none;
-  border-bottom: 2px solid var(--line);
-  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
   color: var(--ink);
   font-size: var(--kr-font-md);
   text-align: center;
-  padding: 0 2px;
-  margin: 0 1px;
+  padding: 2px 4px;
+  margin: 0 2px;
 }
 
 .blank:focus {
   outline: none;
-  border-bottom-color: var(--blue);
+  border-color: var(--blue);
 }
 
 .blankCorrect {
   composes: blank;
-  border-bottom-color: var(--green);
+  border-color: var(--green);
   color: var(--green);
+  background: color-mix(in srgb, var(--green) 10%, #fff);
 }
 
 .blankIncorrect {
   composes: blank;
-  border-bottom-color: var(--red);
+  border-color: var(--red);
   color: var(--red);
+  background: color-mix(in srgb, var(--red) 10%, #fff);
 }
 
 /* phrase_gallery */
@@ -458,16 +776,6 @@
   .phraseArrow {
     display: inline-flex;
   }
-}
-
-/* grammar_exercise: та же круглая стрелка, что у phrase_gallery, но всегда
-   видна, когда активна (видимость управляется React-условием, не
-   контейнерным запросом) — composes должен идти после .phraseArrow в
-   файле, иначе display:none оттуда победит по порядку каскада при equal
-   specificity. */
-.exerciseBackArrow {
-  composes: phraseArrow;
-  display: inline-flex;
 }
 
 @media (max-width: 720px) {

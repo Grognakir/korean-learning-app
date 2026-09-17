@@ -1,0 +1,158 @@
+.pageShell {
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 28px 20px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (--to-compact) {
+  .wrap {
+    padding-bottom: 76px;
+  }
+}
+
+.backLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.title {
+  font-size: var(--kr-font-xl);
+  font-weight: 700;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pageNumber {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--stone);
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emptyState {
+  color: var(--ink-soft);
+}
+
+.sectionLayout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (--to-compact) {
+  .sectionLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sectionAside {
+  position: sticky;
+  top: 16px;
+}
+
+@media (--to-compact) {
+  .sectionAside {
+    display: none;
+  }
+}
+
+.mobileToc {
+  display: none;
+}
+
+@media (--to-compact) {
+  .mobileToc {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-panel);
+    padding: 10px 14px;
+  }
+}
+
+.mobileTocSummary {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.mobileToc[open] .mobileTocSummary {
+  margin-bottom: 8px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  display: block;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: var(--radius-control);
+}
+
+.navItem:hover {
+  background: var(--paper-2);
+}
+
+.navItemCurrent {
+  color: var(--blue);
+  font-weight: 700;
+  background: color-mix(in srgb, var(--blue) 10%, transparent);
+}
+
+.navItemSoon {
+  font-size: 13.5px;
+  color: var(--stone);
+  padding: 6px 8px;
+}
+
+.sectionFooterNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.nextSectionLink {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  white-space: nowrap;
+}

@@ -2,35 +2,39 @@ import "server-only";
 import { getSignedAssetUrls } from "@/features/learning/assets";
 import type { Block } from "@/features/learning/types";
 
-const ASSET_PREFIX = "inha_book_1";
+function assetPath(assetPrefix: string, path: string): string {
+  return `${assetPrefix}/${path}`;
+}
 
-function assetPath(path: string): string {
-  return `${ASSET_PREFIX}/${path}`;
+// "inha-1" -> "inha_book_1" — та же схема именования папок в бакете
+// textbook-assets, что использует scripts/import-textbook.ts при загрузке.
+export function textbookAssetPrefix(textbookSlug: string): string {
+  return textbookSlug.replace("-", "_book_");
 }
 
 /** Все файлы, которые понадобятся блокам страницы. */
-function collectPaths(blocks: Block[]): string[] {
+function collectPaths(assetPrefix: string, blocks: Block[]): string[] {
   const paths: string[] = [];
   for (const block of blocks) {
     if (block.type === "illustration" && block.storage_path) {
-      paths.push(assetPath(block.storage_path));
+      paths.push(assetPath(assetPrefix, block.storage_path));
     }
     if (block.type === "reference_table" && block.flags) {
       for (const flag of block.flags) {
-        if (flag) paths.push(assetPath(flag));
+        if (flag) paths.push(assetPath(assetPrefix, flag));
       }
     }
     if (block.type === "phrase_gallery") {
       for (const item of block.items) {
-        if (item.storage_path) paths.push(assetPath(item.storage_path));
+        if (item.storage_path) paths.push(assetPath(assetPrefix, item.storage_path));
       }
     }
     if (block.type === "text") {
       if (block.audio_id) {
-        paths.push(assetPath(`audio/${block.audio_id}.mp3`));
+        paths.push(assetPath(assetPrefix, `audio/${block.audio_id}.mp3`));
       }
       if (block.illustration?.storage_path) {
-        paths.push(assetPath(block.illustration.storage_path));
+        paths.push(assetPath(assetPrefix, block.illustration.storage_path));
       }
     }
   }
@@ -40,10 +44,17 @@ function collectPaths(blocks: Block[]): string[] {
 // Подписываем все файлы страницы одним запросом к Storage: раньше на
 // каждую иллюстрацию, флаг и аудио уходил отдельный запрос, и урок с
 // галереей ждал десятки round-trip'ов.
-export async function resolveBlockAssets(blocks: Block[]): Promise<Block[]> {
-  const urls = await getSignedAssetUrls(collectPaths(blocks));
+//
+// assetPrefix — префикс пути в бакете textbook-assets для конкретного
+// учебника (например "inha_book_1"), тот же, что использует
+// scripts/import-textbook.ts при загрузке.
+export async function resolveBlockAssets(
+  blocks: Block[],
+  assetPrefix: string,
+): Promise<Block[]> {
+  const urls = await getSignedAssetUrls(collectPaths(assetPrefix, blocks));
   const urlFor = (path: string | null | undefined) =>
-    path ? (urls.get(assetPath(path)) ?? null) : null;
+    path ? (urls.get(assetPath(assetPrefix, path)) ?? null) : null;
 
   return blocks.map((block) => {
     if (block.type === "illustration" && block.storage_path) {

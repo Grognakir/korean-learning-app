@@ -47,5 +47,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# сканы учебника — крупные, в репозиторий не кладём
-docs/reference/inha_book_1_book/image/
+# сканы учебника — крупные, нужны только локально для авторства контента
+content/reference/inha_book_photo/
+
+# склеенные аудиокниги целиком — больше лимита GitHub (100 МБ), не нужны
+# коду (import-textbook.ts читает только пронумерованные дорожки)
+content/reference/inha_book_audio/*/*(통합본).mp3
+

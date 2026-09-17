@@ -32,6 +32,10 @@
   font-weight: 600;
 }
 
+.tabActive {
+  color: var(--blue);
+}
+
 /* Порог --to-compact объявлен в src/styles/media.css */
 @media (--to-compact) {
   .bar {

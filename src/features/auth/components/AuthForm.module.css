@@ -81,3 +81,16 @@
   color: var(--blue);
   font-weight: 600;
 }
+
+.devLogin {
+  width: 100%;
+  margin-top: 12px;
+  border: 1px dashed var(--amber);
+  border-radius: var(--radius-control);
+  padding: 10px;
+  background: none;
+  color: var(--amber);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}

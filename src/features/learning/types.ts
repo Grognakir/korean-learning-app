@@ -1,5 +1,6 @@
 export type TocItem = {
   label: string;
+  label_ru?: string;
   block_ref: string | null;
 };
 
@@ -41,6 +42,7 @@ export type TextBlockIllustration = {
 export type TextBlock = ContentBlockBase & {
   type: "text";
   title?: string;
+  title_ru?: string;
   illustration?: TextBlockIllustration | null;
   text_kind: "dialogue" | "passage" | "example_line";
   section?: string | null;
@@ -54,6 +56,7 @@ export type TextBlock = ContentBlockBase & {
 export type VocabListBlock = ContentBlockBase & {
   type: "vocab_list";
   title: string;
+  title_ru?: string;
   related_text_ref?: string | null;
   source_note?: string;
   items: { ko: string; translation_ru: string }[];
@@ -103,12 +106,14 @@ export type PhraseGalleryItem = {
 export type PhraseGalleryBlock = ContentBlockBase & {
   type: "phrase_gallery";
   title?: string;
+  title_ru?: string;
   items: PhraseGalleryItem[];
 };
 
 export type ReferenceTableBlock = ContentBlockBase & {
   type: "reference_table";
   title: string;
+  title_ru?: string;
   columns: string[];
   translations?: string[];
   flags?: (string | null)[];
@@ -121,6 +126,7 @@ export type GrammarPointBlock = ContentBlockBase & {
   pattern: string;
   section: string;
   explanation: string | null;
+  rules?: string[];
   examples: string[];
 };
 
@@ -129,8 +135,15 @@ export type GrammarExerciseBlock = ContentBlockBase & {
   exercise_title: string;
   grammar_ref: string;
   prompt: string;
+  // Пример — уже готовая фраза без пропусков, для чтения.
   example: { given: string[]; dialogue: string[] };
-  items: { given: string[] }[];
+  // Те же строки, что и example.dialogue, но со вставками {0},{1}... на
+  // месте пропусков — явный шаблон вместо угадывания места пропуска
+  // поиском словарной формы по проспрягованному тексту.
+  template: string[];
+  // answers — реальные проспрягованные формы (по одной на каждый {n} в
+  // template), а не словарная форма given.
+  items: { given: string[]; answers: string[] }[];
 };
 
 export type Block =

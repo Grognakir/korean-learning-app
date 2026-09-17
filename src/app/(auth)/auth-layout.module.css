@@ -1,8 +1,48 @@
 .wrap {
+  position: relative;
   min-height: 100dvh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
+}
+
+.back {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.back svg {
+  width: 17px;
+  height: 17px;
+}
+
+.back:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .back:hover {
+    border-color: var(--blue);
+    color: var(--ink);
+  }
+}
+
+@media (--to-compact) {
+  .back {
+    width: 44px;
+    height: 44px;
+  }
 }
