@@ -18,7 +18,10 @@
 
 @media (--to-compact) {
   .wrap {
-    padding-bottom: 76px;
+    gap: 14px;
+    /* ~в 2,5 раза меньше базовых 28px/20px — на телефоне край экрана и
+       так съедает место, крупные поля сверху/по бокам ни к чему. */
+    padding: 11px 8px 116px;
   }
 }
 
@@ -33,6 +36,12 @@
 .title {
   font-size: var(--kr-font-xl);
   font-weight: 700;
+}
+
+@media (--to-compact) {
+  .title {
+    font-size: var(--kr-font-lg);
+  }
 }
 
 .page {
@@ -53,6 +62,12 @@
   gap: 12px;
 }
 
+@media (--to-compact) {
+  .blocks {
+    gap: 8px;
+  }
+}
+
 .emptyState {
   color: var(--ink-soft);
 }
@@ -66,7 +81,14 @@
 
 @media (--to-compact) {
   .sectionLayout {
-    grid-template-columns: 1fr;
+    /* minmax(0, 1fr), не просто 1fr: одна дорожка без minmax растёт под
+       min-content самого широкого потомка (нашлось на карусели
+       countryGrid — 16 ячеек с процентным flex-basis раздували колонку
+       far за пределы экрана вместо переноса в горизонтальный скролл). */
+    grid-template-columns: minmax(0, 1fr);
+    /* Тот же отступ, что и между самими блоками (.blocks), иначе
+       "Содержание" визуально отрывается от первого блока раздела. */
+    gap: 8px;
   }
 }
 
@@ -96,10 +118,31 @@
 }
 
 .mobileTocSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  list-style: none;
   font-size: 14px;
   font-weight: 600;
   color: var(--ink);
   cursor: pointer;
+}
+
+.mobileTocSummary::-webkit-details-marker {
+  display: none;
+}
+
+.mobileTocIcon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--stone);
+  transition: transform 0.15s ease;
+}
+
+.mobileToc[open] .mobileTocIcon {
+  transform: rotate(90deg);
 }
 
 .mobileToc[open] .mobileTocSummary {

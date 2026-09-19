@@ -88,14 +88,6 @@
   padding-right: 16px;
 }
 
-.lessonRangeStub {
-  color: var(--stone);
-  cursor: default;
-  background: var(--paper-2);
-  box-shadow: none;
-  border-style: dashed;
-}
-
 .lessonStub {
   display: flex;
   align-items: center;
@@ -117,7 +109,7 @@
 
 @media (--to-compact) {
   .wrap {
-    padding-bottom: 76px;
+    padding-bottom: 116px;
   }
 }
 

@@ -1,63 +1,12 @@
-import type { ReactNode } from "react";
 import type {
   HintBlock,
   TextBlock as TextBlockType,
   TextLine,
 } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
-import { LabelTranslation } from "./LabelTranslation";
 import { VocabChip } from "./VocabChip";
+import { highlightVocab, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
-
-type VocabItem = { ko: string; translation_ru: string };
-
-type TextMatch = {
-  start: number;
-  end: number;
-  translation: string;
-};
-
-function vocabNeedles(ko: string): string[] {
-  const needles = [ko];
-  if (ko.endsWith("다") && ko.length > 1) {
-    needles.push(ko.slice(0, -1));
-  }
-  return needles.sort((a, b) => b.length - a.length);
-}
-
-function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
-  const candidates: TextMatch[] = [];
-
-  for (const item of vocabItems) {
-    for (const needle of vocabNeedles(item.ko)) {
-      let from = 0;
-      while (from < text.length) {
-        const start = text.indexOf(needle, from);
-        if (start === -1) break;
-        candidates.push({
-          start,
-          end: start + needle.length,
-          translation: item.translation_ru,
-        });
-        from = start + 1;
-      }
-    }
-  }
-
-  candidates.sort(
-    (a, b) => b.end - b.start - (a.end - a.start) || a.start - b.start,
-  );
-
-  const selected: TextMatch[] = [];
-  for (const candidate of candidates) {
-    const overlaps = selected.some(
-      (taken) => candidate.start < taken.end && candidate.end > taken.start,
-    );
-    if (!overlaps) selected.push(candidate);
-  }
-
-  return selected.sort((a, b) => a.start - b.start);
-}
 
 function LineText({
   line,
@@ -66,36 +15,7 @@ function LineText({
   line: TextLine;
   vocabItems?: VocabItem[];
 }) {
-  if (!vocabItems?.length) {
-    return <span className={`${styles.lineText} kr`}>{line.text}</span>;
-  }
-
-  const matches = findVocabMatches(line.text, vocabItems);
-  if (matches.length === 0) {
-    return <span className={`${styles.lineText} kr`}>{line.text}</span>;
-  }
-
-  const parts: ReactNode[] = [];
-  let cursor = 0;
-  matches.forEach((match, i) => {
-    if (match.start > cursor) {
-      parts.push(line.text.slice(cursor, match.start));
-    }
-    parts.push(
-      <VocabChip
-        key={`${match.start}-${i}`}
-        text={line.text.slice(match.start, match.end)}
-        translation={match.translation}
-        className={styles.inlineVocab}
-      />,
-    );
-    cursor = match.end;
-  });
-  if (cursor < line.text.length) {
-    parts.push(line.text.slice(cursor));
-  }
-
-  return <span className={`${styles.lineText} kr`}>{parts}</span>;
+  return <span className={`${styles.lineText} kr`}>{highlightVocab(line.text, vocabItems)}</span>;
 }
 
 function HintSection({ hint }: { hint: HintBlock }) {
@@ -110,7 +30,7 @@ function HintSection({ hint }: { hint: HintBlock }) {
         <div className={styles.textHintGroup}>
           <span className={styles.labelRow}>
             <span className={`${styles.label} kr`}>표현</span>
-            <LabelTranslation translation="Выражения" />
+            <LabelInfo translation="Выражения" />
           </span>
           <div className={styles.vocabItems}>
             {phrases.map((item) => (
@@ -127,7 +47,7 @@ function HintSection({ hint }: { hint: HintBlock }) {
         <div className={styles.textHintGroup}>
           <span className={styles.labelRow}>
             <span className={`${styles.label} kr`}>문형</span>
-            <LabelTranslation translation="Конструкции" />
+            <LabelInfo translation="Конструкции" />
           </span>
           <div className={styles.vocabItems}>
             {patterns.map((item) => (

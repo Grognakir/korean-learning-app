@@ -40,7 +40,8 @@
     "Части тела",
     "Частицы",
     "Числительные",
-    "Электроника"
+    "Электроника",
+    "Жильё и переезд"
   ],
   "words": [
     {
@@ -39975,6 +39976,447 @@
         "самый формальный уровень приветствия (격식체); менее формальный вариант — 안녕하세요"
       ],
       "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-부족하다",
+      "headword": "부족하다",
+      "reading": "bujokhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "не хватать, быть недостаточным"
+      ],
+      "examples": [
+        {
+          "kr": "시간이 부족해요.",
+          "ru": "Времени не хватает."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "부족해요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-잃어버리다",
+      "headword": "잃어버리다",
+      "reading": "ireobeorida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "терять, потерять"
+      ],
+      "examples": [
+        {
+          "kr": "지갑을 잃어버렸어요.",
+          "ru": "Я потерял кошелёк."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "잃어버려요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-출입국관리사무소",
+      "headword": "출입국관리사무소",
+      "reading": "churipgukgwallisamuso",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "миграционная служба"
+      ],
+      "examples": [
+        {
+          "kr": "출입국관리사무소에 서류를 냈어요.",
+          "ru": "Я подал документы в миграционную службу."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-이사",
+      "headword": "이사",
+      "reading": "isa",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "переезд"
+      ],
+      "examples": [
+        {
+          "kr": "다음 주에 이사를 해요.",
+          "ru": "На следующей неделе я переезжаю."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-구하다",
+      "headword": "구하다",
+      "reading": "guhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "искать, находить"
+      ],
+      "examples": [
+        {
+          "kr": "집을 구하고 있어요.",
+          "ru": "Я ищу жильё."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "구해요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-전세",
+      "headword": "전세",
+      "reading": "jeonse",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "чонсе (аренда с крупным залогом, без ежемесячной платы)"
+      ],
+      "examples": [
+        {
+          "kr": "전세로 집을 구했어요.",
+          "ru": "Я нашёл жильё по системе чонсе."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "월세 (вольсе)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-월세",
+      "headword": "월세",
+      "reading": "wolse",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "вольсе (аренда с ежемесячной платой)"
+      ],
+      "examples": [
+        {
+          "kr": "월세가 너무 비싸요.",
+          "ru": "Ежемесячная аренда слишком дорогая."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "전세 (чонсе)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-보증금",
+      "headword": "보증금",
+      "reading": "bojeunggeum",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "залог, депозит"
+      ],
+      "examples": [
+        {
+          "kr": "보증금을 냈어요.",
+          "ru": "Я внёс залог."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-궁금하다",
+      "headword": "궁금하다",
+      "reading": "gunggeumhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "интересно, любопытно"
+      ],
+      "examples": [
+        {
+          "kr": "결과가 궁금해요.",
+          "ru": "Мне интересно узнать результат."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "궁금해요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-독특하다",
+      "headword": "독특하다",
+      "reading": "dokteukhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "своеобразный, уникальный"
+      ],
+      "examples": [
+        {
+          "kr": "이 음식은 맛이 독특해요.",
+          "ru": "У этой еды своеобразный вкус."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "독특해요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-놀라다",
+      "headword": "놀라다",
+      "reading": "nollada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "удивляться"
+      ],
+      "examples": [
+        {
+          "kr": "소식을 듣고 놀랐어요.",
+          "ru": "Услышав новость, я удивился."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "놀라요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-대부분",
+      "headword": "대부분",
+      "reading": "daebubun",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "большинство, в основном"
+      ],
+      "examples": [
+        {
+          "kr": "학생들은 대부분 기숙사에 살아요.",
+          "ru": "Большинство студентов живут в общежитии."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-하숙집",
+      "headword": "하숙집",
+      "reading": "hasukjip",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "пансион (комната с питанием от хозяина)"
+      ],
+      "examples": [
+        {
+          "kr": "저는 하숙집에서 살아요.",
+          "ru": "Я живу в пансионе."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-자취방",
+      "headword": "자취방",
+      "reading": "jachwibang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "съёмная комната для самостоятельного проживания"
+      ],
+      "examples": [
+        {
+          "kr": "자취방에서 혼자 요리해요.",
+          "ru": "В съёмной комнате я готовлю сам."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-집주인",
+      "headword": "집주인",
+      "reading": "jipjuin",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "хозяин дома, арендодатель"
+      ],
+      "examples": [
+        {
+          "kr": "집주인에게 월세를 냈어요.",
+          "ru": "Я заплатил арендодателю ежемесячную плату."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-스스로",
+      "headword": "스스로",
+      "reading": "seuseuro",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "самостоятельно, сам"
+      ],
+      "examples": [
+        {
+          "kr": "스스로 결정했어요.",
+          "ru": "Я решил сам."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-취직",
+      "headword": "취직",
+      "reading": "chwijik",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Профессии"
+      ],
+      "translations": [
+        "трудоустройство"
+      ],
+      "examples": [
+        {
+          "kr": "취직을 준비하고 있어요.",
+          "ru": "Я готовлюсь к трудоустройству."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-추천하다",
+      "headword": "추천하다",
+      "reading": "chucheonhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "рекомендовать"
+      ],
+      "examples": [
+        {
+          "kr": "좋은 식당을 추천해 주세요.",
+          "ru": "Порекомендуйте, пожалуйста, хороший ресторан."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "추천해요"
+        }
+      ],
       "related": []
     }
   ]

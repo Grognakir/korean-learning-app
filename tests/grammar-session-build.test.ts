@@ -135,7 +135,7 @@ it("не подставляет синонимы в блиц сессии из �
 });
 
 it("добирает раунды соответствий, когда грамматик меньше пяти", () => {
-  const small = pool.filter((g) => g.category.startsWith("6."));
+  const small = pool.filter((g) => g.category.startsWith("6.")).slice(0, 3);
   for (let run = 0; run < RUNS; run++) {
     const session = buildGrammarSession(small, 5);
     expect(session.study).toHaveLength(small.length);

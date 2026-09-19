@@ -5,9 +5,19 @@
   padding: 16px 18px;
   display: flex;
   flex-direction: column;
+  /* min-width:0 — как флекс-item .blocks (колонка) блок иначе растёт под
+     min-content самого широкого потомка (например, карусели countryGrid
+     с процентным flex-basis у 16 ячеек) вместо ширины страницы. */
+  min-width: 0;
   gap: 10px;
   scroll-margin-top: 24px;
   overflow: visible;
+}
+
+@media (--to-compact) {
+  .block {
+    padding: 15px;
+  }
 }
 
 .label {
@@ -30,15 +40,6 @@
   display: inline-flex;
   align-items: center;
   gap: 1px;
-}
-
-.labelTranslation {
-  font-size: var(--kr-font-xs);
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: normal;
-  color: var(--stone);
-  margin-left: 4px;
 }
 
 .labelInfo {
@@ -83,7 +84,7 @@
   transform: translateX(-50%);
   z-index: 3;
   width: max-content;
-  max-width: min(220px, 70vw);
+  max-width: min(280px, 85vw);
   padding: 6px 8px;
   background: #fff;
   border: 1px solid var(--line);
@@ -111,9 +112,12 @@
 /* lesson_toc */
 .tocRow {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 12px 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  /* Только нижний паддинг: верхний задваивал бы отступ вместе с нижним
+     паддингом предыдущей строки. */
+  padding: 0 0 12px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -122,15 +126,21 @@
   padding-bottom: 0;
 }
 
-.tocRow:first-child {
-  padding-top: 0;
+@media (--to-compact) {
+  /* На мобильном строка часто высокая (чипы переносятся на несколько
+     строк) — центр по всей высоте уводил бы "Открыть →" в середину чипов;
+     прижимаем её к тому же уровню, что и заголовок раздела. */
+  .tocRow {
+    align-items: flex-start;
+  }
 }
 
 .tocRowMain {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
 }
 
 .tocRowText {
@@ -191,7 +201,7 @@
   color: var(--ink-soft);
   background: var(--paper-2);
   border-radius: 100px;
-  padding: 4px 10px;
+  padding: 3px 7px;
 }
 
 .chipLink {
@@ -422,6 +432,32 @@
   gap: 6px;
 }
 
+@media (max-width: 420px) {
+  .countryGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    /* min-width:0 — без него flex-item с процентным basis у детей
+       растягивает сам контейнер по своему контенту вместо ширины
+       родителя, и overflow-x:auto никогда не включается. */
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .countryGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .countryCell {
+    flex: 0 0 50%;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+}
+
 .countryFlag {
   width: 100%;
   aspect-ratio: 3 / 2;
@@ -440,16 +476,31 @@
 .grammarDetails {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   gap: 8px;
 }
 
 .grammarSummary {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
   cursor: pointer;
   list-style: none;
+}
+
+/* Компактный вариант — для мелкого текста (например, "Показать все
+   страны"), где базовая настройка .grammarToggleIcon (подогнанная под
+   крупный .pattern) выглядит слишком большой и съезжает выше текста. */
+.grammarSummaryCompact {
+  align-items: center;
+}
+
+.grammarSummaryCompact .grammarToggleIcon {
+  width: 13px;
+  height: 13px;
+  margin-top: 0;
 }
 
 .grammarSummary::-webkit-details-marker {
@@ -459,8 +510,9 @@
 .grammarToggleIcon {
   width: var(--kr-font-lg);
   height: var(--kr-font-lg);
+  margin-top: 2px;
   flex-shrink: 0;
-  color: var(--blue);
+  color: var(--ink);
   transition: transform 0.15s ease;
 }
 
@@ -468,22 +520,26 @@
   transform: rotate(90deg);
 }
 
+.grammarNote {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--paper);
+  border-radius: var(--radius-control);
+  padding: 10px 12px;
+}
+
 .explanation {
   font-size: 14px;
   line-height: 1.5;
   color: var(--ink-soft);
-  background: var(--paper);
-  border-radius: var(--radius-control);
-  padding: 10px 12px;
 }
 
 .rules {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: 10px 12px 10px 28px;
-  background: var(--paper);
-  border-radius: var(--radius-control);
+  padding-left: 18px;
   font-size: 14px;
   line-height: 1.45;
   color: var(--ink);
@@ -509,16 +565,23 @@
   border-top: 1px solid var(--line);
 }
 
+.dialogueSpeakerA,
+.dialogueSpeakerB {
+  font-weight: 700;
+}
+
+.dialogueSpeakerA {
+  color: var(--blue);
+}
+
+.dialogueSpeakerB {
+  color: var(--amber);
+}
+
 /* grammar_exercise */
 .prompt {
   font-size: var(--kr-font-sm);
   color: var(--ink-soft);
-}
-
-.exerciseHint {
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin-top: -4px;
 }
 
 .exerciseDialogue {
@@ -535,34 +598,80 @@
   margin-bottom: 2px;
 }
 
-.exerciseActions {
+.exerciseCues {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-}
-
-.exerciseCheck {
+  flex-direction: column;
+  gap: 1px;
+  margin-bottom: 5px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
   font-size: var(--kr-font-sm);
   font-weight: 600;
-  border: none;
-  border-radius: var(--radius-control);
-  padding: 7px 16px;
+  line-height: 1.4;
+}
+
+.exerciseEmphasis,
+.exerciseFixed {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.exerciseAttempt {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.exerciseDialogueActions {
+  display: flex;
+  margin-top: 6px;
+}
+
+.exerciseCheckButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border: 1px solid var(--blue);
+  border-radius: 7px;
   background: var(--blue);
   color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
   cursor: pointer;
 }
 
-.exerciseShowExample {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.exerciseCheckButton svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.exerciseCheckButton:hover {
+  border-color: color-mix(in srgb, var(--blue) 82%, #000);
+  background: color-mix(in srgb, var(--blue) 82%, #000);
+}
+
+@media (--to-compact) {
+  .examples {
+    margin: 0 -15px -15px;
+    border-radius: 0 0 calc(var(--radius-panel) - 1px) calc(var(--radius-panel) - 1px);
+    padding: 10px 15px;
+  }
+
+  /* Боковой паддинг уже — на телефоне это ещё и третий вложенный отступ
+     подряд (страница → карточка → этот блок), в сумме съедает ширину.
+     margin компенсирует новый паддинг .block (15px). */
+  .exerciseDialogue {
+    margin: 0 -15px;
+    border-radius: 0;
+    padding: 10px 15px;
+  }
 }
 
 .exerciseResultCorrect,
@@ -588,15 +697,17 @@
 
 .exerciseItem {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
   font-size: var(--kr-font-sm);
   border: 1px solid var(--line);
   border-radius: 100px;
-  padding: 5px 12px;
+  padding: 3px 7px;
   background: #fff;
   color: var(--ink);
   cursor: pointer;
+  max-width: 100%;
+  line-height: 1.35;
 }
 
 .exerciseItemNumber {
@@ -610,6 +721,7 @@
   color: var(--ink-soft);
   font-size: 11px;
   font-weight: 700;
+  line-height: 1;
 }
 
 .exerciseItemActive {
@@ -657,7 +769,7 @@
     border-radius: var(--radius-control);
     justify-content: flex-start;
     text-align: left;
-    padding: 10px 12px;
+    padding: 7px 9px;
   }
 }
 
@@ -667,8 +779,9 @@
   background: #fff;
   color: var(--ink);
   font-size: var(--kr-font-md);
+  line-height: 1.25;
   text-align: center;
-  padding: 2px 4px;
+  padding: 1px 6px;
   margin: 0 2px;
   /* Ширина считается по длине правильного ответа в em — для длинных
      ответов на узких экранах это может превысить доступную ширину
@@ -791,7 +904,233 @@
 }
 
 @media (max-width: 420px) {
+  /* Карусель вместо стопки карточек: на телефоне колонка из 8+ карточек
+     растягивала блок на пару экранов — свайп по одной удобнее. */
   .phraseGalleryGrid {
-    grid-template-columns: minmax(0, 1fr);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+
+  .phraseGalleryGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .phraseGalleryCard {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+}
+
+.carouselWrap {
+  position: relative;
+}
+
+.carouselArrowPrev,
+.carouselArrowNext {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .carouselArrowPrev,
+  .carouselArrowNext {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--card-shadow);
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .carouselArrowPrev svg,
+  .carouselArrowNext svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .carouselArrowPrev:disabled,
+  .carouselArrowNext:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  .carouselArrowPrev {
+    left: 6px;
+  }
+
+  .carouselArrowNext {
+    right: 6px;
+  }
+}
+
+.carouselDots {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 420px) {
+  .carouselDots {
+    display: flex;
+  }
+}
+
+.carouselDot,
+.carouselDotActive {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: none;
+  border-radius: 100px;
+  background: var(--line);
+  cursor: pointer;
+}
+
+.carouselDotActive {
+  width: 16px;
+  background: var(--blue);
+}
+
+/* comprehension_exercise */
+.comprehensionWarmup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comprehensionQuestion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.comprehensionTableWrap {
+  overflow-x: auto;
+}
+
+.comprehensionTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--kr-font-sm);
+}
+
+.comprehensionTable th,
+.comprehensionTable td {
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.comprehensionTable thead th {
+  background: var(--paper-2);
+  color: var(--ink-soft);
+}
+
+.comprehensionTable td {
+  min-width: 100px;
+  padding: 4px 6px;
+}
+
+.comprehensionTableInput {
+  width: 100%;
+  min-width: 90px;
+  border: none;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: center;
+  padding: 4px 2px;
+}
+
+.comprehensionTableInput:focus {
+  outline: none;
+  background: color-mix(in srgb, var(--blue) 8%, #fff);
+  border-radius: 4px;
+}
+
+/* writing_exercise */
+.writingOutlineCell {
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.writingOutlineQuestions {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 6px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* 원고지 — сетка выше textarea: клик по клетке фокусирует textarea (реальный
+   ввод, чтобы композиция хангыля через IME работала как в обычном поле, не
+   посимвольно по клеткам), textarea прозрачен и растянут поверх всей сетки. */
+.manuscriptWrap {
+  position: relative;
+  cursor: text;
+  overflow-x: auto;
+}
+
+.manuscriptInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: text;
+}
+
+.manuscriptGrid {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  min-width: 100%;
+}
+
+.manuscriptRow {
+  display: flex;
+}
+
+.manuscriptRow span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.manuscriptRow span:first-child {
+  border-left: 1px solid var(--line);
+}
+
+.manuscriptGrid .manuscriptRow:first-child span {
+  border-top: 1px solid var(--line);
 }

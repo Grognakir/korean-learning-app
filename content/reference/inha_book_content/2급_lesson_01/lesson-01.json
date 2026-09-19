@@ -61,7 +61,7 @@
               "items": [
                 {
                   "label": "처음 만난 사람들에게 자기소개하기",
-                  "block_ref": null,
+                  "block_ref": "text-speaking-summary",
                   "label_ru": "Представиться незнакомым людям"
                 }
               ]
@@ -71,7 +71,7 @@
               "items": [
                 {
                   "label": "개인 정보를 듣고 말하기",
-                  "block_ref": null,
+                  "block_ref": "listening-personal-info",
                   "label_ru": "Слушать и говорить: личная информация"
                 }
               ]
@@ -81,7 +81,7 @@
               "items": [
                 {
                   "label": "자기소개를 하는 글을 읽고 말하기",
-                  "block_ref": null,
+                  "block_ref": "text-reading-jargal-intro",
                   "label_ru": "Читать и говорить: рассказ о себе"
                 }
               ]
@@ -91,7 +91,7 @@
               "items": [
                 {
                   "label": "자기소개를 하는 글 쓰기",
-                  "block_ref": null,
+                  "block_ref": "writing-self-intro",
                   "label_ru": "Написать рассказ о себе"
                 }
               ]
@@ -101,8 +101,13 @@
               "items": [
                 {
                   "label": "한국의 인사법",
-                  "block_ref": null,
+                  "block_ref": "text-culture-greeting",
                   "label_ru": "Приветствия в Корее"
+                },
+                {
+                  "label": "구개음화①",
+                  "block_ref": "pronunciation-1",
+                  "label_ru": "Палатализация ①"
                 }
               ]
             }
@@ -297,6 +302,14 @@
             "dialogue": [
               "가: 처음 뵙겠습니다. 저는 로빈이라고 합니다. 영국에서 왔어요.",
               "나: 안녕하세요? 저는 프랑스에서 온 아멜리라고 합니다."
+            ],
+            "emphasis": [
+              [
+                "로빈이라고 합니다"
+              ],
+              [
+                "아멜리라고 합니다"
+              ]
             ]
           },
           "items": [
@@ -364,6 +377,11 @@
             ],
             "dialogue": [
               "가: 목소리가 너무 작으니까 크게 이야기하세요."
+            ],
+            "emphasis": [
+              [
+                "크게"
+              ]
             ]
           },
           "items": [
@@ -423,6 +441,14 @@
             "dialogue": [
               "가: 머리를 어떻게 자를 거예요?",
               "나: 요즘 날씨가 더우니까 짧게 자르려고 해요."
+            ],
+            "emphasis": [
+              [
+                "어떻게"
+              ],
+              [
+                "짧게"
+              ]
             ]
           },
           "items": [
@@ -493,6 +519,14 @@
             "dialogue": [
               "가: 저는 한국에 온 지 3개월이 됐어요. 흐엉 씨는요?",
               "나: 전 한국에 온 지 6개월이 지났어요."
+            ],
+            "emphasis": [
+              [
+                "온 지"
+              ],
+              [
+                "온 지"
+              ]
             ]
           },
           "items": [
@@ -755,6 +789,14 @@
             "dialogue": [
               "가: 왜 도서관에 가요?",
               "나: 책을 빌리려고 도서관에 가요."
+            ],
+            "emphasis": [
+              [
+                "왜"
+              ],
+              [
+                "빌리려고"
+              ]
             ]
           },
           "items": [
@@ -819,6 +861,14 @@
             "dialogue": [
               "가: 지금 뭐 하고 있어요?",
               "나: 영화를 보려고 극장에 가고 있어요."
+            ],
+            "emphasis": [
+              [
+                "뭐 하고 있어요"
+              ],
+              [
+                "보려고"
+              ]
             ]
           },
           "items": [
@@ -889,6 +939,14 @@
             "dialogue": [
               "가: 무엇에 대해서 발표할 거예요?",
               "나: 한국 문화에 대해서 발표할 거예요."
+            ],
+            "emphasis": [
+              [
+                "무엇에 대해서"
+              ],
+              [
+                "에 대해서"
+              ]
             ]
           },
           "items": [
@@ -944,6 +1002,11 @@
             ],
             "dialogue": [
               "가: 오늘 세계 역사에 대해서 발표하겠습니다."
+            ],
+            "emphasis": [
+              [
+                "에 대해서"
+              ]
             ]
           },
           "items": [
@@ -1007,6 +1070,14 @@
             "dialogue": [
               "가: 대학교에서 무엇을 전공하고 싶습니까?",
               "나: 한국어교육에 대한 공부를 하고 싶습니다. 그래서 한국어교육학을 전공하려고 준비하고 있습니다."
+            ],
+            "emphasis": [
+              [
+                "무엇을 전공하고 싶습니까"
+              ],
+              [
+                "에 대한"
+              ]
             ]
           },
           "items": [
@@ -1054,6 +1125,336 @@
           "template": [
             "가: 대학교에서 무엇을 전공하고 싶습니까?",
             "나: {0}에 대한 공부를 하고 싶습니다. 그래서 {1}을 전공하려고 준비하고 있습니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 19,
+      "page_role": "content",
+      "source_photo": "photo_28",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "왕루와 자르갈은 모두 언어교육원의 학생들입니다. 왕루는 6개월 전에 중국에서 왔고 자르갈은 1년 전에 몽골에서 왔습니다. 왕루는 국제무역에 관심이 많습니다. 그래서 대학교에 가면 무역학을 전공하려고 준비하고 있습니다. 자르갈은 문학에 관심이 많습니다. 그래서 대학교에 가면 문학을 전공하려고 합니다."
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-intro-dialogue",
+          "toc_section": "말하기",
+          "type": "text",
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "자르갈"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "안녕하십니까? 저는 왕루라고 합니다. 중국에서 왔습니다."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "안녕하십니까? 전 몽골에서 온 자르갈이라고 합니다."
+            },
+            {
+              "speaker": "왕루",
+              "text": "자르갈 씨는 한국에 온 지 얼마나 됐어요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "저는 한국에 온 지 1년이 됐어요. 왕루 씨는 얼마나 됐어요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 한국에 온 지 6개월이 됐어요. 그런데 자르갈 씨는 지금 대학생이에요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "아니요, 언어교육원 학생이에요. 저는 문학에 대해 배우고 싶어요. 그래서 대학교에 가면 문학을 전공하려고 해요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 국제무역에 대한 공부를 하고 싶어요. 그래서 대학교에 가면 무역학을 전공하려고 준비하고 있어요. 자르갈 씨, 만나서 반가워요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "네, 저도 만나서 반가워요."
+            }
+          ],
+          "title": "보기"
+        },
+        {
+          "id": "text-speaking-practice-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 한국에 언제 왔습니까?"
+            },
+            {
+              "text": "2) 무엇에 관심이 많습니까?"
+            },
+            {
+              "text": "3) 학교를 졸업하면 무엇이 되려고 합니까?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 20,
+      "page_role": "content",
+      "source_photo": "photo_29",
+      "blocks": [
+        {
+          "id": "listening-personal-info",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "개인 정보를 듣고 말하기",
+          "audio_id": "203",
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오. (교실에서 자기소개를 하는 학생들)",
+            "illustration": {
+              "storage_path": null,
+              "original_kind": "photo"
+            }
+          },
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "1) 무슨 이야기를 합니까?"
+            },
+            {
+              "kind": "table",
+              "prompt": "2) 국적과 직업이 무엇인지 쓰십시오.",
+              "table": {
+                "columns": [
+                  "국적",
+                  "전공",
+                  "꿈"
+                ],
+                "rows": [
+                  "나타샤",
+                  "미셀",
+                  "바스카",
+                  "장춘"
+                ]
+              }
+            },
+            {
+              "kind": "choice",
+              "prompt": "3) 들은 내용과 같은 것을 고르십시오.",
+              "choices": [
+                "나타샤는 한국에서 기자가 되었습니다.",
+                "미셀은 1년 전에 한국에 와서 회사에 다니고 있습니다.",
+                "바스카는 한국어 교사가 되고 싶어 합니다.",
+                "장춘은 내년에 대학교에서 무역학을 전공하려고 합니다."
+              ],
+              "correct": null
+            }
+          ],
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "followup": "반 친구들에게 여러분에 대해 소개해 보십시오."
+        }
+      ]
+    },
+    {
+      "page_number": 21,
+      "page_role": "content",
+      "source_photo": "photo_30",
+      "blocks": [
+        {
+          "id": "text-reading-jargal-intro",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "illustration": {
+            "storage_path": null,
+            "original_kind": "photo"
+          },
+          "text_kind": "passage",
+          "section": "읽고 말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "저는 몽골에서 온 자르갈이라고 합니다. 한국에 온 지 3개월이 되었습니다. 저는 책을 좋아해서 자주 읽습니다. 그런데 우연히 한국의 소설책을 읽고 한국에 관심이 생겼습니다. ( ㉠ ) 한국 문학에 대해 알아보고 싶어서 한국에 왔습니다."
+            },
+            {
+              "text": "저는 지금 인하대학교 언어교육원에서 한국어를 공부하고 있습니다. 한국어를 공부한 후에 대학교에 입학해서 한국 문학을 전공하려고 합니다. 한국 문화도 알고 싶어서 여행도 자주 다니고 있습니다."
+            },
+            {
+              "text": "한국에서 대학교를 졸업하면 고향에 돌아가서 한국어를 가르치는 선생님이 되고 싶습니다. 한국어를 배우고 싶어 하는 학생들에게 한국어를 가르칠 겁니다. 그리고 번역가가 돼서 고향 사람들에게 한국의 문학을 소개하고 싶습니다."
+            }
+          ]
+        },
+        {
+          "id": "reading-jargal-intro-questions",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "자기소개를 하는 글을 읽고 말하기",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "1) ㉠에 들어갈 알맞은 것을 고르십시오.",
+              "choices": [
+                "그러나",
+                "그리고",
+                "그런데",
+                "그래서"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "2) 이 글의 내용과 같은 것은 무엇입니까?",
+              "choices": [
+                "자르갈은 3년 전에 몽골에서 왔습니다.",
+                "자르갈은 여러 나라의 책을 많이 읽었습니다.",
+                "자르갈은 한국의 문학에 대한 공부를 하고 싶어 합니다.",
+                "자르갈은 대학교에 가면 한국의 문화에 대한 책을 쓸 겁니다."
+              ],
+              "correct": 2
+            }
+          ],
+          "group_prompt": null,
+          "followup": "친구들에게 자기소개를 해 보십시오."
+        }
+      ]
+    },
+    {
+      "page_number": 22,
+      "page_role": "content",
+      "source_photo": "photo_32",
+      "blocks": [
+        {
+          "id": "writing-self-intro",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "자기소개를 하는 글 쓰기",
+          "prompt": "1. 자기소개를 하는 글을 써 보십시오. 1) 개요를 써 보십시오. 2) 위 개요를 바탕으로 글을 써 보십시오.",
+          "outline": [
+            {
+              "stage": "처음",
+              "questions": [
+                "어디에서 왔습니까?",
+                "한국에 온 지 얼마나 됐습니까?"
+              ]
+            },
+            {
+              "stage": "가운데",
+              "questions": [
+                "무엇에 관심이 있습니까?",
+                "한국에서 무엇을 할 겁니까?"
+              ]
+            },
+            {
+              "stage": "끝",
+              "questions": [
+                "꿈이 무엇입니까?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 23,
+      "page_role": "content",
+      "source_photo": "photo_33",
+      "blocks": [
+        {
+          "id": "text-culture-greeting",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "한국의 인사법",
+          "title_ru": "Приветствия в Корее",
+          "illustration": {
+            "storage_path": null,
+            "original_kind": "photo"
+          },
+          "text_kind": "passage",
+          "section": "문화 이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "여러분은 처음 만나는 사람들과 어떻게 인사를 합니까?"
+            },
+            {
+              "text": "한국에서는 머리를 숙이고 인사를 합니다. 그리고 악수도 합니다. 악수는 손으로 하는 인사입니다. 손을 잡으면 상대방에게 마음을 전할 수 있습니다."
+            },
+            {
+              "text": "하지만 한국에서의 악수는 다른 나라와 조금 다릅니다. 악수에도 예절이 있습니다. 친구와 악수를 하면 머리를 숙이지 않지만 어른과 인사를 하면 머리를 숙여야 합니다. 그리고 어른과 인사를 하면 두 손으로 악수를 하거나 한 손을 배 앞에 놓고 악수를 해야 합니다. 이것은 어른을 존경하는 의미입니다."
+            },
+            {
+              "text": "1) 한국에서의 악수 법은 다른 나라와 왜 다를까요?"
+            },
+            {
+              "text": "2) 여러분 나라에서는 어떻게 인사를 합니까? 친구들과 이야기해 보십시오."
+            }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi-1",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-greeting",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "악수",
+              "translation_ru": "рукопожатие"
+            },
+            {
+              "ko": "잡다",
+              "translation_ru": "брать, держать"
+            },
+            {
+              "ko": "상대방",
+              "translation_ru": "собеседник"
+            },
+            {
+              "ko": "배",
+              "translation_ru": "живот"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-1",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "받침 'ㄷ'+'ㅣ' (구개음화①)",
+          "audio_id": "204",
+          "examples": [
+            "굳이",
+            "맏이",
+            "미닫이",
+            "해돋이",
+            "가을걷이"
           ]
         }
       ]

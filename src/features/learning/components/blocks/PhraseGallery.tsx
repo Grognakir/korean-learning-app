@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import type { PhraseGalleryBlock } from "@/features/learning/types";
-import { LabelTranslation } from "./LabelTranslation";
+import { CarouselArrows, CarouselDots } from "./CarouselDots";
+import { LabelInfo } from "./LabelInfo";
+import { useCarouselIndex } from "./useCarouselIndex";
 import { VocabChip } from "./VocabChip";
 import styles from "./blocks.module.css";
 
@@ -87,43 +89,49 @@ export function PhraseGallery({
   block: PhraseGalleryBlock;
   id?: string;
 }) {
+  const { ref, active, scrollTo } = useCarouselIndex<HTMLDivElement>(block.items.length);
+
   return (
     <div id={id} className={styles.block}>
       {block.title && (
         <span className={styles.labelRow}>
           <span className={`${styles.label} kr`}>{block.title}</span>
-          {block.title_ru && <LabelTranslation translation={block.title_ru} />}
+          {block.title_ru && <LabelInfo translation={block.title_ru} />}
         </span>
       )}
-      <div className={styles.phraseGalleryGrid}>
-        {block.items.map((item, i) => (
-          <div key={i} className={styles.phraseGalleryCard}>
-            {item.imageUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={item.imageUrl}
-                alt={item.caption}
-                className={styles.phraseGalleryImage}
-              />
-            ) : (
-              <div className={styles.illustrationPlaceholder}>
-                Иллюстрация появится позже
-              </div>
-            )}
-            <div className={styles.phraseGalleryPhrases}>
-              {item.phrases.length === 2 ? (
-                <PhrasePair
-                  phrases={item.phrases as [Phrase, Phrase]}
+      <div className={styles.carouselWrap}>
+        <div ref={ref} className={styles.phraseGalleryGrid}>
+          {block.items.map((item, i) => (
+            <div key={i} className={styles.phraseGalleryCard}>
+              {item.imageUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={item.imageUrl}
+                  alt={item.caption}
+                  className={styles.phraseGalleryImage}
                 />
               ) : (
-                item.phrases.map((phrase, j) => (
-                  <PhraseVocabItem key={j} phrase={phrase} />
-                ))
+                <div className={styles.illustrationPlaceholder}>
+                  Иллюстрация появится позже
+                </div>
               )}
+              <div className={styles.phraseGalleryPhrases}>
+                {item.phrases.length === 2 ? (
+                  <PhrasePair
+                    phrases={item.phrases as [Phrase, Phrase]}
+                  />
+                ) : (
+                  item.phrases.map((phrase, j) => (
+                    <PhraseVocabItem key={j} phrase={phrase} />
+                  ))
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <CarouselArrows count={block.items.length} active={active} onSelect={scrollTo} />
       </div>
+      <CarouselDots count={block.items.length} active={active} onSelect={scrollTo} />
     </div>
   );
 }

@@ -39,7 +39,19 @@ export function SectionNav({ nav }: { nav: LessonNav }) {
       </aside>
       <details className={styles.mobileToc}>
         <summary className={styles.mobileTocSummary}>
-          Содержание{current ? <span className="kr"> · {current.key}</span> : null}
+          <span>
+            Содержание{current ? <span className="kr"> · {current.key}</span> : null}
+          </span>
+          <svg className={styles.mobileTocIcon} viewBox="0 0 16 16" aria-hidden="true">
+            <path
+              d="M6 3l5 5-5 5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </summary>
         <NavList nav={nav} />
       </details>

@@ -10,6 +10,7 @@ export type LessonNavSection = {
 export type LessonNav = {
   sections: LessonNavSection[];
   currentIndex: number;
+  prev: LessonNavSection | null;
   next: LessonNavSection | null;
 };
 
@@ -37,10 +38,15 @@ export function buildLessonNav(
   }));
 
   const currentIndex = sections.findIndex((section) => section.key === currentSectionKey);
+  const prev =
+    sections
+      .slice(0, currentIndex)
+      .reverse()
+      .find((section) => section.available) ?? null;
   const next =
     sections
       .slice(currentIndex + 1)
       .find((section) => section.available) ?? null;
 
-  return { sections, currentIndex, next };
+  return { sections, currentIndex, prev, next };
 }

@@ -5,8 +5,7 @@ import styles from "./learning.module.css";
 export type LessonListItem =
   | { lessonNumber: number; href: string; title: string }
   | { lessonNumber: number; href: string }
-  | { lessonNumber: number }
-  | { rangeFrom: number; rangeTo: number; isLast: boolean };
+  | { lessonNumber: number };
 
 function lessonColumnSpan(label: string, cols = 8): number {
   let units = 0;
@@ -46,17 +45,6 @@ export function LessonList({ items }: { items: LessonListItem[] }) {
               <Link href={item.href} className={styles.lessonLink}>
                 Урок {item.lessonNumber}
               </Link>
-            </li>
-          );
-        }
-        if ("rangeFrom" in item) {
-          return (
-            <li key={`range-${item.rangeFrom}`} className={styles.lessonItemWide} style={{ "--span": "8" } as CSSProperties}>
-              <span className={`${styles.lessonLink} ${styles.lessonRangeStub}`} title="Скоро">
-                {item.isLast
-                  ? "Остальные уроки — скоро"
-                  : `Уроки ${item.rangeFrom}–${item.rangeTo} — скоро`}
-              </span>
             </li>
           );
         }

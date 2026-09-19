@@ -1,20 +1,21 @@
 import { formatBold } from "@/lib/formatBold";
 import type { GrammarPointBlock } from "@/features/learning/types";
-import { LabelTranslation } from "./LabelTranslation";
+import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
 export function GrammarPoint({
   block,
   id,
+  vocabItems,
 }: {
   block: GrammarPointBlock;
   id?: string;
+  vocabItems?: VocabItem[];
 }) {
   return (
     <div id={id} className={styles.block}>
       <span className={styles.labelRow}>
         <span className={`${styles.label} kr`}>문법{block.section}</span>
-        <LabelTranslation translation="Грамматика" />
       </span>
       {block.explanation ? (
         <details className={styles.grammarDetails}>
@@ -35,14 +36,16 @@ export function GrammarPoint({
               />
             </svg>
           </summary>
-          <p className={styles.explanation}>{formatBold(block.explanation)}</p>
-          {block.rules && block.rules.length > 0 && (
-            <ul className={styles.rules}>
-              {block.rules.map((rule, i) => (
-                <li key={i}>{formatBold(rule)}</li>
-              ))}
-            </ul>
-          )}
+          <div className={styles.grammarNote}>
+            <p className={styles.explanation}>{formatBold(block.explanation)}</p>
+            {block.rules && block.rules.length > 0 && (
+              <ul className={styles.rules}>
+                {block.rules.map((rule, i) => (
+                  <li key={i}>{formatBold(rule)}</li>
+                ))}
+              </ul>
+            )}
+          </div>
         </details>
       ) : (
         <span className={`${styles.pattern} kr`}>{block.pattern}</span>
@@ -50,7 +53,7 @@ export function GrammarPoint({
       <div className={styles.examples}>
         {block.examples.map((example, i) => (
           <p key={i} className={`${styles.example} kr`}>
-            {example}
+            {highlightDialogueSpeakers(example, vocabItems, `grammar-${i}-`)}
           </p>
         ))}
       </div>

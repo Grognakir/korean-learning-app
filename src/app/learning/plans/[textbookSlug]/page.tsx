@@ -51,10 +51,6 @@ export default async function TextbookPlanPage({
     (lessons ?? []).map((lesson) => [lesson.lesson_number, lesson.title]),
   );
 
-  // Недоступные уроки почти всегда идут одним хвостом (пока готов урок 1
-  // из 16) — россыпь из 15 одинаковых плашек перегружает список сильнее,
-  // чем несколько реальных уроков. Схлопываем подряд идущие недоступные
-  // уроки в одну строку-заглушку вместо плашки на каждый номер.
   const lessonItems: LessonListItem[] = [];
   for (let lessonNumber = 1; lessonNumber <= TOTAL_LESSONS; lessonNumber++) {
     const title = lessonTitles.get(lessonNumber);
@@ -70,11 +66,11 @@ export default async function TextbookPlanPage({
       lessonItems.push({ lessonNumber, href: `/learning/plans/${textbookSlug}/${lessonNumber}` });
       continue;
     }
-    const rangeFrom = lessonNumber;
+    // Недоступные уроки просто не показываем — плашка-заглушка на весь
+    // ряд ("Остальные уроки — скоро") только отвлекала от реальных уроков.
     while (lessonNumber + 1 <= TOTAL_LESSONS && !availableLessons.has(lessonNumber + 1)) {
       lessonNumber++;
     }
-    lessonItems.push({ rangeFrom, rangeTo: lessonNumber, isLast: lessonNumber === TOTAL_LESSONS });
   }
 
   return (

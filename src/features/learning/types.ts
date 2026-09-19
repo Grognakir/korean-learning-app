@@ -121,6 +121,63 @@ export type ReferenceTableBlock = ContentBlockBase & {
   note?: string;
 };
 
+/**
+ * Один вопрос упражнения на понимание (после аудио в 듣고 말하기 или после
+ * текста в 읽고 말하기). "choice" — вопрос с вариантами: correct задан,
+ * только если в оригинале виден отмеченный правильный ответ (обычно у
+ * 읽고 말하기 — печатный текст перед глазами, отметка ручкой студента и
+ * так была видна); для 듣고 말하기 правильный ответ обычно не виден без
+ * текста аудио (он в 듣기 지문 в конце книги, не сфотографирован) —
+ * тогда correct: null, вопрос показывается как есть, без проверки.
+ */
+export type ComprehensionQuestion = {
+  prompt: string;
+  kind: "open" | "table" | "choice";
+  table?: { columns: string[]; rows: string[] };
+  choices?: string[];
+  correct?: number | null;
+};
+
+export type ComprehensionExerciseBlock = ContentBlockBase & {
+  type: "comprehension_exercise";
+  exercise_kind: "listening" | "reading";
+  title: string;
+  audio_id?: string | null;
+  audioUrl?: string | null;
+  /** "1." — иллюстрация-затравка с вопросом перед самим упражнением. */
+  warmup?: {
+    prompt: string;
+    illustration?: TextBlockIllustration | null;
+  } | null;
+  /** "2." — вступление к вопросам («다음을 듣고/읽고 물음에 답하십시오»), показывается перед questions[]. */
+  group_prompt?: string | null;
+  questions: ComprehensionQuestion[];
+  /** "3." — итоговое задание на собственную речь (без проверки). */
+  followup?: string | null;
+};
+
+/**
+ * Раздел 쓰기 — план (개요: этапы текста + наводящие вопросы к каждому) и
+ * общая инструкция; само поле для письма в приложении не нужно (это не
+ * конспект-редактор), план — справочная структура для собственной работы
+ * студента в тетради/учебнике.
+ */
+export type WritingExerciseBlock = ContentBlockBase & {
+  type: "writing_exercise";
+  title: string;
+  prompt: string;
+  outline: { stage: string; questions: string[] }[];
+};
+
+/** Раздел 발음 — правило чтения (например 구개음화) и слова-примеры. */
+export type PronunciationBlock = ContentBlockBase & {
+  type: "pronunciation";
+  rule: string;
+  audio_id: string | null;
+  audioUrl?: string | null;
+  examples: string[];
+};
+
 export type GrammarPointBlock = ContentBlockBase & {
   type: "grammar_point";
   pattern: string;
@@ -136,14 +193,19 @@ export type GrammarExerciseBlock = ContentBlockBase & {
   grammar_ref: string;
   prompt: string;
   // Пример — уже готовая фраза без пропусков, для чтения.
-  example: { given: string[]; dialogue: string[] };
+  example: {
+    given: string[];
+    cues?: string[];
+    dialogue: string[];
+    emphasis?: string[][];
+  };
   // Те же строки, что и example.dialogue, но со вставками {0},{1}... на
   // месте пропусков — явный шаблон вместо угадывания места пропуска
   // поиском словарной формы по проспрягованному тексту.
   template: string[];
   // answers — реальные проспрягованные формы (по одной на каждый {n} в
   // template), а не словарная форма given.
-  items: { given: string[]; answers: string[] }[];
+  items: { given: string[]; cues?: string[]; answers: string[] }[];
 };
 
 export type Block =
@@ -155,7 +217,10 @@ export type Block =
   | ReferenceTableBlock
   | PhraseGalleryBlock
   | GrammarPointBlock
-  | GrammarExerciseBlock;
+  | GrammarExerciseBlock
+  | ComprehensionExerciseBlock
+  | WritingExerciseBlock
+  | PronunciationBlock;
 
 export type PageContent = {
   page_role: string;

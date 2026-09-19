@@ -1,4 +1,5 @@
 import type { Block, HintBlock, VocabListBlock } from "@/features/learning/types";
+import type { VocabItem } from "./vocabHighlight";
 import { LessonToc } from "./LessonToc";
 import { TextBlock } from "./TextBlock";
 import { VocabList } from "./VocabList";
@@ -8,6 +9,9 @@ import { ReferenceTable } from "./ReferenceTable";
 import { PhraseGallery } from "./PhraseGallery";
 import { GrammarPoint } from "./GrammarPoint";
 import { GrammarExercise } from "./GrammarExercise";
+import { ComprehensionExercise } from "./ComprehensionExercise";
+import { WritingExercise } from "./WritingExercise";
+import { Pronunciation } from "./Pronunciation";
 
 function textIdsOnPage(blocks: Block[]): Set<string> {
   const ids = new Set<string>();
@@ -32,6 +36,12 @@ function vocabByRelatedText(
     }
   }
   return map;
+}
+
+function allPageVocab(blocks: Block[]): VocabItem[] {
+  return blocks
+    .filter((block): block is VocabListBlock => block.type === "vocab_list")
+    .flatMap((block) => block.items);
 }
 
 function hintsByRelatedText(
@@ -70,6 +80,7 @@ export function PageBlocks({
   const textIds = textIdsOnPage(blocks);
   const vocabMap = vocabByRelatedText(blocks, textIds);
   const hintMap = hintsByRelatedText(blocks, textIds);
+  const pageVocab = allPageVocab(blocks);
 
   return (
     <>
@@ -117,9 +128,15 @@ export function PageBlocks({
           case "phrase_gallery":
             return <PhraseGallery key={i} id={block.id} block={block} />;
           case "grammar_point":
-            return <GrammarPoint key={i} id={block.id} block={block} />;
+            return <GrammarPoint key={i} id={block.id} block={block} vocabItems={pageVocab} />;
           case "grammar_exercise":
-            return <GrammarExercise key={i} id={block.id} block={block} />;
+            return <GrammarExercise key={i} id={block.id} block={block} vocabItems={pageVocab} />;
+          case "comprehension_exercise":
+            return <ComprehensionExercise key={i} id={block.id} block={block} />;
+          case "writing_exercise":
+            return <WritingExercise key={i} id={block.id} block={block} />;
+          case "pronunciation":
+            return <Pronunciation key={i} id={block.id} block={block} />;
           default:
             return null;
         }

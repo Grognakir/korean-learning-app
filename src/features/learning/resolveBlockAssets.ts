@@ -37,6 +37,17 @@ function collectPaths(assetPrefix: string, blocks: Block[]): string[] {
         paths.push(assetPath(assetPrefix, block.illustration.storage_path));
       }
     }
+    if (block.type === "comprehension_exercise") {
+      if (block.audio_id) {
+        paths.push(assetPath(assetPrefix, `audio/${block.audio_id}.mp3`));
+      }
+      if (block.warmup?.illustration?.storage_path) {
+        paths.push(assetPath(assetPrefix, block.warmup.illustration.storage_path));
+      }
+    }
+    if (block.type === "pronunciation" && block.audio_id) {
+      paths.push(assetPath(assetPrefix, `audio/${block.audio_id}.mp3`));
+    }
   }
   return paths;
 }
@@ -84,6 +95,29 @@ export async function resolveBlockAssets(
               imageUrl: urlFor(block.illustration.storage_path),
             }
           : block.illustration,
+      };
+    }
+    if (block.type === "comprehension_exercise") {
+      return {
+        ...block,
+        audioUrl: block.audio_id ? urlFor(`audio/${block.audio_id}.mp3`) : null,
+        warmup: block.warmup
+          ? {
+              ...block.warmup,
+              illustration: block.warmup.illustration
+                ? {
+                    ...block.warmup.illustration,
+                    imageUrl: urlFor(block.warmup.illustration.storage_path),
+                  }
+                : block.warmup.illustration,
+            }
+          : block.warmup,
+      };
+    }
+    if (block.type === "pronunciation") {
+      return {
+        ...block,
+        audioUrl: block.audio_id ? urlFor(`audio/${block.audio_id}.mp3`) : null,
       };
     }
     return block;

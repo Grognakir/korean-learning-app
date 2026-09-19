@@ -86,14 +86,22 @@ export default async function LessonSectionPage({
     </h1>
   );
 
+  const topBackLink = nav.prev ? (
+    <Link href={nav.prev.href} className={styles.backLink}>
+      ← <span className="kr">{nav.prev.key}</span>
+    </Link>
+  ) : (
+    <Link href={`/learning/plans/${textbookSlug}/${lessonNumber}`} className={styles.backLink}>
+      ← К оглавлению
+    </Link>
+  );
+
   if (sectionBlocks.length === 0) {
     return (
       <div className={styles.pageShell}>
         <AppHeader username={username} />
         <main className={styles.wrap}>
-          <Link href={`/learning/plans/${textbookSlug}/${lessonNumber}`} className={styles.backLink}>
-            ← К оглавлению урока
-          </Link>
+          {topBackLink}
           {heading}
           <p className={styles.emptyState}>
             Материалы раздела скоро появятся.
@@ -111,9 +119,7 @@ export default async function LessonSectionPage({
       <AppHeader username={username} />
 
       <main className={styles.wrap}>
-        <Link href={`/learning/plans/${textbookSlug}/${lessonNumber}`} className={styles.backLink}>
-          ← К оглавлению урока
-        </Link>
+        {topBackLink}
 
         {heading}
 
@@ -127,11 +133,11 @@ export default async function LessonSectionPage({
 
         <div className={styles.sectionFooterNav}>
           <Link href={`/learning/plans/${textbookSlug}/${lessonNumber}`} className={styles.backLink}>
-            ← К оглавлению урока
+            ← К оглавлению
           </Link>
           {nav.next && (
             <Link href={nav.next.href} className={styles.nextSectionLink}>
-              Следующий раздел: <span className="kr">{nav.next.key}</span> →
+              <span className="kr">{nav.next.key}</span> →
             </Link>
           )}
         </div>
