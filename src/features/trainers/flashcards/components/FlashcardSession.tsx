@@ -154,7 +154,6 @@ export function FlashcardSession({ queue, guest = false }: Props) {
           onClick={() => setFlipped(false)}
           aria-label="Скрыть ответ"
         >
-          <span className={styles.eyebrow}>Ответ</span>
           <CardBack word={word} reverse={reverse} />
         </button>
       ) : (
@@ -164,7 +163,6 @@ export function FlashcardSession({ queue, guest = false }: Props) {
           onClick={() => setFlipped(true)}
           aria-label="Показать ответ"
         >
-          <span className={styles.eyebrow}>{reverse ? "Вспомните слово" : "Вспомните перевод"}</span>
           <span className={`${styles.headword} ${!reverse && word.language === "ko" ? "kr" : ""}`}>
             {reverse ? translations : word.headword}
           </span>
@@ -172,21 +170,19 @@ export function FlashcardSession({ queue, guest = false }: Props) {
           <span className={styles.hint}>Нажмите, чтобы перевернуть</span>
         </button>
       )}
-      {flipped && (
-        <div className={styles.ratings}>
-          {RATINGS.map((item) => (
-            <button
-              key={item.rating}
-              type="button"
-              className={item.className}
-              disabled={saving}
-              onClick={() => void rate(item.rating)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-      )}
+      <div className={styles.ratings}>
+        {RATINGS.map((item) => (
+          <button
+            key={item.rating}
+            type="button"
+            className={item.className}
+            disabled={!flipped || saving}
+            onClick={() => void rate(item.rating)}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

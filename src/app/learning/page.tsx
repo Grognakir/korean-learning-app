@@ -10,14 +10,14 @@ const MODES = [
     href: "/learning/plans",
     title: "Планы",
     description: "Учебники и уроки по плану обучения — шаг за шагом.",
-    image: "/images/learning/plans.jpg",
+    image: "/images/learning/plans.png",
     koOnly: true,
   },
   {
     href: "/learning/trainers",
     title: "Тренажёры",
     description: "Отработка и повторение — тренировки без привязки к уроку.",
-    image: "/images/learning/trainers.jpg",
+    image: "/images/learning/trainers.png",
     koOnly: false,
   },
 ];

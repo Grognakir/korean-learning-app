@@ -100,7 +100,7 @@ export function TopicQuizSession({ questions }: { questions: TopicQuizQuestion[]
       <div className={styles.prompt}>
         <span className={styles.eyebrow}>{question.question_text ? "Вопрос" : "Заполните пропуск"}</span>
         <p ref={promptRef} tabIndex={-1} className={`${styles.headword} ${question.question_text ? "" : "kr"}`}>
-          {question.question_text || <>{question.before_text}<span className={answered ? isCorrect ? styles.blankFilledCorrect : styles.blankFilledWrong : styles.blank}>{answered ? selected : "…"}</span>{question.after_text}</>}
+          {question.question_text || <>{question.before_text}<span className={answered ? isCorrect ? styles.blankFilledCorrect : styles.blankFilledWrong : styles.blank}>{answered ? selected : ""}</span>{question.after_text}</>}
         </p>
       </div>
       <div className={styles.options}>

@@ -164,7 +164,7 @@
   font: inherit;
   color: inherit;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 
@@ -250,12 +250,10 @@ div.cardHeader {
 }
 
 .chevron {
+  width: var(--kr-font-lg);
+  height: var(--kr-font-lg);
   flex-shrink: 0;
-  margin-top: 2px;
-  font-size: 18px;
-  font-weight: 500;
   color: var(--stone);
-  line-height: 1;
   transition: transform 0.15s ease;
 }
 

@@ -75,7 +75,16 @@ it("при смене направления закрывает ответ, со
   fireEvent.click(screen.getByRole("button", { name: "Перевод → слово" }));
   expect(screen.getByRole("button", { name: "Показать ответ" })).toBeDefined();
   expect(screen.getByRole("progressbar").getAttribute("aria-valuenow")).toBe("0");
-  expect(screen.queryByRole("button", { name: "Хорошо" })).toBeNull();
+  expect(screen.getByRole("button", { name: "Хорошо" }).hasAttribute("disabled")).toBe(true);
+});
+
+it("сразу показывает оценки, но включает их только после переворота", () => {
+  render(<FlashcardSession queue={[{ word, isNew: true }]} />);
+  expect(screen.queryByText("Вспомните перевод")).toBeNull();
+  expect(screen.queryByText("Ответ")).toBeNull();
+  expect(screen.getByRole("button", { name: "Хорошо" }).hasAttribute("disabled")).toBe(true);
+  fireEvent.click(screen.getByRole("button", { name: "Показать ответ" }));
+  expect(screen.getByRole("button", { name: "Хорошо" }).hasAttribute("disabled")).toBe(false);
 });
 
 it("позволяет гостю повторить забытую карту без записи в аккаунт", async () => {

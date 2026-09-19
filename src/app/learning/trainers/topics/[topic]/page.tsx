@@ -13,8 +13,8 @@ import {
   type TopicQuizQuestion,
 } from "@/features/trainers/topics/types";
 import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
+import { TrainerWorkspace } from "@/features/trainers/components/TrainerWorkspace";
 import layout from "../../../learning.module.css";
-import styles from "../topics.module.css";
 
 function isValidTopic(topic: string): topic is TopicKey {
   return (VALID_TOPICS as string[]).includes(topic);
@@ -43,9 +43,11 @@ export default async function TopicQuizPage({
   return (
     <div className={layout.page}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
-      <main className={`${layout.wrap} ${styles.sessionWrap}`}>
-        <TrainerHeader href="/learning/trainers/topics" title={label} backLabel="К списку тем" />
-        <TopicQuizSession key={topic} questions={questions} />
+      <main className={layout.wrap}>
+        <TrainerWorkspace>
+          <TrainerHeader href="/learning/trainers/topics" title={label} backLabel="К списку тем" />
+          <TopicQuizSession key={topic} questions={questions} />
+        </TrainerWorkspace>
       </main>
       <BottomTabBar />
     </div>

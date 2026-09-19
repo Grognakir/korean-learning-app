@@ -1,14 +1,11 @@
 "use client";
 
-import { useId, useState, type ReactNode } from "react";
+import { useEffect, useId, useState, type ReactNode } from "react";
+import { Modal } from "@/components/ui/Modal";
 import styles from "./SessionSettings.module.css";
 
-/**
- * На узком экране настройки сессии съедали половину высоты до карточки,
- * поэтому здесь они сворачиваются в одну строку со сводкой. На широких
- * экранах панель раскрыта всегда, а кнопка скрыта — этим управляет CSS,
- * так что состояние ниже влияет только на компактную вёрстку.
- */
+const COMPACT_QUERY = "(max-width: 1000px)";
+
 export function SessionSettings({
   summary,
   children,
@@ -17,7 +14,19 @@ export function SessionSettings({
   children: ReactNode;
 }) {
   const [open, setOpen] = useState(false);
+  const [compact, setCompact] = useState(false);
   const panelId = useId();
+
+  useEffect(() => {
+    if (typeof window.matchMedia !== "function") return;
+
+    const media = window.matchMedia(COMPACT_QUERY);
+    const update = () => setCompact(media.matches);
+
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
 
   return (
     <div className={styles.root}>
@@ -41,9 +50,17 @@ export function SessionSettings({
           </svg>
         </span>
       </button>
-      <div id={panelId} className={open ? styles.panelOpen : styles.panel}>
-        {children}
-      </div>
+      {!compact && (
+        <div id={panelId} className={open ? styles.panelOpen : styles.panel}>
+          {children}
+        </div>
+      )}
+      {compact && (
+        <Modal open={open} onClose={() => setOpen(false)} title="Настройки карточек">
+          <h2 className={styles.modalTitle}>Настройки карточек</h2>
+          <div id={panelId} className={styles.modalBody}>{children}</div>
+        </Modal>
+      )}
     </div>
   );
 }

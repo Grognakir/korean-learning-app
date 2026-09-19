@@ -49,10 +49,15 @@ it("не начисляет результат дважды при повтор�
 });
 
 it("заполняет пропуск выбранным ответом", () => {
-  render(<TopicQuizSession questions={[{ ...questions[0], question_text: null, before_text: "저는", after_text: "에 가요." }]} />);
-  expect(screen.getByText("…")).toBeDefined();
+  const { container } = render(
+    <TopicQuizSession
+      questions={[{ ...questions[0], question_text: null, before_text: "저는", after_text: "에 가요." }]}
+    />,
+  );
+  const prompt = container.querySelector('p[class*="headword"]')!;
+  expect(prompt.querySelector("span")?.textContent).toBe("");
   fireEvent.click(screen.getByRole("button", { name: "학교" }));
-  expect(screen.queryByText("…")).toBeNull();
+  expect(prompt.querySelector("span")?.textContent).toBe("학교");
   expect(screen.getByRole("status").textContent).toBe("Верно!");
 });
 

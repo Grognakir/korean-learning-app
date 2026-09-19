@@ -8,6 +8,7 @@ import { FlashcardSession } from "@/features/trainers/flashcards/components/Flas
 import { FlashcardsHeader } from "@/features/trainers/flashcards/components/FlashcardsHeader";
 import { SessionSettings } from "@/features/trainers/flashcards/components/SessionSettings";
 import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
+import { TrainerWorkspace } from "@/features/trainers/components/TrainerWorkspace";
 import layout from "../../../learning.module.css";
 import styles from "../flashcards.module.css";
 
@@ -23,18 +24,20 @@ export default async function FlashcardsRelatedPage() {
   return (
     <div className={`${layout.page} ${styles.fixedPage}`}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
-      <main className={`${layout.wrap} ${styles.wrap}`}>
-        <TrainerHeader href="/learning/trainers" title="Карточки слов" backLabel="К тренажёрам" />
-        <div className={styles.column}>
-          <SessionSettings summary={`Антонимы/синонимы · ${newCardsLimit} новых`}>
-            <FlashcardsHeader
-              active="antonyms-synonyms"
-              newCardsLimit={newCardsLimit}
-              language={language}
-            />
-          </SessionSettings>
-          <FlashcardSession guest={!user} key={`${user?.id ?? null}:${newCardsLimit}`} queue={queue} />
-        </div>
+      <main className={layout.wrap}>
+        <TrainerWorkspace>
+          <TrainerHeader href="/learning/trainers" title="Карточки слов" backLabel="К тренажёрам" />
+          <div className={styles.column}>
+            <SessionSettings summary={`Антонимы/синонимы · ${newCardsLimit} новых`}>
+              <FlashcardsHeader
+                active="antonyms-synonyms"
+                newCardsLimit={newCardsLimit}
+                language={language}
+              />
+            </SessionSettings>
+            <FlashcardSession guest={!user} key={`${user?.id ?? null}:${newCardsLimit}`} queue={queue} />
+          </div>
+        </TrainerWorkspace>
       </main>
       <BottomTabBar />
     </div>

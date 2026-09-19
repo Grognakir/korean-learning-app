@@ -1,26 +1,17 @@
 .root {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
   min-width: 0;
 }
 
 .back {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  background: #fff;
+  width: fit-content;
   color: var(--ink-soft);
   text-decoration: none;
-}
-
-.back svg {
-  width: 17px;
-  height: 17px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .back:focus-visible {
@@ -30,7 +21,6 @@
 
 @media (hover: hover) {
   .back:hover {
-    border-color: var(--blue);
     color: var(--ink);
   }
 }
@@ -41,14 +31,4 @@
   font-weight: 700;
   line-height: 1.2;
   overflow-wrap: anywhere;
-}
-
-/* Порог --to-compact объявлен в src/styles/media.css */
-@media (--to-compact) {
-  /* На телефоне кнопка — основной способ вернуться назад, поэтому зона
-     нажатия крупнее рекомендованных 44px. */
-  .back {
-    width: 44px;
-    height: 44px;
-  }
 }

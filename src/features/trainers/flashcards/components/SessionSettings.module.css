@@ -4,57 +4,65 @@
   gap: 12px;
 }
 
-/* Широкий экран: настройки всегда развёрнуты, кнопка не нужна. */
 .toggle {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: #fff;
+  color: var(--ink-soft);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
-.panel,
 .panelOpen {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Порог --to-compact объявлен в src/styles/media.css */
-@media (--to-compact) {
-  .toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    min-height: 40px;
-    padding: 8px 14px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-control);
-    background: #fff;
-    font: inherit;
-    color: var(--ink-soft);
-    text-align: left;
-    cursor: pointer;
-  }
+.panel {
+  display: none;
+}
 
-  .summary {
-    font-size: 13px;
-    font-weight: 600;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+.summary {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
-  .chevron,
-  .chevronOpen {
-    display: inline-flex;
-    flex-shrink: 0;
-    color: var(--stone);
-  }
+.chevron,
+.chevronOpen {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--stone);
+}
 
-  .chevronOpen {
-    transform: rotate(180deg);
-  }
+.chevronOpen {
+  transform: rotate(180deg);
+}
 
-  .panel {
-    display: none;
-  }
+.toggle:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.modalTitle {
+  margin: 0 36px 20px 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

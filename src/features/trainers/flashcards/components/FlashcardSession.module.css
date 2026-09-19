@@ -194,17 +194,21 @@
   color: var(--ink-soft);
 }
 
-.ratings button:disabled,
+.ratings button:disabled {
+  opacity: 0.42;
+  cursor: default;
+}
+
 .card:disabled {
   opacity: 0.65;
   cursor: wait;
 }
 
-.directions { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: var(--radius-control); }
+.directions { display: flex; align-self: center; width: min(100%, 360px); gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: var(--radius-control); }
 .direction, .directionActive { flex: 1; min-height: 40px; border: 0; border-radius: calc(var(--radius-control) - 3px); padding: 8px; background: transparent; color: var(--ink-soft); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
 .directionActive { background: #fff; color: var(--ink); box-shadow: 0 1px 4px #0000000a; }
 .direction:disabled, .directionActive:disabled { cursor: wait; opacity: 0.65; }
-.card, .cardButton { min-height: 240px; padding: 26px 22px; gap: 18px; border-top: 3px solid var(--blue); }
+.card, .cardButton { height: 260px; min-height: 260px; overflow-y: auto; padding: 26px 22px; gap: 18px; border-top: 3px solid var(--blue); }
 .cardButton { justify-content: flex-start; }
 .cardButton .headword { margin-top: auto; }
 .headword, .translations { overflow-wrap: anywhere; }
@@ -223,22 +227,17 @@
 
 /* Порог --to-compact объявлен в src/styles/media.css */
 @media (--to-compact) {
-  /* Раньше после переворота карточки до кнопок оценки нужно было
-     проскроллить ~175px. Теперь сессия занимает ровно высоту экрана:
-     карточка забирает всё свободное место и прокручивает свой текст
-     внутри себя, а кнопки оценки всегда остаются сразу под ней. */
-  .root {
-    flex: 1;
-    min-height: 0;
-  }
-
+  /* Раньше карточка растягивалась на весь остаток экрана (flex:1) — на
+     высоком телефоне выглядела почти пустой и "прыгала" по высоте вместе
+     с клавиатурой/панелью настроек. Теперь высота фиксированная и не
+     зависит от объёма контента; длинный пример прокручивается внутри. */
   .card,
   .cardButton {
-    flex: 1;
+    height: 260px;
     min-height: 0;
     overflow-y: auto;
-    padding: 18px 16px;
-    gap: 12px;
+    padding: 16px;
+    gap: 10px;
   }
 
   /* 26px на 375px-экране уводили длинный перевод на две строки и

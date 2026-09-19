@@ -201,15 +201,15 @@
  */
 @media (--to-compact) {
   .wrap {
-    padding-bottom: 76px;
+    padding-bottom: 116px;
   }
 
   .main {
-    padding-bottom: 76px;
+    padding-bottom: 116px;
   }
 
   .guestMain {
-    padding-bottom: 76px;
+    padding-bottom: 116px;
   }
 }
 

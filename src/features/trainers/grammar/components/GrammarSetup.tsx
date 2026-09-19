@@ -6,7 +6,6 @@ import { MultiSelect } from "@/components/ui/Select";
 import { plural } from "@/lib/plural";
 import { BLITZ_PER_GRAMMAR, BLITZ_SECONDS, countRange, effectiveCount, grammarSearch } from "../areas";
 import type { GrammarArea } from "../types";
-import { Dock } from "./parts";
 import styles from "./GrammarTrainer.module.css";
 
 const grammarsWord = (n: number) => `${n} ${plural(n, ["грамматика", "грамматики", "грамматик"])}`;
@@ -106,11 +105,9 @@ export function GrammarSetup({ areas, initial }: Props) {
           </div>
         </div>
       </section>
-      <Dock>
-        <button type="button" className={styles.primary} disabled={!total || pending} onClick={start}>
-          {pending ? "Собираем сессию…" : total ? `Начать · ${grammarsWord(total)}` : "Выберите область"}
-        </button>
-      </Dock>
+      <button type="button" className={styles.primary} disabled={!total || pending} onClick={start}>
+        {pending ? "Собираем сессию…" : total ? `Начать · ${grammarsWord(total)}` : "Выберите область"}
+      </button>
     </div>
   );
 }

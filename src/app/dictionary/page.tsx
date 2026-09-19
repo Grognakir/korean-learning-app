@@ -7,6 +7,17 @@ import { readGuestLanguage } from "@/features/language/getActiveLanguage";
 import type { Language } from "@/features/dictionary/types";
 import styles from "./dictionary.module.css";
 
+// Категории вида "1. ...", "10. ...", "11. ..." — localeCompare сравнивает
+// их как строки ("1" < "10" < "11" < "2"), нужен порядок по номеру.
+function compareCategoryNames(a: string, b: string): number {
+  const na = Number(a.match(/^\d+/)?.[0]);
+  const nb = Number(b.match(/^\d+/)?.[0]);
+  if (!Number.isNaN(na) && !Number.isNaN(nb)) {
+    return na - nb || a.localeCompare(b, "ru");
+  }
+  return a.localeCompare(b, "ru");
+}
+
 export default async function DictionaryPage() {
   const supabase = await createClient();
   const {
@@ -41,10 +52,10 @@ export default async function DictionaryPage() {
   const [{ data: phraseCategoryRows }, { data: grammarCategoryRows }] = phraseGrammar;
   const phraseCategories = Array.from(
     new Set((phraseCategoryRows ?? []).map((r) => r.category as string)),
-  ).sort((a, b) => a.localeCompare(b, "ru"));
+  ).sort(compareCategoryNames);
   const grammarCategories = Array.from(
     new Set((grammarCategoryRows ?? []).map((r) => r.category as string)),
-  ).sort((a, b) => a.localeCompare(b, "ru"));
+  ).sort(compareCategoryNames);
 
   return (
     <div className={styles.page}>

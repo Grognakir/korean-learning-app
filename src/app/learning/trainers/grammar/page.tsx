@@ -7,6 +7,7 @@ import { parseGrammarParams } from "@/features/trainers/grammar/areas";
 import { GrammarSetup } from "@/features/trainers/grammar/components/GrammarSetup";
 import { loadGrammarAreas } from "@/features/trainers/grammar/loadGrammars";
 import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
+import { TrainerWorkspace } from "@/features/trainers/components/TrainerWorkspace";
 import layout from "../../learning.module.css";
 import styles from "@/features/trainers/grammar/components/GrammarTrainer.module.css";
 
@@ -25,19 +26,21 @@ export default async function GrammarTrainerPage({ searchParams }: { searchParam
   return (
     <div className={layout.page}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
-      <main className={`${layout.wrap} ${styles.wrap}`}>
-        <TrainerHeader href="/learning/trainers" title="Грамматика" backLabel="К тренажёрам" />
-        <p className={styles.description}>
-          Разберите правило и сразу закрепите его, потом — смешанная практика по всем грамматикам сессии и блиц на время.
-        </p>
-        {areas.length > 0 ? (
-          <GrammarSetup
-            areas={areas.map(({ key, label, count }) => ({ key, label, count }))}
-            initial={{ areas: known.length ? known : areas.map((area) => area.key), count: params.count, blitz: params.blitz }}
-          />
-        ) : (
-          <p className={styles.empty}>Упражнения по грамматике пока не добавлены.</p>
-        )}
+      <main className={layout.wrap}>
+        <TrainerWorkspace>
+          <TrainerHeader href="/learning/trainers" title="Грамматика" backLabel="К тренажёрам" />
+          <p className={styles.description}>
+            Разберите правило и сразу закрепите его, потом — смешанная практика по всем грамматикам сессии и блиц на время.
+          </p>
+          {areas.length > 0 ? (
+            <GrammarSetup
+              areas={areas.map(({ key, label, count }) => ({ key, label, count }))}
+              initial={{ areas: known.length ? known : areas.map((area) => area.key), count: params.count, blitz: params.blitz }}
+            />
+          ) : (
+            <p className={styles.empty}>Упражнения по грамматике пока не добавлены.</p>
+          )}
+        </TrainerWorkspace>
       </main>
       <BottomTabBar />
     </div>

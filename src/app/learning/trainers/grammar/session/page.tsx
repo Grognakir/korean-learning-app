@@ -9,6 +9,7 @@ import { GrammarSession } from "@/features/trainers/grammar/components/GrammarSe
 import { loadGrammarAreas, loadTrainerGrammars } from "@/features/trainers/grammar/loadGrammars";
 import { buildGrammarSession } from "@/features/trainers/grammar/session";
 import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
+import { TrainerWorkspace } from "@/features/trainers/components/TrainerWorkspace";
 import layout from "../../../learning.module.css";
 import styles from "@/features/trainers/grammar/components/GrammarTrainer.module.css";
 
@@ -33,15 +34,17 @@ export default async function GrammarSessionPage({ searchParams }: { searchParam
   return (
     <div className={layout.page}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
-      <main className={`${layout.wrap} ${styles.wrap}`}>
-        <TrainerHeader href={setupHref} title="Грамматика" backLabel="К настройке сессии" />
-        {session.study.length > 0 ? (
-          <GrammarSession key={session.id} session={session} blitzSeconds={params.blitz} setupHref={setupHref} />
-        ) : (
-          <p className={styles.empty}>
-            В выбранных областях нет упражнений. <Link href="/learning/trainers/grammar">Выбрать другие</Link>
-          </p>
-        )}
+      <main className={layout.wrap}>
+        <TrainerWorkspace>
+          <TrainerHeader href={setupHref} title="Грамматика" backLabel="К настройке сессии" />
+          {session.study.length > 0 ? (
+            <GrammarSession key={session.id} session={session} blitzSeconds={params.blitz} setupHref={setupHref} />
+          ) : (
+            <p className={styles.empty}>
+              В выбранных областях нет упражнений. <Link href="/learning/trainers/grammar">Выбрать другие</Link>
+            </p>
+          )}
+        </TrainerWorkspace>
       </main>
       <BottomTabBar />
     </div>

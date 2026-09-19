@@ -161,7 +161,7 @@
   cursor: pointer;
 }
 
-.root, .done { width: 100%; max-width: 640px; margin: 20px auto 0; }
+.root, .done { width: 100%; }
 .prompt { padding: 26px 22px; display: grid; gap: 20px; min-height: 160px; align-content: center; border-top: 3px solid var(--blue); }
 .headword { overflow-wrap: anywhere; }
 .headword:focus, .doneTitle:focus { outline: none; }

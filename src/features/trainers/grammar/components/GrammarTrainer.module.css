@@ -1,7 +1,3 @@
-.wrap {
-  max-width: 560px;
-}
-
 .description,
 .empty {
   color: var(--ink-soft);
