@@ -3,9 +3,9 @@ import { beforeEach, expect, it, vi } from "vitest";
 import FlashcardsPage from "@/app/learning/trainers/flashcards/page";
 import type { CategoryOption } from "@/features/dictionary/types";
 
-const { getLearningContext, buildFlashcardQueue, fetchAllRows } = vi.hoisted(() => ({ getLearningContext: vi.fn(), buildFlashcardQueue: vi.fn(), fetchAllRows: vi.fn() }));
+const { getLearningContext, buildFlashcardQueueWithStats, fetchAllRows } = vi.hoisted(() => ({ getLearningContext: vi.fn(), buildFlashcardQueueWithStats: vi.fn(), fetchAllRows: vi.fn() }));
 vi.mock("@/features/auth/getLearningContext", () => ({ getLearningContext }));
-vi.mock("@/features/trainers/flashcards/buildQueue", () => ({ buildFlashcardQueue }));
+vi.mock("@/features/trainers/flashcards/buildQueue", () => ({ buildFlashcardQueueWithStats }));
 vi.mock("@/lib/supabase/fetchAll", () => ({ fetchAllRows }));
 vi.mock("@/features/trainers/flashcards/actions", () => ({ recordReview: vi.fn() }));
 vi.mock("@/components/layout/GuestHeader", () => ({ GuestHeader: () => null }));
@@ -28,11 +28,14 @@ beforeEach(() => {
     { categories: { id: "own", name: "Моя категория" }, words: { owner_user_id: "user" } },
     { categories: { id: "other", name: "Чужая категория" }, words: { owner_user_id: "other" } },
   ]);
-  buildFlashcardQueue.mockImplementation(async (_client, _user, limit, language) => Array.from({ length: limit }, (_, i) => ({
-    isNew: true,
-    word: { id: String(i), headword: language === "ko" ? `학교${i}` : `school${i}`, language, reading: null,
-      translations: [{ text: "школа" }], word_examples: [] },
-  })));
+  buildFlashcardQueueWithStats.mockImplementation(async (_client, _user, limit, language) => ({
+    availableNewCount: limit,
+    queue: Array.from({ length: limit }, (_, i) => ({
+      isNew: true,
+      word: { id: String(i), headword: language === "ko" ? `학교${i}` : `school${i}`, language, reading: null,
+        translations: [{ text: "школа" }], word_examples: [] },
+    })),
+  }));
 });
 
 it("сбрасывает открытую карточку при смене языка", async () => {
@@ -63,5 +66,20 @@ it("открывает гостю карточки только общих ка�
   render(await FlashcardsPage(props));
   expect(screen.getByRole("button", { name: "Показать ответ" })).toBeDefined();
   expect(screen.queryByText(/Моя категория/)).toBeNull();
-  expect(buildFlashcardQueue).toHaveBeenCalledWith({}, null, 5, "ko", { categoryIds: undefined });
+  expect(buildFlashcardQueueWithStats).toHaveBeenCalledWith({}, null, 5, "ko", { categoryIds: undefined });
+});
+
+it("показывает фактический лимит выбранной подборки", async () => {
+  profile.srs_new_cards_per_session = 50;
+  buildFlashcardQueueWithStats.mockResolvedValue({
+    availableNewCount: 21,
+    queue: Array.from({ length: 21 }, (_, i) => ({
+      isNew: true,
+      word: { id: String(i), headword: `학교${i}`, language: "ko", reading: null,
+        translations: [{ text: "школа" }], word_examples: [] },
+    })),
+  });
+
+  render(await FlashcardsPage(props));
+  expect(screen.getByRole("button", { name: /21 новых/ })).toBeDefined();
 });

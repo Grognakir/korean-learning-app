@@ -2,7 +2,7 @@ import { getLearningContext } from "@/features/auth/getLearningContext";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
-import { buildFlashcardQueue } from "@/features/trainers/flashcards/buildQueue";
+import { buildFlashcardQueueWithStats } from "@/features/trainers/flashcards/buildQueue";
 import { CategorySelect } from "@/features/trainers/flashcards/components/CategorySelect";
 import { FlashcardSession } from "@/features/trainers/flashcards/components/FlashcardSession";
 import { FlashcardsHeader } from "@/features/trainers/flashcards/components/FlashcardsHeader";
@@ -71,14 +71,19 @@ export default async function FlashcardsMainPage({
   const selectedCategoryIds = parseCategoryIds(categoriesParam).filter((id) =>
     categories.has(id),
   );
-  const queue = await buildFlashcardQueue(supabase, user?.id ?? null, newCardsLimit, language, {
-    categoryIds: selectedCategoryIds.length ? selectedCategoryIds : undefined,
-  });
+  const { queue, availableNewCount } = await buildFlashcardQueueWithStats(
+    supabase,
+    user?.id ?? null,
+    newCardsLimit,
+    language,
+    { categoryIds: selectedCategoryIds.length ? selectedCategoryIds : undefined },
+  );
+  const effectiveNewCardsLimit = Math.min(newCardsLimit, availableNewCount);
 
   const selectedNames = selectedCategoryIds.map((id) => categories.get(id)!);
   const summary = [
     "Основной",
-    `${newCardsLimit} новых`,
+    `${effectiveNewCardsLimit} новых`,
     selectedNames.length ? selectedNames.join(", ") : "Все категории",
   ].join(" · ");
 
@@ -90,7 +95,12 @@ export default async function FlashcardsMainPage({
           <TrainerHeader href="/learning/trainers" title="Карточки слов" backLabel="К тренажёрам" />
           <div className={styles.column}>
             <SessionSettings summary={summary}>
-              <FlashcardsHeader active="main" newCardsLimit={newCardsLimit} language={language} />
+              <FlashcardsHeader
+                active="main"
+                newCardsLimit={newCardsLimit}
+                availableNewCount={availableNewCount}
+                language={language}
+              />
               <CategorySelect categories={categoryList} selectedIds={selectedCategoryIds} />
             </SessionSettings>
             <FlashcardSession

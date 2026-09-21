@@ -11,6 +11,10 @@ const WORD_SELECT =
   "id, headword, reading, part_of_speech, owner_user_id, language, translations(text), word_categories(categories(id, name)), word_examples(kr, ru), word_notes(text), word_forms(label, value)";
 
 export type FlashcardQueueItem = { word: Word; isNew: boolean };
+export type FlashcardQueueResult = {
+  queue: FlashcardQueueItem[];
+  availableNewCount: number;
+};
 
 export async function buildFlashcardQueue(
   supabase: Awaited<ReturnType<typeof createClient>>,
@@ -19,6 +23,23 @@ export async function buildFlashcardQueue(
   language: Language,
   options: { categoryIds?: string[] } = {},
 ): Promise<FlashcardQueueItem[]> {
+  const result = await buildFlashcardQueueWithStats(
+    supabase,
+    userId,
+    newCardsLimit,
+    language,
+    options,
+  );
+  return result.queue;
+}
+
+export async function buildFlashcardQueueWithStats(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  userId: string | null,
+  newCardsLimit: number,
+  language: Language,
+  options: { categoryIds?: string[] } = {},
+): Promise<FlashcardQueueResult> {
   const now = new Date().toISOString();
 
   const progressRows = userId ? await fetchAllRows<{ word_id: string; due_at: string }>(
@@ -74,19 +95,21 @@ export async function buildFlashcardQueue(
       .range(from, to),
   );
 
-  const newIds = shuffle(
-    candidateIds
-      .map((w) => w.id)
-      .filter((id) => !seenWordIds.has(id))
-      .filter((id) => !categoryWordIds || categoryWordIds.has(id)),
-  ).slice(0, newCardsLimit);
+  const availableNewIds = candidateIds
+    .map((w) => w.id)
+    .filter((id) => !seenWordIds.has(id))
+    .filter((id) => !categoryWordIds || categoryWordIds.has(id));
+  const newIds = shuffle(availableNewIds).slice(0, newCardsLimit);
 
   const newWords = newIds.length ? await fetchWords(supabase, newIds) : [];
 
-  return [
-    ...shuffle(dueWords).map((word) => ({ word, isNew: false })),
-    ...newWords.map((word) => ({ word, isNew: true })),
-  ];
+  return {
+    queue: [
+      ...shuffle(dueWords).map((word) => ({ word, isNew: false })),
+      ...newWords.map((word) => ({ word, isNew: true })),
+    ],
+    availableNewCount: availableNewIds.length,
+  };
 }
 
 // Режим «Антонимы/Синонимы»: слово и его пара всегда идут подряд. Пара
