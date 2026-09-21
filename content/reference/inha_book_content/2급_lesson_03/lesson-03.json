@@ -73,6 +73,10 @@
           "type": "text",
           "title": "경험을 말하기",
           "title_ru": "Рассказать об опыте",
+          "illustration": {
+            "storage_path": "lesson_3/illustration_1_historical_drama.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -258,6 +262,10 @@
           "type": "text",
           "title": "계획을 듣고 조언하기",
           "title_ru": "Выслушать план и посоветовать",
+          "illustration": {
+            "storage_path": "lesson_3/illustration_2_university_counseling.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -458,7 +466,10 @@
           "audio_id": "211",
           "warmup": {
             "prompt": "무엇입니까? 이야기해 보십시오. (수의사가 강아지를 진찰하는 사진, 회의를 하는 사람들의 사진)",
-            "illustration": { "storage_path": null, "original_kind": "photo" }
+            "illustration": {
+              "storage_path": "lesson_3/illustration_3_future_careers.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "questions": [
@@ -488,7 +499,10 @@
           "id": "text-reading-racer",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": { "storage_path": null, "original_kind": "photo" },
+          "illustration": {
+            "storage_path": "lesson_3/illustration_4_racing_dream.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고 말하기",
           "exercise_ref": null,
@@ -563,7 +577,10 @@
           "type": "text",
           "title": "한국의 대학생",
           "title_ru": "Корейские студенты",
-          "illustration": { "storage_path": null, "original_kind": "photo" },
+          "illustration": {
+            "storage_path": "lesson_3/illustration_5_university_volunteering.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화 이해하기",
           "exercise_ref": null,
