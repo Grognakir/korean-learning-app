@@ -16,6 +16,7 @@ const REFERENCE_DIR = join(process.cwd(), "content/reference");
 const LESSON_DIR = join(REFERENCE_DIR, "inha_book_content/1급_lesson_01");
 const LESSON_DIR_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_01");
 const LESSON_DIR_2_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_02");
+const LESSON_DIR_2_3 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_03");
 
 const PLAN = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
@@ -176,15 +177,20 @@ async function main() {
   if (textbook2Error) throw textbook2Error;
 
   await importLesson(textbook.id, join(LESSON_DIR, "lesson-01.json"), 0);
-  const textbook2NextIndex = await importLesson(
+  const textbook2Lesson1NextIndex = await importLesson(
     textbook2.id,
     join(LESSON_DIR_2, "lesson-01.json"),
     0,
   );
-  await importLesson(
+  const textbook2Lesson2NextIndex = await importLesson(
     textbook2.id,
     join(LESSON_DIR_2_2, "lesson-02.json"),
-    textbook2NextIndex,
+    textbook2Lesson1NextIndex,
+  );
+  await importLesson(
+    textbook2.id,
+    join(LESSON_DIR_2_3, "lesson-03.json"),
+    textbook2Lesson2NextIndex,
   );
 
   // Ассеты: только то, что реально используется этим уроком, не всё
@@ -291,6 +297,30 @@ async function main() {
   await uploadAsset(
     join(REFERENCE_DIR, "inha_book_audio/2급_주교재/208.mp3"),
     "inha_book_2/audio/208.mp3",
+    "audio/mpeg",
+  );
+
+  // 2급 3과: аудио к обоим диалогам 준비하기 (209, 210), 듣고 말하기 (211)
+  // и 발음 (212). Иллюстраций пока нет — только фото учебника без
+  // сгенерированных картинок, страницы используют storage_path: null.
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/209.mp3"),
+    "inha_book_2/audio/209.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/210.mp3"),
+    "inha_book_2/audio/210.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/211.mp3"),
+    "inha_book_2/audio/211.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/212.mp3"),
+    "inha_book_2/audio/212.mp3",
     "audio/mpeg",
   );
 

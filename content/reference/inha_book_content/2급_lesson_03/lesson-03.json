@@ -1,0 +1,605 @@
+{
+  "textbook_id": "inha_book_2",
+  "lesson_number": 3,
+  "title": "경험과 계획",
+  "pages": [
+    {
+      "page_number": null,
+      "page_role": "lesson_opening",
+      "source_photo": "IMG_0614",
+      "blocks": [
+        {
+          "type": "lesson_toc",
+          "sections": [
+            {
+              "key": "준비하기 1",
+              "items": [
+                { "label": "경험을 말하기", "block_ref": "text-junbihagi1-dialogue", "label_ru": "Рассказать об опыте" },
+                { "label": "AV-(으)ㄴ 적이 있다/없다", "block_ref": "grammar-1", "label_ru": "AV-(으)ㄴ 적이 있다/없다 (доводилось/не доводилось)" },
+                { "label": "V-(으)ㄴ/는데요, N인데요", "block_ref": "grammar-2", "label_ru": "V-(으)ㄴ/는데요, N인데요 (мягкое пояснение)" }
+              ]
+            },
+            {
+              "key": "준비하기 2",
+              "items": [
+                { "label": "계획을 듣고 조언하기", "block_ref": "text-junbihagi2-dialogue", "label_ru": "Выслушать план и посоветовать" },
+                { "label": "AV-는 동안(에)", "block_ref": "grammar-3", "label_ru": "AV-는 동안(에) (пока, в течение)" },
+                { "label": "AV-기로 하다", "block_ref": "grammar-4", "label_ru": "AV-기로 하다 (решить делать)" }
+              ]
+            },
+            {
+              "key": "말하기",
+              "items": [
+                { "label": "경험과 계획을 말하기", "block_ref": "text-speaking-summary", "label_ru": "Рассказать об опыте и планах" }
+              ]
+            },
+            {
+              "key": "듣고 말하기",
+              "items": [
+                { "label": "꿈에 대해 듣고 말하기", "block_ref": "listening-dream", "label_ru": "Слушать и говорить о мечте" }
+              ]
+            },
+            {
+              "key": "읽고 말하기",
+              "items": [
+                { "label": "꿈에 대한 글을 읽고 말하기", "block_ref": "text-reading-racer", "label_ru": "Читать и говорить о мечте" }
+              ]
+            },
+            {
+              "key": "쓰기",
+              "items": [
+                { "label": "꿈에 대한 글 쓰기", "block_ref": "writing-dream", "label_ru": "Написать о мечте" }
+              ]
+            },
+            {
+              "key": "문화 이해하기",
+              "items": [
+                { "label": "한국의 대학생", "block_ref": "text-culture-university", "label_ru": "Корейские студенты" },
+                { "label": "유음화", "block_ref": "pronunciation-3", "label_ru": "Ассимиляция ㄴ/ㄹ" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 42,
+      "page_role": "content",
+      "source_photo": "IMG_0615",
+      "blocks": [
+        {
+          "id": "text-junbihagi1-dialogue",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "경험을 말하기",
+          "title_ru": "Рассказать об опыте",
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "209",
+          "speakers": ["파하드", "최수지"],
+          "lines": [
+            { "speaker": "파하드", "text": "최수지 씨, 한국 드라마를 본 적이 있어요?" },
+            { "speaker": "최수지", "text": "네, 사우디에서 본 적이 있어요." },
+            { "speaker": "파하드", "text": "무슨 드라마를 봤는데요?" },
+            { "speaker": "최수지", "text": "'대장금'을 봤어요." },
+            { "speaker": "파하드", "text": "'대장금'을 봤을 때 어땠어요?" },
+            { "speaker": "최수지", "text": "문화 차이가 있어서 좀 놀랍지만 재미있었어요." },
+            { "speaker": "파하드", "text": "저도 재미있게 봤어요." },
+            { "speaker": "최수지", "text": "대장금을 본 후부터 한국 드라마를 자주 보게 됐어요." },
+            { "speaker": "파하드", "text": "수지 씨는 사우디 드라마를 본 적이 있어요?" },
+            { "speaker": "최수지", "text": "드라마는 본 적이 있고 영화는 한두 편 봤어요." }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-junbihagi1-dialogue",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            { "ko": "드라마", "translation_ru": "телесериал" },
+            { "ko": "문화 차이", "translation_ru": "культурные различия" },
+            { "ko": "놀랍다", "translation_ru": "удивительный" },
+            { "ko": "편", "translation_ru": "счётное слово для фильмов" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 43,
+      "page_role": "content",
+      "source_photo": "IMG_0616",
+      "blocks": [
+        {
+          "id": "grammar-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "AV-(으)ㄴ 적이 있다/없다",
+          "section": "1",
+          "explanation": "Жизненный опыт — было ли когда-нибудь такое действие в прошлом. Часто сочетается с AV-아/어 보다: 가 본 적이 있어요.",
+          "rules": ["основа без받침 → -ㄴ 적이 있다/없다, с받침 → -은 적이 있다/없다"],
+          "examples": [
+            "가: 한국 음식을 만든 적이 있어요?\n나: 네, 김치를 만든 적이 있어요.",
+            "가: 이 영화를 본 적이 있어요?\n나: 아니요, 본 적이 없어요."
+          ]
+        },
+        {
+          "id": "grammar-2",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "V-(으)ㄴ/는데요, N인데요",
+          "section": "2",
+          "explanation": "Та же логика, что у -는데/(으)ㄴ데 (соединяет части предложения), но здесь это конец фразы — вежливо приглашает собеседника отреагировать или мягко возражает.",
+          "rules": ["глагол наст. время → -는데요", "прилагательное без받침 → -ㄴ데요, с받침 → -은데요", "N + 인데요"],
+          "examples": [
+            "가: 같이 점심 먹을까요?\n나: 저는 지금 바쁜데요.",
+            "가: 이게 최수지 씨 우산이에요?\n나: 아니요, 제 우산이 아닌데요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 44,
+      "page_role": "content",
+      "source_photo": "IMG_0617",
+      "blocks": [
+        {
+          "id": "exercise-1a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["한복을 입다"],
+            "cues": ["한복을 입다"],
+            "dialogue": [
+              "가: 한복을 입은 적이 있습니까?",
+              "나: 네, 한복을 입은 적이 있습니다."
+            ],
+            "emphasis": [["입은 적이 있습니까"], ["입은 적이 있습니다"]]
+          },
+          "template": ["가: {0} 적이 있습니까?", "나: 네, {1} 적이 있습니다."],
+          "items": [
+            { "given": ["한국 소설을 읽다"], "answers": ["읽은", "읽은"] },
+            { "given": ["중국어를 배우다"], "answers": ["배운", "배운"] },
+            { "given": ["배낭여행을 하다"], "answers": ["한", "한"] }
+          ]
+        },
+        {
+          "id": "exercise-1b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["스키를 타다 / 타 보다"],
+            "cues": ["스키를 타다 / 타 보다"],
+            "dialogue": [
+              "가: 스키를 탄 적이 있어요?",
+              "나: 아니요, 스키를 탄 적이 없어요. 한번 타 보고 싶어요."
+            ],
+            "emphasis": [["탄 적이 있어요"], ["탄 적이 없어요", "타 보고 싶어요"]]
+          },
+          "template": ["가: {0} 적이 있어요?", "나: 아니요, {1} 적이 없어요. 한번 {2} 보고 싶어요."],
+          "items": [
+            { "given": ["한복을 입다 / 입어 보다"], "answers": ["입은", "입은", "입어"] },
+            { "given": ["김밥을 만들다 / 만들어 보다"], "answers": ["만든", "만든", "만들어"] },
+            { "given": ["부산에 가다 / 가 보다"], "answers": ["간", "간", "가"] }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 45,
+      "page_role": "content",
+      "source_photo": "IMG_0618",
+      "blocks": [
+        {
+          "id": "exercise-2a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["어디에 가다"],
+            "cues": ["어디에 가다"],
+            "dialogue": [
+              "가: 어디에 가는데요?",
+              "나: 학교에 가요."
+            ],
+            "emphasis": [["가는데요"], ["학교에 가요"]]
+          },
+          "template": ["가: {0} 가는데요?", "나: {1} 가요."],
+          "items": [
+            { "given": ["언제 학교에 가다 / 지금 가다"], "answers": ["언제", "지금"] },
+            { "given": ["누가 같이 가다 / 자르갈 씨가 같이 가다"], "answers": ["누가", "자르갈 씨가"] },
+            { "given": ["몇 시에 가다 / 내일 아홉 시에 가다"], "answers": ["몇 시에", "내일 아홉 시에"] }
+          ]
+        },
+        {
+          "id": "exercise-2b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["이 우산을 쓰다"],
+            "cues": ["이 우산을 쓰다"],
+            "dialogue": [
+              "가: 이 우산 써도 돼요?",
+              "나: 그건 최수지 씨 우산인데요."
+            ],
+            "emphasis": [["써도 돼요"], ["최수지 씨 우산인데요"]]
+          },
+          "template": ["가: {0}?", "나: 그건 {1} 인데요."],
+          "items": [
+            { "given": ["이 책을 봐도 되다 / 도서관 책"], "answers": ["이 책 봐도 돼요", "도서관 책"] },
+            { "given": ["이 자리에 앉아도 되다 / 자르갈 씨 자리"], "answers": ["이 자리에 앉아도 돼요", "자르갈 씨 자리"] },
+            { "given": ["이 컴퓨터를 써도 되다 / 선생님 컴퓨터"], "answers": ["이 컴퓨터 써도 돼요", "선생님 컴퓨터"] }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 46,
+      "page_role": "content",
+      "source_photo": "IMG_0619",
+      "blocks": [
+        {
+          "id": "text-junbihagi2-dialogue",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "계획을 듣고 조언하기",
+          "title_ru": "Выслушать план и посоветовать",
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "210",
+          "speakers": ["선생님", "파하드"],
+          "lines": [
+            { "speaker": "선생님", "text": "파하드 씨, 대학원 입학 준비를 잘 하고 있어요?" },
+            { "speaker": "파하드", "text": "다음 주에 교수님과 상담하기로 했어요. 그런데 고민이 있어요." },
+            { "speaker": "선생님", "text": "무슨 고민이 있어요?" },
+            { "speaker": "파하드", "text": "저는 사회학을 공부하고 싶은데 부모님께서 반대하셔서 걱정이에요." },
+            { "speaker": "선생님", "text": "그래요? 파하드 씨는 왜 사회학을 공부하고 싶어요?" },
+            { "speaker": "파하드", "text": "한국에 오기 전에는 경영학을 전공하기로 했어요. 그런데 한국어를 공부하는 동안 한국 문화와 사회에 관심이 생겼어요." },
+            { "speaker": "선생님", "text": "파하드 씨는 사회학을 공부한 다음에 무엇을 할 거예요?" },
+            { "speaker": "파하드", "text": "고향에 돌아간 후에 대학교에서 학생들을 가르치고 싶어요." },
+            { "speaker": "선생님", "text": "그럼 이번에 고향에 가서 부모님께 파하드 씨의 생각을 말씀드려 보세요." }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-junbihagi2-dialogue",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            { "ko": "대학원", "translation_ru": "аспирантура, магистратура" },
+            { "ko": "교수", "translation_ru": "профессор" },
+            { "ko": "상담하다", "translation_ru": "консультироваться" },
+            { "ko": "반대하다", "translation_ru": "быть против" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 47,
+      "page_role": "content",
+      "source_photo": "IMG_0620",
+      "blocks": [
+        {
+          "id": "grammar-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "AV-는 동안(에)",
+          "section": "3",
+          "explanation": "Одно действие происходит на всём протяжении другого.",
+          "rules": ["глагол + 는 동안(에) (받침 роли не играет)"],
+          "examples": [
+            "가: 제가 씻는 동안 텔레비전을 봐도 돼요?\n나: 네, 그러세요.",
+            "저는 자는 동안에 전화가 왔어요."
+          ]
+        },
+        {
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "AV-기로 하다",
+          "section": "4",
+          "explanation": "Принятое решение, договорённость — «решил(и) делать».",
+          "rules": ["основа + 기로 하다/했어요/할 거예요"],
+          "examples": [
+            "가: 내일 몇 시에 만나기로 했어요?\n나: 두 시에 만나기로 했어요.",
+            "저는 담배를 끊기로 했어요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 48,
+      "page_role": "content",
+      "source_photo": "IMG_0621",
+      "blocks": [
+        {
+          "id": "exercise-3a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["청소를 하다 / 친구를 기다리다"],
+            "cues": ["청소를 하다 / 친구를 기다리다"],
+            "dialogue": [
+              "가: 지금 뭐 해요?",
+              "나: 청소를 하는 동안 친구를 기다려요."
+            ],
+            "emphasis": [["뭐 해요"], ["청소를 하는 동안", "친구를 기다려요"]]
+          },
+          "template": ["가: 지금 뭐 해요?", "나: {0} 동안 {1}."],
+          "items": [
+            { "given": ["숙제를 하다 / 음악을 듣다"], "answers": ["숙제를 하는", "음악을 들어요"] },
+            { "given": ["버스를 기다리다 / 책을 읽다"], "answers": ["버스를 기다리는", "책을 읽어요"] },
+            { "given": ["밥을 먹다 / 텔레비전을 보다"], "answers": ["밥을 먹는", "텔레비전을 봐요"] }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 49,
+      "page_role": "content",
+      "source_photo": "IMG_0622",
+      "blocks": [
+        {
+          "id": "exercise-4a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["날씨가 따뜻하다", "저녁에 산책하다"],
+            "cues": ["날씨가 따뜻하다 / 저녁에 산책하다"],
+            "dialogue": [
+              "가: 날씨가 따뜻하네요.",
+              "나: 그러네요. 저녁에 산책하기로 해요."
+            ],
+            "emphasis": [["따뜻하네요"], ["산책하기로 해요"]]
+          },
+          "template": ["가: {0}.", "나: 그러네요. {1}."],
+          "items": [
+            { "given": ["오늘 시간이 있다", "영화를 보다"], "answers": ["오늘 시간이 있네요", "영화를 보기로 해요"] },
+            { "given": ["날이 어둡다", "이만 집에 가다"], "answers": ["날이 어둡네요", "이만 집에 가기로 해요"] },
+            { "given": ["배가 고프다", "저녁을 먹다"], "answers": ["배가 고프네요", "저녁을 먹기로 해요"] }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 50,
+      "page_role": "content",
+      "source_photo": "IMG_0623",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            { "text": "아멜리는 고등학생 때 혼자 스페인으로 여행을 간 적이 있습니다. 여행 중에 친구를 사귀었습니다. 그 친구와 스페인 음식을 자주 먹었습니다. 스페인에서 좋아하는 사람이 생겼습니다. 자르갈은 다음에 그 친구와 같이 일본을 여행하기로 했습니다." }
+          ]
+        },
+        {
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "보기",
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": ["자르갈", "아멜리"],
+          "lines": [
+            { "speaker": "자르갈", "text": "아멜리 씨는 혼자 여행해 본 적이 있어요?" },
+            { "speaker": "아멜리", "text": "네, 고등학생 때 스페인으로 여행을 갔어요." },
+            { "speaker": "자르갈", "text": "어디를 여행했어요?" },
+            { "speaker": "아멜리", "text": "스페인 전체를 여행했어요." },
+            { "speaker": "자르갈", "text": "그래요? 무슨 일이 기억나요?" },
+            { "speaker": "아멜리", "text": "여행 중에 친구를 사귄 게 기억나요." },
+            { "speaker": "자르갈", "text": "그 친구와 무엇을 했어요?" },
+            { "speaker": "아멜리", "text": "그 친구와 스페인 음식을 자주 먹었어요. 아주 재미있는 사람이었어요." },
+            { "speaker": "자르갈", "text": "다음에 또 여행할 계획은 없어요?" },
+            { "speaker": "아멜리", "text": "내년에 그 친구하고 같이 일본을 여행하기로 했어요." }
+          ]
+        },
+        {
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            { "text": "1) 여러분은 어떤 경험을 한 적이 있습니까?" },
+            { "text": "2) 무슨 일이 기억납니까?" },
+            { "text": "3) 다음에 무엇을 하기로 했습니까?" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 51,
+      "page_role": "content",
+      "source_photo": "IMG_0624",
+      "blocks": [
+        {
+          "id": "listening-dream",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "꿈에 대해 듣고 말하기",
+          "audio_id": "211",
+          "warmup": {
+            "prompt": "무엇입니까? 이야기해 보십시오. (수의사가 강아지를 진찰하는 사진, 회의를 하는 사람들의 사진)",
+            "illustration": { "storage_path": null, "original_kind": "photo" }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "questions": [
+            { "kind": "open", "prompt": "1) 무슨 이야기를 합니까?" },
+            {
+              "kind": "choice",
+              "prompt": "2) 들은 내용과 같은 것을 고르십시오.",
+              "choices": [
+                "왕루는 수의사가 되고 싶어 합니다.",
+                "왕루는 내년에 자원봉사를 할 겁니다.",
+                "왕루는 10년 동안 자원봉사를 했습니다.",
+                "왕루는 10년 후에 다시 만나고 싶어 합니다."
+              ],
+              "correct": null
+            }
+          ],
+          "followup": "여러분의 꿈은 무엇입니까? 친구와 이야기해 보십시오."
+        }
+      ]
+    },
+    {
+      "page_number": 52,
+      "page_role": "content",
+      "source_photo": "IMG_0625",
+      "blocks": [
+        {
+          "id": "text-reading-racer",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "illustration": { "storage_path": null, "original_kind": "photo" },
+          "text_kind": "passage",
+          "section": "읽고 말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            { "text": "저는 어렸을 때부터 자동차를 좋아했습니다. 그래서 늘 자동차 경주 선수가 되고 싶었습니다. 고등학생 때 처음 자동차 경주를 봤습니다. 소리와 속도가 정말 멋있었습니다. 그때부터 자동차 경주 선수가 되기로 결심했습니다." },
+            { "text": "저는 열여덟 살 때부터 자동차 경주를 배우기 시작했습니다. 새벽부터 밤늦게까지 연습했습니다. 그래서 지금은 아홉 시간 동안 운전을 해도 힘들지 않습니다. 저는 자동차 경주 대회에서 우승하기 위해 매일 연구하고 연습하고 있습니다." },
+            { "text": "저는 아직 자동차 경주 대회에서 우승한 적이 없습니다. 하지만 꿈을 이루려고 계속 노력하고 있습니다. 언젠가 꼭 대회에서 우승해서 제 꿈을 이루고 싶습니다." }
+          ]
+        },
+        {
+          "id": "reading-racer-questions",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "꿈에 대한 글을 읽고 말하기",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "1) 이 사람은 자동차 경주 선수가 되려고 무엇을 합니까?",
+              "choices": [
+                "이 사람은 자동차 경주 선수가 될 겁니다.",
+                "이 사람은 열여덟 살 때부터 자동차 경주를 배웠습니다.",
+                "이 사람은 자동차 경주 대회에서 자주 우승했습니다.",
+                "이 사람은 자동차 회사를 만들 겁니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "choice",
+              "prompt": "2) 이 글의 내용과 같은 것은 무엇입니까?",
+              "choices": [
+                "이 사람은 어렸을 때부터 자동차를 좋아했습니다.",
+                "이 사람은 대회에서 여러 번 우승했습니다.",
+                "이 사람은 운전을 오래 하면 힘들어합니다.",
+                "이 사람은 자동차 경주에 관심이 없습니다."
+              ],
+              "correct": 0
+            }
+          ],
+          "followup": "여러분의 꿈은 무엇이었습니까? 친구와 이야기해 보십시오."
+        }
+      ]
+    },
+    {
+      "page_number": 53,
+      "page_role": "content",
+      "source_photo": "IMG_0626",
+      "blocks": [
+        {
+          "id": "writing-dream",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "꿈에 대한 글 쓰기",
+          "prompt": "1. 꿈에 대한 글을 써 보십시오. 1) 개요를 써 보십시오. 2) 위 개요를 바탕으로 글을 써 보십시오.",
+          "outline": [
+            { "stage": "처음", "questions": ["여러분의 꿈은 무엇입니까?"] },
+            { "stage": "가운데", "questions": ["언제부터 그 꿈을 가졌습니까?", "그 꿈을 위해 무엇을 준비하고 있습니까?"] },
+            { "stage": "끝", "questions": ["그 꿈을 이루면 무엇을 하고 싶습니까?"] }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 54,
+      "page_role": "content",
+      "source_photo": "IMG_0627",
+      "blocks": [
+        {
+          "id": "text-culture-university",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "한국의 대학생",
+          "title_ru": "Корейские студенты",
+          "illustration": { "storage_path": null, "original_kind": "photo" },
+          "text_kind": "passage",
+          "section": "문화 이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            { "text": "1980년대 한국의 대학생들은 정치와 사회에 대한 관심이 많았습니다. 하지만 요즘 대학생들은 사회에 대한 관심도 많지만 자신에 대한 관심이 많습니다. 자신이 좋아하는 일을 찾으려고 합니다. 그래서 자신의 진로와 취미를 위해 시간을 많이 씁니다." },
+            { "text": "생활이 여유로워지면서 봉사 활동도 많이 합니다. 고아원에서 아이들을 가르치거나 장애인이나 외로운 노인들을 도와주기도 합니다. 그리고 회사에서 인턴으로 일을 배우면서 미래를 준비하기도 합니다. 한국의 대학생들은 자신의 미래를 위해 오늘도 열심히 노력하고 있습니다." },
+            { "text": "1) 요즘 한국의 대학생들은 무엇에 관심이 많습니까?" },
+            { "text": "2) 여러분 나라의 대학생들은 어떤 것을 가지고 있습니까? 여러분 나라의 대학생들에 대해 이야기해 보십시오." }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-university",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            { "ko": "정치", "translation_ru": "политика" },
+            { "ko": "사회", "translation_ru": "общество" },
+            { "ko": "자신", "translation_ru": "сам, себя" },
+            { "ko": "장애인", "translation_ru": "человек с инвалидностью" },
+            { "ko": "여유롭다", "translation_ru": "быть в достатке, иметь свободное время" }
+          ]
+        },
+        {
+          "id": "pronunciation-3",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "받침 'ㄴ'+'ㄹ',받침 'ㄹ'+'ㄴ' (유음화)",
+          "audio_id": "212",
+          "examples": ["연례", "음료", "전라도", "신라", "실내"]
+        }
+      ]
+    }
+  ]
+}
