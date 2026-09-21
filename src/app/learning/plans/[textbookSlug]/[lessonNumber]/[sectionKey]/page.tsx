@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { displayName, requireUser } from "@/features/auth/requireUser";
+import { displayName, getProfileRow, requireUser } from "@/features/auth/requireUser";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
@@ -31,9 +31,9 @@ export default async function LessonSectionPage({
 
   const { supabase, user } = await requireUser();
 
-  const [{ data: profile }, { data: rawPages }, { data: lesson }] =
+  const [profile, { data: rawPages }, { data: lesson }] =
     await Promise.all([
-      supabase.from("profiles").select("username").eq("id", user.id).single(),
+      getProfileRow(user.id),
       supabase
         .from("textbook_pages")
         .select(

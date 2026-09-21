@@ -1,7 +1,12 @@
+import { cache } from "react";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
-export async function createClient() {
+// cache() — один клиент на весь server-render (layout, page и любые
+// вложенные компоненты, которые его запросят, делят один и тот же объект
+// вместо создания нового на каждый вызов); держит и последующий
+// auth.getUser()/getProfileRow() мемоизированными в requireUser.ts.
+export const createClient = cache(async function createClient() {
   const cookieStore = await cookies();
 
   return createServerClient(
@@ -25,4 +30,4 @@ export async function createClient() {
       },
     },
   );
-}
+});

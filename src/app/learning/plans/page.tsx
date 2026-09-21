@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { displayName, requireUser } from "@/features/auth/requireUser";
+import { displayName, getProfileRow, requireUser } from "@/features/auth/requireUser";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { TOTAL_LESSONS } from "./constants";
@@ -8,8 +8,8 @@ import styles from "./learning.module.css";
 export default async function PlansPage() {
   const { supabase, user } = await requireUser();
 
-  const [{ data: profile }, { data: textbooks, error }] = await Promise.all([
-    supabase.from("profiles").select("username").eq("id", user.id).single(),
+  const [profile, { data: textbooks, error }] = await Promise.all([
+    getProfileRow(user.id),
     supabase
       .from("textbooks")
       .select("id, slug, title, level, learning_plans!inner(slug)")

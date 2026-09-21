@@ -1,4 +1,4 @@
-import { displayName, requireUser } from "@/features/auth/requireUser";
+import { displayName, getProfileRow, requireUser } from "@/features/auth/requireUser";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { FontSettingsForm } from "@/features/settings/components/FontSettingsForm";
@@ -6,13 +6,8 @@ import { PreserveFiltersToggle } from "@/features/settings/components/PreserveFi
 import styles from "./settings.module.css";
 
 export default async function SettingsPage() {
-  const { supabase, user } = await requireUser();
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("username, font_ui, font_kr")
-    .eq("id", user.id)
-    .single();
+  const { user } = await requireUser();
+  const profile = await getProfileRow(user.id);
 
   return (
     <div className={styles.page}>

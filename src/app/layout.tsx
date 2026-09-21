@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import type { Metadata, Viewport } from "next";
-import { createClient } from "@/lib/supabase/server";
+import { getAuthUser, getProfileRow } from "@/features/auth/requireUser";
 import { DictionaryPreload } from "@/features/dictionary/DictionaryPreload";
 import { DictionaryCacheProvider } from "@/features/dictionary/DictionaryCacheContext";
 import { ActiveLanguageProvider } from "@/features/language/ActiveLanguageContext";
@@ -27,20 +27,13 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { user } = await getAuthUser();
 
   let fontUiVar: string | undefined;
   let fontKrVar: string | undefined;
   let activeLanguage: Language = "ko";
   if (user) {
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("font_ui, font_kr, active_language")
-      .eq("id", user.id)
-      .single();
+    const profile = await getProfileRow(user.id);
     fontUiVar = fontUiCssVar(profile?.font_ui ?? null);
     fontKrVar = fontKrCssVar(profile?.font_kr ?? null);
     activeLanguage = (profile?.active_language as Language | undefined) ?? "ko";

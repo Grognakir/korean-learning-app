@@ -2,7 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { cookies } from "next/headers";
 import type { Language } from "@/features/dictionary/types";
-import { createClient } from "@/lib/supabase/server";
+import { getAuthUser, getProfileRow } from "@/features/auth/requireUser";
 
 export const GUEST_LANGUAGE_COOKIE = "guest_language";
 
@@ -16,20 +16,14 @@ export async function readGuestLanguage(): Promise<Language> {
  * Активный язык обучения текущего пользователя (или гостя). cache()
  * дедуплицирует повторные вызовы в пределах одного запроса (layout.tsx и
  * вложенная page.tsx оба его читают независимо — в App Router данные
- * layout'а не передаются странице автоматически).
+ * layout'а не передаются странице автоматически); getAuthUser/getProfileRow
+ * сами тоже мемоизированы, так что этот вызов не добавляет собственных
+ * сетевых запросов сверх того, что уже сделал кто-то ещё в этом request'е.
  */
 export const getActiveLanguage = cache(async (): Promise<Language> => {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { user } = await getAuthUser();
   if (!user) return readGuestLanguage();
 
-  const { data } = await supabase
-    .from("profiles")
-    .select("active_language")
-    .eq("id", user.id)
-    .single();
-
-  return (data?.active_language as Language | undefined) ?? "ko";
+  const profile = await getProfileRow(user.id);
+  return (profile?.active_language as Language | undefined) ?? "ko";
 });

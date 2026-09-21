@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server";
+import { getAuthUser, getProfileRow } from "@/features/auth/requireUser";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
@@ -19,19 +19,12 @@ function compareCategoryNames(a: string, b: string): number {
 }
 
 export default async function DictionaryPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { supabase, user } = await getAuthUser();
 
   let username: string | null = null;
   let language: Language = "ko";
   if (user) {
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("username, active_language")
-      .eq("id", user.id)
-      .single();
+    const profile = await getProfileRow(user.id);
     username = profile?.username ?? user.email ?? "Пользователь";
     language = (profile?.active_language as Language | undefined) ?? "ko";
   } else {

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { displayName, requireUser } from "@/features/auth/requireUser";
+import { displayName, getProfileRow, requireUser } from "@/features/auth/requireUser";
 import { fetchAllRows } from "@/lib/supabase/fetchAll";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
@@ -20,8 +20,8 @@ export default async function TextbookPlanPage({
   // внутри запроса учебника — такой embed упирается в max_rows (1000) и
   // молча обрезал бы список уроков при импорте новых. fetchAllRows
   // пагинирует, как в остальных местах проекта.
-  const [{ data: profile }, { data: textbook }, pageRows] = await Promise.all([
-    supabase.from("profiles").select("username").eq("id", user.id).single(),
+  const [profile, { data: textbook }, pageRows] = await Promise.all([
+    getProfileRow(user.id),
     supabase
       .from("textbooks")
       .select("id, title, level")

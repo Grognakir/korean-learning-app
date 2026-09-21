@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
+import { getAuthUser, getProfileRow } from "@/features/auth/requireUser";
 import { devSignIn } from "@/features/auth/actions";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
@@ -12,10 +12,7 @@ import { getActiveLanguage } from "@/features/language/getActiveLanguage";
 import styles from "./page.module.css";
 
 export default async function HomePage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { supabase, user } = await getAuthUser();
 
   if (!user) {
     const guestLanguage = await getActiveLanguage();
@@ -75,11 +72,7 @@ export default async function HomePage() {
     );
   }
 
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("username")
-    .eq("id", user.id)
-    .single();
+  const profile = await getProfileRow(user.id);
 
   const username = profile?.username ?? user.email ?? "Пользователь";
   const activeLanguage = await getActiveLanguage();
