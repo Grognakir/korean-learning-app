@@ -36,7 +36,7 @@ const GREETING_GALLERY_CODES = [
 
 const LESSON_3_ILLUSTRATIONS = [
   "illustration_1_historical_drama.png",
-  "illustration_2_university_counseling.png",
+  "illustration_2_university_counseling_v2.png",
   "illustration_3_future_careers.png",
   "illustration_4_racing_dream.png",
   "illustration_5_university_volunteering.png",
