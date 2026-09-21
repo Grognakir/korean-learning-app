@@ -9,6 +9,7 @@ import { resolveBlockAssets, textbookAssetPrefix } from "@/features/learning/res
 import type { Block, TextbookPageRow } from "@/features/learning/types";
 import styles from "../lesson.module.css";
 import { SectionNav } from "./SectionNav";
+import { PlanBreadcrumbs } from "../../../PlanBreadcrumbs";
 
 export default async function LessonSectionPage({
   params,
@@ -86,14 +87,17 @@ export default async function LessonSectionPage({
     </h1>
   );
 
-  const topBackLink = nav.prev ? (
-    <Link href={nav.prev.href} className={styles.backLink}>
-      ← <span className="kr">{nav.prev.key}</span>
-    </Link>
-  ) : (
-    <Link href={`/learning/plans/${textbookSlug}/${lessonNumber}`} className={styles.backLink}>
-      ← К оглавлению
-    </Link>
+  const breadcrumbs = (
+    <PlanBreadcrumbs
+      items={[
+        { href: "/learning/plans", label: "К учебникам" },
+        { href: `/learning/plans/${textbookSlug}`, label: "К урокам" },
+        {
+          href: `/learning/plans/${textbookSlug}/${lessonNumber}`,
+          label: "К оглавлению",
+        },
+      ]}
+    />
   );
 
   if (sectionBlocks.length === 0) {
@@ -101,7 +105,7 @@ export default async function LessonSectionPage({
       <div className={styles.pageShell}>
         <AppHeader username={username} />
         <main className={styles.wrap}>
-          {topBackLink}
+          {breadcrumbs}
           {heading}
           <p className={styles.emptyState}>
             Материалы раздела скоро появятся.
@@ -119,7 +123,7 @@ export default async function LessonSectionPage({
       <AppHeader username={username} />
 
       <main className={styles.wrap}>
-        {topBackLink}
+        {breadcrumbs}
 
         {heading}
 

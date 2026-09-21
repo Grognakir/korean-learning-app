@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { displayName, requireUser } from "@/features/auth/requireUser";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
+import { PlanBreadcrumbs } from "../../PlanBreadcrumbs";
 import type { Block, LessonTocBlock, TextbookPageRow } from "@/features/learning/types";
 import styles from "./lesson.module.css";
 
@@ -73,9 +73,12 @@ export default async function LessonPage({
       <div className={styles.pageShell}>
         <AppHeader username={username} />
         <main className={styles.wrap}>
-          <Link href={`/learning/plans/${textbookSlug}`} className={styles.backLink}>
-            ← К списку уроков
-          </Link>
+          <PlanBreadcrumbs
+            items={[
+              { href: "/learning/plans", label: "К учебникам" },
+              { href: `/learning/plans/${textbookSlug}`, label: "К урокам" },
+            ]}
+          />
           <p className={styles.emptyState}>Урок {lessonNumber} скоро появится.</p>
         </main>
         <BottomTabBar />
@@ -91,9 +94,12 @@ export default async function LessonPage({
       <AppHeader username={username} />
 
       <main className={styles.wrap}>
-        <Link href={`/learning/plans/${textbookSlug}`} className={styles.backLink}>
-          ← К списку уроков
-        </Link>
+        <PlanBreadcrumbs
+          items={[
+            { href: "/learning/plans", label: "К учебникам" },
+            { href: `/learning/plans/${textbookSlug}`, label: "К урокам" },
+          ]}
+        />
 
         <h1 className={styles.title}>
           {lessonTitle ? (

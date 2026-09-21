@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { displayName, requireUser } from "@/features/auth/requireUser";
 import { fetchAllRows } from "@/lib/supabase/fetchAll";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { LessonList, type LessonListItem } from "../LessonList";
+import { PlanBreadcrumbs } from "../PlanBreadcrumbs";
 import { TOTAL_LESSONS } from "../constants";
 import styles from "../learning.module.css";
 
@@ -78,9 +78,7 @@ export default async function TextbookPlanPage({
       <AppHeader username={username} />
 
       <main className={styles.wrap}>
-        <Link href="/learning/plans" className={styles.backLink}>
-          ← К выбору учебника
-        </Link>
+        <PlanBreadcrumbs items={[{ href: "/learning/plans", label: "К учебникам" }]} />
 
         <div className={styles.header}>
           <p className={styles.eyebrow}>План 인하대학교 · Учебники</p>
