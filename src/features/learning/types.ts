@@ -166,7 +166,11 @@ export type WritingExerciseBlock = ContentBlockBase & {
   type: "writing_exercise";
   title: string;
   prompt: string;
-  outline: { stage: string; questions: string[] }[];
+  outline: {
+    stage: string;
+    explanation: string;
+    questions: { kr: string; ru: string }[];
+  }[];
 };
 
 /** Раздел 발음 — правило чтения (например 구개음화) и слова-примеры. */

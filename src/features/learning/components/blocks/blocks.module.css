@@ -1070,14 +1070,74 @@
   white-space: normal;
 }
 
+.writingOutlineStageLabel {
+  display: block;
+  font-weight: 600;
+}
+
+.writingOutlineExplanation {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 .writingOutlineQuestions {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin-bottom: 6px;
-  color: var(--ink-soft);
+  gap: 6px;
+}
+
+.writingOutlineQuestion {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  color: var(--ink);
   font-size: 13px;
   line-height: 1.4;
+}
+
+.writingOutlineAnswerCell {
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.writingOutlineAnswer {
+  display: block;
+  width: 100%;
+  min-height: 64px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  padding: 6px 8px;
+  line-height: 1.4;
+}
+
+.writingOutlineAnswer:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 6%, #fff);
+}
+
+/* Пропорции колонок таблицы-плана — 3-я (ответ) самая широкая. */
+.writingOutlineTable th:nth-child(1),
+.writingOutlineTable td:nth-child(1) {
+  width: 22%;
+}
+
+.writingOutlineTable th:nth-child(2),
+.writingOutlineTable td:nth-child(2) {
+  width: 33%;
+}
+
+.writingOutlineTable th:nth-child(3),
+.writingOutlineTable td:nth-child(3) {
+  width: 45%;
 }
 
 /* 원고지 — сетка выше textarea: клик по клетке фокусирует textarea (реальный
@@ -1100,6 +1160,10 @@
   margin: 0;
   opacity: 0;
   cursor: text;
+  /* Будучи position:absolute, textarea красится поверх обычного потока
+     (.manuscriptGrid) независимо от порядка в DOM — без этого клики по
+     клеткам никогда не долетали бы до их onClick, попадая в textarea. */
+  pointer-events: none;
 }
 
 .manuscriptGrid {
@@ -1113,7 +1177,7 @@
   display: flex;
 }
 
-.manuscriptRow span {
+.manuscriptCell {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1125,12 +1189,35 @@
   font-size: 14px;
   line-height: 1;
   overflow: hidden;
+  cursor: text;
 }
 
-.manuscriptRow span:first-child {
+.manuscriptCell:first-child {
   border-left: 1px solid var(--line);
 }
 
-.manuscriptGrid .manuscriptRow:first-child span {
+.manuscriptGrid .manuscriptRow:first-child .manuscriptCell {
   border-top: 1px solid var(--line);
+}
+
+/* Клетка, где сейчас находится курсор textarea — реальный курсор невидим
+   (textarea прозрачен), поэтому подсвечиваем клетку сами. */
+.manuscriptCellActive {
+  background: color-mix(in srgb, var(--blue) 10%, transparent);
+  box-shadow: inset 2px 0 0 var(--blue);
+}
+
+/* Числа-ориентиры сбоку (100/200/300…), как на бланке 원고지 — печатаются
+   у каждой 5-й строки независимо от того, что уже написано. */
+.manuscriptRowNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  margin-left: 4px;
+  writing-mode: vertical-rl;
+  font-size: 10px;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
 }
