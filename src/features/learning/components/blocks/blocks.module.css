@@ -1064,41 +1064,77 @@
 }
 
 /* writing_exercise */
-.writingOutlineCell {
+.writingInstructions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.writingTask,
+.writingStep {
+  margin: 0;
+  color: var(--ink);
+}
+
+.writingTask {
+  font-size: var(--kr-font-md);
+  font-weight: 600;
+}
+
+.writingStep {
+  font-size: var(--kr-font-sm);
+}
+
+.writingOutlineWrap {
+  overflow: visible;
+}
+
+.writingOutlineTable {
+  table-layout: fixed;
+}
+
+.writingOutlineTable .writingOutlineCell {
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
   white-space: normal;
 }
 
 .writingOutlineStageLabel {
   display: block;
   font-weight: 600;
-}
-
-.writingOutlineExplanation {
-  display: block;
-  margin-top: 2px;
-  color: var(--ink-soft);
-  font-size: 12px;
-  line-height: 1.4;
+  text-align: center;
 }
 
 .writingOutlineQuestions {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .writingOutlineQuestion {
-  display: flex;
-  align-items: baseline;
-  gap: 4px;
+  display: block;
+  min-width: 0;
   color: var(--ink);
   font-size: 13px;
   line-height: 1.4;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
-.writingOutlineAnswerCell {
+.writingOutlineQuestion .writingOutlineQuestionText {
+  display: inline;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.writingOutlineQuestion .labelInfo {
+  margin-left: 3px;
+  vertical-align: -2px;
+}
+
+.writingOutlineTable .writingOutlineAnswerCell {
   text-align: left;
   vertical-align: top;
   white-space: normal;
@@ -1108,7 +1144,9 @@
   display: block;
   width: 100%;
   min-height: 64px;
-  resize: vertical;
+  resize: none;
+  overflow: hidden;
+  field-sizing: content;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: none;
@@ -1124,20 +1162,16 @@
   background: color-mix(in srgb, var(--blue) 6%, #fff);
 }
 
-/* Пропорции колонок таблицы-плана — 3-я (ответ) самая широкая. */
-.writingOutlineTable th:nth-child(1),
-.writingOutlineTable td:nth-child(1) {
-  width: 22%;
+.writingOutlineStageColumn {
+  width: 14%;
 }
 
-.writingOutlineTable th:nth-child(2),
-.writingOutlineTable td:nth-child(2) {
-  width: 33%;
+.writingOutlineQuestionColumn {
+  width: 38%;
 }
 
-.writingOutlineTable th:nth-child(3),
-.writingOutlineTable td:nth-child(3) {
-  width: 45%;
+.writingOutlineAnswerColumn {
+  width: 48%;
 }
 
 /* 원고지 — сетка выше textarea: клик по клетке фокусирует textarea (реальный
@@ -1146,7 +1180,7 @@
 .manuscriptWrap {
   position: relative;
   cursor: text;
-  overflow-x: auto;
+  overflow: visible;
 }
 
 .manuscriptInput {
@@ -1169,24 +1203,28 @@
 .manuscriptGrid {
   display: flex;
   flex-direction: column;
-  width: max-content;
-  min-width: 100%;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .manuscriptRow {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--manuscript-columns), minmax(0, 1fr));
 }
 
 .manuscriptCell {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  width: 26px;
-  height: 30px;
+  min-width: 0;
+  aspect-ratio: 1;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  font-size: 14px;
+  background: #fff;
+  font-size: clamp(9px, 1.25vw, 14px);
   line-height: 1;
   overflow: hidden;
   cursor: text;
@@ -1203,21 +1241,58 @@
 /* Клетка, где сейчас находится курсор textarea — реальный курсор невидим
    (textarea прозрачен), поэтому подсвечиваем клетку сами. */
 .manuscriptCellActive {
-  background: color-mix(in srgb, var(--blue) 10%, transparent);
-  box-shadow: inset 2px 0 0 var(--blue);
+  z-index: 1;
+}
+
+.manuscriptCellActive::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: calc(50% + 0.45em);
+  width: 1.5px;
+  background: var(--ink);
+  animation: manuscriptCaret 1s steps(1) infinite;
+}
+
+@keyframes manuscriptCaret {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Числа-ориентиры сбоку (100/200/300…), как на бланке 원고지 — печатаются
    у каждой 5-й строки независимо от того, что уже написано. */
 .manuscriptRowNumber {
+  position: absolute;
+  left: calc(100% + 1px);
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  width: 16px;
-  margin-left: 4px;
+  width: 14px;
+  height: 100%;
+  z-index: 2;
   writing-mode: vertical-rl;
   font-size: 10px;
   color: var(--ink-soft);
   font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+@media (--to-compact) {
+  .writingOutlineTable th,
+  .writingOutlineTable td {
+    padding-inline: 4px;
+  }
+
+  .writingOutlineQuestion {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .manuscriptCell {
+    font-size: var(--kr-font-sm);
+  }
 }

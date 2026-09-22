@@ -8,8 +8,9 @@
 //   предыдущей строки (в той же клетке, что и последний слог), а не уходит
 //   в начало следующей.
 //
-// Каждая клетка несёт ещё и caretIndex — индекс в исходном сыром тексте
-// (значение hidden-textarea), куда встаёт курсор при клике по этой клетке.
+// Каждая клетка несёт индексы начала и конца в исходном сыром тексте
+// (значении hidden-textarea). При клике курсор встаёт в конец клетки:
+// поэтому Backspace удаляет символ, по которому кликнули.
 // Отступ абзаца не продвигает счётчик — поэтому его caretIndex естественно
 // совпадает с началом реального текста абзаца: кликнуть по нему — то же
 // самое, что кликнуть по первой содержательной клетке, вписать в саму
@@ -24,6 +25,7 @@ const PUNCTUATION = new Set([".", ",", "!", "?", ";", ":", "'", '"', "…", "·"
 export type ManuscriptCell = {
   char: string;
   caretIndex: number;
+  caretAfterIndex: number;
 };
 
 function tokenize(text: string): string[] {
@@ -57,7 +59,7 @@ export function layoutManuscript(
   let rawIndex = 0;
 
   function padRow(row: ManuscriptCell[], caretIndex: number) {
-    while (row.length < cols) row.push({ char: "", caretIndex });
+    while (row.length < cols) row.push({ char: "", caretIndex, caretAfterIndex: caretIndex });
   }
 
   function wrap() {
@@ -73,9 +75,10 @@ export function layoutManuscript(
       // клетки не трогаем — он остаётся у исходного слога, не у знака).
       const prevRow = rows[rows.length - 1];
       prevRow[prevRow.length - 1].char += char;
+      prevRow[prevRow.length - 1].caretAfterIndex = caretIndex + char.length;
       return;
     }
-    current.push({ char, caretIndex });
+    current.push({ char, caretIndex, caretAfterIndex: caretIndex + char.length });
     if (current.length === cols) wrap();
   }
 
