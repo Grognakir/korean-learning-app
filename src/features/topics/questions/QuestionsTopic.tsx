@@ -40,26 +40,45 @@ const CHEAT_ITEMS = [
   { kr: "어디", rr: "eodi", ru: "где, куда" },
   { kr: "언제", rr: "eonje", ru: "когда" },
   { kr: "왜", rr: "wae", ru: "почему" },
-  { kr: "어떻게", rr: "eotteoke", ru: "как" },
-  { kr: "얼마", rr: "eolma", ru: "сколько (цена)" },
+  { kr: "어떻게", rr: "eotteoke", ru: "как сделать" },
+  { kr: "어떻다/어때요?", rr: "eotteota/eottaeyo", ru: "каков / как тебе" },
+  { kr: "어떤 + сущ.", rr: "eotteon", ru: "какой по качествам" },
+  { kr: "얼마", rr: "eolma", ru: "сколько (величина/цена)" },
   { kr: "얼마나", rr: "eolmana", ru: "насколько/как долго" },
-  { kr: "몇 + сч.сл.", rr: "myeot", ru: "сколько (штук)" },
+  { kr: "몇 + сущ.", rr: "myeot", ru: "сколько / какой номер" },
   { kr: "어느 + сущ.", rr: "eoneu", ru: "который (из)" },
   { kr: "무슨 + сущ.", rr: "museun", ru: "что за" },
-  { kr: "며칠", rr: "myeochil", ru: "какое число" },
+  { kr: "며칠", rr: "myeochil", ru: "какое число / сколько дней" },
 ];
 
 const TOC = [
-  { href: "#types", label: "Типы вопросов" },
-  { href: "#words", label: "의문사" },
-  { href: "#particles", label: "Частицы" },
-  { href: "#vs", label: "무슨 vs 어느" },
-  { href: "#counters", label: "몇 + счётные" },
-  { href: "#style", label: "Уровни вежливости" },
-  { href: "#answers", label: "Ответы" },
-  { href: "#quiz", label: "Тренажёр" },
-  { href: "#cheat", label: "Шпаргалка" },
+  { href: "#types", number: "01", label: "Типы вопросов" },
+  { href: "#words", number: "02", label: "Вопросительные слова" },
+  { href: "#particles", number: "03", label: "Частицы" },
+  { href: "#vs", number: "04", label: "Три «какой»" },
+  { href: "#counters", number: "05", label: "몇 + счётные" },
+  { href: "#style", number: "06", label: "Уровни вежливости" },
+  { href: "#answers", number: "07", label: "Ответы" },
+  { href: "#quiz", number: "08", label: "Тренажёр" },
+  { href: "#cheat", number: "09", label: "Шпаргалка" },
 ];
+
+function TopicNav() {
+  return (
+    <nav aria-label="Содержание темы">
+      <ul className={styles.navList}>
+        {TOC.map((item) => (
+          <li key={item.href}>
+            <a href={item.href} className={styles.navItem}>
+              <span className={styles.navNumber}>{item.number}</span>
+              <span>{item.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
 
 export function QuestionsTopic() {
   return (
@@ -111,13 +130,29 @@ export function QuestionsTopic() {
         </div>
       </div>
 
-      <nav className={styles.toc}>
-        {TOC.map((item) => (
-          <a key={item.href} href={item.href} className={styles.tocLink}>
-            {item.label}
-          </a>
-        ))}
-      </nav>
+      <div className={styles.topicLayout}>
+        <aside className={styles.sectionAside}>
+          <TopicNav />
+        </aside>
+
+        <details className={styles.mobileToc}>
+          <summary className={styles.mobileTocSummary}>
+            <span>Содержание темы</span>
+            <svg className={styles.mobileTocIcon} viewBox="0 0 16 16" aria-hidden="true">
+              <path
+                d="M6 3l5 5-5 5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </summary>
+          <TopicNav />
+        </details>
+
+        <div className={styles.content}>
 
       <section id="types" className={styles.section}>
         <div className={styles.secHead}>
@@ -125,17 +160,17 @@ export function QuestionsTopic() {
           <h2>Два типа вопросов</h2>
         </div>
         <p className={styles.secDesc}>
-          В корейском нет отдельной «вопросительной формы» глагола — вопрос делается либо
-          интонацией/окончанием, либо добавлением 의문사 в предложение. Структура предложения не
-          меняется.
+          Порядок слов в вопросе обычно не меняется. В зависимости от стиля речи вопрос
+          обозначается интонацией или специальным вопросительным окончанием; для открытого вопроса
+          добавляется 의문사.
         </p>
         <div className={styles.typeGrid}>
           <div className={`${styles.typeCard} ${styles.typeCardClosed}`}>
             <span className={`${styles.badge} ${styles.badgeClosed}`}>закрытый · да/нет</span>
             <h3>Без вопросительного слова</h3>
             <p className={styles.typeCardText}>
-              То же самое предложение, что и утверждение — просто с «?» на конце (на письме) и
-              восходящей интонацией (в речи).
+              В 해요체 и 반말 форма часто совпадает с утверждением и различается интонацией. В
+              официальном стиле окончание меняется: 갑니다 → 갑니까?
             </p>
             <div className={styles.ex}>
               <span className="kr">리나 씨, 학생이에요?</span>
@@ -239,9 +274,9 @@ export function QuestionsTopic() {
       <section id="vs" className={styles.section}>
         <div className={styles.secHead}>
           <span className={styles.secNum}>04</span>
-          <h2>무슨 vs 어느 — частая путаница</h2>
+          <h2>무슨 · 어떤 · 어느 — три варианта «какой»</h2>
         </div>
-        <p className={styles.secDesc}>Оба переводятся как «какой», но спрашивают о разном.</p>
+        <p className={styles.secDesc}>Все три стоят перед существительным, но спрашивают о разном.</p>
         <div className={styles.vsGrid}>
           <div className={styles.vsCard}>
             <h4 className="kr">무슨 <span className={styles.rr}>museun</span></h4>
@@ -252,6 +287,17 @@ export function QuestionsTopic() {
               <span className="kr">무슨 책이에요?</span>
               <span className={styles.rr}>Museun chaegieyo?</span>
               <span className={styles.ruLine}>Что за книга? / О чём книга?</span>
+            </div>
+          </div>
+          <div className={styles.vsCard}>
+            <h4 className="kr">어떤 <span className={styles.rr}>eotteon</span></h4>
+            <p>
+              какой по <b>свойствам / характеру</b> — ответ описывает качества предмета или человека
+            </p>
+            <div className={styles.ex}>
+              <span className="kr">어떤 책이에요?</span>
+              <span className={styles.rr}>Eotteon chaegieyo?</span>
+              <span className={styles.ruLine}>Какая это книга? Интересная, сложная, полезная?</span>
             </div>
           </div>
           <div className={styles.vsCard}>
@@ -266,6 +312,40 @@ export function QuestionsTopic() {
             </div>
           </div>
         </div>
+
+        <div className={styles.familyBlock}>
+          <h3>어떻다 — одно семейство, три разные роли</h3>
+          <p className={styles.secDesc}>
+            Похожие формы нельзя заменять друг другом: выбор зависит от того, спрашиваем ли мы о
+            способе действия, качестве предмета или общем впечатлении.
+          </p>
+          <div className={styles.vsGrid}>
+            <div className={styles.vsCard}>
+              <h4 className="kr">어떻게 + действие</h4>
+              <p>как, каким способом</p>
+              <div className={styles.ex}>
+                <span className="kr">이걸 어떻게 만들어요?</span>
+                <span className={styles.ruLine}>Как это делают?</span>
+              </div>
+            </div>
+            <div className={styles.vsCard}>
+              <h4 className="kr">어떤 + существительное</h4>
+              <p>какой, обладающий какими качествами</p>
+              <div className={styles.ex}>
+                <span className="kr">어떤 영화예요?</span>
+                <span className={styles.ruLine}>Какой это фильм?</span>
+              </div>
+            </div>
+            <div className={styles.vsCard}>
+              <h4 className="kr">어때요?</h4>
+              <p>каково, как тебе — вопрос о состоянии или мнении</p>
+              <div className={styles.ex}>
+                <span className="kr">이 영화 어때요?</span>
+                <span className={styles.ruLine}>Как тебе этот фильм?</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="counters" className={styles.section}>
@@ -274,7 +354,8 @@ export function QuestionsTopic() {
           <h2>몇 + счётное слово</h2>
         </div>
         <p className={styles.secDesc}>
-          몇 сам по себе не работает — сразу после него нужно счётное слово (для чего именно считаем).
+          몇 обычно ставится перед счётным словом или существительным, связанным с числом: 몇 개,
+          몇 명, 몇 년, 몇 학년.
         </p>
         <div className={styles.tableWrap}>
           <table className={styles.table}>
@@ -307,8 +388,8 @@ export function QuestionsTopic() {
           <h2>Уровни вежливости в вопросе</h2>
         </div>
         <p className={styles.secDesc}>
-          Вопрос строится на тех же окончаниях, что и утверждение — просто добавляется «?».
-          Переключите стиль:
+          В 해요체 и 반말 вопрос часто отличается только интонацией. В официальном стиле используются
+          отдельные вопросительные окончания. Переключите стиль:
         </p>
         <FormalityToggle />
       </section>
@@ -388,6 +469,8 @@ export function QuestionsTopic() {
           </div>
         </div>
       </section>
+        </div>
+      </div>
     </div>
   );
 }

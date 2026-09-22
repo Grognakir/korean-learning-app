@@ -11,7 +11,8 @@ export type QuestionWord = {
   answers: string[];
 };
 
-// 12 의문사, индекс 0..11 — на индексы ссылаются MATCH_ROUNDS/DISTRACTORS ниже.
+// 14 의문사 и употребительных форм, индекс 0..13 — на индексы ссылаются
+// MATCH_ROUNDS/DISTRACTORS ниже.
 export const WORDS: QuestionWord[] = [
   { kr: "뭐", full: "뭐 / 무엇", rr: "mwo", ru: "что", answers: ["뭐", "무엇"] },
   { kr: "누구", full: "누구", rr: "nugu", ru: "кто", answers: ["누구"] },
@@ -19,22 +20,37 @@ export const WORDS: QuestionWord[] = [
   { kr: "언제", full: "언제", rr: "eonje", ru: "когда", answers: ["언제"] },
   { kr: "왜", full: "왜", rr: "wae", ru: "почему", answers: ["왜"] },
   { kr: "어떻게", full: "어떻게", rr: "eotteoke", ru: "как (каким образом)", answers: ["어떻게"] },
-  { kr: "얼마", full: "얼마", rr: "eolma", ru: "сколько (цена)", answers: ["얼마"] },
+  { kr: "얼마", full: "얼마", rr: "eolma", ru: "сколько (величина / цена)", answers: ["얼마"] },
   { kr: "얼마나", full: "얼마나", rr: "eolmana", ru: "насколько / как долго", answers: ["얼마나"] },
-  { kr: "몇", full: "몇", rr: "myeot", ru: "сколько (+ счётное слово)", answers: ["몇"] },
+  { kr: "몇", full: "몇", rr: "myeot", ru: "сколько / какой по номеру", answers: ["몇"] },
   { kr: "어느", full: "어느", rr: "eoneu", ru: "который (из вариантов)", answers: ["어느"] },
   { kr: "무슨", full: "무슨", rr: "museun", ru: "что за (по типу)", answers: ["무슨"] },
-  { kr: "며칠", full: "며칠", rr: "myeochil", ru: "какое число", answers: ["며칠"] },
+  { kr: "며칠", full: "며칠", rr: "myeochil", ru: "какое число / сколько дней", answers: ["며칠"] },
+  {
+    kr: "어때요",
+    full: "어떻다 → 어때요",
+    rr: "eotteota → eottaeyo",
+    ru: "каков / как тебе",
+    answers: ["어때요", "어떻다"],
+  },
+  {
+    kr: "어떤",
+    full: "어떻다 → 어떤",
+    rr: "eotteota → eotteon",
+    ru: "какой (по качествам)",
+    answers: ["어떤"],
+  },
 ];
 
-// Уровень «Сопоставление» — 6 раундов по 4 слова, каждое встречается ровно дважды.
+// Уровень «Сопоставление» — 7 раундов по 4 слова, каждое встречается ровно дважды.
 export const MATCH_ROUNDS: number[][] = [
   [0, 1, 2, 3],
-  [4, 5, 6, 8],
-  [7, 9, 10, 11],
-  [0, 4, 7, 9],
-  [1, 5, 8, 10],
+  [4, 5, 12, 13],
+  [6, 7, 8, 11],
+  [9, 10, 13, 0],
+  [1, 5, 8, 12],
   [2, 3, 6, 11],
+  [4, 7, 9, 10],
 ];
 
 // Уровни «Узнавание» (kr→ru / ru→kr) — 2 набора дистракторов на каждое слово.
@@ -43,14 +59,16 @@ export const DISTRACTORS: number[][][] = [
   [[0, 2, 3], [9, 10, 8]],
   [[0, 1, 3], [4, 5, 7]],
   [[0, 1, 2], [7, 8, 11]],
-  [[0, 2, 5], [3, 7, 9]],
-  [[4, 2, 7], [0, 10, 9]],
+  [[5, 12, 2], [3, 7, 9]],
+  [[4, 12, 13], [0, 10, 9]],
   [[7, 8, 0], [9, 10, 3]],
   [[6, 8, 5], [2, 3, 4]],
   [[6, 7, 9], [1, 10, 11]],
-  [[10, 8, 6], [0, 1, 2]],
-  [[9, 8, 6], [0, 4, 5]],
+  [[10, 13, 8], [0, 1, 2]],
+  [[9, 13, 8], [0, 4, 5]],
   [[3, 8, 7], [2, 6, 9]],
+  [[5, 13, 4], [3, 7, 9]],
+  [[9, 10, 5], [0, 8, 12]],
 ];
 
 export type QuestionPhrase = {
@@ -60,7 +78,7 @@ export type QuestionPhrase = {
   distractors: number[];
 };
 
-// Уровень «Живые вопросы» — пул из 16, за сессию берётся 12 случайных.
+// Уровень «Живые вопросы» — пул из 18, за сессию берётся 12 случайных.
 export const PHRASES: QuestionPhrase[] = [
   { kr: "몇 살이에요?", rr: "Myeot sarieyo?", ru: "Сколько лет?", distractors: [3, 9, 10] },
   { kr: "어디 가요?", rr: "Eodi gayo?", ru: "Куда идёшь?", distractors: [2, 8, 14] },
@@ -78,6 +96,8 @@ export const PHRASES: QuestionPhrase[] = [
   { kr: "왜 한국어를 배워요?", rr: "Wae hangugeoreul baewoyo?", ru: "Почему учишь корейский?", distractors: [14, 6, 11] },
   { kr: "학교에 어떻게 가요?", rr: "Hakgyoe eotteoke gayo?", ru: "Как добираешься до школы?", distractors: [1, 2, 13] },
   { kr: "오늘이 며칠이에요?", rr: "Oneuri myeochirieyo?", ru: "Какое сегодня число?", distractors: [7, 9, 11] },
+  { kr: "이 영화 어때요?", rr: "I yeonghwa eottaeyo?", ru: "Как тебе этот фильм?", distractors: [13, 14, 12] },
+  { kr: "어떤 음악을 좋아해요?", rr: "Eotteon eumageul joahaeyo?", ru: "Какую музыку ты любишь?", distractors: [11, 12, 14] },
 ];
 
 export function shuffle<T>(arr: T[]): T[] {

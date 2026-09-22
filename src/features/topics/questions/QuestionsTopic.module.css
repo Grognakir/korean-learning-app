@@ -111,34 +111,116 @@
   line-height: 1.5;
 }
 
-/* --- toc chips --- */
-.toc {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 6px;
-  margin-bottom: 32px;
-  scrollbar-width: none;
+/* --- section navigation --- */
+.topicLayout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
 }
 
-.toc::-webkit-scrollbar {
+.content {
+  min-width: 0;
+}
+
+.sectionAside {
+  position: sticky;
+  top: 16px;
+}
+
+.mobileToc {
   display: none;
 }
 
-.tocLink {
-  flex: none;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--ink-soft);
-  background: var(--paper-2);
-  padding: 7px 13px;
-  border-radius: 999px;
-  white-space: nowrap;
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.tocLink:hover {
+.navItem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13.5px;
+  text-decoration: none;
+  color: var(--ink-soft);
+  padding: 7px 8px;
+  border-radius: var(--radius-control);
+}
+
+.navItem:hover {
+  background: var(--paper-2);
   color: var(--blue);
+}
+
+.navItem:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.navNumber {
+  flex: none;
+  width: 20px;
+  font-family: monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--amber);
+}
+
+@media (--to-compact) {
+  .topicLayout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .sectionAside {
+    display: none;
+  }
+
+  .mobileToc {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-panel);
+    padding: 10px 14px;
+    box-shadow: var(--card-shadow);
+  }
+
+  .mobileTocSummary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .mobileTocSummary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobileTocIcon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    color: var(--stone);
+    transition: transform 0.15s ease;
+  }
+
+  .mobileToc[open] .mobileTocIcon {
+    transform: rotate(90deg);
+  }
+
+  .mobileToc[open] .mobileTocSummary {
+    margin-bottom: 8px;
+  }
 }
 
 /* --- section shell --- */
@@ -299,6 +381,29 @@
   transform: rotate(90deg);
 }
 
+@media (max-width: 520px) {
+  .wordSummary {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 4px 10px;
+  }
+
+  .wordKr,
+  .wordRr {
+    min-width: 0;
+  }
+
+  .wordRu {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .wordChev {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
 .wordBody {
   padding: 0 16px 16px 16px;
   border-top: 1px dashed var(--line);
@@ -360,14 +465,14 @@
   line-height: 1.6;
 }
 
-/* --- 04: 무슨 vs 어느 --- */
+/* --- 04: 무슨 · 어떤 · 어느 --- */
 .vsGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 14px;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 520px) {
   .vsGrid {
     grid-template-columns: 1fr;
   }
@@ -393,6 +498,15 @@
   color: var(--ink-soft);
   margin: 0 0 12px;
   line-height: 1.5;
+}
+
+.familyBlock {
+  margin-top: 28px;
+}
+
+.familyBlock h3 {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /* --- 05: counters table --- */

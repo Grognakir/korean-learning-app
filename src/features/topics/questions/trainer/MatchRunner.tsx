@@ -48,7 +48,9 @@ export function MatchRunner({
       <div className={styles.done}>
         <span className={styles.eyebrow}>Результат</span>
         <h3 ref={doneRef} tabIndex={-1} className={styles.doneTitle}>
-          {mistakes === 0 ? "Все 6 раундов без единой ошибки — 완벽해요!" : "Раунды пройдены"}
+          {mistakes === 0
+            ? `Все ${MATCH_ROUNDS.length} раундов без единой ошибки — 완벽해요!`
+            : "Раунды пройдены"}
         </h3>
         <p className={styles.doneText}>Ошибок за тренировку: {mistakes}</p>
         <div className={styles.actions}>
