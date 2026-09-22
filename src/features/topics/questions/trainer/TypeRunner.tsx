@@ -19,6 +19,7 @@ export function TypeRunner({
   const [value, setValue] = useState("");
   const [checked, setChecked] = useState(false);
   const [score, setScore] = useState(0);
+  const advancing = useRef(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const doneRef = useRef<HTMLHeadingElement>(null);
 
@@ -28,6 +29,7 @@ export function TypeRunner({
     setValue("");
     setChecked(false);
     setScore(0);
+    advancing.current = false;
     requestAnimationFrame(() => inputRef.current?.focus());
   }
 
@@ -44,14 +46,14 @@ export function TypeRunner({
           <span> / {order.length}</span>
         </p>
         <div className={styles.actions}>
-          <button type="button" className={styles.runnerBack} onClick={onBack}>
+          <button type="button" className={styles.doneBack} onClick={onBack}>
             Все уровни
           </button>
-          <button type="button" className={styles.secondary} onClick={restart}>
+          <button type="button" className={styles.doneRetry} onClick={restart}>
             Ещё раз
           </button>
           {onNextLevel && (
-            <button type="button" className={styles.next} onClick={onNextLevel}>
+            <button type="button" className={styles.doneNext} onClick={onNextLevel}>
               Следующий уровень
             </button>
           )}
@@ -65,16 +67,30 @@ export function TypeRunner({
 
   function check() {
     if (checked) return;
+    if (isCorrect) {
+      setScore((s) => s + 1);
+      advance();
+      return;
+    }
     setChecked(true);
-    if (isCorrect) setScore((s) => s + 1);
+  }
+
+  function advance() {
+    if (advancing.current) return;
+    advancing.current = true;
+    setIndex((i) => i + 1);
+    setValue("");
+    setChecked(false);
+    requestAnimationFrame(() => {
+      advancing.current = false;
+      if (doneRef.current) doneRef.current.focus();
+      else inputRef.current?.focus();
+    });
   }
 
   function next() {
     if (!checked) return;
-    setIndex((i) => i + 1);
-    setValue("");
-    setChecked(false);
-    requestAnimationFrame(() => inputRef.current?.focus());
+    advance();
   }
 
   return (
@@ -113,8 +129,8 @@ export function TypeRunner({
       </div>
       {checked && (
         <>
-          <div className={isCorrect ? styles.feedbackCorrect : styles.feedbackWrong} role="status">
-            <strong>{isCorrect ? "Верно!" : "Правильный ответ:"}</strong>
+          <div className={styles.feedbackWrong} role="status">
+            <strong>Правильный ответ:</strong>
             <span className="kr">{word.full}</span>
             <span className={styles.rr}>{word.rr}</span>
           </div>

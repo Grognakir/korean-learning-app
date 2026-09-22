@@ -56,14 +56,14 @@ export function McqRunner({
           <span> / {items.length}</span>
         </p>
         <div className={styles.actions}>
-          <button type="button" className={styles.runnerBack} onClick={onBack}>
+          <button type="button" className={styles.doneBack} onClick={onBack}>
             Все уровни
           </button>
-          <button type="button" className={styles.secondary} onClick={restart}>
+          <button type="button" className={styles.doneRetry} onClick={restart}>
             Ещё раз
           </button>
           {onNextLevel && (
-            <button type="button" className={styles.next} onClick={onNextLevel}>
+            <button type="button" className={styles.doneNext} onClick={onNextLevel}>
               Следующий уровень
             </button>
           )}
@@ -85,19 +85,29 @@ export function McqRunner({
 
   function choose(optionIndex: number) {
     if (answered) return;
+    if (optionIndex === item.correctIndex) {
+      setScore((s) => s + 1);
+      advance();
+      return;
+    }
     setSelectedIndex(optionIndex);
-    if (optionIndex === item.correctIndex) setScore((s) => s + 1);
   }
 
-  function next() {
-    if (!answered || advancing.current) return;
+  function advance() {
+    if (advancing.current) return;
     advancing.current = true;
     setIndex((i) => i + 1);
     setSelectedIndex(null);
     requestAnimationFrame(() => {
       advancing.current = false;
-      promptRef.current?.focus();
+      if (doneRef.current) doneRef.current.focus();
+      else promptRef.current?.focus();
     });
+  }
+
+  function next() {
+    if (!answered) return;
+    advance();
   }
 
   return (

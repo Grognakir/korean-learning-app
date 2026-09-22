@@ -54,14 +54,14 @@ export function MatchRunner({
         </h3>
         <p className={styles.doneText}>Ошибок за тренировку: {mistakes}</p>
         <div className={styles.actions}>
-          <button type="button" className={styles.runnerBack} onClick={onBack}>
+          <button type="button" className={styles.doneBack} onClick={onBack}>
             Все уровни
           </button>
-          <button type="button" className={styles.secondary} onClick={restart}>
+          <button type="button" className={styles.doneRetry} onClick={restart}>
             Ещё раз
           </button>
           {onNextLevel && (
-            <button type="button" className={styles.next} onClick={onNextLevel}>
+            <button type="button" className={styles.doneNext} onClick={onNextLevel}>
               Следующий уровень
             </button>
           )}
