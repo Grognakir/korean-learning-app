@@ -40418,6 +40418,1354 @@
         }
       ],
       "related": []
+    },
+    {
+      "external_id": "word-개월",
+      "headword": "개월",
+      "reading": "gaewol",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Счётные слова"
+      ],
+      "translations": [
+        "месяц (счётное слово)"
+      ],
+      "examples": [
+        {
+          "kr": "저는 한국에 온 지 3개월이 됐어요.",
+          "ru": "Прошло 3 месяца, как я приехал в Корею."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-앞으로",
+      "headword": "앞으로",
+      "reading": "apeuro",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "в будущем, впредь"
+      ],
+      "examples": [
+        {
+          "kr": "앞으로 우리 친하게 지내요.",
+          "ru": "Будем дружить и дальше."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-지내다",
+      "headword": "지내다",
+      "reading": "jinaeda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "проводить время"
+      ],
+      "examples": [
+        {
+          "kr": "저는 요즘 잘 지내고 있어요.",
+          "ru": "В последнее время у меня всё хорошо."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "지내요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-전공",
+      "headword": "전공",
+      "reading": "jeongong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "специальность"
+      ],
+      "examples": [
+        {
+          "kr": "제 전공은 무역학이에요.",
+          "ru": "Моя специальность — торговое дело."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-한국학",
+      "headword": "한국학",
+      "reading": "hangukhak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "корееведение"
+      ],
+      "examples": [
+        {
+          "kr": "저는 한국학을 전공하려고 해요.",
+          "ru": "Я собираюсь специализироваться в корееведении."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-한국어교육학",
+      "headword": "한국어교육학",
+      "reading": "hangugeogyoyukhak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "методика преподавания корейского языка"
+      ],
+      "examples": [
+        {
+          "kr": "한국어교육학을 공부하고 있어요.",
+          "ru": "Изучаю методику преподавания корейского."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-영문학",
+      "headword": "영문학",
+      "reading": "yeongmunhak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "английская литература"
+      ],
+      "examples": [
+        {
+          "kr": "영문학을 전공하고 싶어요.",
+          "ru": "Хочу специализироваться в английской литературе."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-역사학",
+      "headword": "역사학",
+      "reading": "yeoksahak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "история (как специальность)"
+      ],
+      "examples": [
+        {
+          "kr": "역사학을 전공하려고 해요.",
+          "ru": "Собираюсь специализироваться в истории."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-신문방송학",
+      "headword": "신문방송학",
+      "reading": "sinmunbangsonghak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "журналистика и вещание"
+      ],
+      "examples": [
+        {
+          "kr": "신문방송학을 전공해요.",
+          "ru": "Специализируюсь в журналистике и вещании."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-경제학",
+      "headword": "경제학",
+      "reading": "gyeongjehak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба",
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "экономика (как специальность)"
+      ],
+      "examples": [
+        {
+          "kr": "경제학을 전공하고 있어요.",
+          "ru": "Специализируюсь в экономике."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-경영학",
+      "headword": "경영학",
+      "reading": "gyeongyeonghak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба",
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "менеджмент (как специальность)"
+      ],
+      "examples": [
+        {
+          "kr": "경영학을 전공하기로 했어요.",
+          "ru": "Решил специализироваться в менеджменте."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-무역학",
+      "headword": "무역학",
+      "reading": "muyeokhak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба",
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "торговое дело (как специальность)"
+      ],
+      "examples": [
+        {
+          "kr": "무역학을 전공하려고 준비하고 있어요.",
+          "ru": "Готовлюсь специализироваться в торговом деле."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-국제무역학",
+      "headword": "국제무역학",
+      "reading": "gukjemuyeokhak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба",
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "международная торговля (как специальность)"
+      ],
+      "examples": [
+        {
+          "kr": "국제무역학을 전공해요.",
+          "ru": "Специализируюсь в международной торговле."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-기계공학",
+      "headword": "기계공학",
+      "reading": "gigyegonghak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "машиностроение"
+      ],
+      "examples": [
+        {
+          "kr": "기계공학을 전공하고 싶어요.",
+          "ru": "Хочу специализироваться в машиностроении."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-물리학",
+      "headword": "물리학",
+      "reading": "mullihak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "физика"
+      ],
+      "examples": [
+        {
+          "kr": "물리학을 전공해요.",
+          "ru": "Специализируюсь в физике."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-생물학",
+      "headword": "생물학",
+      "reading": "saengmulhak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "биология"
+      ],
+      "examples": [
+        {
+          "kr": "생물학을 전공하려고 해요.",
+          "ru": "Собираюсь специализироваться в биологии."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-연극영화학",
+      "headword": "연극영화학",
+      "reading": "yeongeugyeonghwahak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "театральное и киноискусство"
+      ],
+      "examples": [
+        {
+          "kr": "연극영화학을 전공해요.",
+          "ru": "Специализируюсь в театральном и киноискусстве."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-악수",
+      "headword": "악수",
+      "reading": "aksu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "рукопожатие"
+      ],
+      "examples": [
+        {
+          "kr": "친구와 악수를 했어요.",
+          "ru": "Я пожал руку другу."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-잡다",
+      "headword": "잡다",
+      "reading": "japda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "брать, держать"
+      ],
+      "examples": [
+        {
+          "kr": "손을 잡으면 상대방에게 마음을 전할 수 있습니다.",
+          "ru": "Если взять за руку, можно передать собеседнику своё отношение."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "잡아요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-상대방",
+      "headword": "상대방",
+      "reading": "sangdaebang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "собеседник"
+      ],
+      "examples": [
+        {
+          "kr": "상대방의 이야기를 잘 들으세요.",
+          "ru": "Внимательно слушайте собеседника."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-차이",
+      "headword": "차이",
+      "reading": "chai",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "разница"
+      ],
+      "examples": [
+        {
+          "kr": "전세와 월세의 차이가 뭐예요?",
+          "ru": "В чём разница между чонсе и вольсе?"
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-모든",
+      "headword": "모든",
+      "reading": "modeun",
+      "part_of_speech": "determiner",
+      "level_tag": null,
+      "categories": [
+        "Местоимения"
+      ],
+      "translations": [
+        "все, каждый"
+      ],
+      "examples": [
+        {
+          "kr": "모든 학생이 열심히 공부해요.",
+          "ru": "Все студенты усердно учатся."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-놀랍다",
+      "headword": "놀랍다",
+      "reading": "nollapda",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные",
+        "Неправильные ㅂ받침"
+      ],
+      "translations": [
+        "удивительный"
+      ],
+      "examples": [
+        {
+          "kr": "문화 차이가 있어서 좀 놀랍지만 재미있었어요.",
+          "ru": "Из-за культурных различий было немного удивительно, но интересно."
+        }
+      ],
+      "notes": [
+        "ㅂ → 우+어요 = 놀라워요; перед сущ.: 놀라운"
+      ],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "놀라워요"
+        },
+        {
+          "label": "перед существительным",
+          "value": "놀라운"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-편",
+      "headword": "편",
+      "reading": "pyeon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Счётные слова"
+      ],
+      "translations": [
+        "счётное слово для фильмов"
+      ],
+      "examples": [
+        {
+          "kr": "영화는 한두 편 봤어요.",
+          "ru": "Фильмов я посмотрел один-два."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-상담하다",
+      "headword": "상담하다",
+      "reading": "sangdamhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "консультироваться"
+      ],
+      "examples": [
+        {
+          "kr": "다음 주에 교수님과 상담하기로 했어요.",
+          "ru": "Договорился проконсультироваться с профессором на следующей неделе."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "상담해요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-반대하다",
+      "headword": "반대하다",
+      "reading": "bandaehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "быть против"
+      ],
+      "examples": [
+        {
+          "kr": "부모님께서 반대하셔서 걱정이에요.",
+          "ru": "Родители против, поэтому я переживаю."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "반대해요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-정치",
+      "headword": "정치",
+      "reading": "jeongchi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "политика"
+      ],
+      "examples": [
+        {
+          "kr": "요즘 정치에 관심이 없어요.",
+          "ru": "В последнее время меня не интересует политика."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-사회",
+      "headword": "사회",
+      "reading": "sahoe",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "общество"
+      ],
+      "examples": [
+        {
+          "kr": "사회에 대한 관심이 많아요.",
+          "ru": "Меня очень интересует общество."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-자신",
+      "headword": "자신",
+      "reading": "jasin",
+      "part_of_speech": "pronoun",
+      "level_tag": null,
+      "categories": [
+        "Местоимения"
+      ],
+      "translations": [
+        "сам, себя"
+      ],
+      "examples": [
+        {
+          "kr": "자신이 좋아하는 일을 찾으려고 합니다.",
+          "ru": "Пытается найти дело, которое нравится ему самому."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-장애인",
+      "headword": "장애인",
+      "reading": "jangaein",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "человек с инвалидностью"
+      ],
+      "examples": [
+        {
+          "kr": "장애인이나 외로운 노인들을 도와주기도 합니다.",
+          "ru": "Также помогают людям с инвалидностью и одиноким пожилым людям."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-여유롭다",
+      "headword": "여유롭다",
+      "reading": "yeoyuropda",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные",
+        "Неправильные ㅂ받침"
+      ],
+      "translations": [
+        "быть в достатке, иметь свободное время"
+      ],
+      "examples": [
+        {
+          "kr": "생활이 여유로워지면서 봉사 활동도 많이 합니다.",
+          "ru": "По мере того как жизнь становится свободнее, всё больше занимаются волонтёрством."
+        }
+      ],
+      "notes": [
+        "ㅂ → 우+어요 = 여유로워요; перед сущ.: 여유로운"
+      ],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "여유로워요"
+        },
+        {
+          "label": "перед существительным",
+          "value": "여유로운"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-짜다",
+      "headword": "짜다",
+      "reading": "jjada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные",
+        "Продукты и еда"
+      ],
+      "translations": [
+        "солёный"
+      ],
+      "examples": [
+        {
+          "kr": "건강에 안 좋으니까 짜게 먹지 마세요.",
+          "ru": "Это вредно для здоровья, не ешьте солёное."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "짜요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-달리다",
+      "headword": "달리다",
+      "reading": "dallida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы",
+        "Спорт"
+      ],
+      "translations": [
+        "бежать"
+      ],
+      "examples": [
+        {
+          "kr": "누가 더 빨리 달려요?",
+          "ru": "Кто бежит быстрее?"
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "달려요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-숙이다",
+      "headword": "숙이다",
+      "reading": "sugida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "наклонять (голову)"
+      ],
+      "examples": [
+        {
+          "kr": "어른과 인사를 하면 머리를 숙여야 합니다.",
+          "ru": "Здороваясь со старшим, нужно наклонить голову."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "숙여요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-명소",
+      "headword": "명소",
+      "reading": "myeongso",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "достопримечательность"
+      ],
+      "examples": [
+        {
+          "kr": "고향의 관광 명소를 소개해 드리겠습니다.",
+          "ru": "Расскажу о туристических достопримечательностях родного города."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-언어교육원",
+      "headword": "언어교육원",
+      "reading": "eoneogyoyugwon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "языковой институт (при университете)"
+      ],
+      "examples": [
+        {
+          "kr": "저는 언어교육원에서 한국어를 공부해요.",
+          "ru": "Я изучаю корейский в языковом институте."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-자기소개",
+      "headword": "자기소개",
+      "reading": "jagisogae",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "самопрезентация, представление себя"
+      ],
+      "examples": [
+        {
+          "kr": "자기소개를 해 보세요.",
+          "ru": "Представьтесь, пожалуйста."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-걱정",
+      "headword": "걱정",
+      "reading": "geokjeong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "беспокойство, волнение"
+      ],
+      "examples": [
+        {
+          "kr": "부모님께서 반대하셔서 걱정이에요.",
+          "ru": "Родители против, поэтому я переживаю."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-예절",
+      "headword": "예절",
+      "reading": "yejeol",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "этикет"
+      ],
+      "examples": [
+        {
+          "kr": "악수에도 예절이 있습니다.",
+          "ru": "У рукопожатия тоже есть свой этикет."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-경주",
+      "headword": "경주",
+      "reading": "gyeongju",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Спорт"
+      ],
+      "translations": [
+        "гонка, состязание"
+      ],
+      "examples": [
+        {
+          "kr": "자동차 경주 선수가 되고 싶었습니다.",
+          "ru": "Я хотел стать гонщиком."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-말씀드리다",
+      "headword": "말씀드리다",
+      "reading": "malsseumdeurida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "почтительно сказать (уважаемому человеку)"
+      ],
+      "examples": [
+        {
+          "kr": "부모님께 제 생각을 말씀드려 보세요.",
+          "ru": "Расскажите родителям о своих мыслях (почтительно)."
+        }
+      ],
+      "notes": [
+        "Почтительная форма 말하다 — используется по отношению к старшему/уважаемому человеку"
+      ],
+      "forms": [
+        {
+          "label": "вежливая (해요체)",
+          "value": "말씀드려요"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-번역가",
+      "headword": "번역가",
+      "reading": "beonyeokga",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Профессии"
+      ],
+      "translations": [
+        "переводчик"
+      ],
+      "examples": [
+        {
+          "kr": "번역가가 돼서 한국의 문학을 소개하고 싶습니다.",
+          "ru": "Хочу стать переводчиком и рассказывать о корейской литературе."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-인턴",
+      "headword": "인턴",
+      "reading": "inteon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Профессии"
+      ],
+      "translations": [
+        "интерн, стажёр"
+      ],
+      "examples": [
+        {
+          "kr": "회사에서 인턴으로 일을 배우고 있어요.",
+          "ru": "Я учусь работе в компании в качестве интерна."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-일주일",
+      "headword": "일주일",
+      "reading": "iljuil",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "неделя"
+      ],
+      "examples": [
+        {
+          "kr": "일주일 후에 받을 수 있을 거예요.",
+          "ru": "Сможете получить через неделю."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-잡지",
+      "headword": "잡지",
+      "reading": "japji",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "журнал"
+      ],
+      "examples": [
+        {
+          "kr": "저는 잡지를 자주 읽어요.",
+          "ru": "Я часто читаю журналы."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-속도",
+      "headword": "속도",
+      "reading": "sokdo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "скорость"
+      ],
+      "examples": [
+        {
+          "kr": "소리와 속도가 정말 멋있었습니다.",
+          "ru": "Звук и скорость были по-настоящему впечатляющими."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-인구",
+      "headword": "인구",
+      "reading": "ingu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "население"
+      ],
+      "examples": [
+        {
+          "kr": "서울의 인구가 많아요.",
+          "ru": "В Сеуле большое население."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-크기",
+      "headword": "크기",
+      "reading": "keugi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "размер"
+      ],
+      "examples": [
+        {
+          "kr": "도시의 크기가 서로 달라요.",
+          "ru": "Размеры городов отличаются друг от друга."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-학기",
+      "headword": "학기",
+      "reading": "hakgi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "семестр"
+      ],
+      "examples": [
+        {
+          "kr": "다음 학기에 태권도를 배울 거예요.",
+          "ru": "В следующем семестре буду учить тхэквондо."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-역",
+      "headword": "역",
+      "reading": "yeok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "станция"
+      ],
+      "examples": [
+        {
+          "kr": "지하철역에서 만나요.",
+          "ru": "Встретимся на станции метро."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-무역",
+      "headword": "무역",
+      "reading": "muyeok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "торговля"
+      ],
+      "examples": [
+        {
+          "kr": "국제무역에 관심이 많습니다.",
+          "ru": "Меня очень интересует международная торговля."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-문학",
+      "headword": "문학",
+      "reading": "munhak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "литература"
+      ],
+      "examples": [
+        {
+          "kr": "저는 문학에 대해 배우고 싶어요.",
+          "ru": "Я хочу изучать литературу."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-관광",
+      "headword": "관광",
+      "reading": "gwangwang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "туризм"
+      ],
+      "examples": [
+        {
+          "kr": "이 도시는 관광으로 유명해요.",
+          "ru": "Этот город известен туризмом."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-고아원",
+      "headword": "고아원",
+      "reading": "goawon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "детский дом"
+      ],
+      "examples": [
+        {
+          "kr": "고아원에서 봉사 활동을 했어요.",
+          "ru": "Я волонтёрил в детском доме."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-진로",
+      "headword": "진로",
+      "reading": "jillo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "карьерный путь"
+      ],
+      "examples": [
+        {
+          "kr": "자신의 진로를 위해 시간을 많이 씁니다.",
+          "ru": "Много времени уделяет своему карьерному пути."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-교사",
+      "headword": "교사",
+      "reading": "gyosa",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Профессии"
+      ],
+      "translations": [
+        "учитель, преподаватель (профессия)"
+      ],
+      "examples": [
+        {
+          "kr": "저는 교사가 되고 싶어요.",
+          "ru": "Я хочу стать учителем."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-교수님",
+      "headword": "교수님",
+      "reading": "gyosunim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Профессии"
+      ],
+      "translations": [
+        "профессор"
+      ],
+      "examples": [
+        {
+          "kr": "교수님께서 추천해 주셔서 한국에 오게 됐어요.",
+          "ru": "Профессор порекомендовал, и поэтому я приехал в Корею."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-등록증",
+      "headword": "등록증",
+      "reading": "deungnokjjeung",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "удостоверение, регистрационная карта"
+      ],
+      "examples": [
+        {
+          "kr": "외국인 등록증을 잃어버렸어요.",
+          "ru": "Я потерял карту иностранной регистрации."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }
