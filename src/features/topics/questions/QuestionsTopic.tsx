@@ -26,6 +26,33 @@ const CONTRACTIONS = [
   },
 ];
 
+const MUST_NEIGHBOR = [
+  {
+    kr: "무슨",
+    rr: "museun",
+    note: "+ существительное — какой по типу/содержанию",
+    example: { kr: "무슨 책이에요?", rr: "Museun chaegieyo?", ru: "Что за книга?" },
+  },
+  {
+    kr: "어떤",
+    rr: "eotteon",
+    note: "+ существительное — какой по качествам",
+    example: { kr: "어떤 사람이에요?", rr: "Eotteon saramieyo?", ru: "Какой он человек?" },
+  },
+  {
+    kr: "어느",
+    rr: "eoneu",
+    note: "+ существительное — который из вариантов",
+    example: { kr: "어느 나라 사람이에요?", rr: "Eoneu nara saramieyo?", ru: "Из какой страны?" },
+  },
+  {
+    kr: "몇",
+    rr: "myeot",
+    note: "+ счётное слово / число-существительное — см. таблицу ниже",
+    example: { kr: "몇 개 있어요?", rr: "Myeot gae isseoyo?", ru: "Сколько штук есть?" },
+  },
+];
+
 const COUNTERS = [
   { kr: "개", rr: "gae", meaning: "вещи (штуки)", example: "사과가 몇 개 있어요? — сколько яблок?" },
   { kr: "명", rr: "myeong", meaning: "люди (нейтрально)", example: "가족이 몇 명이에요? — сколько человек в семье?" },
@@ -56,7 +83,7 @@ const TOC = [
   { href: "#words", number: "02", label: "Вопросительные слова" },
   { href: "#particles", number: "03", label: "Частицы" },
   { href: "#vs", number: "04", label: "Три «какой»" },
-  { href: "#counters", number: "05", label: "몇 + счётные" },
+  { href: "#counters", number: "05", label: "Обязательный сосед" },
   { href: "#style", number: "06", label: "Уровни вежливости" },
   { href: "#answers", number: "07", label: "Ответы" },
   { href: "#quiz", number: "08", label: "Тренажёр" },
@@ -351,34 +378,59 @@ export function QuestionsTopic() {
       <section id="counters" className={styles.section}>
         <div className={styles.secHead}>
           <span className={styles.secNum}>05</span>
-          <h2>몇 + счётное слово</h2>
+          <h2>Слова, которым обязательно нужен сосед</h2>
         </div>
         <p className={styles.secDesc}>
-          몇 обычно ставится перед счётным словом или существительным, связанным с числом: 몇 개,
-          몇 명, 몇 년, 몇 학년.
+          Эти вопросительные слова никогда не стоят одни — сразу после них обязательно идёт
+          существительное или счётное слово.
         </p>
-        <div className={styles.tableWrap}>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>몇 +</th>
-                <th>считает</th>
-                <th>пример</th>
-              </tr>
-            </thead>
-            <tbody>
-              {COUNTERS.map((c) => (
-                <tr key={c.kr}>
-                  <td>
-                    <span className="kr">{c.kr}</span>
-                    <span className={styles.rr}>{c.rr}</span>
-                  </td>
-                  <td>{c.meaning}</td>
-                  <td className="kr">{c.example}</td>
+        <div className={styles.vsGrid}>
+          {MUST_NEIGHBOR.map((item) => (
+            <div key={item.kr} className={styles.vsCard}>
+              <h4 className="kr">
+                {item.kr} <span className={styles.rr}>{item.rr}</span>
+              </h4>
+              <p>{item.note}</p>
+              <div className={styles.ex}>
+                <span className="kr">{item.example.kr}</span>
+                <span className={styles.rr}>{item.example.rr}</span>
+                <span className={styles.ruLine}>{item.example.ru}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.familyBlock}>
+          <h3>몇 + счётное слово — какие бывают</h3>
+          <p className={styles.secDesc}>
+            몇 обычно ставится перед счётным словом или существительным, связанным с числом: 몇 개,
+            몇 명, 몇 년, 몇 학년.
+          </p>
+          <div className={styles.tableWrap}>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>몇 +</th>
+                  <th>считает</th>
+                  <th>пример</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {COUNTERS.map((c) => (
+                  <tr key={c.kr}>
+                    <td data-label="몇 +">
+                      <span className="kr">{c.kr}</span>
+                      <span className={styles.rr}>{c.rr}</span>
+                    </td>
+                    <td data-label="считает">{c.meaning}</td>
+                    <td data-label="пример" className="kr">
+                      {c.example}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 

@@ -425,7 +425,7 @@
 
 .contrCard {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 190px 1fr;
   gap: 16px;
   align-items: center;
   background: #fff;
@@ -448,6 +448,12 @@
   font-weight: 700;
   font-size: 17px;
   white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .contrEq {
+    white-space: normal;
+  }
 }
 
 .contrArrow {
@@ -551,6 +557,53 @@
   font-weight: 600;
 }
 
+@media (max-width: 560px) {
+  .tableWrap {
+    overflow-x: visible;
+  }
+
+  .table {
+    min-width: 0;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .table tr:last-child {
+    border-bottom: none;
+  }
+
+  .table td {
+    border-bottom: none;
+    padding: 3px 0;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    font-weight: 700;
+    margin-bottom: 1px;
+  }
+}
+
 /* --- 06: formality toggle --- */
 .toggleRow {
   display: flex;
@@ -609,6 +662,18 @@
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .styleRow {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .stylePair {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .styleItem {
@@ -705,6 +770,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
+}
+
+@media (max-width: 560px) {
+  .cheatGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
 }
 
 .cheatItem {
