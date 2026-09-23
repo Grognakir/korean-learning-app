@@ -9,7 +9,13 @@ type TextMatch = { start: number; end: number; translation: string; ko: string }
 function vocabNeedles(ko: string): string[] {
   const needles = [ko];
   if (ko.endsWith("다") && ko.length > 1) {
-    needles.push(ko.slice(0, -1));
+    const stem = ko.slice(0, -1);
+    needles.push(stem);
+    // Многие глагольные/прилагательные основы на гласную (지내다→지내요,
+    // 가다→가요) в 해요체 просто добавляют 요 без изменения основы — если
+    // это не тот случай (например, стяжение 마시다→마셔요), эта заготовка
+    // просто ни с чем не совпадёт в тексте, не давая ложных срабатываний.
+    needles.push(`${stem}요`);
   }
   return needles.sort((a, b) => b.length - a.length);
 }
@@ -47,6 +53,10 @@ function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
   }
 
   return selected.sort((a, b) => a.start - b.start);
+}
+
+export function vocabKeysInText(text: string, vocabItems: VocabItem[]): string[] {
+  return findVocabMatches(text, vocabItems).map((match) => match.ko);
 }
 
 /** Размечает сложные слова в тексте кликабельными чипами с переводом по
@@ -100,6 +110,7 @@ export function highlightDialogueSpeakers(
   keyPrefix = "",
   seen?: Set<string>,
   emphasized: string[] = [],
+  emphasisClassName: string = styles.exerciseEmphasis,
 ): ReactNode {
   function renderText(value: string, partKey: string): ReactNode {
     const fragments = emphasized
@@ -133,7 +144,7 @@ export function highlightDialogueSpeakers(
         );
       }
       nodes.push(
-        <span key={`${partKey}emphasis-${range.start}`} className={styles.exerciseEmphasis}>
+        <span key={`${partKey}emphasis-${range.start}`} className={emphasisClassName}>
           {highlightVocab(
             value.slice(range.start, range.end),
             vocabItems,

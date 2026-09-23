@@ -189,6 +189,10 @@ export type GrammarPointBlock = ContentBlockBase & {
   explanation: string | null;
   rules?: string[];
   examples: string[];
+  details_link?: {
+    label: string;
+    href: string | null;
+  };
 };
 
 export type GrammarExerciseBlock = ContentBlockBase & {
@@ -202,6 +206,7 @@ export type GrammarExerciseBlock = ContentBlockBase & {
     cues?: string[];
     dialogue: string[];
     emphasis?: string[][];
+    vocab?: { ko: string; translation_ru: string }[];
   };
   // Те же строки, что и example.dialogue, но со вставками {0},{1}... на
   // месте пропусков — явный шаблон вместо угадывания места пропуска

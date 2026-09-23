@@ -5,17 +5,30 @@ import type {
 } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
 import { VocabChip } from "./VocabChip";
-import { highlightVocab, type VocabItem } from "./vocabHighlight";
+import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
 function LineText({
   line,
   vocabItems,
+  seenVocab,
 }: {
   line: TextLine;
   vocabItems?: VocabItem[];
+  seenVocab: Set<string>;
 }) {
-  return <span className={`${styles.lineText} kr`}>{highlightVocab(line.text, vocabItems)}</span>;
+  return (
+    <span className={`${styles.lineText} kr`}>
+      {highlightDialogueSpeakers(
+        line.text,
+        vocabItems,
+        "",
+        seenVocab,
+        line.emphasized ?? [],
+        styles.emphasized,
+      )}
+    </span>
+  );
 }
 
 function HintSection({ hint }: { hint: HintBlock }) {
@@ -75,6 +88,8 @@ export function TextBlock({
   vocabItems?: VocabItem[];
   relatedHint?: HintBlock;
 }) {
+  const seenVocab = new Set<string>();
+
   return (
     <div id={id} className={styles.block}>
       {block.title && (
@@ -99,7 +114,7 @@ export function TextBlock({
           {line.speaker && (
             <span className={`${styles.speaker} kr`}>{line.speaker}:</span>
           )}
-          <LineText line={line} vocabItems={vocabItems} />
+          <LineText line={line} vocabItems={vocabItems} seenVocab={seenVocab} />
         </p>
       ))}
       {relatedHint && <HintSection hint={relatedHint} />}

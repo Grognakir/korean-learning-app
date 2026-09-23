@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { formatBold } from "@/lib/formatBold";
 import type { GrammarPointBlock } from "@/features/learning/types";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
@@ -12,6 +13,8 @@ export function GrammarPoint({
   id?: string;
   vocabItems?: VocabItem[];
 }) {
+  const seenVocab = new Set<string>();
+
   return (
     <div id={id} className={styles.block}>
       <span className={styles.labelRow}>
@@ -53,10 +56,25 @@ export function GrammarPoint({
       <div className={styles.examples}>
         {block.examples.map((example, i) => (
           <p key={i} className={`${styles.example} kr`}>
-            {highlightDialogueSpeakers(example, vocabItems, `grammar-${i}-`)}
+            {highlightDialogueSpeakers(example, vocabItems, `grammar-${i}-`, seenVocab)}
           </p>
         ))}
       </div>
+      {block.details_link &&
+        (block.details_link.href ? (
+          <Link href={block.details_link.href} className={styles.grammarDetailsAction}>
+            {block.details_link.label}
+          </Link>
+        ) : (
+          <button
+            type="button"
+            className={styles.grammarDetailsAction}
+            disabled
+            title="Подробный разбор появится позже"
+          >
+            {block.details_link.label}
+          </button>
+        ))}
     </div>
   );
 }

@@ -199,9 +199,6 @@ export function GrammarExercise({
         ? styles.blankIncorrect
         : styles.blank;
 
-  // Одно и то же слово в рамках одного упражнения (обычно встречается и в
-  // "가:", и в "나:") переводим только при первом появлении — повтор просто
-  // не добавляется в набор и рендерится обычным текстом.
   const seenVocab = new Set<string>();
 
   return (
