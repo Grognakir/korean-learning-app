@@ -1,0 +1,1021 @@
+{
+  "textbook_id": "inha_book_2",
+  "lesson_number": 4,
+  "title": "날씨와 생활",
+  "pages": [
+    {
+      "page_number": null,
+      "page_role": "lesson_opening",
+      "source_photo": "IMG_0647",
+      "blocks": [
+        {
+          "type": "lesson_toc",
+          "sections": [
+            {
+              "key": "준비하기 1",
+              "items": [
+                {
+                  "label": "날씨를 추측하고 일정을 계획하기",
+                  "block_ref": "text-weather-forecast-dialogue",
+                  "label_ru": "Предполагать погоду и планировать дела"
+                },
+                {
+                  "label": "V-네요, N(이)네요",
+                  "block_ref": "grammar-1",
+                  "label_ru": "V-네요, N(이)네요 (надо же!, оказывается…)"
+                },
+                {
+                  "label": "V-(으)ㄴ/는/(으)ㄹ 것 같다, N인/일 것 같다",
+                  "block_ref": "grammar-2",
+                  "label_ru": "V-(으)ㄴ/는/(으)ㄹ 것 같다, N인/일 것 같다 (кажется, похоже)"
+                }
+              ]
+            },
+            {
+              "key": "준비하기 2",
+              "items": [
+                {
+                  "label": "일기예보를 듣기",
+                  "block_ref": "text-forecast-broadcast",
+                  "label_ru": "Слушать прогноз погоды"
+                },
+                {
+                  "label": "DV-아/어/여지다",
+                  "block_ref": "grammar-3",
+                  "label_ru": "DV-아/어/여지다 (становиться каким-то)"
+                },
+                {
+                  "label": "AV-기 시작하다",
+                  "block_ref": "grammar-4",
+                  "label_ru": "AV-기 시작하다 (начинать делать)"
+                },
+                {
+                  "label": "N(으)로③",
+                  "block_ref": "grammar-5",
+                  "label_ru": "N(으)로③ (во что превратилось/обменяли)"
+                }
+              ]
+            },
+            {
+              "key": "말하기",
+              "items": [
+                {
+                  "label": "일기예보를 보고 계획하기",
+                  "block_ref": "text-speaking-summary",
+                  "label_ru": "Посмотреть прогноз погоды и спланировать дела"
+                }
+              ]
+            },
+            {
+              "key": "듣고 말하기",
+              "items": [
+                {
+                  "label": "날씨에 대한 경험을 발표하기",
+                  "block_ref": "listening-weather-experience",
+                  "label_ru": "Рассказать о своём опыте, связанном с погодой"
+                }
+              ]
+            },
+            {
+              "key": "읽고 말하기",
+              "items": [
+                {
+                  "label": "한국 날씨에 대한 글을 읽기",
+                  "block_ref": "reading-korea-weather",
+                  "label_ru": "Прочитать текст о погоде в Корее"
+                }
+              ]
+            },
+            {
+              "key": "쓰기",
+              "items": [
+                {
+                  "label": "고향 날씨를 소개하는 글 쓰기",
+                  "block_ref": "writing-hometown-weather",
+                  "label_ru": "Написать текст о погоде на родине"
+                }
+              ]
+            },
+            {
+              "key": "문화 이해하기",
+              "items": [
+                {
+                  "label": "비 오는 날에 먹는 음식",
+                  "block_ref": "text-culture-rainy-food",
+                  "label_ru": "Еда, которую едят в дождливые дни"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 58,
+      "page_role": "content",
+      "source_photo": "IMG_0648",
+      "blocks": [
+        {
+          "id": "text-weather-forecast-dialogue",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "날씨를 추측하고 일정을 계획하기",
+          "title_ru": "Предполагать погоду и планировать дела",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "213",
+          "speakers": ["아멜리", "자르갈"],
+          "lines": [
+            { "speaker": "아멜리", "text": "다음 주에 농구 시합이 있으니까 오후에 농구 연습하기로 해요." },
+            { "speaker": "자르갈", "text": "오늘은 황사가 심해서 오후에 농구 연습을 못 할 것 같아요." },
+            { "speaker": "아멜리", "text": "그래요? 안개가 낀 것 같은데요." },
+            { "speaker": "자르갈", "text": "안개가 아니고 황사예요. 봄에는 황사가 자주 와요." },
+            { "speaker": "아멜리", "text": "언제까지 황사가 있어요?" },
+            { "speaker": "자르갈", "text": "아마 오늘 밤에 비가 오면 황사가 그칠 거예요." },
+            { "speaker": "아멜리", "text": "그럼 내일은 농구할 수 있겠네요?" },
+            { "speaker": "자르갈", "text": "네, 할 수 있을 거예요. 내일 수업이 끝나면 연습하기로 해요." },
+            { "speaker": "아멜리", "text": "좋아요. 내일 오후에 운동장에서 봐요." }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-weather-forecast-dialogue",
+          "source_note": "рукописный список на полях страниц (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            { "ko": "시합", "translation_ru": "матч, соревнование" },
+            { "ko": "연습하다", "translation_ru": "тренироваться" },
+            { "ko": "황사", "translation_ru": "жёлтая пыль (весенние песчаные бури из Азии)" },
+            { "ko": "심하다", "translation_ru": "быть сильным, серьёзным (о явлении)" },
+            { "ko": "안개", "translation_ru": "туман" },
+            { "ko": "끼다", "translation_ru": "затянуть (о тумане, облаках)" },
+            { "ko": "젖다", "translation_ru": "промокнуть" },
+            { "ko": "먼지", "translation_ru": "пыль" },
+            { "ko": "가을비", "translation_ru": "осенний дождь" },
+            { "ko": "쌀쌀하다", "translation_ru": "быть прохладным, зябким" },
+            { "ko": "꽃샘추위", "translation_ru": "весенние заморозки (\"холод, завидующий цветам\")" },
+            { "ko": "계단", "translation_ru": "лестница" },
+            { "ko": "넘어지다", "translation_ru": "упасть, споткнуться" },
+            { "ko": "외출", "translation_ru": "выход из дома" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 59,
+      "page_role": "content",
+      "source_photo": "IMG_0649",
+      "blocks": [
+        {
+          "id": "grammar-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "V-네요, N(이)네요",
+          "section": "1",
+          "explanation": "Выражает удивление или живую реакцию на то, что говорящий только что заметил, увидел или узнал.",
+          "examples": [
+            "아이가 김치를 잘 먹네요.",
+            "밖에 눈이 많이 왔네요.",
+            "가: 민수 씨가 다음 달에 결혼하네요.\n나: 그래요? 어디에서 해요?",
+            "가: 제 우산을 못 봤어요?\n나: 봤어요. 책상 옆에 있네요.",
+            "가: 작년 겨울은 무척 추웠겠네요?\n나: 네, 정말 추웠어요."
+          ],
+          "rules": [
+            "основа глагола/прилагательного + 네요",
+            "N + (이)네요"
+          ]
+        },
+        {
+          "id": "grammar-2",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "V-(으)ㄴ/는/(으)ㄹ 것 같다, N인/일 것 같다",
+          "section": "2",
+          "explanation": "Выражает предположение говорящего на основе того, что он видит, слышит или ощущает.",
+          "examples": [
+            "가: 흐엉 씨는 공원에서 뭐 해요?\n나: 사진을 찍는 것 같아요.",
+            "가: 땅이 젖었네요.\n나: 밤에 비가 내린 것 같아요.",
+            "아침부터 더우니까 오늘은 기온이 높을 것 같아요.",
+            "모자를 쓴 사람이 로빈 씨인 것 같아요."
+          ],
+          "rules": [
+            "V-는 것 같다 — предположение о происходящем сейчас",
+            "V-(으)ㄴ 것 같다 — предположение о прошедшем",
+            "V-(으)ㄹ 것 같다 — предположение о будущем/неопределённом",
+            "N인 것 같다 — предположение про существительное"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 60,
+      "page_role": "content",
+      "source_photo": "IMG_0650",
+      "blocks": [
+        {
+          "id": "exercise-1a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["비가 오다 / 하늘이 깨끗하다", "하늘이 참 깨끗하다"],
+            "dialogue": [
+              "가: 비가 와서 하늘이 깨끗해요.",
+              "나: 네, 하늘이 참 깨끗하네요."
+            ]
+          },
+          "items": [
+            {
+              "given": ["눈이 많이 오다 / 차가 막히다", "차가 많이 막히다"],
+              "answers": ["눈이 많이 와서", "차가 막혀요", "차가 많이 막히네요"]
+            },
+            {
+              "given": ["황사가 오다 / 먼지가 많다", "먼지가 아주 많다"],
+              "answers": ["황사가 와서", "먼지가 많아요", "먼지가 아주 많네요"]
+            },
+            {
+              "given": ["가을비가 내리다 / 쌀쌀하다", "많이 쌀쌀하다"],
+              "answers": ["가을비가 내려서", "쌀쌀해요", "많이 쌀쌀하네요"]
+            },
+            {
+              "given": ["꽃샘추위이다 / 날씨가 춥다", "날씨가 너무 춥다"],
+              "answers": ["꽃샘추위여서", "날씨가 추워요", "날씨가 너무 춥네요"]
+            }
+          ],
+          "template": [
+            "가: {0} {1}.",
+            "나: 네, {2}."
+          ]
+        },
+        {
+          "id": "exercise-1b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["제주도를 여행해서 즐거웠다", "즐거웠다"],
+            "dialogue": [
+              "가: 제주도를 여행해서 즐거웠겠네요?",
+              "나: 네, 즐거웠어요."
+            ]
+          },
+          "items": [
+            {
+              "given": ["늦잠을 자서 지각했다", "수업에 늦었다"],
+              "answers": ["늦잠을 자서 지각했겠네요", "수업에 늦었어요"]
+            },
+            {
+              "given": ["선물을 받아서 기분이 정말 좋았다", "정말 기뻤다"],
+              "answers": ["선물을 받아서 기분이 정말 좋았겠네요", "정말 기뻤어요"]
+            },
+            {
+              "given": ["계단에서 넘어져서 많이 아팠다", "많이 아팠다"],
+              "answers": ["계단에서 넘어져서 많이 아팠겠네요", "많이 아팠어요"]
+            },
+            {
+              "given": ["이사를 해서 피곤했다", "너무 피곤해서 일찍 잤다"],
+              "answers": ["이사를 해서 피곤했겠네요", "너무 피곤해서 일찍 잤어요"]
+            }
+          ],
+          "template": [
+            "가: {0}?",
+            "나: 네, {1}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 61,
+      "page_role": "content",
+      "source_photo": "IMG_0651",
+      "blocks": [
+        {
+          "id": "exercise-2a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["하늘이 흐리다 / 곧 비가 올 거다"],
+            "dialogue": ["가: 하늘이 흐리네요. 곧 비가 올 것 같아요."]
+          },
+          "items": [
+            {
+              "given": ["사람들이 우산을 쓰고 있다 / 비가 오다"],
+              "answers": ["사람들이 우산을 쓰고 있네요", "비가 오는 것 같아요"]
+            },
+            {
+              "given": ["내일부터 시험이다 / 자르갈 씨는 도서관에 갔다"],
+              "answers": ["내일부터 시험이네요", "자르갈 씨는 도서관에 간 것 같아요"]
+            },
+            {
+              "given": ["왕루 씨가 열심히 공부하다 / 시험에 합격할 거다"],
+              "answers": ["왕루 씨가 열심히 공부하네요", "시험에 합격할 것 같아요"]
+            }
+          ],
+          "template": ["가: {0}. {1}."]
+        },
+        {
+          "id": "exercise-2b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["강아지", "강아지 / 아프다"],
+            "dialogue": ["가: 강아지가 어때요?", "나: 강아지가 아픈 것 같아요."]
+          },
+          "items": [
+            {
+              "given": ["오늘 고향의 날씨", "오늘 고향의 날씨 / 맑다"],
+              "answers": ["오늘 고향의 날씨가 어때요", "오늘 고향의 날씨가 맑은 것 같아요"]
+            },
+            {
+              "given": ["오늘 낮 기온", "오늘 낮 기온 / 높다"],
+              "answers": ["오늘 낮 기온이 어때요", "오늘 낮 기온이 높은 것 같아요"]
+            },
+            {
+              "given": ["이 음식", "이 음식 / 맛있을 거다"],
+              "answers": ["이 음식이 어때요", "이 음식이 맛있을 것 같아요"]
+            }
+          ],
+          "template": ["가: {0}?", "나: {1}."]
+        },
+        {
+          "id": "exercise-2c",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["오위노 씨가 전화를 안 받다", "샤워 중이다"],
+            "dialogue": [
+              "가: 오위노 씨가 전화를 안 받네요.",
+              "나: 샤워 중인 것 같아요."
+            ]
+          },
+          "items": [
+            {
+              "given": ["로빈 씨가 집에 없다", "외출 중이다"],
+              "answers": ["로빈 씨가 집에 없네요", "외출 중인 것 같아요"]
+            },
+            {
+              "given": ["책상 위에 지갑이 있다", "흐엉 씨의 지갑이다"],
+              "answers": ["책상 위에 지갑이 있네요", "흐엉 씨의 지갑인 것 같아요"]
+            },
+            {
+              "given": ["기침을 많이 하다", "감기이다"],
+              "answers": ["기침을 많이 하네요", "감기인 것 같아요"]
+            }
+          ],
+          "template": ["가: {0}.", "나: {1}."]
+        }
+      ]
+    },
+    {
+      "page_number": 62,
+      "page_role": "content",
+      "source_photo": "IMG_0652",
+      "blocks": [
+        {
+          "id": "text-forecast-broadcast",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "일기예보를 듣기",
+          "title_ru": "Слушать прогноз погоды",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "214",
+          "lines": [
+            {
+              "text": "내일 날씨입니다.\n내일은 전국에 비가 오겠습니다. 중부 지방은 오전부터 비가 오고 남부 지방은 오후부터 비가 오기 시작하겠습니다. 비가 온 뒤에는 쌀쌀해지겠습니다. 감기를 조심하시기 바랍니다. 내일 서울과 인천의 최저 기온은 12도, 최고 기온은 18도입니다. 부산의 최저 기온은 14도이고 최고 기온은 어제와 비슷하겠습니다. 제주도는 바람이 많이 불겠습니다. 최저 기온 16도, 최고 기온은 23도가 되겠습니다.\n지금까지 내일 날씨를 말씀드렸습니다."
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-forecast-broadcast",
+          "source_note": "рукописный список на полях страниц (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            { "ko": "중부", "translation_ru": "центральная часть" },
+            { "ko": "지방", "translation_ru": "регион" },
+            { "ko": "남부", "translation_ru": "южная часть" },
+            { "ko": "최저", "translation_ru": "минимальный" },
+            { "ko": "최고", "translation_ru": "максимальный" },
+            { "ko": "비슷하다", "translation_ru": "быть похожим" },
+            { "ko": "얼음", "translation_ru": "лёд" },
+            { "ko": "녹다", "translation_ru": "таять" },
+            { "ko": "변하다", "translation_ru": "меняться" },
+            { "ko": "구름", "translation_ru": "облако" },
+            { "ko": "몸", "translation_ru": "тело" },
+            { "ko": "약하다", "translation_ru": "быть слабым" },
+            { "ko": "마스크", "translation_ru": "маска" },
+            { "ko": "챙기다", "translation_ru": "собирать, подготавливать (вещи)" },
+            { "ko": "끓다", "translation_ru": "кипеть" },
+            { "ko": "가져가다", "translation_ru": "брать с собой, уносить" },
+            { "ko": "육지", "translation_ru": "суша" },
+            { "ko": "나뭇잎", "translation_ru": "лист (дерева)" },
+            { "ko": "지폐", "translation_ru": "бумажные деньги, купюра" },
+            { "ko": "동전", "translation_ru": "монета" },
+            { "ko": "갈아입다", "translation_ru": "переодеваться" }
+          ]
+        },
+        {
+          "id": "hint-junbihagi2-expr",
+          "toc_section": "준비하기 2",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-forecast-broadcast",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "AV-기 바라다",
+              "translation_ru": "감기를 조심하시기 바랍니다. — «Надеюсь, вы поостережётесь простуды» (вежливая формула-пожелание)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 63,
+      "page_role": "content",
+      "source_photo": "IMG_0653",
+      "blocks": [
+        {
+          "id": "grammar-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "DV-아/어/여지다",
+          "section": "3",
+          "explanation": "Показывает переход в новое состояние — «стал(о) каким-то», постепенное изменение качества.",
+          "examples": [
+            "축구를 해서 옷이 더러워졌습니다.",
+            "하늘이 점점 밝아집니다.",
+            "오후부터 하늘이 흐려졌어요.",
+            "봄이 되면 날씨가 따뜻해질 거예요."
+          ],
+          "rules": [
+            "основа прилагательного (без 다) + 아/어/여지다: 더럽다→더러워지다, 밝다→밝아지다, 흐리다→흐려지다, 따뜻하다→따뜻해지다"
+          ]
+        },
+        {
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "AV-기 시작하다",
+          "section": "4",
+          "explanation": "«Начал(и) делать» — обозначает момент начала действия.",
+          "examples": [
+            "얼음이 녹기 시작해요.",
+            "지난달부터 한국어를 배우기 시작했어요.",
+            "이제 곧 비가 오기 시작할 겁니다.",
+            "언제부터 운전을 하기 시작했어요?"
+          ],
+          "rules": [
+            "основа глагола + 기 시작하다"
+          ]
+        },
+        {
+          "id": "grammar-5",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "N(으)로③",
+          "section": "5",
+          "explanation": "Показывает результат изменения, обмена или замены — «во что» превратилось.",
+          "examples": [
+            "계절이 가을로 변했어요.",
+            "지하철 5호선으로 갈아타세요.",
+            "미국 돈을 한국 돈으로 바꿔 주세요."
+          ],
+          "rules": [
+            "нет받침 — N로: 가을로 변하다",
+            "есть 받침 — N으로: 돈으로 바꾸다"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 64,
+      "page_role": "content",
+      "source_photo": "IMG_0654",
+      "blocks": [
+        {
+          "id": "exercise-3a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["운동장에 학생들 / 오전 / 많다"],
+            "dialogue": ["가: 운동장에 학생들이 오전보다 많아졌어요."]
+          },
+          "items": [
+            {
+              "given": ["자동차 / 작년 / 많다"],
+              "answers": ["자동차가 작년보다 많아졌어요"]
+            },
+            {
+              "given": ["흐엉 씨 / 어릴 때 / 예쁘다"],
+              "answers": ["흐엉 씨가 어릴 때보다 예뻐졌어요"]
+            },
+            {
+              "given": ["하늘 / 오전 / 흐리다"],
+              "answers": ["하늘이 오전보다 흐려졌어요"]
+            }
+          ],
+          "template": ["가: {0}이 {1}보다 {2}."]
+        },
+        {
+          "id": "exercise-3b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["날씨", "날씨 / 춥다"],
+            "dialogue": [
+              "가: 날씨가 어때요?",
+              "나: 날씨가 점점 추워지고 있어요."
+            ]
+          },
+          "items": [
+            {
+              "given": ["할아버지의 건강", "할아버지의 건강 / 좋다"],
+              "answers": ["할아버지의 건강이 어때요", "할아버지의 건강이 점점 좋아지고 있어요"]
+            },
+            {
+              "given": ["하늘에 구름", "하늘에 구름 / 많다"],
+              "answers": ["하늘에 구름이 어때요", "하늘에 구름이 점점 많아지고 있어요"]
+            },
+            {
+              "given": ["한국어 공부", "한국어 공부 / 재미있다"],
+              "answers": ["한국어 공부가 어때요", "한국어 공부가 점점 재미있어지고 있어요"]
+            }
+          ],
+          "template": ["가: {0}가 어때요?", "나: {1}."]
+        },
+        {
+          "id": "exercise-3c",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["건강이 나쁘다", "운동을 하다 / 건강이 좋다"],
+            "dialogue": [
+              "가: 건강이 나빠져서 걱정이에요.",
+              "나: 운동을 하면 건강이 좋아질 거예요."
+            ]
+          },
+          "items": [
+            {
+              "given": ["몸이 약하다", "쉬운 운동부터 시작하다 / 건강하다"],
+              "answers": ["몸이 약해져서 걱정이에요", "쉬운 운동부터 시작하면 건강해질 거예요"]
+            },
+            {
+              "given": ["기침이 심하다", "따뜻한 물을 자주 마시다 / 괜찮다"],
+              "answers": ["기침이 심해져서 걱정이에요", "따뜻한 물을 자주 마시면 괜찮아질 거예요"]
+            },
+            {
+              "given": ["한국어가 어렵다", "연습을 많이 하다 / 쉽다"],
+              "answers": ["한국어가 어려워져서 걱정이에요", "연습을 많이 하면 쉬워질 거예요"]
+            }
+          ],
+          "template": ["가: {0}서 걱정이에요.", "나: {1}."]
+        }
+      ]
+    },
+    {
+      "page_number": 65,
+      "page_role": "content",
+      "source_photo": "IMG_0655",
+      "blocks": [
+        {
+          "id": "exercise-4a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["황사가 오다 / 마스크를 준비하다"],
+            "dialogue": ["가: 황사가 오기 시작하니까 마스크를 준비하세요."]
+          },
+          "items": [
+            {
+              "given": ["물이 끓다 / 라면을 넣다"],
+              "answers": ["물이 끓기 시작하니까", "라면을 넣으세요"]
+            },
+            {
+              "given": ["눈이 내리다 / 우산을 가져가다"],
+              "answers": ["눈이 내리기 시작하니까", "우산을 가져가세요"]
+            },
+            {
+              "given": ["길이 막히다 / 빨리 출발하다"],
+              "answers": ["길이 막히기 시작하니까", "빨리 출발합시다"]
+            },
+            {
+              "given": ["날씨가 추워지다 / 감기를 조심하다"],
+              "answers": ["날씨가 추워지기 시작하니까", "감기를 조심합시다"]
+            }
+          ],
+          "template": ["가: {0} {1}."]
+        },
+        {
+          "id": "exercise-4b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["태권도를 배웠다", "한국에 왔다 / 태권도를 배웠다"],
+            "dialogue": [
+              "가: 언제부터 태권도를 배우기 시작했어요?",
+              "나: 한국에 온 후부터 태권도를 배우기 시작했어요."
+            ]
+          },
+          "items": [
+            {
+              "given": ["일본 음식을 먹었다", "일본 여행을 갔다 왔다 / 일본 음식을 먹었다"],
+              "answers": ["일본 음식을 먹기 시작했어요", "일본 여행을 갔다 온 후부터 일본 음식을 먹기 시작했어요"]
+            },
+            {
+              "given": ["회사에 다녔다", "고향에 돌아왔다 / 회사에 다녔다"],
+              "answers": ["회사에 다니기 시작했어요", "고향에 돌아온 후부터 회사에 다니기 시작했어요"]
+            },
+            {
+              "given": ["피아노를 쳤다", "중학교에 입학했다 / 피아노를 쳤다"],
+              "answers": ["피아노를 치기 시작했어요", "중학교에 입학한 후부터 피아노를 치기 시작했어요"]
+            },
+            {
+              "given": ["중국어를 배웠다", "고등학교를 졸업했다 / 중국어를 배웠다"],
+              "answers": ["중국어를 배우기 시작했어요", "고등학교를 졸업한 후부터 중국어를 배우기 시작했어요"]
+            }
+          ],
+          "template": [
+            "가: 언제부터 {0}?",
+            "나: {1}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 66,
+      "page_role": "content",
+      "source_photo": "IMG_0656",
+      "blocks": [
+        {
+          "id": "exercise-5a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": ["바다가 육지 / 변했다"],
+            "dialogue": ["가: 바다가 육지로 변했어요."]
+          },
+          "items": [
+            {
+              "given": ["나뭇잎이 단풍 / 변하다"],
+              "answers": ["나뭇잎이 단풍으로 변해요"]
+            },
+            {
+              "given": ["한국 돈을 중국 돈 / 바꿔 주다"],
+              "answers": ["한국 돈을 중국 돈으로 바꿔 주세요"]
+            },
+            {
+              "given": ["지폐를 동전 / 바꿨다"],
+              "answers": ["지폐를 동전으로 바꿨어요"]
+            },
+            {
+              "given": ["서울역에서 지하철 1호선 / 갈아탈 거다"],
+              "answers": ["서울역에서 지하철 1호선으로 갈아탈 거예요"]
+            },
+            {
+              "given": ["치마를 바지 / 갈아입을 거다"],
+              "answers": ["치마를 바지로 갈아입을 거예요"]
+            }
+          ],
+          "template": ["가: {0}."]
+        }
+      ]
+    },
+    {
+      "page_number": 67,
+      "page_role": "content",
+      "source_photo": "IMG_0657",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 이야기해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "오늘은 금요일입니다. 이번 주 일요일에 친구와 같이 가까운 산으로 소풍을 갈 겁니다. 날씨가 궁금해서 일기예보를 봤습니다.\n10월 12일 토요일: 오전 맑음, 오후 맑음, 최저 23℃ / 최고 24℃.\n10월 13일 일요일: 오전 맑음, 오후 구름 조금, 최저 21℃ / 최고 23℃."
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "보기",
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": ["아멜리", "파하드"],
+          "lines": [
+            { "speaker": "아멜리", "text": "일요일에 친구들과 소풍을 가기로 했어요." },
+            { "speaker": "파하드", "text": "좋겠네요. 일요일 일기예보를 봤어요?" },
+            { "speaker": "아멜리", "text": "네, 오전에는 맑을 것 같은데 오후에는 날씨가 안 좋아질 것 같아요. 하지만 비는 안 올 것 같아요." },
+            { "speaker": "파하드", "text": "오후에 구름이 끼면 기온이 낮아질 거예요. 최고 기온은 몇 도였어요?" },
+            { "speaker": "아멜리", "text": "최고 기온이 23도니까 기온은 괜찮아요." },
+            { "speaker": "파하드", "text": "소풍은 어디에 가기로 했어요?" },
+            { "speaker": "아멜리", "text": "소풍은 가까운 산으로 가기로 했어요." },
+            { "speaker": "파하드", "text": "산속은 기온이 갑자기 낮아지니까 감기를 조심해야 해요. 그런데 요즘 나뭇잎의 색이 변하기 시작해서 경치가 좋을 거예요." },
+            { "speaker": "아멜리", "text": "약속이 없으면 같이 가요." },
+            { "speaker": "파하드", "text": "미안해요. 다른 약속이 있어서 못 갈 것 같아요." }
+          ]
+        },
+        {
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            { "text": "1) 어디에 갈 것입니까?" },
+            { "text": "2) 그 날 날씨는 어떻습니까?" },
+            { "text": "3) 거기에서 무엇을 하기로 했습니까?" }
+          ]
+        },
+        {
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            { "ko": "소풍", "translation_ru": "пикник" },
+            { "ko": "산속", "translation_ru": "в горах, в глубине гор" },
+            { "ko": "색", "translation_ru": "цвет" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 68,
+      "page_role": "content",
+      "source_photo": "IMG_0658",
+      "blocks": [
+        {
+          "id": "listening-weather-experience",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "날씨에 대한 경험을 발표하기",
+          "audio_id": "215",
+          "warmup": {
+            "prompt": "날씨가 어떻습니까? 이야기해 보십시오. (바람에 흔들리는 야자수 사진, 우산이 뒤집힐 만큼 강한 바람 속에 서 있는 남자 사진)",
+            "illustration": null
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "questions": [
+            { "kind": "open", "prompt": "1) 무슨 이야기를 합니까?" },
+            {
+              "kind": "choice",
+              "prompt": "2) 들은 내용과 같은 것을 고르십시오.",
+              "choices": [
+                "새벽부터 바람이 불었습니다.",
+                "학교에 갈 때 창문을 닫았습니다.",
+                "비가 와서 방에 물이 들어왔습니다.",
+                "이 사람은 집에 갈 때 옷이 젖었습니다."
+              ],
+              "correct": null
+            }
+          ],
+          "followup": "날씨에 대한 여러분의 경험을 이야기해 보십시오."
+        },
+        {
+          "id": "vocab-listening-weather",
+          "toc_section": "듣고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            { "ko": "태풍", "translation_ru": "тайфун" },
+            { "ko": "생각나다", "translation_ru": "вспоминаться, приходить на ум" },
+            { "ko": "점점", "translation_ru": "постепенно" },
+            { "ko": "세다", "translation_ru": "быть сильным (о ветре и т.п.)" },
+            { "ko": "다행", "translation_ru": "к счастью" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 69,
+      "page_role": "content",
+      "source_photo": "IMG_0659",
+      "blocks": [
+        {
+          "id": "text-reading-korea-weather",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "읽고 말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            { "text": "1. 날씨가 어떻습니까? 이야기해 보십시오. (빙산 사진, 물에 잠긴 도로를 지나가는 자동차 사진, 메마른 갈라진 땅 사진)" },
+            {
+              "text": "한국은 봄, 여름, 가을, 겨울의 사계절이 있습니다. 봄은 따뜻하지만 황사와 꽃샘추위 때문에 날씨의 변화가 심합니다. 여름은 비가 많이 오고 무덥습니다. 그리고 태풍도 붑니다. 하지만 가을은 선선해서 야외에서 활동할 때 기분이 좋습니다. 그리고 겨울은 눈이 많이 오고 춥습니다. 또 건조해서 산불도 자주 납니다.\n하지만 요즘 한국의 계절이 변하고 있습니다. 봄과 가을은 짧아지고 여름과 겨울은 길어지고 있습니다. 그리고 봄은 옛날보다 기온이 높아지고 가을은 기온이 낮아지고 있습니다. 그래서 여름은 더 더워지고 겨울은 더 추워졌습니다. 날씨는 앞으로 계속 변할 것 같습니다."
+            }
+          ]
+        },
+        {
+          "id": "reading-korea-weather",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "한국 날씨를 소개하는 글을 읽기",
+          "questions": [
+            {
+              "kind": "table",
+              "prompt": "1) 한국의 사계절의 특징은 무엇입니까?",
+              "table": {
+                "columns": [""],
+                "rows": ["봄", "여름", "가을", "겨울"]
+              }
+            },
+            {
+              "kind": "table",
+              "prompt": "2) 한국의 계절은 어떻게 변하고 있습니까?",
+              "table": {
+                "columns": [""],
+                "rows": ["봄", "여름", "가을", "겨울"]
+              }
+            },
+            {
+              "kind": "choice",
+              "prompt": "3) 이 글의 내용과 같은 것을 고르십시오.",
+              "choices": [
+                "가을은 길어지고 겨울은 짧아지고 있습니다.",
+                "한국의 봄은 따뜻한 계절이지만 장마가 옵니다.",
+                "한국의 여름은 꽃샘추위가 와서 추운 날이 많습니다.",
+                "봄, 여름, 가을, 겨울의 날씨는 앞으로 계속 변할 것 같습니다."
+              ],
+              "correct": 3
+            }
+          ],
+          "followup": "여러분 나라의 날씨의 변화를 이야기해 보십시오."
+        },
+        {
+          "id": "vocab-reading-korea-weather",
+          "toc_section": "읽고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-korea-weather",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            { "ko": "무덥다", "translation_ru": "быть душным, знойным" },
+            { "ko": "선선하다", "translation_ru": "быть прохладным (приятно)" },
+            { "ko": "건조하다", "translation_ru": "быть сухим" },
+            { "ko": "산불", "translation_ru": "лесной пожар" },
+            { "ko": "특징", "translation_ru": "особенность, черта" }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 70,
+      "page_role": "content",
+      "source_photo": "IMG_0660",
+      "blocks": [
+        {
+          "id": "writing-hometown-weather",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "고향의 날씨를 소개하는 글 쓰기",
+          "prompt": "1. 고향의 날씨를 소개하는 글을 써 보십시오. 1) 개요를 써 보십시오. 2) 위 개요를 바탕으로 글을 써 보십시오.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: расскажите, какие сезоны есть на вашей родине.",
+              "questions": [
+                { "kr": "여러분 나라에는 무슨 계절이 있습니까?", "ru": "Какие сезоны есть в вашей стране?" }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: опишите погоду в каждом из сезонов.",
+              "questions": [
+                { "kr": "각 계절의 날씨는 어떻습니까?", "ru": "Какая погода в каждом сезоне?" }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: расскажите, как меняется погода в последнее время.",
+              "questions": [
+                { "kr": "요즘 날씨는 어떻게 변하고 있습니까?", "ru": "Как сейчас меняется погода?" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 71,
+      "page_role": "content",
+      "source_photo": "IMG_0661",
+      "blocks": [
+        {
+          "id": "text-culture-rainy-food",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "비 오는 날에 먹는 음식",
+          "title_ru": "Еда, которую едят в дождливые дни",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화 이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            { "text": "1. 무엇입니까? 이야기해 보십시오. (국수 사진, 파전 사진)" },
+            {
+              "text": "비 오는 날에 생각나는 음식이 있습니까? 한국 사람들은 비가 오면 보통 파전이나 국수를 먹고 싶어 합니다. 정확한 이유는 알 수 없지만 비가 오는 소리가 파전 굽는 소리와 비슷해서 먹고 싶은 마음이 생기는 것 같습니다. 그리고 비가 오는 모양이 국수 모양과 비슷해서 비를 보면 국수가 먹고 싶어지는 것 같습니다. 또 비가 내리는 날에 친구나 가족과 함께 파전과 국수를 먹고 이야기를 나누면 서로의 정도 깊어지고 행복해집니다. 그래서 비 오는 날에 파전이나 국수가 생각나는 것 같습니다."
+            },
+            { "text": "1) 비가 오는 날에 전이나 면 요리를 먹는 이유는 무엇입니까?" },
+            { "text": "2) 여러분 나라에는 날씨와 어울리는 음식이 있습니까? 이야기해 보십시오." }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-rainy-food",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            { "ko": "파전", "translation_ru": "паджон (блин с зелёным луком)" },
+            { "ko": "국수", "translation_ru": "лапша" },
+            { "ko": "정확하다", "translation_ru": "быть точным" },
+            { "ko": "이유", "translation_ru": "причина" },
+            { "ko": "굽다", "translation_ru": "жарить, печь" },
+            { "ko": "모양", "translation_ru": "форма, вид" },
+            { "ko": "나누다", "translation_ru": "делить(ся)" },
+            { "ko": "정", "translation_ru": "тёплые чувства, привязанность" }
+          ]
+        },
+        {
+          "id": "pronunciation-4",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "받침 'ㄴ'+'ㄹ' (유음화)",
+          "audio_id": "216",
+          "examples": ["등산로", "의견란"]
+        }
+      ]
+    }
+  ]
+}

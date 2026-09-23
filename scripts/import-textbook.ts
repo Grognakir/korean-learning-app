@@ -17,6 +17,7 @@ const LESSON_DIR = join(REFERENCE_DIR, "inha_book_content/1급_lesson_01");
 const LESSON_DIR_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_01");
 const LESSON_DIR_2_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_02");
 const LESSON_DIR_2_3 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_03");
+const LESSON_DIR_2_4 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_04");
 
 const PLAN = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
@@ -231,10 +232,15 @@ async function main() {
     join(LESSON_DIR_2_2, "lesson-02.json"),
     textbook2Lesson1NextIndex,
   );
-  await importLesson(
+  const textbook2Lesson3NextIndex = await importLesson(
     textbook2.id,
     join(LESSON_DIR_2_3, "lesson-03.json"),
     textbook2Lesson2NextIndex,
+  );
+  await importLesson(
+    textbook2.id,
+    join(LESSON_DIR_2_4, "lesson-04.json"),
+    textbook2Lesson3NextIndex,
   );
 
   // Ассеты: только то, что реально используется этим уроком, не всё
@@ -372,6 +378,30 @@ async function main() {
   await uploadAsset(
     join(REFERENCE_DIR, "inha_book_audio/2급_주교재/212.mp3"),
     "inha_book_2/audio/212.mp3",
+    "audio/mpeg",
+  );
+
+  // 2급 4과: аудио к обоим диалогам 준비하기 (213, 214), 듣고 말하기 (215)
+  // и 발음 (216). Иллюстраций для этого урока пока нет — фото учебника
+  // не содержит отдельных сгенерированных картинок, storage_path: null.
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/213.mp3"),
+    "inha_book_2/audio/213.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/214.mp3"),
+    "inha_book_2/audio/214.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/215.mp3"),
+    "inha_book_2/audio/215.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/216.mp3"),
+    "inha_book_2/audio/216.mp3",
     "audio/mpeg",
   );
 

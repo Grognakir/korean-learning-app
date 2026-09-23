@@ -7,3 +7,10 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Передача контекста между моделями
+
+- В начале работы прочитать `docs/AGENT_HANDOFF.md`.
+- После каждой значимой задачи обновить в нём постоянные особенности проекта и добавить запись в журнал выполненных работ.
+- После публикации отдельно зафиксировать: коммит, статус Vercel, синхронизацию production-базы и результат проверки рабочего домена.
+- Не считать изменение учебного JSON опубликованным, пока соответствующие данные не обновлены в production Supabase.
