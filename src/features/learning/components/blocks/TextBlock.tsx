@@ -5,6 +5,8 @@ import type {
 } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
 import { VocabChip } from "./VocabChip";
+import { OpenTemplateDialogue } from "./OpenTemplateDialogue";
+import { speakerClassName } from "./speakerClassName";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
@@ -82,19 +84,34 @@ export function TextBlock({
   id,
   vocabItems,
   relatedHint,
+  titleSuffix,
 }: {
   block: TextBlockType;
   id?: string;
   vocabItems?: VocabItem[];
   relatedHint?: HintBlock;
+  /** См. GrammarExercise — тот же суффикс "-1"/"-2" для дополнительного
+   * задания того же упражнения (exercise_title совпадает с соседним
+   * grammar_exercise). */
+  titleSuffix?: number | null;
 }) {
   const seenVocab = new Set<string>();
 
   return (
     <div id={id} className={styles.block}>
+      {block.exercise_title && (
+        <span className={styles.labelRow}>
+          <span className={`${styles.label} kr`}>
+            {block.exercise_title}
+            {titleSuffix ? `-${titleSuffix}` : ""}
+          </span>
+        </span>
+      )}
       {block.title && (
         <span className={styles.labelRow}>
-          <span className={`${styles.dialogueTitle} kr`}>{block.title}</span>
+          <span className={`${block.exercise_title ? styles.prompt : styles.dialogueTitle} kr`}>
+            {block.title}
+          </span>
           {block.title_ru && <LabelInfo translation={block.title_ru} />}
         </span>
       )}
@@ -109,14 +126,18 @@ export function TextBlock({
       {block.audioUrl && (
         <audio controls src={block.audioUrl} className={styles.audio} />
       )}
-      {block.lines.map((line, i) => (
-        <p key={i} className={styles.line}>
-          {line.speaker && (
-            <span className={`${styles.speaker} kr`}>{line.speaker}:</span>
-          )}
-          <LineText line={line} vocabItems={vocabItems} seenVocab={seenVocab} />
-        </p>
-      ))}
+      {block.practice_variants ? (
+        <OpenTemplateDialogue lines={block.lines} count={block.practice_variants.count} />
+      ) : (
+        block.lines.map((line, i) => (
+          <p key={i} className={styles.line}>
+            {line.speaker && (
+              <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
+            )}
+            <LineText line={line} vocabItems={vocabItems} seenVocab={seenVocab} />
+          </p>
+        ))
+      )}
       {relatedHint && <HintSection hint={relatedHint} />}
     </div>
   );

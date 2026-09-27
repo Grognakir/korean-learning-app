@@ -16,6 +16,12 @@ function vocabNeedles(ko: string): string[] {
     // это не тот случай (например, стяжение 마시다→마셔요), эта заготовка
     // просто ни с чем не совпадёт в тексте, не давая ложных срабатываний.
     needles.push(`${stem}요`);
+    // 하다-глаголы/прилагательные стягивают 하+아/어→해 без исключений
+    // (설명하다→설명해, 시작하다→시작해...) — в отличие от предыдущей
+    // заготовки это не догадка, а формальное правило корейского.
+    if (stem.endsWith("하")) {
+      needles.push(`${stem.slice(0, -1)}해`);
+    }
   }
   return needles.sort((a, b) => b.length - a.length);
 }
@@ -59,51 +65,15 @@ export function vocabKeysInText(text: string, vocabItems: VocabItem[]): string[]
   return findVocabMatches(text, vocabItems).map((match) => match.ko);
 }
 
-/** Размечает сложные слова в тексте кликабельными чипами с переводом по
- * наведению — общая логика для текстов урока, грамматики и упражнений.
- * `seen`, если передан, собирает уже размеченные словарные формы (item.ko)
- * между несколькими вызовами подряд (например, по всем строкам одного
- * упражнения) — повторное появление того же слова рендерится обычным
- * текстом, а не ещё одним чипом с тем же переводом. */
-export function highlightVocab(
-  text: string,
-  vocabItems: VocabItem[] | undefined,
-  keyPrefix = "",
-  seen?: Set<string>,
-): ReactNode {
-  if (!vocabItems?.length) return text;
-
-  const matches = findVocabMatches(text, vocabItems);
-  if (matches.length === 0) return text;
-
-  const parts: ReactNode[] = [];
-  let cursor = 0;
-  matches.forEach((match, i) => {
-    if (match.start > cursor) {
-      parts.push(text.slice(cursor, match.start));
-    }
-    if (seen?.has(match.ko)) {
-      parts.push(text.slice(match.start, match.end));
-    } else {
-      seen?.add(match.ko);
-      parts.push(
-        <VocabChip
-          key={`${keyPrefix}${match.start}-${i}`}
-          text={text.slice(match.start, match.end)}
-          translation={match.translation}
-          className={styles.inlineVocab}
-        />,
-      );
-    }
-    cursor = match.end;
-  });
-  if (cursor < text.length) {
-    parts.push(text.slice(cursor));
-  }
-
-  return parts;
-}
-
+/** Размечает сложные слова и грамматическое выделение в тексте — общая
+ * логика для текстов урока, грамматики и упражнений. `seen`, если передан,
+ * собирает уже размеченные словарные формы (item.ko) между несколькими
+ * вызовами подряд (например, по всем строкам одного упражнения) —
+ * повторное появление того же слова рендерится обычным текстом, а не ещё
+ * одним чипом с тем же переводом. `chipNested` — true, когда результат
+ * встраивается внутрь уже кликабельного родителя (например пункта-кнопки
+ * упражнения): чипы тогда рендерятся без вложенного <button> и с остановкой
+ * всплытия клика, см. `VocabChip`. */
 export function highlightDialogueSpeakers(
   text: string,
   vocabItems: VocabItem[] | undefined,
@@ -111,9 +81,21 @@ export function highlightDialogueSpeakers(
   seen?: Set<string>,
   emphasized: string[] = [],
   emphasisClassName: string = styles.exerciseEmphasis,
+  chipNested = false,
 ): ReactNode {
+  // Грамматическое выделение (emphasis) и словарные чипы (vocab) — два
+  // НЕЗАВИСИМЫХ набора диапазонов над одним текстом, и они могут
+  // пересекаться посередине слова (например "자를 거예요": вокаб-слово
+  // "자를" и emphasis-показатель "를 거예요" оба претендуют на "를").
+  // Раньше текст сначала резался по границам emphasis, и вокаб-поиск
+  // внутри каждого куска не мог найти слово, разорванное этой границей.
+  // Здесь вместо этого считаем оба набора диапазонов на ЦЕЛОЙ строке,
+  // режем по объединению всех границ и на каждый минимальный кусок
+  // навешиваем оба стиля сразу, если применимо — а сегменты одного и
+  // того же вокаб-совпадения группируем в один чип (иначе слово
+  // распадётся на несколько кликабельных кусков).
   function renderText(value: string, partKey: string): ReactNode {
-    const fragments = emphasized
+    const emphasisRanges = emphasized
       .flatMap((fragment) => {
         const ranges: { start: number; end: number }[] = [];
         let from = 0;
@@ -131,32 +113,87 @@ export function highlightDialogueSpeakers(
           !ranges.slice(0, index).some((taken) => range.start < taken.end && range.end > taken.start),
       );
 
-    if (fragments.length === 0) {
-      return highlightVocab(value, vocabItems, partKey, seen);
+    const vocabMatches = vocabItems?.length ? findVocabMatches(value, vocabItems) : [];
+
+    if (emphasisRanges.length === 0 && vocabMatches.length === 0) {
+      return value;
+    }
+
+    const boundarySet = new Set<number>([0, value.length]);
+    for (const r of emphasisRanges) {
+      boundarySet.add(r.start);
+      boundarySet.add(r.end);
+    }
+    for (const m of vocabMatches) {
+      boundarySet.add(m.start);
+      boundarySet.add(m.end);
+    }
+    const boundaries = Array.from(boundarySet).sort((a, b) => a - b);
+
+    type Segment = {
+      start: number;
+      end: number;
+      emphasis: { start: number; end: number } | null;
+      vocab: TextMatch | null;
+    };
+    const segments: Segment[] = [];
+    for (let i = 0; i < boundaries.length - 1; i++) {
+      const segStart = boundaries[i];
+      const segEnd = boundaries[i + 1];
+      if (segStart === segEnd) continue;
+      const emphasis = emphasisRanges.find((r) => r.start <= segStart && segEnd <= r.end) ?? null;
+      const vocab = vocabMatches.find((m) => m.start <= segStart && segEnd <= m.end) ?? null;
+      segments.push({ start: segStart, end: segEnd, emphasis, vocab });
     }
 
     const nodes: ReactNode[] = [];
-    let position = 0;
-    fragments.forEach((range, index) => {
-      if (range.start > position) {
+    let i = 0;
+    while (i < segments.length) {
+      const seg = segments[i];
+      if (seg.vocab) {
+        const vocabMatch = seg.vocab;
+        const group: Segment[] = [];
+        while (i < segments.length && segments[i].vocab === vocabMatch) {
+          group.push(segments[i]);
+          i++;
+        }
+        const chipChildren = group.map((g) => {
+          const slice = value.slice(g.start, g.end);
+          return g.emphasis ? (
+            <span key={`${partKey}emph-${g.start}`} className={emphasisClassName}>
+              {slice}
+            </span>
+          ) : (
+            slice
+          );
+        });
+        if (seen?.has(vocabMatch.ko)) {
+          nodes.push(...chipChildren);
+        } else {
+          seen?.add(vocabMatch.ko);
+          nodes.push(
+            <VocabChip
+              key={`${partKey}vocab-${vocabMatch.start}`}
+              text={chipChildren}
+              translation={vocabMatch.translation}
+              className={styles.inlineVocab}
+              nested={chipNested}
+            />,
+          );
+        }
+      } else {
+        const slice = value.slice(seg.start, seg.end);
         nodes.push(
-          highlightVocab(value.slice(position, range.start), vocabItems, `${partKey}plain-${index}-`, seen),
+          seg.emphasis ? (
+            <span key={`${partKey}emph-${seg.start}`} className={emphasisClassName}>
+              {slice}
+            </span>
+          ) : (
+            slice
+          ),
         );
+        i++;
       }
-      nodes.push(
-        <span key={`${partKey}emphasis-${range.start}`} className={emphasisClassName}>
-          {highlightVocab(
-            value.slice(range.start, range.end),
-            vocabItems,
-            `${partKey}emphasis-${index}-`,
-            seen,
-          )}
-        </span>,
-      );
-      position = range.end;
-    });
-    if (position < value.length) {
-      nodes.push(highlightVocab(value.slice(position), vocabItems, `${partKey}tail-`, seen));
     }
     return nodes;
   }

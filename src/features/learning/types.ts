@@ -51,6 +51,28 @@ export type TextBlock = ContentBlockBase & {
   speakers?: string[];
   lines: TextLine[];
   audioUrl?: string | null;
+  /**
+   * Печатный заголовок "연습하기N", когда этот text-блок — дополнительное
+   * задание внутри того же упражнения, что и соседний grammar_exercise
+   * (например exercise-1a/exercise-1b оба "연습하기1"). Не путать с
+   * `title` — той конкретной строкой-инструкцией задания ("2. 다음과
+   * 같이..."). См. exerciseTitleOccurrence в PageBlocks.tsx — при
+   * совпадении с другим блоком (любого из этих двух типов) добавляется
+   * суффикс "-1"/"-2" к отображению.
+   */
+  exercise_title?: string;
+  /**
+   * Открытая практика без книжного "правильного ответа" (например
+   * exercise-1b: студент придумывает свои имя/страну вместо рукописных
+   * данных одногруппников из фото). `lines[].text` содержит "___" на
+   * месте пропусков (два пропуска на строку — страна, потом имя, в этом
+   * порядке одинаково во всех строках). `count` — сколько независимых
+   * вариантов (чипов) можно заполнить; у каждого свой набор значений.
+   * Выбранный чип делает "___" в lines редактируемыми полями ввода;
+   * ярлык чипа, пока пусто, показывает "이름 / 나라", после ввода —
+   * то, что реально ввёл студент. Рендерится OpenTemplateDialogue.tsx.
+   */
+  practice_variants?: { count: number };
 };
 
 export type VocabListBlock = ContentBlockBase & {
@@ -189,6 +211,10 @@ export type GrammarPointBlock = ContentBlockBase & {
   explanation: string | null;
   rules?: string[];
   examples: string[];
+  /** Переводы слов, встречающихся именно в examples[] этой грамматики —
+   * не рукописный словарь раздела, а локальные подсказки под конкретные
+   * примеры (см. тот же паттерн у GrammarExerciseBlock.example.vocab). */
+  vocab?: { ko: string; translation_ru: string }[];
   details_link?: {
     label: string;
     href: string | null;

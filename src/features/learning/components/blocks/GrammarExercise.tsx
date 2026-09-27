@@ -73,7 +73,7 @@ function storageKey(blockId?: string) {
   return blockId ? `grammar-exercise:${blockId}` : null;
 }
 
-function inputWidthEm(value: string): number {
+export function inputWidthEm(value: string): number {
   const units = Array.from(value).reduce((total, char) => {
     if (/\s/.test(char)) return total + 0.35;
     if (char.charCodeAt(0) < 128) return total + 0.6;
@@ -94,10 +94,15 @@ export function GrammarExercise({
   block,
   id,
   vocabItems,
+  titleSuffix,
 }: {
   block: GrammarExerciseBlock;
   id?: string;
   vocabItems?: VocabItem[];
+  /** Индекс "-1"/"-2" для отображения, когда несколько заданий в разделе
+   * делят один и тот же exercise_title (см. exerciseTitleOccurrence в
+   * PageBlocks.tsx) — не часть контента, только для UI. */
+  titleSuffix?: number | null;
 }) {
   const lines = useMemo(() => parseTemplate(block.template), [block.template]);
   const blankIndexes = useMemo(
@@ -204,7 +209,10 @@ export function GrammarExercise({
   return (
     <div id={id} className={styles.block}>
       <span className={styles.labelRow}>
-        <span className={`${styles.label} kr`}>{block.exercise_title}</span>
+        <span className={`${styles.label} kr`}>
+          {block.exercise_title}
+          {titleSuffix ? `-${titleSuffix}` : ""}
+        </span>
       </span>
       <span className={styles.labelRow}>
         <span className={`${styles.prompt} kr`}>{block.prompt}</span>
@@ -310,7 +318,17 @@ export function GrammarExercise({
               <span className={styles.exerciseItemNumber} aria-hidden="true">
                 {i + 1}
               </span>
-              <span>{item.given.join(" / ")}</span>
+              <span>
+                {highlightDialogueSpeakers(
+                  item.given.join(" / "),
+                  vocabItems,
+                  `item-${i}-`,
+                  seenVocab,
+                  [],
+                  undefined,
+                  true,
+                )}
+              </span>
             </button>
           );
         })}

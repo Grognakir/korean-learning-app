@@ -54,6 +54,16 @@
   color: var(--ink);
 }
 
+/* Только "sm" (шапка) — .rootLg сохраняет свой размер даже в узкой зоне,
+   он не используется в AppHeader. */
+@media (--header-tight) {
+  .root:not(.rootLg) .option,
+  .root:not(.rootLg) .optionActive {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+
 .option:disabled,
 .optionActive:disabled {
   cursor: wait;

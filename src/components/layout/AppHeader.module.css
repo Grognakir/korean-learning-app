@@ -110,6 +110,26 @@
  * имя/шестерёнка/выход сворачиваются в UserMenu. Порог --to-compact
  * объявлен в src/styles/media.css.
  */
+@media (--header-tight) {
+  .header {
+    gap: 8px;
+    padding: 14px 12px;
+  }
+
+  .navCenter {
+    gap: 12px;
+  }
+
+  .headerActions {
+    gap: 6px;
+  }
+
+  .userMenu,
+  .logout {
+    padding: 6px 10px;
+  }
+}
+
 @media (--to-compact) {
   .navCenter {
     display: none;

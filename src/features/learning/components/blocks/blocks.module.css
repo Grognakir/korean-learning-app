@@ -244,7 +244,8 @@
 }
 
 .emphasized {
-  font-weight: 600;
+  color: var(--blue);
+  font-weight: 700;
 }
 
 /* vocab_list */
@@ -525,6 +526,7 @@
   font-size: 14px;
   line-height: 1.5;
   color: var(--ink-soft);
+  white-space: pre-line;
 }
 
 .rules {

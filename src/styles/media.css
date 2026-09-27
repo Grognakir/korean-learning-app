@@ -6,3 +6,10 @@
    postcss-preset-env, см. postcss.config.mjs) — в CSS-модули этот файл
    импортировать не нужно. */
 @custom-media --to-compact (max-width: 1000px);
+
+/* Промежуточная зона НАД --to-compact (например iPad landscape), где
+   .navCenter/.headerActions в AppHeader ещё полностью показаны (по
+   дизайну), но бренд + нав-ссылки + переключатель языка + меню профиля
+   уже впритык друг к другу в одну строку — сужаем самые нерастяжимые
+   элементы (LanguageSwitch), не убирая их целиком. */
+@custom-media --header-tight (max-width: 1220px);

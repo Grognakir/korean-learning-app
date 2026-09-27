@@ -65,7 +65,11 @@ function blockTexts(block: Block): string[] {
   if (block.type === "text") return block.lines.map((line) => line.text);
   if (block.type === "grammar_point") return block.examples;
   if (block.type === "grammar_exercise") {
-    return [...block.example.dialogue, ...block.template];
+    return [
+      ...block.example.dialogue,
+      ...block.template,
+      ...block.items.flatMap((item) => item.given),
+    ];
   }
   return [];
 }
@@ -92,7 +96,7 @@ function vocabForEachBlock(
         : block.type === "grammar_exercise"
           ? [...pageVocab, ...(block.example.vocab ?? [])]
           : block.type === "grammar_point"
-            ? pageVocab
+            ? [...pageVocab, ...(block.vocab ?? [])]
             : [],
     );
     const claimed = new Set<string>();
@@ -106,6 +110,37 @@ function vocabForEachBlock(
     }
 
     return candidates.filter((item) => claimed.has(item.ko));
+  });
+}
+
+/** Тот же exercise_title, что печатает книга ("연습하기N"), — общий
+ * ключ группировки и для grammar_exercise, и для text-блоков с
+ * дополнительным заданием того же упражнения (см. TextBlock.exercise_title). */
+function exerciseTitleOf(block: Block): string | null {
+  if (block.type === "grammar_exercise") return block.exercise_title;
+  if (block.type === "text" && block.exercise_title) return block.exercise_title;
+  return null;
+}
+
+/** Когда несколько блоков подряд в разделе делят один и тот же
+ * exercise_title (книга и правда печатает "연습하기2" один раз на оба
+ * задания) — возвращает индекс "-1"/"-2"/... для КАЖДОГО такого блока, а
+ * для уникальных заголовков — null (суффикс не нужен, дублей нет). Сам
+ * exercise_title не трогаем (он источник-точный текст книги), суффикс
+ * только для отображения. */
+function exerciseTitleOccurrence(blocks: Block[]): (number | null)[] {
+  const totals = new Map<string, number>();
+  for (const block of blocks) {
+    const title = exerciseTitleOf(block);
+    if (title) totals.set(title, (totals.get(title) ?? 0) + 1);
+  }
+  const seen = new Map<string, number>();
+  return blocks.map((block) => {
+    const title = exerciseTitleOf(block);
+    if (!title || (totals.get(title) ?? 0) <= 1) return null;
+    const next = (seen.get(title) ?? 0) + 1;
+    seen.set(title, next);
+    return next;
   });
 }
 
@@ -130,6 +165,7 @@ export function PageBlocks({
   const hintMap = hintsByRelatedText(blocks, textIds);
   const pageVocab = allPageVocab(blocks);
   const blockVocab = vocabForEachBlock(blocks, pageVocab, vocabMap);
+  const exerciseTitleIndex = exerciseTitleOccurrence(blocks);
 
   return (
     <>
@@ -156,6 +192,7 @@ export function PageBlocks({
                 relatedHint={
                   block.id ? hintMap.get(block.id) : undefined
                 }
+                titleSuffix={exerciseTitleIndex[i]}
               />
             );
           case "vocab_list":
@@ -177,7 +214,15 @@ export function PageBlocks({
           case "grammar_point":
             return <GrammarPoint key={i} id={block.id} block={block} vocabItems={blockVocab[i]} />;
           case "grammar_exercise":
-            return <GrammarExercise key={i} id={block.id} block={block} vocabItems={blockVocab[i]} />;
+            return (
+              <GrammarExercise
+                key={i}
+                id={block.id}
+                block={block}
+                vocabItems={blockVocab[i]}
+                titleSuffix={exerciseTitleIndex[i]}
+              />
+            );
           case "comprehension_exercise":
             return <ComprehensionExercise key={i} id={block.id} block={block} />;
           case "writing_exercise":

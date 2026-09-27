@@ -10,6 +10,7 @@ type Block = {
   details_link?: { label: string; href: string | null };
   rules?: string[];
   items?: { ko: string; translation_ru: string }[];
+  vocab?: { ko: string; translation_ru: string }[];
   example?: {
     dialogue?: string[];
     emphasis?: string[][];
@@ -42,8 +43,8 @@ it("уточняет правила грамматики первого разд
   expect(naming.details_link).toEqual({ label: "Изучить подробнее", href: null });
   expect(elapsed.rules).toEqual([
     "основа + (으)ㄴ 지 + отрезок времени + 됐어요/지났어요 («прошло / миновало»)",
-    "нет 받침 или ㄹ받침 (ㄹ выпадает) — ㄴ 지: 살다→산 지",
-    "есть 받침 (кроме ㄹ) — 은 지: 먹다→먹은 지",
+    "нет 받침 или ㄹ받침 (ㄹ выпадает) — ㄴ 지",
+    "есть 받침 (кроме ㄹ) — 은 지",
   ]);
 });
 
@@ -69,6 +70,9 @@ it("хранит переводы примеров внутри соответс
     "너무",
     "작다",
     "크다",
+    "건강",
+    "짜다",
+    "말다",
   ]);
   expect(byId("exercise-2b").example?.vocab?.map((item) => item.ko)).toEqual([
     "머리",
@@ -76,6 +80,20 @@ it("хранит переводы примеров внутри соответс
     "짧다",
     "자르다",
     "자를",
+    "더우",
+  ]);
+  expect(byId("grammar-2").vocab?.map((item) => item.ko)).toEqual([
+    "쉽다",
+    "설명하다",
+    "주셨",
+    "추우",
+    "옷",
+    "따뜻하다",
+    "입다",
+    "드",
+    "맛있다",
+    "드릴",
+    "차갑다",
   ]);
 });
 

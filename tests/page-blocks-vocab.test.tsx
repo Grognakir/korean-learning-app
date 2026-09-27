@@ -1,7 +1,7 @@
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { expect, it } from "vitest";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
-import { vocabKeysInText } from "@/features/learning/components/blocks/vocabHighlight";
+import { highlightDialogueSpeakers, vocabKeysInText } from "@/features/learning/components/blocks/vocabHighlight";
 import type { Block } from "@/features/learning/types";
 
 it("показывает перевод слова только при первом употреблении в разделе", () => {
@@ -82,4 +82,63 @@ it("находит словарные формы в реальных приме�
       { ko: "자를", translation_ru: "стричь, резать (форма от 자르다)" },
     ]),
   ).toEqual(["머리", "자를"]);
+});
+
+// Регресс: "자를" — вокаб-слово, которое начинается ДО emphasis-диапазона
+// "를 거예요" и заканчивается ВНУТРИ него. Раньше текст резался по границам
+// emphasis раньше вокаб-поиска, поэтому "자를" не находился целиком (только
+// изолированный "자" оставался без перевода). Слово должно рендериться
+// ОДНИМ чипом, а не распадаться на "자" (обычный текст) + "를" (внутри
+// отдельного emphasis-span).
+it("вокаб-слово, пересекающее границу emphasis, остаётся одним чипом", () => {
+  const { container } = render(
+    <>
+      {highlightDialogueSpeakers(
+        "머리를 어떻게 자를 거예요?",
+        [{ ko: "자를", translation_ru: "стричь, резать (форма от 자르다)" }],
+        "",
+        undefined,
+        ["를 어떻게", "를 거예요"],
+      )}
+    </>,
+  );
+
+  const chips = container.querySelectorAll('[class*="inlineVocab"]');
+  expect(chips).toHaveLength(1);
+  expect(chips[0].querySelector('[class*="vocabKo"]')?.textContent).toBe("자를");
+  // Внутри чипа "를" должен всё равно нести emphasis-стиль.
+  expect(chips[0].querySelector('[class*="exerciseEmphasis"]')?.textContent).toBe("를");
+});
+
+// Регресс: слово-подсказка внутри пункта-кнопки упражнения (`exerciseItem`)
+// не должно рендериться как вложенный <button> (невалидный HTML) и тап по
+// нему не должен всплывать до кнопки-родителя — иначе на мобильных нельзя
+// посмотреть перевод, не выбрав/не запустив упражнение.
+it("вокаб-чип внутри кликабельного родителя не триггерит его onClick", () => {
+  const onParentClick = () => {
+    parentClicked = true;
+  };
+  let parentClicked = false;
+
+  const { container } = render(
+    <button type="button" onClick={onParentClick}>
+      {highlightDialogueSpeakers(
+        "짧은 머리",
+        [{ ko: "머리", translation_ru: "голова, волосы" }],
+        "",
+        undefined,
+        [],
+        undefined,
+        true,
+      )}
+    </button>,
+  );
+
+  const chipControl = container.querySelector('[class*="vocabKo"]');
+  expect(chipControl?.tagName).toBe("SPAN");
+  expect(chipControl?.getAttribute("role")).toBe("button");
+  expect(container.querySelector("button > button")).toBeNull();
+
+  fireEvent.click(chipControl!);
+  expect(parentClicked).toBe(false);
 });
