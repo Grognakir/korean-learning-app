@@ -12,6 +12,7 @@ type LessonBlock = {
   id?: string;
   illustration?: Illustration | null;
   warmup?: { illustration?: Illustration | null };
+  vocab?: { ko: string; translation_ru: string }[];
 };
 
 const lessonDir = join(
@@ -44,3 +45,11 @@ it("подключает пять иллюстраций к нужным раз�
   }
 });
 
+it("показывает перевод 되 в тексте прогноза погоды", () => {
+  const block = blocks.find((item) => item.id === "text-forecast-broadcast");
+
+  expect(block?.vocab).toContainEqual({
+    ko: "되",
+    translation_ru: "составит, станет (форма от 되다)",
+  });
+});
