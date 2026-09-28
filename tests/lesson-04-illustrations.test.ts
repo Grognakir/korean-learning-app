@@ -12,6 +12,7 @@ type LessonBlock = {
   id?: string;
   illustration?: Illustration | null;
   warmup?: { illustration?: Illustration | null };
+  rules?: string[];
   vocab?: { ko: string; translation_ru: string }[];
 };
 
@@ -61,4 +62,10 @@ it("показывает перевод 이제 в примере граммат�
     ko: "이제",
     translation_ru: "теперь, уже",
   });
+});
+
+it("разделяет русское слово и 받침 в правилах N(으)로③", () => {
+  const block = blocks.find((item) => item.id === "grammar-5");
+
+  expect(block?.rules).toEqual(["нет 받침 — N로", "есть 받침 — N으로"]);
 });

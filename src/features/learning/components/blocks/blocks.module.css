@@ -45,22 +45,29 @@
 .labelInfo {
   position: relative;
   display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
   overflow: visible;
 }
 
 .labelInfoButton {
   position: relative;
-  display: grid;
-  place-items: center;
-  align-content: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 15px;
   height: 15px;
+  line-height: 0;
   padding: 0;
   border: none;
   background: none;
   color: var(--stone);
   cursor: pointer;
   flex-shrink: 0;
+}
+
+.labelInfoButton svg {
+  display: block;
 }
 
 /* Видимая иконка остаётся 15px (не расталкивает плотные строки лейблов),
@@ -711,7 +718,7 @@
 
 .exerciseItem {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 6px;
   font-size: var(--kr-font-sm);
   border: 1px solid var(--line);
