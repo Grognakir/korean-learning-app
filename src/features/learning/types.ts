@@ -73,6 +73,14 @@ export type TextBlock = ContentBlockBase & {
    * то, что реально ввёл студент. Рендерится OpenTemplateDialogue.tsx.
    */
   practice_variants?: { count: number };
+  /**
+   * Переводы слов, реально встречающихся в lines[] этого текста — не то
+   * же самое, что рукописный vocab_list (`related_text_ref`), у которого
+   * source_note держит его source-точность (только то, что студент
+   * реально вписал на полях). Тот же паттерн, что у
+   * GrammarPointBlock.vocab.
+   */
+  vocab?: { ko: string; translation_ru: string }[];
 };
 
 export type VocabListBlock = ContentBlockBase & {

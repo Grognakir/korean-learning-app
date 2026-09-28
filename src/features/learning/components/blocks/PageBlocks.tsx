@@ -90,9 +90,10 @@ function vocabForEachBlock(
   return blocks.map((block) => {
     const candidates = uniqueVocab(
       block.type === "text"
-        ? block.id
-          ? (vocabMap.get(block.id) ?? [])
-          : []
+        ? [
+            ...(block.id ? (vocabMap.get(block.id) ?? []) : []),
+            ...(block.vocab ?? []),
+          ]
         : block.type === "grammar_exercise"
           ? [...pageVocab, ...(block.example.vocab ?? [])]
           : block.type === "grammar_point"
