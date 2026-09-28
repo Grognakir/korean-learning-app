@@ -121,7 +121,10 @@
           "type": "text",
           "title": "날씨를 추측하고 일정을 계획하기",
           "title_ru": "Предполагать погоду и планировать дела",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_4/illustration_1_dusty_weather.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -395,7 +398,10 @@
           "type": "text",
           "title": "일기예보를 듣기",
           "title_ru": "Слушать прогноз погоды",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_4/illustration_2_weather_forecast.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -858,7 +864,10 @@
           "audio_id": "215",
           "warmup": {
             "prompt": "날씨가 어떻습니까? 이야기해 보십시오. (바람에 흔들리는 야자수 사진, 우산이 뒤집힐 만큼 강한 바람 속에 서 있는 남자 사진)",
-            "illustration": null
+            "illustration": {
+              "storage_path": "lesson_4/illustration_3_typhoon_wind.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "questions": [
@@ -904,7 +913,10 @@
           "id": "text-reading-korea-weather",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_4/illustration_4_four_seasons.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고 말하기",
           "exercise_ref": null,
@@ -1019,7 +1031,10 @@
           "type": "text",
           "title": "비 오는 날에 먹는 음식",
           "title_ru": "Еда, которую едят в дождливые дни",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_4/illustration_5_rainy_day_food.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화 이해하기",
           "exercise_ref": null,

@@ -43,6 +43,14 @@ const LESSON_3_ILLUSTRATIONS = [
   "illustration_5_university_volunteering.png",
 ];
 
+const LESSON_4_ILLUSTRATIONS = [
+  "illustration_1_dusty_weather.png",
+  "illustration_2_weather_forecast.png",
+  "illustration_3_typhoon_wind.png",
+  "illustration_4_four_seasons.png",
+  "illustration_5_rainy_day_food.png",
+];
+
 type LessonPage = {
   page_number: number | null;
   page_role: string;
@@ -122,6 +130,42 @@ async function importLesson(
 }
 
 async function main() {
+  if (process.argv.includes("--lesson-4-only")) {
+    const { data: textbook2, error: textbookError } = await supabase
+      .from("textbooks")
+      .select("id")
+      .eq("slug", TEXTBOOK_2.slug)
+      .single();
+    if (textbookError) throw textbookError;
+
+    const lesson1: LessonFile = JSON.parse(
+      readFileSync(join(LESSON_DIR_2, "lesson-01.json"), "utf-8"),
+    );
+    const lesson2: LessonFile = JSON.parse(
+      readFileSync(join(LESSON_DIR_2_2, "lesson-02.json"), "utf-8"),
+    );
+    const lesson3: LessonFile = JSON.parse(
+      readFileSync(join(LESSON_DIR_2_3, "lesson-03.json"), "utf-8"),
+    );
+    const lesson4StartIndex =
+      lesson1.pages.length + lesson2.pages.length + lesson3.pages.length;
+
+    await importLesson(
+      textbook2.id,
+      join(LESSON_DIR_2_4, "lesson-04.json"),
+      lesson4StartIndex,
+    );
+    for (const filename of LESSON_4_ILLUSTRATIONS) {
+      await uploadAsset(
+        join(LESSON_DIR_2_4, `img/${filename}`),
+        `inha_book_2/lesson_4/${filename}`,
+        "image/png",
+      );
+    }
+    console.log("Готово.");
+    return;
+  }
+
   if (process.argv.includes("--lesson-3-only")) {
     const { data: textbook2, error: textbookError } = await supabase
       .from("textbooks")
@@ -180,6 +224,10 @@ async function main() {
       ...LESSON_3_ILLUSTRATIONS.map((filename) => ({
         localPath: join(LESSON_DIR_2_3, `img/${filename}`),
         storagePath: `inha_book_2/lesson_3/${filename}`,
+      })),
+      ...LESSON_4_ILLUSTRATIONS.map((filename) => ({
+        localPath: join(LESSON_DIR_2_4, `img/${filename}`),
+        storagePath: `inha_book_2/lesson_4/${filename}`,
       })),
     ];
 
@@ -381,9 +429,16 @@ async function main() {
     "audio/mpeg",
   );
 
-  // 2급 4과: аудио к обоим диалогам 준비하기 (213, 214), 듣고 말하기 (215)
-  // и 발음 (216). Иллюстраций для этого урока пока нет — фото учебника
-  // не содержит отдельных сгенерированных картинок, storage_path: null.
+  // 2급 4과: иллюстрации к разделам и аудио к обоим диалогам 준비하기
+  // (213, 214), 듣고 말하기 (215) и 발음 (216).
+  for (const filename of LESSON_4_ILLUSTRATIONS) {
+    await uploadAsset(
+      join(LESSON_DIR_2_4, `img/${filename}`),
+      `inha_book_2/lesson_4/${filename}`,
+      "image/png",
+    );
+  }
+
   await uploadAsset(
     join(REFERENCE_DIR, "inha_book_audio/2급_주교재/213.mp3"),
     "inha_book_2/audio/213.mp3",
