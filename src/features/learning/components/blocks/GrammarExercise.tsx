@@ -153,8 +153,8 @@ export function GrammarExercise({
   function isCorrect(itemIndex: number): boolean {
     const values = inputs[itemIndex];
     const targets = targetsFor(itemIndex);
-    if (!values) return false;
-    return values.every((v, i) => v.trim() === targets[i]?.trim());
+    if (!values || values.length !== targets.length) return false;
+    return targets.every((target, i) => values[i]?.trim() === target.trim());
   }
 
   function selectItem(itemIndex: number) {

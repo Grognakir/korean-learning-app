@@ -11,6 +11,8 @@ type Illustration = {
 type LessonBlock = {
   id?: string;
   illustration?: Illustration | null;
+  items?: { answers: string[] }[];
+  template?: string[];
   warmup?: { illustration?: Illustration | null };
   rules?: string[];
   vocab?: { ko: string; translation_ru: string }[];
@@ -68,4 +70,27 @@ it("разделяет русское слово и 받침 в правилах N
   const block = blocks.find((item) => item.id === "grammar-5");
 
   expect(block?.rules).toEqual(["нет 받침 — N로", "есть 받침 — N으로"]);
+});
+
+it("оставляет неизменяемые слова снаружи, а частицы и грамматику включает в поля", () => {
+  const exercise3a = blocks.find((item) => item.id === "exercise-3a");
+  const exercise3b = blocks.find((item) => item.id === "exercise-3b");
+  const exercise3c = blocks.find((item) => item.id === "exercise-3c");
+
+  expect(exercise3a?.template).toEqual(["가: {0} {1}보다 {2}."]);
+  expect(exercise3a?.items?.[0].answers).toEqual(["자동차가", "작년", "많아졌어요"]);
+
+  expect(exercise3b?.template).toEqual(["가: {0} 어때요?", "나: {1} 점점 {2}."]);
+  expect(exercise3b?.items?.[1].answers).toEqual([
+    "하늘에 구름이",
+    "하늘에 구름이",
+    "많아지고 있어요",
+  ]);
+
+  expect(exercise3c?.template).toEqual(["가: {0} 걱정이에요.", "나: {1} {2}."]);
+  expect(exercise3c?.items?.[2].answers).toEqual([
+    "한국어가 어려워져서",
+    "연습을 많이 하면",
+    "쉬워질 거예요",
+  ]);
 });
