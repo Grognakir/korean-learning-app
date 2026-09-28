@@ -53,3 +53,12 @@ it("показывает перевод 되 в тексте прогноза п�
     translation_ru: "составит, станет (форма от 되다)",
   });
 });
+
+it("показывает перевод 이제 в примере грамматики AV-기 시작하다", () => {
+  const block = blocks.find((item) => item.id === "grammar-4");
+
+  expect(block?.vocab).toContainEqual({
+    ko: "이제",
+    translation_ru: "теперь, уже",
+  });
+});
