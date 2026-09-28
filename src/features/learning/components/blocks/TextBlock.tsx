@@ -115,6 +115,12 @@ export function TextBlock({
           {block.title_ru && <LabelInfo translation={block.title_ru} />}
         </span>
       )}
+      {block.intro_prompt && (
+        <span className={styles.labelRow}>
+          <span className={`${styles.prompt} kr`}>{block.intro_prompt}</span>
+          {block.intro_prompt_ru && <LabelInfo translation={block.intro_prompt_ru} />}
+        </span>
+      )}
       {block.illustration?.imageUrl && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -135,8 +141,35 @@ export function TextBlock({
               <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
             )}
             <LineText line={line} vocabItems={vocabItems} seenVocab={seenVocab} />
+            {line.translation_ru && <LabelInfo translation={line.translation_ru} />}
           </p>
         ))
+      )}
+      {block.table && (
+        <div className={styles.comprehensionTableWrap}>
+          <table className={styles.comprehensionTable}>
+            <thead>
+              <tr>
+                {block.table.columns.map((col, i) => (
+                  <th key={i} className="kr">
+                    {col}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {block.table.columns.map((_, colIndex) => (
+                  <td key={colIndex} className="kr">
+                    {block.table!.rows.map((row, rowIndex) => (
+                      <p key={rowIndex}>{row[colIndex]}</p>
+                    ))}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
       )}
       {relatedHint && <HintSection hint={relatedHint} />}
     </div>

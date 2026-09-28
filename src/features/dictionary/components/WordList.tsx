@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 import { createClient } from "@/lib/supabase/client";
-import { escapeLike } from "@/lib/supabase/escapeLike";
+import { escapeLike, quoteForOrFilter } from "@/lib/supabase/escapeLike";
 import { useDebouncedValue } from "@/lib/useDebouncedValue";
 import {
   DEFAULT_STATE,
@@ -430,12 +430,31 @@ export function WordList({
     ],
   );
 
-  const run = useCallback(() => {
+  const run = useCallback(async () => {
     const embed = categoryId
       ? "word_categories!inner(categories!inner(id, name))"
       : "word_categories(categories(id, name))";
 
     const supabase = createClient();
+
+    // PostgREST не разрешает OR между колонкой родительской таблицы
+    // (headword) и колонкой встроенного ресурса (translations.text) в
+    // одном .or() — «Filters on Embedded resources... cannot be
+    // combined using or with columns from the top-level resource»
+    // (проверено эмпирически: PGRST100, "failed to parse logic tree").
+    // Поэтому сначала отдельным запросом находим id слов, у которых
+    // подходит перевод, и дальше ищем headword ИЛИ id из этого списка —
+    // оба условия уже на самой таблице words, без кросс-табличного OR.
+    let translatedWordIds: string[] = [];
+    if (debouncedQuery) {
+      const { data } = await supabase
+        .from("translations")
+        .select("word_id")
+        .ilike("text", `%${escapeLike(debouncedQuery)}%`)
+        .limit(500);
+      translatedWordIds = Array.from(new Set((data ?? []).map((row) => row.word_id as string)));
+    }
+
     let q = supabase
       .from("words")
       .select(
@@ -448,7 +467,13 @@ export function WordList({
       .range((page - 1) * pageSize, page * pageSize - 1);
 
     if (debouncedQuery) {
-      q = q.ilike("headword", `%${escapeLike(debouncedQuery)}%`);
+      // Искать и по корейскому слову, и по русскому переводу — слово
+      // находится, даже если вписать его перевод.
+      const pattern = quoteForOrFilter(`%${escapeLike(debouncedQuery)}%`);
+      q =
+        translatedWordIds.length > 0
+          ? q.or(`headword.ilike.${pattern},id.in.(${translatedWordIds.join(",")})`)
+          : q.ilike("headword", `%${escapeLike(debouncedQuery)}%`);
     }
     if (partOfSpeech) q = q.eq("part_of_speech", partOfSpeech);
     if (categoryId) q = q.eq("word_categories.category_id", categoryId);

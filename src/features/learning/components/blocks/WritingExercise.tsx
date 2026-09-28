@@ -3,18 +3,6 @@ import { LabelInfo } from "./LabelInfo";
 import { Manuscript } from "./Manuscript";
 import styles from "./blocks.module.css";
 
-function splitPrompt(prompt: string) {
-  const match = prompt.match(/^1\.\s*(.*?)\s+1\)\s*(.*?)\s+2\)\s*(.*)$/);
-
-  if (!match) return null;
-
-  return {
-    task: match[1],
-    outline: `1) ${match[2]}`,
-    manuscript: `2) ${match[3]}`,
-  };
-}
-
 export function WritingExercise({
   block,
   id,
@@ -22,16 +10,17 @@ export function WritingExercise({
   block: WritingExerciseBlock;
   id?: string;
 }) {
-  const prompt = splitPrompt(block.prompt);
-
   return (
     <div id={id} className={styles.block}>
       <span className={styles.labelRow}>
         <span className={`${styles.label} kr`}>{block.title}</span>
+        {block.title_ru && <LabelInfo translation={block.title_ru} />}
       </span>
       <div className={styles.writingInstructions}>
-        <p className={`${styles.writingTask} kr`}>{prompt?.task ?? block.prompt}</p>
-        {prompt && <p className={`${styles.writingStep} kr`}>{prompt.outline}</p>}
+        <p className={`${styles.writingStep} kr`}>
+          {block.outline_prompt}
+          {block.outline_prompt_ru && <LabelInfo translation={block.outline_prompt_ru} />}
+        </p>
       </div>
       <div className={`${styles.comprehensionTableWrap} ${styles.writingOutlineWrap}`}>
         <table className={`${styles.comprehensionTable} ${styles.writingOutlineTable}`}>
@@ -69,7 +58,10 @@ export function WritingExercise({
           </tbody>
         </table>
       </div>
-      {prompt && <p className={`${styles.writingStep} kr`}>{prompt.manuscript}</p>}
+      <p className={`${styles.writingStep} kr`}>
+        {block.manuscript_prompt}
+        {block.manuscript_prompt_ru && <LabelInfo translation={block.manuscript_prompt_ru} />}
+      </p>
       <Manuscript />
     </div>
   );

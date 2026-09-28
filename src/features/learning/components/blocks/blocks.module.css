@@ -1035,6 +1035,13 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+/* Задание "3." (followup) — единственное место, где разделитель нужен
+   (отделяет от списка вопросов задания "2."); между самими вопросами и
+   их общим заголовком ("2. ...") разделителей больше нет. */
+.comprehensionFollowup {
+  composes: comprehensionQuestion;
   padding-top: 10px;
   border-top: 1px solid var(--line);
 }
@@ -1067,6 +1074,17 @@
   padding: 4px 6px;
 }
 
+/* text-блок с реальными табличными данными (TextBlock.table, не пустая
+   форма ComprehensionQuestion.table) — несколько строк текста стопкой
+   внутри одной ячейки, без больших браузерных отступов у <p>. */
+.comprehensionTable td p {
+  margin: 0;
+}
+
+.comprehensionTable td p + p {
+  margin-top: 2px;
+}
+
 .comprehensionTableInput {
   width: 100%;
   min-width: 90px;
@@ -1091,15 +1109,9 @@
   gap: 8px;
 }
 
-.writingTask,
 .writingStep {
   margin: 0;
   color: var(--ink);
-}
-
-.writingTask {
-  font-size: var(--kr-font-md);
-  font-weight: 600;
 }
 
 .writingStep {

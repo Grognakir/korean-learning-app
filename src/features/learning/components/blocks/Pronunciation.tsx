@@ -1,4 +1,5 @@
 import type { PronunciationBlock } from "@/features/learning/types";
+import { VocabChip } from "./VocabChip";
 import styles from "./blocks.module.css";
 
 export function Pronunciation({
@@ -16,11 +17,15 @@ export function Pronunciation({
       <span className={`${styles.pattern} kr`}>{block.rule}</span>
       {block.audioUrl && <audio controls src={block.audioUrl} className={styles.audio} />}
       <div className={styles.vocabItems}>
-        {block.examples.map((example, i) => (
-          <span key={i} className={`${styles.vocabKo} kr`}>
-            {example}
-          </span>
-        ))}
+        {block.examples.map((example, i) =>
+          example.translation_ru ? (
+            <VocabChip key={i} text={example.text} translation={example.translation_ru} />
+          ) : (
+            <span key={i} className={`${styles.vocabKo} kr`}>
+              {example.text}
+            </span>
+          ),
+        )}
       </div>
     </div>
   );

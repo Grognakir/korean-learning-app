@@ -24,6 +24,10 @@ export type TextLine = {
   speaker?: string;
   text: string;
   emphasized?: string[];
+  /** Перевод именно этой строки (например пронумерованный вопрос "1)
+   * ...") через значок "i" — отдельно от TextBlock.vocab (переводы
+   * отдельных слов) и TextBlock.title_ru (перевод заголовка). */
+  translation_ru?: string;
 };
 
 export type TextBlockIllustration = {
@@ -81,6 +85,22 @@ export type TextBlock = ContentBlockBase & {
    * GrammarPointBlock.vocab.
    */
   vocab?: { ko: string; translation_ru: string }[];
+  /**
+   * Строка-подзаголовок задания ("무엇입니까? 이야기해 보십시오.") между
+   * `title` и иллюстрацией — когда у блока УЖЕ есть свой печатный
+   * `title` (в отличие от случая, когда такую строку переносят прямо в
+   * `title`, см. text-reading-korea-weather). Рендерится в TextBlock.tsx
+   * сразу под title, перед illustration.
+   */
+  intro_prompt?: string;
+  intro_prompt_ru?: string;
+  /**
+   * Табличное сравнение (например прогноз погоды на 2 дня из книги) —
+   * реальные данные, НЕ пустая форма для заполнения (см. practice_variants
+   * для открытой практики). columns — заголовки колонок, rows[i][j] —
+   * содержимое ячейки строки i, колонки j.
+   */
+  table?: { columns: string[]; rows: string[][] };
 };
 
 export type VocabListBlock = ContentBlockBase & {
@@ -162,6 +182,9 @@ export type ReferenceTableBlock = ContentBlockBase & {
  */
 export type ComprehensionQuestion = {
   prompt: string;
+  /** Перевод prompt через значок "i" — общее поле для любого questions[]
+   * в любом comprehension_exercise блоке. */
+  prompt_ru?: string;
   kind: "open" | "table" | "choice";
   table?: { columns: string[]; rows: string[] };
   choices?: string[];
@@ -172,18 +195,22 @@ export type ComprehensionExerciseBlock = ContentBlockBase & {
   type: "comprehension_exercise";
   exercise_kind: "listening" | "reading";
   title: string;
+  title_ru?: string;
   audio_id?: string | null;
   audioUrl?: string | null;
   /** "1." — иллюстрация-затравка с вопросом перед самим упражнением. */
   warmup?: {
     prompt: string;
+    prompt_ru?: string;
     illustration?: TextBlockIllustration | null;
   } | null;
   /** "2." — вступление к вопросам («다음을 듣고/읽고 물음에 답하십시오»), показывается перед questions[]. */
   group_prompt?: string | null;
+  group_prompt_ru?: string;
   questions: ComprehensionQuestion[];
   /** "3." — итоговое задание на собственную речь (без проверки). */
   followup?: string | null;
+  followup_ru?: string;
 };
 
 /**
@@ -194,13 +221,22 @@ export type ComprehensionExerciseBlock = ContentBlockBase & {
  */
 export type WritingExerciseBlock = ContentBlockBase & {
   type: "writing_exercise";
+  /** Формулировка задачи целиком (например "고향의 날씨를 소개하는 글을
+   *써 보십시오.") — без цифры "1." и без вложенных инструкций 개요/글,
+   * они вынесены в отдельные поля ниже. */
   title: string;
-  prompt: string;
+  title_ru?: string;
+  /** "개요를 써 보십시오." — без "1) ". */
+  outline_prompt: string;
+  outline_prompt_ru?: string;
   outline: {
     stage: string;
     explanation: string;
     questions: { kr: string; ru: string }[];
   }[];
+  /** "위 개요를 바탕으로 글을 써 보십시오." — без "2) ". */
+  manuscript_prompt: string;
+  manuscript_prompt_ru?: string;
 };
 
 /** Раздел 발음 — правило чтения (например 구개음화) и слова-примеры. */
@@ -209,7 +245,7 @@ export type PronunciationBlock = ContentBlockBase & {
   rule: string;
   audio_id: string | null;
   audioUrl?: string | null;
-  examples: string[];
+  examples: { text: string; translation_ru?: string }[];
 };
 
 export type GrammarPointBlock = ContentBlockBase & {
