@@ -49,6 +49,14 @@
 
 ## Журнал выполненных работ
 
+### 2026-09-29 — Таблицы данных, переводы строк и обновлённые схемы упражнений
+
+- Коммит `0b13296` (`Add data tables/per-item translations, migrate writing/pronunciation schema, search dictionary by translation`) отправлен в `origin/main`; рабочая ветка и удалённая ветка совпадают.
+- Пройдены 223 теста, TypeScript, ESLint и production-сборка Next.js через Webpack.
+- Оба deployment'а (`Vercel – korean-learning` и `Vercel – korean-learning-app`) завершились успешно для `0b13296`.
+- Production Supabase синхронизирована полным импортом учебника. Обратным структурным сравнением подтверждено, что все 58 страниц уроков 1–4 учебника `inha-2` точно совпадают с локальными JSON по `page_role`, `source_photo` и `blocks`.
+- Рабочий домен `https://korean-learning-gray.vercel.app` отвечает `200`; защищённая страница урока штатно перенаправляет неавторизованный запрос на `/login` (`307`).
+
 ### 2026-09-28 — Таблица прогноза, новые схемы контента, поиск по переводу
 
 - `TextBlock` получил `intro_prompt`/`intro_prompt_ru` (подзаголовок перед иллюстрацией, когда у блока уже есть свой `title`), `table` (реальные табличные данные вроде сравнения прогноза на 2 дня — не пустая форма) и `TextLine.translation_ru` (перевод отдельной строки через "i"). Использовано в `text-speaking-summary`, `text-culture-rainy-food`, `text-reading-korea-weather` (2급 4과, разделы 말하기/읽고 말하기/문화 이해하기).
