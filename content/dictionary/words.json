@@ -41766,6 +41766,3394 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-이다",
+      "headword": "이다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "быть, являться (связка)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-있다",
+      "headword": "있다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "иметься, находиться; быть"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-없다",
+      "headword": "없다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "не иметься, отсутствовать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-아니다",
+      "headword": "아니다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "не быть, не являться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-싶다",
+      "headword": "싶다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "хотеть (после основы глагола с -고)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-않다",
+      "headword": "않다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "не делать; не быть (в отрицательной конструкции -지 않다)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-것",
+      "headword": "것",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "вещь; факт; то, что"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [
+        {
+          "label": "разговорная форма",
+          "value": "거"
+        }
+      ],
+      "related": []
+    },
+    {
+      "external_id": "word-지",
+      "headword": "지",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "срок с момента действия (в конструкции -(으)ㄴ 지)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-중",
+      "headword": "중",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "середина; процесс выполнения"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-적",
+      "headword": "적",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "опыт, случай (в конструкции -(으)ㄴ 적)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-수",
+      "headword": "수",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "способность, возможность (в конструкции -(으)ㄹ 수 있다)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-때",
+      "headword": "때",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "время, момент; когда"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-동안",
+      "headword": "동안",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "в течение, на протяжении"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-후",
+      "headword": "후",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "после; позднее"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-전",
+      "headword": "전",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "до, перед; раньше"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-때문",
+      "headword": "때문",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Союзы и связки"
+      ],
+      "translations": [
+        "причина; из-за"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-다음",
+      "headword": "다음",
+      "reading": null,
+      "part_of_speech": "determiner",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "следующий; затем"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-이번",
+      "headword": "이번",
+      "reading": null,
+      "part_of_speech": "determiner",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "этот, текущий (раз, неделя и т. п.)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-각",
+      "headword": "각",
+      "reading": null,
+      "part_of_speech": "determiner",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "каждый, отдельный"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-많이",
+      "headword": "많이",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "много; сильно"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-더",
+      "headword": "더",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "ещё; больше"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-계속",
+      "headword": "계속",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "продолжая; постоянно"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-점점",
+      "headword": "점점",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "постепенно, всё больше"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-가장",
+      "headword": "가장",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "самый, наиболее"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-조금",
+      "headword": "조금",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "немного"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-좀",
+      "headword": "좀",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "немного; пожалуйста (смягчение просьбы)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-주로",
+      "headword": "주로",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "главным образом, преимущественно"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-아마",
+      "headword": "아마",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "вероятно, наверное"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-굳이",
+      "headword": "굳이",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "непременно; намеренно; если уж"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-보통",
+      "headword": "보통",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "обычно; в среднем"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-서로",
+      "headword": "서로",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "друг друга, взаимно"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-여러분",
+      "headword": "여러분",
+      "reading": null,
+      "part_of_speech": "pronoun",
+      "level_tag": null,
+      "categories": [
+        "Местоимения"
+      ],
+      "translations": [
+        "вы; все присутствующие"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-한국어",
+      "headword": "한국어",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "корейский язык"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-중국어",
+      "headword": "중국어",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "китайский язык"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-대학",
+      "headword": "대학",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "университет"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-공부",
+      "headword": "공부",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "учёба, изучение"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-정보",
+      "headword": "정보",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "информация"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-보기",
+      "headword": "보기",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "пример, образец; вариант для выбора"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-개요",
+      "headword": "개요",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "план, краткое содержание"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-연습",
+      "headword": "연습",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "упражнение; практика, тренировка"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-정답",
+      "headword": "정답",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "правильный ответ"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-사항",
+      "headword": "사항",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "пункт, обстоятельство, сведения"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-한국어교육",
+      "headword": "한국어교육",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "обучение корейскому языку"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-국제무역",
+      "headword": "국제무역",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "международная торговля"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-사회학",
+      "headword": "사회학",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "социология"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-경제",
+      "headword": "경제",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "экономика"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-말",
+      "headword": "말",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "слово; речь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-말씀",
+      "headword": "말씀",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "слова, речь (почтительная форма)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-부모",
+      "headword": "부모",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "родители"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-어른",
+      "headword": "어른",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "взрослый; старший"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-개인",
+      "headword": "개인",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "отдельный человек; личный"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-곳",
+      "headword": "곳",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "место"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-법",
+      "headword": "법",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "способ, метод; закон"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-년대",
+      "headword": "년대",
+      "reading": null,
+      "part_of_speech": "counter",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "десятилетие, годы"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-원",
+      "headword": "원",
+      "reading": null,
+      "part_of_speech": "counter",
+      "level_tag": null,
+      "categories": [
+        "Счётные слова"
+      ],
+      "translations": [
+        "вона (денежная единица Республики Корея)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-그때",
+      "headword": "그때",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "тогда, в то время"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-그날",
+      "headword": "그날",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "тот день"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-다행",
+      "headword": "다행",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "удача; к счастью"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-대하다",
+      "headword": "대하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "относиться к; касаться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-비하다",
+      "headword": "비하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "сравнивать; по сравнению с"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-위하다",
+      "headword": "위하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "делать ради кого-либо или чего-либо"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-전공하다",
+      "headword": "전공하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "изучать как основную специальность"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-지나다",
+      "headword": "지나다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "проходить, миновать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-대화하다",
+      "headword": "대화하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "разговаривать, вести диалог"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-활용하다",
+      "headword": "활용하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "использовать, применять"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-답하다",
+      "headword": "답하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "отвечать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-기억나다",
+      "headword": "기억나다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "вспоминаться, приходить на память"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-생활하다",
+      "headword": "생활하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "жить, вести образ жизни"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-변하다",
+      "headword": "변하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "меняться, превращаться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-막히다",
+      "headword": "막히다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "быть заблокированным; стоять в пробке"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-끼다",
+      "headword": "끼다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "затягиваться, появляться (о тумане или облаках)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-조사하다",
+      "headword": "조사하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "исследовать, изучать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-선물하다",
+      "headword": "선물하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "дарить"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-접수하다",
+      "headword": "접수하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "принимать или подавать заявку"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-조언하다",
+      "headword": "조언하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "советовать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-이루다",
+      "headword": "이루다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "достигать, осуществлять"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-추측하다",
+      "headword": "추측하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "предполагать, догадываться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-지각하다",
+      "headword": "지각하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "опаздывать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-활동하다",
+      "headword": "활동하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "заниматься деятельностью, действовать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-알아보다",
+      "headword": "알아보다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "узнавать; выяснять; искать сведения"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-붙이다",
+      "headword": "붙이다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "прикреплять, наклеивать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-그러다",
+      "headword": "그러다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "делать так; затем"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-진찰하다",
+      "headword": "진찰하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "осматривать пациента"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-우승하다",
+      "headword": "우승하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Спорт"
+      ],
+      "translations": [
+        "побеждать, занимать первое место"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-도와주다",
+      "headword": "도와주다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "помогать кому-либо"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-챙기다",
+      "headword": "챙기다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "собирать, подготавливать; заботиться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-들어오다",
+      "headword": "들어오다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "входить, заходить; поступать внутрь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-어울리다",
+      "headword": "어울리다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "подходить, сочетаться; общаться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-가져가다",
+      "headword": "가져가다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "брать с собой, уносить"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-갈아입다",
+      "headword": "갈아입다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "переодеваться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-굽다",
+      "headword": "굽다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "жарить, печь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-끓다",
+      "headword": "끓다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "кипеть"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-젖다",
+      "headword": "젖다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "намокать, промокать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-깊다",
+      "headword": "깊다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть глубоким"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-심하다",
+      "headword": "심하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть сильным, серьёзным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-비슷하다",
+      "headword": "비슷하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть похожим"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-자세하다",
+      "headword": "자세하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть подробным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-쌀쌀하다",
+      "headword": "쌀쌀하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть прохладным, зябким"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-무덥다",
+      "headword": "무덥다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть душным, знойным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-선선하다",
+      "headword": "선선하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть приятно прохладным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-건조하다",
+      "headword": "건조하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть сухим"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-정확하다",
+      "headword": "정확하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть точным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-싫다",
+      "headword": "싫다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "не нравиться; быть неприятным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-어리다",
+      "headword": "어리다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть молодым"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-알맞다",
+      "headword": "알맞다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть подходящим, правильным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-겨울",
+      "headword": "겨울",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "зима"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-구름",
+      "headword": "구름",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "облако"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-황사",
+      "headword": "황사",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "жёлтая пыль, азиатская пыльная буря"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-꽃샘추위",
+      "headword": "꽃샘추위",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "весеннее похолодание перед цветением"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-최저",
+      "headword": "최저",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "минимум; самый низкий"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-먼지",
+      "headword": "먼지",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "пыль"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-나뭇잎",
+      "headword": "나뭇잎",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "лист дерева"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-소설책",
+      "headword": "소설책",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "книга художественной прозы, роман"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-안개",
+      "headword": "안개",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "туман"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-가을비",
+      "headword": "가을비",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "осенний дождь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-외출",
+      "headword": "외출",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые дела"
+      ],
+      "translations": [
+        "выход из дома"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-마스크",
+      "headword": "마스크",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "маска"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-운전",
+      "headword": "운전",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые дела"
+      ],
+      "translations": [
+        "вождение, управление транспортом"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-육지",
+      "headword": "육지",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "суша, материк"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-지폐",
+      "headword": "지폐",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "банкнота, бумажные деньги"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-변화",
+      "headword": "변화",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "изменение"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-모양",
+      "headword": "모양",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "форма, внешний вид"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-시합",
+      "headword": "시합",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Спорт"
+      ],
+      "translations": [
+        "матч, соревнование"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-중부",
+      "headword": "중부",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "центральная часть, центральный регион"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-남부",
+      "headword": "남부",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "южная часть, южный регион"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-산속",
+      "headword": "산속",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "в горах, в глубине гор"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-산불",
+      "headword": "산불",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "лесной пожар"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-옛날",
+      "headword": "옛날",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "давние времена, прошлое"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-특징",
+      "headword": "특징",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "особенность, характерная черта"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-파전",
+      "headword": "파전",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "паджон, корейский блин с зелёным луком"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-문화 차이",
+      "headword": "문화 차이",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "культурные различия"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-소풍",
+      "headword": "소풍",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "пикник, экскурсия"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-부동산",
+      "headword": "부동산",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жильё и переезд"
+      ],
+      "translations": [
+        "недвижимость; агентство недвижимости"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-중개사",
+      "headword": "중개사",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Профессии"
+      ],
+      "translations": [
+        "агент, посредник"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-사무소",
+      "headword": "사무소",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "офис, контора"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-독서",
+      "headword": "독서",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "чтение книг"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-품질",
+      "headword": "품질",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "качество товара"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-인사법",
+      "headword": "인사법",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "способ приветствия"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-스포츠",
+      "headword": "스포츠",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Спорт"
+      ],
+      "translations": [
+        "спорт"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-최신",
+      "headword": "최신",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "самый новый, последний"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-교통수단",
+      "headword": "교통수단",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "средство транспорта"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-수의사",
+      "headword": "수의사",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Профессии"
+      ],
+      "translations": [
+        "ветеринар"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-자원봉사",
+      "headword": "자원봉사",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "волонтёрская деятельность"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-늦잠",
+      "headword": "늦잠",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые дела"
+      ],
+      "translations": [
+        "поздний подъём, сон допоздна"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-샤워",
+      "headword": "샤워",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые дела"
+      ],
+      "translations": [
+        "душ"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-치마",
+      "headword": "치마",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "юбка"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-바지",
+      "headword": "바지",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "брюки"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-원인",
+      "headword": "원인",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "причина"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-맏이",
+      "headword": "맏이",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "старший ребёнок в семье"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-미닫이",
+      "headword": "미닫이",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "раздвижная дверь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-해돋이",
+      "headword": "해돋이",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "восход солнца"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-가을걷이",
+      "headword": "가을걷이",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "сбор осеннего урожая"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-성능",
+      "headword": "성능",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Электроника"
+      ],
+      "translations": [
+        "характеристики, производительность"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-유치원",
+      "headword": "유치원",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "детский сад"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-뒤쪽",
+      "headword": "뒤쪽",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Положение в пространстве"
+      ],
+      "translations": [
+        "задняя сторона, позади"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-소설",
+      "headword": "소설",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "роман, художественная проза"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-배낭여행",
+      "headword": "배낭여행",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "путешествие с рюкзаком"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-준비",
+      "headword": "준비",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "подготовка"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-장난감",
+      "headword": "장난감",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "игрушка"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-레이서",
+      "headword": "레이서",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Профессии"
+      ],
+      "translations": [
+        "гонщик"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-우승",
+      "headword": "우승",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Спорт"
+      ],
+      "translations": [
+        "победа, первое место"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-전라도",
+      "headword": "전라도",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "провинция Чолла"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-신라",
+      "headword": "신라",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "Силла, историческое корейское государство"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-땅",
+      "headword": "땅",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "земля, почва"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-장마",
+      "headword": "장마",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "сезон затяжных летних дождей"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-등산로",
+      "headword": "등산로",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "горная тропа, маршрут для восхождения"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-의견란",
+      "headword": "의견란",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "поле, раздел для мнения"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-구개음화",
+      "headword": "구개음화",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "палатализация"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-유음화",
+      "headword": "유음화",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Грамматические термины"
+      ],
+      "translations": [
+        "ассимиляция плавных согласных"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-서울",
+      "headword": "서울",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "Сеул"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-인천",
+      "headword": "인천",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "Инчхон"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-경복궁",
+      "headword": "경복궁",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "дворец Кёнбоккун"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-서울역",
+      "headword": "서울역",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "Сеульский вокзал"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-설악산",
+      "headword": "설악산",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "гора Сораксан"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-한라산",
+      "headword": "한라산",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "гора Халласан"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-인하대학교",
+      "headword": "인하대학교",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "Университет Инха"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-스페인",
+      "headword": "스페인",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Испания"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-프랑스",
+      "headword": "프랑스",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Франция"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-태국",
+      "headword": "태국",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Таиланд"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-캄보디아",
+      "headword": "캄보디아",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Камбоджа"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-필리핀",
+      "headword": "필리핀",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Филиппины"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-케냐",
+      "headword": "케냐",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Кения"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-카자흐스탄",
+      "headword": "카자흐스탄",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Казахстан"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-키르기스스탄",
+      "headword": "키르기스스탄",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Киргизия"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-사우디아라비아",
+      "headword": "사우디아라비아",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Саудовская Аравия"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-사우디",
+      "headword": "사우디",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Саудовская Аравия (сокращённо)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-캐나다",
+      "headword": "캐나다",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Канада"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-살살",
+      "headword": "살살",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "осторожно, мягко; слегка"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-연례",
+      "headword": "연례",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "ежегодное мероприятие; ежегодный"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-가운데",
+      "headword": "가운데",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Положение в пространстве"
+      ],
+      "translations": [
+        "середина, центр"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-바탕",
+      "headword": "바탕",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "основа, база"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-자기소개하다",
+      "headword": "자기소개하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "представляться, рассказывать о себе"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-회의하다",
+      "headword": "회의하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "проводить совещание, заседать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-근무",
+      "headword": "근무",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "служба, работа"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-근무하다",
+      "headword": "근무하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "работать, служить"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-계획하다",
+      "headword": "계획하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "планировать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-꽃",
+      "headword": "꽃",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "цветок"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-그거",
+      "headword": "그거",
+      "reading": null,
+      "part_of_speech": "pronoun",
+      "level_tag": null,
+      "categories": [
+        "Местоимения"
+      ],
+      "translations": [
+        "то, эта вещь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-전체",
+      "headword": "전체",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "целое, всё; весь состав"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }
