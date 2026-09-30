@@ -45817,6 +45817,23 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-축구하다",
+      "headword": "축구하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Спорт"
+      ],
+      "translations": [
+        "играть в футбол"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }
