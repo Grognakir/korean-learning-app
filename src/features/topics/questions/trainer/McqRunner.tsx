@@ -1,8 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SessionProgress } from "@/features/trainers/components/SessionProgress";
 import styles from "./Trainer.module.css";
+
+const CORRECT_ADVANCE_MS = 700;
 
 export type McqItem = {
   promptKr: string | null;
@@ -31,10 +33,28 @@ export function McqRunner({
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const advancing = useRef(false);
+  const delayRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const promptRef = useRef<HTMLParagraphElement>(null);
   const doneRef = useRef<HTMLHeadingElement>(null);
 
+  function clearAdvanceDelay() {
+    if (delayRef.current !== null) {
+      clearTimeout(delayRef.current);
+      delayRef.current = null;
+    }
+  }
+
+  useEffect(() => {
+    return () => {
+      if (delayRef.current !== null) {
+        clearTimeout(delayRef.current);
+        delayRef.current = null;
+      }
+    };
+  }, [index]);
+
   function restart() {
+    clearAdvanceDelay();
     setItems(buildSession());
     setIndex(0);
     setSelectedIndex(null);
@@ -86,14 +106,16 @@ export function McqRunner({
   function choose(optionIndex: number) {
     if (answered) return;
     if (optionIndex === item.correctIndex) {
+      setSelectedIndex(optionIndex);
       setScore((s) => s + 1);
-      advance();
+      delayRef.current = setTimeout(() => advance(), CORRECT_ADVANCE_MS);
       return;
     }
     setSelectedIndex(optionIndex);
   }
 
   function advance() {
+    clearAdvanceDelay();
     if (advancing.current) return;
     advancing.current = true;
     setIndex((i) => i + 1);
@@ -149,9 +171,11 @@ export function McqRunner({
             <span className={styles.rr}>{item.explanationRr}</span>
             <span>— {item.explanationRu}</span>
           </div>
-          <button type="button" className={styles.next} onClick={next}>
-            {index + 1 === items.length ? "Итог" : "Далее"}
-          </button>
+          {!isCorrect && (
+            <button type="button" className={styles.next} onClick={next}>
+              {index + 1 === items.length ? "Итог" : "Далее"}
+            </button>
+          )}
         </>
       )}
     </div>

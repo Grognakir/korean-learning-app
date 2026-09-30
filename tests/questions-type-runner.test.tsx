@@ -1,5 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { expect, it, vi } from "vitest";
+import { act, fireEvent, render, screen } from "@testing-library/react";
+import { afterEach, expect, it, vi } from "vitest";
 import { TypeRunner } from "@/features/topics/questions/trainer/TypeRunner";
 import { WORDS } from "@/features/topics/questions/trainer/data";
 
@@ -13,15 +13,29 @@ function currentWord() {
   return word;
 }
 
-it("сразу переходит дальше после верно написанного слова", () => {
+afterEach(() => {
+  vi.useRealTimers();
+});
+
+it("после верно написанного слова блокирует ввод и переходит дальше с паузой", () => {
+  vi.useFakeTimers();
   renderRunner();
   const word = currentWord();
 
   fireEvent.change(screen.getByRole("textbox"), { target: { value: word.answers[0] } });
   fireEvent.click(screen.getByRole("button", { name: "Проверить" }));
 
-  expect(screen.queryByRole("status")).toBeNull();
+  expect(screen.getByRole("status").textContent).toContain("Верно!");
   expect(screen.queryByRole("button", { name: "Далее" })).toBeNull();
+  expect(screen.getByRole("textbox")).toHaveProperty("disabled", true);
+  expect(screen.getByText(word.ru)).toBeDefined();
+
+  fireEvent.click(screen.getByRole("button", { name: "Проверить" }));
+  expect(screen.getByText(word.ru)).toBeDefined();
+
+  act(() => {
+    vi.advanceTimersByTime(700);
+  });
   expect(screen.queryByText(word.ru)).toBeNull();
 });
 

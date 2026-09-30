@@ -1,9 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SessionProgress } from "@/features/trainers/components/SessionProgress";
 import { WORDS, shuffle } from "./data";
 import styles from "./Trainer.module.css";
+
+const CORRECT_ADVANCE_MS = 700;
 
 export function TypeRunner({
   title,
@@ -20,10 +22,28 @@ export function TypeRunner({
   const [checked, setChecked] = useState(false);
   const [score, setScore] = useState(0);
   const advancing = useRef(false);
+  const delayRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const doneRef = useRef<HTMLHeadingElement>(null);
 
+  function clearAdvanceDelay() {
+    if (delayRef.current !== null) {
+      clearTimeout(delayRef.current);
+      delayRef.current = null;
+    }
+  }
+
+  useEffect(() => {
+    return () => {
+      if (delayRef.current !== null) {
+        clearTimeout(delayRef.current);
+        delayRef.current = null;
+      }
+    };
+  }, [index]);
+
   function restart() {
+    clearAdvanceDelay();
     setOrder(shuffle(WORDS.map((_, i) => i)));
     setIndex(0);
     setValue("");
@@ -68,14 +88,16 @@ export function TypeRunner({
   function check() {
     if (checked) return;
     if (isCorrect) {
+      setChecked(true);
       setScore((s) => s + 1);
-      advance();
+      delayRef.current = setTimeout(() => advance(), CORRECT_ADVANCE_MS);
       return;
     }
     setChecked(true);
   }
 
   function advance() {
+    clearAdvanceDelay();
     if (advancing.current) return;
     advancing.current = true;
     setIndex((i) => i + 1);
@@ -129,14 +151,22 @@ export function TypeRunner({
       </div>
       {checked && (
         <>
-          <div className={styles.feedbackWrong} role="status">
-            <strong>Правильный ответ:</strong>
-            <span className="kr">{word.full}</span>
-            <span className={styles.rr}>{word.rr}</span>
+          <div className={isCorrect ? styles.feedbackCorrect : styles.feedbackWrong} role="status">
+            {isCorrect ? (
+              <strong>Верно!</strong>
+            ) : (
+              <>
+                <strong>Правильный ответ:</strong>
+                <span className="kr">{word.full}</span>
+                <span className={styles.rr}>{word.rr}</span>
+              </>
+            )}
           </div>
-          <button type="button" className={styles.next} onClick={next}>
-            {index + 1 === order.length ? "Итог" : "Далее"}
-          </button>
+          {!isCorrect && (
+            <button type="button" className={styles.next} onClick={next}>
+              {index + 1 === order.length ? "Итог" : "Далее"}
+            </button>
+          )}
         </>
       )}
     </div>

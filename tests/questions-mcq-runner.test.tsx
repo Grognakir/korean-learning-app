@@ -1,5 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { expect, it, vi } from "vitest";
+import { act, fireEvent, render, screen } from "@testing-library/react";
+import { afterEach, expect, it, vi } from "vitest";
 import { McqRunner, type McqItem } from "@/features/topics/questions/trainer/McqRunner";
 
 const items: McqItem[] = [
@@ -35,13 +35,29 @@ function renderRunner() {
   );
 }
 
-it("сразу переходит к следующему вопросу после верного ответа", () => {
-  renderRunner();
-  fireEvent.click(screen.getByRole("button", { name: "кто" }));
+afterEach(() => {
+  vi.useRealTimers();
+});
 
+it("после верного ответа блокирует варианты и переходит дальше с паузой", () => {
+  vi.useFakeTimers();
+  renderRunner();
+  const correct = screen.getByRole("button", { name: "кто" });
+  fireEvent.click(correct);
+
+  expect(screen.getByRole("progressbar").getAttribute("aria-valuenow")).toBe("0");
+  expect(screen.getByRole("status").textContent).toContain("Верно!");
+  expect(screen.queryByRole("button", { name: "Далее" })).toBeNull();
+  expect(correct).toHaveProperty("disabled", true);
+
+  fireEvent.click(correct);
+  expect(screen.getByRole("progressbar").getAttribute("aria-valuenow")).toBe("0");
+
+  act(() => {
+    vi.advanceTimersByTime(700);
+  });
   expect(screen.getByText("어디")).toBeDefined();
   expect(screen.queryByRole("status")).toBeNull();
-  expect(screen.queryByRole("button", { name: "Далее" })).toBeNull();
 });
 
 it("после ошибки оставляет объяснение и ручной переход", () => {
@@ -54,6 +70,7 @@ it("после ошибки оставляет объяснение и ручн�
 });
 
 it("показывает три равноценных действия после завершения", () => {
+  vi.useFakeTimers();
   render(
     <McqRunner
       title="Слово → перевод"
@@ -63,6 +80,9 @@ it("показывает три равноценных действия посл
     />,
   );
   fireEvent.click(screen.getByRole("button", { name: "кто" }));
+  act(() => {
+    vi.advanceTimersByTime(700);
+  });
 
   expect(screen.getByRole("button", { name: "Все уровни" })).toBeDefined();
   expect(screen.getByRole("button", { name: "Ещё раз" })).toBeDefined();

@@ -69,8 +69,13 @@ function parseTemplate(template: string[]): Segment[][] {
   });
 }
 
-function storageKey(blockId?: string) {
-  return blockId ? `grammar-exercise:${blockId}` : null;
+function storageKey(
+  blockId?: string,
+  textbookSlug?: string,
+  lessonNumber?: number,
+) {
+  if (!blockId || !textbookSlug || lessonNumber == null) return null;
+  return `grammar-exercise:${textbookSlug}:${lessonNumber}:${blockId}`;
 }
 
 export function inputWidthEm(value: string): number {
@@ -95,6 +100,8 @@ export function GrammarExercise({
   id,
   vocabItems,
   titleSuffix,
+  textbookSlug,
+  lessonNumber,
 }: {
   block: GrammarExerciseBlock;
   id?: string;
@@ -103,6 +110,8 @@ export function GrammarExercise({
    * делят один и тот же exercise_title (см. exerciseTitleOccurrence в
    * PageBlocks.tsx) — не часть контента, только для UI. */
   titleSuffix?: number | null;
+  textbookSlug?: string;
+  lessonNumber?: number;
 }) {
   const lines = useMemo(() => parseTemplate(block.template), [block.template]);
   const blankIndexes = useMemo(
@@ -112,7 +121,7 @@ export function GrammarExercise({
   const expandPairCues = blankIndexes.size === 2 && !block.template.some((line) => line.includes(" / "));
   const exampleEmphasis =
     block.example.emphasis ?? EXAMPLE_EMPHASIS_FALLBACK[block.example.dialogue.join("\n")];
-  const key = storageKey(block.id);
+  const key = storageKey(block.id, textbookSlug, lessonNumber);
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [inputs, setInputs] = useState<Record<number, string[]>>({});

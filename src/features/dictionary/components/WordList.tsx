@@ -446,10 +446,14 @@ export function WordList({
     // подходит перевод, и дальше ищем headword ИЛИ id из этого списка —
     // оба условия уже на самой таблице words, без кросс-табличного OR.
     let translatedWordIds: string[] = [];
-    if (debouncedQuery) {
+    // Однобуквенный запрос к переводам легко набирает 500 случайных id
+    // без нужных совпадений и раздувает .or(id.in.(...)) до падения URL.
+    // Короткий поиск остаётся только по headword.
+    if (debouncedQuery.trim().length >= 2) {
       const { data } = await supabase
         .from("translations")
-        .select("word_id")
+        .select("word_id, words!inner(language)")
+        .eq("words.language", language)
         .ilike("text", `%${escapeLike(debouncedQuery)}%`)
         .limit(500);
       translatedWordIds = Array.from(new Set((data ?? []).map((row) => row.word_id as string)));

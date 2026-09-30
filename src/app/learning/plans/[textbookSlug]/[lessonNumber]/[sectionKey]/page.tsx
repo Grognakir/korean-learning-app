@@ -131,7 +131,7 @@ export default async function LessonSectionPage({
           <SectionNav nav={nav} />
 
           <div className={styles.blocks}>
-            <PageBlocks blocks={blocks} />
+            <PageBlocks blocks={blocks} textbookSlug={textbookSlug} lessonNumber={lessonNumber} />
           </div>
         </div>
 

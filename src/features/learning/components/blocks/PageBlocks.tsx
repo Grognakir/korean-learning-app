@@ -222,6 +222,8 @@ export function PageBlocks({
                 block={block}
                 vocabItems={blockVocab[i]}
                 titleSuffix={exerciseTitleIndex[i]}
+                textbookSlug={textbookSlug}
+                lessonNumber={lessonNumber}
               />
             );
           case "comprehension_exercise":
