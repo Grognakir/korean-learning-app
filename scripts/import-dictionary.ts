@@ -30,15 +30,38 @@ type SourceFile = { language?: "ko" | "en"; categories: string[]; words: SourceW
 async function main() {
   const filePath = process.argv[2];
   if (!filePath) {
-    throw new Error("Использование: tsx scripts/import-dictionary.ts <path-to-words.json>");
+    throw new Error("Использование: tsx scripts/import-dictionary.ts <path-to-words.json> [--only=слово1,слово2]");
   }
   const source: SourceFile = JSON.parse(
     readFileSync(join(process.cwd(), filePath), "utf-8"),
   );
 
   const language = source.language ?? "ko";
+
+  // --only=<headword1,headword2> — импортировать не весь файл (тысячи
+  // последовательных upsert'ов, ощутимо на production), а только явно
+  // перечисленные слова. Обычный случай — добавили в словарь пару новых
+  // слов ради теста словарного покрытия и хотим синхронизировать только их.
+  const onlyArg = process.argv.find((arg) => arg.startsWith("--only="));
+  let words = source.words;
+  if (onlyArg) {
+    const requested = onlyArg
+      .slice("--only=".length)
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+    const byHeadword = new Map(source.words.map((w) => [w.headword, w]));
+    const notFound = requested.filter((h) => !byHeadword.has(h));
+    if (notFound.length > 0) {
+      throw new Error(
+        `--only: не найдены в ${filePath}: ${notFound.join(", ")} (опечатка? слово ещё не добавлено в файл?)`,
+      );
+    }
+    words = requested.map((h) => byHeadword.get(h)!);
+  }
+
   console.log(
-    `Язык: ${language}, категорий: ${source.categories.length}, слов: ${source.words.length}`,
+    `Язык: ${language}, категорий: ${source.categories.length}, слов: ${words.length}${onlyArg ? ` (из ${source.words.length} в файле)` : ""}`,
   );
 
   // Глобальные категории уникальны по (language, lower(name)) частичным
@@ -76,7 +99,7 @@ async function main() {
     ]),
   );
 
-  for (const word of source.words) {
+  for (const word of words) {
     const { data: wordRow, error: wordError } = await supabase
       .from("words")
       .upsert(
@@ -162,7 +185,7 @@ async function main() {
     }
   }
 
-  console.log(`Готово: ${source.words.length} слов импортировано.`);
+  console.log(`Готово: ${words.length} слов импортировано.`);
 }
 
 main().catch((error) => {
