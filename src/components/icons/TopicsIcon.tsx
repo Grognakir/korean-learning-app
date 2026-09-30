@@ -17,8 +17,10 @@ export function TopicsIcon({ size = 20, className }: IconProps) {
       className={className}
       aria-hidden="true"
     >
-      <path d="M8.5 4.5h6a2 2 0 0 1 2 2v6" />
-      <rect x="5" y="8.5" width="11" height="11" rx="2" />
+      <path d="M9.5 4.5v15" />
+      <path d="M14.5 4.5v15" />
+      <path d="M4.5 9.5h15" />
+      <path d="M4.5 14.5h15" />
     </svg>
   );
 }
