@@ -20,9 +20,8 @@
 ### Production
 
 - Рабочий домен: `https://korean-learning-gray.vercel.app`.
-- Рабочий Vercel-проект: `korean-learning`.
-- GitHub также создаёт deployment `korean-learning-app`; проверять нужно прежде всего рабочий проект и домен выше.
-- Production Supabase-проект называется `korean-learning-app`, ref: `zlpxtmjeajntvbydthun`.
+- Рабочий Vercel-проект: `korean-learning` — единственный (репозиторий `korean-learning-app` на GitHub). Раньше существовал дублирующий Vercel-проект `korean-learning-app`, подключённый к тому же репо, без единой переменной окружения (нерабочий, просто тратил билд на каждый пуш) — удалён 2026-09-30.
+- Production Supabase-проект называется `korean-learning-app`, ref: `zlpxtmjeajntvbydthun` (имя Supabase-проекта совпадает с именем GitHub-репозитория, а не с удалённым Vercel-проектом — не путать).
 - Локальный `.env.local` указывает на `http://127.0.0.1:54331`. Запуск `pnpm import:textbook` с этой конфигурацией не обновляет production.
 - Деплой Vercel не импортирует содержимое файлов `content/reference/**` в Supabase автоматически. Изменения учебных JSON нужно отдельно и точечно переносить в `public.textbook_pages` production-базы.
 - Перед изменением production-базы сначала выбирать строку по учебнику, уроку и номеру страницы, проверять `source_photo` и идентификаторы блоков, затем обновлять найденную строку и читать её обратно.
@@ -56,6 +55,11 @@
 - Аудит 2026-09-29: ещё не чинили сохранение ввода в `GrammarExercise` до «Проверить» и ложную ошибку `라고/이라고` для имён на «이».
 
 ## Журнал выполненных работ
+
+### 2026-09-30 — Удалён дублирующий Vercel-проект; сверка AI-подсказки словаря
+
+- По просьбе пользователя проверено, какой из двух Vercel-проектов реально используется: `korean-learning` (рабочий домен, все переменные окружения настроены) и `korean-learning-app` (только авто-домен, `vercel env ls` — пусто, нерабочий дубль от того же GitHub-репо). Пользователь сам удалил `korean-learning-app` через `vercel remove` — проверено `vercel project ls`, в списке остался только `korean-learning`.
+- Отдельно выяснилось: функция «добавить слово вручную/через AI» в словаре уже полностью реализована (`AddWordButton`/`AddWordModal`/`WordEditForm` + `src/features/dictionary/ai.ts`, порядок провайдеров Gemini → Groq → OpenRouter, пропускает провайдера без ключа). Ни локально, ни на production ни один из `GEMINI_API_KEY`/`GROQ_API_KEY`/`OPENROUTER_API_KEY` не задан — вкладка «Через AI» сейчас падает с «AI недоступен». Все три ключа уже есть в отдельном Vercel-проекте `korean-flashcards` — пользователю нужно скопировать их оттуда вручную (агент не переносит и не вводит API-ключи).
 
 ### 2026-09-30 — Inbox: две именные формы в `#grammar-2`
 
