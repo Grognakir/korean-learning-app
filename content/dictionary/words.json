@@ -45749,6 +45749,74 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-첫",
+      "headword": "첫",
+      "reading": null,
+      "part_of_speech": "determiner",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "первый (перед существительным, не изменяется)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-한국인",
+      "headword": "한국인",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "кореец, кореянка"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-밖에",
+      "headword": "밖에",
+      "reading": null,
+      "part_of_speech": "particle",
+      "level_tag": null,
+      "categories": [
+        "Частицы"
+      ],
+      "translations": [
+        "только, кроме (после числительного/существительного, требует отрицания дальше)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-빈손",
+      "headword": "빈손",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "пустые руки (빈손으로 가다 — прийти с пустыми руками)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }
