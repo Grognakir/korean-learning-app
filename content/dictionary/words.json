@@ -46616,6 +46616,74 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-경영학과",
+      "headword": "경영학과",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "факультет бизнес-администрирования, менеджмента"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-모시다",
+      "headword": "모시다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "почтительно сопровождать, приглашать (старшего или уважаемого человека)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-빛내다",
+      "headword": "빛내다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "придавать блеск, озарять; 자리를 빛내다 — почтить своим присутствием"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-대강당",
+      "headword": "대강당",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "актовый зал, большой лекционный зал"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }

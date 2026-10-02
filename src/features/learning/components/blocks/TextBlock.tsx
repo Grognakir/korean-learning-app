@@ -96,6 +96,7 @@ export function TextBlock({
   titleSuffix?: number | null;
 }) {
   const seenVocab = new Set<string>();
+  const isInvitation = block.text_kind === "invitation";
 
   return (
     <div id={id} className={styles.block}>
@@ -109,7 +110,9 @@ export function TextBlock({
       )}
       {block.title && (
         <span className={styles.labelRow}>
-          <span className={`${block.exercise_title ? styles.prompt : styles.dialogueTitle} kr`}>
+          <span
+            className={`${block.exercise_title ? styles.prompt : styles.dialogueTitle} ${isInvitation ? styles.invitationTitle : ""} kr`}
+          >
             {block.title}
           </span>
           {block.title_ru && <LabelInfo translation={block.title_ru} />}
@@ -136,7 +139,18 @@ export function TextBlock({
         <OpenTemplateDialogue lines={block.lines} count={block.practice_variants.count} />
       ) : (
         block.lines.map((line, i) => (
-          <p key={i} className={styles.line}>
+          <p
+            key={i}
+            className={
+              isInvitation
+                ? line.line_kind === "signature"
+                  ? styles.invitationSignature
+                  : line.line_kind === "list-item"
+                    ? styles.invitationListItem
+                    : styles.invitationParagraph
+                : styles.line
+            }
+          >
             {line.speaker && (
               <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
             )}

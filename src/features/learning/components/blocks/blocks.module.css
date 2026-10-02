@@ -256,6 +256,25 @@
   font-weight: 700;
 }
 
+.invitationTitle {
+  width: 100%;
+  text-align: center;
+  font-size: var(--kr-font-lg);
+}
+
+.invitationParagraph {
+  text-indent: 1em;
+}
+
+.invitationListItem {
+  padding-left: 1em;
+}
+
+.invitationSignature {
+  align-self: flex-end;
+  text-align: right;
+}
+
 /* vocab_list */
 .vocabItems {
   display: flex;
