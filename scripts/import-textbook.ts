@@ -19,6 +19,7 @@ const LESSON_DIR_2_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_02");
 const LESSON_DIR_2_3 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_03");
 const LESSON_DIR_2_4 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_04");
 const LESSON_DIR_2_5 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_05");
+const LESSON_DIR_2_6 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_06");
 
 const PLAN = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
@@ -139,6 +140,65 @@ async function importLesson(
 }
 
 async function main() {
+  if (process.argv.includes("--lesson-6-only")) {
+    const { data: textbook2, error: textbookError } = await supabase
+      .from("textbooks")
+      .select("id")
+      .eq("slug", TEXTBOOK_2.slug)
+      .single();
+    if (textbookError) throw textbookError;
+
+    const lesson1: LessonFile = JSON.parse(
+      readFileSync(join(LESSON_DIR_2, "lesson-01.json"), "utf-8"),
+    );
+    const lesson2: LessonFile = JSON.parse(
+      readFileSync(join(LESSON_DIR_2_2, "lesson-02.json"), "utf-8"),
+    );
+    const lesson3: LessonFile = JSON.parse(
+      readFileSync(join(LESSON_DIR_2_3, "lesson-03.json"), "utf-8"),
+    );
+    const lesson4: LessonFile = JSON.parse(
+      readFileSync(join(LESSON_DIR_2_4, "lesson-04.json"), "utf-8"),
+    );
+    const lesson5: LessonFile = JSON.parse(
+      readFileSync(join(LESSON_DIR_2_5, "lesson-05.json"), "utf-8"),
+    );
+    const lesson6StartIndex =
+      lesson1.pages.length +
+      lesson2.pages.length +
+      lesson3.pages.length +
+      lesson4.pages.length +
+      lesson5.pages.length;
+
+    await importLesson(
+      textbook2.id,
+      join(LESSON_DIR_2_6, "lesson-06.json"),
+      lesson6StartIndex,
+    );
+    await uploadAsset(
+      join(REFERENCE_DIR, "inha_book_audio/2급_주교재/221.mp3"),
+      "inha_book_2/audio/221.mp3",
+      "audio/mpeg",
+    );
+    await uploadAsset(
+      join(REFERENCE_DIR, "inha_book_audio/2급_주교재/222.mp3"),
+      "inha_book_2/audio/222.mp3",
+      "audio/mpeg",
+    );
+    await uploadAsset(
+      join(REFERENCE_DIR, "inha_book_audio/2급_주교재/223.mp3"),
+      "inha_book_2/audio/223.mp3",
+      "audio/mpeg",
+    );
+    await uploadAsset(
+      join(REFERENCE_DIR, "inha_book_audio/2급_주교재/224.mp3"),
+      "inha_book_2/audio/224.mp3",
+      "audio/mpeg",
+    );
+    console.log("Готово.");
+    return;
+  }
+
   if (process.argv.includes("--lesson-5-only")) {
     const { data: textbook2, error: textbookError } = await supabase
       .from("textbooks")
@@ -365,10 +425,15 @@ async function main() {
     join(LESSON_DIR_2_4, "lesson-04.json"),
     textbook2Lesson3NextIndex,
   );
-  await importLesson(
+  const textbook2Lesson5NextIndex = await importLesson(
     textbook2.id,
     join(LESSON_DIR_2_5, "lesson-05.json"),
     textbook2Lesson4NextIndex,
+  );
+  await importLesson(
+    textbook2.id,
+    join(LESSON_DIR_2_6, "lesson-06.json"),
+    textbook2Lesson5NextIndex,
   );
 
   // Ассеты: только то, что реально используется этим уроком, не всё
@@ -568,6 +633,29 @@ async function main() {
   await uploadAsset(
     join(REFERENCE_DIR, "inha_book_audio/2급_주교재/220.mp3"),
     "inha_book_2/audio/220.mp3",
+    "audio/mpeg",
+  );
+
+  // 2급 6과: аудио к обоим диалогам 준비하기 (221, 222), 듣고 말하기 (223)
+  // и 발음 (224). Иллюстраций для этого урока пока нет.
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/221.mp3"),
+    "inha_book_2/audio/221.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/222.mp3"),
+    "inha_book_2/audio/222.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/223.mp3"),
+    "inha_book_2/audio/223.mp3",
+    "audio/mpeg",
+  );
+  await uploadAsset(
+    join(REFERENCE_DIR, "inha_book_audio/2급_주교재/224.mp3"),
+    "inha_book_2/audio/224.mp3",
     "audio/mpeg",
   );
 

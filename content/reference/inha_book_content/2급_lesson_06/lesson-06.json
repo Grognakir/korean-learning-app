@@ -1,0 +1,1979 @@
+{
+  "textbook_id": "inha_book_2",
+  "lesson_number": 6,
+  "title": "음식",
+  "pages": [
+    {
+      "page_number": null,
+      "page_role": "lesson_opening",
+      "source_photo": "IMG_0704",
+      "blocks": [
+        {
+          "type": "lesson_toc",
+          "sections": [
+            {
+              "key": "준비하기 1",
+              "items": [
+                {
+                  "label": "음식을 만드는 방법을 알려주기",
+                  "block_ref": "text-recipe-dialogue",
+                  "label_ru": "Объяснять, как приготовить блюдо"
+                },
+                {
+                  "label": "AV-(으)ㄹ 줄 알다/모르다①",
+                  "block_ref": "grammar-1",
+                  "label_ru": "AV-(으)ㄹ 줄 알다/모르다 (уметь/не уметь делать)"
+                },
+                {
+                  "label": "N(으)로④",
+                  "block_ref": "grammar-2",
+                  "label_ru": "N(으)로④ (материал, из которого сделано)"
+                },
+                {
+                  "label": "N에다가",
+                  "block_ref": "grammar-3",
+                  "label_ru": "N에다가 (место размещения действия)"
+                }
+              ]
+            },
+            {
+              "key": "준비하기 2",
+              "items": [
+                {
+                  "label": "배달 음식을 주문하기",
+                  "block_ref": "text-delivery-dialogue",
+                  "label_ru": "Заказывать еду с доставкой"
+                },
+                {
+                  "label": "ㅅ 동사",
+                  "block_ref": "grammar-4",
+                  "label_ru": "ㅅ 동사 (глаголы с неправильным ㅅ)"
+                },
+                {
+                  "label": "AV-아/어/여 놓다/두다",
+                  "block_ref": "grammar-5",
+                  "label_ru": "AV-아/어/여 놓다/두다 (сделать и оставить про запас)"
+                }
+              ]
+            },
+            {
+              "key": "말하기",
+              "items": [
+                {
+                  "label": "음식을 만드는 방법을 설명하기",
+                  "block_ref": "text-speaking-summary",
+                  "label_ru": "Объяснить, как приготовить блюдо"
+                }
+              ]
+            },
+            {
+              "key": "듣고 말하기",
+              "items": [
+                {
+                  "label": "생일에 먹는 음식에 대한 대화를 듣고 말하기",
+                  "block_ref": "listening-birthday-food",
+                  "label_ru": "Послушать и обсудить разговор о еде на день рождения"
+                }
+              ]
+            },
+            {
+              "key": "읽고 말하기",
+              "items": [
+                {
+                  "label": "음식을 소개하는 글을 읽고 말하기",
+                  "block_ref": "reading-samgyetang",
+                  "label_ru": "Прочитать текст о блюде и обсудить"
+                }
+              ]
+            },
+            {
+              "key": "쓰기",
+              "items": [
+                {
+                  "label": "고향 음식을 소개하는 글 쓰기",
+                  "block_ref": "writing-hometown-food",
+                  "label_ru": "Написать текст о еде с родины"
+                }
+              ]
+            },
+            {
+              "key": "문화 이해하기",
+              "items": [
+                {
+                  "label": "한국의 명절 음식",
+                  "block_ref": "text-culture-holiday-food",
+                  "label_ru": "Праздничная еда в Корее"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 92,
+      "page_role": "content",
+      "source_photo": "IMG_0705",
+      "blocks": [
+        {
+          "id": "text-recipe-dialogue",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "음식을 만드는 방법을 알려주기",
+          "title_ru": "Объяснять, как приготовить блюдо",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "221",
+          "speakers": [
+            "파하드",
+            "최수지"
+          ],
+          "lines": [
+            {
+              "speaker": "파하드",
+              "text": "수지 씨, 비빔밥을 만들 줄 알아요?"
+            },
+            {
+              "speaker": "최수지",
+              "text": "네, 만들 줄 알아요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "비빔밥은 어떻게 만들어요?"
+            },
+            {
+              "speaker": "최수지",
+              "text": "먼저 쌀과 채소 그리고 고기를 준비하세요. 채소는 콩나물, 당근, 버섯, 시금치가 필요해요. 또 고추장에다가 참기름도 필요해요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "재료를 준비한 다음에 무엇을 먼저 해요?"
+            },
+            {
+              "speaker": "최수지",
+              "text": "밥을 만드세요. 그리고 당근과 버섯을 썬 다음에 고기와 같이 볶아요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "콩나물과 시금치도 볶아요?"
+            },
+            {
+              "speaker": "최수지",
+              "text": "콩나물과 시금치는 삶아요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "그 다음에 어떻게 해요?"
+            },
+            {
+              "speaker": "최수지",
+              "text": "밥에다가 준비한 재료와 고추장을 넣고 비벼서 먹어요. 이때 참기름을 넣으면 고소하고 맛있어요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "쉽네요. 한번 만들어 보고 싶어요."
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-recipe-dialogue",
+          "source_note": "рукописный список на полях страниц (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "쌀",
+              "translation_ru": "рис (сырой, зерно)"
+            },
+            {
+              "ko": "콩나물",
+              "translation_ru": "соевые ростки"
+            },
+            {
+              "ko": "버섯",
+              "translation_ru": "гриб"
+            },
+            {
+              "ko": "시금치",
+              "translation_ru": "шпинат"
+            },
+            {
+              "ko": "고추장",
+              "translation_ru": "кочхуджан (острая перечная паста)"
+            },
+            {
+              "ko": "참기름",
+              "translation_ru": "кунжутное масло"
+            },
+            {
+              "ko": "볶다",
+              "translation_ru": "жарить, обжаривать"
+            },
+            {
+              "ko": "삶다",
+              "translation_ru": "варить (отваривать)"
+            },
+            {
+              "ko": "비비다",
+              "translation_ru": "перемешивать"
+            },
+            {
+              "ko": "고소하다",
+              "translation_ru": "быть ароматным (о поджаристом, ореховом вкусе/запахе)"
+            },
+            {
+              "ko": "포도주",
+              "translation_ru": "вино (виноградное)"
+            },
+            {
+              "ko": "나무",
+              "translation_ru": "дерево"
+            },
+            {
+              "ko": "컵",
+              "translation_ru": "стакан, чашка"
+            },
+            {
+              "ko": "벽돌",
+              "translation_ru": "кирпич"
+            },
+            {
+              "ko": "튼튼하다",
+              "translation_ru": "быть крепким, прочным"
+            },
+            {
+              "ko": "러시아어",
+              "translation_ru": "русский язык"
+            },
+            {
+              "ko": "걸다",
+              "translation_ru": "вешать"
+            },
+            {
+              "ko": "옷걸이",
+              "translation_ru": "вешалка"
+            },
+            {
+              "ko": "대사관",
+              "translation_ru": "посольство"
+            },
+            {
+              "ko": "냄비",
+              "translation_ru": "кастрюля"
+            },
+            {
+              "ko": "데우다",
+              "translation_ru": "подогревать"
+            },
+            {
+              "ko": "전자레인지",
+              "translation_ru": "микроволновая печь"
+            },
+            {
+              "ko": "삼겹살",
+              "translation_ru": "самгёпсаль (жирная свиная грудинка)"
+            },
+            {
+              "ko": "프라이팬",
+              "translation_ru": "сковорода"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 93,
+      "page_role": "content",
+      "source_photo": "IMG_0706",
+      "blocks": [
+        {
+          "id": "grammar-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "AV-(으)ㄹ 줄 알다/모르다①",
+          "section": "1",
+          "explanation": "Выражает умение или неумение делать что-то (знание способа действия), а не знание факта.",
+          "examples": [
+            "지성 씨는 아랍어 책을 읽을 줄 압니다.",
+            "저는 자전거를 탈 줄 몰라요.",
+            "김밥을 만들 줄 아세요?",
+            "1년 전에는 태권도를 할 줄 몰랐어요."
+          ],
+          "rules": [
+            "받침 없음 → -ㄹ 줄 알다/모르다, 받침 있음 → -을 줄 알다/모르다",
+            "«알다/모르다» здесь про умение (способ действия), а не про знание факта"
+          ],
+          "vocab": [
+            {
+              "ko": "아랍어",
+              "translation_ru": "арабский язык"
+            }
+          ]
+        },
+        {
+          "id": "grammar-2",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N(으)로④",
+          "section": "2",
+          "explanation": "Показывает материал или сырьё, из которого что-то сделано.",
+          "examples": [
+            "김치볶음밥은 김치와 밥으로 만듭니다.",
+            "떡과 고추장으로 만든 떡볶이는 맛있어요."
+          ],
+          "rules": [
+            "받침 없음/ㄹ받침 → N로, 받침 있음 → N으로",
+            "здесь — материал, из которого сделан предмет (в отличие от N(으)로-способ/инструмент)"
+          ],
+          "vocab": [
+            {
+              "ko": "김치볶음밥",
+              "translation_ru": "кимчи-боккымбап (жареный рис с кимчи)"
+            }
+          ]
+        },
+        {
+          "id": "grammar-3",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N에다가",
+          "section": "3",
+          "explanation": "Указывает место или точку, куда направлено действие (= N에, но подчёркивает конкретное место), а также может усиливать значение «вдобавок к N».",
+          "examples": [
+            "가: 저녁에 뭐 했어요?\n나: 저녁에 청소에다가 빨래까지 했어요.",
+            "가: 화분을 어디에다가 놓을까요?\n나: 화분을 책상 위에다가 놓으세요.",
+            "가: 김치찌개는 어디에다가 끓일까요?\n나: 김치찌개는 가스레인지에다가 끓이세요."
+          ],
+          "rules": [
+            "N에다가 — конкретное место размещения действия",
+            "N에다가 ... (까지) — может подчёркивать «ещё и», «вдобавок»"
+          ],
+          "vocab": [
+            {
+              "ko": "화분",
+              "translation_ru": "горшок с растением"
+            },
+            {
+              "ko": "가스레인지",
+              "translation_ru": "газовая плита"
+            },
+            {
+              "ko": "끓이다",
+              "translation_ru": "кипятить, варить"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 94,
+      "page_role": "content",
+      "source_photo": "IMG_0707",
+      "blocks": [
+        {
+          "id": "exercise-1a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "수영을 하다",
+              "수영을 하다"
+            ],
+            "dialogue": [
+              "가: 수영을 할 줄 아세요?",
+              "나: 네, 수영을 할 줄 알아요. / 아니요, 수영을 할 줄 몰라요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "자동차를 운전하다",
+                "자동차를 운전하다"
+              ],
+              "answers": [
+                "자동차를 운전할"
+              ]
+            },
+            {
+              "given": [
+                "테니스를 치다",
+                "테니스를 치다"
+              ],
+              "answers": [
+                "테니스를 칠"
+              ]
+            },
+            {
+              "given": [
+                "한국 노래를 부르다",
+                "한국 노래를 부르다"
+              ],
+              "answers": [
+                "한국 노래를 부를"
+              ]
+            },
+            {
+              "given": [
+                "떡볶이를 만들다",
+                "떡볶이를 만들다"
+              ],
+              "answers": [
+                "떡볶이를 만들"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 줄 아세요?",
+            "나: 네, {0} 줄 알아요. / 아니요, {0} 줄 몰라요."
+          ]
+        },
+        {
+          "id": "exercise-1b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "작년 / 운전을 하다 / 하다"
+            ],
+            "dialogue": [
+              "가: 작년까지는 운전을 할 줄 몰랐는데 지금은 할 줄 알아요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "2년 전 / 젓가락을 쓰다 / 쓰다"
+              ],
+              "answers": [
+                "2년 전",
+                "젓가락을 쓸"
+              ]
+            },
+            {
+              "given": [
+                "일주일 전 / 자전거를 타다 / 타다"
+              ],
+              "answers": [
+                "일주일 전",
+                "자전거를 탈"
+              ]
+            },
+            {
+              "given": [
+                "두 달 전 / 한국말을 하다 / 하다"
+              ],
+              "answers": [
+                "두 달 전",
+                "한국말을 할"
+              ]
+            },
+            {
+              "given": [
+                "지난달 / 한국 음식을 만들다 / 만들다"
+              ],
+              "answers": [
+                "지난달",
+                "한국 음식을 만들"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}까지는 {1} 줄 몰랐는데 지금은 {1} 줄 알아요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 95,
+      "page_role": "content",
+      "source_photo": "IMG_0708",
+      "blocks": [
+        {
+          "id": "exercise-2a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "포도주",
+              "포도주 / 포도"
+            ],
+            "dialogue": [
+              "가: 포도주는 무엇으로 만들어요?",
+              "나: 포도주는 포도로 만들어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "책",
+                "책 / 종이"
+              ],
+              "answers": [
+                "책은",
+                "종이로 만들어요"
+              ]
+            },
+            {
+              "given": [
+                "빵",
+                "빵 / 밀가루"
+              ],
+              "answers": [
+                "빵은",
+                "밀가루로 만들어요"
+              ]
+            },
+            {
+              "given": [
+                "떡",
+                "떡 / 쌀"
+              ],
+              "answers": [
+                "떡은",
+                "쌀로 만들어요"
+              ]
+            },
+            {
+              "given": [
+                "종이",
+                "종이 / 나무"
+              ],
+              "answers": [
+                "종이는",
+                "나무로 만들어요"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 무엇으로 만들어요?",
+            "나: {0} {1}."
+          ]
+        },
+        {
+          "id": "exercise-2b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "과일과 채소 / 샐러드 / 건강에 좋다"
+            ],
+            "dialogue": [
+              "가: 과일과 채소로 만든 샐러드는 건강에 좋습니다."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "고기 / 음식 / 좋아하지 않다"
+              ],
+              "answers": [
+                "고기",
+                "음식은",
+                "좋아하지 않습니다"
+              ]
+            },
+            {
+              "given": [
+                "종이 / 컵 / 다시 쓸 수 있다"
+              ],
+              "answers": [
+                "종이",
+                "컵은",
+                "다시 쓸 수 있습니다"
+              ]
+            },
+            {
+              "given": [
+                "쌀 / 떡 / 한국의 전통 음식이다"
+              ],
+              "answers": [
+                "쌀",
+                "떡은",
+                "한국의 전통 음식입니다"
+              ]
+            },
+            {
+              "given": [
+                "벽돌 / 건물 / 튼튼하다"
+              ],
+              "answers": [
+                "벽돌",
+                "건물은",
+                "튼튼합니다"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}로 만든 {1} {2}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 96,
+      "page_role": "content",
+      "source_photo": "IMG_0709",
+      "blocks": [
+        {
+          "id": "exercise-3a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "왜 잠을 못 잤다",
+              "감기 / 배가 아파서 잠을 못 잤다"
+            ],
+            "dialogue": [
+              "가: 왜 잠을 못 잤어요?",
+              "나: 감기에다가 배도 아파서 잠을 못 잤어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "음식을 더 먹을 거다",
+                "라면 / 밥도 먹어서 더 못 먹다"
+              ],
+              "answers": [
+                "음식을 더 먹을 거예요",
+                "라면",
+                "밥도 먹어서 더 못 먹어요"
+              ]
+            },
+            {
+              "given": [
+                "돈 좀 빌려 줄 수 있다",
+                "옷 / 신발도 사서 돈이 없다"
+              ],
+              "answers": [
+                "돈 좀 빌려 줄 수 있어요",
+                "옷",
+                "신발도 사서 돈이 없어요"
+              ]
+            },
+            {
+              "given": [
+                "왜 피곤하다",
+                "축구 / 농구도 해서 피곤하다"
+              ],
+              "answers": [
+                "왜 피곤해요",
+                "축구",
+                "농구도 해서 피곤해요"
+              ]
+            },
+            {
+              "given": [
+                "어느 나라 말을 할 수 있다",
+                "러시아어 / 한국어도 할 수 있다"
+              ],
+              "answers": [
+                "어느 나라 말을 할 수 있어요",
+                "러시아어",
+                "한국어도 할 수 있어요"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}?",
+            "나: {1}에다가 {2}."
+          ]
+        },
+        {
+          "id": "exercise-3b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "책을 놓았다",
+              "책상 위 / 놓았다"
+            ],
+            "dialogue": [
+              "가: 어디에 책을 놓았어요?",
+              "나: 책상 위에다가 놓았어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "우유를 넣었다",
+                "냉장고 안 / 넣었다"
+              ],
+              "answers": [
+                "우유를 넣었어요",
+                "냉장고 안",
+                "넣었어요"
+              ]
+            },
+            {
+              "given": [
+                "옷을 걸었다",
+                "옷걸이 / 걸었다"
+              ],
+              "answers": [
+                "옷을 걸었어요",
+                "옷걸이",
+                "걸었어요"
+              ]
+            },
+            {
+              "given": [
+                "전화를 했다",
+                "대사관 / 전화했다"
+              ],
+              "answers": [
+                "전화를 했어요",
+                "대사관",
+                "전화했어요"
+              ]
+            }
+          ],
+          "template": [
+            "가: 어디에 {0}?",
+            "나: {1}에다가 {2}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 97,
+      "page_role": "content",
+      "source_photo": "IMG_0710",
+      "blocks": [
+        {
+          "id": "exercise-3c",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "채소를 삶다",
+              "냄비 / 삶다"
+            ],
+            "dialogue": [
+              "가: 채소를 삶아요?",
+              "나: 네, 냄비에다가 채소를 삶아요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "물을 끓이다",
+                "가스레인지 / 끓이다"
+              ],
+              "answers": [
+                "물을 끓여요",
+                "가스레인지"
+              ]
+            },
+            {
+              "given": [
+                "우유를 데우다",
+                "전자레인지 / 데우다"
+              ],
+              "answers": [
+                "우유를 데워요",
+                "전자레인지"
+              ]
+            },
+            {
+              "given": [
+                "삼겹살을 굽다",
+                "프라이팬 / 굽다"
+              ],
+              "answers": [
+                "삼겹살을 구워요",
+                "프라이팬"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}?",
+            "나: 네, {1}에다가 {0}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 98,
+      "page_role": "content",
+      "source_photo": "IMG_0711",
+      "blocks": [
+        {
+          "id": "text-delivery-dialogue",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "배달 음식을 주문하기",
+          "title_ru": "Заказывать еду с доставкой",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "222",
+          "speakers": [
+            "아저씨",
+            "흐엉"
+          ],
+          "lines": [
+            {
+              "speaker": "아저씨",
+              "text": "네, 인하중국집입니다."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "인하빌라 109동 503호인데요. 지금 짜장면 배달됩니까?"
+            },
+            {
+              "speaker": "아저씨",
+              "text": "네, 배달됩니다. 몇 그릇을 배달해 드릴까요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "짜장면 일 인분하고 짬뽕 일 인분을 배달해 주세요."
+            },
+            {
+              "speaker": "아저씨",
+              "text": "네, 알겠습니다."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "참, 탕수육도 하나 배달해 주세요. 몇 분 후에 도착해요?"
+            },
+            {
+              "speaker": "아저씨",
+              "text": "15분 후에 배달될 겁니다."
+            },
+            {
+              "speaker": "",
+              "text": "〈잠시 후〉"
+            },
+            {
+              "speaker": "아저씨",
+              "text": "식사 배달 왔습니다. 식사하시고 그릇은 문 앞에 놓아 두세요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 알겠어요."
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-delivery-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "빌라",
+              "translation_ru": "вилла (малоэтажный жилой дом)"
+            },
+            {
+              "ko": "짜장면",
+              "translation_ru": "чачжанмён (лапша с чёрным соевым соусом)"
+            },
+            {
+              "ko": "배달되다",
+              "translation_ru": "доставляться"
+            },
+            {
+              "ko": "짬뽕",
+              "translation_ru": "чамппон (острый суп с лапшой и морепродуктами)"
+            },
+            {
+              "ko": "탕수육",
+              "translation_ru": "тансуюк (кисло-сладкое мясо)"
+            },
+            {
+              "ko": "짓다",
+              "translation_ru": "строить (дом); составлять (предложение) — неправильный ㅅ"
+            },
+            {
+              "ko": "붓다",
+              "translation_ru": "наливать; опухать — неправильный ㅅ"
+            },
+            {
+              "ko": "젓다",
+              "translation_ru": "мешать, помешивать — неправильный ㅅ"
+            },
+            {
+              "ko": "스푼",
+              "translation_ru": "ложка"
+            },
+            {
+              "ko": "자",
+              "translation_ru": "линейка"
+            },
+            {
+              "ko": "줄",
+              "translation_ru": "линия, черта"
+            },
+            {
+              "ko": "똑바로",
+              "translation_ru": "прямо, ровно"
+            },
+            {
+              "ko": "긋다",
+              "translation_ru": "проводить (линию) — неправильный ㅅ"
+            },
+            {
+              "ko": "미소",
+              "translation_ru": "улыбка"
+            },
+            {
+              "ko": "컵라면",
+              "translation_ru": "лапша быстрого приготовления в стакане"
+            },
+            {
+              "ko": "감다",
+              "translation_ru": "мыть (голову), закрывать (глаза)"
+            },
+            {
+              "ko": "빨다",
+              "translation_ru": "стирать"
+            },
+            {
+              "ko": "포장",
+              "translation_ru": "упаковка"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 99,
+      "page_role": "content",
+      "source_photo": "IMG_0712",
+      "blocks": [
+        {
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "ㅅ 동사",
+          "section": "4",
+          "explanation": "Некоторые глаголы/прилагательные на 받침 ㅅ — неправильные: перед окончанием, начинающимся с гласной, ㅅ выпадает. Перед окончанием на согласную ㅅ остаётся. Но не все глаголы на ㅅ такие — часть из них правильные (씻다, 벗다, 웃다, 빗다 — ㅅ никогда не выпадает).",
+          "examples": [
+            "두 문장을 이어서 한 문장으로 만들어요.",
+            "이 약을 먹고 빨리 나으세요.",
+            "집에 오면 손을 먼저 씻으세요."
+          ],
+          "rules": [
+            "неправильные (잇다, 낫다, 짓다, 붓다, 젓다, 긋다…): ㅅ выпадает перед -아/어, -(으)면, -(으)세요 и т.п., но остаётся перед -고, -지만, -습니다",
+            "правильные (씻다, 벗다, 웃다, 빗다…): ㅅ остаётся всегда"
+          ],
+          "vocab": [
+            {
+              "ko": "잇다",
+              "translation_ru": "соединять, связывать (неправильный, ㅅ выпадает)"
+            },
+            {
+              "ko": "낫다",
+              "translation_ru": "выздоравливать; быть лучше (неправильный, ㅅ выпадает)"
+            }
+          ]
+        },
+        {
+          "id": "grammar-5",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "AV-아/어/여 놓다/두다",
+          "section": "5",
+          "explanation": "Показывает, что действие уже совершено заранее и его результат сохраняется — «сделать(ь) и оставить так». 놓다 и 두다 здесь взаимозаменяемы.",
+          "examples": [
+            "가: 책과 공책이 어디에 있어요?\n나: 책과 공책은 가방 안에 넣어 놓았어요.",
+            "내일은 바쁘니까 오늘 여행 준비를 다 해 놓으세요."
+          ],
+          "rules": [
+            "V-아/어/여 놓다 = V-아/어/여 두다 — оба варианта взаимозаменяемы",
+            "нельзя сочетать 놓다 само с собой: 놓아 두다(○), но не 놓아 놓다(✗)"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 100,
+      "page_role": "content",
+      "source_photo": "IMG_0713",
+      "blocks": [
+        {
+          "id": "exercise-4a-1",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "붓다 [아/어요]"
+              ],
+              "answers": [
+                "부어요"
+              ]
+            }
+          ],
+          "template": [
+            "저는 라면을 먹고 자면 얼굴이 {0}."
+          ]
+        },
+        {
+          "id": "exercise-4a-2",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "젓다 [아/어/여서]"
+              ],
+              "answers": [
+                "저어서"
+              ]
+            }
+          ],
+          "template": [
+            "커피 스푼이 없으면 나무젓가락으로 {0} 드세요."
+          ]
+        },
+        {
+          "id": "exercise-4a-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "긋다 [(으)세요]"
+              ],
+              "answers": [
+                "그으세요"
+              ]
+            }
+          ],
+          "template": [
+            "자를 사용해서 줄을 똑바로 {0}."
+          ]
+        },
+        {
+          "id": "exercise-4a-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "짓다 [(으)면]"
+              ],
+              "answers": [
+                "지으면"
+              ]
+            }
+          ],
+          "template": [
+            "흐엉 씨가 미소를 {0} 정말 예뻐요."
+          ]
+        },
+        {
+          "id": "exercise-4a-5",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "낫다 [았/었어요]"
+              ],
+              "answers": [
+                "나았어요"
+              ]
+            }
+          ],
+          "template": [
+            "감기에 걸려서 약을 먹고 지금은 다 {0}."
+          ]
+        },
+        {
+          "id": "exercise-4a-6",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "긋다 [습니다]"
+              ],
+              "answers": [
+                "긋습니다"
+              ]
+            }
+          ],
+          "template": [
+            "새 단어에 줄을 {0}."
+          ]
+        },
+        {
+          "id": "exercise-4a-7",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "짓다 [-고]"
+              ],
+              "answers": [
+                "짓고"
+              ]
+            }
+          ],
+          "template": [
+            "고향에 집을 {0} 부모님과 함께 살고 싶어요."
+          ]
+        },
+        {
+          "id": "exercise-4a-8",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "붓다 [-고]"
+              ],
+              "answers": [
+                "붓고"
+              ]
+            }
+          ],
+          "template": [
+            "컵라면에 뜨거운 물을 {0} 3분쯤 기다리세요."
+          ]
+        },
+        {
+          "id": "exercise-4b-1",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "씻다 [(으)면]"
+              ],
+              "answers": [
+                "씻으면"
+              ]
+            }
+          ],
+          "template": [
+            "운동을 하고 바로 {0} 기분이 좋아요."
+          ]
+        },
+        {
+          "id": "exercise-4b-2",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "빗다 [아/어요]"
+              ],
+              "answers": [
+                "빗어요"
+              ]
+            }
+          ],
+          "template": [
+            "샤워할 때 머리를 감고 예쁘게 {0}."
+          ]
+        },
+        {
+          "id": "exercise-4b-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "웃다 [아/어요]"
+              ],
+              "answers": [
+                "웃어요"
+              ]
+            }
+          ],
+          "template": [
+            "아기는 배부르면 잘 {0}."
+          ]
+        },
+        {
+          "id": "exercise-4b-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "벗다 [-고]"
+              ],
+              "answers": [
+                "벗고"
+              ]
+            }
+          ],
+          "template": [
+            "방에 들어갈 때 신발을 {0} 들어가세요."
+          ]
+        },
+        {
+          "id": "exercise-4b-5",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "빗다 [-고]"
+              ],
+              "answers": [
+                "빗고"
+              ]
+            }
+          ],
+          "template": [
+            "사진을 찍기 전에 머리를 {0} 거울을 보세요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 101,
+      "page_role": "content",
+      "source_photo": "IMG_0714",
+      "blocks": [
+        {
+          "id": "exercise-5a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "채소",
+              "채소를 깨끗하게 씻다"
+            ],
+            "dialogue": [
+              "가: 채소를 어떻게 했어요?",
+              "나: 채소를 깨끗하게 씻어 놓았어요. / 채소를 깨끗하게 씻어 두었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "우유",
+                "우유를 사서 냉장고에 넣다"
+              ],
+              "answers": [
+                "우유",
+                "우유를 사서 냉장고에 넣어"
+              ]
+            },
+            {
+              "given": [
+                "옷",
+                "옷을 빨아서 옷장에 걸다"
+              ],
+              "answers": [
+                "옷",
+                "옷을 빨아서 옷장에 걸어"
+              ]
+            },
+            {
+              "given": [
+                "택배",
+                "택배를 받아서 정리하다"
+              ],
+              "answers": [
+                "택배",
+                "택배를 받아서 정리해"
+              ]
+            },
+            {
+              "given": [
+                "사과",
+                "사과를 씻어서 깎다"
+              ],
+              "answers": [
+                "사과",
+                "사과를 씻어서 깎아"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}를 어떻게 했어요?",
+            "나: {1} 놓았어요. / {1} 두었어요."
+          ]
+        },
+        {
+          "id": "exercise-5b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "새 학기가 시작되다",
+              "미리 책을 읽다"
+            ],
+            "dialogue": [
+              "가: 새 학기가 시작되기 전에 무엇을 해야 해요?",
+              "나: 미리 책을 읽어 놓으세요. / 미리 책을 읽어 두세요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "고향에 가다",
+                "부모님께 드릴 선물을 사다"
+              ],
+              "answers": [
+                "고향에 가",
+                "부모님께 드릴 선물을 사"
+              ]
+            },
+            {
+              "given": [
+                "여행을 가다",
+                "여권을 준비하다"
+              ],
+              "answers": [
+                "여행을 가",
+                "여권을 준비해"
+              ]
+            },
+            {
+              "given": [
+                "택배를 보내다",
+                "포장을 하고 주소를 쓰다"
+              ],
+              "answers": [
+                "택배를 보내",
+                "포장을 하고 주소를 써"
+              ]
+            },
+            {
+              "given": [
+                "이사하다",
+                "집주인에게 이사 날짜를 말하다"
+              ],
+              "answers": [
+                "이사하",
+                "집주인에게 이사 날짜를 말해"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}기 전에 무엇을 해야 해요?",
+            "나: 미리 {1} 놓으세요. / 미리 {1} 두세요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 102,
+      "page_role": "content",
+      "source_photo": "IMG_0715",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 설명해 보십시오",
+          "title_ru": "Используя выученную грамматику, объясните как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "재료: 김치, 고기, 두부, 파"
+            },
+            {
+              "text": "만드는 방법"
+            },
+            {
+              "text": "1. 김치, 고기, 두부, 파를 썰어 놓습니다."
+            },
+            {
+              "text": "2. 프라이팬에다가 고기를 볶습니다."
+            },
+            {
+              "text": "3. 냄비에 볶은 고기와 김치를 넣은 후에 물을 붓고 끓입니다."
+            },
+            {
+              "text": "4. 5분 후에 두부와 파를 넣고 3분 정도 끓입니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "두부",
+              "translation_ru": "тофу (соевый творог)"
+            },
+            {
+              "ko": "파",
+              "translation_ru": "зелёный лук"
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-passage",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "보기",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "여러분, 김치찌개를 만들 줄 아십니까? 오늘은 김치찌개를 만들어 봅시다."
+            },
+            {
+              "text": "자, 그럼 시작해 보겠습니다."
+            },
+            {
+              "text": "김치찌개는 김치와 고기 그리고 두부로 만들어요."
+            },
+            {
+              "text": "먼저 김치를 썰어 놓으세요. 그리고 프라이팬에다가 고기를 볶으세요."
+            },
+            {
+              "text": "냄비에 고기와 김치를 넣은 후에 물을 붓고 끓이세요."
+            },
+            {
+              "text": "5분쯤 끓인 후에 두부와 파를 넣고 3분 정도 끓이세요."
+            },
+            {
+              "text": "그러면 맛있는 김치찌개를 먹을 수 있습니다."
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 무슨 음식을 만들 겁니까?"
+            },
+            {
+              "text": "2) 어떤 재료가 필요합니까?"
+            },
+            {
+              "text": "3) 어떻게 만들 겁니까?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 103,
+      "page_role": "content",
+      "source_photo": "IMG_0716",
+      "blocks": [
+        {
+          "id": "listening-birthday-food",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "생일에 먹는 음식에 대한 대화를 듣고 말하기",
+          "title_ru": "Послушать и обсудить разговор о еде на день рождения",
+          "audio_id": "223",
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что здесь происходит? Расскажите.",
+            "illustration": null
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "최수지가 사우디 음식을 만들고 있습니다.",
+                "파하드는 한국의 미역국을 가장 좋아합니다.",
+                "최수지는 미역국의 의미를 잘 알고 있습니다.",
+                "파하드는 최수지의 생일에 볶음밥을 만들었습니다."
+              ],
+              "correct": null
+            }
+          ],
+          "followup": "여러분 나라에서는 생일날에 어떤 음식을 먹습니까? 이야기해 보십시오.",
+          "followup_ru": "А в вашей стране что едят на день рождения? Расскажите."
+        },
+        {
+          "id": "vocab-listening-birthday",
+          "toc_section": "듣고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "낳다",
+              "translation_ru": "рожать (ребёнка)"
+            },
+            {
+              "ko": "볶음밥",
+              "translation_ru": "жареный рис"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 104,
+      "page_role": "content",
+      "source_photo": "IMG_0717",
+      "blocks": [
+        {
+          "id": "text-reading-samgyetang",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "title": "삼계탕",
+          "title_ru": "Самгетан",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "읽고 말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "'삼계탕'은 한국 사람들이 좋아하는 음식입니다. 한국 사람들은 여름에 삼계탕을 자주 먹습니다. 삼계탕은 닭, 찹쌀, 인삼, 마늘, 대추를 넣고 끓인 음식입니다. 여름에 땀이 많이 날 때 삼계탕을 먹으면 건강에 좋습니다."
+            },
+            {
+              "text": "다음은 삼계탕을 만드는 방법입니다."
+            },
+            {
+              "text": "〈삼계탕〉"
+            },
+            {
+              "text": "재료: 닭, 찹쌀, 인삼, 마늘, 대추"
+            },
+            {
+              "text": "만드는 방법"
+            },
+            {
+              "text": "1. 닭을 깨끗하게 씻습니다."
+            },
+            {
+              "text": "2. 닭의 뱃속( ㉠ ) 찹쌀을 넣습니다."
+            },
+            {
+              "text": "3. 닭과 인삼, 마늘, 대추를 냄비에 넣고 물을 붓습니다."
+            },
+            {
+              "text": "4. 1시간 정도 끓인 후에 먹습니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "찹쌀",
+              "translation_ru": "клейкий рис"
+            },
+            {
+              "ko": "대추",
+              "translation_ru": "ююба (китайский финик)"
+            },
+            {
+              "ko": "땀",
+              "translation_ru": "пот"
+            },
+            {
+              "ko": "뱃속",
+              "translation_ru": "нутро, внутренняя часть живота"
+            }
+          ]
+        },
+        {
+          "id": "reading-samgyetang",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "음식을 소개하는 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о блюде и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "㉠에 들어갈 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее слово для ㉠.",
+              "choices": [
+                "이나",
+                "밖에",
+                "에 비해",
+                "에다가"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "삼계탕은 닭과 인삼을 넣고 끓인 음식입니다.",
+                "삼계탕은 겨울에 먹으면 건강에 아주 좋습니다.",
+                "삼계탕은 명절에 먹는 한국의 전통 음식입니다.",
+                "삼계탕을 먹으면 땀이 많이 나서 몸에 좋습니다."
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 고향 음식을 만들 수 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Вы умеете готовить еду с вашей родины? Расскажите."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 105,
+      "page_role": "content",
+      "source_photo": "IMG_0718",
+      "blocks": [
+        {
+          "id": "writing-hometown-food",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "고향 음식을 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст, представляющий еду вашей родины.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: что это за еда и когда её едят.",
+              "questions": [
+                {
+                  "kr": "그 음식은 무엇입니까?",
+                  "ru": "Что это за еда?"
+                },
+                {
+                  "kr": "그 음식은 언제 먹습니까?",
+                  "ru": "Когда её едят?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: какие ингредиенты нужны и как готовится блюдо.",
+              "questions": [
+                {
+                  "kr": "그 음식에는 어떤 재료가 필요합니까?",
+                  "ru": "Какие ингредиенты нужны?"
+                },
+                {
+                  "kr": "그 음식은 어떻게 만듭니까?",
+                  "ru": "Как она готовится?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: какой у блюда вкус.",
+              "questions": [
+                {
+                  "kr": "그 음식의 맛은 어떻습니까?",
+                  "ru": "Какой у неё вкус?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    },
+    {
+      "page_number": 106,
+      "page_role": "content",
+      "source_photo": "IMG_0719",
+      "blocks": [
+        {
+          "id": "text-culture-holiday-food",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "한국의 명절 음식",
+          "title_ru": "Праздничная еда в Корее",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화 이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "한국의 명절에는 설날과 추석이 있습니다. 설날과 추석에는 가족들이 함께 특별한 음식을 먹습니다.\n설날(음력 1월 1일)은 새해 첫날입니다. 설날에는 떡국과 여러 가지 한국의 전통 음식을 먹습니다. 떡국에는 한 해의 소망과 가족의 건강을 기원하는 뜻이 있습니다. 추석(음력 8월 15일)에는 송편을 준비합니다. 송편은 쌀가루로 만든 달 모양의 떡입니다. 송편에는 추수에 대한 감사의 뜻이 있습니다.\n여러분도 한국에 있는 동안에 떡국과 송편을 드셔 보십시오."
+            },
+            {
+              "text": "1) 한국의 명절 음식에는 무엇이 있습니까?",
+              "translation_ru": "Какая праздничная еда есть в Корее?"
+            },
+            {
+              "text": "2) 여러분 나라의 명절 음식에는 무엇이 있습니까? 이야기해 보십시오.",
+              "translation_ru": "А в вашей стране какая праздничная еда? Расскажите."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "설날",
+              "translation_ru": "Соллаль (корейский Новый год по лунному календарю)"
+            },
+            {
+              "ko": "소망",
+              "translation_ru": "желание, надежда"
+            },
+            {
+              "ko": "뜻",
+              "translation_ru": "смысл, значение"
+            },
+            {
+              "ko": "쌀가루",
+              "translation_ru": "рисовая мука"
+            },
+            {
+              "ko": "달",
+              "translation_ru": "луна"
+            },
+            {
+              "ko": "추수",
+              "translation_ru": "сбор урожая"
+            }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-holiday-food",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "설날",
+              "translation_ru": "Соллаль (корейский Новый год по лунному календарю)"
+            },
+            {
+              "ko": "소망",
+              "translation_ru": "желание, надежда"
+            },
+            {
+              "ko": "뜻",
+              "translation_ru": "смысл, значение"
+            },
+            {
+              "ko": "쌀가루",
+              "translation_ru": "рисовая мука"
+            },
+            {
+              "ko": "달",
+              "translation_ru": "луна"
+            },
+            {
+              "ko": "추수",
+              "translation_ru": "сбор урожая"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-6",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "받침 'ㄷ'+'ㄹ' (비음화)",
+          "audio_id": "224",
+          "examples": [
+            {
+              "text": "몇 리",
+              "translation_ru": "сколько ли (старая мера расстояния, ок. 393 м)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
