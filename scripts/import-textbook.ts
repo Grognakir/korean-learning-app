@@ -61,6 +61,14 @@ const LESSON_5_ILLUSTRATIONS = [
   "illustration_5_korean_celebrations.png",
 ];
 
+const LESSON_6_ILLUSTRATIONS = [
+  "illustration_1_bibimbap_recipe.png",
+  "illustration_2_food_delivery.png",
+  "illustration_3_birthday_food.png",
+  "illustration_4_samgyetang.png",
+  "illustration_5_holiday_food.png",
+];
+
 type LessonPage = {
   page_number: number | null;
   page_role: string;
@@ -175,6 +183,13 @@ async function main() {
       join(LESSON_DIR_2_6, "lesson-06.json"),
       lesson6StartIndex,
     );
+    for (const filename of LESSON_6_ILLUSTRATIONS) {
+      await uploadAsset(
+        join(LESSON_DIR_2_6, `img/${filename}`),
+        `inha_book_2/lesson_6/${filename}`,
+        "image/png",
+      );
+    }
     await uploadAsset(
       join(REFERENCE_DIR, "inha_book_audio/2급_주교재/221.mp3"),
       "inha_book_2/audio/221.mp3",
@@ -363,6 +378,10 @@ async function main() {
       ...LESSON_5_ILLUSTRATIONS.map((filename) => ({
         localPath: join(LESSON_DIR_2_5, `img/${filename}`),
         storagePath: `inha_book_2/lesson_5/${filename}`,
+      })),
+      ...LESSON_6_ILLUSTRATIONS.map((filename) => ({
+        localPath: join(LESSON_DIR_2_6, `img/${filename}`),
+        storagePath: `inha_book_2/lesson_6/${filename}`,
       })),
     ];
 
@@ -636,8 +655,16 @@ async function main() {
     "audio/mpeg",
   );
 
-  // 2급 6과: аудио к обоим диалогам 준비하기 (221, 222), 듣고 말하기 (223)
-  // и 발음 (224). Иллюстраций для этого урока пока нет.
+  // 2급 6과: иллюстрации к разделам и аудио к обоим диалогам 준비하기
+  // (221, 222), 듣고 말하기 (223) и 발음 (224).
+  for (const filename of LESSON_6_ILLUSTRATIONS) {
+    await uploadAsset(
+      join(LESSON_DIR_2_6, `img/${filename}`),
+      `inha_book_2/lesson_6/${filename}`,
+      "image/png",
+    );
+  }
+
   await uploadAsset(
     join(REFERENCE_DIR, "inha_book_audio/2급_주교재/221.mp3"),
     "inha_book_2/audio/221.mp3",
