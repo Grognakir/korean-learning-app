@@ -289,11 +289,12 @@
 }
 
 .articleHeading {
-  text-align: center;
+  text-indent: 1em;
   font-weight: 700;
 }
 
 .articleSubheading {
+  text-indent: 1em;
   font-weight: 700;
 }
 
@@ -305,7 +306,7 @@
 }
 
 .articleListItem {
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 .invitationSignature {
