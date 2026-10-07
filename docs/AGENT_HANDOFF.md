@@ -63,6 +63,7 @@
 
 - `text_kind: "article"` — задание 1 наверху, статья в отдельной карточке (`articleCard`); `line_kind`: `heading`, `subheading`, `list-item`. Данные: `text_kind` и `line_kind` в `#text-reading-samgyetang` (6과). Паттерн годится для любых «печатных статей в рамке».
 - Проверено: `tsc`, ESLint, 231 тест, локальный импорт, браузер (порядок блока, вид статьи; карточка приглашения 5과 не затронута).
+- Выложено на прод: коммит `fc42178`, `Vercel – korean-learning` — success; урок 6 переимпортирован в production (`--lesson-6-only`), через REST подтверждены `text_kind: "article"` и `line_kind` у блока.
 
 ### 2026-10-07 — Inbox: оформление `#text-reading-samgyetang`
 
