@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { ComprehensionExerciseBlock, ComprehensionQuestion } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
+import { speakerClassName } from "./speakerClassName";
 import styles from "./blocks.module.css";
 
 function QuestionPrompt({ question }: { question: ComprehensionQuestion }) {
@@ -113,6 +114,33 @@ export function ComprehensionExercise({
         {block.title_ru && <LabelInfo translation={block.title_ru} />}
       </span>
       {block.audioUrl && <audio controls src={block.audioUrl} className={styles.audio} />}
+      {block.transcript && (
+        <details className={styles.grammarDetails}>
+          <summary className={`${styles.grammarSummary} ${styles.grammarSummaryCompact}`}>
+            <span className={`${styles.transcriptTitle} kr`}>듣기 지문</span>
+            <svg className={styles.grammarToggleIcon} viewBox="0 0 16 16" aria-hidden="true">
+              <path
+                d="M6 3l5 5-5 5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </summary>
+          <div className={styles.grammarNote}>
+            {block.transcript.lines.map((line, i) => (
+              <p key={i} className={styles.line}>
+                {line.speaker && (
+                  <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
+                )}
+                <span className={`${styles.lineText} kr`}>{line.text}</span>
+              </p>
+            ))}
+          </div>
+        </details>
+      )}
       {block.warmup && (
         <div className={styles.comprehensionWarmup}>
           {block.warmup.illustration?.imageUrl ? (

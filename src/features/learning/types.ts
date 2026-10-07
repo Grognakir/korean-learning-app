@@ -202,6 +202,9 @@ export type ComprehensionExerciseBlock = ContentBlockBase & {
   title_ru?: string;
   audio_id?: string | null;
   audioUrl?: string | null;
+  /** Текст аудиозаписи из раздела «듣기 지문» в конце учебника — показывается
+   * свёрнутым блоком над заданиями, чтобы можно было свериться после прослушивания. */
+  transcript?: { lines: TextLine[] };
   /** "1." — иллюстрация-затравка с вопросом перед самим упражнением. */
   warmup?: {
     prompt: string;

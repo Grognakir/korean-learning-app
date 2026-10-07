@@ -523,6 +523,12 @@
   margin-top: 0;
 }
 
+.transcriptTitle {
+  font-size: var(--kr-font-md);
+  font-weight: 700;
+  color: var(--ink);
+}
+
 .grammarSummary::-webkit-details-marker {
   display: none;
 }
