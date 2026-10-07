@@ -113,6 +113,24 @@ export function ComprehensionExercise({
         <span className={`${styles.label} kr`}>{block.title}</span>
         {block.title_ru && <LabelInfo translation={block.title_ru} />}
       </span>
+      {block.warmup && (
+        <div className={styles.comprehensionWarmup}>
+          {block.warmup.illustration?.imageUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={block.warmup.illustration.imageUrl}
+              alt=""
+              className={styles.illustrationImage}
+            />
+          ) : block.warmup.illustration ? (
+            <div className={styles.illustrationPlaceholder}>Иллюстрация появится позже</div>
+          ) : null}
+          <p className={`${styles.prompt} kr`}>
+            1. {block.warmup.prompt}
+            {block.warmup.prompt_ru && <LabelInfo translation={block.warmup.prompt_ru} />}
+          </p>
+        </div>
+      )}
       {block.audioUrl && <audio controls src={block.audioUrl} className={styles.audio} />}
       {block.transcript && (
         <details className={styles.grammarDetails}>
@@ -140,24 +158,6 @@ export function ComprehensionExercise({
             ))}
           </div>
         </details>
-      )}
-      {block.warmup && (
-        <div className={styles.comprehensionWarmup}>
-          {block.warmup.illustration?.imageUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={block.warmup.illustration.imageUrl}
-              alt=""
-              className={styles.illustrationImage}
-            />
-          ) : block.warmup.illustration ? (
-            <div className={styles.illustrationPlaceholder}>Иллюстрация появится позже</div>
-          ) : null}
-          <p className={`${styles.prompt} kr`}>
-            1. {block.warmup.prompt}
-            {block.warmup.prompt_ru && <LabelInfo translation={block.warmup.prompt_ru} />}
-          </p>
-        </div>
       )}
       {block.group_prompt && (
         <p className={`${styles.prompt} kr`}>
