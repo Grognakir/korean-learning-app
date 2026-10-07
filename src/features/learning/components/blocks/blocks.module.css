@@ -381,6 +381,7 @@
 }
 
 .inlineVocab {
+  text-indent: 0;
   display: inline-block;
   vertical-align: baseline;
   margin: 0 1px;
