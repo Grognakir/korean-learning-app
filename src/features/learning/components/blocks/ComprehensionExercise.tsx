@@ -133,7 +133,7 @@ export function ComprehensionExercise({
       )}
       {block.audioUrl && <audio controls src={block.audioUrl} className={styles.audio} />}
       {block.transcript && (
-        <details className={styles.grammarDetails}>
+        <details className={`${styles.grammarDetails} ${styles.transcriptDetails}`}>
           <summary className={`${styles.grammarSummary} ${styles.grammarSummaryCompact}`}>
             <span className={`${styles.transcriptTitle} kr`}>듣기 지문</span>
             <svg className={styles.grammarToggleIcon} viewBox="0 0 16 16" aria-hidden="true">
@@ -147,7 +147,7 @@ export function ComprehensionExercise({
               />
             </svg>
           </summary>
-          <div className={styles.grammarNote}>
+          <div className={styles.transcriptBody}>
             {block.transcript.lines.map((line, i) => (
               <p key={i} className={styles.line}>
                 {line.speaker && (

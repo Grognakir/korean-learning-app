@@ -523,6 +523,18 @@
   margin-top: 0;
 }
 
+.transcriptDetails {
+  background: var(--paper);
+  border-radius: var(--radius-control);
+  padding: 10px 12px;
+}
+
+.transcriptBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .transcriptTitle {
   font-size: var(--kr-font-md);
   font-weight: 700;
