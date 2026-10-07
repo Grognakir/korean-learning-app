@@ -10,6 +10,21 @@ import { speakerClassName } from "./speakerClassName";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
+function lineClassName(textKind: TextBlockType["text_kind"], lineKind: TextLine["line_kind"]) {
+  if (textKind === "invitation") {
+    if (lineKind === "signature") return styles.invitationSignature;
+    if (lineKind === "list-item") return styles.invitationListItem;
+    return styles.invitationParagraph;
+  }
+  if (textKind === "article") {
+    if (lineKind === "heading") return styles.articleHeading;
+    if (lineKind === "subheading") return styles.articleSubheading;
+    if (lineKind === "list-item") return styles.articleListItem;
+    return styles.articleParagraph;
+  }
+  return styles.line;
+}
+
 function LineText({
   line,
   vocabItems,
@@ -97,6 +112,7 @@ export function TextBlock({
 }) {
   const seenVocab = new Set<string>();
   const isInvitation = block.text_kind === "invitation";
+  const isArticle = block.text_kind === "article";
 
   return (
     <div id={id} className={styles.block}>
@@ -138,26 +154,17 @@ export function TextBlock({
       {block.practice_variants ? (
         <OpenTemplateDialogue lines={block.lines} count={block.practice_variants.count} />
       ) : (
-        block.lines.map((line, i) => (
-          <p
-            key={i}
-            className={
-              isInvitation
-                ? line.line_kind === "signature"
-                  ? styles.invitationSignature
-                  : line.line_kind === "list-item"
-                    ? styles.invitationListItem
-                    : styles.invitationParagraph
-                : styles.line
-            }
-          >
-            {line.speaker && (
-              <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
-            )}
-            <LineText line={line} vocabItems={vocabItems} seenVocab={seenVocab} />
-            {line.translation_ru && <LabelInfo translation={line.translation_ru} />}
-          </p>
-        ))
+        <div className={isArticle ? styles.articleCard : styles.textLines}>
+          {block.lines.map((line, i) => (
+            <p key={i} className={lineClassName(block.text_kind, line.line_kind)}>
+              {line.speaker && (
+                <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
+              )}
+              <LineText line={line} vocabItems={vocabItems} seenVocab={seenVocab} />
+              {line.translation_ru && <LabelInfo translation={line.translation_ru} />}
+            </p>
+          ))}
+        </div>
       )}
       {block.table && (
         <div className={styles.comprehensionTableWrap}>

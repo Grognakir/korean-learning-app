@@ -270,6 +270,44 @@
   padding-left: 1em;
 }
 
+.textLines {
+  display: contents;
+}
+
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  padding: 14px 16px;
+}
+
+.articleParagraph {
+  text-indent: 1em;
+}
+
+.articleHeading {
+  text-align: center;
+  font-weight: 700;
+}
+
+.articleSubheading {
+  font-weight: 700;
+}
+
+.articleSubheading::before {
+  content: "■";
+  font-size: 0.7em;
+  margin-right: 6px;
+  vertical-align: 0.1em;
+}
+
+.articleListItem {
+  padding-left: 1em;
+}
+
 .invitationSignature {
   align-self: flex-end;
   text-align: right;

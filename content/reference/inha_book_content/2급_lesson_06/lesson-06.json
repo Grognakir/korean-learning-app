@@ -1926,7 +1926,7 @@
             "storage_path": "lesson_6/illustration_4_samgyetang.png",
             "original_kind": "illustration"
           },
-          "text_kind": "passage",
+          "text_kind": "article",
           "section": "읽고 말하기",
           "exercise_ref": null,
           "audio_id": null,
@@ -1940,25 +1940,32 @@
               "text": "다음은 삼계탕을 만드는 방법입니다."
             },
             {
-              "text": "〈삼계탕〉"
+              "text": "〈삼계탕〉",
+              "line_kind": "heading"
             },
             {
-              "text": "재료: 닭, 찹쌀, 인삼, 마늘, 대추"
+              "text": "재료: 닭, 찹쌀, 인삼, 마늘, 대추",
+              "line_kind": "subheading"
             },
             {
-              "text": "만드는 방법"
+              "text": "만드는 방법",
+              "line_kind": "subheading"
             },
             {
-              "text": "1. 닭을 깨끗하게 씻습니다."
+              "text": "1. 닭을 깨끗하게 씻습니다.",
+              "line_kind": "list-item"
             },
             {
-              "text": "2. 닭의 뱃속( ㉠ ) 찹쌀을 넣습니다."
+              "text": "2. 닭의 뱃속( ㉠ ) 찹쌀을 넣습니다.",
+              "line_kind": "list-item"
             },
             {
-              "text": "3. 닭과 인삼, 마늘, 대추를 냄비에 넣고 물을 붓습니다."
+              "text": "3. 닭과 인삼, 마늘, 대추를 냄비에 넣고 물을 붓습니다.",
+              "line_kind": "list-item"
             },
             {
-              "text": "4. 1시간 정도 끓인 후에 먹습니다."
+              "text": "4. 1시간 정도 끓인 후에 먹습니다.",
+              "line_kind": "list-item"
             }
           ],
           "vocab": [

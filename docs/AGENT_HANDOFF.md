@@ -59,6 +59,15 @@
 
 ## Журнал выполненных работ
 
+### 2026-10-07 — Выполнен пункт 19: статья `삼계탕` в рамке
+
+- `text_kind: "article"` — задание 1 наверху, статья в отдельной карточке (`articleCard`); `line_kind`: `heading`, `subheading`, `list-item`. Данные: `text_kind` и `line_kind` в `#text-reading-samgyetang` (6과). Паттерн годится для любых «печатных статей в рамке».
+- Проверено: `tsc`, ESLint, 231 тест, локальный импорт, браузер (порядок блока, вид статьи; карточка приглашения 5과 не затронута).
+
+### 2026-10-07 — Inbox: оформление `#text-reading-samgyetang`
+
+- В `docs/dev_docs/5-pending-edits.md` пункт 19: тело текста 삼계탕 визуально отделить от `intro_prompt`, чтобы не выглядело заданием — как контент 준비하기 и карточка приглашения, по фото `IMG_0717`. Код и JSON не менялись.
+
 ### 2026-10-07 — Свёрнутый «듣기 지문» в заданиях 듣고 말하기 (2급 1–6과)
 
 - Источник: фото `content/reference/inha_book_photo/듣기 지문/` (`IMG_0729`–`IMG_0732`, стр. 274–277 учебника). Тексты уроков 1–6 перенесены дословно в новое необязательное поле `transcript: { lines: TextLine[] }` у `comprehension_exercise` (`listening-personal-info`, `-housing-search`, `-dream`, `-weather-experience`, `-housewarming-invite`, `-birthday-food`).

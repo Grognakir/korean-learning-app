@@ -28,10 +28,11 @@ export type TextLine = {
    * ...") через значок "i" — отдельно от TextBlock.vocab (переводы
    * отдельных слов) и TextBlock.title_ru (перевод заголовка). */
   translation_ru?: string;
-  /** Только для text_kind: "invitation" — как оформить строку карточки
-   * приглашения: "list-item" (нумерованные 날짜/시간/장소), "signature"
-   * (подпись справа). Без поля — обычный абзац с отступом. */
-  line_kind?: "list-item" | "signature";
+  /** Только для text_kind "invitation"/"article" — как оформить строку
+   * карточки: "list-item" (нумерованный список), "signature" (подпись
+   * справа), "heading" (заголовок статьи по центру), "subheading"
+   * (подзаголовок со значком ■). Без поля — абзац с отступом. */
+  line_kind?: "list-item" | "signature" | "heading" | "subheading";
 };
 
 export type TextBlockIllustration = {
@@ -52,7 +53,7 @@ export type TextBlock = ContentBlockBase & {
   title?: string;
   title_ru?: string;
   illustration?: TextBlockIllustration | null;
-  text_kind: "dialogue" | "passage" | "example_line" | "invitation";
+  text_kind: "dialogue" | "passage" | "example_line" | "invitation" | "article";
   section?: string | null;
   exercise_ref?: string | null;
   audio_id?: string | null;

@@ -16,6 +16,8 @@
 
 ## Сделано
 
+19. **`#text-reading-samgyetang` (6과): текст как отдельный материал.** Новый `text_kind: "article"` (`types.ts`, `TextBlock.tsx`, `blocks.module.css`): задание 1 (`intro_prompt` + картинка) остаётся наверху, сама статья — в отдельной рамке (фон `--paper`, border) с абзацами с отступом, `〈삼계탕〉` по центру, подзаголовками `재료`/`만드는 방법` со значком ■ и нумерованным рецептом. Новые значения `line_kind`: `heading`, `subheading` (плюс уже существовавший `list-item`). Текст не менялся, вид `invitation` не затронут.
+
 12. **`/topics/questions`: описания на всю ширину колонки.** Сняты `max-width: 56ch` у `.subtitle` и `62ch` у `.secDesc` в `QuestionsTopic.module.css`; в браузере ширина обоих равна ширине родителя. Текст не менялся.
 
 13. **`#grammar-1` (6과): чип `자전거`.** Добавлен в `GrammarPointBlock.vocab` (`велосипед`, как в `word-자전거`).
