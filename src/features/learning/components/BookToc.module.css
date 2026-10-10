@@ -95,7 +95,7 @@
 .unit .plain {
   flex-direction: row;
   align-items: baseline;
-  gap: 6px;
+  gap: 2px;
   white-space: nowrap;
 }
 
@@ -106,7 +106,7 @@
 
 .unitNumber::after {
   content: "·";
-  margin-left: 6px;
+  margin-left: 2px;
 }
 
 .button,
