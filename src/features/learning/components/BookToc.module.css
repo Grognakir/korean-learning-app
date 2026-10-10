@@ -56,26 +56,31 @@
 .table {
   border-collapse: separate;
   border-spacing: 0;
-  width: max-content;
-  min-width: 100%;
-  font-size: var(--kr-font-xs);
-  line-height: 1.45;
+  width: 100%;
+  font-size: var(--kr-font-sm);
+  line-height: 1.4;
   color: var(--ink);
 }
 
 .table th,
 .table td {
-  padding: 8px 10px;
+  padding: 10px 12px;
   text-align: left;
   vertical-align: middle;
   border-bottom: 1px solid var(--line);
-  border-right: 1px solid var(--line);
-  min-width: 130px;
 }
 
-.table th:last-child,
-.table td:last-child {
-  border-right: none;
+.table thead th {
+  background: var(--paper-2);
+  font-weight: 700;
+  text-align: center;
+}
+
+.table thead th:first-child,
+.table tbody th {
+  width: 1%;
+  min-width: 130px;
+  border-right: 1px solid var(--line);
 }
 
 .table tbody tr:last-child th,
@@ -83,57 +88,8 @@
   border-bottom: none;
 }
 
-.table thead th {
-  background: var(--paper-2);
-  font-weight: 700;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.table td:nth-child(3),
-.table td:nth-child(5) {
-  min-width: 220px;
-}
-
-.table td:nth-child(2),
-.table td:nth-child(4),
-.table td:nth-child(6),
-.table td:nth-child(7),
-.table td:nth-child(8),
-.table td:nth-child(9),
-.table td:nth-child(10) {
-  min-width: 150px;
-}
-
-.table td:last-child {
-  min-width: 110px;
-  text-align: center;
-}
-
-.table thead th:first-child,
-.table tbody th.unit {
-  position: sticky;
-  left: 0;
-  z-index: 1;
-  min-width: 96px;
-  background: #fff;
-}
-
-.table thead th:first-child {
-  background: var(--paper-2);
-  z-index: 2;
-}
-
 .unit {
   font-weight: 700;
-}
-
-.unitLink {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  color: inherit;
-  text-decoration: none;
 }
 
 .unitNumber {
@@ -143,24 +99,44 @@
   color: var(--stone);
 }
 
+.button,
+.plain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-sizing: border-box;
+}
+
+.button {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  padding: 6px 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover,
+.button:focus-visible {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.plain {
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-control);
+  padding: 6px 10px;
+  color: var(--ink-soft);
+}
+
 .grammar {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .grammar li {
-  position: relative;
-  padding-left: 10px;
-}
-
-.grammar li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-}
-
-.pronLine {
-  display: block;
+  min-width: 0;
 }

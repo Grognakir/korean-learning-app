@@ -8,445 +8,380 @@
   {
    "lesson": 1,
    "unit": "자기소개",
-   "prep1": {
-    "topic": "개인 정보를 말하기",
-    "grammar": [
-     "N(이)라고 하다",
-     "DV-게",
-     "AV-(으)ㄴ 지"
-    ]
-   },
-   "prep2": {
-    "topic": "교실에서 자기소개를 하기",
-    "grammar": [
-     "AV-(으)려고",
-     "N에 대해(서)"
-    ]
-   },
-   "speaking": "처음 만난 사람들에게 자기소개하기",
-   "listening": "개인 정보를 듣고 말하기",
-   "reading": "자기소개를 하는 글을 읽고 말하기",
-   "writing": "자기소개를 하는 글 쓰기",
-   "culture": "한국의 인사법",
-   "pronunciation": [
-    "구개음화①"
+   "grammar": [
+    {
+     "label": "N(이)라고 하다",
+     "section": "준비하기 1",
+     "block": "grammar-1"
+    },
+    {
+     "label": "DV-게",
+     "section": "준비하기 1",
+     "block": "grammar-2"
+    },
+    {
+     "label": "AV-(으)ㄴ 지",
+     "section": "준비하기 1",
+     "block": "grammar-3"
+    },
+    {
+     "label": "AV-(으)려고",
+     "section": "준비하기 2",
+     "block": "grammar-4"
+    },
+    {
+     "label": "N에 대해(서)",
+     "section": "준비하기 2",
+     "block": "grammar-5"
+    }
    ]
   },
   {
    "lesson": 2,
    "unit": "한국 생활",
-   "prep1": {
-    "topic": "한국 생활에 대한 정보를 묻기",
-    "grammar": [
-     "AV-는 중이다, N 중이다",
-     "V-(으)ㄹ 때, N 때"
-    ]
-   },
-   "prep2": {
-    "topic": "집에 대한 정보를 묻기",
-    "grammar": [
-     "N에 비하다",
-     "AV-(으)ㄴ 다음에",
-     "AV-게 되다①"
-    ]
-   },
-   "speaking": "한국 생활의 계획을 말하기",
-   "listening": "부동산 중개사 사무소에서 집을 구하기",
-   "reading": "한국 생활의 경험에 대한 글을 읽고 말하기",
-   "writing": "한국 생활의 경험에 대한 글 쓰기",
-   "culture": "대학생이 사는 집",
-   "pronunciation": [
-    "구개음화②"
+   "grammar": [
+    {
+     "label": "AV-는 중이다, N 중이다",
+     "section": "준비하기 1",
+     "block": "grammar-1"
+    },
+    {
+     "label": "V-(으)ㄹ 때, N 때",
+     "section": "준비하기 1",
+     "block": "grammar-2"
+    },
+    {
+     "label": "N에 비하다",
+     "section": "준비하기 2",
+     "block": "grammar-3"
+    },
+    {
+     "label": "AV-(으)ㄴ 다음에",
+     "section": "준비하기 2",
+     "block": "grammar-4"
+    },
+    {
+     "label": "AV-게 되다①",
+     "section": "준비하기 2",
+     "block": "grammar-5"
+    }
    ]
   },
   {
    "lesson": 3,
    "unit": "경험과 계획",
-   "prep1": {
-    "topic": "경험을 말하기",
-    "grammar": [
-     "AV-(으)ㄴ 적이 있다/없다",
-     "V-(으)ㄴ/는데요, N인데요"
-    ]
-   },
-   "prep2": {
-    "topic": "계획을 듣고 조언하기",
-    "grammar": [
-     "AV-는 동안(에)",
-     "AV-기로 하다"
-    ]
-   },
-   "speaking": "경험과 계획을 말하기",
-   "listening": "꿈에 대해 듣고 말하기",
-   "reading": "꿈에 대한 글을 읽고 말하기",
-   "writing": "꿈에 대한 글 쓰기",
-   "culture": "한국의 대학생",
-   "pronunciation": [
-    "유음화",
-    "(ㄴ+ㄹ, ㄹ+ㄴ)"
+   "grammar": [
+    {
+     "label": "AV-(으)ㄴ 적이 있다/없다",
+     "section": "준비하기 1",
+     "block": "grammar-1"
+    },
+    {
+     "label": "V-(으)ㄴ/는데요, N인데요",
+     "section": "준비하기 1",
+     "block": "grammar-2"
+    },
+    {
+     "label": "AV-는 동안(에)",
+     "section": "준비하기 2",
+     "block": "grammar-3"
+    },
+    {
+     "label": "AV-기로 하다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
+    }
    ]
   },
   {
    "lesson": 4,
    "unit": "날씨와 생활",
-   "prep1": {
-    "topic": "날씨를 추측하고 일정을 계획하기",
-    "grammar": [
-     "V-네요, N(이)네요",
-     "V-(으)ㄴ/는/(으)ㄹ 것 같다, N인/일 것 같다"
-    ]
-   },
-   "prep2": {
-    "topic": "일기예보를 듣기",
-    "grammar": [
-     "DV-아/어/여지다",
-     "AV-기 시작하다",
-     "N(으)로③"
-    ]
-   },
-   "speaking": "일기예보를 보고 계획하기",
-   "listening": "날씨에 대한 경험을 발표하기",
-   "reading": "한국 날씨에 대한 글을 읽기",
-   "writing": "고향 날씨를 소개하는 글 쓰기",
-   "culture": "비 오는 날에 먹는 음식",
-   "pronunciation": [
-    "비음화①",
-    "(ㄴ+ㄹ)"
+   "grammar": [
+    {
+     "label": "V-네요, N(이)네요",
+     "section": "준비하기 1",
+     "block": "grammar-1"
+    },
+    {
+     "label": "V-(으)ㄴ/는/(으)ㄹ 것 같다, N인/일 것 같다",
+     "section": "준비하기 1",
+     "block": "grammar-2"
+    },
+    {
+     "label": "DV-아/어/여지다",
+     "section": "준비하기 2",
+     "block": "grammar-3"
+    },
+    {
+     "label": "AV-기 시작하다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
+    },
+    {
+     "label": "N(으)로③",
+     "section": "준비하기 2",
+     "block": "grammar-5"
+    }
    ]
   },
   {
    "lesson": 5,
    "unit": "초대와 방문",
-   "prep1": {
-    "topic": "파티를 계획하기",
-    "grammar": [
-     "AV-(으)ㄹ래요 / -(으)ㄹ래요?",
-     "V-기 때문에, N 때문에, N(이)기 때문에"
-    ]
-   },
-   "prep2": {
-    "topic": "방문 예의에 대해 말하기",
-    "grammar": [
-     "V-기는 하지만, N(이)기는 하지만",
-     "DV-아/어/여하다",
-     "N(이)나 / N밖에"
-    ]
-   },
-   "speaking": "모임 참여를 권유하기",
-   "listening": "집들이에 초대하는 대화를 듣고 말하기",
-   "reading": "초대장을 읽고 말하기",
-   "writing": "초대장을 쓰기",
-   "culture": "한국인의 초대",
-   "pronunciation": [
-    "비음화②",
-    "(ㄱ+ㄹ)"
+   "grammar": [
+    {
+     "label": "AV-(으)ㄹ래요 / -(으)ㄹ래요?",
+     "section": "준비하기 1",
+     "block": "grammar-1"
+    },
+    {
+     "label": "V-기 때문에, N 때문에, N(이)기 때문에",
+     "section": "준비하기 1",
+     "block": "grammar-2"
+    },
+    {
+     "label": "V-기는 하지만, N(이)기는 하지만",
+     "section": "준비하기 2",
+     "block": "grammar-3"
+    },
+    {
+     "label": "DV-아/어/여하다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
+    },
+    {
+     "label": "N(이)나 / N밖에",
+     "section": "준비하기 2",
+     "block": "grammar-5"
+    }
    ]
   },
   {
    "lesson": 6,
    "unit": "음식",
-   "prep1": {
-    "topic": "음식을 만드는 방법을 알려주기",
-    "grammar": [
-     "AV-(으)ㄹ 줄 알다/모르다①",
-     "N(으)로④",
-     "N에다가"
-    ]
-   },
-   "prep2": {
-    "topic": "배달 음식을 주문하기",
-    "grammar": [
-     "ㅅ 동사",
-     "AV-아/어/여 놓다/두다"
-    ]
-   },
-   "speaking": "음식을 만드는 방법을 설명하기",
-   "listening": "생일에 먹는 음식에 대한 대화를 듣고 말하기",
-   "reading": "음식을 소개하는 글을 읽고 말하기",
-   "writing": "고향 음식을 소개하는 글 쓰기",
-   "culture": "한국의 명절 음식",
-   "pronunciation": [
-    "비음화③",
-    "(ㄷ+ㄹ)"
+   "grammar": [
+    {
+     "label": "AV-(으)ㄹ 줄 알다/모르다①",
+     "section": "준비하기 1",
+     "block": "grammar-1"
+    },
+    {
+     "label": "N(으)로④",
+     "section": "준비하기 1",
+     "block": "grammar-2"
+    },
+    {
+     "label": "N에다가",
+     "section": "준비하기 1",
+     "block": "grammar-3"
+    },
+    {
+     "label": "ㅅ 동사",
+     "section": "준비하기 2",
+     "block": "grammar-4"
+    },
+    {
+     "label": "AV-아/어/여 놓다/두다",
+     "section": "준비하기 2",
+     "block": "grammar-5"
+    }
    ]
   },
   {
    "lesson": 7,
    "unit": "물건 사기",
-   "prep1": {
-    "topic": "쇼핑몰 추천하기",
-    "grammar": [
-     "V-기는요",
-     "AV-(으)니(까)②"
-    ]
-   },
-   "prep2": {
-    "topic": "물건을 교환 하기",
-    "grammar": [
-     "V-아/어/여 가지고, N이어/여 가지고",
-     "AV-는 대신(에), N 대신(에)"
-    ]
-   },
-   "speaking": "물건을 추천하기",
-   "listening": "택배를 받는 대화를 듣고 말하기",
-   "reading": "상품 구매 후기를 읽고 말하기",
-   "writing": "상품 구매 후기를 쓰기",
-   "culture": "재미있는 '데이(Day)'",
-   "pronunciation": [
-    "비음화④",
-    "(ㅂ+ㄹ)"
+   "grammar": [
+    {
+     "label": "V-기는요"
+    },
+    {
+     "label": "AV-(으)니(까)②"
+    },
+    {
+     "label": "V-아/어/여 가지고, N이어/여 가지고"
+    },
+    {
+     "label": "AV-는 대신(에), N 대신(에)"
+    }
    ]
   },
   {
    "lesson": 8,
    "unit": "여가와 취미",
-   "prep1": {
-    "topic": "여가 활동을 권유하기",
-    "grammar": [
-     "V-잖아요, N(이)잖아요",
-     "AV-는군요, DV-군요, N(이)군요",
-     "V-(으)ㄹ 수도 있다, N일 수도 있다"
-    ]
-   },
-   "prep2": {
-    "topic": "동아리 가입에 대한 정보를 구하기",
-    "grammar": [
-     "AV-기(가) 쉽다/어렵다",
-     "V-(으)ㄴ/는/(으)ㄹ 것"
-    ]
-   },
-   "speaking": "모임",
-   "listening": "동아리를 소개하는 방송을 듣고 말하기",
-   "reading": "동아리 회원을 모집하는 글을 읽고 말하기",
-   "writing": "동아리 회원을 모집하는 글 쓰기",
-   "culture": "한국인의 여가 생활",
-   "pronunciation": [
-    "비음화⑤",
-    "(ㅁ+ㄹ)"
+   "grammar": [
+    {
+     "label": "V-잖아요, N(이)잖아요"
+    },
+    {
+     "label": "AV-는군요, DV-군요, N(이)군요"
+    },
+    {
+     "label": "V-(으)ㄹ 수도 있다, N일 수도 있다"
+    },
+    {
+     "label": "AV-기(가) 쉽다/어렵다"
+    },
+    {
+     "label": "V-(으)ㄴ/는/(으)ㄹ 것"
+    }
    ]
   },
   {
    "lesson": 9,
    "unit": "건강",
-   "prep1": {
-    "topic": "진료 예약을 변경하기",
-    "grammar": [
-     "AV-(으)려면",
-     "AV-나요? / -는가요?, DV-(으)ㄴ가요?, N인가요?"
-    ]
-   },
-   "prep2": {
-    "topic": "병원에서 진찰 받기",
-    "grammar": [
-     "V-아/어/여서 그런지, N이어/여서 그런지",
-     "DV-아/어/여 보이다",
-     "V-(으)면서, N(이)면서"
-    ]
-   },
-   "speaking": "병원에서 치료 방법을 묻기",
-   "listening": "약사에게 증상을 말하기",
-   "reading": "건강 관리법을 읽고 말하기",
-   "writing": "자신의 건강 관리법을 쓰기",
-   "culture": "동의보감",
-   "pronunciation": [
-    "비음화⑥",
-    "(ㅇ+ㄹ)"
+   "grammar": [
+    {
+     "label": "AV-(으)려면"
+    },
+    {
+     "label": "AV-나요? / -는가요?, DV-(으)ㄴ가요?, N인가요?"
+    },
+    {
+     "label": "V-아/어/여서 그런지, N이어/여서 그런지"
+    },
+    {
+     "label": "DV-아/어/여 보이다"
+    },
+    {
+     "label": "V-(으)면서, N(이)면서"
+    }
    ]
   },
   {
    "lesson": 10,
    "unit": "외모와 복장",
-   "prep1": {
-    "topic": "외모를 묘사하기",
-    "grammar": [
-     "V-(으)ㄴ/는 편이다",
-     "N처럼 / 같이"
-    ]
-   },
-   "prep2": {
-    "topic": "복장을 묘사하기",
-    "grammar": [
-     "ㅎ 동사",
-     "N만 하다",
-     "AV-고 있다②"
-    ]
-   },
-   "speaking": "때와 장소에 맞는 복장에 대해 이야기하기",
-   "listening": "어울리는 스타일에 대한 대화를 듣고 말하기",
-   "reading": "이상형에 대한 글을 읽고 말하기",
-   "writing": "이상형에 대한 글 쓰기",
-   "culture": "한국의 의복",
-   "pronunciation": [
-    "비음화⑦",
-    "(ㄴ+ㄹ)"
+   "grammar": [
+    {
+     "label": "V-(으)ㄴ/는 편이다"
+    },
+    {
+     "label": "N처럼 / 같이"
+    },
+    {
+     "label": "ㅎ 동사"
+    },
+    {
+     "label": "N만 하다"
+    },
+    {
+     "label": "AV-고 있다②"
+    }
    ]
   },
   {
    "lesson": 11,
    "unit": "교통",
-   "prep1": {
-    "topic": "길을 안내하기",
-    "grammar": [
-     "V-다가",
-     "V-(으)ㄴ/는지, N인지"
-    ]
-   },
-   "prep2": {
-    "topic": "길을 찾기",
-    "grammar": [
-     "AV-아/어/여 있다",
-     "르 동사",
-     "N만큼"
-    ]
-   },
-   "speaking": "목적지까지 가는 길을 묻고 말하기",
-   "listening": "교통편 설명에 대한 대화를 듣고 말하기",
-   "reading": "안전 규칙을 읽고 말하기",
-   "writing": "안전 규칙에 대한 글 쓰기",
-   "culture": "교통약자석과 자전거 전용 도로",
-   "pronunciation": [
-    "유기음화①",
-    "ㄱ+ㅎ",
-    "ㅎ+ㄱ"
+   "grammar": [
+    {
+     "label": "V-다가"
+    },
+    {
+     "label": "V-(으)ㄴ/는지, N인지"
+    },
+    {
+     "label": "AV-아/어/여 있다"
+    },
+    {
+     "label": "르 동사"
+    },
+    {
+     "label": "N만큼"
+    }
    ]
   },
   {
    "lesson": 12,
    "unit": "다툼과 화해",
-   "prep1": {
-    "topic": "다툰 경험을 말하기",
-    "grammar": [
-     "AV-기 위해(서), N을/를 위해(서)",
-     "AV-고 나서",
-     "AV-(으)ㄹ까 하다/보다"
-    ]
-   },
-   "prep2": {
-    "topic": "화해하는 방법을 조언하기",
-    "grammar": [
-     "AV-(으)ㄴ 덕분에, N 덕분에",
-     "V-았/었/였으면, N이었/였으면"
-    ]
-   },
-   "speaking": "다툰 경험을 듣고 화해하는 방법에 대해 조언하기",
-   "listening": "화해하는 대화를 듣고 말하기",
-   "reading": "사과 편지를 읽고 말하기",
-   "writing": "사과 편지를 쓰기",
-   "culture": "한국의 속담",
-   "pronunciation": [
-    "유기음화②",
-    "ㄷ+ㅎ",
-    "ㅎ+ㄷ"
+   "grammar": [
+    {
+     "label": "AV-기 위해(서), N을/를 위해(서)"
+    },
+    {
+     "label": "AV-고 나서"
+    },
+    {
+     "label": "AV-(으)ㄹ까 하다/보다"
+    },
+    {
+     "label": "AV-(으)ㄴ 덕분에, N 덕분에"
+    },
+    {
+     "label": "V-았/었/였으면, N이었/였으면"
+    }
    ]
   },
   {
    "lesson": 13,
    "unit": "고민과 조언",
-   "prep1": {
-    "topic": "고민을 상담하기",
-    "grammar": [
-     "AV-고 나면",
-     "AV-아/어/여야겠다"
-    ]
-   },
-   "prep2": {
-    "topic": "격려하기",
-    "grammar": [
-     "V-(으)ㄹ까 봐",
-     "V-(으)ㄹ 수밖에 없다, N일 수밖에 없다"
-    ]
-   },
-   "speaking": "고민을 듣고 조언하기",
-   "listening": "고민을 듣고 공감하기",
-   "reading": "고민에 대한 글을 읽고 말하기",
-   "writing": "고민에 대한 글 쓰기",
-   "culture": "한국의 가정교육",
-   "pronunciation": [
-    "유기음화③",
-    "ㅂ+ㅎ",
-    "ㅎ+ㅂ"
+   "grammar": [
+    {
+     "label": "AV-고 나면"
+    },
+    {
+     "label": "AV-아/어/여야겠다"
+    },
+    {
+     "label": "V-(으)ㄹ까 봐"
+    },
+    {
+     "label": "V-(으)ㄹ 수밖에 없다, N일 수밖에 없다"
+    }
    ]
   },
   {
    "lesson": 14,
    "unit": "공공장소와 규칙",
-   "prep1": {
-    "topic": "주의 사항을 설명하기",
-    "grammar": [
-     "V-았/었/였다가, N이었/였다가",
-     "N에 따라(서)"
-    ]
-   },
-   "prep2": {
-    "topic": "교실 규칙을 정하기",
-    "grammar": [
-     "V-(으)나①, N이나",
-     "AV-ㄴ/는다, DV-다, N(이)다"
-    ]
-   },
-   "speaking": "연습실의 사용 규칙을 정하기",
-   "listening": "예매 시 주의 사항을 듣고 말하기",
-   "reading": "도서관의 열람실 이용 규칙을 읽고 말하기",
-   "writing": "기숙사의 생활 규칙을 쓰기",
-   "culture": "공연장 및 행사장의 안전",
-   "pronunciation": [
-    "경음화①",
-    "(받침 ㄱ)"
+   "grammar": [
+    {
+     "label": "V-았/었/였다가, N이었/였다가"
+    },
+    {
+     "label": "N에 따라(서)"
+    },
+    {
+     "label": "V-(으)나①, N이나"
+    },
+    {
+     "label": "AV-ㄴ/는다, DV-다, N(이)다"
+    }
    ]
   },
   {
    "lesson": 15,
    "unit": "여행",
-   "prep1": {
-    "topic": "여행을 계획하기",
-    "grammar": [
-     "V-(으)ㄴ/는 반면에",
-     "AV-는 길이다"
-    ]
-   },
-   "prep2": {
-    "topic": "여행사에 문의하기",
-    "grammar": [
-     "AV-(으)ㄹ까 말까",
-     "V-(으)면 좋겠다 / -았/었/였으면 좋겠다, N(이)면 좋겠다 / 이었/였으면 좋겠다"
-    ]
-   },
-   "speaking": "여행을 계획하기",
-   "listening": "가이드 안내를 듣고 말하기",
-   "reading": "기행문을 읽고 말하기",
-   "writing": "기행문을 쓰기",
-   "culture": "서울의 명소",
-   "pronunciation": [
-    "경음화②",
-    "(받침 ㄷ)"
+   "grammar": [
+    {
+     "label": "V-(으)ㄴ/는 반면에"
+    },
+    {
+     "label": "AV-는 길이다"
+    },
+    {
+     "label": "AV-(으)ㄹ까 말까"
+    },
+    {
+     "label": "V-(으)면 좋겠다 / -았/었/였으면 좋겠다, N(이)면 좋겠다 / 이었/였으면 좋겠다"
+    }
    ]
   },
   {
    "lesson": 16,
    "unit": "연락",
-   "prep1": {
-    "topic": "감사 인사를 하기",
-    "grammar": [
-     "V-(으)ㄹ걸요, N일걸요",
-     "AV-고 나니(까)",
-     "(아무리) V-아/어/여도, N(이)라도"
-    ]
-   },
-   "prep2": {
-    "topic": "안부를 전하기",
-    "grammar": [
-     "AV-나 보다 / -는가 보다, DV-(으)ㄴ가 보다, N인가 보다",
-     "AV-자마자"
-    ]
-   },
-   "speaking": "감사 전화를 하기",
-   "listening": "부탁하는 대화를 듣고 말하기",
-   "reading": "공식적인 편지를 읽고 말하기",
-   "writing": "이메일을 쓰기",
-   "culture": "몸짓언어",
-   "pronunciation": [
-    "경음화③",
-    "(받침 ㅂ)"
+   "grammar": [
+    {
+     "label": "V-(으)ㄹ걸요, N일걸요"
+    },
+    {
+     "label": "AV-고 나니(까)"
+    },
+    {
+     "label": "(아무리) V-아/어/여도, N(이)라도"
+    },
+    {
+     "label": "AV-나 보다 / -는가 보다, DV-(으)ㄴ가 보다, N인가 보다"
+    },
+    {
+     "label": "AV-자마자"
+    }
    ]
   }
  ]
