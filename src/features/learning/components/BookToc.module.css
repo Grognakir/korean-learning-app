@@ -197,9 +197,32 @@
     padding-bottom: 6px;
   }
 
+  .table tbody th {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+  }
+
+  .table tbody td {
+    padding-top: 10px;
+  }
+
   .unit .button,
   .unit .plain {
     width: fit-content;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .unit .button {
+    color: var(--blue);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .unit .unitNumber {
+    color: inherit;
   }
 
   .table tbody td {
