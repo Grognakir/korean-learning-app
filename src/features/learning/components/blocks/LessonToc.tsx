@@ -17,6 +17,32 @@ function sectionTypeTranslation(key: string): string {
   return SECTION_TYPE_RU[base] ?? base;
 }
 
+/** Текст и иконка перевода — один inline-поток: при переносе ① едет
+ *  с последним словом, а не отдельной колонкой и не на пустой строке. */
+function TocInlineLabel({
+  text,
+  translation,
+  className,
+}: {
+  text: string;
+  translation: string;
+  className: string;
+}) {
+  const split = text.lastIndexOf(" ");
+  const head = split === -1 ? "" : text.slice(0, split + 1);
+  const tail = split === -1 ? text : text.slice(split + 1);
+  return (
+    <span className={className}>
+      {head}
+      <span className={styles.tocLabelTail}>
+        {tail}
+        {"\u00A0"}
+        <LabelInfo translation={translation} />
+      </span>
+    </span>
+  );
+}
+
 export function LessonToc({
   block,
   textbookSlug,
@@ -39,16 +65,20 @@ export function LessonToc({
           <div key={section.key} className={styles.tocRow}>
             <div className={styles.tocRowMain}>
               <div className={styles.tocRowText}>
-                <span className={styles.tocRowHeading}>
-                  <span className={`${styles.tocKey} kr`}>{section.key}</span>
-                  <LabelInfo translation={sectionTypeTranslation(section.key)} />
-                </span>
-                {heading && (
-                  <span className={styles.tocRowSubtitle}>
-                    <span className="kr">{heading.label}</span>
-                    {heading.label_ru && <LabelInfo translation={heading.label_ru} />}
-                  </span>
-                )}
+                <TocInlineLabel
+                  text={section.key}
+                  translation={sectionTypeTranslation(section.key)}
+                  className={`${styles.tocRowHeading} ${styles.tocKey} kr`}
+                />
+                {heading?.label_ru ? (
+                  <TocInlineLabel
+                    text={heading.label}
+                    translation={heading.label_ru}
+                    className={`${styles.tocRowSubtitle} kr`}
+                  />
+                ) : heading ? (
+                  <span className={`${styles.tocRowSubtitle} kr`}>{heading.label}</span>
+                ) : null}
               </div>
 
               {isAvailable && subItems.length > 0 && (

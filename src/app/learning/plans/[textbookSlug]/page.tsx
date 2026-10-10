@@ -5,6 +5,8 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { LessonList, type LessonListItem } from "../LessonList";
 import { PlanBreadcrumbs } from "../PlanBreadcrumbs";
+import { BookToc } from "@/features/learning/components/BookToc";
+import { BOOK_TOCS } from "@/features/learning/data/bookToc";
 import { TOTAL_LESSONS } from "../constants";
 import styles from "../learning.module.css";
 
@@ -86,6 +88,14 @@ export default async function TextbookPlanPage({
             {textbook.title} · 급 {textbook.level}
           </h1>
         </div>
+
+        {BOOK_TOCS[textbookSlug] && (
+          <BookToc
+            toc={BOOK_TOCS[textbookSlug]}
+            textbookSlug={textbookSlug}
+            availableLessons={availableLessons}
+          />
+        )}
 
         <LessonList items={lessonItems} />
       </main>

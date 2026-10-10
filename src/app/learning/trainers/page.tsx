@@ -16,7 +16,6 @@ export default async function TrainersPage() {
       <main className={styles.wrap}>
         <TrainerHeader href="/learning" title="Тренажёры" backLabel="К обучению" />
 
-        <p className={styles.modeCardDescription}>Выберите, что хотите потренировать: память, написание или грамматику.</p>
         <div className={styles.modeGrid}>
           <Link href="/learning/trainers/flashcards" className={styles.modeCard}>
             {/* eslint-disable-next-line @next/next/no-img-element */}

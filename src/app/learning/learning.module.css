@@ -33,6 +33,7 @@
 .title {
   font-size: 22px;
   font-weight: 700;
+  margin-left: 5px;
 }
 
 .emptyState {

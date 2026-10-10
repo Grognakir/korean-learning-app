@@ -1,0 +1,166 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.summary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  cursor: pointer;
+  list-style: none;
+  margin-left: 5px;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summaryTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summaryKr {
+  font-size: var(--kr-font-sm);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.chevron {
+  width: 14px;
+  height: 14px;
+  align-self: center;
+  color: var(--ink);
+  transition: transform 0.15s ease;
+}
+
+.details[open] .chevron {
+  transform: rotate(90deg);
+}
+
+.scroll {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--card-shadow);
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: max-content;
+  min-width: 100%;
+  font-size: var(--kr-font-xs);
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.table th,
+.table td {
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  min-width: 130px;
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table thead th {
+  background: var(--paper-2);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table td:nth-child(3),
+.table td:nth-child(5) {
+  min-width: 220px;
+}
+
+.table td:nth-child(2),
+.table td:nth-child(4),
+.table td:nth-child(6),
+.table td:nth-child(7),
+.table td:nth-child(8),
+.table td:nth-child(9),
+.table td:nth-child(10) {
+  min-width: 150px;
+}
+
+.table td:last-child {
+  min-width: 110px;
+  text-align: center;
+}
+
+.table thead th:first-child,
+.table tbody th.unit {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 96px;
+  background: #fff;
+}
+
+.table thead th:first-child {
+  background: var(--paper-2);
+  z-index: 2;
+}
+
+.unit {
+  font-weight: 700;
+}
+
+.unitLink {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.unitNumber {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--stone);
+}
+
+.grammar {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.grammar li {
+  position: relative;
+  padding-left: 10px;
+}
+
+.grammar li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+.pronLine {
+  display: block;
+}
