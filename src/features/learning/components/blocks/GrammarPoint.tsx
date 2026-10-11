@@ -15,6 +15,23 @@ export function GrammarPoint({
 }) {
   const seenVocab = new Set<string>();
 
+  const detailsAction =
+    block.details_link &&
+    (block.details_link.href ? (
+      <Link href={block.details_link.href} className={styles.grammarDetailsAction}>
+        {block.details_link.label}
+      </Link>
+    ) : (
+      <button
+        type="button"
+        className={styles.grammarDetailsAction}
+        disabled
+        title="Подробный разбор появится позже"
+      >
+        {block.details_link.label}
+      </button>
+    ));
+
   return (
     <div id={id} className={styles.block}>
       <span className={styles.labelRow}>
@@ -48,6 +65,7 @@ export function GrammarPoint({
                 ))}
               </ul>
             )}
+            {detailsAction}
           </div>
         </details>
       ) : (
@@ -60,21 +78,7 @@ export function GrammarPoint({
           </p>
         ))}
       </div>
-      {block.details_link &&
-        (block.details_link.href ? (
-          <Link href={block.details_link.href} className={styles.grammarDetailsAction}>
-            {block.details_link.label}
-          </Link>
-        ) : (
-          <button
-            type="button"
-            className={styles.grammarDetailsAction}
-            disabled
-            title="Подробный разбор появится позже"
-          >
-            {block.details_link.label}
-          </button>
-        ))}
+      {!block.explanation && detailsAction}
     </div>
   );
 }
