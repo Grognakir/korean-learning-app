@@ -35,6 +35,12 @@ function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
       while (from < text.length) {
         const start = text.indexOf(needle, from);
         if (start === -1) break;
+        // Однослоговая основа внутри чужого слова — не совпадение ("화" в
+        // "영화", "발" в "신발"): такая форма считается только с начала слова.
+        if (needle.length === 1 && start > 0 && /[가-힣]/.test(text[start - 1])) {
+          from = start + 1;
+          continue;
+        }
         candidates.push({
           start,
           end: start + needle.length,

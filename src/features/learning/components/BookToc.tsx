@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LabelInfo } from "./blocks/LabelInfo";
 import type { BookToc as BookTocData } from "../data/bookToc";
 import styles from "./BookToc.module.css";
 
@@ -12,10 +13,12 @@ export function BookToc({
   availableLessons: Set<number>;
 }) {
   return (
-    <details className={styles.details} open>
+    <details className={styles.details}>
       <summary className={styles.summary}>
-        <span className={styles.summaryTitle}>Содержание книги</span>
-        <span className={`${styles.summaryKr} kr`}>{toc.title}</span>
+        <span className={styles.summaryLabel}>
+          <span className={`${styles.summaryKr} kr`}>{toc.title}</span>
+          <LabelInfo translation="Содержание книги" />
+        </span>
         <svg className={styles.chevron} viewBox="0 0 16 16" aria-hidden="true">
           <path
             d="M6 3l5 5-5 5"

@@ -142,3 +142,10 @@ it("вокаб-чип внутри кликабельного родителя �
   fireEvent.click(chipControl!);
   expect(parentClicked).toBe(false);
 });
+
+it("однослоговое слово совпадает только с начала слова", () => {
+  const items = [{ ko: "화", translation_ru: "гнев" }];
+  expect(vocabKeysInText("그 영화를 봤어요.", items)).toEqual([]);
+  expect(vocabKeysInText("운동화를 샀어요.", items)).toEqual([]);
+  expect(vocabKeysInText("화가 났어요.", items)).toEqual(["화"]);
+});

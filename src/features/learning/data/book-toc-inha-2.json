@@ -191,16 +191,24 @@
    "unit": "물건 사기",
    "grammar": [
     {
-     "label": "V-기는요"
+     "label": "V-기는요",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "AV-(으)니(까)②"
+     "label": "AV-(으)니(까)②",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "V-아/어/여 가지고, N이어/여 가지고"
+     "label": "V-아/어/여 가지고, N이어/여 가지고",
+     "section": "준비하기 2",
+     "block": "grammar-3"
     },
     {
-     "label": "AV-는 대신(에), N 대신(에)"
+     "label": "AV-는 대신(에), N 대신(에)",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     }
    ]
   },
@@ -209,19 +217,29 @@
    "unit": "여가와 취미",
    "grammar": [
     {
-     "label": "V-잖아요, N(이)잖아요"
+     "label": "V-잖아요, N(이)잖아요",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "AV-는군요, DV-군요, N(이)군요"
+     "label": "AV-는군요, DV-군요, N(이)군요",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "V-(으)ㄹ 수도 있다, N일 수도 있다"
+     "label": "V-(으)ㄹ 수도 있다, N일 수도 있다",
+     "section": "준비하기 1",
+     "block": "grammar-3"
     },
     {
-     "label": "AV-기(가) 쉽다/어렵다"
+     "label": "AV-기(가) 쉽다/어렵다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     },
     {
-     "label": "V-(으)ㄴ/는/(으)ㄹ 것"
+     "label": "V-(으)ㄴ/는/(으)ㄹ 것",
+     "section": "준비하기 2",
+     "block": "grammar-5"
     }
    ]
   },

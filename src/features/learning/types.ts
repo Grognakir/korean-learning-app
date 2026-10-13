@@ -30,9 +30,10 @@ export type TextLine = {
   translation_ru?: string;
   /** Только для text_kind "invitation"/"article" — как оформить строку
    * карточки: "list-item" (нумерованный список), "signature" (подпись
-   * справа), "heading" (заголовок статьи по центру), "subheading"
-   * (подзаголовок со значком ■). Без поля — абзац с отступом. */
-  line_kind?: "list-item" | "signature" | "heading" | "subheading";
+   * справа), "heading" (заголовок статьи), "subheading" (подзаголовок со
+   * значком ■), "meta" (служебная строка над текстом — номер, автор,
+   * оценка). Без поля — абзац с отступом. */
+  line_kind?: "list-item" | "signature" | "heading" | "subheading" | "meta";
 };
 
 export type TextBlockIllustration = {

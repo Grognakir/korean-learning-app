@@ -20,6 +20,14 @@ const LESSON_DIR_2_3 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_03");
 const LESSON_DIR_2_4 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_04");
 const LESSON_DIR_2_5 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_05");
 const LESSON_DIR_2_6 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_06");
+const LESSON_DIR_2_7 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_07");
+const LESSON_DIR_2_8 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_08");
+
+// Уроки 2급 7과+: иллюстраций пока нет, к урокам подключено только аудио.
+const LATE_LESSONS_2: Record<number, { path: string; audio: number[] }> = {
+  7: { path: join(LESSON_DIR_2_7, "lesson-07.json"), audio: [225, 226, 227, 228] },
+  8: { path: join(LESSON_DIR_2_8, "lesson-08.json"), audio: [229, 230, 231, 232] },
+};
 
 const PLAN = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
@@ -147,7 +155,44 @@ async function importLesson(
   return startIndex + lesson.pages.length;
 }
 
+async function uploadLesson2Audio(tracks: number[]) {
+  for (const track of tracks) {
+    await uploadAsset(
+      join(REFERENCE_DIR, `inha_book_audio/2급_주교재/${track}.mp3`),
+      `inha_book_2/audio/${track}.mp3`,
+      "audio/mpeg",
+    );
+  }
+}
+
 async function main() {
+  for (const lessonNumber of [7, 8]) {
+    if (!process.argv.includes(`--lesson-${lessonNumber}-only`)) continue;
+
+    const { data: textbook2, error: textbookError } = await supabase
+      .from("textbooks")
+      .select("id")
+      .eq("slug", TEXTBOOK_2.slug)
+      .single();
+    if (textbookError) throw textbookError;
+
+    // page_index сквозной: считаем страницы всех предыдущих уроков 2급.
+    const previous: LessonFile[] = [
+      LESSON_DIR_2, LESSON_DIR_2_2, LESSON_DIR_2_3, LESSON_DIR_2_4,
+      LESSON_DIR_2_5, LESSON_DIR_2_6,
+    ].map((dir, index) =>
+      JSON.parse(readFileSync(join(dir, `lesson-0${index + 1}.json`), "utf-8")),
+    );
+    for (let n = 7; n < lessonNumber; n++) {
+      previous.push(JSON.parse(readFileSync(LATE_LESSONS_2[n].path, "utf-8")));
+    }
+    const startIndex = previous.reduce((total, lesson) => total + lesson.pages.length, 0);
+
+    await importLesson(textbook2.id, LATE_LESSONS_2[lessonNumber].path, startIndex);
+    await uploadLesson2Audio(LATE_LESSONS_2[lessonNumber].audio);
+    console.log("Готово.");
+    return;
+  }
   if (process.argv.includes("--lesson-6-only")) {
     const { data: textbook2, error: textbookError } = await supabase
       .from("textbooks")
@@ -449,11 +494,17 @@ async function main() {
     join(LESSON_DIR_2_5, "lesson-05.json"),
     textbook2Lesson4NextIndex,
   );
-  await importLesson(
+  const textbook2Lesson6NextIndex = await importLesson(
     textbook2.id,
     join(LESSON_DIR_2_6, "lesson-06.json"),
     textbook2Lesson5NextIndex,
   );
+  const textbook2Lesson7NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[7].path,
+    textbook2Lesson6NextIndex,
+  );
+  await importLesson(textbook2.id, LATE_LESSONS_2[8].path, textbook2Lesson7NextIndex);
 
   // Ассеты: только то, что реально используется этим уроком, не всё
   // содержимое справочных папок разом.
@@ -685,6 +736,9 @@ async function main() {
     "inha_book_2/audio/224.mp3",
     "audio/mpeg",
   );
+
+  // 2급 7과 и 8과: аудио к обоим диалогам 준비하기, 듣고 말하기 и 발음.
+  await uploadLesson2Audio([...LATE_LESSONS_2[7].audio, ...LATE_LESSONS_2[8].audio]);
 
   console.log("Готово.");
 }

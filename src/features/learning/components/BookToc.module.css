@@ -5,11 +5,23 @@
   min-width: 0;
 }
 
+/* display:flex на details отменяет UA-скрытие содержимого в закрытом
+   состоянии — прячем таблицу явно. */
+.details:not([open]) > *:not(summary) {
+  display: none;
+}
+
+/* Свёрнутое содержание не должно держать полный gap колонки страницы
+   (20px) перед сеткой уроков. */
+.details:not([open]) {
+  margin-bottom: -20px;
+}
+
 .summary {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 4px 10px;
+  gap: 4px 2px;
   cursor: pointer;
   list-style: none;
   margin-left: 5px;
@@ -19,12 +31,17 @@
   display: none;
 }
 
-.summaryTitle {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--stone);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.summaryLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* В строке summary глобальный тач-таргет ~42px перекрывает заголовок
+   и шеврон — сужаем только здесь. */
+.summaryLabel :global(button)::before {
+  inset: -4px;
 }
 
 .summaryKr {
@@ -57,7 +74,6 @@
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
-  table-layout: fixed;
   font-size: var(--kr-font-sm);
   line-height: 1.4;
   color: var(--ink);
@@ -79,7 +95,9 @@
 
 .table thead th:first-child,
 .table tbody th {
-  width: clamp(112px, 15vw, 170px);
+  /* 1% + nowrap: колонка по самому длинному «N과 · название», без переноса. */
+  width: 1%;
+  white-space: nowrap;
   border-right: 1px solid var(--line);
 }
 
@@ -95,13 +113,10 @@
 .unit .button,
 .unit .plain {
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: baseline;
   gap: 2px;
-}
-
-.unit .button > span,
-.unit .plain > span {
-  min-width: 0;
+  white-space: nowrap;
 }
 
 .unit .unitNumber {
@@ -194,16 +209,12 @@
 
   .table tbody th {
     width: auto;
-    padding-bottom: 6px;
-  }
-
-  .table tbody th {
-    border-bottom: 1px solid var(--line);
+    padding-left: 14px;
     padding-bottom: 8px;
   }
 
   .table tbody td {
-    padding-top: 10px;
+    padding-top: 0;
   }
 
   .unit .button,
@@ -215,17 +226,29 @@
     border-radius: 0;
   }
 
+  /* Название урока выглядит как обычный заголовок; кликабельность
+     остаётся за счёт pointer и лёгкого затемнения при наведении. */
   .unit .button {
-    color: var(--blue);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .unit .button:hover,
+  .unit .button:focus-visible {
+    color: inherit;
+    border-color: transparent;
+  }
+
+  .unit .button:hover {
+    opacity: 0.72;
+  }
+
+  .unit .button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
   }
 
   .unit .unitNumber {
     color: inherit;
-  }
-
-  .table tbody td {
-    padding-top: 0;
   }
 }

@@ -16,6 +16,10 @@ export function LabelInfo({ translation }: { translation: string }) {
         type="button"
         className={styles.labelInfoButton}
         aria-label={`Перевод: ${translation}`}
+        onClick={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+        }}
       >
         <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
           <circle cx="8" cy="8" r="6.75" fill="none" stroke="currentColor" strokeWidth="1.3" />

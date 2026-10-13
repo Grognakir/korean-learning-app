@@ -63,59 +63,55 @@ export function LessonToc({
 
         return (
           <div key={section.key} className={styles.tocRow}>
-            <div className={styles.tocRowMain}>
-              <div className={styles.tocRowText}>
-                <TocInlineLabel
-                  text={section.key}
-                  translation={sectionTypeTranslation(section.key)}
-                  className={`${styles.tocRowHeading} ${styles.tocKey} kr`}
-                />
-                {heading?.label_ru ? (
-                  <TocInlineLabel
-                    text={heading.label}
-                    translation={heading.label_ru}
-                    className={`${styles.tocRowSubtitle} kr`}
-                  />
-                ) : heading ? (
-                  <span className={`${styles.tocRowSubtitle} kr`}>{heading.label}</span>
-                ) : null}
-              </div>
-
-              {isAvailable && subItems.length > 0 && (
-                <div className={styles.tocItems}>
-                  {subItems.map((item) => {
-                    const type = item.block_ref ? blockTypeById[item.block_ref] : undefined;
-                    const accent =
-                      type === "grammar_point" || type === "grammar_exercise"
-                        ? styles.chipGrammar
-                        : styles.chipContent;
-                    if (!item.block_ref) {
-                      return (
-                        <span key={item.label} className={`${styles.chip} kr`} title="Скоро">
-                          {item.label}
-                        </span>
-                      );
-                    }
-                    return (
-                      <Link
-                        key={item.label}
-                        href={`${openHref}#${item.block_ref}`}
-                        className={`${styles.chip} ${styles.chipLink} ${accent} kr`}
-                      >
-                        {item.label}
-                      </Link>
-                    );
-                  })}
-                </div>
+            <div className={styles.tocRowHead}>
+              <TocInlineLabel
+                text={section.key}
+                translation={sectionTypeTranslation(section.key)}
+                className={`${styles.tocRowHeading} ${styles.tocKey} kr`}
+              />
+              {isAvailable ? (
+                <Link href={openHref} className={styles.tocRowAction}>
+                  Открыть →
+                </Link>
+              ) : (
+                <span className={styles.tocRowSoon}>Скоро</span>
               )}
             </div>
-
-            {isAvailable ? (
-              <Link href={openHref} className={styles.tocRowAction}>
-                Открыть →
-              </Link>
-            ) : (
-              <span className={styles.tocRowSoon}>Скоро</span>
+            {heading?.label_ru ? (
+              <TocInlineLabel
+                text={heading.label}
+                translation={heading.label_ru}
+                className={`${styles.tocRowSubtitle} kr`}
+              />
+            ) : heading ? (
+              <span className={`${styles.tocRowSubtitle} kr`}>{heading.label}</span>
+            ) : null}
+            {isAvailable && subItems.length > 0 && (
+              <div className={styles.tocItems}>
+                {subItems.map((item) => {
+                  const type = item.block_ref ? blockTypeById[item.block_ref] : undefined;
+                  const accent =
+                    type === "grammar_point" || type === "grammar_exercise"
+                      ? styles.chipGrammar
+                      : styles.chipContent;
+                  if (!item.block_ref) {
+                    return (
+                      <span key={item.label} className={`${styles.chip} kr`} title="Скоро">
+                        {item.label}
+                      </span>
+                    );
+                  }
+                  return (
+                    <Link
+                      key={item.label}
+                      href={`${openHref}#${item.block_ref}`}
+                      className={`${styles.chip} ${styles.chipLink} ${accent} kr`}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
             )}
           </div>
         );

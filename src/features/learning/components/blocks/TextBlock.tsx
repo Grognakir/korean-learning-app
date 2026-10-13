@@ -20,6 +20,7 @@ function lineClassName(textKind: TextBlockType["text_kind"], lineKind: TextLine[
     if (lineKind === "heading") return styles.articleHeading;
     if (lineKind === "subheading") return styles.articleSubheading;
     if (lineKind === "list-item") return styles.articleListItem;
+    if (lineKind === "meta") return styles.articleMeta;
     return styles.articleParagraph;
   }
   return styles.line;
