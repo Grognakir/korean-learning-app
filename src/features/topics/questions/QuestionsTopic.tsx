@@ -1,3 +1,4 @@
+import { TOC } from "./toc";
 import { WORD_CARDS } from "./wordCards";
 import { FormalityToggle } from "./FormalityToggle";
 import { QuestionsTrainer } from "./trainer/QuestionsTrainer";
@@ -78,18 +79,6 @@ const CHEAT_ITEMS = [
   { kr: "며칠", rr: "myeochil", ru: "какое число / сколько дней" },
 ];
 
-const TOC = [
-  { href: "#types", number: "01", label: "Типы вопросов" },
-  { href: "#words", number: "02", label: "Вопросительные слова" },
-  { href: "#particles", number: "03", label: "Частицы" },
-  { href: "#vs", number: "04", label: "Три «какой»" },
-  { href: "#counters", number: "05", label: "Обязательный сосед" },
-  { href: "#style", number: "06", label: "Уровни вежливости" },
-  { href: "#answers", number: "07", label: "Ответы" },
-  { href: "#quiz", number: "08", label: "Тренажёр" },
-  { href: "#cheat", number: "09", label: "Шпаргалка" },
-];
-
 function TopicNav() {
   return (
     <nav aria-label="Содержание темы">
@@ -161,23 +150,6 @@ export function QuestionsTopic() {
         <aside className={styles.sectionAside}>
           <TopicNav />
         </aside>
-
-        <details className={styles.mobileToc}>
-          <summary className={styles.mobileTocSummary}>
-            <span>Содержание темы</span>
-            <svg className={styles.mobileTocIcon} viewBox="0 0 16 16" aria-hidden="true">
-              <path
-                d="M6 3l5 5-5 5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </summary>
-          <TopicNav />
-        </details>
 
         <div className={styles.content}>
 

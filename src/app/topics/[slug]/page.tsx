@@ -6,6 +6,7 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { TOPICS_LIST } from "@/features/topics/topicsList";
 import { QuestionsTopic } from "@/features/topics/questions/QuestionsTopic";
+import { TopicTocMenu } from "@/features/topics/questions/TopicTocMenu";
 import styles from "../topics.module.css";
 import pageStyles from "./topic.module.css";
 
@@ -29,7 +30,7 @@ export default async function TopicPage({
         </Link>
         {topic.slug === "questions" && <QuestionsTopic />}
       </main>
-      <BottomTabBar />
+      <BottomTabBar leading={topic.slug === "questions" ? <TopicTocMenu /> : undefined} />
     </div>
   );
 }

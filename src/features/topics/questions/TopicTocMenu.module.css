@@ -1,0 +1,94 @@
+.root {
+  position: relative;
+  display: flex;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 8px;
+  border: none;
+  background: none;
+  font: inherit;
+  color: var(--stone);
+  cursor: pointer;
+}
+
+.buttonOpen {
+  color: var(--blue);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: var(--radius-control);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Прозрачный отступ снизу — мост между кнопкой и карточкой, чтобы
+   наведение не обрывалось в зазоре. */
+.popup {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  padding-bottom: 10px;
+  z-index: 30;
+}
+
+.card {
+  width: max-content;
+  min-width: 230px;
+  max-width: calc(100vw - 16px);
+  max-height: calc(100dvh - var(--mobile-tabbar-height) - 90px);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--card-shadow);
+  padding: 6px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: var(--radius-control);
+}
+
+.item:hover,
+.item:focus-visible {
+  background: var(--paper-2);
+  color: var(--blue);
+}
+
+.number {
+  flex: none;
+  width: 24px;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--amber);
+}

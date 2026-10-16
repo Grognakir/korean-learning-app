@@ -1,6 +1,6 @@
 "use client";
 
-import type { ComponentType } from "react";
+import type { ComponentType, ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_SECTIONS } from "@/components/layout/navSections";
@@ -24,10 +24,22 @@ function isActive(pathname: string, href: string): boolean {
  * серверную страницу: проп с функциями-иконками не пересёк бы границу
  * клиентского компонента (usePathname требует "use client").
  */
-export function BottomTabBar({ sections = NAV_SECTIONS }: { sections?: TabSection[] }) {
+export function BottomTabBar({
+  sections = NAV_SECTIONS,
+  leading,
+}: {
+  sections?: TabSection[];
+  /** Кнопка контекстного меню страницы у левого края панели (например
+   * оглавление темы); без неё панель выглядит как обычно. */
+  leading?: ReactNode;
+}) {
   const pathname = usePathname();
   return (
-    <nav className={styles.bar} aria-label="Разделы приложения">
+    <nav
+      className={`${styles.bar} ${leading ? styles.barWithLeading : ""}`}
+      aria-label="Разделы приложения"
+    >
+      {leading && <div className={styles.leading}>{leading}</div>}
       {sections.map(({ label, icon: Icon, href }) => {
         const active = href ? isActive(pathname, href) : false;
         return href ? (

@@ -116,7 +116,10 @@
           "type": "text",
           "title": "쇼핑몰 추천하기",
           "title_ru": "Рекомендовать интернет-магазин",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_7/illustration_1_online_shopping.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -705,7 +708,10 @@
           "type": "text",
           "title": "물건을 교환하기",
           "title_ru": "Обменивать товар",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_7/illustration_2_shoe_exchange.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1579,7 +1585,11 @@
           },
           "warmup": {
             "prompt": "누구입니까? 이야기해 보십시오.",
-            "prompt_ru": "Кто это? Расскажите."
+            "prompt_ru": "Кто это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_7/illustration_3_parcel_delivery.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 잘 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Внимательно послушайте и ответьте на вопросы.",
@@ -1639,7 +1649,10 @@
           "id": "text-reading-review",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_7/illustration_4_dining_table_review.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1666,12 +1679,36 @@
           ],
           "vocab": [
             {
+              "ko": "식탁",
+              "translation_ru": "обеденный стол"
+            },
+            {
+              "ko": "색깔",
+              "translation_ru": "цвет"
+            },
+            {
               "ko": "공짜",
               "translation_ru": "бесплатно, даром"
             },
             {
+              "ko": "튼튼해",
+              "translation_ru": "форма от 튼튼하다 (быть крепким, прочным)"
+            },
+            {
+              "ko": "앉았",
+              "translation_ru": "форма от 앉다 (сидеть, садиться)"
+            },
+            {
+              "ko": "불편했습니다",
+              "translation_ru": "форма от 불편하다 (быть неудобным)"
+            },
+            {
               "ko": "교환",
               "translation_ru": "форма от 교환하다 (обменивать)"
+            },
+            {
+              "ko": "초대해",
+              "translation_ru": "форма от 초대하다 (приглашать)"
             },
             {
               "ko": "추천",
@@ -1812,7 +1849,10 @@
           "type": "text",
           "title": "재미있는 ‘데이(Day)’",
           "title_ru": "Весёлые «дни» (Day)",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_7/illustration_5_korean_days.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

@@ -23,10 +23,29 @@ const LESSON_DIR_2_6 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_06");
 const LESSON_DIR_2_7 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_07");
 const LESSON_DIR_2_8 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_08");
 
-// Уроки 2급 7과+: иллюстраций пока нет, к урокам подключено только аудио.
-const LATE_LESSONS_2: Record<number, { path: string; audio: number[] }> = {
-  7: { path: join(LESSON_DIR_2_7, "lesson-07.json"), audio: [225, 226, 227, 228] },
-  8: { path: join(LESSON_DIR_2_8, "lesson-08.json"), audio: [229, 230, 231, 232] },
+const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: string[] }> = {
+  7: {
+    path: join(LESSON_DIR_2_7, "lesson-07.json"),
+    audio: [225, 226, 227, 228],
+    images: [
+      "illustration_1_online_shopping.png",
+      "illustration_2_shoe_exchange.png",
+      "illustration_3_parcel_delivery.png",
+      "illustration_4_dining_table_review.png",
+      "illustration_5_korean_days.png",
+    ],
+  },
+  8: {
+    path: join(LESSON_DIR_2_8, "lesson-08.json"),
+    audio: [229, 230, 231, 232],
+    images: [
+      "illustration_1_leisure_taekwondo.png",
+      "illustration_2_taekwondo_club.png",
+      "illustration_3_samulnori_club.png",
+      "illustration_4_kpop_dance_club.png",
+      "illustration_5_weekend_hiking.png",
+    ],
+  },
 };
 
 const PLAN = { slug: "inha", title: "인하대학교" };
@@ -189,6 +208,13 @@ async function main() {
     const startIndex = previous.reduce((total, lesson) => total + lesson.pages.length, 0);
 
     await importLesson(textbook2.id, LATE_LESSONS_2[lessonNumber].path, startIndex);
+    for (const filename of LATE_LESSONS_2[lessonNumber].images) {
+      await uploadAsset(
+        join(LATE_LESSONS_2[lessonNumber].path, "..", `img/${filename}`),
+        `inha_book_2/lesson_${lessonNumber}/${filename}`,
+        "image/png",
+      );
+    }
     await uploadLesson2Audio(LATE_LESSONS_2[lessonNumber].audio);
     console.log("Готово.");
     return;
@@ -428,6 +454,12 @@ async function main() {
         localPath: join(LESSON_DIR_2_6, `img/${filename}`),
         storagePath: `inha_book_2/lesson_6/${filename}`,
       })),
+      ...Object.entries(LATE_LESSONS_2).flatMap(([lessonNumber, lesson]) =>
+        lesson.images.map((filename) => ({
+          localPath: join(lesson.path, "..", `img/${filename}`),
+          storagePath: `inha_book_2/lesson_${lessonNumber}/${filename}`,
+        })),
+      ),
     ];
 
     for (const image of generatedImages) {
@@ -737,7 +769,15 @@ async function main() {
     "audio/mpeg",
   );
 
-  // 2급 7과 и 8과: аудио к обоим диалогам 준비하기, 듣고 말하기 и 발음.
+  for (const [lessonNumber, lesson] of Object.entries(LATE_LESSONS_2)) {
+    for (const filename of lesson.images) {
+      await uploadAsset(
+        join(lesson.path, "..", `img/${filename}`),
+        `inha_book_2/lesson_${lessonNumber}/${filename}`,
+        "image/png",
+      );
+    }
+  }
   await uploadLesson2Audio([...LATE_LESSONS_2[7].audio, ...LATE_LESSONS_2[8].audio]);
 
   console.log("Готово.");

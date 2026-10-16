@@ -38431,6 +38431,7 @@
         "Счётные слова"
       ],
       "translations": [
+        "болезнь, недуг (병이 나다 — заболеть)",
         "бутылка (счёт напитков в бутылках)"
       ],
       "examples": [
@@ -47682,6 +47683,40 @@
       ],
       "translations": [
         "работающий человек, служащий"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-입맛",
+      "headword": "입맛",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "аппетит, вкус во рту (입맛이 없다 — нет аппетита)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-가입하다",
+      "headword": "가입하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "вступать, присоединяться (к клубу, организации)"
       ],
       "examples": [],
       "notes": [],

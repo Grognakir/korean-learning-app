@@ -12,13 +12,13 @@ import {
 } from "@/features/topics/questions/trainer/data";
 
 describe("тема вопросительных слов", () => {
-  it("показывает боковое и мобильное содержание с одинаковыми разделами", () => {
+  it("показывает боковое содержание темы без внутристраничного дубля", () => {
     render(QuestionsTopic());
 
-    expect(screen.getAllByRole("navigation", { name: "Содержание темы" })).toHaveLength(2);
-    expect(screen.getAllByRole("link", { name: "01 Типы вопросов" })).toHaveLength(2);
-    expect(screen.getAllByRole("link", { name: "09 Шпаргалка" })).toHaveLength(2);
-    expect(screen.getByText("Содержание темы")).not.toBeNull();
+    expect(screen.getAllByRole("navigation", { name: "Содержание темы" })).toHaveLength(1);
+    expect(screen.getByRole("link", { name: "01 Типы вопросов" })).not.toBeNull();
+    expect(screen.getByRole("link", { name: "09 Шпаргалка" })).not.toBeNull();
+    expect(screen.queryByText("Содержание темы")).toBeNull();
   });
 
   it("содержит полный основной набор в карточках и тренажёре", () => {

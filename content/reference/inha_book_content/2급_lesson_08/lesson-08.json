@@ -121,7 +121,10 @@
           "type": "text",
           "title": "여가 활동을 권유하기",
           "title_ru": "Предлагать заняться чем-то на досуге",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_8/illustration_1_leisure_taekwondo.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -168,6 +171,72 @@
             {
               "speaker": "왕루",
               "text": "그럼, 저도 배워 볼까요?"
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "식사",
+              "translation_ru": "приём пищи, трапеза"
+            },
+            {
+              "ko": "그렇게",
+              "translation_ru": "так, таким образом"
+            },
+            {
+              "ko": "요즘",
+              "translation_ru": "в последнее время, нынче"
+            },
+            {
+              "ko": "피곤해",
+              "translation_ru": "форма от 피곤하다 (уставать, быть усталым)"
+            },
+            {
+              "ko": "입맛",
+              "translation_ru": "аппетит, вкус во рту (입맛이 없다 — нет аппетита)"
+            },
+            {
+              "ko": "병",
+              "translation_ru": "болезнь, недуг (병이 나다 — заболеть)"
+            },
+            {
+              "ko": "날",
+              "translation_ru": "форма от 나다 (병이 나다 — заболеть)"
+            },
+            {
+              "ko": "그러니까",
+              "translation_ru": "поэтому, так что"
+            },
+            {
+              "ko": "여가",
+              "translation_ru": "досуг, свободное время"
+            },
+            {
+              "ko": "활동",
+              "translation_ru": "деятельность, активность"
+            },
+            {
+              "ko": "곧",
+              "translation_ru": "скоро, вот-вот"
+            },
+            {
+              "ko": "필요하",
+              "translation_ru": "форма от 필요하다 (быть нужным)"
+            },
+            {
+              "ko": "가입했",
+              "translation_ru": "форма от 가입하다 (вступать)"
+            },
+            {
+              "ko": "번밖",
+              "translation_ru": "форма от 밖에 (только; дальше отрицание)"
+            },
+            {
+              "ko": "정도",
+              "translation_ru": "около, примерно"
+            },
+            {
+              "ko": "집중",
+              "translation_ru": "форма от 집중하다 (концентрироваться)"
             }
           ]
         },
@@ -235,6 +304,24 @@
             "основа глагола/прилагательного + 잖아요",
             "N 받침 없음 → N잖아요",
             "N 받침 있음 → N이잖아요"
+          ],
+          "vocab": [
+            {
+              "ko": "아까",
+              "translation_ru": "недавно, незадолго до этого (сегодня)"
+            },
+            {
+              "ko": "마음",
+              "translation_ru": "душа, сердце (в переносном смысле)"
+            },
+            {
+              "ko": "착하",
+              "translation_ru": "форма от 착하다 (быть добрым, хорошим по характеру)"
+            },
+            {
+              "ko": "친절하",
+              "translation_ru": "форма от 친절하다 (быть любезным, добрым)"
+            }
           ]
         },
         {
@@ -258,6 +345,24 @@
             "N 받침 없음 → N군요",
             "N 받침 있음 → N이군요",
             "с временами: -았/었/였군요 (도착했군요), -겠군요 (대학생이겠군요)"
+          ],
+          "vocab": [
+            {
+              "ko": "정말",
+              "translation_ru": "правда, действительно, очень"
+            },
+            {
+              "ko": "결혼해요",
+              "translation_ru": "форма от 결혼하다 (жениться, выходить замуж)"
+            },
+            {
+              "ko": "벌써",
+              "translation_ru": "уже"
+            },
+            {
+              "ko": "도착했군요",
+              "translation_ru": "форма от 도착하다 (прибыть, приехать)"
+            }
           ]
         },
         {
@@ -633,7 +738,10 @@
           "type": "text",
           "title": "동아리 가입에 대한 정보를 구하기",
           "title_ru": "Узнавать информацию о вступлении в клуб",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_8/illustration_2_taekwondo_club.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1424,7 +1532,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что они делают? Расскажите."
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_8/illustration_3_samulnori_club.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1520,7 +1632,10 @@
           "id": "text-reading-poster",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_8/illustration_4_kpop_dance_club.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1733,7 +1848,10 @@
           "type": "text",
           "title": "한국인이 좋아하는 여가 활동",
           "title_ru": "Любимые виды досуга корейцев",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_8/illustration_5_weekend_hiking.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

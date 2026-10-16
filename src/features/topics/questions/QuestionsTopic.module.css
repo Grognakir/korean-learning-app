@@ -128,10 +128,6 @@
   top: 16px;
 }
 
-.mobileToc {
-  display: none;
-}
-
 .navList {
   display: flex;
   flex-direction: column;
@@ -179,47 +175,6 @@
 
   .sectionAside {
     display: none;
-  }
-
-  .mobileToc {
-    display: block;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-panel);
-    padding: 10px 14px;
-    box-shadow: var(--card-shadow);
-  }
-
-  .mobileTocSummary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    list-style: none;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--ink);
-    cursor: pointer;
-  }
-
-  .mobileTocSummary::-webkit-details-marker {
-    display: none;
-  }
-
-  .mobileTocIcon {
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-    color: var(--stone);
-    transition: transform 0.15s ease;
-  }
-
-  .mobileToc[open] .mobileTocIcon {
-    transform: rotate(90deg);
-  }
-
-  .mobileToc[open] .mobileTocSummary {
-    margin-bottom: 8px;
   }
 }
 
