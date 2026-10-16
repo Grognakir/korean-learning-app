@@ -1,4 +1,4 @@
-import { fireEvent, render } from "@testing-library/react";
+import { cleanup, fireEvent, render } from "@testing-library/react";
 import { expect, it } from "vitest";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
 import { highlightDialogueSpeakers, vocabKeysInText } from "@/features/learning/components/blocks/vocabHighlight";
@@ -148,4 +148,26 @@ it("однослоговое слово совпадает только с на�
   expect(vocabKeysInText("그 영화를 봤어요.", items)).toEqual([]);
   expect(vocabKeysInText("운동화를 샀어요.", items)).toEqual([]);
   expect(vocabKeysInText("화가 났어요.", items)).toEqual(["화"]);
+});
+
+it("чип покрывает слово целиком вместе с окончанием, но не частицей", () => {
+  const items = [
+    { ko: "반갑다", translation_ru: "рад" },
+    { ko: "환영", translation_ru: "приветствие" },
+    { ko: "쇼핑몰", translation_ru: "магазин" },
+    { ko: "오다", translation_ru: "приходить" },
+    { ko: "걱정되", translation_ru: "форма от 걱정되다 (тревожиться)" },
+  ];
+  const whole = (text: string) => {
+    const { container } = render(<div>{highlightDialogueSpeakers(text, items)}</div>);
+    const chip = container.querySelector('[class*="vocabKo"]');
+    cleanup();
+    return chip?.textContent ?? null;
+  };
+  expect(whole("만나서 반갑습니다.")).toBe("반갑습니다");
+  expect(whole("모두 환영합니다.")).toBe("환영합니다");
+  expect(whole("쇼핑몰을 알아요?")).toBe("쇼핑몰");
+  expect(whole("조금 걱정되네요.")).toBe("걱정되네요");
+  expect(whole("오위노 씨는요?")).toBeNull();
+  expect(whole("오면 전화하세요.")).toBe("오면");
 });

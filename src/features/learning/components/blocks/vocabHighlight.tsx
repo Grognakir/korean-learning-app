@@ -26,6 +26,35 @@ function vocabNeedles(ko: string): string[] {
   return needles.sort((a, b) => b.length - a.length);
 }
 
+/** Слово-глагол/прилагательное: заголовок на -다 или локальный чип вида
+ * "форма от X (…)", где X — глагол/прилагательное на -다. */
+function isVerbLike(item: VocabItem): boolean {
+  return (
+    item.ko.endsWith("다") ||
+    /(하|되|해|했|돼|됐)$/.test(item.ko) ||
+    /форма от [가-힣]+다/.test(item.translation_ru)
+  );
+}
+
+const TOKEN_BREAK = /[\s/.,?!:;"'“”‘’()〈〉~…]/;
+// Односложная основа считается глаголом, только если дальше идёт окончание
+// (не "기", которое чаще часть слова: 감기, 빨리, 오위노...).
+const STEM_ENDINGS = /^[아어여았었였으세셨시겠고서지면는은을게요야려라니며]/;
+const HADA_FORMS = /^[하해했할합한드]/;
+
+/** Чип обязан покрывать слово целиком, а не только основу: докручивает
+ * конец совпадения до границы слова (반갑 → 반갑습니다). Существительное
+ * расширяется только на -하다-хвост (환영 → 환영합니다), частицы остаются
+ * снаружи (쇼핑몰|을). */
+function wordEnd(text: string, matchEnd: number, item: VocabItem): number {
+  const next = text[matchEnd];
+  if (next === undefined || TOKEN_BREAK.test(next)) return matchEnd;
+  if (!isVerbLike(item) && !HADA_FORMS.test(next)) return matchEnd;
+  let end = matchEnd;
+  while (end < text.length && !TOKEN_BREAK.test(text[end])) end++;
+  return end;
+}
+
 function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
   const candidates: TextMatch[] = [];
 
@@ -41,9 +70,19 @@ function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
           from = start + 1;
           continue;
         }
+        const stemOnly = needle !== item.ko && item.ko.endsWith("다") && needle.length === 1;
+        if (stemOnly) {
+          const after = text.slice(start + 1);
+          const okEnding =
+            STEM_ENDINGS.test(after) || (after.startsWith("기") && !/^기[에가는를이]/.test(after));
+          if (!okEnding) {
+            from = start + 1;
+            continue;
+          }
+        }
         candidates.push({
           start,
-          end: start + needle.length,
+          end: wordEnd(text, start + needle.length, item),
           translation: item.translation_ru,
           ko: item.ko,
         });
