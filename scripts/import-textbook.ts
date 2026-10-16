@@ -22,6 +22,7 @@ const LESSON_DIR_2_5 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_05");
 const LESSON_DIR_2_6 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_06");
 const LESSON_DIR_2_7 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_07");
 const LESSON_DIR_2_8 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_08");
+const LESSON_DIR_2_9 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_09");
 
 const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: string[] }> = {
   7: {
@@ -45,6 +46,11 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
       "illustration_4_kpop_dance_club.png",
       "illustration_5_weekend_hiking.png",
     ],
+  },
+  9: {
+    path: join(LESSON_DIR_2_9, "lesson-09.json"),
+    audio: [233, 234, 235, 236],
+    images: [],
   },
 };
 
@@ -185,7 +191,7 @@ async function uploadLesson2Audio(tracks: number[]) {
 }
 
 async function main() {
-  for (const lessonNumber of [7, 8]) {
+  for (const lessonNumber of [7, 8, 9]) {
     if (!process.argv.includes(`--lesson-${lessonNumber}-only`)) continue;
 
     const { data: textbook2, error: textbookError } = await supabase
@@ -536,7 +542,12 @@ async function main() {
     LATE_LESSONS_2[7].path,
     textbook2Lesson6NextIndex,
   );
-  await importLesson(textbook2.id, LATE_LESSONS_2[8].path, textbook2Lesson7NextIndex);
+  const textbook2Lesson8NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[8].path,
+    textbook2Lesson7NextIndex,
+  );
+  await importLesson(textbook2.id, LATE_LESSONS_2[9].path, textbook2Lesson8NextIndex);
 
   // Ассеты: только то, что реально используется этим уроком, не всё
   // содержимое справочных папок разом.
@@ -778,7 +789,11 @@ async function main() {
       );
     }
   }
-  await uploadLesson2Audio([...LATE_LESSONS_2[7].audio, ...LATE_LESSONS_2[8].audio]);
+  await uploadLesson2Audio([
+    ...LATE_LESSONS_2[7].audio,
+    ...LATE_LESSONS_2[8].audio,
+    ...LATE_LESSONS_2[9].audio,
+  ]);
 
   console.log("Готово.");
 }

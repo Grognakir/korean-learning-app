@@ -248,19 +248,29 @@
    "unit": "건강",
    "grammar": [
     {
-     "label": "AV-(으)려면"
+     "label": "AV-(으)려면",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "AV-나요? / -는가요?, DV-(으)ㄴ가요?, N인가요?"
+     "label": "AV-나요? / -는가요?, DV-(으)ㄴ가요?, N인가요?",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "V-아/어/여서 그런지, N이어/여서 그런지"
+     "label": "V-아/어/여서 그런지, N이어/여서 그런지",
+     "section": "준비하기 2",
+     "block": "grammar-3"
     },
     {
-     "label": "DV-아/어/여 보이다"
+     "label": "DV-아/어/여 보이다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     },
     {
-     "label": "V-(으)면서, N(이)면서"
+     "label": "V-(으)면서, N(이)면서",
+     "section": "준비하기 2",
+     "block": "grammar-5"
     }
    ]
   },

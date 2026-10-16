@@ -1,0 +1,66 @@
+{
+  "tool": "built-in image_gen",
+  "style": "Semirealistic detailed pixel art, warm natural light, wide 16:9, no text or logos",
+  "images": [
+    {
+      "lesson": 7,
+      "file": "illustration_1_online_shopping.png",
+      "block": "text-shopping-dialogue",
+      "scene": "Two university students, a young Mongolian man and a young Chinese woman, in a bright Korean student apartment comparing online shops for a smartphone on a laptop. One points helpfully at generic product thumbnails while the other holds a smartphone. Small delivery parcel nearby. Friendly conversation about recommendations. No legible website text or brands."
+    },
+    {
+      "lesson": 7,
+      "file": "illustration_2_shoe_exchange.png",
+      "block": "text-exchange-dialogue",
+      "scene": "A young Saudi male university student politely exchanges shoes at a Korean shoe shop counter with a Korean shop assistant. He offers a small blank receipt beside a pair of light blue sneakers; the assistant presents a slightly larger pair of white sneakers. Shoe shelves in background. Make both color options clearly visible. No written signs, brands or letters."
+    },
+    {
+      "lesson": 7,
+      "file": "illustration_3_parcel_delivery.png",
+      "block": "listening-delivery",
+      "scene": "A friendly Korean delivery courier hands a closed cardboard food parcel to a middle-aged Korean woman at the door of a modest apartment across the hallway from a neighboring apartment. The woman accepts the parcel on behalf of an absent student neighbor. A phone in her other hand hints at coordination. Calm everyday Korean apartment corridor. No parcel labels or visible writing."
+    },
+    {
+      "lesson": 7,
+      "file": "illustration_4_dining_table_review.png",
+      "block": "text-reading-review",
+      "scene": "A young Chinese female university student in her bright apartment photographs a newly bought sturdy light-colored wooden dining table with her smartphone for an online purchase review. A few university friends sit or stand beside the table after a small dinner gathering, simple dishes visible. Table is the clear focal object, cheerful natural atmosphere. No readable screen text."
+    },
+    {
+      "lesson": 7,
+      "file": "illustration_5_korean_days.png",
+      "block": "text-culture-days",
+      "scene": "A cohesive wide Korean cultural celebration illustration, a friendly young couple exchanging chocolate and wrapped candy, with chocolate-coated biscuit sticks arranged nearby, and three small food displays containing grilled pork belly, fresh cucumbers and cooked chicken, representing Korean themed celebration days described in the lesson. Clear appetizing objects, balanced still-life and people composition, no calendar numbers, captions, logos, lettering or invented celebrations."
+    },
+    {
+      "lesson": 8,
+      "file": "illustration_1_leisure_taekwondo.png",
+      "block": "text-leisure-dialogue",
+      "scene": "A young Kenyan male university student and a young Chinese female university student talk at a Korean university cafeteria table. The woman has a small meal and study books and looks tired but interested; the man warmly recommends a recreational taekwondo club, with a folded white dobok and belt visible in his sports bag beside him. Realistic gentle gestures, afternoon light, no writing or speech bubbles."
+    },
+    {
+      "lesson": 8,
+      "file": "illustration_2_taekwondo_club.png",
+      "block": "text-club-dialogue",
+      "scene": "A young Chinese female beginner talks politely with a Korean university taekwondo club leader at a dojo entrance about joining. The leader wears a correctly proportioned white dobok with a belt, and gestures welcomingly toward other adult students practicing simple taekwondo stances on padded mats in the background. The woman carries a small sports bag. No signage, writing or speech bubbles."
+    },
+    {
+      "lesson": 8,
+      "file": "illustration_3_samulnori_club.png",
+      "block": "listening-club-broadcast",
+      "scene": "At a Korean university, a student presenter holding a microphone interviews a samulnori club leader beside four student musicians practicing traditional Korean percussion. Clearly distinguish four instruments: buk barrel drum, janggu hourglass drum with two drumheads, jing large hanging gong, kkwaenggwari small handheld brass gong. Instruments realistically held and played, joyful campus club atmosphere, no western instruments, text or signs."
+    },
+    {
+      "lesson": 8,
+      "file": "illustration_4_kpop_dance_club.png",
+      "block": "text-reading-poster",
+      "scene": "A diverse group of adult university students practicing synchronized K-pop dance in a bright Korean university dance club studio, a wall mirror, casual dance clothes, a friendly beginner welcomed at the edge of the group. Focus on dance practice and campus club participation, correct anatomy and natural rhythmic poses, no readable poster, logos, lettering or text."
+    },
+    {
+      "lesson": 8,
+      "file": "illustration_5_weekend_hiking.png",
+      "block": "text-culture-leisure-graph",
+      "scene": "Korean adults and university students enjoying weekend hiking on a gentle accessible green mountain trail, small backpacks, comfortable walking clothes, friendly conversation and fresh air. Wide beautiful Korean mountain landscape with distant low peaks, trees and valley, not dangerous mountaineering. Peaceful sunny morning. No text or signs."
+    }
+  ]
+}
