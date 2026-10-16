@@ -43,14 +43,20 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
       "illustration_1_leisure_taekwondo.png",
       "illustration_2_taekwondo_club.png",
       "illustration_3_samulnori_club.png",
-      "illustration_4_kpop_dance_club.png",
+      "illustration_4_kpop_dance_club_v2.png",
       "illustration_5_weekend_hiking.png",
     ],
   },
   9: {
     path: join(LESSON_DIR_2_9, "lesson-09.json"),
     audio: [233, 234, 235, 236],
-    images: [],
+    images: [
+      "illustration_1_dental_appointment.png",
+      "illustration_2_allergy_clinic.png",
+      "illustration_3_pharmacy.png",
+      "illustration_4_healthy_habits.png",
+      "illustration_5_donguibogam.png",
+    ],
   },
 };
 

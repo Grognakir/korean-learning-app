@@ -121,7 +121,10 @@
           "type": "text",
           "title": "진료 예약을 변경하기",
           "title_ru": "Изменять запись на приём",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_9/illustration_1_dental_appointment.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -660,7 +663,10 @@
           "type": "text",
           "title": "병원에서 진찰을 받기",
           "title_ru": "Проходить осмотр в больнице",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_9/illustration_2_allergy_clinic.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1563,7 +1569,11 @@
           "audio_id": "235",
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что делает этот человек? Расскажите."
+            "prompt_ru": "Что делает этот человек? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_9/illustration_3_pharmacy.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1627,7 +1637,10 @@
           "id": "text-reading-health",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_9/illustration_4_healthy_habits.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1786,7 +1799,10 @@
           "type": "text",
           "title": "동의보감",
           "title_ru": "«Тонъи погам» (книга о восточной медицине)",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_9/illustration_5_donguibogam.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "문화이해하기",
           "exercise_ref": null,

@@ -1,0 +1,32 @@
+{
+  "tool": "built-in image_gen",
+  "style": "Wide 16:9, semirealistic detailed pixel-art illustration, warm light, natural anatomy, no text or watermarks",
+  "lesson9": [
+    {
+      "file": "illustration_1_dental_appointment.png",
+      "block": "text-appointment-dialogue",
+      "scene": "A clear two-part simultaneous phone conversation within one continuous wide composition: a young Mongolian male university student at home phones a friendly Korean dental receptionist at her clean dental clinic desk. Both hold phones naturally with visible hands. A generic appointment calendar on the receptionist's desk and dental equipment in soft background establish rescheduling a dentist appointment. No written dates, text, numbers or speech balloons."
+    },
+    {
+      "file": "illustration_2_allergy_clinic.png",
+      "block": "text-clinic-dialogue",
+      "scene": "A young French female university student with mildly irritated eyes visits a Korean doctor in a bright modern consultation room. The doctor gently examines her eye using a small examination light, correct natural hands and clinical posture. A nurse waits beside the doorway. Soft spring blossoms visible outside hint at pollen allergy. No graphic symptoms, no text, labels or diagrams."
+    },
+    {
+      "file": "illustration_3_pharmacy.png",
+      "block": "listening-pharmacy",
+      "scene": "A young adult male student with a tissue in one hand explains cold-like symptoms to a friendly Korean female pharmacist across a Korean pharmacy counter. The pharmacist listens attentively, simple unlabelled medicine boxes arranged on shelves behind her. Natural clearly visible arms and hands, respectful everyday consultation, no readable medication names, dosage instructions, text, labels or speech balloons."
+    },
+    {
+      "file": "illustration_4_healthy_habits.png",
+      "block": "text-reading-health",
+      "scene": "A cohesive wide editorial illustration showing four gentle healthy daily habits with four subtly separated vignettes, balanced equal space: a university student listening to classical music through headphones while studying; a student doing a light jog in a park; three friends chatting cheerfully; a student sleeping peacefully in a tidy bedroom. Warm consistent palette linking all four scenes, natural anatomy, no clock numbers, charts, written health claims, captions or lettering."
+    },
+    {
+      "file": "illustration_5_donguibogam.png",
+      "block": "text-culture-donguibogam",
+      "scene": "A Korean traditional medicine cultural still life in a warm hanok interior: an old cloth-bound medical book open on a wooden table with its pages showing only faint abstract brush patterns, no legible script; ginger roots, scallion roots, a small honey pot, white radish and a ceramic cup of plum tea arranged naturally beside a steaming small earthenware pot. A calm middle-aged Korean person in simple traditional clothes prepares tea in the background, with natural hands. Educational cultural illustration, no medical claims or written instructions, no labels."
+    }
+  ],
+  "kpopRevision": "Regenerate this Korean university K-pop club scene in the same detailed semirealistic pixel art style, warm golden studio lighting and wide 16:9 composition. FIX ANATOMY through a simpler redesigned arrangement: exactly THREE adult university dancers, fully visible from head to toe, standing well separated in one row with clear air between bodies. Each person has exactly two anatomically natural arms, two hands, two legs. Six arms and six hands total, every arm traceable from shoulder through elbow and wrist to hand. Simple beginner choreography: left hand resting naturally on own hip, right arm extended comfortably diagonally outward with relaxed open hand. Five natural fingers per hand, no overlapping arms, no crossed wrists, no intricate hand gestures, no cropped limbs. Three distinct friendly dancers in casual clothing, equal spacing. Bright Korean campus dance room with plain wall and windows, no mirrors, no reflected or background people. Preserve the established fine pixel texture and illustrated shading. No text, logos, watermark."
+}
