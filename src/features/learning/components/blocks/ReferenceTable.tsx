@@ -64,11 +64,15 @@ export function ReferenceTable({
         </>
       ) : (
         <div className={styles.tableColumns}>
-          {block.columns.map((column) => (
-            <span key={column} className={`${styles.chip} kr`}>
-              {column}
-            </span>
-          ))}
+          {block.columns.map((column, i) =>
+            block.translations?.[i] ? (
+              <VocabChip key={column} text={column} translation={block.translations[i]} />
+            ) : (
+              <span key={column} className={`${styles.chip} kr`}>
+                {column}
+              </span>
+            ),
+          )}
         </div>
       )}
       {block.note && <span className={styles.note}>{block.note}</span>}
