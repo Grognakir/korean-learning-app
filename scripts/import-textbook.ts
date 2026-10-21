@@ -68,17 +68,83 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
 
 // 1급 (새인하한국어1): урок N → путь к JSON и аудиотреки (101…164 идут по 4 на урок).
 const LEVEL1_LESSONS: Record<number, { path: string; audio: number[]; images: string[] }> = {
-  1: { path: join(LESSON_DIR, "lesson-01.json"), audio: [101, 102, 103, 104], images: [] },
+  1: {
+    path: join(LESSON_DIR, "lesson-01.json"),
+    audio: [101, 102, 103, 104],
+    images: [
+      "illustration_2_introduction.png",
+      "illustration_3_student_introductions.png",
+      "illustration_4_class_friends.png",
+      "illustration_5_polite_greetings.png",
+    ],
+  },
   2: {
     path: join(LESSON_DIR_1_2, "lesson-02.json"),
     audio: [105, 106, 107, 108],
-    images: ["illustration_1_house_map.png"],
+    images: [
+      "illustration_1_house_map.png",
+      "illustration_1_classroom_objects.png",
+      "illustration_2_campus_directions.png",
+      "illustration_3_neighborhood_conversation.png",
+      "illustration_4_two_story_home.png",
+      "illustration_5_korean_address.png",
+    ],
   },
-  3: { path: join(LESSON_DIR_1_3, "lesson-03.json"), audio: [109, 110, 111, 112], images: [] },
-  4: { path: join(LESSON_DIR_1_4, "lesson-04.json"), audio: [113, 114, 115, 116], images: [] },
-  5: { path: join(LESSON_DIR_1_5, "lesson-05.json"), audio: [117, 118, 119, 120], images: [] },
-  6: { path: join(LESSON_DIR_1_6, "lesson-06.json"), audio: [121, 122, 123, 124], images: [] },
-  7: { path: join(LESSON_DIR_1_7, "lesson-07.json"), audio: [125, 126, 127, 128], images: [] },
+  3: {
+    path: join(LESSON_DIR_1_3, "lesson-03.json"),
+    audio: [109, 110, 111, 112],
+    images: [
+      "illustration_1_language_class.png",
+      "illustration_2_campus_hallway.png",
+      "illustration_3_office_phone.png",
+      "illustration_4_school_day.png",
+      "illustration_5_school_stages.png",
+    ],
+  },
+  4: {
+    path: join(LESSON_DIR_1_4, "lesson-04.json"),
+    audio: [113, 114, 115, 116],
+    images: [
+      "illustration_1_library_and_sports.png",
+      "illustration_2_weekend_calendar.png",
+      "illustration_3_daily_activities.png",
+      "illustration_4_weekly_student_life.png",
+      "illustration_5_everyday_greetings.png",
+    ],
+  },
+  5: {
+    path: join(LESSON_DIR_1_5, "lesson-05.json"),
+    audio: [117, 118, 119, 120],
+    images: [
+      "illustration_1_arrival_and_library.png",
+      "illustration_2_swimming_reception.png",
+      "illustration_3_yoga_badminton.png",
+      "illustration_4_student_routine.png",
+      "illustration_5_daily_planner.png",
+    ],
+  },
+  6: {
+    path: join(LESSON_DIR_1_6, "lesson-06.json"),
+    audio: [121, 122, 123, 124],
+    images: [
+      "illustration_1_weekend_shopping.png",
+      "illustration_2_hanok_visit.png",
+      "illustration_3_korean_trip.png",
+      "illustration_4_weekend_diary.png",
+      "illustration_5_korean_holidays.png",
+    ],
+  },
+  7: {
+    path: join(LESSON_DIR_1_7, "lesson-07.json"),
+    audio: [125, 126, 127, 128],
+    images: [
+      "illustration_1_winter_conversation.png",
+      "illustration_2_season_activities.png",
+      "illustration_3_busan_weather.png",
+      "illustration_4_autumn_hiking.png",
+      "illustration_5_four_season_travel.png",
+    ],
+  },
 };
 
 async function uploadLevel1Images(lessonNumber: number) {
@@ -493,6 +559,12 @@ async function main() {
 
   if (process.argv.includes("--generated-images-only")) {
     const generatedImages = [
+      ...Object.entries(LEVEL1_LESSONS).flatMap(([lessonNumber, lesson]) =>
+        lesson.images.map((filename) => ({
+          localPath: join(lesson.path, "..", `img/${filename}`),
+          storagePath: `inha_book_1/lesson_${lessonNumber}/${filename}`,
+        })),
+      ),
       {
         localPath: join(LESSON_DIR, "img/illustration_0_handshake.png"),
         storagePath: "inha_book_1/illustration_0_handshake.png",

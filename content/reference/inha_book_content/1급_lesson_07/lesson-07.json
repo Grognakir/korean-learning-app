@@ -121,7 +121,10 @@
           "type": "text",
           "title": "날씨와 계절을 표현하기",
           "title_ru": "Говорить о погоде и временах года",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_7/illustration_1_winter_conversation.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -774,7 +777,10 @@
           "type": "text",
           "title": "계절 활동을 말하기",
           "title_ru": "Говорить о занятиях в разные сезоны",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_7/illustration_2_season_activities.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1436,7 +1442,11 @@
           },
           "warmup": {
             "prompt": "무엇입니까? 이야기해 보십시오.",
-            "prompt_ru": "Что это? Расскажите."
+            "prompt_ru": "Что это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_7/illustration_3_busan_weather.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1496,7 +1506,10 @@
           "id": "text-reading-favorite-season",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_7/illustration_4_autumn_hiking.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1662,7 +1675,10 @@
           "type": "text",
           "title": "한국의 계절과 여행",
           "title_ru": "Времена года и путешествия в Корее",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_7/illustration_5_four_season_travel.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

@@ -123,7 +123,7 @@
           "title_ru": "Приветствие",
           "illustration": {
             "storage_path": "illustration_0_handshake.png",
-            "original_kind": "photo"
+            "original_kind": "illustration"
           },
           "text_kind": "dialogue",
           "section": "준비하기1",
@@ -744,7 +744,10 @@
           "type": "text",
           "title": "자기소개하기",
           "title_ru": "Представиться",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_1/illustration_2_introduction.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1426,7 +1429,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что делают эти люди? Расскажите."
+            "prompt_ru": "Что делают эти люди? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_1/illustration_3_student_introductions.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1478,7 +1485,10 @@
           "id": "text-reading-friends",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_1/illustration_4_class_friends.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1611,7 +1621,10 @@
           "type": "text",
           "title": "머리를 숙이고 인사하기",
           "title_ru": "Здороваться, наклонив голову",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_1/illustration_5_polite_greetings.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

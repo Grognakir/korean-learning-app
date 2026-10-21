@@ -1,0 +1,210 @@
+{
+  "tool": "built-in image_gen",
+  "style": "Detailed semirealistic pixel-art illustration, wide 16:9, natural proportions and hands, warm natural light, no readable text or logos",
+  "jobs": [
+    {
+      "lesson": 1,
+      "block": "text-introduction-dialogue",
+      "file": "illustration_2_introduction.png",
+      "scene": "A young French woman and young Saudi male university student meet for the first time in a bright Korean university hallway. Friendly polite introductions, two clearly separated people, casual student clothes and backpacks."
+    },
+    {
+      "lesson": 1,
+      "block": "listening-introduction",
+      "file": "illustration_3_student_introductions.png",
+      "scene": "A young Chinese female student and young Saudi male student introduce themselves in a Korean language classroom, notebooks on desks, welcoming classmates in softly blurred background. Natural polite conversation."
+    },
+    {
+      "lesson": 1,
+      "block": "text-reading-friends",
+      "file": "illustration_4_class_friends.png",
+      "scene": "Three university classmates, a young Chinese woman, a young French woman and a young Mongolian man, together in a bright Korean classroom. Friendly group portrait with notebooks, distinct natural faces, relaxed simple poses."
+    },
+    {
+      "lesson": 1,
+      "block": "text-culture-bow",
+      "file": "illustration_5_polite_greetings.png",
+      "scene": "Two balanced vignettes of Korean greeting etiquette: adult university classmates greet each other with eye contact and slight nods; next to them a student gives a respectful small waist bow to an older teacher. All hands relaxed and visible, no speech bubbles."
+    },
+    {
+      "lesson": 2,
+      "block": "text-classroom-dialogue",
+      "file": "illustration_1_classroom_objects.png",
+      "scene": "A young Chinese woman and young Mongolian male student discuss classroom objects in a bright Korean university classroom. A wooden desk and backpack prominent in foreground, a simple wall clock and blank board in background, clear friendly pointing gestures."
+    },
+    {
+      "lesson": 2,
+      "block": "text-facilities-dialogue",
+      "file": "illustration_2_campus_directions.png",
+      "scene": "A young French woman helps a young Saudi male student find campus facilities outdoors at a Korean university. She gestures toward a library beside an athletics field, another campus building nearby, simple readable spatial composition without maps or signs."
+    },
+    {
+      "lesson": 2,
+      "block": "listening-house-location",
+      "file": "illustration_3_neighborhood_conversation.png",
+      "scene": "A young French woman and a young Saudi male student discuss where they live near a Korean university back gate. Small neighborhood bookstore and bank suggested through books in shop window and ATM, modest residences behind the shops. No lettering."
+    },
+    {
+      "lesson": 2,
+      "block": "text-reading-hometown-house",
+      "file": "illustration_4_two_story_home.png",
+      "scene": "A cozy two-story American family home in Chicago shown as an attractive architectural cutaway, downstairs living room with sofa and TV, kitchen with refrigerator and dining table, parents bedroom; upstairs a student bedroom with desk computer bed wardrobe and bathroom to its right. Coherent correct floors, no labels."
+    },
+    {
+      "lesson": 2,
+      "block": "text-culture-address",
+      "file": "illustration_5_korean_address.png",
+      "scene": "A Korean university campus entrance along a neat city street. Foreground a young international student holds an envelope with blank address lines and compares it to the campus entrance and a generic building-number plaque. Trees, sidewalks and campus buildings, no readable numbers or letters."
+    },
+    {
+      "lesson": 3,
+      "block": "text-school-life-dialogue",
+      "file": "illustration_1_language_class.png",
+      "scene": "A young Chinese female student and young Mongolian male classmate discussing learning Korean at a desk in a Korean language classroom. Open textbooks with abstract unreadable marks, pencils, engaged friendly expressions."
+    },
+    {
+      "lesson": 3,
+      "block": "text-greeting-dialogue",
+      "file": "illustration_2_campus_hallway.png",
+      "scene": "A young French woman carrying library books meets a young Saudi male student carrying a class notebook in a Korean university corridor near a staircase. They exchange a friendly greeting and discuss their destinations. No floor labels."
+    },
+    {
+      "lesson": 3,
+      "block": "listening-phone-number",
+      "file": "illustration_3_office_phone.png",
+      "scene": "A young Mongolian male student asks a young French female classmate for a teacher's office phone number in front of a Korean university academic building. She checks a smartphone contact screen of unreadable abstract lines; he holds a notebook, natural clear hands."
+    },
+    {
+      "lesson": 3,
+      "block": "text-reading-school-life",
+      "file": "illustration_4_school_day.png",
+      "scene": "Three friendly international university classmates studying together in a bright Korean campus library with books and notebooks. Through the large windows a university athletics field is visible, showing study and campus life in one cohesive scene."
+    },
+    {
+      "lesson": 3,
+      "block": "text-culture-schools",
+      "file": "illustration_5_school_stages.png",
+      "scene": "Four gentle illustrated vignettes showing Korean education stages: elementary children at a school gate, middle school students in uniforms, high school students studying, adult university students on campus. Clearly different ages, natural anatomy, balanced wide educational composition, no labels or numbers."
+    },
+    {
+      "lesson": 4,
+      "block": "text-daily-life-dialogue",
+      "file": "illustration_1_library_and_sports.png",
+      "scene": "A young Chinese woman holding homework notebooks meets a young Mongolian male student holding a basketball near a Korean university library, a football visible near sports bag and outdoor athletics field behind them. Everyday conversation about where they are going."
+    },
+    {
+      "lesson": 4,
+      "block": "text-calendar-dialogue",
+      "file": "illustration_2_weekend_calendar.png",
+      "scene": "A young Saudi male student and young French woman plan their weekend at a campus table with a blank grid calendar. A swimming cap and goggles by her sports bag, a baseball glove beside his bag. Friendly natural conversation, no calendar numbers."
+    },
+    {
+      "lesson": 4,
+      "block": "listening-daily-life",
+      "file": "illustration_3_daily_activities.png",
+      "scene": "Two university students, a young American man and a young French woman, discuss weekday activities in a Korean campus lounge. A folded white taekwondo uniform and library book are on a bench beside the man, the woman holds a study notebook. Simple natural poses."
+    },
+    {
+      "lesson": 4,
+      "block": "text-reading-daily-life",
+      "file": "illustration_4_weekly_student_life.png",
+      "scene": "A wide cohesive university-life illustration: a Saudi male student studying Korean with friends at a library table, and a softly separated small outdoor vignette of the same student playing baseball and basketball with friends on campus. Simple clear poses, no text."
+    },
+    {
+      "lesson": 4,
+      "block": "text-culture-greetings",
+      "file": "illustration_5_everyday_greetings.png",
+      "scene": "A warm Korean everyday etiquette scene showing university students and a teacher parting with polite small bows, and a second softly connected vignette of students giving a small appreciative nod before eating a meal at a cafeteria table. No speech bubbles, natural restrained gestures."
+    },
+    {
+      "lesson": 5,
+      "block": "text-daily-dialogue",
+      "file": "illustration_1_arrival_and_library.png",
+      "scene": "A young French female university student and young Mongolian male classmate talk near a bright Korean campus classroom entrance in the morning, library books and study bags visible, a simple analogue wall clock without numerals in background. Friendly ordinary student schedule discussion."
+    },
+    {
+      "lesson": 5,
+      "block": "text-time-dialogue",
+      "file": "illustration_2_swimming_reception.png",
+      "scene": "A young Chinese woman asks a friendly Korean sports-center receptionist about swimming class times. Reception desk, blank weekly timetable and pool visible through glass behind them, goggles and swimming bag, natural hands, no written schedule."
+    },
+    {
+      "lesson": 5,
+      "block": "listening-class-info",
+      "file": "illustration_3_yoga_badminton.png",
+      "scene": "A young French female student with a rolled yoga mat and a young Mongolian male student with a badminton racket discuss classes at a Korean university sports center. Bright training room and outdoor court hinted in background, simple natural anatomy."
+    },
+    {
+      "lesson": 5,
+      "block": "text-reading-daily-schedule",
+      "file": "illustration_4_student_routine.png",
+      "scene": "A harmonious four-vignette daily student routine: morning breakfast with milk, studying in a Korean university classroom, homework in a library, and a friendly basketball game outdoors. Same young adult student recurring, clear simple poses, warm coherent palette, no clocks or lettering."
+    },
+    {
+      "lesson": 5,
+      "block": "text-culture-day-plan",
+      "file": "illustration_5_daily_planner.png",
+      "scene": "A young adult student in a cozy Korean apartment plans the day in an open notebook with blank checklist squares and a few abstract unreadable lines, pen held naturally. Books and a small sports bag nearby, morning sunlight, thoughtful calm expression. No readable dates or text."
+    },
+    {
+      "lesson": 6,
+      "block": "text-weekend-dialogue",
+      "file": "illustration_1_weekend_shopping.png",
+      "scene": "A young Mongolian male university student carries a reusable grocery bag of red apples and strawberries and chats with a young Chinese female classmate outside a Korean neighborhood market. She carries a small laundry basket, ordinary friendly weekend conversation, no shop lettering."
+    },
+    {
+      "lesson": 6,
+      "block": "text-experience-dialogue",
+      "file": "illustration_2_hanok_visit.png",
+      "scene": "A young French woman visits a Korean hanok village with her older sister; a softly connected neighboring scene shows their Mongolian male classmate trying a traditional hanbok in an Insadong courtyard. Traditional tiled roofs and warm wooden details, clear natural anatomy."
+    },
+    {
+      "lesson": 6,
+      "block": "listening-trip-experience",
+      "file": "illustration_3_korean_trip.png",
+      "scene": "Two balanced travel vignettes: a young Saudi male student with his younger adult sibling enjoys a bicycle ride near a lake and small boat in Chuncheon; a young Chinese woman with a friend explores Gyeongju near traditional museum architecture and historic park. No maps or signs."
+    },
+    {
+      "lesson": 6,
+      "block": "text-reading-diary",
+      "file": "illustration_4_weekend_diary.png",
+      "scene": "A young international student and visiting friend enjoy an Incheon outing, a seaside promenade with a small passenger boat in background and a traditional Korean restaurant table with bulgogi and bibimbap in foreground. Clear coherent travel-memory illustration, no lettering."
+    },
+    {
+      "lesson": 6,
+      "block": "text-culture-holidays",
+      "file": "illustration_5_korean_holidays.png",
+      "scene": "Two balanced Korean family holiday vignettes: Seollal family sharing tteokguk with a yutnori board and wooden sticks nearby; Chuseok family preparing and sharing songpyeon under a gentle autumn atmosphere. Distinct food shapes, warm household setting, no written holiday labels."
+    },
+    {
+      "lesson": 7,
+      "block": "text-weather-dialogue",
+      "file": "illustration_1_winter_conversation.png",
+      "scene": "A young Vietnamese female university student in a warm winter coat and a young Korean male classmate discuss Korea's cold winter outside a campus building. Snow-dusted trees, visible scarves and breath, friendly expressions, warm window light contrasting cool outdoor air."
+    },
+    {
+      "lesson": 7,
+      "block": "text-season-dialogue",
+      "file": "illustration_2_season_activities.png",
+      "scene": "Two connected vignettes of seasonal activities: a young French woman enjoying swimming at a calm Korean summer beach, and a young Saudi male student with the same woman as beginners at a winter ski resort. Modest practical swimwear and ski clothes, natural simple poses, no overlapping limbs."
+    },
+    {
+      "lesson": 7,
+      "block": "listening-weather-trip",
+      "file": "illustration_3_busan_weather.png",
+      "scene": "A young Kenyan male university student and friends on a Busan trip: sunny beach walk by calm sea on one side, cloudy afternoon market visit and a small sashimi meal on the other. Warm friendly educational travel illustration, no signage or lettering."
+    },
+    {
+      "lesson": 7,
+      "block": "text-reading-favorite-season",
+      "file": "illustration_4_autumn_hiking.png",
+      "scene": "Adult university friends walking on a safe autumn trail in Seoraksan, colorful red and golden maple foliage, clear blue sky and distinctive rocky mountain scenery. Small backpacks, natural relaxed walking poses, refreshing atmosphere, no text."
+    },
+    {
+      "lesson": 7,
+      "block": "text-culture-seasons",
+      "file": "illustration_5_four_season_travel.png",
+      "scene": "Four flowing seasonal Korean travel vignettes across a wide composition: cherry blossom viewing in a Seoul riverside park in spring, beach swimming in summer, autumn mountain foliage hiking, winter skiing and sledding. Correct simple anatomy, harmonious transitions, no written labels."
+    }
+  ]
+}

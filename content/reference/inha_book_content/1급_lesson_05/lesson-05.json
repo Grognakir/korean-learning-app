@@ -116,7 +116,10 @@
           "type": "text",
           "title": "하루 일과를 설명하기",
           "title_ru": "Объяснять распорядок дня",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_5/illustration_1_arrival_and_library.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -817,7 +820,10 @@
           "type": "text",
           "title": "시간 정보를 묻기",
           "title_ru": "Спрашивать о времени",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_5/illustration_2_swimming_reception.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1602,7 +1608,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что они делают? Расскажите."
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_5/illustration_3_yoga_badminton.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1716,7 +1726,10 @@
           "id": "text-reading-daily-schedule",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_5/illustration_4_student_routine.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1907,7 +1920,10 @@
           "type": "text",
           "title": "하루를 정리하기",
           "title_ru": "Подводить итоги дня",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_5/illustration_5_daily_planner.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

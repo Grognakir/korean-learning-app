@@ -116,7 +116,10 @@
           "type": "text",
           "title": "교실 물건을 말하기",
           "title_ru": "Называть предметы в классе",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_2/illustration_1_classroom_objects.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -628,7 +631,10 @@
           "type": "text",
           "title": "학교 시설물의 위치를 설명하기",
           "title_ru": "Объяснять расположение мест в университете",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_2/illustration_2_campus_directions.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1148,7 +1154,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что делают эти люди? Расскажите."
+            "prompt_ru": "Что делают эти люди? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_2/illustration_3_neighborhood_conversation.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1213,7 +1223,10 @@
           "id": "text-reading-hometown-house",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_2/illustration_4_two_story_home.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1401,7 +1414,10 @@
           "type": "text",
           "title": "한국의 주소",
           "title_ru": "Адреса в Корее",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_2/illustration_5_korean_address.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,
