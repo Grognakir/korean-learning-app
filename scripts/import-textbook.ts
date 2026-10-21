@@ -14,6 +14,7 @@ const supabase = createClient(
 
 const REFERENCE_DIR = join(process.cwd(), "content/reference");
 const LESSON_DIR = join(REFERENCE_DIR, "inha_book_content/1급_lesson_01");
+const LESSON_DIR_1_2 = join(REFERENCE_DIR, "inha_book_content/1급_lesson_02");
 const LESSON_DIR_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_01");
 const LESSON_DIR_2_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_02");
 const LESSON_DIR_2_3 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_03");
@@ -61,9 +62,24 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
 };
 
 // 1급 (새인하한국어1): урок N → путь к JSON и аудиотреки (101…164 идут по 4 на урок).
-const LEVEL1_LESSONS: Record<number, { path: string; audio: number[] }> = {
-  1: { path: join(LESSON_DIR, "lesson-01.json"), audio: [101, 102, 103, 104] },
+const LEVEL1_LESSONS: Record<number, { path: string; audio: number[]; images: string[] }> = {
+  1: { path: join(LESSON_DIR, "lesson-01.json"), audio: [101, 102, 103, 104], images: [] },
+  2: {
+    path: join(LESSON_DIR_1_2, "lesson-02.json"),
+    audio: [105, 106, 107, 108],
+    images: ["illustration_1_house_map.png"],
+  },
 };
+
+async function uploadLevel1Images(lessonNumber: number) {
+  for (const filename of LEVEL1_LESSONS[lessonNumber].images) {
+    await uploadAsset(
+      join(LEVEL1_LESSONS[lessonNumber].path, "..", `img/${filename}`),
+      `inha_book_1/lesson_${lessonNumber}/${filename}`,
+      "image/png",
+    );
+  }
+}
 
 const PLAN = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
@@ -230,6 +246,7 @@ async function main() {
     }
     await importLesson(textbook1.id, LEVEL1_LESSONS[lessonNumber].path, startIndex);
     await uploadLevel1Audio(LEVEL1_LESSONS[lessonNumber].audio);
+    await uploadLevel1Images(lessonNumber);
     console.log("Готово.");
     return;
   }
@@ -607,6 +624,9 @@ async function main() {
     "image/png",
   );
   await uploadLevel1Audio(Object.values(LEVEL1_LESSONS).flatMap((lesson) => lesson.audio));
+  for (const lessonNumber of Object.keys(LEVEL1_LESSONS).map(Number)) {
+    await uploadLevel1Images(lessonNumber);
+  }
 
   // Флаги для таблицы "나라 이름" (준비하기 1) — уменьшенные копии
   // (макс. сторона 200px) в img/flags/, оригиналы в исходном

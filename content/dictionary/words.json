@@ -32902,7 +32902,8 @@
         "Числительные"
       ],
       "translations": [
-        "девять"
+        "девять",
+        "район (городской административный)"
       ],
       "examples": [
         {
@@ -48482,6 +48483,108 @@
       ],
       "translations": [
         "расстроить желудок, несварение (от еды)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-칠판",
+      "headword": "칠판",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "доска (классная)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-매점",
+      "headword": "매점",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "киоск, буфет (в здании, на территории)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-본관",
+      "headword": "본관",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "главный корпус"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-정문",
+      "headword": "정문",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "главные ворота, главный вход"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-건너편",
+      "headword": "건너편",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Положение в пространстве"
+      ],
+      "translations": [
+        "противоположная сторона, напротив"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-맞은편",
+      "headword": "맞은편",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Положение в пространстве"
+      ],
+      "translations": [
+        "противоположная сторона, напротив"
       ],
       "examples": [],
       "notes": [],

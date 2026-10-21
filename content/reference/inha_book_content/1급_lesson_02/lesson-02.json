@@ -1,0 +1,1513 @@
+{
+  "textbook_id": "inha_book_1",
+  "lesson_number": 2,
+  "title": "학교와 집",
+  "pages": [
+    {
+      "page_number": null,
+      "page_role": "lesson_opening",
+      "source_photo": "IMG_0962",
+      "blocks": [
+        {
+          "type": "lesson_toc",
+          "sections": [
+            {
+              "key": "준비하기 1",
+              "items": [
+                {
+                  "label": "교실 물건을 말하기",
+                  "block_ref": "text-classroom-dialogue",
+                  "label_ru": "Называть предметы в классе"
+                },
+                {
+                  "label": "이 / 그 / 저",
+                  "block_ref": "grammar-1",
+                  "label_ru": "이 / 그 / 저 (этот / тот / вон тот)"
+                },
+                {
+                  "label": "N의",
+                  "block_ref": "grammar-2",
+                  "label_ru": "N의 (принадлежность)"
+                }
+              ]
+            },
+            {
+              "key": "준비하기 2",
+              "items": [
+                {
+                  "label": "학교 시설물의 위치를 설명하기",
+                  "block_ref": "text-facilities-dialogue",
+                  "label_ru": "Объяснять расположение мест в университете"
+                },
+                {
+                  "label": "N에①",
+                  "block_ref": "grammar-3",
+                  "label_ru": "N에① (место нахождения)"
+                },
+                {
+                  "label": "N이/가 있다/없다",
+                  "block_ref": "grammar-4",
+                  "label_ru": "N이/가 있다/없다 (есть / нет)"
+                }
+              ]
+            },
+            {
+              "key": "말하기",
+              "items": [
+                {
+                  "label": "위치를 묻고 답하기",
+                  "block_ref": "text-speaking-summary",
+                  "label_ru": "Спрашивать и говорить о местоположении"
+                }
+              ]
+            },
+            {
+              "key": "듣고 말하기",
+              "items": [
+                {
+                  "label": "집 위치를 설명하는 대화를 듣고 말하기",
+                  "block_ref": "listening-house-location",
+                  "label_ru": "Послушать и обсудить разговор о расположении дома"
+                }
+              ]
+            },
+            {
+              "key": "읽고 말하기",
+              "items": [
+                {
+                  "label": "고향집을 소개하는 글을 읽고 말하기",
+                  "block_ref": "reading-hometown-house",
+                  "label_ru": "Прочитать текст о доме на родине и обсудить"
+                }
+              ]
+            },
+            {
+              "key": "쓰기",
+              "items": [
+                {
+                  "label": "고향집을 소개하는 글 쓰기",
+                  "block_ref": "writing-hometown-house",
+                  "label_ru": "Написать текст о доме на родине"
+                }
+              ]
+            },
+            {
+              "key": "문화 이해하기",
+              "items": [
+                {
+                  "label": "한국의 주소",
+                  "block_ref": "text-culture-address",
+                  "label_ru": "Адреса в Корее"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 26,
+      "page_role": "content",
+      "source_photo": "IMG_0963",
+      "blocks": [
+        {
+          "id": "text-classroom-dialogue",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "교실 물건을 말하기",
+          "title_ru": "Называть предметы в классе",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "105",
+          "speakers": [
+            "왕루",
+            "자르갈"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "자르갈 씨, 이것이 무엇입니까?",
+              "emphasized": [
+                "이것이"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "그것은 책상입니다.",
+              "emphasized": [
+                "그것은"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "저것이 무엇입니까?",
+              "emphasized": [
+                "저것이"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "저것은 시계입니다.",
+              "emphasized": [
+                "저것은"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "그 가방이 자르갈 씨의 가방입니까?",
+              "emphasized": [
+                "그 가방이",
+                "씨의 가방"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "아니요, 이 가방은 제 것이 아닙니다. 아멜리 씨의 가방입니다.",
+              "emphasized": [
+                "이 가방은",
+                "제 것",
+                "씨의 가방"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "여기가 누구의 교실입니까?",
+              "emphasized": [
+                "누구의"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "여기는 우리의 교실입니다.",
+              "emphasized": [
+                "우리의"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hint-junbihagi1-expr",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-classroom-dialogue",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "누구",
+              "translation_ru": "кто — «1) 누구입니까? 2) 누구의 교실입니까?» («Кто это?», «Чей это класс?»)"
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-classroom-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "이것",
+              "translation_ru": "это (рядом с говорящим)"
+            },
+            {
+              "ko": "그것",
+              "translation_ru": "то (рядом с собеседником)"
+            },
+            {
+              "ko": "책상",
+              "translation_ru": "письменный стол, парта"
+            },
+            {
+              "ko": "저것",
+              "translation_ru": "вон то (далеко от обоих)"
+            },
+            {
+              "ko": "시계",
+              "translation_ru": "часы"
+            },
+            {
+              "ko": "가방",
+              "translation_ru": "сумка, портфель"
+            },
+            {
+              "ko": "것",
+              "translation_ru": "вещь; (чей-то) предмет"
+            },
+            {
+              "ko": "여기",
+              "translation_ru": "здесь"
+            },
+            {
+              "ko": "누구",
+              "translation_ru": "кто"
+            },
+            {
+              "ko": "교실",
+              "translation_ru": "класс, аудитория"
+            },
+            {
+              "ko": "책",
+              "translation_ru": "книга"
+            },
+            {
+              "ko": "휴대전화",
+              "translation_ru": "мобильный телефон"
+            },
+            {
+              "ko": "칠판",
+              "translation_ru": "доска (классная)"
+            },
+            {
+              "ko": "안경",
+              "translation_ru": "очки"
+            },
+            {
+              "ko": "아버지",
+              "translation_ru": "отец"
+            },
+            {
+              "ko": "공책",
+              "translation_ru": "тетрадь"
+            },
+            {
+              "ko": "거울",
+              "translation_ru": "зеркало"
+            },
+            {
+              "ko": "창문",
+              "translation_ru": "окно"
+            },
+            {
+              "ko": "연필",
+              "translation_ru": "карандаш"
+            },
+            {
+              "ko": "의자",
+              "translation_ru": "стул"
+            },
+            {
+              "ko": "볼펜",
+              "translation_ru": "шариковая ручка"
+            },
+            {
+              "ko": "지우개",
+              "translation_ru": "ластик"
+            },
+            {
+              "ko": "필통",
+              "translation_ru": "пенал"
+            },
+            {
+              "ko": "사전",
+              "translation_ru": "словарь"
+            },
+            {
+              "ko": "신발",
+              "translation_ru": "обувь"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 27,
+      "page_role": "content",
+      "source_photo": "IMG_0964",
+      "blocks": [
+        {
+          "id": "grammar-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "이 / 그 / 저",
+          "section": "1",
+          "explanation": "Указательные слова: 이 — предмет рядом с говорящим, 그 — рядом с собеседником (или уже упомянутый), 저 — далеко от обоих.",
+          "examples": [
+            "1) 가: 이것이 무엇입니까?\n나: 이것은 책입니다.",
+            "2) 가: 그것이 무엇입니까?\n나: 이것은 휴대전화입니다.",
+            "3) 가: 저것이 무엇입니까?\n나: 저것은 칠판입니다."
+          ],
+          "rules": [
+            "이것이, 그것이, 저것이 = 이게, 그게, 저게",
+            "이것은, 그것은, 저것은 = 이건, 그건, 저건",
+            "이곳, 그곳, 저곳 = 여기, 거기, 저기"
+          ]
+        },
+        {
+          "id": "grammar-2",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N의",
+          "section": "2",
+          "explanation": "Показывает принадлежность — «N-а, N-ов»; 누구의 — «чей».",
+          "examples": [
+            "1) 가: 그 책이 누구의 책입니까?\n나: 이 책은 제 것입니다.",
+            "2) 가: 이 안경이 누구의 것입니까?\n나: 그 안경은 제 아버지의 것입니다.",
+            "3) 가: 저 공책이 누구의 것입니까?\n나: 저 공책은 박지성 씨의 공책입니다."
+          ],
+          "rules": [
+            "N의 + N: принадлежность («N-а, N-ов»)",
+            "저의 → 제 / 나의 → 내 / 너의 → 네"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 28,
+      "page_role": "content",
+      "source_photo": "IMG_0965",
+      "blocks": [
+        {
+          "id": "practice-1-open",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "1. 친구와 같이 이야기해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 가: ______이/가 무엇입니까?  나: ______."
+            },
+            {
+              "text": "2) 가: ______이/가 무엇입니까?  나: ______."
+            },
+            {
+              "text": "3) 가: ______이/가 무엇입니까?  나: ______."
+            }
+          ],
+          "exercise_title": "연습하기1"
+        },
+        {
+          "id": "exercise-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "이것",
+              "그것 / 연필"
+            ],
+            "cues": [
+              "이것",
+              "그것 / 연필"
+            ],
+            "dialogue": [
+              "가: 이것이 무엇입니까?",
+              "나: 그것은 연필입니다."
+            ],
+            "emphasis": [
+              [
+                "이것이",
+                "무엇입니까"
+              ],
+              [
+                "그것은",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "이것",
+                "이것 / 책"
+              ],
+              "answers": [
+                "이것",
+                "이것",
+                "책"
+              ]
+            },
+            {
+              "given": [
+                "그것",
+                "이것 / 가방"
+              ],
+              "answers": [
+                "그것",
+                "이것",
+                "가방"
+              ]
+            },
+            {
+              "given": [
+                "이것",
+                "그것 / 의자"
+              ],
+              "answers": [
+                "이것",
+                "그것",
+                "의자"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}이 무엇입니까?",
+            "나: {1}은 {2}입니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 29,
+      "page_role": "content",
+      "source_photo": "IMG_0966",
+      "blocks": [
+        {
+          "id": "exercise-2a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "그 볼펜 / 볼펜",
+              "이 볼펜 / 제"
+            ],
+            "cues": [
+              "그 볼펜 / 볼펜",
+              "이 볼펜 / 제"
+            ],
+            "dialogue": [
+              "가: 그 볼펜이 누구의 볼펜입니까?",
+              "나: 이 볼펜은 제 것입니다."
+            ],
+            "emphasis": [
+              [
+                "그 볼펜이",
+                "누구의"
+              ],
+              [
+                "이 볼펜은",
+                "제 것"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "이 가방 / 가방",
+                "그 가방 / 아멜리 씨"
+              ],
+              "answers": [
+                "이 가방이",
+                "가방",
+                "그 가방은",
+                "아멜리 씨의"
+              ]
+            },
+            {
+              "given": [
+                "그 지우개 / 지우개",
+                "이 지우개 / 박지성 씨"
+              ],
+              "answers": [
+                "그 지우개가",
+                "지우개",
+                "이 지우개는",
+                "박지성 씨의"
+              ]
+            },
+            {
+              "given": [
+                "저 필통 / 필통",
+                "저 필통 / 파하드 씨"
+              ],
+              "answers": [
+                "저 필통이",
+                "필통",
+                "저 필통은",
+                "파하드 씨의"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 누구의 {1}입니까?",
+            "나: {2} {3} 것입니다."
+          ]
+        },
+        {
+          "id": "exercise-2b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "이 연필 / 왕루 씨의 연필",
+              "왕루 씨의 연필",
+              "왕루 씨의 연필 / 자르갈 씨의 연필"
+            ],
+            "cues": [
+              "이 연필 / 왕루 씨의 연필",
+              "왕루 씨의 연필",
+              "왕루 씨의 연필 / 자르갈 씨의 연필"
+            ],
+            "dialogue": [
+              "가: 이 연필이 왕루 씨의 연필입니까?",
+              "나: 네, 왕루 씨의 연필입니다. / 아니요, 왕루 씨의 연필이 아닙니다. 자르갈 씨의 연필입니다."
+            ],
+            "emphasis": [
+              [
+                "이 연필이",
+                "씨의 연필입니까"
+              ],
+              [
+                "네,",
+                "씨의 연필입니다",
+                "아니요,",
+                "이 아닙니다",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "이 책 / 흐엉 씨의 책",
+                "흐엉 씨의 책",
+                "흐엉 씨의 책 / 로빈 씨의 책"
+              ],
+              "answers": [
+                "이 책이",
+                "흐엉 씨의 책",
+                "로빈 씨의 책"
+              ]
+            },
+            {
+              "given": [
+                "그 사전 / 최수지 씨의 사전",
+                "최수지 씨의 사전",
+                "최수지 씨의 사전 / 오위노 씨의 사전"
+              ],
+              "answers": [
+                "그 사전이",
+                "최수지 씨의 사전",
+                "오위노 씨의 사전"
+              ]
+            },
+            {
+              "given": [
+                "저 신발 / 박지성 씨의 신발",
+                "박지성 씨의 신발",
+                "박지성 씨의 신발 / 로빈 씨의 신발"
+              ],
+              "answers": [
+                "저 신발이",
+                "박지성 씨의 신발",
+                "로빈 씨의 신발"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} {1}입니까?",
+            "나: 네, {1}입니다. / 아니요, {1}이 아닙니다. {2}입니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 30,
+      "page_role": "content",
+      "source_photo": "IMG_0967",
+      "blocks": [
+        {
+          "id": "text-facilities-dialogue",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "학교 시설물의 위치를 설명하기",
+          "title_ru": "Объяснять расположение мест в университете",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "106",
+          "speakers": [
+            "아멜리",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨, 안녕하세요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 아멜리 씨, 안녕하세요? 학교에 은행이 있습니까?",
+              "emphasized": [
+                "에 은행이 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "예, 학교에 은행이 있습니다.",
+              "emphasized": [
+                "에 은행이 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "은행이 어디에 있습니까?",
+              "emphasized": [
+                "어디에 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "이 건물 옆에 있습니다.",
+              "emphasized": [
+                "옆에 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "도서관은 어디에 있습니까?",
+              "emphasized": [
+                "어디에 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "도서관은 운동장 앞에 있습니다.",
+              "emphasized": [
+                "앞에 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "아멜리 씨, 고맙습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 31,
+      "page_role": "content",
+      "source_photo": "IMG_0968",
+      "blocks": [
+        {
+          "id": "grammar-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "N에①",
+          "section": "3",
+          "explanation": "Показывает место, где что-то находится.",
+          "examples": [
+            "1) 가: 교실에 무엇이 있습니까?\n나: 교실에 책상이 있습니다.",
+            "2) 가: 교실에 칠판이 있습니까?\n나: 네, 교실에 칠판이 있습니다."
+          ],
+          "rules": [
+            "N에 ставится после слова-места: «в/на N»",
+            "одна форма, 받침 роли не играет"
+          ]
+        },
+        {
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "N이/가 있다/없다",
+          "section": "4",
+          "explanation": "Есть / нет чего-либо; 있다 — «быть, находиться», 없다 — «не быть, отсутствовать».",
+          "examples": [
+            "1) 가: 방에 뭐가 있습니까?\n나: 방에 침대가 있습니다.",
+            "2) 가: 방에 책상이 있습니까?\n나: 아니요, 방에 책상이 없습니다."
+          ],
+          "rules": [
+            "N 받침 есть → N이 있다/없다",
+            "N 받침 нет → N가 있다/없다",
+            "무엇이 = 뭐가"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 32,
+      "page_role": "content",
+      "source_photo": "IMG_0969",
+      "blocks": [
+        {
+          "id": "practice-3a",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "1. 친구와 같이 이야기해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 가: 책상에 무엇이 있습니까?  나: ______."
+            },
+            {
+              "text": "2) 가: 가방에 무엇이 있습니까?  나: ______."
+            },
+            {
+              "text": "3) 가: 교실에 칠판이 있습니까?  나: ______."
+            },
+            {
+              "text": "4) 가: 친구의 책상 위에 책이 있습니까?  나: ______."
+            }
+          ],
+          "exercise_title": "연습하기3"
+        },
+        {
+          "id": "practice-3b",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "2. 친구와 같이 이야기해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 가: 교실에 무엇이 없습니까?  나: ______."
+            },
+            {
+              "text": "2) 가: 방에 무엇이 없습니까?  나: ______."
+            },
+            {
+              "text": "3) 가: 가방에 신발이 있습니까?  나: ______."
+            },
+            {
+              "text": "4) 가: 친구의 책상 위에 가방이 있습니까?  나: ______."
+            }
+          ],
+          "exercise_title": "연습하기3"
+        }
+      ]
+    },
+    {
+      "page_number": 33,
+      "page_role": "content",
+      "source_photo": "IMG_0970",
+      "blocks": [
+        {
+          "type": "reference_table",
+          "id": "table-positions",
+          "toc_section": "준비하기 2",
+          "title": "위치",
+          "title_ru": "Положение",
+          "columns": [
+            "위",
+            "아래(밑)",
+            "옆",
+            "왼쪽",
+            "오른쪽",
+            "앞",
+            "뒤",
+            "안",
+            "밖",
+            "건너편/맞은편",
+            "근처"
+          ],
+          "translations": [
+            "верх, над",
+            "низ, под",
+            "бок, рядом",
+            "левая сторона",
+            "правая сторона",
+            "перёд, впереди",
+            "зад, позади",
+            "внутри",
+            "снаружи",
+            "противоположная сторона",
+            "окрестности, поблизости"
+          ],
+          "note": "в оригинале у каждого слова — схема-стрелка"
+        }
+      ]
+    },
+    {
+      "page_number": 34,
+      "page_role": "content",
+      "source_photo": "IMG_0971",
+      "blocks": [
+        {
+          "id": "practice-4a",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "1. 다음과 같이 이야기해 보십시오. (도서관 / 운동장 오른쪽)",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "가: 도서관이 어디에 있습니까?  나: 도서관은 운동장 오른쪽에 있습니다."
+            },
+            {
+              "text": "1) 9호관 / ______"
+            },
+            {
+              "text": "2) 드림센터 / ______"
+            },
+            {
+              "text": "3) 본관 / ______"
+            },
+            {
+              "text": "4) 도서관 / ______"
+            },
+            {
+              "text": "5) 운동장 / ______"
+            }
+          ],
+          "exercise_title": "연습하기4"
+        },
+        {
+          "id": "exercise-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "방",
+              "방 / 책상, 침대, 컴퓨터, 냉장고"
+            ],
+            "cues": [
+              "방",
+              "방 / 책상, 침대, 컴퓨터, 냉장고"
+            ],
+            "dialogue": [
+              "가: 방에 무엇이 있습니까?",
+              "나: 제 방에 책상, 침대, 컴퓨터, 냉장고가 있습니다."
+            ],
+            "emphasis": [
+              [
+                "방에",
+                "무엇이",
+                "있습니까"
+              ],
+              [
+                "제 방에",
+                "가 있습니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "교실",
+                "교실 / 책상, 의자, 칠판, 시계"
+              ],
+              "answers": [
+                "교실",
+                "교실에",
+                "책상, 의자, 칠판, 시계가"
+              ]
+            },
+            {
+              "given": [
+                "책상 위",
+                "책상 위 / 책, 공책, 연필, 볼펜, 지우개"
+              ],
+              "answers": [
+                "책상 위",
+                "책상 위에",
+                "책, 공책, 연필, 볼펜, 지우개가"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}에 무엇이 있습니까?",
+            "나: {1} {2} 있습니다."
+          ]
+        },
+        {
+          "id": "practice-4b",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "2. 다음과 같이 이야기해 보십시오. (3, 4)",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "3) 가방 안 / ______"
+            },
+            {
+              "text": "4) 고향의 집 / ______"
+            }
+          ],
+          "exercise_title": "연습하기4"
+        }
+      ]
+    },
+    {
+      "page_number": 35,
+      "page_role": "content",
+      "source_photo": "IMG_0972",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "이름",
+              "무엇",
+              "어디"
+            ],
+            "rows": [
+              [
+                "로빈",
+                "도서관",
+                "운동장 앞"
+              ],
+              [
+                "제냐",
+                "서점",
+                "은행 아래"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "로빈",
+            "제냐"
+          ],
+          "lines": [
+            {
+              "speaker": "로빈",
+              "text": "제냐 씨, 안녕하세요?"
+            },
+            {
+              "speaker": "제냐",
+              "text": "로빈 씨, 안녕하세요?"
+            },
+            {
+              "speaker": "로빈",
+              "text": "학교에 도서관이 있습니까?",
+              "emphasized": [
+                "에 도서관이 있습니까"
+              ]
+            },
+            {
+              "speaker": "제냐",
+              "text": "네, 도서관이 있습니다.",
+              "emphasized": [
+                "도서관이 있습니다"
+              ]
+            },
+            {
+              "speaker": "로빈",
+              "text": "어디에 있습니까?"
+            },
+            {
+              "speaker": "제냐",
+              "text": "도서관은 운동장 앞에 있습니다.",
+              "emphasized": [
+                "앞에 있습니다"
+              ]
+            },
+            {
+              "speaker": "제냐",
+              "text": "로빈 씨, 학교에 서점이 있습니까?",
+              "emphasized": [
+                "에 서점이 있습니까"
+              ]
+            },
+            {
+              "speaker": "로빈",
+              "text": "네, 서점은 은행 아래에 있습니다.",
+              "emphasized": [
+                "아래에 있습니다"
+              ]
+            },
+            {
+              "speaker": "제냐",
+              "text": "감사합니다. 안녕히 가세요."
+            },
+            {
+              "speaker": "로빈",
+              "text": "네, 안녕히 가세요."
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "",
+              "",
+              "무엇",
+              "어디"
+            ],
+            "rows": [
+              [
+                "1)",
+                "나",
+                "운동장",
+                "도서관 뒤"
+              ],
+              [
+                "",
+                "친구",
+                "커피숍",
+                "우체국 옆"
+              ],
+              [
+                "2)",
+                "나",
+                "",
+                ""
+              ],
+              [
+                "",
+                "친구",
+                "",
+                ""
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 36,
+      "page_role": "content",
+      "source_photo": "IMG_0973",
+      "blocks": [
+        {
+          "id": "listening-house-location",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "집 위치를 설명하는 대화를 듣고 말하기",
+          "title_ru": "Послушать и обсудить разговор о расположении дома",
+          "audio_id": "107",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "파하드",
+                "text": "아멜리 씨, 안녕하세요?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "네, 파하드 씨, 안녕하세요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아멜리 씨의 집은 어디에 있습니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "저의 집은 학교 후문 근처에 있습니다. 후문 건너편에 서점이 있습니다. 그 서점 뒤에 저의 집이 있습니다."
+              },
+              {
+                "speaker": "파하드",
+                "text": "제 집도 학교 후문 근처에 있습니다. 서점 오른쪽에 은행이 있습니다. 그 은행 뒤에 제 집이 있습니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что делают эти люди? Расскажите."
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "은행이 어디에 있습니까? (схема ниже)",
+              "prompt_ru": "Где находится банк? (схема ниже)",
+              "choices": [
+                "①",
+                "②",
+                "③",
+                "④"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "아멜리 씨의 집이 어디입니까? (схема ниже)",
+              "prompt_ru": "Где дом Амели? (схема ниже)",
+              "choices": [
+                "①",
+                "②",
+                "③",
+                "④"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "choice",
+              "prompt": "파하드 씨의 집이 어디입니까? (схема ниже)",
+              "prompt_ru": "Где дом Фахада? (схема ниже)",
+              "choices": [
+                "①",
+                "②",
+                "③",
+                "④"
+              ],
+              "correct": 1
+            }
+          ],
+          "followup": "반 친구들에게 여러분의 집 위치를 이야기해 보십시오.",
+          "followup_ru": "Расскажите одноклассникам, где находится ваш дом."
+        },
+        {
+          "id": "illustration-house-map",
+          "toc_section": "듣고 말하기",
+          "type": "illustration",
+          "storage_path": "lesson_2/illustration_1_house_map.png",
+          "caption": "Схема к заданию 2: дома ①–④, книжный магазин 서점 и задние ворота 후문 (рисунок из учебника)",
+          "original_kind": "illustration",
+          "pair_id": null
+        }
+      ]
+    },
+    {
+      "page_number": 37,
+      "page_role": "content",
+      "source_photo": "IMG_0974",
+      "blocks": [
+        {
+          "id": "text-reading-hometown-house",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 로빈입니다. 제 고향집은 미국의 시카고에 있습니다. 우리 집은 이층집입니다."
+            },
+            {
+              "text": "( ㉠ )에는 거실, 부엌, 아래층 화장실, 부모님 방이 있습니다. 거실에 텔레비전, 소파가 있습니다. 부엌에 냉장고, 식탁이 있습니다. 부모님 방에 침대, 옷장이 있습니다."
+            },
+            {
+              "text": "위층에는 제 방, 위층 화장실이 있습니다. 제 방에 침대, 책상, 옷장이 있습니다. 책상 위에 책, 공책, 컴퓨터가 있습니다. 화장실은 제 방의 오른쪽에 있습니다."
+            }
+          ]
+        },
+        {
+          "id": "reading-hometown-house",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "고향집을 소개하는 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о доме на родине и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "로빈 씨의 방",
+                "로빈 씨의 집",
+                "로빈 씨의 고향",
+                "로빈 씨의 부모님"
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "choice",
+              "prompt": "㉠에 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее слово для ㉠.",
+              "choices": [
+                "이것",
+                "어디",
+                "아래층",
+                "옆 방"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "부엌에 텔레비전이 있습니다.",
+                "부모님 방에 컴퓨터가 없습니다.",
+                "위층에 방, 화장실, 거실이 있습니다.",
+                "로빈 씨의 방 오른쪽에 옷장이 있습니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 고향집을 소개해 보십시오.",
+              "prompt_ru": "Расскажите о своём доме на родине."
+            }
+          ]
+        },
+        {
+          "id": "vocab-reading-hometown-house",
+          "toc_section": "읽고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-hometown-house",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "이층집",
+              "translation_ru": "двухэтажный дом"
+            },
+            {
+              "ko": "거실",
+              "translation_ru": "гостиная"
+            },
+            {
+              "ko": "부엌",
+              "translation_ru": "кухня"
+            },
+            {
+              "ko": "아래층",
+              "translation_ru": "нижний этаж"
+            },
+            {
+              "ko": "화장실",
+              "translation_ru": "туалет, ванная"
+            },
+            {
+              "ko": "부모님",
+              "translation_ru": "родители"
+            },
+            {
+              "ko": "텔레비전",
+              "translation_ru": "телевизор"
+            },
+            {
+              "ko": "소파",
+              "translation_ru": "диван"
+            },
+            {
+              "ko": "식탁",
+              "translation_ru": "обеденный стол"
+            },
+            {
+              "ko": "옷장",
+              "translation_ru": "шкаф для одежды"
+            },
+            {
+              "ko": "위층",
+              "translation_ru": "верхний этаж"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 38,
+      "page_role": "content",
+      "source_photo": "IMG_0975",
+      "blocks": [
+        {
+          "id": "writing-hometown-house",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "고향집을 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст о доме на родине.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: где находится дом.",
+              "questions": [
+                {
+                  "kr": "고향집이 어디에 있습니까?",
+                  "ru": "Где находится ваш дом на родине?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что есть в доме.",
+              "questions": [
+                {
+                  "kr": "고향집에 무엇이 있습니까?",
+                  "ru": "Что есть в вашем доме на родине?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что есть в вашей комнате.",
+              "questions": [
+                {
+                  "kr": "내 방에 무엇이 있습니까?",
+                  "ru": "Что есть в вашей комнате?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    },
+    {
+      "page_number": 39,
+      "page_role": "content",
+      "source_photo": "IMG_0976",
+      "blocks": [
+        {
+          "id": "text-culture-address",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "한국의 주소",
+          "title_ru": "Адреса в Корее",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "인하대학교 주소: 인천시 남구 인하로 100\n(인천시 — 도시, 남구 — 구, 인하로 — 도로, 100 — 건물 번호)"
+            },
+            {
+              "text": "1) 한국의 주소는 어떻습니까?",
+              "translation_ru": "Как выглядят адреса в Корее?"
+            },
+            {
+              "text": "2) 여러분 나라의 주소는 어떻습니까? 이야기해 보십시오.",
+              "translation_ru": "Как выглядят адреса в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-address",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "도로",
+              "translation_ru": "дорога, улица"
+            },
+            {
+              "ko": "번호",
+              "translation_ru": "номер"
+            },
+            {
+              "ko": "도시",
+              "translation_ru": "город"
+            },
+            {
+              "ko": "구",
+              "translation_ru": "район (городской)"
+            },
+            {
+              "ko": "주소",
+              "translation_ru": "адрес"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-2a",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "‘ㅖ’",
+          "audio_id": "108",
+          "examples": [
+            {
+              "text": "예",
+              "translation_ru": "да (вежл.); пример"
+            },
+            {
+              "text": "예절",
+              "translation_ru": "этикет"
+            },
+            {
+              "text": "예순",
+              "translation_ru": "шестьдесят"
+            },
+            {
+              "text": "계란",
+              "translation_ru": "яйцо"
+            },
+            {
+              "text": "계절",
+              "translation_ru": "время года"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-2b",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "‘ㅒ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "얘",
+              "translation_ru": "этот (о ребёнке); он/она (разг.)"
+            },
+            {
+              "text": "걔",
+              "translation_ru": "тот (о ребёнке); он/она (разг.)"
+            },
+            {
+              "text": "쟤",
+              "translation_ru": "вон тот (о ребёнке); он/она (разг.)"
+            },
+            {
+              "text": "얘기",
+              "translation_ru": "разговор, рассказ"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
