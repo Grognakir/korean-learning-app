@@ -180,3 +180,9 @@ it("односложное существительное не совпадае�
   expect(vocabKeysInText("눈이 커요.", items)).toEqual(["눈"]);
   expect(vocabKeysInText("눈", items)).toEqual(["눈"]);
 });
+
+it("односложное существительное не совпадает с началом слова вроде 도서관", () => {
+  const items = [{ ko: "도", translation_ru: "градус" }];
+  expect(vocabKeysInText("도서관에서 공부해요.", items)).toEqual([]);
+  expect(vocabKeysInText("도가 높아요.", items)).toEqual(["도"]);
+});

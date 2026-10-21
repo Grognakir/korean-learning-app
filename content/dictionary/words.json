@@ -37801,7 +37801,8 @@
         "Частицы"
       ],
       "translations": [
-        "тоже, также"
+        "тоже, также",
+        "градус (°C)"
       ],
       "examples": [
         {
@@ -49100,6 +49101,74 @@
       ],
       "translations": [
         "стоимостью, номиналом (суффикс: 1,500원짜리 — за 1 500 вон)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-겨울옷",
+      "headword": "겨울옷",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "зимняя одежда"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-길",
+      "headword": "길",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "дорога, путь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-위험하다",
+      "headword": "위험하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть опасным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-샐러드",
+      "headword": "샐러드",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "салат"
       ],
       "examples": [],
       "notes": [],
