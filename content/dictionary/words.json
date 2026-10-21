@@ -48916,6 +48916,74 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-지난겨울",
+      "headword": "지난겨울",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "прошлая зима"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-꽃구경",
+      "headword": "꽃구경",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "любование цветами"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-피다",
+      "headword": "피다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "цвести, распускаться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-특히",
+      "headword": "특히",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "особенно"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }
