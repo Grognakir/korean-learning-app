@@ -71,6 +71,7 @@
 - `ReferenceTable.tsx`: у таблиц без флагов теперь переводы показываются чипами (раньше `translations` терялись; затронуто и `위치` в 1급 2과).
 - Словарь +4 слова; `scripts/import-textbook.ts`: `LEVEL1_LESSONS[4]`, флаг `--k1-lesson-4-only`.
 - Проверено: `tsc`, ESLint, 235 тестов, локальный импорт, все 7 разделов открываются.
+- Выложено на прод: коммит `5ec5db3`, ручной деплой `npx vercel deploy --prod --yes` (Ready, алиас `korean-learning-gray.vercel.app`). В production Supabase импортированы урок 4 (`page_index` 45–58, аудио 113–116) и 4 слова; через REST: 14 страниц, 7 упражнений, `correct: 2` у аудирования.
 
 ### 2026-10-22 — 1급 урок 3 (학교생활)
 
