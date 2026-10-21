@@ -186,3 +186,11 @@ it("односложное существительное не совпадае�
   expect(vocabKeysInText("도서관에서 공부해요.", items)).toEqual([]);
   expect(vocabKeysInText("도가 높아요.", items)).toEqual(["도"]);
 });
+
+it("наречие «다» совпадает только как отдельное слово", () => {
+  const items = [{ ko: "다", translation_ru: "всё" }];
+  expect(vocabKeysInText("숙제를 다 했어요.", items)).toEqual(["다"]);
+  expect(vocabKeysInText("다음 주에 다시 와요.", items)).toEqual([]);
+  expect(vocabKeysInText("다치다", items)).toEqual([]);
+});
+

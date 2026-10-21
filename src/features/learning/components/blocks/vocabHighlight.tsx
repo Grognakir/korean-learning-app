@@ -31,7 +31,7 @@ function vocabNeedles(ko: string): string[] {
  * "форма от X (…)", где X — глагол/прилагательное на -다. */
 function isVerbLike(item: VocabItem): boolean {
   return (
-    item.ko.endsWith("다") ||
+    (item.ko.length > 1 && item.ko.endsWith("다")) ||
     /(하|되|해|했|돼|됐)$/.test(item.ko) ||
     /форма от [가-힣]+다/.test(item.translation_ru)
   );

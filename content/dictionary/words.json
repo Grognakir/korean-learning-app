@@ -1985,7 +1985,8 @@
         "Неправильные ㄷ받침"
       ],
       "translations": [
-        "спрашивать"
+        "спрашивать",
+        "закапывать (в землю)"
       ],
       "examples": [
         {
@@ -49169,6 +49170,108 @@
       ],
       "translations": [
         "салат"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-다",
+      "headword": "다",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "всё, полностью, целиком"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-깎다",
+      "headword": "깎다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "сбавлять (цену), делать скидку; срезать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-얘기",
+      "headword": "얘기",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "разговор, рассказ (разговорное от 이야기)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-소식",
+      "headword": "소식",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "новость, известие"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-싣다",
+      "headword": "싣다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Неправильные ㄷ받침"
+      ],
+      "translations": [
+        "грузить, погружать"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-예술회관",
+      "headword": "예술회관",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "дом искусств, концертный зал"
       ],
       "examples": [],
       "notes": [],
