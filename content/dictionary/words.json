@@ -10967,7 +10967,8 @@
         "Прилагательные"
       ],
       "translations": [
-        "правдивый, настоящий"
+        "правдивый, настоящий",
+        "очень, действительно (разг.)"
       ],
       "examples": [
         {
@@ -13257,7 +13258,8 @@
         "Фрукты"
       ],
       "translations": [
-        "груша"
+        "груша",
+        "корабль, лодка"
       ],
       "examples": [
         {
@@ -38554,7 +38556,8 @@
         "Счётные слова"
       ],
       "translations": [
-        "час (продолжительность)"
+        "час (продолжительность)",
+        "время"
       ],
       "examples": [
         {
@@ -48738,6 +48741,176 @@
       ],
       "translations": [
         "думать; размышлять"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-닭갈비",
+      "headword": "닭갈비",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "тхалькальби (острая курица с овощами, жареная на сковороде)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-공기",
+      "headword": "공기",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "воздух"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-시내",
+      "headword": "시내",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "центр города, город (в отличие от пригорода)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-한식당",
+      "headword": "한식당",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "ресторан корейской кухни"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-설",
+      "headword": "설",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "Соллаль, Новый год по лунному календарю"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-추석",
+      "headword": "추석",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "Чхусок, праздник осеннего урожая (15-е число 8-го лунного месяца)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-음력",
+      "headword": "음력",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "лунный календарь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-윷놀이",
+      "headword": "윷놀이",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "юннори (традиционная корейская настольная игра с палочками)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-송편",
+      "headword": "송편",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "сонпхён (рисовые пирожки, которые едят на Чхусок)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-성묘",
+      "headword": "성묘",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "посещение могил предков"
       ],
       "examples": [],
       "notes": [],
