@@ -5732,7 +5732,8 @@
         "Глаголы"
       ],
       "translations": [
-        "вешать"
+        "вешать",
+        "звонить (전화를 걸다)"
       ],
       "examples": [
         {
@@ -48997,6 +48998,108 @@
       ],
       "translations": [
         "расчёсывать, причёсывать (волосы)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-시험공부",
+      "headword": "시험공부",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "подготовка к экзамену"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-초대장",
+      "headword": "초대장",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "приглашение (письменное)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-양말",
+      "headword": "양말",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "носки"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-덮밥",
+      "headword": "덮밥",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "дот-бап (рис с мясом/овощами/рыбой сверху)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-수산",
+      "headword": "수산",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "рыбное хозяйство, морепродукты (в составе слов: 수산물, 수산 시장)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-짜리",
+      "headword": "짜리",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "стоимостью, номиналом (суффикс: 1,500원짜리 — за 1 500 вон)"
       ],
       "examples": [],
       "notes": [],
