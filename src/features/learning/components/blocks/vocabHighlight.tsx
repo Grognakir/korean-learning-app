@@ -42,6 +42,9 @@ const TOKEN_BREAK = /[\s/.,?!:;"'“”‘’()〈〉~…]/;
 // (не "기", которое чаще часть слова: 감기, 빨리, 오위노...).
 const STEM_ENDINGS = /^[아어여았었였으세셨시겠고서지면는은을게요야려라니며]/;
 const HADA_FORMS = /^[하해했할합한드]/;
+// Односложное существительное — слово целиком, только если дальше конец слова
+// или частица (눈이, 눈썰매 — уже другое слово; 이번 — не 이 «зуб»).
+const NOUN_FOLLOWERS = /^[이가은는을를에의도와과로만께서랑마까부처하입예]/;
 
 /** Чип обязан покрывать слово целиком, а не только основу: докручивает
  * конец совпадения до границы слова (반갑 → 반갑습니다). Существительное
@@ -70,6 +73,13 @@ function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
         if (needle.length === 1 && start > 0 && /[가-힣]/.test(text[start - 1])) {
           from = start + 1;
           continue;
+        }
+        if (needle.length === 1 && !isVerbLike(item)) {
+          const following = text[start + 1];
+          if (following !== undefined && !TOKEN_BREAK.test(following) && !NOUN_FOLLOWERS.test(following)) {
+            from = start + 1;
+            continue;
+          }
         }
         const stemOnly = needle !== item.ko && item.ko.endsWith("다") && needle.length === 1;
         if (stemOnly) {

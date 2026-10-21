@@ -615,7 +615,8 @@
         "Глаголы"
       ],
       "translations": [
-        "вешать трубку, обрывать (связь)"
+        "вешать трубку, обрывать (связь)",
+        "бросать (привычку), прекращать"
       ],
       "examples": [
         {
@@ -48979,6 +48980,23 @@
       ],
       "translations": [
         "особенно"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-빗다",
+      "headword": "빗다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "расчёсывать, причёсывать (волосы)"
       ],
       "examples": [],
       "notes": [],

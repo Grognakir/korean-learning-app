@@ -171,3 +171,12 @@ it("чип покрывает слово целиком вместе с окон
   expect(whole("오위노 씨는요?")).toBeNull();
   expect(whole("오면 전화하세요.")).toBe("오면");
 });
+
+it("односложное существительное не совпадает с началом другого слова", () => {
+  const items = [{ ko: "이", translation_ru: "зуб" }, { ko: "눈", translation_ru: "глаз" }];
+  expect(vocabKeysInText("이번 방학에 가요.", items)).toEqual([]);
+  expect(vocabKeysInText("눈썰매를 타요.", items)).toEqual([]);
+  expect(vocabKeysInText("이를 닦습니다.", items)).toEqual(["이"]);
+  expect(vocabKeysInText("눈이 커요.", items)).toEqual(["눈"]);
+  expect(vocabKeysInText("눈", items)).toEqual(["눈"]);
+});
