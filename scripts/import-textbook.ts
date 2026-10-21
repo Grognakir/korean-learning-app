@@ -60,6 +60,11 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
   },
 };
 
+// 1급 (새인하한국어1): урок N → путь к JSON и аудиотреки (101…164 идут по 4 на урок).
+const LEVEL1_LESSONS: Record<number, { path: string; audio: number[] }> = {
+  1: { path: join(LESSON_DIR, "lesson-01.json"), audio: [101, 102, 103, 104] },
+};
+
 const PLAN = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
 const TEXTBOOK_2 = { slug: "inha-2", level: 2, title: "새인하한국어2" };
@@ -196,7 +201,39 @@ async function uploadLesson2Audio(tracks: number[]) {
   }
 }
 
+async function uploadLevel1Audio(tracks: number[]) {
+  for (const track of tracks) {
+    await uploadAsset(
+      join(REFERENCE_DIR, `inha_book_audio/1급_주교재/${track}.mp3`),
+      `inha_book_1/audio/${track}.mp3`,
+      "audio/mpeg",
+    );
+  }
+}
+
 async function main() {
+  for (const lessonNumber of Object.keys(LEVEL1_LESSONS).map(Number)) {
+    if (!process.argv.includes(`--k1-lesson-${lessonNumber}-only`)) continue;
+
+    const { data: textbook1, error: textbookError } = await supabase
+      .from("textbooks")
+      .select("id")
+      .eq("slug", TEXTBOOK.slug)
+      .single();
+    if (textbookError) throw textbookError;
+
+    // page_index сквозной: считаем страницы всех предыдущих уроков 1급.
+    let startIndex = 0;
+    for (let n = 1; n < lessonNumber; n++) {
+      const previous: LessonFile = JSON.parse(readFileSync(LEVEL1_LESSONS[n].path, "utf-8"));
+      startIndex += previous.pages.length;
+    }
+    await importLesson(textbook1.id, LEVEL1_LESSONS[lessonNumber].path, startIndex);
+    await uploadLevel1Audio(LEVEL1_LESSONS[lessonNumber].audio);
+    console.log("Готово.");
+    return;
+  }
+
   for (const lessonNumber of [7, 8, 9]) {
     if (!process.argv.includes(`--lesson-${lessonNumber}-only`)) continue;
 
@@ -512,7 +549,14 @@ async function main() {
     .single();
   if (textbook2Error) throw textbook2Error;
 
-  await importLesson(textbook.id, join(LESSON_DIR, "lesson-01.json"), 0);
+  let textbook1NextIndex = 0;
+  for (const lessonNumber of Object.keys(LEVEL1_LESSONS).map(Number)) {
+    textbook1NextIndex = await importLesson(
+      textbook.id,
+      LEVEL1_LESSONS[lessonNumber].path,
+      textbook1NextIndex,
+    );
+  }
   const textbook2Lesson1NextIndex = await importLesson(
     textbook2.id,
     join(LESSON_DIR_2, "lesson-01.json"),
@@ -562,11 +606,7 @@ async function main() {
     "inha_book_1/illustration_0_handshake.png",
     "image/png",
   );
-  await uploadAsset(
-    join(REFERENCE_DIR, "inha_book_audio/1급_주교재/101.mp3"),
-    "inha_book_1/audio/101.mp3",
-    "audio/mpeg",
-  );
+  await uploadLevel1Audio(Object.values(LEVEL1_LESSONS).flatMap((lesson) => lesson.audio));
 
   // Флаги для таблицы "나라 이름" (준비하기 1) — уменьшенные копии
   // (макс. сторона 200px) в img/flags/, оригиналы в исходном

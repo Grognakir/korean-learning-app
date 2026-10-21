@@ -20,7 +20,8 @@ function vocabNeedles(ko: string): string[] {
     // (설명하다→설명해, 시작하다→시작해...) — в отличие от предыдущей
     // заготовки это не догадка, а формальное правило корейского.
     if (stem.endsWith("하")) {
-      needles.push(`${stem.slice(0, -1)}해`);
+      const base = stem.slice(0, -1);
+      needles.push(`${base}해`, `${base}합`, `${base}했`, `${base}할`);
     }
   }
   return needles.sort((a, b) => b.length - a.length);

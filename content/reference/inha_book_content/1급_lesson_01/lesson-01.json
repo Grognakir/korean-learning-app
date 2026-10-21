@@ -6,7 +6,7 @@
     {
       "page_number": null,
       "page_role": "lesson_opening",
-      "source_photo": "photo_1",
+      "source_photo": "IMG_0947",
       "blocks": [
         {
           "type": "lesson_toc",
@@ -41,17 +41,17 @@
               "items": [
                 {
                   "label": "자기소개하기",
-                  "block_ref": null,
+                  "block_ref": "text-introduction-dialogue",
                   "label_ru": "Представиться"
                 },
                 {
                   "label": "N이/가 아니다",
-                  "block_ref": null,
+                  "block_ref": "grammar-4",
                   "label_ru": "N이/가 아니다 (не является N)"
                 },
                 {
                   "label": "N도",
-                  "block_ref": null,
+                  "block_ref": "grammar-5",
                   "label_ru": "Частица N도 (тоже)"
                 }
               ]
@@ -61,7 +61,7 @@
               "items": [
                 {
                   "label": "자기소개하기",
-                  "block_ref": null,
+                  "block_ref": "text-speaking-summary",
                   "label_ru": "Представиться"
                 }
               ]
@@ -71,7 +71,7 @@
               "items": [
                 {
                   "label": "자기소개를 듣고 말하기",
-                  "block_ref": null,
+                  "block_ref": "listening-introduction",
                   "label_ru": "Слушать и говорить о знакомстве"
                 }
               ]
@@ -81,7 +81,7 @@
               "items": [
                 {
                   "label": "친구를 소개하는 글을 읽고 말하기",
-                  "block_ref": null,
+                  "block_ref": "reading-friends",
                   "label_ru": "Читать и говорить: рассказ о друге"
                 }
               ]
@@ -91,7 +91,7 @@
               "items": [
                 {
                   "label": "친구를 소개하는 글 쓰기",
-                  "block_ref": null,
+                  "block_ref": "writing-friends",
                   "label_ru": "Написать рассказ о друге"
                 }
               ]
@@ -101,7 +101,7 @@
               "items": [
                 {
                   "label": "머리를 숙이고 인사하기",
-                  "block_ref": null,
+                  "block_ref": "text-culture-bow",
                   "label_ru": "Поклон при приветствии"
                 }
               ]
@@ -113,7 +113,7 @@
     {
       "page_number": 10,
       "page_role": "content",
-      "source_photo": "photo_2",
+      "source_photo": "IMG_0948",
       "blocks": [
         {
           "id": "text-greeting-dialogue",
@@ -294,7 +294,7 @@
     {
       "page_number": 11,
       "page_role": "content",
-      "source_photo": "photo_3",
+      "source_photo": "IMG_0949",
       "blocks": [
         {
           "id": "table-country-names",
@@ -437,7 +437,7 @@
     {
       "page_number": 12,
       "page_role": "content",
-      "source_photo": "photo_4",
+      "source_photo": "IMG_0950",
       "blocks": [
         {
           "id": "grammar-1",
@@ -577,7 +577,7 @@
     {
       "page_number": 13,
       "page_role": "content",
-      "source_photo": "photo_5",
+      "source_photo": "IMG_0951",
       "blocks": [
         {
           "id": "grammar-2",
@@ -618,7 +618,7 @@
     {
       "page_number": 14,
       "page_role": "content",
-      "source_photo": "photo_6",
+      "source_photo": "IMG_0952",
       "blocks": [
         {
           "id": "exercise-2a",
@@ -729,6 +729,996 @@
           "template": [
             "가: {0}는 {1} 사람입니까?",
             "나: 네, 저는 {2} 사람입니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 15,
+      "page_role": "content",
+      "source_photo": "IMG_0953",
+      "blocks": [
+        {
+          "id": "text-introduction-dialogue",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "자기소개하기",
+          "title_ru": "Представиться",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "102",
+          "speakers": [
+            "아멜리",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "안녕하세요? 저는 아멜리입니다. 이름이 무엇입니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "제 이름은 파하드입니다. 사우디에서 왔습니다. 아멜리 씨도 사우디 사람입니까?",
+              "emphasized": [
+                "도"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "아니요, 저는 사우디 사람이 아닙니다. 프랑스 사람입니다. 파하드 씨는 선생님입니까?",
+              "emphasized": [
+                "이 아닙니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "아니요, 저는 선생님이 아닙니다. 학생입니다.",
+              "emphasized": [
+                "이 아닙니다"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "저도 학생입니다. 만나서 반갑습니다.",
+              "emphasized": [
+                "도"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "만나서 반갑습니다."
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-introduction-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "선생님",
+              "translation_ru": "учитель"
+            },
+            {
+              "ko": "아니요",
+              "translation_ru": "нет"
+            },
+            {
+              "ko": "학생",
+              "translation_ru": "ученик, студент"
+            },
+            {
+              "ko": "의사",
+              "translation_ru": "врач"
+            },
+            {
+              "ko": "영어",
+              "translation_ru": "английский язык"
+            },
+            {
+              "ko": "회사원",
+              "translation_ru": "офисный сотрудник"
+            },
+            {
+              "ko": "기자",
+              "translation_ru": "журналист"
+            },
+            {
+              "ko": "요리사",
+              "translation_ru": "повар"
+            },
+            {
+              "ko": "간호사",
+              "translation_ru": "медсестра, медбрат"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 16,
+      "page_role": "content",
+      "source_photo": "IMG_0954",
+      "blocks": [
+        {
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "N이/가 아니다",
+          "section": "4",
+          "explanation": "Отрицательная форма связки — «это не N». Перед 아니다 существительное оформляется частицей 이/가, а не 을/를.",
+          "examples": [
+            "가: 왕루 씨는 몽골 사람입니까?\n나: 아니요, 저는 몽골 사람이 아닙니다. 중국 사람입니다.",
+            "가: 파하드 씨는 의사입니까?\n나: 아니요, 저는 의사가 아닙니다. 학생입니다."
+          ],
+          "rules": [
+            "N 받침 есть → N이 아니다",
+            "N 받침 нет → N가 아니다",
+            "перед 아니다 существительное берёт частицу 이/가 (не 은/는)"
+          ]
+        },
+        {
+          "id": "grammar-5",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "N도",
+          "section": "5",
+          "explanation": "Значит «тоже, также».",
+          "examples": [
+            "가: 저는 중국 사람입니다.\n나: 저도 중국 사람입니다.",
+            "가: 저는 영어 선생님입니다. 로빈 씨도 영어 선생님입니까?\n나: 네, 저도 영어 선생님입니다."
+          ],
+          "rules": [
+            "N도 ставится на том слове, которое получает значение «тоже» — одна форма (받침 роли не играет)",
+            "заменяет частицы 은/는, 이/가, 을/를"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 17,
+      "page_role": "content",
+      "source_photo": "IMG_0955",
+      "blocks": [
+        {
+          "id": "exercise-4a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "왕루",
+              "자르갈 / 왕루 / 몽골",
+              "몽골 / 중국"
+            ],
+            "cues": [
+              "왕루",
+              "자르갈 / 왕루 / 몽골",
+              "몽골 / 중국"
+            ],
+            "dialogue": [
+              "가: 안녕하세요? 저는 왕루입니다.",
+              "나: 네, 안녕하세요? 저는 자르갈입니다. 왕루 씨는 몽골 사람입니까?",
+              "가: 아니요, 저는 몽골 사람이 아닙니다. 중국 사람입니다."
+            ],
+            "emphasis": [
+              [
+                "안녕하세요"
+              ],
+              [
+                "네,",
+                "안녕하세요",
+                "씨는",
+                "입니까"
+              ],
+              [
+                "아니요,",
+                "이 아닙니다",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "아멜리",
+                "로빈 / 아멜리 / 일본",
+                "일본 / 프랑스"
+              ],
+              "answers": [
+                "아멜리",
+                "로빈",
+                "아멜리",
+                "일본",
+                "프랑스"
+              ]
+            },
+            {
+              "given": [
+                "최수지",
+                "오위노 / 최수지 / 중국",
+                "중국 / 한국"
+              ],
+              "answers": [
+                "최수지",
+                "오위노",
+                "최수지",
+                "중국",
+                "한국"
+              ]
+            },
+            {
+              "given": [
+                "자르갈",
+                "흐엉 / 자르갈 / 중국",
+                "중국 / 몽골"
+              ],
+              "answers": [
+                "자르갈",
+                "흐엉",
+                "자르갈",
+                "중국",
+                "몽골"
+              ]
+            }
+          ],
+          "template": [
+            "가: 안녕하세요? 저는 {0}입니다.",
+            "나: 네, 안녕하세요? 저는 {1}입니다. {2} 씨는 {3} 사람입니까?",
+            "가: 아니요, 저는 {3} 사람이 아닙니다. {4} 사람입니다."
+          ]
+        },
+        {
+          "id": "exercise-4b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "의사",
+              "의사 / 학생"
+            ],
+            "cues": [
+              "의사",
+              "의사 / 학생"
+            ],
+            "dialogue": [
+              "가: 안녕하세요? 저는 파하드입니다.",
+              "나: 네, 안녕하세요? 저는 아멜리입니다. 파하드 씨는 의사입니까?",
+              "가: 아니요, 저는 의사가 아닙니다. 학생입니다."
+            ],
+            "emphasis": [
+              [
+                "안녕하세요"
+              ],
+              [
+                "네,",
+                "안녕하세요",
+                "씨는",
+                "입니까"
+              ],
+              [
+                "아니요,",
+                "아닙니다",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "회사원",
+                "회사원 / 의사"
+              ],
+              "answers": [
+                "회사원",
+                "회사원이",
+                "의사"
+              ]
+            },
+            {
+              "given": [
+                "기자",
+                "기자 / 요리사"
+              ],
+              "answers": [
+                "기자",
+                "기자가",
+                "요리사"
+              ]
+            },
+            {
+              "given": [
+                "요리사",
+                "요리사 / 선생님"
+              ],
+              "answers": [
+                "요리사",
+                "요리사가",
+                "선생님"
+              ]
+            }
+          ],
+          "template": [
+            "가: 안녕하세요? 저는 파하드입니다.",
+            "나: 네, 안녕하세요? 저는 아멜리입니다. 파하드 씨는 {0}입니까?",
+            "가: 아니요, 저는 {1} 아닙니다. {2}입니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 18,
+      "page_role": "content",
+      "source_photo": "IMG_0956",
+      "blocks": [
+        {
+          "id": "exercise-5a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "자르갈 / 중국",
+              "중국 / 몽골",
+              "몽골"
+            ],
+            "cues": [
+              "자르갈 / 중국",
+              "중국 / 몽골",
+              "몽골"
+            ],
+            "dialogue": [
+              "가: 자르갈 씨는 중국 사람입니까?",
+              "나: 아니요, 저는 중국 사람이 아닙니다. 저는 몽골 사람입니다.",
+              "가: 저도 몽골 사람입니다."
+            ],
+            "emphasis": [
+              [
+                "씨는",
+                "입니까"
+              ],
+              [
+                "아니요,",
+                "이 아닙니다",
+                "저는",
+                "입니다"
+              ],
+              [
+                "저도",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "왕루 / 러시아",
+                "러시아 / 중국",
+                "중국"
+              ],
+              "answers": [
+                "왕루",
+                "러시아",
+                "중국"
+              ]
+            },
+            {
+              "given": [
+                "흐엉 / 몽골",
+                "몽골 / 베트남",
+                "베트남"
+              ],
+              "answers": [
+                "흐엉",
+                "몽골",
+                "베트남"
+              ]
+            },
+            {
+              "given": [
+                "파하드 / 케냐",
+                "케냐 / 사우디",
+                "사우디"
+              ],
+              "answers": [
+                "파하드",
+                "케냐",
+                "사우디"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 씨는 {1} 사람입니까?",
+            "나: 아니요, 저는 {1} 사람이 아닙니다. 저는 {2} 사람입니다.",
+            "가: 저도 {2} 사람입니다."
+          ]
+        },
+        {
+          "id": "exercise-5b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "아멜리 / 의사",
+              "의사"
+            ],
+            "cues": [
+              "아멜리 / 의사",
+              "의사"
+            ],
+            "dialogue": [
+              "가: 아멜리 씨는 의사입니까?",
+              "나: 아니요, 저는 의사가 아닙니다. 저는 학생입니다.",
+              "가: 저도 학생입니다."
+            ],
+            "emphasis": [
+              [
+                "씨는",
+                "입니까"
+              ],
+              [
+                "아니요,",
+                "아닙니다",
+                "저는",
+                "입니다"
+              ],
+              [
+                "저도",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "왕루 / 선생님",
+                "선생님"
+              ],
+              "answers": [
+                "왕루",
+                "선생님",
+                "선생님이"
+              ]
+            },
+            {
+              "given": [
+                "흐엉 / 간호사",
+                "간호사"
+              ],
+              "answers": [
+                "흐엉",
+                "간호사",
+                "간호사가"
+              ]
+            },
+            {
+              "given": [
+                "자르갈 / 회사원",
+                "회사원"
+              ],
+              "answers": [
+                "자르갈",
+                "회사원",
+                "회사원이"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 씨는 {1}입니까?",
+            "나: 아니요, 저는 {2} 아닙니다. 저는 학생입니다.",
+            "가: 저도 학생입니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 19,
+      "page_role": "content",
+      "source_photo": "IMG_0957",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "이름",
+              "나라",
+              "직업"
+            ],
+            "rows": [
+              [
+                "왕루",
+                "몽골 / 중국 (×)/(○)",
+                "선생님 / 학생 (×)/(○)"
+              ],
+              [
+                "흐엉",
+                "베트남",
+                "학생"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "흐엉"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "안녕하십니까?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 안녕하세요? 제 이름은 흐엉입니다. 이름이 무엇입니까?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 왕루입니다. 흐엉 씨는 어느 나라 사람입니까?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "저는 베트남 사람입니다. 왕루 씨는 몽골 사람입니까?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "아니요, 저는 몽골 사람이 아닙니다. 중국에서 왔습니다.",
+              "emphasized": [
+                "이 아닙니다"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "왕루 씨는 선생님입니까?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "아니요, 저는 선생님이 아닙니다. 학생입니다. 흐엉 씨도 학생입니까?",
+              "emphasized": [
+                "이 아닙니다",
+                "도"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 저도 학생입니다. 만나서 반갑습니다.",
+              "emphasized": [
+                "도"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "만나서 반갑습니다."
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "",
+              "이름",
+              "나라",
+              "직업"
+            ],
+            "rows": [
+              [
+                "1)",
+                "자르갈",
+                "중국 / 몽골 (×)/(○)",
+                "기자 / 학생 (×)/(○)"
+              ],
+              [
+                "",
+                "아멜리",
+                "프랑스",
+                "학생"
+              ],
+              [
+                "2)",
+                "나",
+                "",
+                ""
+              ],
+              [
+                "",
+                "친구",
+                "",
+                ""
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 20,
+      "page_role": "content",
+      "source_photo": "IMG_0958",
+      "blocks": [
+        {
+          "id": "listening-introduction",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "자기소개를 듣고 말하기",
+          "title_ru": "Послушать и обсудить знакомство",
+          "audio_id": "103",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "왕루",
+                "text": "안녕하십니까? 처음 뵙겠습니다. 저는 왕루입니다."
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 안녕하세요? 처음 뵙겠습니다. 제 이름은 파하드입니다. 왕루 씨는 어디에서 왔습니까?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "저는 중국에서 왔습니다. 파하드 씨도 중국 사람입니까?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아니요, 저는 중국 사람이 아닙니다. 사우디 사람입니다."
+              },
+              {
+                "speaker": "왕루",
+                "text": "파하드 씨는 회사원입니까?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아니요, 저는 회사원이 아닙니다. 학생입니다."
+              },
+              {
+                "speaker": "왕루",
+                "text": "저도 학생입니다. 만나서 반갑습니다."
+              },
+              {
+                "speaker": "파하드",
+                "text": "만나서 반갑습니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что делают эти люди? Расскажите."
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "table",
+              "prompt": "나라와 직업을 쓰십시오.",
+              "prompt_ru": "Запишите страну и профессию.",
+              "table": {
+                "columns": [
+                  "나라",
+                  "직업"
+                ],
+                "rows": [
+                  "왕루",
+                  "파하드"
+                ]
+              }
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "왕루 씨, 파하드 씨는 처음 만납니다.",
+                "왕루 씨는 중국 사람이 아닙니다.",
+                "파하드 씨는 사우디 사람이 아닙니다.",
+                "왕루 씨, 파하드 씨는 회사원입니다."
+              ],
+              "correct": 0
+            }
+          ],
+          "followup": "친구들에게 자기소개를 해 보십시오.",
+          "followup_ru": "Представьтесь своим друзьям."
+        }
+      ]
+    },
+    {
+      "page_number": 21,
+      "page_role": "content",
+      "source_photo": "IMG_0959",
+      "blocks": [
+        {
+          "id": "text-reading-friends",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что делают эти люди? Расскажите.",
+          "lines": [
+            {
+              "text": "안녕하십니까? 만나서 반갑습니다. 제 이름은 왕루입니다. 저는 중국에서 왔습니다. 저는 학생입니다."
+            },
+            {
+              "text": "아멜리 씨는 제 친구입니다. 아멜리 씨는 중국 사람이 아닙니다. 프랑스에서 왔습니다. 자르갈 씨도 제 친구입니다. 자르갈 씨는 몽골 사람입니다. 자르갈 씨도 학생입니다."
+            },
+            {
+              "text": "모두 우리 반 친구입니다."
+            }
+          ]
+        },
+        {
+          "id": "reading-friends",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "친구를 소개하는 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о друзьях и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "이름",
+                "나라",
+                "소개",
+                "공부"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "왕루 씨는 선생님입니다.",
+                "왕루 씨는 중국에서 왔습니다.",
+                "자르갈 씨는 프랑스 사람입니다.",
+                "아멜리 씨는 우리 반 친구가 아닙니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 친구를 소개해 보십시오.",
+              "prompt_ru": "Представьте своих друзей."
+            }
+          ]
+        },
+        {
+          "id": "vocab-reading-friends",
+          "toc_section": "읽고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-friends",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "친구",
+              "translation_ru": "друг, подруга"
+            },
+            {
+              "ko": "모두",
+              "translation_ru": "все, всё"
+            },
+            {
+              "ko": "우리",
+              "translation_ru": "мы; наш"
+            },
+            {
+              "ko": "반",
+              "translation_ru": "класс, группа"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 22,
+      "page_role": "content",
+      "source_photo": "IMG_0960",
+      "blocks": [
+        {
+          "id": "writing-friends",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "친구를 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст, представляющий друзей.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "이름",
+              "explanation": "Имя каждого из друзей.",
+              "questions": []
+            },
+            {
+              "stage": "나라",
+              "explanation": "Из какой страны каждый друг.",
+              "questions": []
+            },
+            {
+              "stage": "직업",
+              "explanation": "Кем каждый друг работает или учится.",
+              "questions": []
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    },
+    {
+      "page_number": 23,
+      "page_role": "content",
+      "source_photo": "IMG_0961",
+      "blocks": [
+        {
+          "id": "text-culture-bow",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "머리를 숙이고 인사하기",
+          "title_ru": "Здороваться, наклонив голову",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что делают эти люди? Расскажите.",
+          "lines": [
+            {
+              "text": "친구를 만납니다.\n“안녕하세요?”\n눈을 보고 인사합니다.\n\n선생님을 만납니다.\n“안녕하십니까?”\n머리를 숙이고 인사합니다."
+            },
+            {
+              "text": "1) 친구를 만납니다. 어떻게 인사합니까?",
+              "translation_ru": "Вы встречаете друга. Как вы здороваетесь?"
+            },
+            {
+              "text": "2) 선생님을 만납니다. 어떻게 인사합니까?",
+              "translation_ru": "Вы встречаете учителя. Как вы здороваетесь?"
+            },
+            {
+              "text": "3) 여러분 나라에서는 어떻게 인사합니까? 이야기해 보십시오.",
+              "translation_ru": "Как здороваются в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-bow",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "눈",
+              "translation_ru": "глаз"
+            },
+            {
+              "ko": "보다",
+              "translation_ru": "смотреть, видеть"
+            },
+            {
+              "ko": "인사하다",
+              "translation_ru": "здороваться, приветствовать"
+            },
+            {
+              "ko": "머리",
+              "translation_ru": "голова"
+            },
+            {
+              "ko": "숙이다",
+              "translation_ru": "наклонять (голову)"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-1a",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "‘ㅔ’",
+          "audio_id": "104",
+          "examples": [
+            {
+              "text": "제",
+              "translation_ru": "я (скромная форма); мой"
+            },
+            {
+              "text": "게",
+              "translation_ru": "краб"
+            },
+            {
+              "text": "가게",
+              "translation_ru": "магазин"
+            },
+            {
+              "text": "체하다",
+              "translation_ru": "расстроить желудок (от еды)"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-1b",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "‘ㅐ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "새",
+              "translation_ru": "птица"
+            },
+            {
+              "text": "학생",
+              "translation_ru": "ученик, студент"
+            },
+            {
+              "text": "노래",
+              "translation_ru": "песня"
+            },
+            {
+              "text": "배우다",
+              "translation_ru": "учиться"
+            },
+            {
+              "text": "채소",
+              "translation_ru": "овощи"
+            }
           ]
         }
       ]
