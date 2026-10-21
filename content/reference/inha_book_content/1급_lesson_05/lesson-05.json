@@ -1,0 +1,2010 @@
+{
+  "textbook_id": "inha_book_1",
+  "lesson_number": 5,
+  "title": "하루 일과",
+  "pages": [
+    {
+      "page_number": null,
+      "page_role": "lesson_opening",
+      "source_photo": "IMG_1008",
+      "blocks": [
+        {
+          "type": "lesson_toc",
+          "sections": [
+            {
+              "key": "준비하기 1",
+              "items": [
+                {
+                  "label": "하루 일과를 설명하기",
+                  "block_ref": "text-daily-dialogue",
+                  "label_ru": "Объяснять распорядок дня"
+                },
+                {
+                  "label": "V-아/어/여요①, N이에/예요",
+                  "block_ref": "grammar-1",
+                  "label_ru": "V-아/어/여요①, N이에/예요 (разговорно-вежливый стиль)"
+                },
+                {
+                  "label": "수③",
+                  "block_ref": "grammar-2",
+                  "label_ru": "Числительные③ (время)"
+                }
+              ]
+            },
+            {
+              "key": "준비하기 2",
+              "items": [
+                {
+                  "label": "시간 정보를 묻기",
+                  "block_ref": "text-time-dialogue",
+                  "label_ru": "Спрашивать о времени"
+                },
+                {
+                  "label": "N부터 N까지",
+                  "block_ref": "grammar-3",
+                  "label_ru": "N부터 N까지 («с … до …»)"
+                },
+                {
+                  "label": "안 V / V-지 않다",
+                  "block_ref": "grammar-4",
+                  "label_ru": "안 V / V-지 않다 (отрицание)"
+                }
+              ]
+            },
+            {
+              "key": "말하기",
+              "items": [
+                {
+                  "label": "하루의 일과를 묻고 답하기",
+                  "block_ref": "text-speaking-summary",
+                  "label_ru": "Спрашивать и рассказывать о распорядке дня"
+                }
+              ]
+            },
+            {
+              "key": "듣고 말하기",
+              "items": [
+                {
+                  "label": "수업 정보를 듣고 말하기",
+                  "block_ref": "listening-class-info",
+                  "label_ru": "Послушать и обсудить информацию о занятиях"
+                }
+              ]
+            },
+            {
+              "key": "읽고 말하기",
+              "items": [
+                {
+                  "label": "하루 일과를 읽고 말하기",
+                  "block_ref": "reading-daily-schedule",
+                  "label_ru": "Прочитать о распорядке дня и обсудить"
+                }
+              ]
+            },
+            {
+              "key": "쓰기",
+              "items": [
+                {
+                  "label": "하루 일과를 소개하는 글 쓰기",
+                  "block_ref": "writing-daily-schedule",
+                  "label_ru": "Написать текст о распорядке дня"
+                }
+              ]
+            },
+            {
+              "key": "문화 이해하기",
+              "items": [
+                {
+                  "label": "하루를 정리하기",
+                  "block_ref": "text-culture-day-plan",
+                  "label_ru": "Подводить итоги дня"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 74,
+      "page_role": "content",
+      "source_photo": "IMG_1009",
+      "blocks": [
+        {
+          "id": "text-daily-dialogue",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "하루 일과를 설명하기",
+          "title_ru": "Объяснять распорядок дня",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "117",
+          "speakers": [
+            "자르갈",
+            "아멜리"
+          ],
+          "lines": [
+            {
+              "speaker": "자르갈",
+              "text": "아멜리 씨, 몇 시에 학교에 와요?",
+              "emphasized": [
+                "시에",
+                "와요"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "저는 8시 30분에 와요.",
+              "emphasized": [
+                "에 와요"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "한국어 수업은 몇 시에 끝나요?",
+              "emphasized": [
+                "끝나요"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "1시에 끝나요.",
+              "emphasized": [
+                "끝나요"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "그리고 무엇을 해요?",
+              "emphasized": [
+                "해요"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "도서관에 가요. 그리고 숙제를 해요.",
+              "emphasized": [
+                "가요",
+                "해요"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "몇 시에 집에 가요?",
+              "emphasized": [
+                "가요"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "오후 5시에 집에 가요.",
+              "emphasized": [
+                "가요"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-daily-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "시",
+              "translation_ru": "час"
+            },
+            {
+              "ko": "분",
+              "translation_ru": "минута"
+            },
+            {
+              "ko": "하루",
+              "translation_ru": "один день, сутки"
+            },
+            {
+              "ko": "일과",
+              "translation_ru": "распорядок дня, дела на день"
+            },
+            {
+              "ko": "정각",
+              "translation_ru": "ровно (о времени)"
+            },
+            {
+              "ko": "반",
+              "translation_ru": "половина (N시 반 — полвторого и т.п.)"
+            },
+            {
+              "ko": "전",
+              "translation_ru": "до, перед; раньше"
+            },
+            {
+              "ko": "받다",
+              "translation_ru": "получать; принимать (звонок)"
+            },
+            {
+              "ko": "자전거",
+              "translation_ru": "велосипед"
+            },
+            {
+              "ko": "날씨",
+              "translation_ru": "погода"
+            },
+            {
+              "ko": "수박",
+              "translation_ru": "арбуз"
+            },
+            {
+              "ko": "소설책",
+              "translation_ru": "роман, художественная книга"
+            },
+            {
+              "ko": "자정",
+              "translation_ru": "полночь"
+            },
+            {
+              "ko": "정오",
+              "translation_ru": "полдень"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 75,
+      "page_role": "content",
+      "source_photo": "IMG_1010",
+      "blocks": [
+        {
+          "id": "grammar-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "V-아/어/여요①, N이에/예요",
+          "section": "1",
+          "explanation": "Основной разговорно-вежливый стиль настоящего времени (V-아/어/여요) и связка «быть» в том же стиле (N이에요/예요).",
+          "examples": [
+            "1) 가: 무엇을 해요?\n나: 책을 읽어요.",
+            "2) 가: 운동장이 어때요?\n나: 운동장이 넓어요.",
+            "3) 가: 오늘이 무슨 요일이에요?\n나: 오늘은 월요일이에요."
+          ],
+          "rules": [
+            "-아요 — если последняя гласная основы ㅏ или ㅗ: 가다→가요, 오다→와요",
+            "-어요 — во всех остальных случаях: 먹다→먹어요, 읽다→읽어요, 마시다→마셔요",
+            "하다 → 해요: 공부하다→공부해요",
+            "N 받침 есть → N이에요",
+            "N 받침 нет → N예요"
+          ]
+        },
+        {
+          "id": "grammar-2",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "수③",
+          "section": "2",
+          "explanation": "Время: часы называют исконно корейскими числительными (한 시, 두 시…), минуты — китайско-корейскими (일 분, 이 분…).",
+          "examples": [
+            "1) 9:00 정각 아홉 시입니다.",
+            "2) 10:43 열 시 사십삼 분이에요.",
+            "3) 5:30 다섯 시 반이에요.",
+            "4) 2:55 세 시 오 분 전입니다."
+          ],
+          "rules": [
+            "시 (часы): 한, 두, 세, 네, 다섯, 여섯, 일곱, 여덟, 아홉, 열, 열한, 열두",
+            "분 (минуты): 일, 이, 삼, 사, 오 … 십, 십일 … — китайско-корейские числа",
+            "정각 — ровно; 반 — половина (:30); N분 전 — без N минут"
+          ]
+        },
+        {
+          "type": "reference_table",
+          "id": "table-hours",
+          "toc_section": "준비하기 1",
+          "title": "시",
+          "title_ru": "Часы",
+          "columns": [
+            "한 시",
+            "두 시",
+            "세 시",
+            "네 시",
+            "다섯 시",
+            "여섯 시",
+            "일곱 시",
+            "여덟 시",
+            "아홉 시",
+            "열 시",
+            "열한 시",
+            "열두 시"
+          ],
+          "translations": [
+            "1 час(а)",
+            "2 час(а)",
+            "3 час(а)",
+            "4 час(а)",
+            "5 час(а)",
+            "6 час(а)",
+            "7 час(а)",
+            "8 час(а)",
+            "9 час(а)",
+            "10 час(а)",
+            "11 час(а)",
+            "12 час(а)"
+          ]
+        },
+        {
+          "type": "reference_table",
+          "id": "table-minutes",
+          "toc_section": "준비하기 1",
+          "title": "분",
+          "title_ru": "Минуты",
+          "columns": [
+            "일 분",
+            "이 분",
+            "삼 분",
+            "사 분",
+            "오 분",
+            "육 분",
+            "칠 분",
+            "팔 분",
+            "구 분",
+            "십 분",
+            "십일 분",
+            "십이 분"
+          ],
+          "translations": [
+            "1 мин.",
+            "2 мин.",
+            "3 мин.",
+            "4 мин.",
+            "5 мин.",
+            "6 мин.",
+            "7 мин.",
+            "8 мин.",
+            "9 мин.",
+            "10 мин.",
+            "11 мин.",
+            "12 мин."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 76,
+      "page_role": "content",
+      "source_photo": "IMG_1011",
+      "blocks": [
+        {
+          "id": "exercise-1a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "빵 / 먹다"
+            ],
+            "cues": [
+              "빵 / 먹다"
+            ],
+            "dialogue": [
+              "가: 뭐 해요?",
+              "나: 빵을 먹어요."
+            ],
+            "emphasis": [
+              [
+                "뭐 해요"
+              ],
+              [
+                "을",
+                "어요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "전화 / 받다"
+              ],
+              "answers": [
+                "전화를 받아요"
+              ]
+            },
+            {
+              "given": [
+                "소설책 / 읽다"
+              ],
+              "answers": [
+                "소설책을 읽어요"
+              ]
+            },
+            {
+              "given": [
+                "자전거 / 타다"
+              ],
+              "answers": [
+                "자전거를 타요"
+              ]
+            },
+            {
+              "given": [
+                "영화 / 보다"
+              ],
+              "answers": [
+                "영화를 봐요"
+              ]
+            }
+          ],
+          "template": [
+            "가: 뭐 해요?",
+            "나: {0}."
+          ]
+        },
+        {
+          "id": "exercise-1b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "음식 / 맛있다"
+            ],
+            "cues": [
+              "음식 / 맛있다"
+            ],
+            "dialogue": [
+              "가: 음식이 어때요?",
+              "나: 음식이 맛있어요."
+            ],
+            "emphasis": [
+              [
+                "이 어때요"
+              ],
+              [
+                "이",
+                "어요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "날씨 / 좋다"
+              ],
+              "answers": [
+                "날씨가",
+                "좋아요"
+              ]
+            },
+            {
+              "given": [
+                "운동장 / 넓다"
+              ],
+              "answers": [
+                "운동장이",
+                "넓어요"
+              ]
+            },
+            {
+              "given": [
+                "방 / 깨끗하다"
+              ],
+              "answers": [
+                "방이",
+                "깨끗해요"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 어때요?",
+            "나: {0} {1}."
+          ]
+        },
+        {
+          "id": "exercise-1c",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "수박"
+            ],
+            "cues": [
+              "수박"
+            ],
+            "dialogue": [
+              "가: 이것이 뭐예요?",
+              "나: 그것은 수박이에요."
+            ],
+            "emphasis": [
+              [
+                "이것이",
+                "뭐예요"
+              ],
+              [
+                "그것은",
+                "이에요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "소설책"
+              ],
+              "answers": [
+                "소설책이에요"
+              ]
+            },
+            {
+              "given": [
+                "신문"
+              ],
+              "answers": [
+                "신문이에요"
+              ]
+            },
+            {
+              "given": [
+                "편지"
+              ],
+              "answers": [
+                "편지예요"
+              ]
+            }
+          ],
+          "template": [
+            "가: 이것이 뭐예요?",
+            "나: 그것은 {0}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 77,
+      "page_role": "content",
+      "source_photo": "IMG_1012",
+      "blocks": [
+        {
+          "id": "exercise-2a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "2:00"
+            ],
+            "cues": [
+              "2:00"
+            ],
+            "dialogue": [
+              "가: 몇 시입니까?",
+              "나: 정각 두 시입니다."
+            ],
+            "emphasis": [
+              [
+                "몇 시입니까"
+              ],
+              [
+                "정각",
+                "시입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "1:00"
+              ],
+              "answers": [
+                "정각 한 시입니다"
+              ]
+            },
+            {
+              "given": [
+                "3:00"
+              ],
+              "answers": [
+                "정각 세 시입니다"
+              ]
+            },
+            {
+              "given": [
+                "5:00"
+              ],
+              "answers": [
+                "정각 다섯 시입니다"
+              ]
+            },
+            {
+              "given": [
+                "12:00 a.m."
+              ],
+              "answers": [
+                "자정입니다"
+              ]
+            },
+            {
+              "given": [
+                "12:00 p.m."
+              ],
+              "answers": [
+                "정오입니다"
+              ]
+            }
+          ],
+          "template": [
+            "가: 몇 시입니까?",
+            "나: {0}."
+          ]
+        },
+        {
+          "id": "exercise-2b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "6:37 a.m."
+            ],
+            "cues": [
+              "6:37 a.m."
+            ],
+            "dialogue": [
+              "가: 지금 몇 시예요?",
+              "나: 오전 여섯 시 삼십칠 분이에요."
+            ],
+            "emphasis": [
+              [
+                "지금 몇 시예요"
+              ],
+              [
+                "오전",
+                "시",
+                "분이에요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "4:27 p.m."
+              ],
+              "answers": [
+                "오후 네 시 이십칠 분이에요"
+              ]
+            },
+            {
+              "given": [
+                "12:46 p.m."
+              ],
+              "answers": [
+                "오후 열두 시 사십육 분이에요"
+              ]
+            },
+            {
+              "given": [
+                "6:52 a.m."
+              ],
+              "answers": [
+                "오전 여섯 시 오십이 분이에요"
+              ]
+            },
+            {
+              "given": [
+                "9:15 p.m."
+              ],
+              "answers": [
+                "오후 아홉 시 십오 분이에요"
+              ]
+            },
+            {
+              "given": [
+                "10:30 a.m."
+              ],
+              "answers": [
+                "오전 열 시 반이에요"
+              ]
+            }
+          ],
+          "template": [
+            "가: 지금 몇 시예요?",
+            "나: {0}."
+          ]
+        },
+        {
+          "id": "exercise-2c",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "12:45"
+            ],
+            "cues": [
+              "12:45"
+            ],
+            "dialogue": [
+              "가: 몇 시 몇 분이에요?",
+              "나: 열두 시 사십오 분이에요. / 한 시 십오 분 전이에요."
+            ],
+            "emphasis": [
+              [
+                "몇 시 몇 분이에요"
+              ],
+              [
+                "시",
+                "분이에요",
+                "전이에요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "4:55"
+              ],
+              "answers": [
+                "네 시 오십오 분이에요",
+                "다섯 시 오 분 전이에요"
+              ]
+            },
+            {
+              "given": [
+                "1:50"
+              ],
+              "answers": [
+                "한 시 오십 분이에요",
+                "두 시 십 분 전이에요"
+              ]
+            },
+            {
+              "given": [
+                "10:45"
+              ],
+              "answers": [
+                "열 시 사십오 분이에요",
+                "열한 시 십오 분 전이에요"
+              ]
+            },
+            {
+              "given": [
+                "8:30"
+              ],
+              "answers": [
+                "여덟 시 삼십 분이에요",
+                "여덟 시 반이에요"
+              ]
+            },
+            {
+              "given": [
+                "5:30"
+              ],
+              "answers": [
+                "다섯 시 삼십 분이에요",
+                "다섯 시 반이에요"
+              ]
+            }
+          ],
+          "template": [
+            "가: 몇 시 몇 분이에요?",
+            "나: {0}. / {1}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 78,
+      "page_role": "content",
+      "source_photo": "IMG_1013",
+      "blocks": [
+        {
+          "id": "text-time-dialogue",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "시간 정보를 묻기",
+          "title_ru": "Спрашивать о времени",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "118",
+          "speakers": [
+            "왕루",
+            "직원"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "수영 수업이 언제부터 시작해요?",
+              "emphasized": [
+                "부터"
+              ]
+            },
+            {
+              "speaker": "직원",
+              "text": "수영 수업은 다음 주 월요일부터 시작합니다.",
+              "emphasized": [
+                "부터"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "몇 시부터 몇 시까지 해요?",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "직원",
+              "text": "오후 7시부터 7시 50분까지 합니다.",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "토요일에도 해요?"
+            },
+            {
+              "speaker": "직원",
+              "text": "아니요, 주말에는 안 합니다.",
+              "emphasized": [
+                "안 합니다"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-time-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "시작하다",
+              "translation_ru": "начинать(ся)"
+            },
+            {
+              "ko": "다음",
+              "translation_ru": "следующий; затем"
+            },
+            {
+              "ko": "주",
+              "translation_ru": "неделя"
+            },
+            {
+              "ko": "직원",
+              "translation_ru": "сотрудник"
+            },
+            {
+              "ko": "일하다",
+              "translation_ru": "работать"
+            },
+            {
+              "ko": "시험",
+              "translation_ru": "экзамен, тест"
+            },
+            {
+              "ko": "보다",
+              "translation_ru": "смотреть; сдавать (экзамен)"
+            },
+            {
+              "ko": "스키",
+              "translation_ru": "лыжи"
+            },
+            {
+              "ko": "테니스",
+              "translation_ru": "теннис"
+            },
+            {
+              "ko": "치다",
+              "translation_ru": "играть (в теннис и т.п.); бить"
+            },
+            {
+              "ko": "주스",
+              "translation_ru": "сок"
+            },
+            {
+              "ko": "요리하다",
+              "translation_ru": "готовить (еду)"
+            },
+            {
+              "ko": "옷",
+              "translation_ru": "одежда"
+            },
+            {
+              "ko": "멀다",
+              "translation_ru": "быть далёким"
+            },
+            {
+              "ko": "비싸다",
+              "translation_ru": "быть дорогим"
+            },
+            {
+              "ko": "편하다",
+              "translation_ru": "быть удобным"
+            },
+            {
+              "ko": "착하다",
+              "translation_ru": "быть добрым (о характере)"
+            },
+            {
+              "ko": "조용하다",
+              "translation_ru": "быть тихим"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 79,
+      "page_role": "content",
+      "source_photo": "IMG_1014",
+      "blocks": [
+        {
+          "id": "grammar-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "N부터 N까지",
+          "section": "3",
+          "explanation": "Начальная и конечная точка периода — «с … до …» (по времени).",
+          "examples": [
+            "1) 가: 한국어 수업은 몇 시부터 몇 시까지 해요?\n나: 오전 9시부터 오후 1시까지 해요.",
+            "2) 가: 언제 수영을 해요?\n나: 월요일부터 금요일까지 해요."
+          ],
+          "rules": [
+            "N부터 — «с / от» (начальная точка), N까지 — «до» (конечная точка)",
+            "одна форма, 받침 роли не играет"
+          ]
+        },
+        {
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "안 V / V-지 않다",
+          "section": "4",
+          "explanation": "Обычное, нейтральное отрицание действия или состояния.",
+          "examples": [
+            "1) 가: 오후에 학교에 가요?\n나: 아니요, 오후에 학교에 안 가요.",
+            "2) 가: 교실이 넓어요?\n나: 아니요, 넓지 않아요."
+          ],
+          "rules": [
+            "안 V — краткая форма, ставится перед глаголом/прилагательным",
+            "V-지 않다 — полная форма, ставится после основы",
+            "공부하다 → 공부 안 해요 (안 ставится перед 하다)"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 80,
+      "page_role": "content",
+      "source_photo": "IMG_1015",
+      "blocks": [
+        {
+          "id": "exercise-3a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "1:30 ~ 2:30 / 점심을 먹다"
+            ],
+            "cues": [
+              "1:30 ~ 2:30 / 점심을 먹다"
+            ],
+            "dialogue": [
+              "가: 몇 시부터 몇 시까지 점심을 먹어요?",
+              "나: 1시 30분부터 2시 30분까지 점심을 먹어요."
+            ],
+            "emphasis": [
+              [
+                "몇 시부터 몇 시까지"
+              ],
+              [
+                "부터",
+                "까지"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "2:30 ~ 4:00 / 책을 읽다"
+              ],
+              "answers": [
+                "책을 읽어요",
+                "2시 30분",
+                "4시"
+              ]
+            },
+            {
+              "given": [
+                "4:15 ~ 6:45 / 숙제하다"
+              ],
+              "answers": [
+                "숙제해요",
+                "4시 15분",
+                "6시 45분"
+              ]
+            },
+            {
+              "given": [
+                "7:20 ~ 8:00 / 영화를 보다"
+              ],
+              "answers": [
+                "영화를 봐요",
+                "7시 20분",
+                "8시"
+              ]
+            },
+            {
+              "given": [
+                "오전 9:00 ~ 오후 5:40 / 일하다"
+              ],
+              "answers": [
+                "일해요",
+                "오전 9시",
+                "오후 5시 40분"
+              ]
+            }
+          ],
+          "template": [
+            "가: 몇 시부터 몇 시까지 {0}?",
+            "나: {1}부터 {2}까지 {0}."
+          ]
+        },
+        {
+          "id": "exercise-3b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "목요일 9:00 ~ 11:30 / 한국어 시험을 보다"
+            ],
+            "cues": [
+              "목요일 9:00 ~ 11:30 / 한국어 시험을 보다"
+            ],
+            "dialogue": [
+              "가: 언제 한국어 시험을 봐요?",
+              "나: 목요일 9시부터 11시 반까지 한국어 시험을 봐요."
+            ],
+            "emphasis": [
+              [
+                "언제"
+              ],
+              [
+                "부터",
+                "까지"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "1:10 ~ 5:30 / 스키를 타다"
+              ],
+              "answers": [
+                "스키를 타요",
+                "1시 10분",
+                "5시 반"
+              ]
+            },
+            {
+              "given": [
+                "월요일 ~ 금요일 / 테니스를 치다"
+              ],
+              "answers": [
+                "테니스를 쳐요",
+                "월요일",
+                "금요일"
+              ]
+            },
+            {
+              "given": [
+                "9:00 a.m. ~ 11:00 a.m. / 농구를 하다"
+              ],
+              "answers": [
+                "농구를 해요",
+                "오전 9시",
+                "오전 11시"
+              ]
+            }
+          ],
+          "template": [
+            "가: 언제 {0}?",
+            "나: {1}부터 {2}까지 {0}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 81,
+      "page_role": "content",
+      "source_photo": "IMG_1016",
+      "blocks": [
+        {
+          "id": "exercise-4a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "책을 읽다"
+            ],
+            "cues": [
+              "책을 읽다"
+            ],
+            "dialogue": [
+              "가: 책을 읽어요?",
+              "나: 아니요, 책을 안 읽어요. / 아니요, 책을 읽지 않아요."
+            ],
+            "emphasis": [
+              [
+                "어요"
+              ],
+              [
+                "아니요,",
+                "안",
+                "지 않아요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "점심을 먹다"
+              ],
+              "answers": [
+                "점심을 먹어요",
+                "점심을 안 먹어요",
+                "점심을 먹지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "수영을 배우다"
+              ],
+              "answers": [
+                "수영을 배워요",
+                "수영을 안 배워요",
+                "수영을 배우지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "주스를 마시다"
+              ],
+              "answers": [
+                "주스를 마셔요",
+                "주스를 안 마셔요",
+                "주스를 마시지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "과일을 좋아하다"
+              ],
+              "answers": [
+                "과일을 좋아해요",
+                "과일을 안 좋아해요",
+                "과일을 좋아하지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "요리하다"
+              ],
+              "answers": [
+                "요리해요",
+                "요리 안 해요",
+                "요리하지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "전화하다"
+              ],
+              "answers": [
+                "전화해요",
+                "전화 안 해요",
+                "전화하지 않아요"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}?",
+            "나: 아니요, {1}. / 아니요, {2}."
+          ]
+        },
+        {
+          "id": "exercise-4b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "방이 좁다"
+            ],
+            "cues": [
+              "방이 좁다"
+            ],
+            "dialogue": [
+              "가: 방이 좁아요?",
+              "나: 아니요, 방이 안 좁아요. / 아니요, 방이 좁지 않아요."
+            ],
+            "emphasis": [
+              [
+                "아요"
+              ],
+              [
+                "아니요,",
+                "안",
+                "지 않아요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "옷이 작다"
+              ],
+              "answers": [
+                "옷이 작아요",
+                "옷이 안 작아요",
+                "옷이 작지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "숙제가 많다"
+              ],
+              "answers": [
+                "숙제가 많아요",
+                "숙제가 안 많아요",
+                "숙제가 많지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "학교가 멀다"
+              ],
+              "answers": [
+                "학교가 멀어요",
+                "학교가 안 멀어요",
+                "학교가 멀지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "가방이 비싸다"
+              ],
+              "answers": [
+                "가방이 비싸요",
+                "가방이 안 비싸요",
+                "가방이 비싸지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "방이 깨끗하다"
+              ],
+              "answers": [
+                "방이 깨끗해요",
+                "방이 안 깨끗해요",
+                "방이 깨끗하지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "친구가 착하다"
+              ],
+              "answers": [
+                "친구가 착해요",
+                "친구가 안 착해요",
+                "친구가 착하지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "신발이 편하다"
+              ],
+              "answers": [
+                "신발이 편해요",
+                "신발이 안 편해요",
+                "신발이 편하지 않아요"
+              ]
+            },
+            {
+              "given": [
+                "기숙사가 조용하다"
+              ],
+              "answers": [
+                "기숙사가 조용해요",
+                "기숙사가 안 조용해요",
+                "기숙사가 조용하지 않아요"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}?",
+            "나: 아니요, {1}. / 아니요, {2}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 82,
+      "page_role": "content",
+      "source_photo": "IMG_1017",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "파하드 씨의 하루"
+            }
+          ],
+          "table": {
+            "columns": [
+              "시간",
+              "무엇을 합니까?"
+            ],
+            "rows": [
+              [
+                "7:00",
+                "일어나요"
+              ],
+              [
+                "7:30 ~ 8:30",
+                "아침을 먹어요"
+              ],
+              [
+                "9:00 ~ 1:00",
+                "학교에서 한국어를 배워요"
+              ],
+              [
+                "1:00 ~ 2:00",
+                "점심을 먹어요"
+              ],
+              [
+                "2:00 ~ 4:00",
+                "운동장에서 운동을 해요"
+              ],
+              [
+                "4:00 ~ 7:00",
+                "도서관에서 공부해요"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "흐엉",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "흐엉",
+              "text": "파하드 씨, 몇 시에 일어나요?",
+              "emphasized": [
+                "시에"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 7시에 일어나요.",
+              "emphasized": [
+                "시에"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "아침에 무엇을 해요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 7시 반에 아침을 먹어요. 그리고 학교에 가요.",
+              "emphasized": [
+                "시 반에"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "한국어 수업이 몇 시부터 몇 시까지 해요?",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "한국어 수업은 9시부터 1시까지 해요.",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "언제 점심을 먹어요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "1시부터 2시까지 점심을 먹어요.",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "그리고 무엇을 해요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "2시부터 4시까지 운동장에서 운동을 해요. 그리고 4시부터 7시까지 도서관에서 공부해요.",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "나의 하루"
+            }
+          ],
+          "table": {
+            "columns": [
+              "시간",
+              "무엇을 합니까?"
+            ],
+            "rows": [
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "page_number": 83,
+      "page_role": "content",
+      "source_photo": "IMG_1018",
+      "blocks": [
+        {
+          "id": "listening-class-info",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "수업 정보를 듣고 말하기",
+          "title_ru": "Послушать и обсудить информацию о занятиях",
+          "audio_id": "119",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "자르갈",
+                "text": "아멜리 씨, 요가는 몇 시부터 해요?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "월요일과 수요일 오전 10시부터 10시 50분까지 해요."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "어디에서 해요?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "305호에서 해요. 자르갈 씨도 요가를 좋아해요?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "저는 요가를 좋아하지 않아요. 배드민턴을 좋아해요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "배드민턴은 언제 해요?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "배드민턴은 화요일과 목요일 오후 5시 반부터 6시 20분까지 해요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "배드민턴은 어디에서 해요?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "운동장에서 해요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "재미있어요?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "네. 아주 재미있어요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что они делают? Расскажите."
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "요가 수업은 주말에 합니다.",
+                "배드민턴 수업은 월요일과 수요일에 합니다.",
+                "요가 수업은 305호에서 합니다.",
+                "배드민턴 수업은 오후 5시에 시작합니다."
+              ],
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "id": "program-sports-center",
+          "toc_section": "듣고 말하기",
+          "type": "text",
+          "title": "3. 프로그램을 보고 친구와 대화를 해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "듣고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "〈인하 스포츠센터 프로그램〉"
+            }
+          ],
+          "table": {
+            "columns": [
+              "수업",
+              "요일",
+              "시간",
+              "장소"
+            ],
+            "rows": [
+              [
+                "태권도",
+                "월, 수, 금",
+                "오전 8:00 ~ 8:50",
+                "4층"
+              ],
+              [
+                "탁구",
+                "화, 목",
+                "오전 11:00 ~ 11:50",
+                "3층"
+              ],
+              [
+                "테니스",
+                "월, 수, 금",
+                "오후 3:20 ~ 4:10",
+                "2층"
+              ],
+              [
+                "수영",
+                "월 ~ 금",
+                "오후 6:30 ~ 7:20",
+                "1층"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "vocab-listening-class-info",
+          "toc_section": "듣고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "요가",
+              "translation_ru": "йога"
+            },
+            {
+              "ko": "배드민턴",
+              "translation_ru": "бадминтон"
+            },
+            {
+              "ko": "탁구",
+              "translation_ru": "настольный теннис"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 84,
+      "page_role": "content",
+      "source_photo": "IMG_1019",
+      "blocks": []
+    },
+    {
+      "page_number": 85,
+      "page_role": "content",
+      "source_photo": "IMG_1020",
+      "blocks": [
+        {
+          "id": "text-reading-daily-schedule",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 날마다 아침 7시에 일어나요. 세수를 해요. 그리고 아침을 먹어요. 8시 반에 학교에 가요. 한국어 수업은 9시에 시작해요. 10시 50분부터 11시 10분까지 쉬어요. 친구는 커피를 마셔요. 하지만 저는 커피를 마시지 않아요. 저는 우유를 마셔요. 1시에 수업이 끝나요. 학생 식당에서 점심을 먹어요. 5시까지 도서관에서 숙제를 해요. 5시부터 운동장에서 친구와 농구를 해요. 8시에 집에서 저녁을 먹어요. 그리고 한국어 수업을 복습해요. 11시 반에 잠을 자요."
+            }
+          ]
+        },
+        {
+          "id": "reading-daily-schedule",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "하루 일과를 읽고 말하기",
+          "title_ru": "Прочитать о распорядке дня и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "하루 일과",
+                "일상생활",
+                "주말",
+                "시간"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "table",
+              "prompt": "이 사람의 하루 일과를 순서대로 번호를 쓰십시오.",
+              "prompt_ru": "Расставьте дела этого человека по порядку номерами (первое — «아침에 일어나요», ①).",
+              "table": {
+                "columns": [
+                  "순서"
+                ],
+                "rows": [
+                  "운동장에서 농구를 해요.",
+                  "도서관에서 숙제를 해요.",
+                  "한국어 수업을 들어요.",
+                  "집에서 한국어 수업을 복습해요.",
+                  "아침에 일어나요."
+                ]
+              }
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "이 사람은 오전 6시에 일어납니다.",
+                "이 사람은 오전 10시부터 커피를 마십니다.",
+                "이 사람은 운동장에서 운동을 합니다.",
+                "이 사람은 밤 11시에 잠을 잡니다."
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 하루 일과를 친구에게 말해 보십시오.",
+              "prompt_ru": "Расскажите другу о своём распорядке дня."
+            }
+          ]
+        },
+        {
+          "id": "vocab-reading-daily-schedule",
+          "toc_section": "읽고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-daily-schedule",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "세수",
+              "translation_ru": "умывание (세수를 하다 — умываться)"
+            },
+            {
+              "ko": "하지만",
+              "translation_ru": "но, однако"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 86,
+      "page_role": "content",
+      "source_photo": "IMG_1021",
+      "blocks": [
+        {
+          "id": "writing-daily-schedule",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "하루 일과를 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст о своём распорядке дня.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: что вы делаете до полудня.",
+              "questions": [
+                {
+                  "kr": "오전에 무엇을 합니까?",
+                  "ru": "Что вы делаете до полудня?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что вы делаете после полудня.",
+              "questions": [
+                {
+                  "kr": "오후에 무엇을 합니까?",
+                  "ru": "Что вы делаете после полудня?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что вы делаете вечером.",
+              "questions": [
+                {
+                  "kr": "저녁에 무엇을 합니까?",
+                  "ru": "Что вы делаете вечером?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    },
+    {
+      "page_number": 87,
+      "page_role": "content",
+      "source_photo": "IMG_1022",
+      "blocks": [
+        {
+          "id": "text-culture-day-list",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "〈오늘 하루〉",
+          "title_ru": "Мои дела на сегодня",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "이것이 무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "10월 5일"
+            },
+            {
+              "text": "☐ 1. 은행에 가요."
+            },
+            {
+              "text": "☑ 2. 운동을 해요."
+            },
+            {
+              "text": "☑ 3. 단어를 외워요."
+            },
+            {
+              "text": "☐ 4. 2시에 병원에 가요."
+            },
+            {
+              "text": "☐ 5. 3시에 도서관에서 친구를 만나요."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "외워",
+              "translation_ru": "форма от 외우다 (запоминать наизусть)"
+            }
+          ]
+        },
+        {
+          "id": "text-culture-day-plan",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "하루를 정리하기",
+          "title_ru": "Подводить итоги дня",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "저는 아침에 일어납니다. 오늘 하루를 계획합니다.\n\n“은행에 가요.”\n“운동을 해요.”\n“단어를 외워요.”\n“2시에 병원에 가요.”\n“3시에 도서관에서 친구를 만나요.”\n\n밤에 오늘 하루를 생각합니다. 그리고 내일을 생각합니다."
+            },
+            {
+              "text": "1) 이 사람은 무엇을 씁니까?",
+              "translation_ru": "Что пишет этот человек?"
+            },
+            {
+              "text": "2) 오늘 여러분의 계획은 무엇입니까? 이야기해 보십시오.",
+              "translation_ru": "Каков ваш план на сегодня? Расскажите."
+            }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-day-plan",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "하루",
+              "translation_ru": "один день, сутки"
+            },
+            {
+              "ko": "계획하다",
+              "translation_ru": "планировать"
+            },
+            {
+              "ko": "외우다",
+              "translation_ru": "запоминать наизусть"
+            },
+            {
+              "ko": "병원",
+              "translation_ru": "больница"
+            },
+            {
+              "ko": "밤",
+              "translation_ru": "ночь"
+            },
+            {
+              "ko": "생각하다",
+              "translation_ru": "думать; размышлять"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-5",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "받침 ‘ㄴ’",
+          "audio_id": "120",
+          "examples": [
+            {
+              "text": "간",
+              "translation_ru": "печень"
+            },
+            {
+              "text": "손",
+              "translation_ru": "рука (кисть)"
+            },
+            {
+              "text": "안",
+              "translation_ru": "внутри"
+            },
+            {
+              "text": "돈",
+              "translation_ru": "деньги"
+            },
+            {
+              "text": "간을",
+              "translation_ru": "печень (+ частица 을)"
+            },
+            {
+              "text": "손이",
+              "translation_ru": "рука (+ частица 이)"
+            },
+            {
+              "text": "안과",
+              "translation_ru": "офтальмология"
+            },
+            {
+              "text": "돈도",
+              "translation_ru": "и деньги"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
