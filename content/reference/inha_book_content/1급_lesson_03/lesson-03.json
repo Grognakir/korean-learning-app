@@ -1,0 +1,1801 @@
+{
+  "textbook_id": "inha_book_1",
+  "lesson_number": 3,
+  "title": "학교생활",
+  "pages": [
+    {
+      "page_number": null,
+      "page_role": "lesson_opening",
+      "source_photo": "IMG_0977",
+      "blocks": [
+        {
+          "type": "lesson_toc",
+          "sections": [
+            {
+              "key": "준비하기 1",
+              "items": [
+                {
+                  "label": "학교생활을 말하기",
+                  "block_ref": "text-school-life-dialogue",
+                  "label_ru": "Рассказывать о школьной жизни"
+                },
+                {
+                  "label": "V-(스)ㅂ니다 / (스)ㅂ니까?",
+                  "block_ref": "grammar-1",
+                  "label_ru": "V-(스)ㅂ니다 / (스)ㅂ니까? (формальный стиль)"
+                },
+                {
+                  "label": "N을/를",
+                  "block_ref": "grammar-2",
+                  "label_ru": "Частица N을/를 (прямое дополнение)"
+                },
+                {
+                  "label": "N만",
+                  "block_ref": "grammar-3",
+                  "label_ru": "Частица N만 (только)"
+                }
+              ]
+            },
+            {
+              "key": "준비하기 2",
+              "items": [
+                {
+                  "label": "친구와 인사하기",
+                  "block_ref": "text-greeting-dialogue",
+                  "label_ru": "Здороваться с другом"
+                },
+                {
+                  "label": "N에 가다/오다",
+                  "block_ref": "grammar-4",
+                  "label_ru": "N에 가다/오다 (идти/приходить куда-то)"
+                },
+                {
+                  "label": "수①",
+                  "block_ref": "grammar-5",
+                  "label_ru": "Числительные① (китайско-корейские)"
+                }
+              ]
+            },
+            {
+              "key": "말하기",
+              "items": [
+                {
+                  "label": "인사하고 정보를 묻기",
+                  "block_ref": "text-speaking-summary",
+                  "label_ru": "Здороваться и спрашивать информацию"
+                }
+              ]
+            },
+            {
+              "key": "듣고 말하기",
+              "items": [
+                {
+                  "label": "전화번호를 듣고 말하기",
+                  "block_ref": "listening-phone-number",
+                  "label_ru": "Послушать и обсудить телефонный номер"
+                }
+              ]
+            },
+            {
+              "key": "읽고 말하기",
+              "items": [
+                {
+                  "label": "학교생활을 설명하는 글을 읽고 말하기",
+                  "block_ref": "reading-school-life",
+                  "label_ru": "Прочитать текст о школьной жизни и обсудить"
+                }
+              ]
+            },
+            {
+              "key": "쓰기",
+              "items": [
+                {
+                  "label": "학교생활을 설명하는 글 쓰기",
+                  "block_ref": "writing-school-life",
+                  "label_ru": "Написать текст о школьной жизни"
+                }
+              ]
+            },
+            {
+              "key": "문화 이해하기",
+              "items": [
+                {
+                  "label": "한국의 학교",
+                  "block_ref": "text-culture-schools",
+                  "label_ru": "Школы в Корее"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 42,
+      "page_role": "content",
+      "source_photo": "IMG_0978",
+      "blocks": [
+        {
+          "id": "text-school-life-dialogue",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "학교생활을 말하기",
+          "title_ru": "Рассказывать о школьной жизни",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "109",
+          "speakers": [
+            "자르갈",
+            "왕루"
+          ],
+          "lines": [
+            {
+              "speaker": "자르갈",
+              "text": "왕루 씨는 무엇을 배웁니까?",
+              "emphasized": [
+                "배웁니까"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "한국어를 배웁니다.",
+              "emphasized": [
+                "를",
+                "배웁니다"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "한국어만 배웁니까?",
+              "emphasized": [
+                "만",
+                "배웁니까"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "아니요, 영어도 배웁니다. 자르갈 씨도 한국어를 배웁니까?",
+              "emphasized": [
+                "도 배웁니다",
+                "를 배웁니까"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "네, 저도 한국어를 배웁니다.",
+              "emphasized": [
+                "를 배웁니다"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "한국어가 어떻습니까?",
+              "emphasized": [
+                "어떻습니까"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "한국어가 재미있습니다.",
+              "emphasized": [
+                "재미있습니다"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hint-junbihagi1-expr",
+          "toc_section": "준비하기 1",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-school-life-dialogue",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "N이/가 어떻습니까?",
+              "translation_ru": "Как N? — шаблон; пример «한국어가 어떻습니까?» = «Как вам корейский язык?»"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 43,
+      "page_role": "content",
+      "source_photo": "IMG_0979",
+      "blocks": [
+        {
+          "id": "grammar-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "V-(스)ㅂ니다 / (스)ㅂ니까?",
+          "section": "1",
+          "explanation": "Формальный стиль настоящего времени — используется в новостях, презентациях, с начальством.",
+          "examples": [
+            "1) 가: 무엇을 봅니까?\n나: 한국어 책을 봅니다.",
+            "2) 가: 한국어 책이 어떻습니까?\n나: 한국어 책이 재미있습니다."
+          ],
+          "rules": [
+            "основа без받침 → -ㅂ니다 / -ㅂ니까?",
+            "основа с받침 → -습니다 / -습니까?",
+            "-ㅂ니다 — утверждение, -ㅂ니까? — вопрос"
+          ]
+        },
+        {
+          "id": "grammar-2",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N을/를",
+          "section": "2",
+          "explanation": "Показывает прямое дополнение — предмет, над которым выполняется действие.",
+          "examples": [
+            "1) 가: 무엇을 먹습니까?\n나: 밥을 먹습니다.",
+            "2) 가: 무엇을 합니까?\n나: 한국어를 배웁니다."
+          ],
+          "rules": [
+            "N 받침 есть → N을",
+            "N 받침 нет → N를",
+            "무엇을 = 뭘 = 뭐"
+          ]
+        },
+        {
+          "id": "grammar-3",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N만",
+          "section": "3",
+          "explanation": "Ограничивает — «только это и ничего больше».",
+          "examples": [
+            "1) 가: 가방에 무엇이 있습니까?\n나: 가방에 책만 있습니다.",
+            "2) 가: 한국어만 공부합니까?\n나: 아니요, 중국어도 공부합니다."
+          ],
+          "rules": [
+            "N만 ставится сразу после слова, которое получает значение «только» — одна форма (받침 роли не играет)",
+            "заменяет частицы 은/는, 이/가, 을/를"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 44,
+      "page_role": "content",
+      "source_photo": "IMG_0980",
+      "blocks": [
+        {
+          "id": "exercise-1a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "영화를 보다",
+              "영화를 보다"
+            ],
+            "cues": [
+              "영화를 보다",
+              "영화를 보다"
+            ],
+            "dialogue": [
+              "가: 영화를 봅니까?",
+              "나: 네, 영화를 봅니다."
+            ],
+            "emphasis": [
+              [
+                "를",
+                "봅니까"
+              ],
+              [
+                "네,",
+                "봅니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "음악을 듣다",
+                "음악을 듣다"
+              ],
+              "answers": [
+                "음악을 듣습니까",
+                "음악을 듣습니다"
+              ]
+            },
+            {
+              "given": [
+                "책을 읽다",
+                "책을 읽다"
+              ],
+              "answers": [
+                "책을 읽습니까",
+                "책을 읽습니다"
+              ]
+            },
+            {
+              "given": [
+                "버스를 타다",
+                "버스를 타다"
+              ],
+              "answers": [
+                "버스를 탑니까",
+                "버스를 탑니다"
+              ]
+            },
+            {
+              "given": [
+                "한국어를 배우다",
+                "한국어를 배우다"
+              ],
+              "answers": [
+                "한국어를 배웁니까",
+                "한국어를 배웁니다"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}?",
+            "나: 네, {1}."
+          ]
+        },
+        {
+          "id": "exercise-1b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "영화",
+              "영화 / 재미있다 / 영화 / 재미없다"
+            ],
+            "cues": [
+              "영화",
+              "영화 / 재미있다 / 영화 / 재미없다"
+            ],
+            "dialogue": [
+              "가: 영화가 어떻습니까?",
+              "나: 영화가 재미있습니다. / 영화가 재미없습니다."
+            ],
+            "emphasis": [
+              [
+                "가 어떻습니까"
+              ],
+              [
+                "가",
+                "재미있습니다",
+                "가",
+                "재미없습니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "학교",
+                "학교 / 크다 / 학교 / 작다"
+              ],
+              "answers": [
+                "학교가",
+                "큽니다",
+                "작습니다"
+              ]
+            },
+            {
+              "given": [
+                "교실",
+                "교실 / 넓다 / 교실 / 좁다"
+              ],
+              "answers": [
+                "교실이",
+                "넓습니다",
+                "좁습니다"
+              ]
+            },
+            {
+              "given": [
+                "사람",
+                "사람 / 많다 / 사람 / 적다"
+              ],
+              "answers": [
+                "사람이",
+                "많습니다",
+                "적습니다"
+              ]
+            },
+            {
+              "given": [
+                "한국어",
+                "한국어 / 쉽다 / 한국어 / 어렵다"
+              ],
+              "answers": [
+                "한국어가",
+                "쉽습니다",
+                "어렵습니다"
+              ]
+            },
+            {
+              "given": [
+                "공원",
+                "공원 / 깨끗하다 / 공원 / 더럽다"
+              ],
+              "answers": [
+                "공원이",
+                "깨끗합니다",
+                "더럽습니다"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 어떻습니까?",
+            "나: {0} {1}. / {0} {2}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 45,
+      "page_role": "content",
+      "source_photo": "IMG_0981",
+      "blocks": [
+        {
+          "id": "exercise-2a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "잡지 / 보다"
+            ],
+            "cues": [
+              "잡지 / 보다"
+            ],
+            "dialogue": [
+              "가: 무엇을 합니까?",
+              "나: 잡지를 봅니다."
+            ],
+            "emphasis": [
+              [
+                "무엇을",
+                "합니까"
+              ],
+              [
+                "를",
+                "봅니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "책 / 읽다"
+              ],
+              "answers": [
+                "책을 읽습니다"
+              ]
+            },
+            {
+              "given": [
+                "친구 / 만나다"
+              ],
+              "answers": [
+                "친구를 만납니다"
+              ]
+            },
+            {
+              "given": [
+                "커피 / 마시다"
+              ],
+              "answers": [
+                "커피를 마십니다"
+              ]
+            },
+            {
+              "given": [
+                "편지 / 쓰다"
+              ],
+              "answers": [
+                "편지를 씁니다"
+              ]
+            }
+          ],
+          "template": [
+            "가: 무엇을 합니까?",
+            "나: {0}."
+          ]
+        },
+        {
+          "id": "exercise-2b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "영화 / 보다",
+              "음악 / 듣다"
+            ],
+            "cues": [
+              "영화 / 보다",
+              "음악 / 듣다"
+            ],
+            "dialogue": [
+              "가: 영화를 봅니까?",
+              "나: 아니요, 음악을 듣습니다."
+            ],
+            "emphasis": [
+              [
+                "를",
+                "봅니까"
+              ],
+              [
+                "아니요,",
+                "을",
+                "듣습니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "영어 / 배우다",
+                "한국어 / 배우다"
+              ],
+              "answers": [
+                "영어를 배웁니까",
+                "한국어를 배웁니다"
+              ]
+            },
+            {
+              "given": [
+                "커피 / 마시다",
+                "우유 / 마시다"
+              ],
+              "answers": [
+                "커피를 마십니까",
+                "우유를 마십니다"
+              ]
+            },
+            {
+              "given": [
+                "노래 / 부르다",
+                "춤 / 추다"
+              ],
+              "answers": [
+                "노래를 부릅니까",
+                "춤을 춥니다"
+              ]
+            },
+            {
+              "given": [
+                "버스 / 타다",
+                "지하철 / 타다"
+              ],
+              "answers": [
+                "버스를 탑니까",
+                "지하철을 탑니다"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}?",
+            "나: 아니요, {1}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 46,
+      "page_role": "content",
+      "source_photo": "IMG_0982",
+      "blocks": [
+        {
+          "id": "exercise-3a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "교실 / 누가",
+              "교실 / 왕루 씨"
+            ],
+            "cues": [
+              "교실 / 누가",
+              "교실 / 왕루 씨"
+            ],
+            "dialogue": [
+              "가: 교실에 누가 있습니까?",
+              "나: 교실에 왕루 씨만 있습니다."
+            ],
+            "emphasis": [
+              [
+                "에 누가",
+                "있습니까"
+              ],
+              [
+                "에",
+                "씨만",
+                "있습니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "책상 위 / 무엇",
+                "책상 위 / 책"
+              ],
+              "answers": [
+                "책상 위",
+                "무엇이",
+                "책"
+              ]
+            },
+            {
+              "given": [
+                "필통 안 / 무엇",
+                "필통 안 / 연필"
+              ],
+              "answers": [
+                "필통 안",
+                "무엇이",
+                "연필"
+              ]
+            },
+            {
+              "given": [
+                "방 안 / 누가",
+                "방 안 / 자르갈 씨"
+              ],
+              "answers": [
+                "방 안",
+                "누가",
+                "자르갈 씨"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}에 {1} 있습니까?",
+            "나: {0}에 {2}만 있습니다."
+          ]
+        },
+        {
+          "id": "exercise-3b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "텔레비전 / 보다",
+              "라디오 / 듣다"
+            ],
+            "cues": [
+              "텔레비전 / 보다",
+              "라디오 / 듣다"
+            ],
+            "dialogue": [
+              "가: 텔레비전만 봅니까?",
+              "나: 아니요, 라디오도 듣습니다."
+            ],
+            "emphasis": [
+              [
+                "만",
+                "봅니까"
+              ],
+              [
+                "아니요,",
+                "도",
+                "듣습니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "빵 / 먹다",
+                "우유 / 마시다"
+              ],
+              "answers": [
+                "빵",
+                "먹습니까",
+                "우유",
+                "마십니다"
+              ]
+            },
+            {
+              "given": [
+                "노래 / 부르다",
+                "선물 / 주다"
+              ],
+              "answers": [
+                "노래",
+                "부릅니까",
+                "선물",
+                "줍니다"
+              ]
+            },
+            {
+              "given": [
+                "책 / 사다",
+                "공책 / 사다"
+              ],
+              "answers": [
+                "책",
+                "삽니까",
+                "공책",
+                "삽니다"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}만 {1}?",
+            "나: 아니요, {2}도 {3}."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 47,
+      "page_role": "content",
+      "source_photo": "IMG_0983",
+      "blocks": [
+        {
+          "id": "text-greeting-dialogue",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "친구와 인사하기",
+          "title_ru": "Здороваться с другом",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "110",
+          "speakers": [
+            "아멜리",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨, 안녕하십니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "안녕하세요? 아멜리 씨. 어디에 갑니까?",
+              "emphasized": [
+                "에 갑니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "도서관에 갑니다. 파하드 씨는 어디에 갑니까?",
+              "emphasized": [
+                "에 갑니다",
+                "에 갑니까"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 교실에 갑니다.",
+              "emphasized": [
+                "에 갑니다"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨의 교실이 어디에 있습니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "우리 교실은 5층에 있습니다."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "교실이 몇 호입니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "501호입니다."
+            }
+          ]
+        },
+        {
+          "id": "hint-junbihagi2-expr",
+          "toc_section": "준비하기 2",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-greeting-dialogue",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "몇 N",
+              "translation_ru": "сколько / какой по счёту N — шаблон; пример «몇 호입니까?» = «Какой номер (комнаты)?»"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 48,
+      "page_role": "content",
+      "source_photo": "IMG_0984",
+      "blocks": [
+        {
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "N에 가다/오다/다니다",
+          "section": "4",
+          "explanation": "Показывает направление движения; 다니다 — ходить регулярно (на работу, в школу).",
+          "examples": [
+            "1) 가: 어디에 갑니까?\n나: 학교에 갑니다.",
+            "2) 가: 어디에 다닙니까?\n나: 저는 인하대학교에 다닙니다."
+          ],
+          "rules": [
+            "N에 가다 — идти/ехать куда-то",
+            "N에 오다 — приходить/приезжать куда-то",
+            "N에 다니다 — регулярно ходить (на учёбу, на работу)"
+          ]
+        },
+        {
+          "id": "grammar-5",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "수①",
+          "section": "5",
+          "explanation": "Китайско-корейские числительные (한자어 수) — для номеров, цен, этажей, комнат, телефонов.",
+          "examples": [
+            "234 이백삼십사",
+            "4,578 사천오백칠십팔",
+            "27,604 이만 칠천육백사"
+          ],
+          "rules": [
+            "0 영, 1 일, 2 이, 3 삼, 4 사, 5 오, 6 육, 7 칠, 8 팔, 9 구, 10 십",
+            "11–19: 십 + цифра (십일, 십이 … 십구)",
+            "20–90: цифра + 십 (이십, 삼십 … 구십)",
+            "100 백, 1,000 천, 10,000 만"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 49,
+      "page_role": "content",
+      "source_photo": "IMG_0985",
+      "blocks": [
+        {
+          "id": "exercise-4a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "은행"
+            ],
+            "cues": [
+              "은행"
+            ],
+            "dialogue": [
+              "가: 어디에 갑니까?",
+              "나: 은행에 갑니다."
+            ],
+            "emphasis": [
+              [
+                "어디에",
+                "갑니까"
+              ],
+              [
+                "에 갑니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "가게"
+              ],
+              "answers": [
+                "가게"
+              ]
+            },
+            {
+              "given": [
+                "공원"
+              ],
+              "answers": [
+                "공원"
+              ]
+            },
+            {
+              "given": [
+                "편의점"
+              ],
+              "answers": [
+                "편의점"
+              ]
+            }
+          ],
+          "template": [
+            "가: 어디에 갑니까?",
+            "나: {0}에 갑니다."
+          ]
+        },
+        {
+          "id": "exercise-4b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "자르갈 씨 / 학교",
+              "학교"
+            ],
+            "cues": [
+              "자르갈 씨 / 학교",
+              "학교"
+            ],
+            "dialogue": [
+              "가: 자르갈 씨, 학교에 옵니까?",
+              "나: 네, 저는 학교에 갑니다."
+            ],
+            "emphasis": [
+              [
+                "씨,",
+                "에 옵니까"
+              ],
+              [
+                "네,",
+                "에 갑니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "파하드 씨 / 도서관",
+                "도서관"
+              ],
+              "answers": [
+                "파하드",
+                "도서관"
+              ]
+            },
+            {
+              "given": [
+                "아멜리 씨 / 교실",
+                "교실"
+              ],
+              "answers": [
+                "아멜리",
+                "교실"
+              ]
+            },
+            {
+              "given": [
+                "왕루 씨 / 학생 식당",
+                "학생 식당"
+              ],
+              "answers": [
+                "왕루",
+                "학생 식당"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 씨, {1}에 옵니까?",
+            "나: 네, 저는 {1}에 갑니다."
+          ]
+        },
+        {
+          "id": "exercise-4c",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "회사"
+            ],
+            "cues": [
+              "회사"
+            ],
+            "dialogue": [
+              "가: 어디에 다닙니까?",
+              "나: 회사에 다닙니다."
+            ],
+            "emphasis": [
+              [
+                "어디에",
+                "다닙니까"
+              ],
+              [
+                "에 다닙니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "은행"
+              ],
+              "answers": [
+                "은행"
+              ]
+            },
+            {
+              "given": [
+                "대학교"
+              ],
+              "answers": [
+                "대학교"
+              ]
+            }
+          ],
+          "template": [
+            "가: 어디에 다닙니까?",
+            "나: {0}에 다닙니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 50,
+      "page_role": "content",
+      "source_photo": "IMG_0986",
+      "blocks": [
+        {
+          "id": "practice-5a",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "1. 다음 숫자를 말해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "6",
+              "8",
+              "13",
+              "45",
+              "93"
+            ],
+            "rows": [
+              [
+                "872",
+                "3,215",
+                "12,321",
+                "48,265",
+                "39,802"
+              ]
+            ]
+          },
+          "exercise_title": "연습하기5"
+        },
+        {
+          "id": "exercise-5b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "저 버스 / 몇 번",
+              "저 버스 / 511번"
+            ],
+            "cues": [
+              "저 버스 / 몇 번",
+              "저 버스 / 511번"
+            ],
+            "dialogue": [
+              "가: 저 버스가 몇 번입니까?",
+              "나: 저 버스는 511번입니다."
+            ],
+            "emphasis": [
+              [
+                "가",
+                "몇 번",
+                "입니까"
+              ],
+              [
+                "는",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "여기 / 몇 층",
+                "여기 / 7층"
+              ],
+              "answers": [
+                "여기가",
+                "몇 층",
+                "여기는",
+                "7층"
+              ]
+            },
+            {
+              "given": [
+                "이 교실 / 몇 호",
+                "이 교실 / 316호"
+              ],
+              "answers": [
+                "이 교실이",
+                "몇 호",
+                "이 교실은",
+                "316호"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} {1}입니까?",
+            "나: {2} {3}입니다."
+          ]
+        },
+        {
+          "id": "exercise-5c",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "왕루 씨",
+              "010-4321-5678"
+            ],
+            "cues": [
+              "왕루 씨",
+              "010-4321-5678"
+            ],
+            "dialogue": [
+              "가: 왕루 씨, 전화번호가 몇 번입니까?",
+              "나: 제 번호는 010-4321-5678입니다."
+            ],
+            "emphasis": [
+              [
+                "씨,",
+                "몇 번",
+                "입니까"
+              ],
+              [
+                "제 번호는",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "아멜리 씨",
+                "019-2345-2204"
+              ],
+              "answers": [
+                "아멜리",
+                "019-2345-2204"
+              ]
+            },
+            {
+              "given": [
+                "자르갈 씨",
+                "070-3344-7890"
+              ],
+              "answers": [
+                "자르갈",
+                "070-3344-7890"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 씨, 전화번호가 몇 번입니까?",
+            "나: 제 번호는 {1}입니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 51,
+      "page_role": "content",
+      "source_photo": "IMG_0987",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "1. 배운 문법을 사용하여 〈보기〉와 같이 이야기해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "인하빌딩"
+            },
+            {
+              "text": "파하드: 커피숍에 갑니다."
+            },
+            {
+              "text": "아멜리: 서점에 갑니다."
+            }
+          ],
+          "table": {
+            "columns": [
+              "층",
+              "호",
+              "가게"
+            ],
+            "rows": [
+              [
+                "3층",
+                "301호",
+                "서점"
+              ],
+              [
+                "2층",
+                "201호",
+                "약국"
+              ],
+              [
+                "2층",
+                "202호",
+                "꽃집"
+              ],
+              [
+                "1층",
+                "101호",
+                "커피숍"
+              ],
+              [
+                "1층",
+                "102호",
+                "우체국"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "파하드",
+            "아멜리"
+          ],
+          "lines": [
+            {
+              "speaker": "파하드",
+              "text": "아멜리 씨, 안녕하십니까?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨, 안녕하세요? 어디에 갑니까?",
+              "emphasized": [
+                "에 갑니까"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 커피숍에 갑니다. 아멜리 씨는 어디에 갑니까?",
+              "emphasized": [
+                "에 갑니다",
+                "에 갑니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "저는 서점에 갑니다.",
+              "emphasized": [
+                "에 갑니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "서점이 몇 호입니까?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "서점은 301호입니다. 커피숍이 몇 층에 있습니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "커피숍은 1층에 있습니다."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "1층에 커피숍만 있습니까?",
+              "emphasized": [
+                "만 있습니까"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "아니요, 우체국도 있습니다.",
+              "emphasized": [
+                "도 있습니다"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "",
+              "나",
+              "친구"
+            ],
+            "rows": [
+              [
+                "1)",
+                "우체국에 갑니다.",
+                "꽃집에 갑니다."
+              ],
+              [
+                "2)",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "빌딩",
+              "translation_ru": "здание, высотное здание"
+            },
+            {
+              "ko": "약국",
+              "translation_ru": "аптека"
+            },
+            {
+              "ko": "꽃집",
+              "translation_ru": "цветочный магазин"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 52,
+      "page_role": "content",
+      "source_photo": "IMG_0988",
+      "blocks": [
+        {
+          "id": "listening-phone-number",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "전화번호를 듣고 말하기",
+          "title_ru": "Послушать и обсудить телефонный номер",
+          "audio_id": "111",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "자르갈",
+                "text": "아멜리 씨, 안녕하세요? 어디에 갑니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "안녕하세요? 자르갈 씨. 저는 은행에 갑니다. 자르갈 씨는 무엇을 합니까?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "저는 파하드 씨를 기다립니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "파하드 씨는 지금 김 선생님의 사무실에 있습니다."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "김 선생님의 사무실은 어디에 있습니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "드림센터에 있습니다."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "드림센터 6층에 있습니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "아니요, 4층에 있습니다."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "김 선생님 사무실의 전화번호는 몇 번입니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "987-3456입니다."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "고맙습니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "이것이 무엇입니까? 번호를 읽어 보십시오.",
+            "prompt_ru": "Что это? Прочитайте номера."
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "자르갈 씨, 아멜리 씨는 은행에 있습니다.",
+                "자르갈 씨는 김 선생님의 사무실에 있습니다.",
+                "김 선생님의 사무실은 6층에 있습니다.",
+                "김 선생님 사무실의 전화번호는 987-3456번입니다."
+              ],
+              "correct": 3
+            }
+          ],
+          "followup": "반 친구들에게 전화번호를 물어 보십시오.",
+          "followup_ru": "Спросите у одноклассников номера телефонов."
+        },
+        {
+          "id": "vocab-listening-phone-number",
+          "toc_section": "듣고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "기다리다",
+              "translation_ru": "ждать"
+            },
+            {
+              "ko": "지금",
+              "translation_ru": "сейчас"
+            },
+            {
+              "ko": "사무실",
+              "translation_ru": "офис, кабинет"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 53,
+      "page_role": "content",
+      "source_photo": "IMG_0989",
+      "blocks": [
+        {
+          "id": "text-reading-school-life",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 인하대학교에 다닙니다."
+            },
+            {
+              "text": "저는 한국어를 배웁니다. 우리 교실은 405호입니다. 파하드 씨, 아멜리 씨는 우리 반 학생입니다. 파하드 씨는 친절합니다. 아멜리 씨는 똑똑합니다. 한국어는 재미있습니다. 우리는 열심히 한국어를 배웁니다. 수업이 끝납니다. 우리는 도서관에 갑니다. 공부를 합니다. 그리고 운동장에 갑니다. 운동을 합니다."
+            },
+            {
+              "text": "학교생활이 매우 즐겁습니다."
+            }
+          ]
+        },
+        {
+          "id": "reading-school-life",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "학교생활을 설명하는 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о школьной жизни и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "학교생활",
+                "자기소개",
+                "수업",
+                "운동"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "우리 교실은 4층에 있습니다.",
+                "아멜리 씨는 친절합니다.",
+                "우리는 한국어를 가르칩니다.",
+                "우리는 학교생활이 재미없습니다."
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 학교생활을 말해 보십시오.",
+              "prompt_ru": "Расскажите о своей школьной жизни."
+            }
+          ]
+        },
+        {
+          "id": "vocab-reading-school-life",
+          "toc_section": "읽고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-school-life",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "친절하다",
+              "translation_ru": "быть любезным"
+            },
+            {
+              "ko": "똑똑하다",
+              "translation_ru": "быть умным"
+            },
+            {
+              "ko": "열심히",
+              "translation_ru": "усердно"
+            },
+            {
+              "ko": "수업",
+              "translation_ru": "урок, занятие"
+            },
+            {
+              "ko": "끝나다",
+              "translation_ru": "заканчиваться"
+            },
+            {
+              "ko": "그리고",
+              "translation_ru": "и, а также"
+            },
+            {
+              "ko": "매우",
+              "translation_ru": "очень"
+            },
+            {
+              "ko": "즐겁다",
+              "translation_ru": "быть весёлым, приятным"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 54,
+      "page_role": "content",
+      "source_photo": "IMG_0990",
+      "blocks": [
+        {
+          "id": "writing-school-life",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "학교생활을 설명하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст о школьной жизни.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: где вы учитесь.",
+              "questions": [
+                {
+                  "kr": "어디에 다닙니까?",
+                  "ru": "Куда вы ходите (где учитесь)?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что вы делаете.",
+              "questions": [
+                {
+                  "kr": "무엇을 합니까?",
+                  "ru": "Что вы делаете?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: какова ваша школьная жизнь.",
+              "questions": [
+                {
+                  "kr": "학교생활이 어떻습니까?",
+                  "ru": "Какова ваша школьная жизнь?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    },
+    {
+      "page_number": 55,
+      "page_role": "content",
+      "source_photo": "IMG_0991",
+      "blocks": [
+        {
+          "id": "text-culture-schools",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "한국의 학교",
+          "title_ru": "Школы в Корее",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "누구입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Кто это? Расскажите.",
+          "lines": [
+            {
+              "text": "한국의 학교는 초등학교, 중학교, 고등학교, 대학교가 있습니다.\n초등학교는 6년, 중학교는 3년, 고등학교는 3년 그리고 대학교는 4년을 공부합니다."
+            },
+            {
+              "text": "1) 한국의 학교는 어떻습니까?",
+              "translation_ru": "Как устроены школы в Корее?"
+            },
+            {
+              "text": "2) 여러분 나라의 학교는 어떻습니까?",
+              "translation_ru": "А как устроены школы в вашей стране?"
+            }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-schools",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "초등학교",
+              "translation_ru": "начальная школа"
+            },
+            {
+              "ko": "중학교",
+              "translation_ru": "средняя школа (7–9 классы)"
+            },
+            {
+              "ko": "고등학교",
+              "translation_ru": "старшая школа (10–12 классы)"
+            },
+            {
+              "ko": "년",
+              "translation_ru": "год"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-3a",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "‘ㅚ’",
+          "audio_id": "112",
+          "examples": [
+            {
+              "text": "외국",
+              "translation_ru": "заграница"
+            },
+            {
+              "text": "참외",
+              "translation_ru": "корейская дыня"
+            },
+            {
+              "text": "회사",
+              "translation_ru": "компания"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-3b",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "‘ㅙ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "왜",
+              "translation_ru": "почему"
+            },
+            {
+              "text": "돼지",
+              "translation_ru": "свинья"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-3c",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "‘ㅞ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "웨이터",
+              "translation_ru": "официант"
+            },
+            {
+              "text": "스웨덴",
+              "translation_ru": "Швеция"
+            },
+            {
+              "text": "스웨터",
+              "translation_ru": "свитер"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

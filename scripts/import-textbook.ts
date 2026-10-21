@@ -15,6 +15,7 @@ const supabase = createClient(
 const REFERENCE_DIR = join(process.cwd(), "content/reference");
 const LESSON_DIR = join(REFERENCE_DIR, "inha_book_content/1급_lesson_01");
 const LESSON_DIR_1_2 = join(REFERENCE_DIR, "inha_book_content/1급_lesson_02");
+const LESSON_DIR_1_3 = join(REFERENCE_DIR, "inha_book_content/1급_lesson_03");
 const LESSON_DIR_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_01");
 const LESSON_DIR_2_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_02");
 const LESSON_DIR_2_3 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_03");
@@ -69,6 +70,7 @@ const LEVEL1_LESSONS: Record<number, { path: string; audio: number[]; images: st
     audio: [105, 106, 107, 108],
     images: ["illustration_1_house_map.png"],
   },
+  3: { path: join(LESSON_DIR_1_3, "lesson-03.json"), audio: [109, 110, 111, 112], images: [] },
 };
 
 async function uploadLevel1Images(lessonNumber: number) {
