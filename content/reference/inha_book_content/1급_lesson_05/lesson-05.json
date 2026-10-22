@@ -821,7 +821,7 @@
           "title": "시간 정보를 묻기",
           "title_ru": "Спрашивать о времени",
           "illustration": {
-            "storage_path": "lesson_5/illustration_2_swimming_reception.png",
+            "storage_path": "lesson_5/illustration_2_swimming_reception_v2.png",
             "original_kind": "illustration"
           },
           "text_kind": "dialogue",
@@ -1610,7 +1610,7 @@
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
             "prompt_ru": "Что они делают? Расскажите.",
             "illustration": {
-              "storage_path": "lesson_5/illustration_3_yoga_badminton.png",
+              "storage_path": "lesson_5/illustration_3_yoga_badminton_v2.png",
               "original_kind": "illustration"
             }
           },

@@ -1,0 +1,96 @@
+{
+  "tool": "built-in image_gen",
+  "jobs": [
+    {
+      "index": 1,
+      "lesson": 2,
+      "old_file": "illustration_5_korean_address.png",
+      "file": "illustration_5_korean_address_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-7ae2c3ce-156b-455a-85c9-b677cded59d1.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Add a crisp elegant university name on the currently blank blue plaque in the upper-right at x95% y24%. Exact Korean text: 인하대학교. Five Korean syllable blocks, correctly written as 인하대학교, gold or ivory lettering centered, realistic perspective on plaque. Keep the plaque shape, woman, envelope, campus, lighting and composition unchanged. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "text-culture-address",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-e40f29d6-1f76-461f-b469-3c7341849be3.png"
+    },
+    {
+      "index": 2,
+      "lesson": 3,
+      "old_file": "illustration_1_language_class.png",
+      "file": "illustration_1_language_class_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-b541f64b-3e19-462b-b22c-578c1c1e5017.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Rotate the open textbook in front of the man 180 degrees flat on the tabletop so it is oriented for HIM to read, not for the viewer. The TOP of every printed page and of the palace illustration must be nearest the viewer, BOTTOM nearest the male student's torso. Therefore palace illustration and printed lines are UPSIDE DOWN to the viewer. Spine still runs from him toward camera. Also orient the woman's open book and writing toward her consistently. Do not tilt the books upright. Preserve students, faces, hands, clothing, classroom and composition; no legible text needed. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "text-school-life-dialogue",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-3e8ecc04-85eb-4d12-ae86-63d086aaf888.png"
+    },
+    {
+      "index": 3,
+      "lesson": 3,
+      "old_file": "illustration_4_school_day.png",
+      "file": "illustration_4_school_day_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-7ba30420-b7ad-4c00-8473-4fc573b31ea5.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Rotate the open foreground textbook 180 degrees on the table to face the central male student. TOP of printed pages and landscape image nearest CAMERA, bottoms nearest central man, so landscape image is visibly UPSIDE DOWN to viewer. Keep central laptop oriented to its male user, rear lid facing viewer. Background woman around x37.5% y28% must actually be seated directly behind her laptop at her desk with screen facing her eyes, keyboard at her hands, forearms naturally reaching keyboard; chair torso table and laptop aligned. Show a coherent small side-profile workstation. Preserve all three foreground students, faces hands clothing, foreground objects, window scene, pixel-art style and wide composition. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "text-reading-school-life",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-294adce4-4a94-4386-96eb-000380aacd1e.png"
+    },
+    {
+      "index": 4,
+      "lesson": 4,
+      "old_file": "illustration_1_library_and_sports.png",
+      "file": "illustration_1_library_and_sports_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-6bbfbc6c-6680-4de7-b110-6bd899940f82.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Keep both foreground students and basketball unchanged. Redraw background football players on right field with natural active sports poses: one jogging toward a ball, another preparing to receive a pass, normal separate arms and legs, realistic scale and coherent football action, no stiff statue line-up. Correct small person inside library around x10% y39%: normal seated adult on a chair at table, head shoulders torso and arms aligned, no malformed face or fused body. Simplify background people as needed, preserve campus composition and warm detailed pixel-art style. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "text-daily-life-dialogue",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-1d0b81ee-b6e9-48cc-a1a5-6902c473eb48.png"
+    },
+    {
+      "index": 5,
+      "lesson": 4,
+      "old_file": "illustration_2_weekend_calendar.png",
+      "file": "illustration_2_weekend_calendar_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-1a019e05-489d-4d70-9baa-3ead15a9d6a7.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Correct the calendar orientation: rotate the entire flat spiral-bound calendar 180 degrees on tabletop, so header and TOP of grid are on the edge NEAREST CAMERA, and BOTTOM of grid nearest the two main students. It is being read by the two students, so any tiny headings must be upside down to viewer. Place spiral binding along edge nearest viewer, calendar lies flat. At far-left background table x8% y36%, fix laptop use: place the two background students together on the far side of their table, using one laptop whose screen faces them, grey back of lid faces camera, hands on correctly aligned keyboard. Preserve main foreground pair, faces hands, sports props, buildings, light, framing and style. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "text-calendar-dialogue",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-f33eae65-5071-4383-8dc7-68e2f4950843.png"
+    },
+    {
+      "index": 6,
+      "lesson": 4,
+      "old_file": "illustration_4_weekly_student_life.png",
+      "file": "illustration_4_weekly_student_life_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-60996b0c-8b2e-4214-beb4-cdd7e82ecee7.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Change ONLY the Saudi male protagonist's clothing in the TWO right-hand SPORTS vignettes. In baseball scene upper right he wears a simple sports T-shirt, athletic trousers or shorts and sneakers, with his short dark hair visible; remove traditional white robe, keffiyeh and black headband. In basketball scene lower right he wears a breathable athletic T-shirt and shorts with sneakers, short dark hair visible; remove scarf/head covering and heavy hoodie. Keep same recognizable bearded man, natural athletic body positions. His traditional clothing in the large LEFT library/study scene remains unchanged. Preserve all people, faces, poses, sports equipment, panel layout, colors and detailed pixel-art texture. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "text-reading-daily-life",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-3362083d-056c-480a-a660-db0fdf2acd77.png"
+    },
+    {
+      "index": 7,
+      "lesson": 4,
+      "old_file": "illustration_5_everyday_greetings.png",
+      "file": "illustration_5_everyday_greetings_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-e8dd7f93-34df-4e95-9e48-127347c53635.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Correct the tiny cafeteria meal tray in front of the central male student at x82% y59%. Give EACH of the three diners a full-size individual rectangular Korean cafeteria tray roughly 40 by 30cm, coherently scaled to their hands and bowls, with a rice bowl, soup bowl and a few side dishes all fitting on the same tray. In particular center man's tray must be clearly large enough to support all his dishes, not a tiny sliver. Correct perspective, trays on tabletop, enough clearance without overlapping people. Preserve left-hand bowing/greeting vignette exactly, right diners' faces and gestures, scene layout and warm pixel-art style. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "text-culture-greetings",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-951a593d-d456-4e9b-a58c-29598d6d3da1.png"
+    },
+    {
+      "index": 8,
+      "lesson": 5,
+      "old_file": "illustration_2_swimming_reception.png",
+      "file": "illustration_2_swimming_reception_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-b73f5ac1-93e4-44f4-9b6c-723d30324920.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Preserve the two foreground women at reception, all faces hands clothes counter schedule and composition. Rebuild ONLY background pool to be physically coherent: all floating lane dividers are straight PARALLEL lines along pool long axis toward ONE shared vanishing point; no diagonals across lanes or crossing lines. At most TWO small swimmers, natural correctly connected head shoulders and arms in simple swimming/resting poses within separate lanes; submerged bodies consistently occluded by water. Far-left background woman must have two full natural legs and feet meeting the pool deck, not amputated at knee. Make her stand upright on poolside deck. Remove stray metal handrails from middle of reception/lobby; show only ONE normal metal pool ladder firmly anchored at actual pool EDGE and descending into water. Clear glass partition separates dry lobby and pool deck. Keep original lighting, wide16:9 and detailed semirealistic pixel-art. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "text-time-dialogue",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-f7cbe78a-dff0-4a86-bb44-a3f97c862e3d.png"
+    },
+    {
+      "index": 9,
+      "lesson": 5,
+      "old_file": "illustration_3_yoga_badminton.png",
+      "file": "illustration_3_yoga_badminton_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-3427892a-d0c6-430e-886b-cd90e4af1d87.png",
+      "prompt": "Use case: precise-object-edit. Edit target: attached image. Keep main foreground woman with yoga mat and man with badminton racket completely unchanged, including faces hands clothes and equipment. Redraw the small yoga practitioner at far left x6% y44% in a simple anatomically natural seated cross-legged pose on a yoga mat, upright straight spine, hands on knees, exactly two legs correctly folded, feet attached naturally. Other background yoga figures should also be coherent simple poses, no twisted limbs. Far-right background badminton shuttlecock x98% y25% must be tiny regulation scale relative to distant players and rackets, approximately 1/4 head width, not an enormous white object. Use one tiny natural shuttlecock near racket and normal player arms and legs. Preserve room, lighting, background windows and wide detailed pixel-art composition. Do not add other details or captions. Preserve original wide 16:9 framing and established detailed semirealistic pixel-art style.",
+      "block": "listening-class-info",
+      "generated_source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-d7f98cab-f725-40e0-a8f2-a266df367c00.png",
+      "refinement_prompt": "Use case: precise-object-edit. Edit the attached gym illustration. Change ONLY the airborne white shuttlecock near the far-right background player's face (around x97% y30%). Remove this oversized white object entirely; leave clean uninterrupted outdoor foliage in its place. The shuttlecock is outside the visible frame at this moment of the rally. Do not add any other shuttlecock or white flying object. Preserve both distant players and rackets, the corrected seated yoga woman, foreground protagonists, faces hands, lighting, wide16:9 framing and pixel-art texture completely unchanged."
+    }
+  ]
+}

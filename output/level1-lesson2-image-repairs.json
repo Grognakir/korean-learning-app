@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "jobs": [
+    {
+      "lesson": 2,
+      "block": "text-classroom-dialogue",
+      "old_file": "illustration_1_classroom_objects.png",
+      "file": "illustration_1_classroom_objects_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-c418e767-6c9e-4805-8a68-2a4c50a5c0e2.png",
+      "prompt": "Rotate laptop so display and keyboard face viewer; preserve classroom and students."
+    },
+    {
+      "lesson": 2,
+      "block": "text-facilities-dialogue",
+      "old_file": "illustration_2_campus_directions.png",
+      "file": "illustration_2_campus_directions_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-a585e013-685b-4331-bd94-8f461b4ffa6b.png",
+      "prompt": "Correct background pedestrian walking anatomy and simplify objects behind windows; preserve foreground students."
+    },
+    {
+      "lesson": 2,
+      "block": "text-reading-hometown-house",
+      "old_file": "illustration_4_two_story_home.png",
+      "file": "illustration_4_two_story_home_v2.png",
+      "source": "/Users/tensolomon/.codex/generated_images/01a10fb2-1152-7261-9ab1-b081b62846d3/exec-5c2d224d-e8fc-487f-a174-6d751572b237.png",
+      "prompt": "Use case: precise-object-edit / architectural illustration. Edit target attached warm Chicago two-story house cutaway. Retain same attractive detailed semirealistic pixel-art style, wide 16:9 framing, dusk Chicago skyline, garden, roof, house outline and room program: downstairs living room left, kitchen center, parents bedroom right; upstairs student bedroom left/center and bathroom right. Retain parents on sofa and student at computer. REBUILD interior circulation with plausible architecture. The five mandatory corrections: 1. At the far LEFT ground-floor wall, show a proper clearly visible front entry door opening directly from the porch into the living room, with threshold connecting to porch. Shift TV slightly inward if required so entrance is not blocked. 2. Leave a generous visible continuous empty walkway behind/beside the sofa from front entrance to stair foot and central kitchen. Sofa must not occupy any doorway. Place a clear wide rectangular open passage between living and kitchen, all furniture away from it. 3. Upstairs remove the misleading closed door behind the bed and wardrobe. Give upstairs a small clear stair landing and open hall passage from stair top to bedroom and bathroom. Bathroom entrance is in the INTERNAL partition wall facing this landing, with clear floor space on both sides, door absent or sliding neatly into its partition. No wardrobe blocking bathroom doorway or door swing. 4. Upstairs wardrobe against bedroom back wall LEFT of bathroom passage, one simple rectangular closed wardrobe whose doors face into bedroom toward bed, consistent depth and perspective, NO extra side-facing door or giant front panel facing viewer. Separate it clearly from passage. 5. Ground-floor far RIGHT exterior wall has only a window; remove the impossible doorway there. Parents bedroom has ONE plausible entrance from kitchen/hall in its left internal partition, with unobstructed floor. Any door must connect two actual visible accessible spaces or porch; no doors onto void, behind closets or beds. Staircase visibly connects floors; no floating furniture. Simplify rather than add furniture. Coherent cutaway perspective and structural wall thickness throughout. No written labels, no arrows, no logos. Check whole circulation, not just decorative door shapes."
+    }
+  ]
+}

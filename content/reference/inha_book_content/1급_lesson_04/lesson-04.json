@@ -117,7 +117,7 @@
           "title": "일상생활에 대해 말하기",
           "title_ru": "Рассказывать о повседневной жизни",
           "illustration": {
-            "storage_path": "lesson_4/illustration_1_library_and_sports.png",
+            "storage_path": "lesson_4/illustration_1_library_and_sports_v2.png",
             "original_kind": "illustration"
           },
           "text_kind": "dialogue",
@@ -591,7 +591,7 @@
           "title": "달력을 보고 말하기",
           "title_ru": "Говорить, глядя на календарь",
           "illustration": {
-            "storage_path": "lesson_4/illustration_2_weekend_calendar.png",
+            "storage_path": "lesson_4/illustration_2_weekend_calendar_v2.png",
             "original_kind": "illustration"
           },
           "text_kind": "dialogue",
@@ -1619,7 +1619,7 @@
           "toc_section": "읽고 말하기",
           "type": "text",
           "illustration": {
-            "storage_path": "lesson_4/illustration_4_weekly_student_life.png",
+            "storage_path": "lesson_4/illustration_4_weekly_student_life_v2.png",
             "original_kind": "illustration"
           },
           "text_kind": "passage",
@@ -1763,7 +1763,7 @@
           "title": "한국의 일상적인 인사말",
           "title_ru": "Повседневные приветствия в Корее",
           "illustration": {
-            "storage_path": "lesson_4/illustration_5_everyday_greetings.png",
+            "storage_path": "lesson_4/illustration_5_everyday_greetings_v2.png",
             "original_kind": "illustration"
           },
           "text_kind": "passage",
