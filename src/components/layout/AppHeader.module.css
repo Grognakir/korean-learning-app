@@ -48,67 +48,9 @@
   align-items: center;
 }
 
-.headerActions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.iconButton {
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  min-width: 30px;
-  min-height: 30px;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  line-height: 0;
-  background: none;
-  color: var(--ink-soft);
-  cursor: pointer;
-  text-decoration: none;
-  overflow: visible;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.iconButton svg {
-  display: block;
-  flex-shrink: 0;
-  overflow: visible;
-}
-
-.userMenu {
-  border: 1px solid var(--line);
-  border-radius: 100px;
-  padding: 6px 14px;
-  background: none;
-  color: var(--ink-soft);
-  font-size: 12.5px;
-  font-weight: 600;
-  cursor: default;
-  white-space: nowrap;
-}
-
-.logout {
-  border: 1px solid var(--line);
-  border-radius: 100px;
-  padding: 6px 14px;
-  background: none;
-  color: var(--ink-soft);
-  font-size: 12.5px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
 /*
- * Мобильный паттерн: центр-меню переезжает в BottomTabBar, а
- * имя/шестерёнка/выход сворачиваются в UserMenu. Порог --to-compact
- * объявлен в src/styles/media.css.
+ * Мобильный паттерн: центр-меню переезжает в BottomTabBar. Порог
+ * --to-compact объявлен в src/styles/media.css.
  */
 @media (--header-tight) {
   .header {
@@ -119,23 +61,10 @@
   .navCenter {
     gap: 12px;
   }
-
-  .headerActions {
-    gap: 6px;
-  }
-
-  .userMenu,
-  .logout {
-    padding: 6px 10px;
-  }
 }
 
 @media (--to-compact) {
   .navCenter {
-    display: none;
-  }
-
-  .headerActions {
     display: none;
   }
 }

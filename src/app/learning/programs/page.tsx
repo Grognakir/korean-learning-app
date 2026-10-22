@@ -5,15 +5,15 @@ import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { TOTAL_LESSONS } from "./constants";
 import styles from "./learning.module.css";
 
-export default async function PlansPage() {
+export default async function ProgramsPage() {
   const { supabase, user } = await requireUser();
 
   const [profile, { data: textbooks, error }] = await Promise.all([
     getProfileRow(user.id),
     supabase
       .from("textbooks")
-      .select("id, slug, title, level, learning_plans!inner(slug)")
-      .eq("learning_plans.slug", "inha")
+      .select("id, slug, title, level, learning_programs!inner(slug)")
+      .eq("learning_programs.slug", "inha")
       .order("level"),
   ]);
   if (error) throw new Error("Не удалось загрузить учебники");
@@ -43,7 +43,7 @@ export default async function PlansPage() {
         </Link>
 
         <div className={styles.header}>
-          <p className={styles.eyebrow}>План 인하대학교 · Учебники</p>
+          <p className={styles.eyebrow}>Программа 인하대학교 · Учебники</p>
           <h1 className={styles.title}>Выберите учебник</h1>
         </div>
 
@@ -53,7 +53,7 @@ export default async function PlansPage() {
             return (
               <Link
                 key={textbook.id}
-                href={`/learning/plans/${textbook.slug}`}
+                href={`/learning/programs/${textbook.slug}`}
                 className={styles.sectionCard}
               >
                 <span className={`${styles.sectionCardTitle} kr`}>

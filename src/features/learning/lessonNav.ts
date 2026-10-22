@@ -34,7 +34,7 @@ export function buildLessonNav(
     key: section.key,
     label: section.items[0]?.label ?? section.key,
     available: section.items.some((item) => item.block_ref != null),
-    href: `/learning/plans/${textbookSlug}/${lessonNumber}/${encodeURIComponent(section.key)}`,
+    href: `/learning/programs/${textbookSlug}/${lessonNumber}/${encodeURIComponent(section.key)}`,
   }));
 
   const currentIndex = sections.findIndex((section) => section.key === currentSectionKey);

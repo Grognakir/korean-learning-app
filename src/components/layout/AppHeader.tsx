@@ -1,15 +1,18 @@
 import Link from "next/link";
-import { signOut } from "@/features/auth/actions";
-import { SettingsIcon } from "@/components/icons/SettingsIcon";
+import { avatarFor } from "@/features/auth/avatar";
+import { getAuthUser } from "@/features/auth/requireUser";
 import { TaegeukIcon } from "@/components/icons/TaegeukIcon";
 import { UserMenu } from "@/components/ui/UserMenu";
 import { NAV_SECTIONS } from "./navSections";
 import styles from "./AppHeader.module.css";
 
-export function AppHeader({ username }: { username: string }) {
+export async function AppHeader({ username }: { username: string }) {
+  const { user } = await getAuthUser();
+  const avatar = avatarFor(user?.id ?? username);
+
   return (
     <header className={styles.header}>
-      <Link href="/" className={styles.brand}>
+      <Link href="/learning" className={styles.brand}>
         <TaegeukIcon size={22} />
         <span>한국어 공부</span>
       </Link>
@@ -27,20 +30,7 @@ export function AppHeader({ username }: { username: string }) {
         )}
       </nav>
       <div className={styles.headerRight}>
-        <div className={styles.headerActions}>
-          <span className={styles.userMenu} title="Скоро — меню профиля">
-            {username} ▾
-          </span>
-          <Link href="/settings" className={styles.iconButton} title="Настройки">
-            <SettingsIcon />
-          </Link>
-          <form action={signOut}>
-            <button type="submit" className={styles.logout}>
-              Выйти
-            </button>
-          </form>
-        </div>
-        <UserMenu username={username} />
+        <UserMenu username={username} avatar={avatar} />
       </div>
     </header>
   );

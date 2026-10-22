@@ -1,14 +1,14 @@
 import Link from "next/link";
-import styles from "./PlanBreadcrumbs.module.css";
+import styles from "./ProgramBreadcrumbs.module.css";
 
 type BreadcrumbItem = {
   href: string;
   label: string;
 };
 
-export function PlanBreadcrumbs({ items }: { items: BreadcrumbItem[] }) {
+export function ProgramBreadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav className={styles.root} aria-label="Навигация по плану обучения">
+    <nav className={styles.root} aria-label="Навигация по программе обучения">
       <span className={styles.arrow} aria-hidden="true">←</span>
       {items.map((item, index) => (
         <span key={item.href} className={styles.item}>

@@ -59,7 +59,7 @@ export function LessonToc({
       {block.sections.map((section) => {
         const [heading, ...subItems] = section.items;
         const isAvailable = section.items.some((item) => item.block_ref != null);
-        const openHref = `/learning/plans/${textbookSlug}/${lessonNumber}/${encodeURIComponent(section.key)}`;
+        const openHref = `/learning/programs/${textbookSlug}/${lessonNumber}/${encodeURIComponent(section.key)}`;
 
         return (
           <div key={section.key} className={styles.tocRow}>

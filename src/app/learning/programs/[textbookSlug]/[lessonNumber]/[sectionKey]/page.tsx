@@ -9,7 +9,7 @@ import { resolveBlockAssets, textbookAssetPrefix } from "@/features/learning/res
 import type { Block, TextbookPageRow } from "@/features/learning/types";
 import styles from "../lesson.module.css";
 import { SectionNav } from "./SectionNav";
-import { PlanBreadcrumbs } from "../../../PlanBreadcrumbs";
+import { ProgramBreadcrumbs } from "../../../ProgramBreadcrumbs";
 
 export default async function LessonSectionPage({
   params,
@@ -88,12 +88,12 @@ export default async function LessonSectionPage({
   );
 
   const breadcrumbs = (
-    <PlanBreadcrumbs
+    <ProgramBreadcrumbs
       items={[
-        { href: "/learning/plans", label: "К учебникам" },
-        { href: `/learning/plans/${textbookSlug}`, label: "К урокам" },
+        { href: "/learning/programs", label: "К учебникам" },
+        { href: `/learning/programs/${textbookSlug}`, label: "К урокам" },
         {
-          href: `/learning/plans/${textbookSlug}/${lessonNumber}`,
+          href: `/learning/programs/${textbookSlug}/${lessonNumber}`,
           label: "К оглавлению",
         },
       ]}
@@ -136,7 +136,7 @@ export default async function LessonSectionPage({
         </div>
 
         <div className={styles.sectionFooterNav}>
-          <Link href={`/learning/plans/${textbookSlug}/${lessonNumber}`} className={styles.backLink}>
+          <Link href={`/learning/programs/${textbookSlug}/${lessonNumber}`} className={styles.backLink}>
             ← К оглавлению
           </Link>
           {nav.next && (

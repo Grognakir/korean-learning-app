@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      { source: "/learning/plans", destination: "/learning/programs", permanent: true },
+      { source: "/learning/plans/:path*", destination: "/learning/programs/:path*", permanent: true },
+    ];
+  },
   // В деве 0, а не дефолтные 30с: страницы уроков/словаря ходят в Supabase
   // на каждый рендер, а не в fetch-кэш, поэтому клиентский Router Cache
   // там только маскирует свежие данные под старые (например "урок скоро

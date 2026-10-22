@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { signOut } from "@/features/auth/actions";
+import type { Avatar } from "@/features/auth/avatar";
 import styles from "./UserMenu.module.css";
 
-export function UserMenu({ username }: { username: string }) {
+export function UserMenu({ username, avatar }: { username: string; avatar: Avatar }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -29,8 +30,6 @@ export function UserMenu({ username }: { username: string }) {
     };
   }, [open]);
 
-  const initial = username.trim().charAt(0).toUpperCase() || "?";
-
   return (
     <div className={styles.root} ref={rootRef}>
       <button
@@ -40,8 +39,9 @@ export function UserMenu({ username }: { username: string }) {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Меню профиля"
+        style={{ background: avatar.background }}
       >
-        {initial}
+        <span aria-hidden="true">{avatar.emoji}</span>
       </button>
 
       {open && (

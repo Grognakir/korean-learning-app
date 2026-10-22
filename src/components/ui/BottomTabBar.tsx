@@ -18,7 +18,7 @@ function isActive(pathname: string, href: string): boolean {
 
 /**
  * Видна только на мобильных ширинах (см. медиа-запрос в BottomTabBar.module.css,
- * порог держать в синхроне с UserMenu.module.css/page.module.css — 1000px).
+ * порог держать в синхроне с UserMenu.module.css — 1000px).
  * Разделы без href — заглушки (нет ещё реального роута). Список разделов
  * всегда один и тот же (NAV_SECTIONS) — сюда, а не пропом через каждую
  * серверную страницу: проп с функциями-иконками не пересёк бы границу

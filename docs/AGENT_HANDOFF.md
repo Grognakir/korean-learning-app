@@ -67,6 +67,15 @@
 
 ## Журнал выполненных работ
 
+### 2026-10-23 — Меню пользователя, главная → «Обучение», «Планы» → «Программы»
+
+- Папку `content/reference/inha_workbook_photo/` не трогать (в git не добавлять).
+- Шапка: вместо заглушки «Dev ▾» кнопка-аватар (эмодзи на цветном круге) на всех экранах, открывает то же меню, что на мобильных. Аватар детерминированно выбирается по id пользователя (`src/features/auth/avatar.ts`, FNV-1a), в БД не хранится.
+- `/` теперь `redirect("/learning")` для гостей и вошедших; логотип ведёт на `/learning`. Удалены старая главная, `src/features/dashboard/*`, `SegmentedProgressBar` и их тесты.
+- Раздел «Планы» переименован в «Программы»: маршрут `/learning/plans/**` → `/learning/programs/**` (старые адреса постоянно перенаправляются в `next.config.ts`), `PlanBreadcrumbs` → `ProgramBreadcrumbs`, `TextbookPlanPage` → `TextbookProgramPage`, `public/images/learning/plans.*` → `programs.*`, тексты «План/плану» → «Программа/программе», `PROTECTED_PREFIXES` в `middleware.ts`.
+- БД: миграция `20261023130000_rename_plans_to_programs.sql` переименовывает `learning_plans` → `learning_programs`, `textbooks.plan_id` → `program_id`, ограничения и политику; данные и права сохраняются. `scripts/import-textbook.ts`, страница списка учебников и `docs/database/schema.md` обновлены. Новый код несовместим со старой схемой (и наоборот): выкладывать код и применять миграцию в одном заходе. Старые записи журнала с `/learning/plans/...` и `learning_plans` оставлены как исторические.
+- Проверено: `tsc` (после `next typegen`), ESLint, 225 тестов; локально `/learning/plans/inha-1` → `/learning/programs/inha-1`, `/learning/programs`, урок и картинка — 200.
+
 ### 2026-10-23 — Публикация 12 исправленных иллюстраций
 
 - Коммит `c61e5b6` отправлен в `origin/main`. Все 239 тестов прошли; TypeScript и ESLint проверены при подготовке правок.

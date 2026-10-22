@@ -40,7 +40,7 @@ export function BookToc({
           </thead>
           <tbody>
             {toc.lessons.map((row) => {
-              const lessonHref = `/learning/plans/${textbookSlug}/${row.lesson}`;
+              const lessonHref = `/learning/programs/${textbookSlug}/${row.lesson}`;
               const available = availableLessons.has(row.lesson);
               return (
                 <tr key={row.lesson}>

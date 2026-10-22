@@ -229,7 +229,7 @@ async function uploadLevel1Images(lessonNumber: number) {
   }
 }
 
-const PLAN = { slug: "inha", title: "인하대학교" };
+const PROGRAM = { slug: "inha", title: "인하대학교" };
 const TEXTBOOK = { slug: "inha-1", level: 1, title: "새인하한국어1" };
 const TEXTBOOK_2 = { slug: "inha-2", level: 2, title: "새인하한국어2" };
 
@@ -699,23 +699,23 @@ async function main() {
     return;
   }
 
-  const { data: plan, error: planError } = await supabase
-    .from("learning_plans")
-    .upsert(PLAN, { onConflict: "slug" })
+  const { data: program, error: programError } = await supabase
+    .from("learning_programs")
+    .upsert(PROGRAM, { onConflict: "slug" })
     .select()
     .single();
-  if (planError) throw planError;
+  if (programError) throw programError;
 
   const { data: textbook, error: textbookError } = await supabase
     .from("textbooks")
-    .upsert({ ...TEXTBOOK, plan_id: plan.id }, { onConflict: "slug" })
+    .upsert({ ...TEXTBOOK, program_id: program.id }, { onConflict: "slug" })
     .select()
     .single();
   if (textbookError) throw textbookError;
 
   const { data: textbook2, error: textbook2Error } = await supabase
     .from("textbooks")
-    .upsert({ ...TEXTBOOK_2, plan_id: plan.id }, { onConflict: "slug" })
+    .upsert({ ...TEXTBOOK_2, program_id: program.id }, { onConflict: "slug" })
     .select()
     .single();
   if (textbook2Error) throw textbook2Error;

@@ -4,13 +4,13 @@ import { fetchAllRows } from "@/lib/supabase/fetchAll";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { LessonList, type LessonListItem } from "../LessonList";
-import { PlanBreadcrumbs } from "../PlanBreadcrumbs";
+import { ProgramBreadcrumbs } from "../ProgramBreadcrumbs";
 import { BookToc } from "@/features/learning/components/BookToc";
 import { BOOK_TOCS } from "@/features/learning/data/bookToc";
 import { TOTAL_LESSONS } from "../constants";
 import styles from "../learning.module.css";
 
-export default async function TextbookPlanPage({
+export default async function TextbookProgramPage({
   params,
 }: {
   params: Promise<{ textbookSlug: string }>;
@@ -59,13 +59,13 @@ export default async function TextbookPlanPage({
     if (availableLessons.has(lessonNumber) && title) {
       lessonItems.push({
         lessonNumber,
-        href: `/learning/plans/${textbookSlug}/${lessonNumber}`,
+        href: `/learning/programs/${textbookSlug}/${lessonNumber}`,
         title,
       });
       continue;
     }
     if (availableLessons.has(lessonNumber)) {
-      lessonItems.push({ lessonNumber, href: `/learning/plans/${textbookSlug}/${lessonNumber}` });
+      lessonItems.push({ lessonNumber, href: `/learning/programs/${textbookSlug}/${lessonNumber}` });
       continue;
     }
     // Недоступные уроки просто не показываем — плашка-заглушка на весь
@@ -80,10 +80,10 @@ export default async function TextbookPlanPage({
       <AppHeader username={username} />
 
       <main className={styles.wrap}>
-        <PlanBreadcrumbs items={[{ href: "/learning/plans", label: "К учебникам" }]} />
+        <ProgramBreadcrumbs items={[{ href: "/learning/programs", label: "К учебникам" }]} />
 
         <div className={styles.header}>
-          <p className={styles.eyebrow}>План 인하대학교 · Учебники</p>
+          <p className={styles.eyebrow}>Программа 인하대학교 · Учебники</p>
           <h1 className={`${styles.title} kr`}>
             {textbook.title} · 급 {textbook.level}
           </h1>

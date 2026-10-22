@@ -16,13 +16,13 @@ it.each([
   expect(response.headers.get("location")).toBeNull();
 });
 
-it.each(["/learning/plans", "/learning/plans/1", "/learning/plans/1/grammar", "/settings"])("сохраняет защиту %s", async (path) => {
+it.each(["/learning/programs", "/learning/programs/1", "/learning/programs/1/grammar", "/settings"])("сохраняет защиту %s", async (path) => {
   const response = await updateSession(new NextRequest(`http://localhost${path}`));
   expect(response.headers.get("location")).toBe("http://localhost/login");
 });
 
-it("пропускает авторизованного пользователя к планам", async () => {
+it("пропускает авторизованного пользователя к программам", async () => {
   getUser.mockResolvedValue({ data: { user: { id: "user" } } });
-  const response = await updateSession(new NextRequest("http://localhost/learning/plans"));
+  const response = await updateSession(new NextRequest("http://localhost/learning/programs"));
   expect(response.headers.get("location")).toBeNull();
 });

@@ -4,7 +4,7 @@
 
 Таблицы сгруппированы по разделам приложения:
 - **Auth** — `profiles` (стандартная `auth.users` от Supabase не описывается здесь).
-- **Обучение** — `learning_plans`, `textbooks`, `textbook_pages`, `lessons`.
+- **Обучение** — `learning_programs`, `textbooks`, `textbook_pages`, `lessons`.
 - **Словарь** — `words`, `categories`, `word_categories`, `translations`, `word_examples`, `word_notes`, `word_forms`, `phrases`.
 
 ## Общие принципы
@@ -33,7 +33,7 @@
 
 ## Обучение
 
-### `learning_plans`
+### `learning_programs`
 | Поле | Тип |
 |---|---|
 | `id` | `uuid PK` |
@@ -45,7 +45,7 @@
 | Поле | Тип | Описание |
 |---|---|---|
 | `id` | `uuid PK` | |
-| `plan_id` | `uuid → learning_plans.id, cascade` | |
+| `program_id` | `uuid → learning_programs.id, cascade` | |
 | `slug` | `text not null unique` | |
 | `level` | `int not null` | |
 | `title` | `text not null` | |
@@ -196,7 +196,7 @@ erDiagram
 
     TEXTBOOKS {
         uuid id PK
-        uuid plan_id FK
+        uuid program_id FK
         text slug UK
         int level
         text title
@@ -278,6 +278,6 @@ erDiagram
     }
 ```
 
-У `learning_plans`/`textbooks`/`textbook_pages`/`lessons` нет прямой связи с пользователем — доступ к ним регулируется не через FK на `auth.users`, а через RLS-политику «виден любому `authenticated`».
+У `learning_programs`/`textbooks`/`textbook_pages`/`lessons` нет прямой связи с пользователем — доступ к ним регулируется не через FK на `auth.users`, а через RLS-политику «виден любому `authenticated`».
 
 Медиа-хранилище (Storage bucket `textbook-assets`) на диаграмме не показано — это не таблица `public`-схемы, а приватный bucket, связанный с уроками только по пути файла (`storage_path` внутри `textbook_pages.content` JSON), без FK.
