@@ -49755,6 +49755,108 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-두껍다",
+      "headword": "두껍다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Неправильные ㅂ받침"
+      ],
+      "translations": [
+        "быть толстым (о предмете)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-떨어지다",
+      "headword": "떨어지다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "падать; проваливаться (на экзамене)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-호주",
+      "headword": "호주",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Страны"
+      ],
+      "translations": [
+        "Австралия"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-배탈",
+      "headword": "배탈",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "расстройство желудка"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-시다",
+      "headword": "시다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть кислым"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-차다",
+      "headword": "차다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть холодным (о еде, воде)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }
