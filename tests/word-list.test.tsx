@@ -12,12 +12,11 @@ afterEach(() => {
   vi.useRealTimers();
 });
 
-it("ищет переводы только с двух символов и фильтрует их по языку словаря", async () => {
+it("ищет переводы только с двух символов", async () => {
   const tables: string[] = [];
   const translationSelects: string[] = [];
-  const translationEq: [string, unknown][] = [];
   const words: Word[] = [{
-    id: "1", headword: "학교", language: "ko", reading: null,
+    id: "1", headword: "학교", reading: null,
     part_of_speech: null, owner_user_id: null, translations: [{ text: "школа" }],
     word_categories: [], word_examples: [], word_notes: [], word_forms: [],
   }];
@@ -29,10 +28,7 @@ it("ищет переводы только с двух символов и фи�
           if (table === "translations" && cols) translationSelects.push(cols);
           return query;
         },
-        eq: (col: string, val: unknown) => {
-          if (table === "translations") translationEq.push([col, val]);
-          return query;
-        },
+        eq: () => query,
         ilike: () => query,
         order: () => query,
         range: () => query,
@@ -52,7 +48,7 @@ it("ищет переводы только с двух символов и фи�
 
   render(
     <DictionaryCacheProvider>
-      <WordList categories={[]} userId={null} language="ko" onWordChanged={() => {}} />
+      <WordList categories={[]} userId={null} onWordChanged={() => {}} />
     </DictionaryCacheProvider>,
   );
   await waitFor(() => expect(screen.getByText("학교")).toBeDefined());
@@ -69,7 +65,6 @@ it("ищет переводы только с двух символов и фи�
 
   tables.length = 0;
   translationSelects.length = 0;
-  translationEq.length = 0;
   vi.useFakeTimers();
   fireEvent.change(screen.getByRole("searchbox"), { target: { value: "на" } });
   await act(async () => {
@@ -77,13 +72,12 @@ it("ищет переводы только с двух символов и фи�
   });
   vi.useRealTimers();
   await waitFor(() => expect(tables).toContain("translations"));
-  expect(translationSelects).toContain("word_id, words!inner(language)");
-  expect(translationEq).toContainEqual(["words.language", "ko"]);
+  expect(translationSelects).toContain("word_id");
 });
 
 it("возвращается на доступную страницу после удаления её последнего слова", async () => {
   const words: Word[] = Array.from({ length: 11 }, (_, i) => ({
-    id: String(i), headword: `word-${i + 1}`, language: "en", reading: null,
+    id: String(i), headword: `word-${i + 1}`, reading: null,
     part_of_speech: null, owner_user_id: null, translations: [],
     word_categories: [], word_examples: [], word_notes: [], word_forms: [],
   }));
@@ -100,7 +94,7 @@ it("возвращается на доступную страницу после
     const { clearResultsCache } = useDictionaryCache();
     return <>
       <button onClick={clearResultsCache}>Обновить данные</button>
-      <WordList categories={[]} userId={null} language="en" onWordChanged={clearResultsCache} />
+      <WordList categories={[]} userId={null} onWordChanged={clearResultsCache} />
     </>;
   }
   render(<DictionaryCacheProvider><Harness /></DictionaryCacheProvider>);

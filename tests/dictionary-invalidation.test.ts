@@ -11,7 +11,6 @@ const rpc = vi.fn();
 beforeEach(() => {
   const query = {
     select: vi.fn().mockReturnThis(), eq: vi.fn().mockReturnThis(), delete: vi.fn().mockReturnThis(),
-    single: async () => ({ data: { active_language: "en" } }),
     then: (resolve: (value: unknown) => void) => Promise.resolve({ data: [{ id: "word" }], error: null }).then(resolve),
   };
   rpc.mockResolvedValue({ error: null });

@@ -32,7 +32,7 @@ export function SpellingSession({ initialItems }: { initialItems: SpellingItem[]
       {!!mistakes.length && <button className={styles.primary} onClick={() => restart(mistakes)}>Закрепить сложные ({mistakes.length})</button>}
       <button className={styles.secondary} onClick={() => restart(initialItems)}>Пройти заново</button>
     </div>
-    {!!mistakes.length && <ul className={styles.review} aria-label="Слова для повторения">{mistakes.map(({ word }) => <li key={word.id}><strong lang={word.language}>{word.headword}</strong><span>{word.translation}</span></li>)}</ul>}
+    {!!mistakes.length && <ul className={styles.review} aria-label="Слова для повторения">{mistakes.map(({ word }) => <li key={word.id}><strong lang="ko">{word.headword}</strong><span>{word.translation}</span></li>)}</ul>}
     <Link href="/learning/trainers">К тренажёрам →</Link>
   </div>;
   const item = items[index];
@@ -53,18 +53,18 @@ export function SpellingSession({ initialItems }: { initialItems: SpellingItem[]
   return <div className={styles.root}>
     <SessionProgress completed={index} total={items.length} label="Соберите слово по переводу" />
     <section className={styles.panel}>
-      <p className={styles.eyebrow}>{item.word.language === "ko" ? "Из корейских слогов" : "Из английских букв"} · {item.tiles.length} {plural(item.tiles.length, ["знак", "знака", "знаков"])}</p>
+      <p className={styles.eyebrow}>Из корейских слогов · {item.tiles.length} {plural(item.tiles.length, ["знак", "знака", "знаков"])}</p>
       <h2 ref={prompt} tabIndex={-1} className={styles.prompt}>{item.word.translation}</h2>
       <div className={styles.answer} role="group" aria-label="Ваш ответ">
         {!chosen.length && <span className={styles.description}>Нажимайте на знаки снизу</span>}
         {chosen.map((id, position) => <button key={id} className={styles.tile} disabled={checked} aria-label={`Убрать знак ${position + 1}: ${item.tiles.find(t => t.id === id)!.text}`} onClick={() => setChosen(prev => prev.filter(n => n !== id))}>{item.tiles.find(t => t.id === id)!.text}</button>)}
       </div>
       <div className={styles.tiles} role="group" aria-label="Доступные знаки">
-        {item.tiles.map((tile, position) => <button key={tile.id} lang={item.word.language} className={styles.tile} disabled={checked || chosen.includes(tile.id)} aria-label={`Добавить ${tile.text}, кнопка ${position + 1}`} onClick={() => setChosen(prev => prev.includes(tile.id) ? prev : [...prev, tile.id])}>{tile.text}</button>)}
+        {item.tiles.map((tile, position) => <button key={tile.id} lang="ko" className={styles.tile} disabled={checked || chosen.includes(tile.id)} aria-label={`Добавить ${tile.text}, кнопка ${position + 1}`} onClick={() => setChosen(prev => prev.includes(tile.id) ? prev : [...prev, tile.id])}>{tile.text}</button>)}
       </div>
-      {hinted && !checked && <p className={styles.description}>Первый знак: <strong lang={item.word.language}>{Array.from(item.word.headword)[0]}</strong></p>}
+      {hinted && !checked && <p className={styles.description}>Первый знак: <strong lang="ko">{Array.from(item.word.headword)[0]}</strong></p>}
       {checked ? <>
-        <p className={styles.feedback} role="status">{correct ? "Верно!" : "Запомните написание:"} <strong lang={item.word.language}>{item.word.headword}</strong></p>
+        <p className={styles.feedback} role="status">{correct ? "Верно!" : "Запомните написание:"} <strong lang="ko">{item.word.headword}</strong></p>
         <button className={styles.primary} onClick={next}>{index + 1 === items.length ? "Посмотреть результат" : "Далее"}</button>
       </> : <div className={styles.actions}>
         <button className={styles.secondary} disabled={!chosen.length} onClick={() => setChosen([])}>Очистить</button>

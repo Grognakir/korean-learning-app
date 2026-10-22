@@ -15,10 +15,7 @@ import styles from "./flashcards.module.css";
 
 type CategoryRow = {
   categories: { id: string; name: string } | { id: string; name: string }[] | null;
-  words:
-    | { owner_user_id: string | null; language: string }
-    | { owner_user_id: string | null; language: string }[]
-    | null;
+  words: { owner_user_id: string | null } | { owner_user_id: string | null }[] | null;
 };
 
 function asOne<T>(value: T | T[] | null | undefined): T | null {
@@ -45,13 +42,12 @@ export default async function FlashcardsMainPage({
   searchParams: Promise<{ categories?: string | string[] }>;
 }) {
   const { categories: categoriesParam } = await searchParams;
-  const { supabase, user, username, newCardsLimit, activeLanguage: language } = await getLearningContext();
+  const { supabase, user, username, newCardsLimit } = await getLearningContext();
 
   const rows = await fetchAllRows<CategoryRow>((from, to) =>
     supabase
       .from("word_categories")
-      .select("categories(id, name), words!inner(owner_user_id, language)")
-      .eq("words.language", language)
+      .select("categories(id, name), words!inner(owner_user_id)")
       .range(from, to),
   );
 
@@ -75,7 +71,6 @@ export default async function FlashcardsMainPage({
     supabase,
     user?.id ?? null,
     newCardsLimit,
-    language,
     { categoryIds: selectedCategoryIds.length ? selectedCategoryIds : undefined },
   );
   const effectiveNewCardsLimit = Math.min(newCardsLimit, availableNewCount);
@@ -99,13 +94,12 @@ export default async function FlashcardsMainPage({
                 active="main"
                 newCardsLimit={newCardsLimit}
                 availableNewCount={availableNewCount}
-                language={language}
               />
               <CategorySelect categories={categoryList} selectedIds={selectedCategoryIds} />
             </SessionSettings>
             <FlashcardSession
               guest={!user}
-              key={JSON.stringify([user?.id ?? null, language, newCardsLimit, selectedCategoryIds.slice().sort()])}
+              key={JSON.stringify([user?.id ?? null, newCardsLimit, selectedCategoryIds.slice().sort()])}
               queue={queue}
             />
           </div>

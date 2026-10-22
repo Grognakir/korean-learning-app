@@ -27,7 +27,6 @@ import {
 import {
   PART_OF_SPEECH_TAGS,
   type CategoryOption,
-  type Language,
   type Word,
 } from "@/features/dictionary/types";
 import { Select } from "@/components/ui/Select";
@@ -82,7 +81,6 @@ function ViewIcon() {
 type WordListProps = {
   categories: CategoryOption[];
   userId: string | null;
-  language: Language;
   onWordChanged: () => void;
 };
 
@@ -193,7 +191,7 @@ function WordCard({
           <ul className={styles.examples}>
             {word.word_examples.map((ex, i) => (
               <li key={i} className={styles.example}>
-                <span className={word.language === "ko" ? "kr" : undefined}>
+                <span className="kr">
                   {ex.kr}
                 </span>
                 <span className={styles.exampleRu}>{ex.ru}</span>
@@ -234,11 +232,11 @@ function WordCard({
                 glossIndex === -1 ? "" : rel.value.slice(glossIndex + 1);
               return (
                 <li key={`rel-${i}`}>
-                  <span className={word.language === "ko" ? "kr" : undefined}>
+                  <span className="kr">
                     {word.headword}
                   </span>{" "}
                   {rel.label === "антоним" ? "↔" : "="}{" "}
-                  <span className={word.language === "ko" ? "kr" : undefined}>
+                  <span className="kr">
                     {relWord}
                   </span>
                   {gloss && ` ${gloss}`}
@@ -256,7 +254,7 @@ function WordCard({
               <li key={i}>
                 {form.label && <span>{form.label}: </span>}
                 <span
-                  className={`${styles.formValue} ${word.language === "ko" ? "kr" : ""}`}
+                  className={`${styles.formValue} kr`}
                 >
                   {form.value}
                 </span>
@@ -273,7 +271,7 @@ function WordCard({
       <div className={styles.cardBody}>
         <div className={styles.titleRow}>
           <span
-            className={`${styles.headword} ${word.language === "ko" ? "kr" : ""}`}
+            className={`${styles.headword} kr`}
           >
             {word.headword}
           </span>
@@ -332,7 +330,6 @@ function WordCard({
 export function WordList({
   categories,
   userId,
-  language,
   onWordChanged,
 }: WordListProps) {
   const {
@@ -361,7 +358,6 @@ export function WordList({
   const [editingWord, setEditingWord] = useState<Word | null>(null);
   const filtersRef = useRef<HTMLDivElement>(null);
   const prevUserIdRef = useRef(userId);
-  const prevLanguageRef = useRef(language);
 
   // Сброс фильтров при заходе на страницу, если пользователь не включил
   // их сохранение.
@@ -378,16 +374,6 @@ export function WordList({
     prevUserIdRef.current = userId;
     clearResultsCache();
   }, [userId, clearResultsCache]);
-
-  // Категории теперь языко-скопированы — оставшийся categoryId/partOfSpeech
-  // от другого трека тихо даст пустой список вместо ошибки, поэтому сбрасываем
-  // языко-специфичные фильтры при переключении трека.
-  useEffect(() => {
-    if (prevLanguageRef.current === language) return;
-    prevLanguageRef.current = language;
-    clearResultsCache();
-    setState({ categoryId: "", partOfSpeech: "", page: 1 });
-  }, [language, clearResultsCache, setState]);
 
   useEffect(() => {
     if (!openPanel) return;
@@ -415,7 +401,6 @@ export function WordList({
         categoryId,
         ownership,
         userId,
-        language,
       }),
     [
       debouncedQuery,
@@ -426,7 +411,6 @@ export function WordList({
       categoryId,
       ownership,
       userId,
-      language,
     ],
   );
 
@@ -452,8 +436,7 @@ export function WordList({
     if (debouncedQuery.trim().length >= 2) {
       const { data } = await supabase
         .from("translations")
-        .select("word_id, words!inner(language)")
-        .eq("words.language", language)
+        .select("word_id")
         .ilike("text", `%${escapeLike(debouncedQuery)}%`)
         .limit(500);
       translatedWordIds = Array.from(new Set((data ?? []).map((row) => row.word_id as string)));
@@ -462,10 +445,9 @@ export function WordList({
     let q = supabase
       .from("words")
       .select(
-        `id, headword, reading, part_of_speech, owner_user_id, language, translations(text), ${embed}, word_examples(kr, ru), word_notes(text), word_forms(label, value)`,
+        `id, headword, reading, part_of_speech, owner_user_id, translations(text), ${embed}, word_examples(kr, ru), word_notes(text), word_forms(label, value)`,
         { count: "exact" },
       )
-      .eq("language", language)
       .order("headword", { ascending: sortDir === "asc" })
       .order("id", { ascending: true })
       .range((page - 1) * pageSize, page * pageSize - 1);
@@ -488,7 +470,6 @@ export function WordList({
   }, [
     categoryId,
     debouncedQuery,
-    language,
     ownership,
     page,
     pageSize,
@@ -565,7 +546,7 @@ export function WordList({
           <input
             type="search"
             className={styles.searchInput}
-            placeholder={language === "ko" ? "Слово на корейском…" : "Слово на английском…"}
+            placeholder="Слово на корейском…"
             value={query}
             onChange={(e) => {
               setState({ query: e.target.value, expandedId: null, page: 1 });

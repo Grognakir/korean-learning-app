@@ -3,8 +3,6 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { DictionaryPageClient } from "@/features/dictionary/components/DictionaryPageClient";
-import { readGuestLanguage } from "@/features/language/getActiveLanguage";
-import type { Language } from "@/features/dictionary/types";
 import styles from "./dictionary.module.css";
 
 // Категории вида "1. ...", "10. ...", "11. ..." — localeCompare сравнивает
@@ -22,27 +20,16 @@ export default async function DictionaryPage() {
   const { supabase, user } = await getAuthUser();
 
   let username: string | null = null;
-  let language: Language = "ko";
   if (user) {
     const profile = await getProfileRow(user.id);
     username = profile?.username ?? user.email ?? "Пользователь";
-    language = (profile?.active_language as Language | undefined) ?? "ko";
-  } else {
-    language = await readGuestLanguage();
   }
 
-  // Фразы/грамматика — только корейский контент, для английского трека эти
-  // запросы не нужны вовсе.
-  const [{ data: categories }, phraseGrammar] = await Promise.all([
-    supabase.from("categories").select("id, name").eq("language", language).order("name"),
-    language === "ko"
-      ? Promise.all([
-          supabase.from("phrases").select("category").not("category", "is", null),
-          supabase.from("grammar_points").select("category"),
-        ])
-      : Promise.resolve([{ data: [] }, { data: [] }] as const),
+  const [{ data: categories }, { data: phraseCategoryRows }, { data: grammarCategoryRows }] = await Promise.all([
+    supabase.from("categories").select("id, name").order("name"),
+    supabase.from("phrases").select("category").not("category", "is", null),
+    supabase.from("grammar_points").select("category"),
   ]);
-  const [{ data: phraseCategoryRows }, { data: grammarCategoryRows }] = phraseGrammar;
   const phraseCategories = Array.from(
     new Set((phraseCategoryRows ?? []).map((r) => r.category as string)),
   ).sort(compareCategoryNames);
@@ -60,7 +47,6 @@ export default async function DictionaryPage() {
           phraseCategories={phraseCategories}
           grammarCategories={grammarCategories}
           userId={user?.id ?? null}
-          language={language}
         />
       </main>
 

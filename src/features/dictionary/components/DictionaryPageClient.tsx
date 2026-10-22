@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDictionaryCache } from "@/features/dictionary/DictionaryCacheContext";
-import type { CategoryOption, Language } from "@/features/dictionary/types";
+import type { CategoryOption } from "@/features/dictionary/types";
 import { AddWordButton } from "./AddWordButton";
 import { GrammarList } from "./GrammarList";
 import { PhraseList } from "./PhraseList";
@@ -15,7 +15,6 @@ type DictionaryPageClientProps = {
   phraseCategories: string[];
   grammarCategories: string[];
   userId: string | null;
-  language: Language;
 };
 
 export function DictionaryPageClient({
@@ -23,12 +22,8 @@ export function DictionaryPageClient({
   phraseCategories,
   grammarCategories,
   userId,
-  language,
 }: DictionaryPageClientProps) {
-  // Фразы/грамматика — только корейский контент, для английского трека
-  // остаётся одна вкладка «Слова».
   const [tab, setTab] = useState<"words" | "phrases" | "grammar">("words");
-  const effectiveTab = language === "en" ? "words" : tab;
   const router = useRouter();
   const { clearResultsCache } = useDictionaryCache();
 
@@ -46,57 +41,51 @@ export function DictionaryPageClient({
         <div className={styles.typeTabs} role="tablist" aria-label="Тип контента">
           <button
             type="button"
-            className={effectiveTab === "words" ? styles.typeTabActive : styles.typeTab}
+            className={tab === "words" ? styles.typeTabActive : styles.typeTab}
             role="tab"
-            aria-selected={effectiveTab === "words"}
+            aria-selected={tab === "words"}
             onClick={() => setTab("words")}
           >
             Слова
           </button>
-          {language === "ko" && (
-            <>
-              <button
-                type="button"
-                className={
-                  effectiveTab === "phrases" ? styles.typeTabActive : styles.typeTab
-                }
-                role="tab"
-                aria-selected={effectiveTab === "phrases"}
-                onClick={() => setTab("phrases")}
-              >
-                Фразы
-              </button>
-              <button
-                type="button"
-                className={
-                  effectiveTab === "grammar" ? styles.typeTabActive : styles.typeTab
-                }
-                role="tab"
-                aria-selected={effectiveTab === "grammar"}
-                onClick={() => setTab("grammar")}
-              >
-                Грамматика
-              </button>
-            </>
-          )}
+          <button
+            type="button"
+            className={
+              tab === "phrases" ? styles.typeTabActive : styles.typeTab
+            }
+            role="tab"
+            aria-selected={tab === "phrases"}
+            onClick={() => setTab("phrases")}
+          >
+            Фразы
+          </button>
+          <button
+            type="button"
+            className={
+              tab === "grammar" ? styles.typeTabActive : styles.typeTab
+            }
+            role="tab"
+            aria-selected={tab === "grammar"}
+            onClick={() => setTab("grammar")}
+          >
+            Грамматика
+          </button>
         </div>
-        {userId && effectiveTab === "words" && (
+        {userId && tab === "words" && (
           <AddWordButton
             categories={categories}
-            language={language}
             onWordAdded={handleWordsChanged}
           />
         )}
       </div>
 
-      {effectiveTab === "words" ? (
+      {tab === "words" ? (
         <WordList
           categories={categories}
           userId={userId}
-          language={language}
           onWordChanged={handleWordsChanged}
         />
-      ) : effectiveTab === "phrases" ? (
+      ) : tab === "phrases" ? (
         <PhraseList categories={phraseCategories} />
       ) : (
         <GrammarList categories={grammarCategories} />

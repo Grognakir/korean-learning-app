@@ -6,7 +6,7 @@ import type { Word } from "@/features/dictionary/types";
 const { recordReview } = vi.hoisted(() => ({ recordReview: vi.fn() }));
 vi.mock("@/features/trainers/flashcards/actions", () => ({ recordReview }));
 const word: Word = {
-  id: "word", headword: "학교", language: "ko", reading: null,
+  id: "word", headword: "학교", reading: null,
   part_of_speech: null, owner_user_id: null, translations: [{ text: "школа" }],
   word_categories: [], word_examples: [], word_notes: [], word_forms: [],
 };

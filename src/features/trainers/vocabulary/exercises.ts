@@ -1,6 +1,4 @@
-import type { Language } from "@/features/dictionary/types";
-
-export type PracticeWord = { id: string; headword: string; translation: string; language: Language };
+export type PracticeWord = { id: string; headword: string; translation: string };
 export type Tile = { id: number; text: string };
 export type SpellingItem = { word: PracticeWord; tiles: Tile[] };
 export type PairRound = { words: PracticeWord[]; translationIds: string[] };
@@ -14,7 +12,7 @@ export function mix<T>(items: T[]): T[] {
   return result;
 }
 
-export function selectPracticeWords(rows: { id: string; headword: string; translations: { text: string }[] }[], language: Language): PracticeWord[] {
+export function selectPracticeWords(rows: { id: string; headword: string; translations: { text: string }[] }[]): PracticeWord[] {
   const headwords = new Set<string>();
   const translations = new Set<string>();
   const result: PracticeWord[] = [];
@@ -27,7 +25,7 @@ export function selectPracticeWords(rows: { id: string; headword: string; transl
     if (headwords.has(key) || translations.has(meaning)) continue;
     headwords.add(key);
     translations.add(meaning);
-    result.push({ id: row.id, headword, translation, language });
+    result.push({ id: row.id, headword, translation });
   }
   return result;
 }

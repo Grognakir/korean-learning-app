@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { GuestHeader } from "@/components/layout/GuestHeader";
 import { AppHeader } from "@/components/layout/AppHeader";
@@ -13,11 +12,7 @@ import layout from "../../../learning.module.css";
 import styles from "../flashcards.module.css";
 
 export default async function FlashcardsRelatedPage() {
-  const { supabase, user, username, newCardsLimit, activeLanguage: language } = await getLearningContext();
-
-  // Антонимы/синонимы есть только для корейского словаря — прямой заход
-  // по URL в английском режиме уводит на основной режим тренажёра.
-  if (language === "en") redirect("/learning/trainers/flashcards");
+  const { supabase, user, username, newCardsLimit } = await getLearningContext();
 
   const queue = await buildRelatedWordsQueue(supabase, user?.id ?? null, newCardsLimit);
 
@@ -32,7 +27,6 @@ export default async function FlashcardsRelatedPage() {
               <FlashcardsHeader
                 active="antonyms-synonyms"
                 newCardsLimit={newCardsLimit}
-                language={language}
               />
             </SessionSettings>
             <FlashcardSession guest={!user} key={`${user?.id ?? null}:${newCardsLimit}`} queue={queue} />

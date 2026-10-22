@@ -29,7 +29,7 @@ function CardBack({ word, reverse }: { word: Word; reverse: boolean }) {
   return (
     <div className={styles.back}>
       {reverse && <>
-        <p className={`${styles.headword} ${word.language === "ko" ? "kr" : ""}`}>{word.headword}</p>
+        <p className={`${styles.headword} kr`}>{word.headword}</p>
         {word.reading && <p className={styles.reading}>{formatReading(word.reading)}</p>}
       </>}
       {!reverse && translations.length > 0 && (
@@ -39,7 +39,7 @@ function CardBack({ word, reverse }: { word: Word; reverse: boolean }) {
         <ul className={styles.examples}>
           {examples.map((ex, i) => (
             <li key={i} className={styles.example}>
-              <span className={word.language === "ko" ? "kr" : undefined}>{ex.kr}</span>
+              <span className="kr">{ex.kr}</span>
               <span className={styles.exampleRu}>{ex.ru}</span>
             </li>
           ))}
@@ -163,7 +163,7 @@ export function FlashcardSession({ queue, guest = false }: Props) {
           onClick={() => setFlipped(true)}
           aria-label="Показать ответ"
         >
-          <span className={`${styles.headword} ${!reverse && word.language === "ko" ? "kr" : ""}`}>
+          <span className={`${styles.headword} ${!reverse ? "kr" : ""}`}>
             {reverse ? translations : word.headword}
           </span>
           {!reverse && reading ? <span className={styles.reading}>{reading}</span> : null}

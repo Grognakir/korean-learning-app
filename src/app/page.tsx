@@ -7,38 +7,28 @@ import { WordOverviewCard } from "@/features/dashboard/WordOverviewCard";
 import { getWordOverview } from "@/features/dashboard/wordOverview";
 import buttons from "@/components/ui/Button.module.css";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
-import { LanguageSwitch } from "@/components/layout/LanguageSwitch";
-import { getActiveLanguage } from "@/features/language/getActiveLanguage";
 import styles from "./page.module.css";
 
 export default async function HomePage() {
   const { supabase, user } = await getAuthUser();
 
   if (!user) {
-    const guestLanguage = await getActiveLanguage();
-
     return (
       <div className={styles.page}>
         <GuestHeader />
 
         <main className={styles.guestMain}>
           <div className={styles.guestIntro}>
-            <h1 className={styles.title}>{guestLanguage === "ko" ? "한국어 공부" : "English Study"}</h1>
-            <p className={styles.subtitle}>
-              {guestLanguage === "ko" ? "Приложение для изучения корейского" : "Приложение для изучения английского"}
-            </p>
+            <h1 className={styles.title}>한국어 공부</h1>
+            <p className={styles.subtitle}>Приложение для изучения корейского</p>
           </div>
-
-          <LanguageSwitch initialLanguage={guestLanguage} size="lg" />
 
           <Link href="/dictionary" className={styles.dictionaryCard}>
             <div className={styles.taegeukEdge} />
             <div className={styles.dictionaryCardBody}>
               <h2 className={styles.cardTitle}>Открыть словарь</h2>
               <p className={styles.dictionaryCardText}>
-                {guestLanguage === "ko"
-                  ? "Слова, фразы и грамматика — можно смотреть и искать без регистрации."
-                  : "Английские слова и примеры — можно смотреть и искать без регистрации."}
+                Слова, фразы и грамматика — можно смотреть и искать без регистрации.
               </p>
             </div>
           </Link>
@@ -75,8 +65,7 @@ export default async function HomePage() {
   const profile = await getProfileRow(user.id);
 
   const username = profile?.username ?? user.email ?? "Пользователь";
-  const activeLanguage = await getActiveLanguage();
-  const overview = await getWordOverview(supabase, user.id, activeLanguage);
+  const overview = await getWordOverview(supabase, user.id);
 
   return (
     <div className={styles.page}>
@@ -87,19 +76,12 @@ export default async function HomePage() {
           <p className={styles.greeting}>Привет, {username} 👋</p>
         </div>
 
-        <LanguageSwitch initialLanguage={activeLanguage} size="lg" />
-
         <WordOverviewCard overview={overview} />
 
         <section className={styles.planCard}>
-          <p className={styles.planText}>
-            {activeLanguage === "ko" ? "Учебные материалы и упражнения" : "Пополняйте словарь для следующих тренировок"}
-          </p>
-          <Link
-            href={activeLanguage === "ko" ? "/learning/plans" : "/dictionary"}
-            className={`${buttons.secondary} ${styles.actionLink}`}
-          >
-            {activeLanguage === "ko" ? "Открыть уроки" : "Открыть словарь"}
+          <p className={styles.planText}>Учебные материалы и упражнения</p>
+          <Link href="/learning/plans" className={`${buttons.secondary} ${styles.actionLink}`}>
+            Открыть уроки
           </Link>
         </section>
       </main>

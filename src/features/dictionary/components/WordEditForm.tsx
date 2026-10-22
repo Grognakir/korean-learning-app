@@ -7,7 +7,6 @@ import {
 import {
   PART_OF_SPEECH_TAGS,
   type CategoryOption,
-  type Language,
   type WordDraft,
 } from "@/features/dictionary/types";
 import { Button } from "@/components/ui/Button";
@@ -16,7 +15,6 @@ import styles from "./WordEditForm.module.css";
 
 type WordEditFormProps = {
   categories: CategoryOption[];
-  language: Language;
   initialDraft?: Partial<WordDraft>;
   onSave: (draft: WordDraft) => Promise<{ error?: string; success?: true }>;
   onSaved: () => void;
@@ -46,14 +44,13 @@ function buildInitialState(initialDraft?: Partial<WordDraft>) {
 
 export function WordEditForm({
   categories,
-  language,
   initialDraft,
   onSave,
   onSaved,
   submitLabel = "Добавить",
   footer,
 }: WordEditFormProps) {
-  const krClass = language === "ko" ? "kr" : "";
+  const krClass = "kr";
   const [state, setState] = useState(() => buildInitialState(initialDraft));
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -206,7 +203,7 @@ export function WordEditForm({
             <li key={i} className={styles.exampleRow}>
               <input
                 className={`${styles.input} ${krClass}`}
-                placeholder={language === "ko" ? "Корейский" : "Английский"}
+                placeholder="Корейский"
                 value={ex.kr}
                 onChange={(e) => updateExample(i, "kr", e.target.value)}
               />

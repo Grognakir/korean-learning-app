@@ -1,8 +1,6 @@
 import "server-only";
 import { cookies } from "next/headers";
-import { readGuestLanguage } from "@/features/language/getActiveLanguage";
 import { displayName, getAuthUser, getProfileRow } from "./requireUser";
-import type { Language } from "@/features/dictionary/types";
 
 export async function getLearningContext() {
   const { supabase, user } = await getAuthUser();
@@ -14,7 +12,6 @@ export async function getLearningContext() {
   return {
     supabase, user,
     username: user ? displayName(profile, user) : null,
-    activeLanguage: user ? (profile?.active_language as Language | undefined) ?? "ko" : await readGuestLanguage(),
     newCardsLimit,
   };
 }

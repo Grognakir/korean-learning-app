@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
@@ -15,10 +14,7 @@ type SearchParams = { areas?: string | string[]; count?: string | string[]; blit
 
 export default async function GrammarTrainerPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const params = parseGrammarParams(await searchParams);
-  const { supabase, username, activeLanguage } = await getLearningContext();
-
-  // Упражнения есть только для корейской грамматики.
-  if (activeLanguage === "en") redirect("/learning/trainers");
+  const { supabase, username } = await getLearningContext();
 
   const areas = await loadGrammarAreas(supabase);
   const known = params.areas?.filter((key) => areas.some((area) => area.key === key)) ?? [];

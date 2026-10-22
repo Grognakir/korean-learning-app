@@ -4,8 +4,8 @@ import { PairSession } from "@/features/trainers/vocabulary/PairSession";
 import { SpellingSession } from "@/features/trainers/vocabulary/SpellingSession";
 import { makeSpellingItems, selectPracticeWords, type PracticeWord } from "@/features/trainers/vocabulary/exercises";
 
-const cat: PracticeWord = { id: "cat", headword: "cat", translation: "кот", language: "en" };
-const dog: PracticeWord = { id: "dog", headword: "dog", translation: "собака", language: "en" };
+const cat: PracticeWord = { id: "cat", headword: "cat", translation: "кот" };
+const dog: PracticeWord = { id: "dog", headword: "dog", translation: "собака" };
 const spelling = [{ word: cat, tiles: [{ id: 1, text: "a" }, { id: 2, text: "t" }, { id: 0, text: "c" }] }];
 
 it("убирает пустые переводы, одинаковые пары и составные слова", () => {
@@ -16,7 +16,7 @@ it("убирает пустые переводы, одинаковые пары 
     { id: "4", headword: "ice cream", translations: [{ text: "мороженое" }] },
     { id: "5", headword: "dog", translations: [] },
   ];
-  expect(selectPracticeWords(rows, "en")).toEqual([{ id: "1", headword: "cat", translation: "кот", language: "en" }]);
+  expect(selectPracticeWords(rows)).toEqual([{ id: "1", headword: "cat", translation: "кот" }]);
 });
 
 it("сохраняет повторяющиеся буквы отдельными плитками", () => {

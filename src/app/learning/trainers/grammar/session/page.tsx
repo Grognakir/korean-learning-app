@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import { getLearningContext } from "@/features/auth/getLearningContext";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { GuestHeader } from "@/components/layout/GuestHeader";
@@ -17,9 +16,7 @@ type SearchParams = { areas?: string | string[]; count?: string | string[]; blit
 
 export default async function GrammarSessionPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const params = parseGrammarParams(await searchParams);
-  const { supabase, username, activeLanguage } = await getLearningContext();
-
-  if (activeLanguage === "en") redirect("/learning/trainers");
+  const { supabase, username } = await getLearningContext();
 
   const areas = await loadGrammarAreas(supabase);
   const chosen = params.areas ? areas.filter((area) => params.areas!.includes(area.key)) : areas;

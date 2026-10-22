@@ -1,5 +1,4 @@
 import Link from "next/link";
-import type { Language } from "@/features/dictionary/types";
 import styles from "./FlashcardsModeTabs.module.css";
 
 const TABS = [
@@ -13,19 +12,10 @@ const TABS = [
 
 export type FlashcardsMode = (typeof TABS)[number]["key"];
 
-// Антонимы/синонимы — только для корейского словаря: данных для
-// английского нет и не планируется этой задачей.
-export function FlashcardsModeTabs({
-  active,
-  language,
-}: {
-  active: FlashcardsMode;
-  language: Language;
-}) {
-  const tabs = language === "en" ? TABS.filter((t) => t.key === "main") : TABS;
+export function FlashcardsModeTabs({ active }: { active: FlashcardsMode }) {
   return (
     <div className={styles.tabs} role="tablist">
-      {tabs.map((tab) => (
+      {TABS.map((tab) => (
         <Link
           key={tab.key}
           href={tab.href}

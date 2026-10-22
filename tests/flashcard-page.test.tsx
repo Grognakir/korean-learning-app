@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { beforeEach, expect, it, vi } from "vitest";
 import FlashcardsPage from "@/app/learning/trainers/flashcards/page";
 import type { CategoryOption } from "@/features/dictionary/types";
@@ -15,36 +15,26 @@ vi.mock("@/features/trainers/flashcards/components/FlashcardsHeader", () => ({ F
 vi.mock("@/features/trainers/flashcards/components/CategorySelect", () => ({
   CategorySelect: ({ categories }: { categories: CategoryOption[] }) => <div>{categories.map((c) => c.name).join(", ")}</div>,
 }));
-const profile = { active_language: "ko", srs_new_cards_per_session: 5 };
+const profile = { srs_new_cards_per_session: 5 };
 const props = { searchParams: Promise.resolve({}) };
 
 beforeEach(() => {
-  profile.active_language = "ko";
   profile.srs_new_cards_per_session = 5;
   const query = { select: () => query, eq: () => query, single: async () => ({ data: profile }) };
-  getLearningContext.mockImplementation(async () => ({ user: { id: "user" }, username: "Test", activeLanguage: profile.active_language, newCardsLimit: profile.srs_new_cards_per_session, supabase: { from: () => query } }));
+  getLearningContext.mockImplementation(async () => ({ user: { id: "user" }, username: "Test", newCardsLimit: profile.srs_new_cards_per_session, supabase: { from: () => query } }));
   fetchAllRows.mockResolvedValue([
     { categories: { id: "global", name: "Общая" }, words: { owner_user_id: null } },
     { categories: { id: "own", name: "Моя категория" }, words: { owner_user_id: "user" } },
     { categories: { id: "other", name: "Чужая категория" }, words: { owner_user_id: "other" } },
   ]);
-  buildFlashcardQueueWithStats.mockImplementation(async (_client, _user, limit, language) => ({
+  buildFlashcardQueueWithStats.mockImplementation(async (_client, _user, limit) => ({
     availableNewCount: limit,
     queue: Array.from({ length: limit }, (_, i) => ({
       isNew: true,
-      word: { id: String(i), headword: language === "ko" ? `학교${i}` : `school${i}`, language, reading: null,
+      word: { id: String(i), headword: `학교${i}`, reading: null,
         translations: [{ text: "школа" }], word_examples: [] },
     })),
   }));
-});
-
-it("сбрасывает открытую карточку при смене языка", async () => {
-  const { rerender } = render(await FlashcardsPage(props));
-  fireEvent.click(screen.getByRole("button", { name: "Показать ответ" }));
-  profile.active_language = "en";
-  rerender(await FlashcardsPage(props));
-  expect(screen.getByText("school0")).toBeDefined();
-  expect(screen.queryByText("школа")).toBeNull();
 });
 
 it("применяет новый лимит к текущей очереди", async () => {
@@ -62,11 +52,11 @@ it("показывает категории собственных слов", as
 });
 
 it("открывает гостю карточки только общих категорий", async () => {
-  getLearningContext.mockResolvedValue({ user: null, username: null, activeLanguage: "ko", newCardsLimit: 5, supabase: {} });
+  getLearningContext.mockResolvedValue({ user: null, username: null, newCardsLimit: 5, supabase: {} });
   render(await FlashcardsPage(props));
   expect(screen.getByRole("button", { name: "Показать ответ" })).toBeDefined();
   expect(screen.queryByText(/Моя категория/)).toBeNull();
-  expect(buildFlashcardQueueWithStats).toHaveBeenCalledWith({}, null, 5, "ko", { categoryIds: undefined });
+  expect(buildFlashcardQueueWithStats).toHaveBeenCalledWith({}, null, 5, { categoryIds: undefined });
 });
 
 it("показывает фактический лимит выбранной подборки", async () => {
@@ -75,7 +65,7 @@ it("показывает фактический лимит выбранной п
     availableNewCount: 21,
     queue: Array.from({ length: 21 }, (_, i) => ({
       isNew: true,
-      word: { id: String(i), headword: `학교${i}`, language: "ko", reading: null,
+      word: { id: String(i), headword: `학교${i}`, reading: null,
         translations: [{ text: "школа" }], word_examples: [] },
     })),
   });

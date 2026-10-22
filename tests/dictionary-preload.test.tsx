@@ -10,7 +10,7 @@ vi.mock("@/lib/supabase/client", () => ({ createClient: () => ({ from }) }));
 vi.mock("next/navigation", () => ({ useRouter: () => router }));
 
 const requests: { table: string; resolve: (result: PageResult) => void; reject: (error: Error) => void }[] = [];
-const wordsKey = JSON.stringify({ debouncedQuery: "", sortDir: "asc", pageSize: 10, page: 1, partOfSpeech: "", categoryId: "", ownership: "all", userId: null, language: "ko" });
+const wordsKey = JSON.stringify({ debouncedQuery: "", sortDir: "asc", pageSize: 10, page: 1, partOfSpeech: "", categoryId: "", ownership: "all", userId: null });
 const foreground = vi.fn().mockResolvedValue({ data: ["unexpected"], count: 1, error: null });
 
 function Section({ cacheKey }: { cacheKey: string }) {
@@ -36,7 +36,7 @@ async function complete(index: number, row: string) {
 }
 
 it("загружает разделы по очереди и отдаёт их первому открытию из общего кэша", async () => {
-  const view = (cacheKey?: string) => <DictionaryCacheProvider><DictionaryPreload userId={null} language="ko" />{cacheKey && <Section cacheKey={cacheKey} />}</DictionaryCacheProvider>;
+  const view = (cacheKey?: string) => <DictionaryCacheProvider><DictionaryPreload userId={null} />{cacheKey && <Section cacheKey={cacheKey} />}</DictionaryCacheProvider>;
   const { rerender } = render(view());
   await waitFor(() => expect(requests.map(r => r.table)).toEqual(["words"]));
   rerender(view(wordsKey));
@@ -58,7 +58,7 @@ it("загружает разделы по очереди и отдаёт их �
 });
 
 it("продолжает цепочку после сетевой ошибки", async () => {
-  render(<DictionaryCacheProvider><DictionaryPreload userId={null} language="ko" /></DictionaryCacheProvider>);
+  render(<DictionaryCacheProvider><DictionaryPreload userId={null} /></DictionaryCacheProvider>);
   await waitFor(() => expect(requests).toHaveLength(1));
   await act(async () => requests[0].reject(new Error("offline")));
   expect(requests[1].table).toBe("phrases");
@@ -67,16 +67,8 @@ it("продолжает цепочку после сетевой ошибки",
   expect(router.prefetch).toHaveBeenCalledWith("/dictionary");
 });
 
-it("в английском режиме загружает только слова", async () => {
-  render(<DictionaryCacheProvider><DictionaryPreload userId={null} language="en" /></DictionaryCacheProvider>);
-  await waitFor(() => expect(requests).toHaveLength(1));
-  await complete(0, "word");
-  expect(from).toHaveBeenCalledTimes(1);
-  expect(router.prefetch).toHaveBeenCalledWith("/dictionary");
-});
-
 it("после ухода не запускает следующие разделы старой цепочки", async () => {
-  const { unmount } = render(<DictionaryCacheProvider><DictionaryPreload userId={null} language="ko" /></DictionaryCacheProvider>);
+  const { unmount } = render(<DictionaryCacheProvider><DictionaryPreload userId={null} /></DictionaryCacheProvider>);
   await waitFor(() => expect(requests).toHaveLength(1));
   unmount();
   await complete(0, "word");

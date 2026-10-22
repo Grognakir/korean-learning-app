@@ -61,7 +61,7 @@ export function PairSession({ initialRounds }: { initialRounds: PairRound[] }) {
     <SessionProgress showCompleted completed={rounds.slice(0, index).reduce((n, r) => n + r.words.length, 0) + matched.length} total={total} label={`Раунд ${index + 1} из ${rounds.length}`} />
     <h2 ref={heading} tabIndex={-1} className={styles.eyebrow}>Соедините слова с переводами · найдено {matched.length} из {round.words.length}</h2>
     <div className={styles.columns}>
-      <div className={styles.column} role="group" aria-label="Слова">{round.words.map(word => <button key={word.id} lang={word.language} className={classFor(word.id, left)} aria-pressed={left === word.id} disabled={matched.includes(word.id)} onClick={() => choose(word.id, "left")}>{matched.includes(word.id) && "✓ "}{word.headword}</button>)}</div>
+      <div className={styles.column} role="group" aria-label="Слова">{round.words.map(word => <button key={word.id} lang="ko" className={classFor(word.id, left)} aria-pressed={left === word.id} disabled={matched.includes(word.id)} onClick={() => choose(word.id, "left")}>{matched.includes(word.id) && "✓ "}{word.headword}</button>)}</div>
       <div className={styles.column} role="group" aria-label="Переводы">{round.translationIds.map(id => <button key={id} className={classFor(id, right)} aria-pressed={right === id} disabled={matched.includes(id)} onClick={() => choose(id, "right")}>{matched.includes(id) && "✓ "}{round.words.find(w => w.id === id)!.translation}</button>)}</div>
     </div>
     <p className={styles.feedback} role="status">{message}</p>

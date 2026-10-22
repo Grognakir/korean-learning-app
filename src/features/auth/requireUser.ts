@@ -3,7 +3,6 @@ import { cache } from "react";
 import { redirect } from "next/navigation";
 import type { User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
-import type { Language } from "@/features/dictionary/types";
 
 /**
  * supabase.auth.getUser() — настоящий сетевой запрос к Auth-серверу
@@ -31,7 +30,7 @@ export const getProfileRow = cache(async (userId: string) => {
   const { supabase } = await getAuthUser();
   const { data } = await supabase
     .from("profiles")
-    .select("username, active_language, font_ui, font_kr, srs_new_cards_per_session")
+    .select("username, font_ui, font_kr, srs_new_cards_per_session")
     .eq("id", userId)
     .single();
   return data;
@@ -57,7 +56,7 @@ export function displayName(
   return profile?.username ?? user.email ?? "Пользователь";
 }
 
-/** Частый случай: из профиля нужны username и активный язык обучения. */
+/** Частый случай: из профиля нужен username. */
 export async function requireUserWithProfile() {
   const { supabase, user } = await requireUser();
   const profile = await getProfileRow(user.id);
@@ -66,6 +65,5 @@ export async function requireUserWithProfile() {
     supabase,
     user,
     username: displayName(profile, user),
-    activeLanguage: (profile?.active_language as Language | undefined) ?? "ko",
   };
 }

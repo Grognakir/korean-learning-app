@@ -7,7 +7,7 @@ import { TrainerHeader } from "@/features/trainers/components/TrainerHeader";
 import styles from "../learning.module.css";
 
 export default async function TrainersPage() {
-  const { username, activeLanguage } = await getLearningContext();
+  const { username } = await getLearningContext();
 
   return (
     <div className={styles.page}>
@@ -42,38 +42,34 @@ export default async function TrainersPage() {
             <img src="/images/learning/trainers/spelling.png" alt="" className={styles.modeCardImage} />
             <div className={styles.modeCardBody}><span className={styles.modeCardTitle}>Собери слово</span><p className={styles.modeCardDescription}>Составляйте слова из букв или слогов. Подсказки и повтор сложных слов.</p></div>
           </Link>
-          {activeLanguage === "ko" && (
-            <Link href="/learning/trainers/grammar" className={styles.modeCard}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/learning/trainers/grammar.png"
-                alt=""
-                className={styles.modeCardImage}
-              />
-              <div className={styles.modeCardBody}>
-                <span className={styles.modeCardTitle}>Грамматика</span>
-                <p className={styles.modeCardDescription}>
-                  Правило, сразу практика, смешанные задания и блиц на время.
-                </p>
-              </div>
-            </Link>
-          )}
-          {activeLanguage === "ko" && (
-            <Link href="/learning/trainers/topics" className={styles.modeCard}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/learning/trainers/topics.png"
-                alt=""
-                className={styles.modeCardImage}
-              />
-              <div className={styles.modeCardBody}>
-                <span className={`${styles.modeCardTitle} kr`}>Отработка тем</span>
-                <p className={styles.modeCardDescription}>
-                  Тесты по грамматике и лексике с разбором ответов и повторением ошибок.
-                </p>
-              </div>
-            </Link>
-          )}
+          <Link href="/learning/trainers/grammar" className={styles.modeCard}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/learning/trainers/grammar.png"
+              alt=""
+              className={styles.modeCardImage}
+            />
+            <div className={styles.modeCardBody}>
+              <span className={styles.modeCardTitle}>Грамматика</span>
+              <p className={styles.modeCardDescription}>
+                Правило, сразу практика, смешанные задания и блиц на время.
+              </p>
+            </div>
+          </Link>
+          <Link href="/learning/trainers/topics" className={styles.modeCard}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/learning/trainers/topics.png"
+              alt=""
+              className={styles.modeCardImage}
+            />
+            <div className={styles.modeCardBody}>
+              <span className={`${styles.modeCardTitle} kr`}>Отработка тем</span>
+              <p className={styles.modeCardDescription}>
+                Тесты по грамматике и лексике с разбором ответов и повторением ошибок.
+              </p>
+            </div>
+          </Link>
         </div>
       </main>
 

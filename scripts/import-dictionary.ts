@@ -25,7 +25,7 @@ type SourceWord = {
   forms: { label: string; value: string }[];
   related: { label: string; value: string }[];
 };
-type SourceFile = { language?: "ko" | "en"; categories: string[]; words: SourceWord[] };
+type SourceFile = { categories: string[]; words: SourceWord[] };
 
 async function main() {
   const filePath = process.argv[2];
@@ -35,8 +35,6 @@ async function main() {
   const source: SourceFile = JSON.parse(
     readFileSync(join(process.cwd(), filePath), "utf-8"),
   );
-
-  const language = source.language ?? "ko";
 
   // --only=<headword1,headword2> — импортировать не весь файл (тысячи
   // последовательных upsert'ов, ощутимо на production), а только явно
@@ -61,17 +59,16 @@ async function main() {
   }
 
   console.log(
-    `Язык: ${language}, категорий: ${source.categories.length}, слов: ${words.length}${onlyArg ? ` (из ${source.words.length} в файле)` : ""}`,
+    `Категорий: ${source.categories.length}, слов: ${words.length}${onlyArg ? ` (из ${source.words.length} в файле)` : ""}`,
   );
 
-  // Глобальные категории уникальны по (language, lower(name)) частичным
+  // Глобальные категории уникальны по lower(name) частичным
   // индексом (owner_user_id is null) — такую уникальность PostgREST не
   // умеет указать в on_conflict, поэтому вставляем только недостающие.
   const { data: existingCategories, error: existingError } = await supabase
     .from("categories")
     .select("id, name")
-    .is("owner_user_id", null)
-    .eq("language", language);
+    .is("owner_user_id", null);
   if (existingError) throw existingError;
 
   const categoryIdByLowerName = new Map(
@@ -84,7 +81,7 @@ async function main() {
   if (missing.length > 0) {
     const { data: created, error: createError } = await supabase
       .from("categories")
-      .insert(missing.map((name) => ({ name, owner_user_id: null, language })))
+      .insert(missing.map((name) => ({ name, owner_user_id: null })))
       .select();
     if (createError) throw createError;
     for (const c of created ?? []) {
@@ -109,7 +106,6 @@ async function main() {
           reading: word.reading,
           part_of_speech: word.part_of_speech,
           level_tag: word.level_tag,
-          language,
         },
         { onConflict: "external_id" },
       )

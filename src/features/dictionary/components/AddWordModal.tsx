@@ -7,7 +7,7 @@ import {
   generateWordDraftAction,
   saveWord,
 } from "@/features/dictionary/actions";
-import type { CategoryOption, Language, WordDraft } from "@/features/dictionary/types";
+import type { CategoryOption, WordDraft } from "@/features/dictionary/types";
 import { WordEditForm } from "./WordEditForm";
 import styles from "./AddWordModal.module.css";
 
@@ -15,7 +15,6 @@ type AddWordModalProps = {
   open: boolean;
   onClose: () => void;
   categories: CategoryOption[];
-  language: Language;
   onWordAdded: () => void;
 };
 
@@ -23,14 +22,9 @@ export function AddWordModal({
   open,
   onClose,
   categories,
-  language,
   onWordAdded,
 }: AddWordModalProps) {
-  // AI-подсказка заточена под корейский (ai.ts) — для английского трека
-  // сразу показываем форму ручного ввода, вкладка AI не рендерится вовсе.
-  const [mode, setMode] = useState<"ai" | "manual">(
-    language === "en" ? "manual" : "ai",
-  );
+  const [mode, setMode] = useState<"ai" | "manual">("ai");
   const [aiInput, setAiInput] = useState("");
   const [generating, setGenerating] = useState(false);
   const [aiError, setAiError] = useState<string | null>(null);
@@ -73,28 +67,26 @@ export function AddWordModal({
     <Modal open={open} onClose={handleClose} title="Добавить слово">
       <h2 className={styles.title}>Добавить слово</h2>
 
-      {language === "ko" && (
-        <div className={styles.tabs} role="tablist">
-          <button
-            type="button"
-            role="tab"
-            aria-selected={mode === "ai"}
-            className={mode === "ai" ? styles.tabActive : styles.tab}
-            onClick={() => setMode("ai")}
-          >
-            Через AI
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={mode === "manual"}
-            className={mode === "manual" ? styles.tabActive : styles.tab}
-            onClick={() => setMode("manual")}
-          >
-            Вручную
-          </button>
-        </div>
-      )}
+      <div className={styles.tabs} role="tablist">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={mode === "ai"}
+          className={mode === "ai" ? styles.tabActive : styles.tab}
+          onClick={() => setMode("ai")}
+        >
+          Через AI
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={mode === "manual"}
+          className={mode === "manual" ? styles.tabActive : styles.tab}
+          onClick={() => setMode("manual")}
+        >
+          Вручную
+        </button>
+      </div>
 
       {mode === "ai" && (
         <div className={styles.aiSection}>
@@ -125,7 +117,6 @@ export function AddWordModal({
           {draft && (
             <WordEditForm
               categories={categories}
-              language={language}
               initialDraft={draft}
               onSave={handleSave}
               onSaved={handleSaved}
@@ -137,7 +128,6 @@ export function AddWordModal({
       {mode === "manual" && (
         <WordEditForm
           categories={categories}
-          language={language}
           onSave={handleSave}
           onSaved={handleSaved}
         />
