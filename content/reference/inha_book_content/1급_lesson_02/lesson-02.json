@@ -695,6 +695,101 @@
               "text": "아멜리 씨, 고맙습니다."
             }
           ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-facilities-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "학교",
+              "translation_ru": "школа"
+            },
+            {
+              "ko": "은행",
+              "translation_ru": "банк"
+            },
+            {
+              "ko": "있다",
+              "translation_ru": "быть, находиться; иметься"
+            },
+            {
+              "ko": "건물",
+              "translation_ru": "здание"
+            },
+            {
+              "ko": "옆",
+              "translation_ru": "сбоку, рядом"
+            },
+            {
+              "ko": "도서관",
+              "translation_ru": "библиотека"
+            },
+            {
+              "ko": "운동장",
+              "translation_ru": "спортплощадка, стадион"
+            },
+            {
+              "ko": "앞",
+              "translation_ru": "перед, впереди"
+            },
+            {
+              "ko": "없다",
+              "translation_ru": "не быть; отсутствовать"
+            },
+            {
+              "ko": "방",
+              "translation_ru": "комната"
+            },
+            {
+              "ko": "침대",
+              "translation_ru": "кровать"
+            },
+            {
+              "ko": "식당",
+              "translation_ru": "столовая, ресторан"
+            },
+            {
+              "ko": "우체국",
+              "translation_ru": "почта"
+            },
+            {
+              "ko": "매점",
+              "translation_ru": "киоск, буфет"
+            },
+            {
+              "ko": "본관",
+              "translation_ru": "главный корпус"
+            },
+            {
+              "ko": "정문",
+              "translation_ru": "главные ворота"
+            },
+            {
+              "ko": "후문",
+              "translation_ru": "задние ворота"
+            },
+            {
+              "ko": "컴퓨터",
+              "translation_ru": "компьютер"
+            },
+            {
+              "ko": "냉장고",
+              "translation_ru": "холодильник"
+            },
+            {
+              "ko": "고향",
+              "translation_ru": "родина, родной край"
+            },
+            {
+              "ko": "집",
+              "translation_ru": "дом"
+            }
+          ]
         }
       ]
     },
@@ -1112,6 +1207,25 @@
               ]
             ]
           }
+        },
+        {
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "서점",
+              "translation_ru": "книжный магазин"
+            },
+            {
+              "ko": "커피숍",
+              "translation_ru": "кофейня"
+            }
+          ]
         }
       ]
     },

@@ -201,6 +201,177 @@
               "translation_ru": "Как N? — шаблон; пример «한국어가 어떻습니까?» = «Как вам корейский язык?»"
             }
           ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-school-life-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "배우다",
+              "translation_ru": "учиться, изучать"
+            },
+            {
+              "ko": "한국어",
+              "translation_ru": "корейский язык"
+            },
+            {
+              "ko": "재미있다",
+              "translation_ru": "быть интересным"
+            },
+            {
+              "ko": "먹다",
+              "translation_ru": "есть, кушать"
+            },
+            {
+              "ko": "밥",
+              "translation_ru": "варёный рис; еда"
+            },
+            {
+              "ko": "중국어",
+              "translation_ru": "китайский язык"
+            },
+            {
+              "ko": "영화",
+              "translation_ru": "фильм, кино"
+            },
+            {
+              "ko": "음악",
+              "translation_ru": "музыка"
+            },
+            {
+              "ko": "듣다",
+              "translation_ru": "слушать"
+            },
+            {
+              "ko": "읽다",
+              "translation_ru": "читать"
+            },
+            {
+              "ko": "버스",
+              "translation_ru": "автобус"
+            },
+            {
+              "ko": "타다",
+              "translation_ru": "садиться (на транспорт), ехать на"
+            },
+            {
+              "ko": "재미없다",
+              "translation_ru": "быть неинтересным"
+            },
+            {
+              "ko": "크다",
+              "translation_ru": "быть большим"
+            },
+            {
+              "ko": "작다",
+              "translation_ru": "быть маленьким"
+            },
+            {
+              "ko": "넓다",
+              "translation_ru": "быть просторным, широким"
+            },
+            {
+              "ko": "좁다",
+              "translation_ru": "быть тесным, узким"
+            },
+            {
+              "ko": "많다",
+              "translation_ru": "быть многочисленным; много"
+            },
+            {
+              "ko": "적다",
+              "translation_ru": "быть малочисленным; мало"
+            },
+            {
+              "ko": "쉽다",
+              "translation_ru": "быть лёгким, простым"
+            },
+            {
+              "ko": "어렵다",
+              "translation_ru": "быть трудным"
+            },
+            {
+              "ko": "공원",
+              "translation_ru": "парк"
+            },
+            {
+              "ko": "깨끗하다",
+              "translation_ru": "быть чистым"
+            },
+            {
+              "ko": "더럽다",
+              "translation_ru": "быть грязным"
+            },
+            {
+              "ko": "잡지",
+              "translation_ru": "журнал"
+            },
+            {
+              "ko": "커피",
+              "translation_ru": "кофе"
+            },
+            {
+              "ko": "마시다",
+              "translation_ru": "пить"
+            },
+            {
+              "ko": "편지",
+              "translation_ru": "письмо"
+            },
+            {
+              "ko": "쓰다",
+              "translation_ru": "писать"
+            },
+            {
+              "ko": "우유",
+              "translation_ru": "молоко"
+            },
+            {
+              "ko": "노래",
+              "translation_ru": "песня"
+            },
+            {
+              "ko": "부르다",
+              "translation_ru": "петь (노래를 부르다)"
+            },
+            {
+              "ko": "춤",
+              "translation_ru": "танец"
+            },
+            {
+              "ko": "추다",
+              "translation_ru": "танцевать (춤을 추다)"
+            },
+            {
+              "ko": "지하철",
+              "translation_ru": "метро"
+            },
+            {
+              "ko": "라디오",
+              "translation_ru": "радио"
+            },
+            {
+              "ko": "빵",
+              "translation_ru": "хлеб, выпечка"
+            },
+            {
+              "ko": "선물",
+              "translation_ru": "подарок"
+            },
+            {
+              "ko": "주다",
+              "translation_ru": "давать"
+            },
+            {
+              "ko": "사다",
+              "translation_ru": "покупать"
+            }
+          ]
         }
       ]
     },
@@ -827,6 +998,49 @@
               "kind": "pattern",
               "text": "몇 N",
               "translation_ru": "сколько / какой по счёту N — шаблон; пример «몇 호입니까?» = «Какой номер (комнаты)?»"
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-greeting-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "가다",
+              "translation_ru": "идти, ехать"
+            },
+            {
+              "ko": "층",
+              "translation_ru": "этаж"
+            },
+            {
+              "ko": "호",
+              "translation_ru": "номер (комнаты)"
+            },
+            {
+              "ko": "다니다",
+              "translation_ru": "ходить регулярно (на учёбу, работу)"
+            },
+            {
+              "ko": "가게",
+              "translation_ru": "магазин, лавка"
+            },
+            {
+              "ko": "편의점",
+              "translation_ru": "магазин у дома"
+            },
+            {
+              "ko": "회사",
+              "translation_ru": "компания, фирма"
+            },
+            {
+              "ko": "대학교",
+              "translation_ru": "университет"
             }
           ]
         }

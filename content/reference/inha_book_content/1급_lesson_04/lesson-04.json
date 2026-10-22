@@ -164,6 +164,81 @@
               ]
             }
           ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-daily-life-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "숙제",
+              "translation_ru": "домашнее задание"
+            },
+            {
+              "ko": "축구",
+              "translation_ru": "футбол"
+            },
+            {
+              "ko": "농구",
+              "translation_ru": "баскетбол"
+            },
+            {
+              "ko": "예습",
+              "translation_ru": "подготовка к уроку"
+            },
+            {
+              "ko": "복습",
+              "translation_ru": "повторение пройденного"
+            },
+            {
+              "ko": "사과",
+              "translation_ru": "яблоко"
+            },
+            {
+              "ko": "딸기",
+              "translation_ru": "клубника"
+            },
+            {
+              "ko": "빨래",
+              "translation_ru": "стирка"
+            },
+            {
+              "ko": "청소",
+              "translation_ru": "уборка"
+            },
+            {
+              "ko": "신문",
+              "translation_ru": "газета"
+            },
+            {
+              "ko": "빌리다",
+              "translation_ru": "одалживать, брать напрокат"
+            },
+            {
+              "ko": "영화관",
+              "translation_ru": "кинотеатр"
+            },
+            {
+              "ko": "보내다",
+              "translation_ru": "отправлять"
+            },
+            {
+              "ko": "돈",
+              "translation_ru": "деньги"
+            },
+            {
+              "ko": "찾다",
+              "translation_ru": "искать; снимать (деньги)"
+            },
+            {
+              "ko": "노래방",
+              "translation_ru": "караоке"
+            }
+          ]
         }
       ]
     },
@@ -598,6 +673,137 @@
               "kind": "pattern",
               "text": "무슨 N",
               "translation_ru": "какой/что за N — шаблон; пример «무슨 운동을 합니까?» = «каким спортом занимаетесь?»"
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-calendar-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "수영",
+              "translation_ru": "плавание"
+            },
+            {
+              "ko": "쉬다",
+              "translation_ru": "отдыхать"
+            },
+            {
+              "ko": "야구",
+              "translation_ru": "бейсбол"
+            },
+            {
+              "ko": "월요일",
+              "translation_ru": "понедельник"
+            },
+            {
+              "ko": "화요일",
+              "translation_ru": "вторник"
+            },
+            {
+              "ko": "수요일",
+              "translation_ru": "среда"
+            },
+            {
+              "ko": "목요일",
+              "translation_ru": "четверг"
+            },
+            {
+              "ko": "금요일",
+              "translation_ru": "пятница"
+            },
+            {
+              "ko": "토요일",
+              "translation_ru": "суббота"
+            },
+            {
+              "ko": "일요일",
+              "translation_ru": "воскресенье"
+            },
+            {
+              "ko": "오늘",
+              "translation_ru": "сегодня"
+            },
+            {
+              "ko": "몇",
+              "translation_ru": "сколько (перед счётным словом)"
+            },
+            {
+              "ko": "월",
+              "translation_ru": "месяц"
+            },
+            {
+              "ko": "며칠",
+              "translation_ru": "какое число; сколько дней"
+            },
+            {
+              "ko": "일",
+              "translation_ru": "день, число (месяца)"
+            },
+            {
+              "ko": "날짜",
+              "translation_ru": "дата"
+            },
+            {
+              "ko": "요일",
+              "translation_ru": "день недели"
+            },
+            {
+              "ko": "평일",
+              "translation_ru": "будни"
+            },
+            {
+              "ko": "주말",
+              "translation_ru": "выходные"
+            },
+            {
+              "ko": "아침",
+              "translation_ru": "утро; завтрак"
+            },
+            {
+              "ko": "일찍",
+              "translation_ru": "рано"
+            },
+            {
+              "ko": "일어나다",
+              "translation_ru": "вставать; просыпаться"
+            },
+            {
+              "ko": "점심",
+              "translation_ru": "обед; полдень"
+            },
+            {
+              "ko": "저녁",
+              "translation_ru": "вечер; ужин"
+            },
+            {
+              "ko": "오다",
+              "translation_ru": "приходить, приезжать"
+            },
+            {
+              "ko": "생일",
+              "translation_ru": "день рождения"
+            },
+            {
+              "ko": "언제",
+              "translation_ru": "когда"
+            },
+            {
+              "ko": "내일",
+              "translation_ru": "завтра"
+            },
+            {
+              "ko": "중간시험",
+              "translation_ru": "промежуточный экзамен"
+            },
+            {
+              "ko": "수료식",
+              "translation_ru": "церемония окончания курса"
             }
           ]
         }
@@ -1067,6 +1273,57 @@
               "kind": "pattern",
               "text": "매일 = 날마다, 매주 = 주마다, 매달 = 달마다",
               "translation_ru": "каждый день = каждый день (날마다), каждую неделю (주마다), каждый месяц (달마다)"
+            }
+          ]
+        },
+        {
+          "id": "vocab-yeonseup4",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "오전",
+              "translation_ru": "до полудня; утро"
+            },
+            {
+              "ko": "마트",
+              "translation_ru": "супермаркет"
+            },
+            {
+              "ko": "과일",
+              "translation_ru": "фрукты"
+            },
+            {
+              "ko": "채소",
+              "translation_ru": "овощи"
+            },
+            {
+              "ko": "오후",
+              "translation_ru": "после полудня"
+            },
+            {
+              "ko": "기숙사",
+              "translation_ru": "общежитие"
+            },
+            {
+              "ko": "모레",
+              "translation_ru": "послезавтра"
+            },
+            {
+              "ko": "수영장",
+              "translation_ru": "бассейн"
+            },
+            {
+              "ko": "매일",
+              "translation_ru": "каждый день"
+            },
+            {
+              "ko": "쇼핑",
+              "translation_ru": "шопинг, покупки"
             }
           ]
         }
