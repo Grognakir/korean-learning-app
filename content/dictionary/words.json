@@ -49857,6 +49857,91 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-무역 회사",
+      "headword": "무역 회사",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "торговая (внешнеторговая) компания"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-가족사진",
+      "headword": "가족사진",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "семейное фото"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-성실하다",
+      "headword": "성실하다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "быть усердным, добросовестным"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-흑돼지",
+      "headword": "흑돼지",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "чёрная свинья (чеджуская порода); свинина из неё"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-맛보다",
+      "headword": "맛보다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "пробовать на вкус"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }

@@ -28,6 +28,7 @@ const LESSON_DIR_1_12 = join(REFERENCE_DIR, "inha_book_content/1급_lesson_12");
 const LESSON_DIR_1_13 = join(REFERENCE_DIR, "inha_book_content/1급_lesson_13");
 const LESSON_DIR_1_14 = join(REFERENCE_DIR, "inha_book_content/1급_lesson_14");
 const LESSON_DIR_1_15 = join(REFERENCE_DIR, "inha_book_content/1급_lesson_15");
+const LESSON_DIR_1_16 = join(REFERENCE_DIR, "inha_book_content/1급_lesson_16");
 const LESSON_DIR_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_01");
 const LESSON_DIR_2_2 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_02");
 const LESSON_DIR_2_3 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_03");
@@ -161,6 +162,7 @@ const LEVEL1_LESSONS: Record<number, { path: string; audio: number[]; images: st
   13: { path: join(LESSON_DIR_1_13, "lesson-13.json"), audio: [149, 150, 151, 152], images: [] },
   14: { path: join(LESSON_DIR_1_14, "lesson-14.json"), audio: [153, 154, 155, 156], images: [] },
   15: { path: join(LESSON_DIR_1_15, "lesson-15.json"), audio: [157, 158, 159, 160], images: [] },
+  16: { path: join(LESSON_DIR_1_16, "lesson-16.json"), audio: [161, 162, 163, 164], images: [] },
 };
 
 async function uploadLevel1Images(lessonNumber: number) {
