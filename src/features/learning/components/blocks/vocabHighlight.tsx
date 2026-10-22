@@ -81,6 +81,11 @@ function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
             continue;
           }
         }
+        // Основа глагола не даёт чип внутри существительного вроде 건너편 (건너다).
+        if (needle !== item.ko && item.ko.endsWith("다") && text[start + needle.length] === "편") {
+          from = start + 1;
+          continue;
+        }
         const stemOnly = needle !== item.ko && item.ko.endsWith("다") && needle.length === 1;
         if (stemOnly) {
           const after = text.slice(start + 1);

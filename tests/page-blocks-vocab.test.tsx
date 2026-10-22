@@ -194,3 +194,9 @@ it("наречие «다» совпадает только как отдельн
   expect(vocabKeysInText("다치다", items)).toEqual([]);
 });
 
+it("основа 건너다 не совпадает внутри 건너편", () => {
+  const items = [{ ko: "건너다", translation_ru: "переходить" }];
+  expect(vocabKeysInText("길 건너편에서 타세요.", items)).toEqual([]);
+  expect(vocabKeysInText("횡단보도를 건너면 우체국이 있어요.", items)).toEqual(["건너다"]);
+});
+

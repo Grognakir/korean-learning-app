@@ -49465,6 +49465,125 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-가져오다",
+      "headword": "가져오다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "принести, привезти (с собой)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-KTX",
+      "headword": "KTX",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "KTX (скоростной поезд)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-액션",
+      "headword": "액션",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жанры фильмов"
+      ],
+      "translations": [
+        "боевик (жанр)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-코미디",
+      "headword": "코미디",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Жанры фильмов"
+      ],
+      "translations": [
+        "комедия (жанр)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-녹차",
+      "headword": "녹차",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "зелёный чай"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-고장",
+      "headword": "고장",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "поломка (고장이 나다 — сломаться)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-대학로",
+      "headword": "대학로",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "Тэхангно (район театров в Сеуле)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }
