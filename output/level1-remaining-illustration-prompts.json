@@ -1,0 +1,276 @@
+{
+  "tool": "built-in image_gen",
+  "style": "Wide 16:9 detailed semirealistic pixel art, warm natural lighting, realistic anatomy, no readable text or logos",
+  "jobs": [
+    {
+      "lesson": 8,
+      "block": "text-plan-dialogue",
+      "file": "illustration_1_weekend_plans.png",
+      "scene": "A Chinese female and Mongolian male university student discuss tomorrow's plans at a campus cafe. Cinema tickets, a shopping bag with a hat and shoes, cups of coffee; friendly casual conversation."
+    },
+    {
+      "lesson": 8,
+      "block": "text-vacation-dialogue",
+      "file": "illustration_2_vacation_plans.png",
+      "scene": "A French female and Saudi male student plan vacation travels at a table with a suitcase, unlabelled map and travel photos of Jeju coast and Busan, Seoul and Incheon suggested in background collage. No readable labels."
+    },
+    {
+      "lesson": 8,
+      "block": "listening-birthday-gift",
+      "file": "illustration_3_book_gift.png",
+      "scene": "A Vietnamese female and Korean male student choose a novel as a birthday gift at a Korean bookshop, a plain wrapped book and ribbon visible. Friendly simple hand gestures, no book titles."
+    },
+    {
+      "lesson": 8,
+      "block": "text-reading-vacation-plan",
+      "file": "illustration_4_homecoming.png",
+      "scene": "A young international student packs gifts in a suitcase before visiting family, warm travel-memory vignette of parents by the sea and a small birthday gift. Coherent homecoming atmosphere."
+    },
+    {
+      "lesson": 8,
+      "block": "text-culture-new-year",
+      "file": "illustration_5_new_year_goals.png",
+      "scene": "Korean young adults setting New Year goals in a cozy cafe: open blank planners, study books, a sports bag and savings jar. Winter window light and a subtle celebration ornament, thoughtful hopeful mood, no numbers or writing."
+    },
+    {
+      "lesson": 9,
+      "block": "text-market-dialogue",
+      "file": "illustration_1_vegetable_market.png",
+      "scene": "A Saudi male student buying exactly two carrots and three potatoes at a Korean vegetable market from a friendly vendor. Clear produce on counter, plain reusable bag, no price labels."
+    },
+    {
+      "lesson": 9,
+      "block": "text-gift-dialogue",
+      "file": "illustration_2_gift_advice.png",
+      "scene": "A Mongolian male student asks a French female friend for birthday gift advice in a campus cafe. A bouquet and blank handwritten-style card on table illustrate flowers and a letter; natural conversation."
+    },
+    {
+      "lesson": 9,
+      "block": "listening-shopping",
+      "file": "illustration_3_fruit_shop.png",
+      "scene": "A French female student buys three large red apples and one whole watermelon from a friendly Korean fruit seller. Fruit stall in a neighborhood market, distinct countable foreground purchase, no prices or text."
+    },
+    {
+      "lesson": 9,
+      "block": "text-reading-special-day-gift",
+      "file": "illustration_4_parents_carnations.png",
+      "scene": "A young student carefully wraps two carnations and two blank greeting cards as Parents Day gifts at a desk, warm family photo in background. Natural hands, floral focal point, no card text."
+    },
+    {
+      "lesson": 9,
+      "block": "text-culture-markets",
+      "file": "illustration_5_korean_markets.png",
+      "scene": "Two connected vignettes of Korean traditional markets: lively Seoul clothing and bag stalls with adult shoppers; coastal fish market with fresh fish, clams and squid neatly displayed. No signs or logos."
+    },
+    {
+      "lesson": 10,
+      "block": "text-recommend-dialogue",
+      "file": "illustration_1_samgyetang.png",
+      "scene": "A Mongolian male and French female university student enjoy steaming samgyetang in a Korean restaurant on a bright summer day. Recognizable small whole chicken soup with ginseng, appetizing close foreground."
+    },
+    {
+      "lesson": 10,
+      "block": "text-order-dialogue",
+      "file": "illustration_2_restaurant_order.png",
+      "scene": "Two international students politely order in a Korean restaurant from a friendly middle-aged waitress. Bibimbap and galbitang dishes clearly visible on the table, simple natural hand gestures."
+    },
+    {
+      "lesson": 10,
+      "block": "listening-hometown-food",
+      "file": "illustration_3_food_festival.png",
+      "scene": "A French female student and Mongolian male classmate prepare dishes for a campus food festival: salad with vegetables cheese eggs and Mongolian steamed meat dumplings with flour and filling nearby. Simple cooking poses."
+    },
+    {
+      "lesson": 10,
+      "block": "text-reading-favorite-food",
+      "file": "illustration_4_tteokbokki_party.png",
+      "scene": "International university friends share homemade tteokbokki at a cozy student apartment party. Red rice cake dish prominent, cook happily presenting it, a few other homemade dishes, natural hands."
+    },
+    {
+      "lesson": 10,
+      "block": "text-culture-gimbap",
+      "file": "illustration_5_gimbap_making.png",
+      "scene": "Clear Korean gimbap preparation scene with seaweed sheet, rice, vegetables, meat and yellow pickled radish. One pair of natural hands rolls gimbap on bamboo mat; sliced finished rolls on plate beside it. Knife resting safely."
+    },
+    {
+      "lesson": 11,
+      "block": "text-call-dialogue",
+      "file": "illustration_1_homework_phone.png",
+      "scene": "Split phone conversation: Chinese female student with Korean grammar homework at desk; Saudi male student at home beside laundry basket and cleaning supplies. Friendly phone call, visible natural hands."
+    },
+    {
+      "lesson": 11,
+      "block": "text-transfer-dialogue",
+      "file": "illustration_2_passing_phone.png",
+      "scene": "A young roommate passes a telephone handset to a Saudi male student in a tidy apartment while a Vietnamese female caller appears in a small connected vignette. Correct separated arms and hands, attentive expressions."
+    },
+    {
+      "lesson": 11,
+      "block": "listening-invitation-call",
+      "file": "illustration_3_performance_invitation.png",
+      "scene": "Two adult university friends arranging a traditional Korean performance outing by phone; a cultural arts center with a small traditional performance and distant fireworks hinted in a soft connected background vignette. No ticket text."
+    },
+    {
+      "lesson": 11,
+      "block": "text-reading-text-message",
+      "file": "illustration_4_concert_message.png",
+      "scene": "Vietnamese female university student sends an invitation on her smartphone, a Mongolian male classmate reads it elsewhere. Warm campus setting, concert hall piano and seats suggested behind; no readable screen messages."
+    },
+    {
+      "lesson": 11,
+      "block": "text-culture-phone-etiquette",
+      "file": "illustration_5_phone_etiquette.png",
+      "scene": "A young Korean student politely calls an older teacher, shown in two balanced connected interiors. Student attentive and respectful, teacher relaxed, phones held naturally; no speech bubbles or lettering."
+    },
+    {
+      "lesson": 12,
+      "block": "text-appointment-dialogue",
+      "file": "illustration_1_making_plans.png",
+      "scene": "Vietnamese female and Mongolian male university students discuss arranging a cinema outing over phones, separate rooms with blank planners and study books. Calm friendly conversation."
+    },
+    {
+      "lesson": 12,
+      "block": "text-change-dialogue",
+      "file": "illustration_2_reschedule_cinema.png",
+      "scene": "A young female university student checks a plain calendar grid and two blank cinema tickets while talking on her phone to reschedule meeting a friend. Cozy room, natural anatomy, no text or dates."
+    },
+    {
+      "lesson": 12,
+      "block": "listening-decline",
+      "file": "illustration_3_cancel_appointment.png",
+      "scene": "A Mongolian male student makes an apologetic phone call; in a connected vignette a Vietnamese female student listens with mild disappointment beside two plain movie tickets. Gentle respectful expressions, no dramatic distress."
+    },
+    {
+      "lesson": 12,
+      "block": "text-reading-email-1",
+      "file": "illustration_4_email_invitation.png",
+      "scene": "Kenyan male graduate student writes an email inviting a Chinese female friend to a Nanta percussion performance, laptop with abstract unreadable email lines, cultural arts venue and kitchen percussion stage softly suggested in background."
+    },
+    {
+      "lesson": 12,
+      "block": "text-culture-next-time",
+      "file": "illustration_5_casual_invitation.png",
+      "scene": "Cambodian male university student unexpectedly meets a Korean classmate outside a campus library. Friendly greeting and casual conversation about eating together sometime, relaxed natural poses, no speech bubbles."
+    },
+    {
+      "lesson": 13,
+      "block": "text-transport-dialogue",
+      "file": "illustration_1_asking_transport.png",
+      "scene": "Mongolian male student asks a helpful Korean pedestrian how to reach Myeongdong beside a bus stop. Bus and subway entrance visible, street traffic in background, no route numbers or signs."
+    },
+    {
+      "lesson": 13,
+      "block": "text-directions-dialogue",
+      "file": "illustration_2_street_directions.png",
+      "scene": "Vietnamese female student asks directions on a Korean city sidewalk; helpful pedestrian points across a clearly marked pedestrian crossing toward a cultural arts center beside a post office. No readable signage."
+    },
+    {
+      "lesson": 13,
+      "block": "listening-find-destination",
+      "file": "illustration_3_subway_route.png",
+      "scene": "Vietnamese female and Korean male university students consult a subway map at a Korean station. The map uses abstract colored lines without readable stops; both safely stand away from platform edge, natural gestures."
+    },
+    {
+      "lesson": 13,
+      "block": "text-reading-directions",
+      "file": "illustration_4_arts_center_trip.png",
+      "scene": "University friends exit a subway station and walk across a pedestrian crossing toward a Korean performing arts center in a Seoul city setting. Clear safe route, modern city architecture, no labels."
+    },
+    {
+      "lesson": 13,
+      "block": "text-culture-transport",
+      "file": "illustration_5_transport_card.png",
+      "scene": "A Korean bus passenger taps a plain transit card on the reader beside the bus door, natural clearly visible hand. In background a subway entrance and taxi suggest Korean public transport. No card numbers, logos or text."
+    },
+    {
+      "lesson": 14,
+      "block": "text-bank-dialogue",
+      "file": "illustration_1_bank_account.png",
+      "scene": "Mongolian male student politely opens a bank account with Korean bank clerk at a modern counter, offering a plain ID card face down, blank bankbook and payment card nearby. Natural correct hands, no personal data."
+    },
+    {
+      "lesson": 14,
+      "block": "text-post-dialogue",
+      "file": "illustration_2_post_office.png",
+      "scene": "Chinese female student and Korean male friend pack a birthday gift into a parcel at a Korean post office counter. Blank address form on box, tape and pen, friendly postal worker behind. No readable addresses or text."
+    },
+    {
+      "lesson": 14,
+      "block": "listening-museum-guide",
+      "file": "illustration_3_museum_visit.png",
+      "scene": "Adult university visitors quietly listen to a Korean museum guide in a spacious history museum gallery with traditional ceramics and historical objects behind glass. Respectful calm behavior, no signs or lettering."
+    },
+    {
+      "lesson": 14,
+      "block": "text-reading-library-guide",
+      "file": "illustration_4_library_rules.png",
+      "scene": "Calm Korean university library reading room with students studying quietly, phones put away in bags, no food on desks. Friendly librarian helping a student borrow books at a counter, natural anatomy."
+    },
+    {
+      "lesson": 14,
+      "block": "text-culture-museums",
+      "file": "illustration_5_museum_folk_village.png",
+      "scene": "Two balanced connected Korean cultural places: elegant modern national museum with ceramics on display, and traditional folk village with tiled and thatched houses and a small traditional performance. Adult visitors enjoying culture, no labels."
+    },
+    {
+      "lesson": 15,
+      "block": "text-symptoms-dialogue",
+      "file": "illustration_1_doctor_visit.png",
+      "scene": "Chinese female university student explains headache and sore throat to a friendly Korean doctor in a bright consultation room. Tissue in hand, doctor listens with blank prescription pad, non-graphic natural scene."
+    },
+    {
+      "lesson": 15,
+      "block": "text-pharmacy-dialogue",
+      "file": "illustration_2_pharmacy_medicine.png",
+      "scene": "Chinese female student receives a plain medicine packet and small liquid medicine bottle from Korean pharmacist across a clean pharmacy counter. Natural separated hands, no medicine names or dosage text."
+    },
+    {
+      "lesson": 15,
+      "block": "listening-symptoms",
+      "file": "illustration_3_caring_friend.png",
+      "scene": "Saudi male university student checks on Chinese female friend resting with a sore throat in a cozy student room. Bowl of porridge and warm water on nearby table, supportive conversation, no medical claims or text."
+    },
+    {
+      "lesson": 15,
+      "block": "text-reading-medicine",
+      "file": "illustration_4_medicine_packet.png",
+      "scene": "Close educational still life of a plain pharmacy medicine packet with blank checkbox rows and small liquid bottle on a tidy desk. A young adult woman's hand holds the packet to inspect it, no readable dosage instructions or drug names."
+    },
+    {
+      "lesson": 15,
+      "block": "text-culture-leisure",
+      "file": "illustration_5_relaxing_leisure.png",
+      "scene": "Korean adults enjoy relaxing leisure in three flowing vignettes: gentle park exercise, hiking a green hill, and volunteering together in a community garden. Cheerful natural interactions, realistic simple limbs, no writing."
+    },
+    {
+      "lesson": 16,
+      "block": "text-family-dialogue",
+      "file": "illustration_1_family_photo.png",
+      "scene": "French female university student shows Saudi male classmate a framed family photo of exactly four people: father, mother and two adult daughters. Bright campus lounge, photo faces clearly distinct, natural hands."
+    },
+    {
+      "lesson": 16,
+      "block": "text-visit-dialogue",
+      "file": "illustration_2_birthday_homecoming.png",
+      "scene": "French female student and Mongolian male friend discuss her mother's birthday and visiting home. A suitcase, simple wrapped present, blank letter and Korean food ingredients on table, warm thoughtful student apartment."
+    },
+    {
+      "lesson": 16,
+      "block": "listening-hometown",
+      "file": "illustration_3_jeju_hometown.png",
+      "scene": "Korean male student shows Chinese female classmate a family travel photograph taken on Jeju Island, with Hallasan and green coastal landscape visible in a softly connected scenic background. Natural hands, no labels."
+    },
+    {
+      "lesson": 16,
+      "block": "text-reading-letter",
+      "file": "illustration_4_letter_home.png",
+      "scene": "Chinese female university student writes a letter to her parents at a cozy desk, open blank letter page, pen naturally held, small family photo. A soft background memory of friends sharing Chinese dishes at campus world food festival."
+    },
+    {
+      "lesson": 16,
+      "block": "text-culture-titles",
+      "file": "illustration_5_friendly_titles.png",
+      "scene": "Two connected Korean social scenes: younger adult university students warmly greet an older female student mentor on campus; at a small restaurant a student politely calls a friendly middle-aged female server. Family-like warmth without actual family relationship, no text."
+    }
+  ]
+}

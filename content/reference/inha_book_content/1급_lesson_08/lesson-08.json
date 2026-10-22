@@ -121,7 +121,10 @@
           "type": "text",
           "title": "계획을 말하기",
           "title_ru": "Говорить о планах",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_8/illustration_1_weekend_plans.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -520,7 +523,10 @@
           "type": "text",
           "title": "방학 계획을 세우기",
           "title_ru": "Составлять планы на каникулы",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_8/illustration_2_vacation_plans.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1475,7 +1481,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что они делают? Расскажите."
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_8/illustration_3_book_gift.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1512,7 +1522,10 @@
           "id": "text-reading-vacation-plan",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_8/illustration_4_homecoming.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1674,7 +1687,10 @@
           "type": "text",
           "title": "새해 계획",
           "title_ru": "Планы на Новый год",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_8/illustration_5_new_year_goals.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

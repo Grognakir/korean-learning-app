@@ -116,7 +116,10 @@
           "type": "text",
           "title": "가족을 소개하기",
           "title_ru": "Представлять семью",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_16/illustration_1_family_photo.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -746,7 +749,10 @@
           "type": "text",
           "title": "고향 방문을 준비하기",
           "title_ru": "Готовиться к поездке на родину",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_16/illustration_2_birthday_homecoming.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1697,7 +1703,11 @@
           },
           "warmup": {
             "prompt": "어디입니까? 이야기해 보십시오.",
-            "prompt_ru": "Где это? Расскажите."
+            "prompt_ru": "Где это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_16/illustration_3_jeju_hometown.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1769,7 +1779,10 @@
           "id": "text-reading-letter",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_16/illustration_4_letter_home.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "invitation",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1928,7 +1941,10 @@
           "type": "text",
           "title": "한국의 호칭",
           "title_ru": "Обращения в Корее",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_16/illustration_5_friendly_titles.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

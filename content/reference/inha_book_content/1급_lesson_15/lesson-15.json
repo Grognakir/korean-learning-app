@@ -121,7 +121,10 @@
           "type": "text",
           "title": "아픈 증상을 말하기",
           "title_ru": "Рассказывать о симптомах",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_15/illustration_1_doctor_visit.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -879,7 +882,10 @@
           "type": "text",
           "title": "약국에서 약을 사기",
           "title_ru": "Покупать лекарство в аптеке",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_15/illustration_2_pharmacy_medicine.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1640,7 +1646,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что они делают? Расскажите."
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_15/illustration_3_caring_friend.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1692,7 +1702,10 @@
           "id": "text-reading-medicine",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_15/illustration_4_medicine_packet.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1884,7 +1897,10 @@
           "type": "text",
           "title": "한국인의 여가 활동",
           "title_ru": "Досуг корейцев",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_15/illustration_5_relaxing_leisure.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

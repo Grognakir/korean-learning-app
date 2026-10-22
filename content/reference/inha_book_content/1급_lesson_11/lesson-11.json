@@ -121,7 +121,10 @@
           "type": "text",
           "title": "전화를 걸고 받기",
           "title_ru": "Звонить и отвечать на звонок",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_11/illustration_1_homework_phone.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -853,7 +856,10 @@
           "type": "text",
           "title": "전화를 바꿔 주기",
           "title_ru": "Передавать трубку",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_11/illustration_2_passing_phone.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1705,7 +1711,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что они делают? Расскажите."
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_11/illustration_3_performance_invitation.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1765,7 +1775,10 @@
           "id": "text-reading-text-message",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_11/illustration_4_concert_message.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1914,7 +1927,10 @@
           "type": "text",
           "title": "전화 예절",
           "title_ru": "Телефонный этикет",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_11/illustration_5_phone_etiquette.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

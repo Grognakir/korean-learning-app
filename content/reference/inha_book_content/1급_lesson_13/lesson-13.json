@@ -121,7 +121,10 @@
           "type": "text",
           "title": "교통편을 묻기",
           "title_ru": "Спрашивать, как добраться",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_13/illustration_1_asking_transport.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -839,7 +842,10 @@
           "type": "text",
           "title": "길을 찾기",
           "title_ru": "Спрашивать дорогу",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_13/illustration_2_street_directions.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1652,7 +1658,11 @@
           },
           "warmup": {
             "prompt": "여기가 어디입니까? 이야기해 보십시오.",
-            "prompt_ru": "Что это за место? Расскажите."
+            "prompt_ru": "Что это за место? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_13/illustration_3_subway_route.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1716,7 +1726,10 @@
           "id": "text-reading-directions",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_13/illustration_4_arts_center_trip.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1962,7 +1975,10 @@
           "type": "text",
           "title": "한국의 대중교통",
           "title_ru": "Общественный транспорт Кореи",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_13/illustration_5_transport_card.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,

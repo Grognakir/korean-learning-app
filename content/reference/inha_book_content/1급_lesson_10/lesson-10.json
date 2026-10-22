@@ -121,7 +121,10 @@
           "type": "text",
           "title": "음식을 추천하기",
           "title_ru": "Рекомендовать еду",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_10/illustration_1_samgyetang.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -845,7 +848,10 @@
           "type": "text",
           "title": "음식을 주문하기",
           "title_ru": "Заказывать еду",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_10/illustration_2_restaurant_order.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1713,7 +1719,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что они делают? Расскажите."
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_10/illustration_3_food_festival.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1797,7 +1807,10 @@
           "id": "text-reading-favorite-food",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_10/illustration_4_tteokbokki_party.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1934,7 +1947,10 @@
           "type": "text",
           "title": "김밥을 만드는 방법",
           "title_ru": "Как делают кимбап",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_10/illustration_5_gimbap_making.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "문화이해하기",
           "exercise_ref": null,

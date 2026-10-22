@@ -121,7 +121,10 @@
           "type": "text",
           "title": "약속 시간을 정하기",
           "title_ru": "Назначать время встречи",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_12/illustration_1_making_plans.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,
@@ -738,7 +741,10 @@
           "type": "text",
           "title": "약속을 변경하고 사과하기",
           "title_ru": "Менять договорённость и извиняться",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_12/illustration_2_reschedule_cinema.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,
@@ -1663,7 +1669,11 @@
           },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
-            "prompt_ru": "Что они делают? Расскажите."
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_12/illustration_3_cancel_appointment.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -1719,7 +1729,10 @@
           "id": "text-reading-email-1",
           "toc_section": "읽고 말하기",
           "type": "text",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_12/illustration_4_email_invitation.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "읽고말하기",
           "exercise_ref": null,
@@ -1978,7 +1991,10 @@
           "type": "text",
           "title": "‘다음에 밥 한번 먹읍시다!’",
           "title_ru": "«Давайте как-нибудь пообедаем!»",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_12/illustration_5_casual_invitation.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "문화이해하기",
           "exercise_ref": null,
