@@ -38488,7 +38488,8 @@
         "Счётные слова"
       ],
       "translations": [
-        "год (возраст)"
+        "год (возраст)",
+        "тело, плоть; жир (살이 찌다 — поправляться)"
       ],
       "examples": [
         {
@@ -49579,6 +49580,176 @@
       ],
       "translations": [
         "Тэхангно (район театров в Сеуле)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-조용히",
+      "headword": "조용히",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "тихо, спокойно"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-잡수시다",
+      "headword": "잡수시다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "есть (уважительно, вместо 먹다)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-편찮으시다",
+      "headword": "편찮으시다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "болеть (уважительно, вместо 아프다)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-아프시다",
+      "headword": "아프시다",
+      "reading": null,
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "болеть (уважительно, вместо 아프다)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-등산화",
+      "headword": "등산화",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "горные ботинки, треккинговая обувь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-전자사전",
+      "headword": "전자사전",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Электроника"
+      ],
+      "translations": [
+        "электронный словарь"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-찌다",
+      "headword": "찌다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "полнеть (살이 찌다 — поправляться)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-EMS",
+      "headword": "EMS",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "EMS (почта: экспресс-отправление)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-주의 사항",
+      "headword": "주의 사항",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "меры предосторожности, на что обратить внимание"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-키",
+      "headword": "키",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Части тела"
+      ],
+      "translations": [
+        "рост (человека)"
       ],
       "examples": [],
       "notes": [],
