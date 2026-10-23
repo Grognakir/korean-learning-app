@@ -13,10 +13,7 @@ export default async function TopicsPage() {
     <div className={styles.page}>
       {username !== null ? <AppHeader username={username} /> : <GuestHeader />}
       <main className={styles.wrap}>
-        <div className={styles.header}>
-          <p className={styles.eyebrow}>Темы</p>
-          <h1 className={styles.title}>Разбор по темам</h1>
-        </div>
+        <h1 className={styles.title}>Разбор по темам</h1>
         <div className={styles.grid}>
           {TOPICS_LIST.map((topic) => (
             <Link key={topic.slug} href={`/topics/${topic.slug}`} className={styles.card}>

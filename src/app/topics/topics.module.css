@@ -22,24 +22,10 @@
   }
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-left: 5px;
-}
-
-.eyebrow {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 .title {
   font-size: 22px;
   font-weight: 700;
+  margin-left: 5px;
 }
 
 .grid {
