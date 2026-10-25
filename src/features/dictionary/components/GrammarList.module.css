@@ -360,11 +360,14 @@ div.cardHeader {
   font-size: 13px;
 }
 
-/* Подсказка прилегает к строке (зазор 1px закрывает подчёркивание чипа выше).
+/* Грамматика: сплошное подчёркивание ближе к буквам. Подсказка прилегает к строке (зазор 1px закрывает подчёркивание чипа выше).
    Без тени и без плавного появления: полупрозрачная тень на время перехода
    ложилась на соседние чипы строки и они «мигали». */
 .hintChip {
   --chip-tip-gap: 1px;
   --chip-tip-shadow: none;
   --chip-tip-transition: none;
+  --chip-underline-style: solid;
+  --chip-underline-offset: 2px;
+  --chip-underline-color: color-mix(in srgb, var(--stone) 75%, transparent);
 }

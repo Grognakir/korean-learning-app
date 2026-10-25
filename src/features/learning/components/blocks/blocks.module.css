@@ -430,8 +430,9 @@
   background: none;
   border-radius: 0;
   text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-offset: 5px;
+  text-decoration-style: var(--chip-underline-style, dotted);
+  text-underline-offset: var(--chip-underline-offset, 5px);
+  text-decoration-color: var(--chip-underline-color, currentColor);
 }
 
 /* hint attached under text */
