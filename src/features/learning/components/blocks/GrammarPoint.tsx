@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { formatBold } from "@/lib/formatBold";
+import { RichExplanation, formatRich } from "@/features/dictionary/richText";
 import type { GrammarPointBlock } from "@/features/learning/types";
+import { GrammarDetailsButton } from "./GrammarDetailsButton";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
@@ -8,14 +9,19 @@ export function GrammarPoint({
   block,
   id,
   vocabItems,
+  hasDictionary = false,
 }: {
   block: GrammarPointBlock;
   id?: string;
   vocabItems?: VocabItem[];
+  /** В словаре есть конструкция с таким же pattern — показываем «Изучить подробнее». */
+  hasDictionary?: boolean;
 }) {
   const seenVocab = new Set<string>();
 
-  const detailsAction =
+  // Прежняя заглушка/ссылка details_link — только когда статьи в словаре нет.
+  const legacyAction =
+    !hasDictionary &&
     block.details_link &&
     (block.details_link.href ? (
       <Link href={block.details_link.href} className={styles.grammarDetailsAction}>
@@ -55,17 +61,26 @@ export function GrammarPoint({
                 strokeLinejoin="round"
               />
             </svg>
+            {hasDictionary && <GrammarDetailsButton pattern={block.pattern} variant="summary" />}
           </summary>
           <div className={styles.grammarNote}>
-            <p className={styles.explanation}>{formatBold(block.explanation)}</p>
+            <RichExplanation
+              text={block.explanation}
+              className={styles.explanationBody}
+              paragraphClassName={styles.explanation}
+              listClassName={styles.rules}
+            />
             {block.rules && block.rules.length > 0 && (
-              <ul className={styles.rules}>
-                {block.rules.map((rule, i) => (
-                  <li key={i}>{formatBold(rule)}</li>
-                ))}
-              </ul>
+              <div className={styles.rulesSection}>
+                <span className={styles.rulesLabel}>Правила</span>
+                <ul className={styles.rules}>
+                  {block.rules.map((rule, i) => (
+                    <li key={i}>{formatRich(rule)}</li>
+                  ))}
+                </ul>
+              </div>
             )}
-            {detailsAction}
+            {legacyAction}
           </div>
         </details>
       ) : (
@@ -78,7 +93,12 @@ export function GrammarPoint({
           </p>
         ))}
       </div>
-      {!block.explanation && detailsAction}
+      {!block.explanation &&
+        (hasDictionary ? (
+          <GrammarDetailsButton pattern={block.pattern} variant="footer" />
+        ) : (
+          legacyAction
+        ))}
     </div>
   );
 }

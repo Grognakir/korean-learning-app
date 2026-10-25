@@ -585,6 +585,10 @@
   list-style: none;
 }
 
+.grammarSummary * {
+  cursor: pointer;
+}
+
 /* Компактный вариант — для мелкого текста (например, "Показать все
    страны"), где базовая настройка .grammarToggleIcon (подогнанная под
    крупный .pattern) выглядит слишком большой и съезжает выше текста. */
@@ -651,6 +655,42 @@
   white-space: pre-line;
 }
 
+.rulesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.rulesLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.explanationBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grammarModalHint {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.grammarModalRetry {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: var(--blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .rules {
   display: flex;
   flex-direction: column;
@@ -673,6 +713,12 @@
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.grammarDetailsActionTop {
+  margin-left: auto;
+  align-self: center;
 }
 
 .grammarDetailsAction:disabled {

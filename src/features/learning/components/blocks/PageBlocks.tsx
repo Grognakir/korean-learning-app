@@ -155,12 +155,16 @@ export function PageBlocks({
   textbookSlug,
   lessonNumber,
   blockTypeById,
+  dictionaryPatterns,
 }: {
   blocks: Block[];
   textbookSlug?: string;
   lessonNumber?: number;
   blockTypeById?: Record<string, Block["type"]>;
+  /** Конструкции этой страницы, для которых есть статья в словаре. */
+  dictionaryPatterns?: string[];
 }) {
+  const dictionaryPatternSet = new Set(dictionaryPatterns ?? []);
   const textIds = textIdsOnPage(blocks);
   const vocabMap = vocabByRelatedText(blocks, textIds);
   const hintMap = hintsByRelatedText(blocks, textIds);
@@ -213,7 +217,13 @@ export function PageBlocks({
           case "phrase_gallery":
             return <PhraseGallery key={i} id={block.id} block={block} />;
           case "grammar_point":
-            return <GrammarPoint key={i} id={block.id} block={block} vocabItems={blockVocab[i]} />;
+            return <GrammarPoint
+                key={i}
+                id={block.id}
+                block={block}
+                vocabItems={blockVocab[i]}
+                hasDictionary={dictionaryPatternSet.has(block.pattern)}
+              />;
           case "grammar_exercise":
             return (
               <GrammarExercise

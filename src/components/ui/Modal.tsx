@@ -9,9 +9,13 @@ type ModalProps = {
   onClose: () => void;
   children: ReactNode;
   title?: string;
+  /** Заголовок в одной строке с крестиком (крестик по центру строки). */
+  heading?: ReactNode;
+  /** Широкое окно для чтения с почти невидимой полосой прокрутки. */
+  reading?: boolean;
 };
 
-export function Modal({ open, onClose, children, title }: ModalProps) {
+export function Modal({ open, onClose, children, title, heading, reading = false }: ModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,12 +25,21 @@ export function Modal({ open, onClose, children, title }: ModalProps) {
       if (e.key === "Escape") onClose();
     };
 
+    // Блокируем прокрутку на <html>, а не на <body>: у body уже стоит
+    // overflow: clip, и overflow: hidden на нём делает body собственным
+    // контейнером прокрутки — страница под окном прыгала в начало.
+    const root = document.documentElement;
+    const prevOverflow = root.style.overflow;
+    const prevPaddingRight = root.style.paddingRight;
+    const scrollbarWidth = window.innerWidth - root.clientWidth;
     document.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
+    root.style.overflow = "hidden";
+    if (scrollbarWidth > 0) root.style.paddingRight = `${scrollbarWidth}px`;
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
+      root.style.overflow = prevOverflow;
+      root.style.paddingRight = prevPaddingRight;
     };
   }, [open, onClose]);
 
@@ -42,20 +55,36 @@ export function Modal({ open, onClose, children, title }: ModalProps) {
     >
       <div
         ref={dialogRef}
-        className={styles.dialog}
+        className={reading ? `${styles.dialog} ${styles.dialogReading}` : styles.dialog}
         role="dialog"
         aria-modal="true"
         aria-label={title}
       >
-        <button
-          type="button"
-          className={styles.close}
-          onClick={onClose}
-          aria-label="Закрыть"
-        >
-          ×
-        </button>
-        <div className={styles.body}>{children}</div>
+        {heading ? (
+          <div className={styles.header}>
+            <h2 className={styles.heading}>{heading}</h2>
+            <button
+              type="button"
+              className={styles.closeInline}
+              onClick={onClose}
+              aria-label="Закрыть"
+            >
+              ×
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            className={styles.close}
+            onClick={onClose}
+            aria-label="Закрыть"
+          >
+            ×
+          </button>
+        )}
+        <div className={reading ? `${styles.body} ${styles.bodyQuiet}` : styles.body}>
+          {children}
+        </div>
       </div>
     </div>,
     document.body,

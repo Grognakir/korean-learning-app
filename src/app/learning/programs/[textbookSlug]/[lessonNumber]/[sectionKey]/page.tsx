@@ -4,6 +4,7 @@ import { displayName, getProfileRow, requireUser } from "@/features/auth/require
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
+import { loadDictionaryPatterns } from "@/features/learning/dictionaryPatterns";
 import { buildLessonNav } from "@/features/learning/lessonNav";
 import { resolveBlockAssets, textbookAssetPrefix } from "@/features/learning/resolveBlockAssets";
 import type { Block, TextbookPageRow } from "@/features/learning/types";
@@ -116,7 +117,10 @@ export default async function LessonSectionPage({
     );
   }
 
-  const blocks = await resolveBlockAssets(orderedBlocks, textbookAssetPrefix(textbookSlug));
+  const [blocks, dictionaryPatterns] = await Promise.all([
+    resolveBlockAssets(orderedBlocks, textbookAssetPrefix(textbookSlug)),
+    loadDictionaryPatterns(supabase, orderedBlocks),
+  ]);
 
   return (
     <div className={styles.pageShell}>
@@ -131,7 +135,12 @@ export default async function LessonSectionPage({
           <SectionNav nav={nav} />
 
           <div className={styles.blocks}>
-            <PageBlocks blocks={blocks} textbookSlug={textbookSlug} lessonNumber={lessonNumber} />
+            <PageBlocks
+              blocks={blocks}
+              textbookSlug={textbookSlug}
+              lessonNumber={lessonNumber}
+              dictionaryPatterns={dictionaryPatterns}
+            />
           </div>
         </div>
 
