@@ -49959,6 +49959,54 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-예약",
+      "headword": "예약",
+      "reading": "yeyak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "бронь, предварительная запись"
+      ],
+      "examples": [
+        {
+          "kr": "병원 예약을 했어요.",
+          "ru": "Я записался на приём в больницу."
+        }
+      ],
+      "notes": [
+        "예약하다 — бронировать, записываться заранее"
+      ],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-이후",
+      "headword": "이후",
+      "reading": "ihu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "после, впоследствии"
+      ],
+      "examples": [
+        {
+          "kr": "3시 이후에 만나요.",
+          "ru": "Давайте встретимся после трёх."
+        }
+      ],
+      "notes": [
+        "противоположное по смыслу — 이전 (до, раньше)"
+      ],
+      "forms": [],
+      "related": []
     }
   ]
 }
