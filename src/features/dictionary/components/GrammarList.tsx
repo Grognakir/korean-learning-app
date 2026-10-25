@@ -142,7 +142,10 @@ function GrammarNotes({ notes }: { notes: GrammarNote[] }) {
             }
             if (block.type === "table") {
               return (
-                <div key={j} className={styles.tableWrap}>
+                <div
+                  key={j}
+                  className={block.head.length === 2 ? styles.tableWrapOpen : styles.tableWrap}
+                >
                   <table
                     className={
                       block.head.length === 2

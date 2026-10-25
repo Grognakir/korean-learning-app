@@ -248,6 +248,11 @@ div.cardHeader {
   overflow-x: auto;
 }
 
+/* Таблица без прокрутки: overflow обрезал бы подсказки чипов в ячейках. */
+.tableWrapOpen {
+  overflow: visible;
+}
+
 .noteTable {
   width: 100%;
   border-collapse: collapse;
@@ -292,7 +297,6 @@ div.cardHeader {
     border: 1px solid var(--line);
     border-radius: var(--radius-control);
     margin-bottom: 8px;
-    overflow: hidden;
   }
 
   .stackOnMobile td {
@@ -302,6 +306,7 @@ div.cardHeader {
   .stackOnMobile td:first-child {
     background: var(--paper-2);
     font-weight: 600;
+    border-radius: var(--radius-control) var(--radius-control) 0 0;
   }
 
   .stackOnMobile td[data-label]:not(:first-child)::before {
