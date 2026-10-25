@@ -111,17 +111,34 @@ div.cardHeader {
   line-height: 1.25;
 }
 
-.lessonChip {
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lessonChip,
+.metaChip {
   display: inline-flex;
   align-items: center;
-  flex-shrink: 0;
-  font-size: 11.5px;
+  gap: 6px;
+  max-width: 100%;
+  font-size: 12px;
   font-weight: 600;
   border-radius: 100px;
-  padding: 3px 9px;
+  padding: 3px 10px;
   line-height: 1.3;
   color: var(--ink-soft);
   background: var(--paper-2);
+}
+
+.lessonChip {
+  flex-shrink: 0;
+  color: var(--ink);
+}
+
+.metaChip {
+  font-weight: 500;
 }
 
 .translations {
@@ -155,10 +172,12 @@ div.cardHeader {
 }
 
 .explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   font-size: 14px;
   line-height: 1.5;
   color: var(--ink);
-  white-space: pre-line;
 }
 
 .detailSection {
@@ -206,6 +225,92 @@ div.cardHeader {
   font-size: 13px;
 }
 
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+
+.noteTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.noteText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.noteTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+.noteTable th,
+.noteTable td {
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.noteTable thead th {
+  background: var(--paper-2);
+  font-weight: 700;
+}
+
+.noteTable tbody th {
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* Двухколоночная таблица на узком экране — стопка карточек: слева-направо
+   длинные списки конструкций в столбцах смешиваются. */
+@media (max-width: 600px) {
+  .stackOnMobile,
+  .stackOnMobile tbody,
+  .stackOnMobile tr,
+  .stackOnMobile td {
+    display: block;
+    width: 100%;
+  }
+
+  .stackOnMobile thead {
+    display: none;
+  }
+
+  .stackOnMobile tr {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-control);
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .stackOnMobile td {
+    border: none;
+  }
+
+  .stackOnMobile td:first-child {
+    background: var(--paper-2);
+    font-weight: 600;
+  }
+
+  .stackOnMobile td[data-label]:not(:first-child)::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+}
+
 .pagination {
   display: flex;
   flex-wrap: wrap;
@@ -248,4 +353,13 @@ div.cardHeader {
   padding: 0 4px;
   color: var(--stone);
   font-size: 13px;
+}
+
+/* Подсказка прилегает к строке (зазор 1px закрывает подчёркивание чипа выше).
+   Без тени и без плавного появления: полупрозрачная тень на время перехода
+   ложилась на соседние чипы строки и они «мигали». */
+.hintChip {
+  --chip-tip-gap: 1px;
+  --chip-tip-shadow: none;
+  --chip-tip-transition: none;
 }

@@ -27,6 +27,7 @@ type SourcePoint = {
   rules: string[];
   examples: Example[];
   vocab: Example[] | null;
+  notes?: unknown[] | null;
 };
 type SourceFile = { points: SourcePoint[] };
 
@@ -55,6 +56,7 @@ async function main() {
       rules: p.rules,
       examples: p.examples,
       vocab: p.vocab,
+      notes: p.notes ?? null,
     })),
     { onConflict: "external_id" },
   );

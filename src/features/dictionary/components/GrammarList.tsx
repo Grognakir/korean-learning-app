@@ -1,7 +1,8 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
-import { formatBold } from "@/lib/formatBold";
+import { useCallback, useMemo, useState, type ReactNode } from "react";
+import { VocabChip } from "@/features/learning/components/blocks/VocabChip";
+import blockStyles from "@/features/learning/components/blocks/blocks.module.css";
 import { createClient } from "@/lib/supabase/client";
 import { escapeLike } from "@/lib/supabase/escapeLike";
 import { useDebouncedValue } from "@/lib/useDebouncedValue";
@@ -9,11 +10,192 @@ import { Select } from "@/components/ui/Select";
 import { buildPageNumbers } from "@/features/dictionary/pagination";
 import { useDictionaryPageCache } from "@/features/dictionary/DictionaryCacheContext";
 import { usePagedQuery } from "@/features/dictionary/usePagedQuery";
-import type { GrammarPoint } from "@/features/dictionary/types";
+import type { GrammarNote, GrammarPoint } from "@/features/dictionary/types";
 import { ListError } from "./ListError";
 import styles from "./GrammarList.module.css";
 
+const HANGUL = /[가-힣ㄱ-ㅎㅏ-ㅣ]/;
+
+// Корейские слова внутри русского текста получают шрифт .kr (выбранный в
+// настройках): соседние корейские слова собираются в один span.
+function withKr(text: string, keyPrefix: string): ReactNode[] {
+  const out: ReactNode[] = [];
+  let buffer = "";
+  let pendingSpace = "";
+  let krRun = "";
+  let n = 0;
+  const flush = () => {
+    if (krRun) {
+      out.push(
+        <span key={`${keyPrefix}-k${n++}`} className="kr">
+          {krRun}
+        </span>,
+      );
+      krRun = "";
+    }
+  };
+  for (const token of text.split(/(\s+)/)) {
+    if (/^\s+$/.test(token)) {
+      if (krRun) pendingSpace += token;
+      else buffer += token;
+      continue;
+    }
+    if (HANGUL.test(token)) {
+      if (buffer) {
+        out.push(buffer);
+        buffer = "";
+      }
+      krRun += pendingSpace + token;
+      pendingSpace = "";
+    } else {
+      flush();
+      buffer += pendingSpace + token;
+      pendingSpace = "";
+    }
+  }
+  flush();
+  buffer += pendingSpace;
+  if (buffer) out.push(buffer);
+  return out;
+}
+
+// {{конструкция|краткое значение}} — жирный чип с подсказкой при наведении;
+// **жирный** и корейский шрифт — как обычно.
+function formatRich(text: string): ReactNode[] {
+  const parts = text.split(/\{\{(.+?)\|(.+?)\}\}/g);
+  const out: ReactNode[] = [];
+  parts.forEach((part, i) => {
+    if (i % 3 === 0) {
+      part.split(/\*\*(.+?)\*\*/g).forEach((seg, j) => {
+        if (j % 2 === 1) {
+          out.push(<strong key={`b${i}-${j}`}>{withKr(seg, `s${i}-${j}`)}</strong>);
+        } else {
+          out.push(...withKr(seg, `t${i}-${j}`));
+        }
+      });
+    } else if (i % 3 === 1) {
+      out.push(
+        <VocabChip
+          key={`chip-${i}`}
+          className={`${blockStyles.inlineVocab} ${styles.hintChip}`}
+          text={<strong>{part}</strong>}
+          translation={parts[i + 1]}
+        />,
+      );
+    }
+  });
+  return out;
+}
+
 const PAGE_SIZE = 15;
+
+// Пункты, начинающиеся с «• », в explanation становятся списком, остальные
+// строки — абзацами.
+function Explanation({ text }: { text: string }) {
+  const lines = text.split("\n").filter((line) => line.trim() !== "");
+  const groups: { bullets: boolean; lines: string[] }[] = [];
+  for (const line of lines) {
+    const bullet = line.startsWith("• ");
+    const last = groups[groups.length - 1];
+    if (last && last.bullets === bullet) last.lines.push(bullet ? line.slice(2) : line);
+    else groups.push({ bullets: bullet, lines: [bullet ? line.slice(2) : line] });
+  }
+  return (
+    <div className={styles.explanation}>
+      {groups.map((group, i) =>
+        group.bullets ? (
+          <ul key={i} className={styles.bulletList}>
+            {group.lines.map((line, j) => (
+              <li key={j}>{formatRich(line)}</li>
+            ))}
+          </ul>
+        ) : (
+          group.lines.map((line, j) => <p key={`${i}-${j}`}>{formatRich(line)}</p>)
+        ),
+      )}
+    </div>
+  );
+}
+
+function GrammarNotes({ notes }: { notes: GrammarNote[] }) {
+  return (
+    <>
+      {notes.map((note, i) => (
+        <section key={i} className={styles.note}>
+          <h3 className={styles.noteTitle}>{formatRich(note.title)}</h3>
+          {note.blocks.map((block, j) => {
+            if (block.type === "text") {
+              return (
+                <p key={j} className={styles.noteText}>
+                  {formatRich(block.text)}
+                </p>
+              );
+            }
+            if (block.type === "bullets") {
+              return (
+                <ul key={j} className={styles.bulletList}>
+                  {block.items.map((item, k) => (
+                    <li key={k}>{formatRich(item)}</li>
+                  ))}
+                </ul>
+              );
+            }
+            if (block.type === "table") {
+              return (
+                <div key={j} className={styles.tableWrap}>
+                  <table
+                    className={
+                      block.head.length === 2
+                        ? `${styles.noteTable} ${styles.stackOnMobile}`
+                        : styles.noteTable
+                    }
+                  >
+                    <thead>
+                      <tr>
+                        {block.head.map((cell, k) => (
+                          <th key={k} scope="col">
+                            {formatRich(cell)}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row, k) => (
+                        <tr key={k}>
+                          {row.map((cell, l) =>
+                            l === 0 && block.head[0] === "" ? (
+                              <th key={l} scope="row">
+                                {formatRich(cell)}
+                              </th>
+                            ) : (
+                              <td key={l} data-label={block.head[l]}>
+                                {formatRich(cell)}
+                              </td>
+                            ),
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            }
+            return (
+              <ul key={j} className={styles.examples}>
+                {block.items.map((ex, k) => (
+                  <li key={k} className={styles.example}>
+                    <span className="kr">{ex.kr}</span>
+                    <span className={styles.exampleRu}>{ex.ru}</span>
+                  </li>
+                ))}
+              </ul>
+            );
+          })}
+        </section>
+      ))}
+    </>
+  );
+}
 
 function GrammarCard({
   point,
@@ -30,7 +212,8 @@ function GrammarCard({
     (point.usage?.length ?? 0) > 0 ||
     (point.rules?.length ?? 0) > 0 ||
     examples.length > 0 ||
-    (point.vocab?.length ?? 0) > 0;
+    (point.vocab?.length ?? 0) > 0 ||
+    (point.notes?.length ?? 0) > 0;
 
   const body = (
     <div className={styles.cardBody}>
@@ -58,21 +241,24 @@ function GrammarCard({
         <div className={styles.cardHeader}>{body}</div>
       )}
       {expanded && hasDetails && (
-        <div className={styles.details}>
-          {point.lesson_label && (
-            <span className={styles.lessonChip}>{point.lesson_label}</span>
-          )}
-          {point.explanation && (
-            <p className={styles.explanation}>
-              {formatBold(point.explanation)}
-            </p>
-          )}
+        <div className={styles.details} data-tooltip-boundary>
+          <div className={styles.chips}>
+            {point.lesson_label && (
+              <span className={styles.lessonChip}>{point.lesson_label}</span>
+            )}
+            {(point.grammar_group || point.category) && (
+              <span className={styles.metaChip} title="Категория">
+                {point.grammar_group ?? point.category.replace(/^\d+\.\s*/, "")}
+              </span>
+            )}
+          </div>
+          {point.explanation && <Explanation text={point.explanation} />}
           {(point.usage?.length ?? 0) > 0 && (
             <div className={styles.detailSection}>
               <span className={styles.detailLabel}>Когда используется</span>
               <ul className={styles.bulletList}>
                 {point.usage!.map((line, i) => (
-                  <li key={i}>{formatBold(line)}</li>
+                  <li key={i}>{formatRich(line)}</li>
                 ))}
               </ul>
             </div>
@@ -82,7 +268,7 @@ function GrammarCard({
               <span className={styles.detailLabel}>Правила</span>
               <ul className={styles.bulletList}>
                 {point.rules!.map((line, i) => (
-                  <li key={i}>{formatBold(line)}</li>
+                  <li key={i}>{formatRich(line)}</li>
                 ))}
               </ul>
             </div>
@@ -100,6 +286,7 @@ function GrammarCard({
               </ul>
             </div>
           )}
+          {(point.notes?.length ?? 0) > 0 && <GrammarNotes notes={point.notes!} />}
           {(point.vocab?.length ?? 0) > 0 && (
             <div className={styles.detailSection}>
               <span className={styles.detailLabel}>Связанные слова</span>
@@ -139,7 +326,7 @@ export function GrammarList({ categories }: { categories: string[] }) {
     let q = supabase
       .from("grammar_points")
       .select(
-        "id, pattern, short_desc, category, grammar_group, lesson_label, lessons, explanation, usage, rules, examples, vocab, owner_user_id",
+        "id, pattern, short_desc, category, grammar_group, lesson_label, lessons, explanation, usage, rules, examples, vocab, notes, owner_user_id",
         { count: "exact" },
       )
       .order("pattern", { ascending: true })

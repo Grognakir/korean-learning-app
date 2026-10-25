@@ -23,7 +23,7 @@ export function DictionaryPreload({ userId }: { userId: string | null }) {
         },
         {
           key: JSON.stringify({ section: "grammar", debouncedQuery: "", category: "", page: 1 }),
-          run: () => supabase.from("grammar_points").select("id, pattern, short_desc, category, grammar_group, lesson_label, lessons, explanation, usage, rules, examples, vocab, owner_user_id", { count: "exact" }).order("pattern", { ascending: true }).range(0, 14).is("owner_user_id", null),
+          run: () => supabase.from("grammar_points").select("id, pattern, short_desc, category, grammar_group, lesson_label, lessons, explanation, usage, rules, examples, vocab, notes, owner_user_id", { count: "exact" }).order("pattern", { ascending: true }).range(0, 14).is("owner_user_id", null),
         },
       ],
     ];

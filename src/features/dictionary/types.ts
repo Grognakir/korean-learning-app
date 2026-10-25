@@ -29,6 +29,14 @@ export type WordDraft = {
   isNewCategory?: boolean;
 };
 
+export type GrammarNoteBlock =
+  | { type: "text"; text: string }
+  | { type: "bullets"; items: string[] }
+  | { type: "table"; head: string[]; rows: string[][] }
+  | { type: "examples"; items: { kr: string; ru: string }[] };
+
+export type GrammarNote = { title: string; blocks: GrammarNoteBlock[] };
+
 export type GrammarPoint = {
   id: string;
   pattern: string;
@@ -42,6 +50,7 @@ export type GrammarPoint = {
   rules: string[] | null;
   examples: { kr: string; ru: string }[];
   vocab: { kr: string; ru: string }[] | null;
+  notes: GrammarNote[] | null;
   owner_user_id: string | null;
 };
 
