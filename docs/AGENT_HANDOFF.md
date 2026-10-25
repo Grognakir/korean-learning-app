@@ -74,7 +74,7 @@
 ### 2026-10-25 — Отложенные правки 25–27 (9과 준비하기 1)
 
 - Выполнены пункты 25–27 из `docs/dev_docs/5-pending-edits.md`: подчёркивание чипа (`text-underline-offset: 5px`), шесть чипов в `#text-appointment-dialogue` (+ слова `예약`, `이후` в `words.json`), реплика `확인해 보세요.` вместо `확인해 보시…`.
-- Проверено: `tsc`, ESLint, 225 тестов, локальный импорт (`import-dictionary.ts --only=예약,이후`, `import-textbook.ts --lesson-9-only`), страница в браузере. Не закоммичено, на production (Vercel и Supabase) не выложено.
+- Проверено: `tsc`, ESLint, 225 тестов, локальный импорт (`import-dictionary.ts --only=예약,이후`, `import-textbook.ts --lesson-9-only`), страница в браузере. Коммит `deb11b7` в `origin/main`, Vercel production выложен (READY; CSS подчёркивания уже на проде). **Production Supabase НЕ синхронизирован**: текст диалога `확인해 보세요.`, чипы и слова `예약`, `이후` появятся на проде только после `import-dictionary.ts --only=예약,이후` и `import-textbook.ts --lesson-9-only` против production (нужен доступ к Supabase).
 
 ### 2026-10-25 — JSON пробников 2급 기말시험 (읽기, 쓰기)
 
