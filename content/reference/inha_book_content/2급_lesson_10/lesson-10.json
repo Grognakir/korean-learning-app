@@ -1,0 +1,2117 @@
+{
+  "textbook_id": "inha_book_2",
+  "lesson_number": 10,
+  "title": "외모와 복장",
+  "pages": [
+    {
+      "page_number": null,
+      "page_role": "lesson_opening",
+      "source_photo": "IMG_1288",
+      "blocks": [
+        {
+          "type": "lesson_toc",
+          "sections": [
+            {
+              "key": "준비하기 1",
+              "items": [
+                {
+                  "label": "외모를 묘사하기",
+                  "block_ref": "text-hair-dialogue",
+                  "label_ru": "Описывать внешность"
+                },
+                {
+                  "label": "V-(으)ㄴ/는 편이다",
+                  "block_ref": "grammar-1",
+                  "label_ru": "V-(으)ㄴ/는 편이다 (скорее, довольно)"
+                },
+                {
+                  "label": "N처럼 / 같이",
+                  "block_ref": "grammar-2",
+                  "label_ru": "N처럼 / 같이 (как N)"
+                }
+              ]
+            },
+            {
+              "key": "준비하기 2",
+              "items": [
+                {
+                  "label": "복장을 묘사하기",
+                  "block_ref": "text-fashion-dialogue",
+                  "label_ru": "Описывать одежду"
+                },
+                {
+                  "label": "ㅎ 동사",
+                  "block_ref": "grammar-3",
+                  "label_ru": "ㅎ 동사 (глаголы/прилагательные на ㅎ)"
+                },
+                {
+                  "label": "N만 하다",
+                  "block_ref": "grammar-4",
+                  "label_ru": "N만 하다 (размером с N)"
+                },
+                {
+                  "label": "AV-고 있다②",
+                  "block_ref": "grammar-5",
+                  "label_ru": "AV-고 있다② (состояние: одежда, аксессуары)"
+                }
+              ]
+            },
+            {
+              "key": "말하기",
+              "items": [
+                {
+                  "label": "때와 장소에 맞는 복장에 대해 이야기하기",
+                  "block_ref": "text-speaking-summary",
+                  "label_ru": "Говорить об одежде, подходящей ко времени и месту"
+                }
+              ]
+            },
+            {
+              "key": "듣고 말하기",
+              "items": [
+                {
+                  "label": "어울리는 스타일에 대한 대화를 듣고 말하기",
+                  "block_ref": "listening-style",
+                  "label_ru": "Слушать диалог о подходящем стиле и говорить"
+                }
+              ]
+            },
+            {
+              "key": "읽고 말하기",
+              "items": [
+                {
+                  "label": "이상형에 대한 글을 읽고 말하기",
+                  "block_ref": "reading-ideal",
+                  "label_ru": "Прочитать текст об идеальном типе и обсудить"
+                }
+              ]
+            },
+            {
+              "key": "쓰기",
+              "items": [
+                {
+                  "label": "이상형에 대한 글 쓰기",
+                  "block_ref": "writing-ideal",
+                  "label_ru": "Написать текст об идеальном типе"
+                }
+              ]
+            },
+            {
+              "key": "문화 이해하기",
+              "items": [
+                {
+                  "label": "한국의 의복",
+                  "block_ref": "text-culture-clothing",
+                  "label_ru": "Одежда в Корее"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 158,
+      "page_role": "content",
+      "source_photo": "IMG_1289",
+      "blocks": [
+        {
+          "id": "text-hair-dialogue",
+          "toc_section": "준비하기 1",
+          "type": "text",
+          "title": "외모를 묘사하기",
+          "title_ru": "Описывать внешность",
+          "illustration": {
+            "storage_path": "lesson_10/illustration_1_hairstyle_plans.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "237",
+          "speakers": [
+            "아멜리",
+            "최수지"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "요즘 날씨가 따뜻해져서 그런지 기분 전환을 하고 싶네요."
+            },
+            {
+              "speaker": "최수지",
+              "text": "네, 저도 봄이 되니까 헤어스타일을 바꿔 보고 싶은데 우리 미용실에 같이 갈래요? 여자들은 헤어스타일을 바꾸면 기분이 좋아지잖아요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "그거 좋은 생각이에요! 수지 씨는 어떤 스타일로 바꾸려고요?"
+            },
+            {
+              "speaker": "최수지",
+              "text": "저는 단발머리를 해 본 적이 없어요. 그런데 얼마 전에 본 여배우의 단발머리가 정말 예뻐 보였어요. 그래서 그 여배우처럼 머리를 자르고 싶어요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "수지 씨는 얼굴이 가름한 편이니까 단발머리가 잘 어울릴 거예요."
+            },
+            {
+              "speaker": "최수지",
+              "text": "아멜리 씨는 어떻게 바꿀 거예요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "전 앞머리를 자르고 싶어요. 앞머리가 있으면 더 어려 보이잖아요."
+            },
+            {
+              "speaker": "최수지",
+              "text": "맞아요. 아멜리 씨는 눈이 큰 편이어서 더 귀여워 보일 거예요."
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-hair-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "헤어스타일",
+              "translation_ru": "прическа"
+            },
+            {
+              "ko": "미용실",
+              "translation_ru": "парикмахерская, салон красоты"
+            },
+            {
+              "ko": "스타일",
+              "translation_ru": "стиль"
+            },
+            {
+              "ko": "단발머리",
+              "translation_ru": "короткая стрижка (каре)"
+            },
+            {
+              "ko": "여배우",
+              "translation_ru": "актриса"
+            },
+            {
+              "ko": "가름하다",
+              "translation_ru": "вытянутый, продолговатый (о лице)"
+            },
+            {
+              "ko": "앞머리",
+              "translation_ru": "чёлка"
+            },
+            {
+              "ko": "달리기",
+              "translation_ru": "бег"
+            },
+            {
+              "ko": "천사",
+              "translation_ru": "ангел"
+            },
+            {
+              "ko": "날씬하다",
+              "translation_ru": "стройный"
+            },
+            {
+              "ko": "통통하다",
+              "translation_ru": "пухлый, полноватый"
+            },
+            {
+              "ko": "잘생기다",
+              "translation_ru": "быть красивым, симпатичным (о внешности)"
+            },
+            {
+              "ko": "입술",
+              "translation_ru": "губы"
+            },
+            {
+              "ko": "빨갛다",
+              "translation_ru": "красный"
+            },
+            {
+              "ko": "앵두",
+              "translation_ru": "вишня-ындо (корейская вишня)"
+            },
+            {
+              "ko": "머리카락",
+              "translation_ru": "волосы"
+            },
+            {
+              "ko": "부드럽다",
+              "translation_ru": "мягкий, нежный"
+            },
+            {
+              "ko": "비단",
+              "translation_ru": "шёлк"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 159,
+      "page_role": "content",
+      "source_photo": "IMG_1290",
+      "blocks": [
+        {
+          "id": "grammar-1",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "V-(으)ㄴ/는 편이다",
+          "section": "1",
+          "explanation": "Мягкая, неабсолютная оценка — «скорее да, чем нет», «из тех, кто обычно так делает».",
+          "examples": [
+            "저는 치마를 자주 입는 편입니다.",
+            "이 컴퓨터는 디자인이 예쁜 편이에요.",
+            "어제 본 영화는 재미있는 편이었어요.",
+            "어렸을 때는 달리기를 잘하는 편이었어요."
+          ],
+          "rules": [
+            "глагол наст. → -는 편이다",
+            "прилагательное без 받침 → -ㄴ 편이다, с 받침 → -은 편이다"
+          ]
+        },
+        {
+          "id": "grammar-2",
+          "toc_section": "준비하기 1",
+          "type": "grammar_point",
+          "pattern": "N처럼 / 같이",
+          "section": "2",
+          "explanation": "Сравнение — что-то похоже на N.",
+          "examples": [
+            "왕루 씨는 한국 사람처럼 한국어를 잘해요.",
+            "우리 오빠는 농구 선수처럼 키가 커요.",
+            "9월인데 아직도 여름같이 덥네요.",
+            "이 아이는 천사 같은 미소를 짓고 있네요.",
+            "농구나 축구와 같은 운동을 좋아해요."
+          ],
+          "rules": [
+            "N + 처럼 или 같이 (взаимозаменяемы, 처럼 чуть более книжное)",
+            "N와/과 같은 N"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 160,
+      "page_role": "content",
+      "source_photo": "IMG_1291",
+      "blocks": [
+        {
+          "id": "exercise-1a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "한국 드라마를 자주 보다",
+              "시간이 있다 / 한국 드라마를 자주 보다"
+            ],
+            "cues": [
+              "한국 드라마를 자주 보다",
+              "시간이 있다 / 한국 드라마를 자주 보다"
+            ],
+            "dialogue": [
+              "가: 한국 드라마를 자주 보나요?",
+              "나: 네, 시간이 있을 때 한국 드라마를 자주 보는 편이에요."
+            ],
+            "emphasis": [
+              [
+                "나요"
+              ],
+              [
+                "네,",
+                "때",
+                "는 편이에요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "책을 많이 읽다",
+                "집에서 쉬다 / 책을 많이 읽다"
+              ],
+              "answers": [
+                "책을 많이 읽",
+                "집에서 쉴",
+                "책을 많이 읽"
+              ]
+            },
+            {
+              "given": [
+                "커피를 자주 마시다",
+                "공부를 하다 / 커피를 자주 마시다"
+              ],
+              "answers": [
+                "커피를 자주 마시",
+                "공부를 할",
+                "커피를 자주 마시"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}나요?",
+            "나: 네, {1} 때 {2}는 편이에요."
+          ]
+        },
+        {
+          "id": "exercise-1b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "비가 오다 / 춥다",
+              "작년 / 춥지 않다"
+            ],
+            "cues": [
+              "비가 오다 / 춥다",
+              "작년 / 춥지 않다"
+            ],
+            "dialogue": [
+              "가: 비가 와서 그런지 춥네요.",
+              "나: 작년에 비하면 춥지 않은 편이에요."
+            ],
+            "emphasis": [
+              [
+                "서 그런지"
+              ],
+              [
+                "에 비하면",
+                "은 편이에요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "방학이다 / 학교에 사람이 없다",
+                "주말 / 많다"
+              ],
+              "answers": [
+                "방학이어",
+                "학교에 사람이 없",
+                "주말",
+                "많"
+              ]
+            },
+            {
+              "given": [
+                "공부를 안 하다 / 시험이 어렵다",
+                "지난 시험 / 어렵지 않다"
+              ],
+              "answers": [
+                "공부를 안 해",
+                "시험이 어렵",
+                "지난 시험",
+                "어렵지 않"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}서 그런지 {1}네요.",
+            "나: {2}에 비하면 {3}은 편이에요."
+          ]
+        },
+        {
+          "id": "exercise-1c",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기1",
+          "grammar_ref": "grammar-1",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "초등학생 / 키가 크다",
+              "키가 크다 / 초등학생 / 작다"
+            ],
+            "cues": [
+              "초등학생 / 키가 크다",
+              "키가 크다 / 초등학생 / 작다"
+            ],
+            "dialogue": [
+              "가: 초등학생 때도 키가 큰 편이었나요?",
+              "나: 키가 크기는요. 초등학생 때는 작은 편이었어요."
+            ],
+            "emphasis": [
+              [
+                "때도",
+                "편이었나요"
+              ],
+              [
+                "기는요",
+                "때는",
+                "편이었어요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "중학생 / 날씬하다",
+                "날씬하다 / 중학생 / 통통하다"
+              ],
+              "answers": [
+                "중학생",
+                "날씬한",
+                "날씬하",
+                "중학생",
+                "통통한"
+              ]
+            },
+            {
+              "given": [
+                "어렸다 / 채소를 잘 먹다",
+                "채소를 잘 먹다 / 어렸다 / 채소를 잘 안 먹다"
+              ],
+              "answers": [
+                "어렸을",
+                "채소를 잘 먹는",
+                "채소를 잘 먹",
+                "어렸을",
+                "채소를 잘 안 먹는"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 때도 {1} 편이었나요?",
+            "나: {2}기는요. {3} 때는 {4} 편이었어요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 161,
+      "page_role": "content",
+      "source_photo": "IMG_1292",
+      "blocks": [
+        {
+          "id": "exercise-2a",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "제 친구 / 아이 / 웃다"
+            ],
+            "cues": [
+              "제 친구 / 아이 / 웃다"
+            ],
+            "dialogue": [
+              "가: 제 친구가 아이처럼 웃어요."
+            ],
+            "emphasis": [
+              [
+                "처럼",
+                "어요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "파하드 씨 / 영화배우 / 잘생겼다"
+              ],
+              "answers": [
+                "파하드 씨가",
+                "영화배우",
+                "잘생겼어"
+              ]
+            },
+            {
+              "given": [
+                "제주도의 경치 / 그림 / 아름답다"
+              ],
+              "answers": [
+                "제주도의 경치가",
+                "그림",
+                "아름다워"
+              ]
+            },
+            {
+              "given": [
+                "떨어지는 벚꽃 / 눈 / 예쁘다"
+              ],
+              "answers": [
+                "떨어지는 벚꽃이",
+                "눈",
+                "예뻐"
+              ]
+            },
+            {
+              "given": [
+                "어머니의 마음 / 바다 / 넓다"
+              ],
+              "answers": [
+                "어머니의 마음이",
+                "바다",
+                "넓어"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} {1}처럼 {2}요."
+          ]
+        },
+        {
+          "id": "exercise-2b",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "주말 / 평일 / 학교에 사람이 많다"
+            ],
+            "cues": [
+              "주말 / 평일 / 학교에 사람이 많다"
+            ],
+            "dialogue": [
+              "가: 주말인데 평일같이 학교에 사람이 많아요."
+            ],
+            "emphasis": [
+              [
+                "인데",
+                "같이",
+                "아요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "겨울 / 가을 / 선선하다"
+              ],
+              "answers": [
+                "겨울",
+                "가을",
+                "선선해"
+              ]
+            },
+            {
+              "given": [
+                "여동생 / 남자 / 옷을 입다"
+              ],
+              "answers": [
+                "여동생",
+                "남자",
+                "옷을 입어"
+              ]
+            },
+            {
+              "given": [
+                "어린이 / 어른 / 생각이 깊다"
+              ],
+              "answers": [
+                "어린이",
+                "어른",
+                "생각이 깊어"
+              ]
+            },
+            {
+              "given": [
+                "가수 / 운동선수 / 운동을 잘하다"
+              ],
+              "answers": [
+                "가수",
+                "운동선수",
+                "운동을 잘해"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}인데 {1}같이 {2}요."
+          ]
+        },
+        {
+          "id": "exercise-2c",
+          "toc_section": "준비하기 1",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기2",
+          "grammar_ref": "grammar-2",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "이 여배우의 입술 / 참 빨갛고 예쁘다",
+              "입술 / 앵두 같은 입술"
+            ],
+            "cues": [
+              "이 여배우의 입술 / 참 빨갛고 예쁘다",
+              "입술 / 앵두 같은 입술"
+            ],
+            "dialogue": [
+              "가: 이 여배우의 입술은 참 빨갛고 예쁘네요.",
+              "나: 한국 사람들은 이런 입술을 앵두 같은 입술이라고 해요."
+            ],
+            "emphasis": [
+              [
+                "은",
+                "네요"
+              ],
+              [
+                "한국 사람들은",
+                "같은",
+                "이라고"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "수지 씨의 머리카락 / 참 부드럽다",
+                "머리카락 / 비단 같은 머리"
+              ],
+              "answers": [
+                "수지 씨의 머리카락은",
+                "참 부드럽",
+                "머리카락을",
+                "비단 같은 머리라고"
+              ]
+            },
+            {
+              "given": [
+                "왕루 씨의 얼굴 / 예쁘고 윤기가 나다",
+                "얼굴 / 사과 같은 얼굴"
+              ],
+              "answers": [
+                "왕루 씨의 얼굴은",
+                "예쁘고 윤기가 나",
+                "얼굴을",
+                "사과 같은 얼굴이라고"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} {1}네요.",
+            "나: 한국 사람들은 이런 {2} {3} 해요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 162,
+      "page_role": "content",
+      "source_photo": "IMG_1293",
+      "blocks": [
+        {
+          "id": "text-fashion-dialogue",
+          "toc_section": "준비하기 2",
+          "type": "text",
+          "title": "복장을 묘사하기",
+          "title_ru": "Описывать одежду",
+          "illustration": {
+            "storage_path": "lesson_10/illustration_2_interview_suit.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "238",
+          "speakers": [
+            "왕루",
+            "오위노"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "오위노 씨, 오늘 무슨 일 있어요?"
+            },
+            {
+              "speaker": "오위노",
+              "text": "아, 오늘 취업 면접이 있어요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "오위노 씨가 정장을 입고 있으니까 다른 사람처럼 보여요."
+            },
+            {
+              "speaker": "오위노",
+              "text": "오랜만에 양복도 입고 구두도 신고 넥타이도 매 봤는데 어때요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "까만색 양복에 하얀 와이셔츠를 입으니까 깔끔해 보이고 아주 잘 어울려요. 그리고 오위노 씨는 키가 농구선수만 해서 양복을 입으니까 모델 같아요."
+            },
+            {
+              "speaker": "오위노",
+              "text": "고마워요. 그런데 넥타이가 너무 화려하지 않아요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "아니요, 빨간 줄무늬 넥타이를 매서 그런지 얼굴이 더 밝아 보이는데요? 면접관에게 좋은 인상을 줄 것 같아요."
+            },
+            {
+              "speaker": "오위노",
+              "text": "왕루 씨의 말을 들으니 마음이 편해지네요. 고마워요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "네, 오위노 씨, 오늘 면접 잘 보세요."
+            }
+          ]
+        },
+        {
+          "id": "hint-junbihagi2-expr",
+          "toc_section": "준비하기 2",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-fashion-dialogue",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "인상을 주다",
+              "translation_ru": "производить впечатление — «면접관에게 좋은 인상을 줄 것 같아요» («произведу на интервьюера хорошее впечатление»)"
+            }
+          ]
+        },
+        {
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-fashion-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "취업",
+              "translation_ru": "трудоустройство"
+            },
+            {
+              "ko": "면접",
+              "translation_ru": "собеседование"
+            },
+            {
+              "ko": "정장",
+              "translation_ru": "строгий костюм"
+            },
+            {
+              "ko": "양복",
+              "translation_ru": "мужской костюм"
+            },
+            {
+              "ko": "매다",
+              "translation_ru": "завязывать, повязывать (галстук)"
+            },
+            {
+              "ko": "까만색",
+              "translation_ru": "чёрный цвет"
+            },
+            {
+              "ko": "하얗다",
+              "translation_ru": "белый"
+            },
+            {
+              "ko": "와이셔츠",
+              "translation_ru": "рубашка под костюм"
+            },
+            {
+              "ko": "깔끔하다",
+              "translation_ru": "аккуратный, опрятный"
+            },
+            {
+              "ko": "모델",
+              "translation_ru": "модель"
+            },
+            {
+              "ko": "화려하다",
+              "translation_ru": "яркий, роскошный"
+            },
+            {
+              "ko": "줄무늬",
+              "translation_ru": "полоски, полосатый узор"
+            },
+            {
+              "ko": "면접관",
+              "translation_ru": "интервьюер, экзаменатор"
+            },
+            {
+              "ko": "노랗다",
+              "translation_ru": "жёлтый"
+            },
+            {
+              "ko": "재킷",
+              "translation_ru": "пиджак, жакет"
+            },
+            {
+              "ko": "늙다",
+              "translation_ru": "стареть, быть пожилым"
+            },
+            {
+              "ko": "월급",
+              "translation_ru": "месячная зарплата"
+            },
+            {
+              "ko": "쥐꼬리",
+              "translation_ru": "мышиный хвост (перен. «копейки»)"
+            },
+            {
+              "ko": "파랗다",
+              "translation_ru": "синий, голубой"
+            },
+            {
+              "ko": "셔츠",
+              "translation_ru": "рубашка"
+            },
+            {
+              "ko": "까맣다",
+              "translation_ru": "чёрный"
+            },
+            {
+              "ko": "메다",
+              "translation_ru": "нести на плече, надевать через плечо"
+            },
+            {
+              "ko": "어떻다",
+              "translation_ru": "какой, как"
+            },
+            {
+              "ko": "그렇다",
+              "translation_ru": "такой, так"
+            },
+            {
+              "ko": "새끼",
+              "translation_ru": "детёныш"
+            },
+            {
+              "ko": "돌탑",
+              "translation_ru": "башня из камней"
+            },
+            {
+              "ko": "소원",
+              "translation_ru": "желание, заветная мечта"
+            },
+            {
+              "ko": "빌다",
+              "translation_ru": "просить, загадывать (желание)"
+            },
+            {
+              "ko": "쌓다",
+              "translation_ru": "складывать, возводить"
+            },
+            {
+              "ko": "송아지",
+              "translation_ru": "телёнок"
+            },
+            {
+              "ko": "손바닥",
+              "translation_ru": "ладонь"
+            },
+            {
+              "ko": "주먹",
+              "translation_ru": "кулак"
+            },
+            {
+              "ko": "단추",
+              "translation_ru": "пуговица"
+            },
+            {
+              "ko": "구멍",
+              "translation_ru": "отверстие, дырка"
+            },
+            {
+              "ko": "모기",
+              "translation_ru": "комар"
+            },
+            {
+              "ko": "차다",
+              "translation_ru": "носить на себе (часы, пояс)"
+            },
+            {
+              "ko": "목도리",
+              "translation_ru": "шарф"
+            },
+            {
+              "ko": "귀걸이",
+              "translation_ru": "серьги"
+            },
+            {
+              "ko": "반지",
+              "translation_ru": "кольцо"
+            },
+            {
+              "ko": "끼다",
+              "translation_ru": "надевать (кольцо, очки, перчатки)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 163,
+      "page_role": "content",
+      "source_photo": "IMG_1294",
+      "blocks": [
+        {
+          "id": "grammar-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "ㅎ 동사",
+          "section": "3",
+          "explanation": "У части прилагательных с 받침 ㅎ перед гласным окончанием и ㅎ, и сама гласная основы меняются. 좋다 выглядит похоже, но спрягается правильно: 좋아요.",
+          "examples": [
+            "어제 노란 재킷을 샀어요.",
+            "머리가 하야니까 더 늙어 보여요.",
+            "부끄러워서 얼굴이 빨개졌어요.",
+            "택시에 지갑을 놓고 내렸어요."
+          ],
+          "rules": [
+            "перед -아/어요: ㅎ выпадает, гласная сливается с ㅐ: 빨갛다 → 빨개요, 하얗다 → 하얘요",
+            "перед -(으)ㄴ: просто ㅎ выпадает: 빨간, 하얀",
+            "перед согласным окончанием ничего не меняется: 빨갛습니다"
+          ]
+        },
+        {
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "N만 하다",
+          "section": "4",
+          "explanation": "Сравнение размера/масштаба с чем-то известным.",
+          "examples": [
+            "제 동생은 키가 저만 해요.",
+            "그 사람의 집은 운동장만 해요.",
+            "새로 들어간 회사의 월급이 쥐꼬리만 해요."
+          ],
+          "rules": [
+            "N + 만 하다"
+          ]
+        },
+        {
+          "id": "grammar-5",
+          "toc_section": "준비하기 2",
+          "type": "grammar_point",
+          "pattern": "AV-고 있다②",
+          "section": "5",
+          "explanation": "Второе значение -고 있다 (первое — процесс): не «делаю сейчас», а «нахожусь в результате этого действия» — чаще всего про одежду/аксессуары.",
+          "examples": [
+            "파란색 셔츠를 입고 있어요.",
+            "까만색 구두를 신고 있어요.",
+            "빨간 가방을 메고 있는 사람이 누구예요?",
+            "지하철을 타고 있으니까 곧 도착할 거예요."
+          ],
+          "rules": [
+            "основа + 고 있다 (форма не меняется, различие только в смысле глагола)"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 164,
+      "page_role": "content",
+      "source_photo": "IMG_1295",
+      "blocks": [
+        {
+          "id": "exercise-3a-1",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "까맣다 [-아/어/여요]"
+            ],
+            "dialogue": [
+              "가: 한국 사람의 머리 색깔은 보통 까매요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "파랗다 [-아/어/여요]"
+              ],
+              "answers": [
+                "파래요"
+              ]
+            }
+          ],
+          "template": [
+            "가을 하늘이 {0}."
+          ]
+        },
+        {
+          "id": "exercise-3a-2",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "까맣다 [-아/어/여요]"
+            ],
+            "dialogue": [
+              "가: 한국 사람의 머리 색깔은 보통 까매요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "빨갛다 [-아/어/여지다]"
+              ],
+              "answers": [
+                "빨개져요"
+              ]
+            }
+          ],
+          "template": [
+            "저는 술을 마시면 얼굴이 {0}."
+          ]
+        },
+        {
+          "id": "exercise-3a-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "까맣다 [-아/어/여요]"
+            ],
+            "dialogue": [
+              "가: 한국 사람의 머리 색깔은 보통 까매요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "하얗다 [-아/어/여서]"
+              ],
+              "answers": [
+                "하얘서"
+              ]
+            }
+          ],
+          "template": [
+            "겨울 산이 {0} 아름다워 보여요."
+          ]
+        },
+        {
+          "id": "exercise-3a-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "까맣다 [-아/어/여요]"
+            ],
+            "dialogue": [
+              "가: 한국 사람의 머리 색깔은 보통 까매요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "어떻다 [-아/어/여요]"
+              ],
+              "answers": [
+                "어때요"
+              ]
+            }
+          ],
+          "template": [
+            "아버지 생신 선물로 넥타이가 {0}?"
+          ]
+        },
+        {
+          "id": "exercise-3b-1",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "노랗다 [-(으)ㄴ]"
+            ],
+            "dialogue": [
+              "가: 어제 노란 옷을 샀어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "그렇다 [-(으)ㄴ]"
+              ],
+              "answers": [
+                "그런"
+              ]
+            }
+          ],
+          "template": [
+            "{0} 말은 하지 마세요."
+          ]
+        },
+        {
+          "id": "exercise-3b-2",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "노랗다 [-(으)ㄴ]"
+            ],
+            "dialogue": [
+              "가: 어제 노란 옷을 샀어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "하얗다 [-(으)니까]"
+              ],
+              "answers": [
+                "하야니까"
+              ]
+            }
+          ],
+          "template": [
+            "손님은 피부가 {0} 밝은 옷이 잘 어울릴 거예요."
+          ]
+        },
+        {
+          "id": "exercise-3b-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "노랗다 [-(으)ㄴ]"
+            ],
+            "dialogue": [
+              "가: 어제 노란 옷을 샀어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "파랗다 [-네요]"
+              ],
+              "answers": [
+                "파랗네요"
+              ]
+            }
+          ],
+          "template": [
+            "날씨가 맑아서 그런지 하늘이 더 {0}."
+          ]
+        },
+        {
+          "id": "exercise-3b-4",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "노랗다 [-(으)ㄴ]"
+            ],
+            "dialogue": [
+              "가: 어제 노란 옷을 샀어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "어떻다 [-(으)ㄹ까요?]"
+              ],
+              "answers": [
+                "어떨까요"
+              ]
+            }
+          ],
+          "template": [
+            "선물로 편지를 쓰는 게 {0}?"
+          ]
+        },
+        {
+          "id": "exercise-3c-1",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "좋다 [-아/어/여요]"
+            ],
+            "dialogue": [
+              "가: 저는 운동화보다 구두가 더 좋아요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "넣다 [-아/어/여 두다]"
+              ],
+              "answers": [
+                "넣어 두"
+              ]
+            }
+          ],
+          "template": [
+            "음식을 냉장고에 {0}세요."
+          ]
+        },
+        {
+          "id": "exercise-3c-2",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "좋다 [-아/어/여요]"
+            ],
+            "dialogue": [
+              "가: 저는 운동화보다 구두가 더 좋아요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "낳다 [-았/었/였어요]"
+              ],
+              "answers": [
+                "낳았어요"
+              ]
+            }
+          ],
+          "template": [
+            "집에서 키우는 고양이가 새끼를 {0}."
+          ]
+        },
+        {
+          "id": "exercise-3c-3",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "좋다 [-아/어/여요]"
+            ],
+            "dialogue": [
+              "가: 저는 운동화보다 구두가 더 좋아요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "쌓다 [-고]"
+              ],
+              "answers": [
+                "쌓고"
+              ]
+            }
+          ],
+          "template": [
+            "돌탑을 {0} 소원을 빌었어요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 165,
+      "page_role": "content",
+      "source_photo": "IMG_1296",
+      "blocks": [
+        {
+          "id": "exercise-4a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "강아지",
+              "강아지 / 송아지"
+            ],
+            "cues": [
+              "강아지",
+              "강아지 / 송아지"
+            ],
+            "dialogue": [
+              "가: 강아지가 얼마만 해요?",
+              "나: 강아지가 송아지만 해요."
+            ],
+            "emphasis": [
+              [
+                "얼마만 해요"
+              ],
+              [
+                "송아지만 해요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "이 노트북 / 공책"
+              ],
+              "answers": [
+                "이 노트북이",
+                "이 노트북이",
+                "공책"
+              ]
+            },
+            {
+              "given": [
+                "생선 한 마리 / 손바닥"
+              ],
+              "answers": [
+                "생선 한 마리가",
+                "생선 한 마리가",
+                "손바닥"
+              ]
+            },
+            {
+              "given": [
+                "제 기숙사 방 / 우리 교실"
+              ],
+              "answers": [
+                "제 기숙사 방이",
+                "제 기숙사 방이",
+                "우리 교실"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 얼마만 해요?",
+            "나: {1} {2}만 해요."
+          ]
+        },
+        {
+          "id": "exercise-4b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "다음 달에 아기를 낳을 거다 / 배 / 남산"
+            ],
+            "cues": [
+              "다음 달에 아기를 낳을 거다 / 배 / 남산"
+            ],
+            "dialogue": [
+              "가: 다음 달에 아기를 낳을 거예요. 배가 남산만 해요."
+            ],
+            "emphasis": [
+              [
+                "남산만 해요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "저 여자의 얼굴은 정말 작다 / 얼굴 / 주먹"
+              ],
+              "answers": [
+                "저 여자의 얼굴은 정말 작아",
+                "얼굴이",
+                "주먹"
+              ]
+            },
+            {
+              "given": [
+                "눈이 너무 작다 / 눈 / 단추 구멍"
+              ],
+              "answers": [
+                "눈이 너무 작아",
+                "눈이",
+                "단추 구멍"
+              ]
+            },
+            {
+              "given": [
+                "목소리가 너무 작다 / 목소리 / 모기 소리"
+              ],
+              "answers": [
+                "목소리가 너무 작아",
+                "목소리가",
+                "모기 소리"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}요. {1} {2}만 해요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 166,
+      "page_role": "content",
+      "source_photo": "IMG_1297",
+      "blocks": [
+        {
+          "id": "exercise-5a",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "우리 형 / 안경을 쓰다"
+            ],
+            "cues": [
+              "우리 형 / 안경을 쓰다"
+            ],
+            "dialogue": [
+              "가: 우리 형은 안경을 쓰고 있어요."
+            ],
+            "emphasis": [
+              [
+                "은",
+                "고 있어요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "저 / 운동화를 신다"
+              ],
+              "answers": [
+                "저는",
+                "운동화를 신"
+              ]
+            },
+            {
+              "given": [
+                "제 동생 / 시계를 차다"
+              ],
+              "answers": [
+                "제 동생은",
+                "시계를 차"
+              ]
+            },
+            {
+              "given": [
+                "제 친구 / 목도리를 하다"
+              ],
+              "answers": [
+                "제 친구는",
+                "목도리를 하"
+              ]
+            },
+            {
+              "given": [
+                "우리 형 / 가방을 메다"
+              ],
+              "answers": [
+                "우리 형은",
+                "가방을 메"
+              ]
+            },
+            {
+              "given": [
+                "아버지 / 넥타이를 매다"
+              ],
+              "answers": [
+                "아버지는",
+                "넥타이를 매"
+              ]
+            },
+            {
+              "given": [
+                "어머니 / 귀걸이를 하다"
+              ],
+              "answers": [
+                "어머니는",
+                "귀걸이를 하"
+              ]
+            },
+            {
+              "given": [
+                "할머니 / 반지를 끼다"
+              ],
+              "answers": [
+                "할머니는",
+                "반지를 끼"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} {1}고 있어요."
+          ]
+        },
+        {
+          "id": "exercise-5b",
+          "toc_section": "준비하기 2",
+          "type": "grammar_exercise",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "버스를 타다 / 전화가 왔다"
+            ],
+            "cues": [
+              "버스를 타다 / 전화가 왔다"
+            ],
+            "dialogue": [
+              "가: 버스를 타고 있는데 전화가 왔어요."
+            ],
+            "emphasis": [
+              [
+                "고 있는",
+                "어요"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "지하철을 타다 / 우연히 친구를 만났다"
+              ],
+              "answers": [
+                "지하철을 타",
+                "우연히 친구를 만났어"
+              ]
+            },
+            {
+              "given": [
+                "택시를 타다 / 길이 너무 막혀서 약속 장소에 늦게 도착할 것 같다"
+              ],
+              "answers": [
+                "택시를 타",
+                "길이 너무 막혀서 약속 장소에 늦게 도착할 것 같아"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}고 있는데 {1}요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 167,
+      "page_role": "content",
+      "source_photo": "IMG_1298",
+      "blocks": [
+        {
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "흐엉과 박지성은 이번 주 토요일에 대학교 선배의 결혼식에 갈 겁니다. 그런데 흐엉은 한국의 결혼식 문화에 대해 잘 모릅니다. 그래서 지성에게 질문합니다."
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "흐엉",
+            "박지성"
+          ],
+          "lines": [
+            {
+              "speaker": "흐엉",
+              "text": "지성 씨, 이번 주 토요일에 선배 결혼식에 갈 거지요? 한국에서는 결혼식에 갈 때 옷을 어떻게 입어야 해요?"
+            },
+            {
+              "speaker": "박지성",
+              "text": "보통 결혼식에 갈 때는 단정하게 정장을 많이 입어요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "정장이요? 그럼 지성 씨는 양복을 입고 갈 거예요?"
+            },
+            {
+              "speaker": "박지성",
+              "text": "네, 저는 회색 양복에 하얀 셔츠를 입고 까만 구두를 신으려고요. 흐엉 씨는요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "저는 잘 모르겠어요. 어떤 옷이 괜찮을까요?"
+            },
+            {
+              "speaker": "박지성",
+              "text": "음, 여자들은 보통 원피스를 입거나 블라우스에 스커트를 입어요. 흐엉 씨는 얼굴이 귀여운 편이니까 원피스를 입는 게 어때요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "아, 그럴까요? 그럼 저도 지성 씨처럼 단정하게 입고 가야겠어요. 우리 학교 후문 앞에서 만나서 같이 가요."
+            },
+            {
+              "speaker": "박지성",
+              "text": "네, 그럼 토요일에 만나요."
+            }
+          ]
+        },
+        {
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "type": "text",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 어디에 갈 겁니까?"
+            },
+            {
+              "text": "2) 무슨 옷을 입고 갈 겁니까?"
+            },
+            {
+              "text": "3) 왜 그 옷을 입고 갑니까?"
+            }
+          ]
+        },
+        {
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "단정하다",
+              "translation_ru": "опрятный, аккуратный"
+            },
+            {
+              "ko": "회색",
+              "translation_ru": "серый цвет"
+            },
+            {
+              "ko": "원피스",
+              "translation_ru": "платье"
+            },
+            {
+              "ko": "블라우스",
+              "translation_ru": "блузка"
+            },
+            {
+              "ko": "스커트",
+              "translation_ru": "юбка"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 168,
+      "page_role": "content",
+      "source_photo": "IMG_1299",
+      "blocks": [
+        {
+          "id": "listening-style",
+          "toc_section": "듣고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "listening",
+          "title": "어울리는 스타일에 대한 대화를 듣고 말하기",
+          "title_ru": "Слушать диалог о подходящем стиле и говорить",
+          "audio_id": "239",
+          "warmup": {
+            "prompt": "무엇입니까? 이야기해 보십시오.",
+            "prompt_ru": "Что это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_10/illustration_3_style_advice.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "open",
+              "prompt": "아멜리에게 무엇이 잘 어울립니까?",
+              "prompt_ru": "Что идёт Амели?"
+            },
+            {
+              "kind": "open",
+              "prompt": "파하드에게 무엇이 잘 어울립니까?",
+              "prompt_ru": "Что идёт Фахаду?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "아멜리는 헤어스타일을 바꾸고 싶어 합니다.",
+                "아멜리는 어두운 색 원피스를 입고 있습니다.",
+                "파하드는 평소에 어두운 색 옷을 잘 안 입습니다.",
+                "파하드는 밝은 색 옷을 입으면 얼굴이 밝아 보일 겁니다."
+              ],
+              "correct": null
+            }
+          ],
+          "followup": "여러분에게 어떤 스타일이 잘 어울립니까? 친구들과 이야기해 보십시오.",
+          "followup_ru": "Какой стиль вам идёт? Расскажите друзьям."
+        },
+        {
+          "id": "vocab-listening-style",
+          "toc_section": "듣고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "화사하다",
+              "translation_ru": "яркий, нарядный, сияющий"
+            },
+            {
+              "ko": "티셔츠",
+              "translation_ru": "футболка"
+            },
+            {
+              "ko": "체크무늬",
+              "translation_ru": "клетчатый узор"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 169,
+      "page_role": "content",
+      "source_photo": "IMG_1300",
+      "blocks": [
+        {
+          "id": "text-reading-ideal",
+          "toc_section": "읽고 말하기",
+          "type": "text",
+          "illustration": {
+            "storage_path": "lesson_10/illustration_4_shared_hobbies.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무슨 사이입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Какие между ними отношения? Расскажите.",
+          "lines": [
+            {
+              "text": "여러분은 어떤 사람을 좋아하십니까? 사람들은 모두 이상형이 다릅니다. 키가 큰 사람, 날씬한 사람, 친절한 사람, 똑똑한 사람, 직업이 좋은 사람 등 사람들은 이상형에 대한 생각이 다양합니다."
+            },
+            {
+              "text": "저는 이상형을 생각할 때 외모나 직업을 중요하게 생각하지 않는 편입니다. 왜냐하면 외모나 직업보다 더 중요한 것은 바로 성격이기 때문입니다. 어떤 사람과 오랫동안 사귀려면 성격이 잘 맞아야 합니다. 성격이 잘 맞으면 대화도 잘 할 수 있고 서로 잘 이해할 수 있습니다. 저는 성격이 밝고 잘 웃는 사람이 좋습니다. 그리고 저처럼 야외 활동을 좋아하는 사람이 좋습니다. 시간이 있을 때마다 등산이나 자전거 타기와 같은 취미 활동을 같이 하면 더 즐겁기 때문입니다."
+            },
+            {
+              "text": "이상형에 대한 생각은 누구나 다를 수 있지만 외모나 직업처럼 사람의 겉만 보고 판단하면 좋지 않습니다. 좋은 이상형을 만나고 싶으십니까? 그러면 여러분도 다른 사람에게 좋은 이상형이 되어 보십시오."
+            }
+          ]
+        },
+        {
+          "id": "hint-reading-expr",
+          "toc_section": "읽고 말하기",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-reading-ideal",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "성격이 맞다",
+              "translation_ru": "подходить по характеру — «성격이 잘 맞으면 대화를 잘 할 수 있어요» («если характеры подходят друг другу, можно хорошо общаться»)"
+            }
+          ]
+        },
+        {
+          "id": "reading-ideal",
+          "toc_section": "읽고 말하기",
+          "type": "comprehension_exercise",
+          "exercise_kind": "reading",
+          "title": "이상형에 대한 글을 읽고 말하기",
+          "title_ru": "Прочитать текст об идеальном типе и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까?",
+              "prompt_ru": "О чём этот текст?",
+              "choices": [
+                "외모",
+                "성격",
+                "이상형",
+                "취미 활동"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 중심 생각으로 알맞은 것은 무엇입니까?",
+              "prompt_ru": "Какая основная мысль текста?",
+              "choices": [
+                "사람은 모두 이상형이 달라야 합니다.",
+                "이상형의 직업을 중요하게 생각해야 합니다.",
+                "성격이 잘 맞는 사람과 야외활동을 해야 합니다.",
+                "사람의 겉만 보고 판단하는 것은 좋지 않습니다."
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 이상형은 어떤 사람입니까? 친구들에게 이야기해 보십시오.",
+              "prompt_ru": "Какой человек ваш идеал? Расскажите друзьям."
+            }
+          ]
+        },
+        {
+          "id": "vocab-reading-ideal",
+          "toc_section": "읽고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-ideal",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "이상형",
+              "translation_ru": "идеальный тип (человека)"
+            },
+            {
+              "ko": "외모",
+              "translation_ru": "внешность"
+            },
+            {
+              "ko": "서로",
+              "translation_ru": "друг друга, взаимно"
+            },
+            {
+              "ko": "겉",
+              "translation_ru": "внешняя сторона"
+            },
+            {
+              "ko": "판단하다",
+              "translation_ru": "судить, оценивать"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 170,
+      "page_role": "content",
+      "source_photo": "IMG_1301",
+      "blocks": [
+        {
+          "id": "writing-ideal",
+          "toc_section": "쓰기",
+          "type": "writing_exercise",
+          "title": "이상형에 대한 글을 써 보십시오.",
+          "title_ru": "Напишите текст об идеальном типе человека.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Начало: какой человек для вас идеальный.",
+              "questions": [
+                {
+                  "kr": "어떤 사람이 이상형입니까?",
+                  "ru": "Какой человек ваш идеал?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Середина: что самое важное в идеальном типе.",
+              "questions": [
+                {
+                  "kr": "이상형을 생각할 때 무엇이 가장 중요합니까?",
+                  "ru": "Что самое важное, когда вы думаете об идеальном типе?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Конец: причина.",
+              "questions": [
+                {
+                  "kr": "그 이유가 무엇입니까?",
+                  "ru": "Какова причина?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    },
+    {
+      "page_number": 171,
+      "page_role": "content",
+      "source_photo": "IMG_1302",
+      "blocks": [
+        {
+          "id": "text-culture-clothing",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "title": "한국의 의복",
+          "title_ru": "Одежда в Корее",
+          "illustration": {
+            "storage_path": "lesson_10/illustration_5_korean_clothing.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무슨 옷을 입고 있습니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Какую одежду носят эти люди? Расскажите.",
+          "lines": [
+            {
+              "text": "한국의 전통 옷은 한복입니다. 한복은 명절이나 결혼식, 돌잔치, 환갑잔치 등 중요한 일이 있을 때 입습니다. 과거에는 평소에도 한복을 입고 다니는 사람들이 많았지만 요즘은 보기 힘듭니다. 그러면 요즘 한국인들은 어떤 옷을 입을까요?"
+            },
+            {
+              "text": "현대인들은 디자인이 예쁘면서 활동하기 편한 옷을 좋아합니다. 그렇지만 때와 장소에 맞게 옷을 입습니다. 한국의 중학생, 고등학생들은 학교에 갈 때 교복을 입습니다. 학생들이 교복을 입으면 단정해 보이기 때문에 대부분의 학교에서 교복을 입습니다. 회사에 다니는 직장인들은 정장을 많이 입습니다. 하지만 요즘은 일하기 편한 옷을 입는 회사가 늘고 있습니다. 한국 사람들은 정장을 입는 것을 다른 사람들에게 예의를 지키는 것이라고 생각합니다. 그래서 결혼식이나 장례식과 같은 중요한 행사가 있으면 주로 정장을 입습니다."
+            },
+            {
+              "text": "이처럼 의복은 직업, 시간, 장소에 맞게 선택해서 입어야 합니다. 옷은 자신의 개성을 보여주면서 다른 사람들에게는 배려의 마음을 표현하기 때문입니다."
+            }
+          ]
+        },
+        {
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "type": "text",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 한국에서는 어떤 옷을 입습니까?",
+              "translation_ru": "Какую одежду носят в Корее?"
+            },
+            {
+              "text": "2) 여러분 나라에서는 때와 장소에 맞게 어떤 옷을 입습니까? 이야기해 보십시오.",
+              "translation_ru": "Какую одежду носят в вашей стране в зависимости от времени и места? Расскажите."
+            }
+          ]
+        },
+        {
+          "id": "hint-culture-expr",
+          "toc_section": "문화 이해하기",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-culture-clothing",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "예의를 지키다",
+              "translation_ru": "соблюдать этикет, быть вежливым — «사람들에게 예의를 지키는 것이 중요합니다» («важно соблюдать этикет по отношению к людям»)"
+            }
+          ]
+        },
+        {
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-clothing",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "평소",
+              "translation_ru": "обычно, в обычное время"
+            },
+            {
+              "ko": "교복",
+              "translation_ru": "школьная форма"
+            },
+            {
+              "ko": "장례식",
+              "translation_ru": "похороны"
+            },
+            {
+              "ko": "의복",
+              "translation_ru": "одежда"
+            },
+            {
+              "ko": "선택하다",
+              "translation_ru": "выбирать"
+            },
+            {
+              "ko": "개성",
+              "translation_ru": "индивидуальность"
+            },
+            {
+              "ko": "배려",
+              "translation_ru": "забота, чуткость"
+            }
+          ]
+        },
+        {
+          "id": "pronunciation-10",
+          "toc_section": "문화 이해하기",
+          "type": "pronunciation",
+          "rule": "받침 'ㄴ'+'ㄹ'",
+          "audio_id": "240",
+          "examples": [
+            {
+              "text": "생산량",
+              "translation_ru": "объём производства"
+            },
+            {
+              "text": "입원료",
+              "translation_ru": "плата за госпитализацию"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

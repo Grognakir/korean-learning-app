@@ -253,7 +253,7 @@
      "block": "grammar-1"
     },
     {
-     "label": "AV-나요? / -는가요?, DV-(으)ㄴ가요?, N인가요?",
+     "label": "AV-나요/는가요?, DV-(으)ㄴ가요?, N인가요?",
      "section": "준비하기 1",
      "block": "grammar-2"
     },
@@ -279,19 +279,29 @@
    "unit": "외모와 복장",
    "grammar": [
     {
-     "label": "V-(으)ㄴ/는 편이다"
+     "label": "V-(으)ㄴ/는 편이다",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "N처럼 / 같이"
+     "label": "N처럼 / 같이",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "ㅎ 동사"
+     "label": "ㅎ 동사",
+     "section": "준비하기 2",
+     "block": "grammar-3"
     },
     {
-     "label": "N만 하다"
+     "label": "N만 하다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     },
     {
-     "label": "AV-고 있다②"
+     "label": "AV-고 있다②",
+     "section": "준비하기 2",
+     "block": "grammar-5"
     }
    ]
   },

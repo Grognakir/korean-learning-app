@@ -35,7 +35,9 @@ export type GrammarNoteBlock =
   | { type: "table"; head: string[]; rows: string[][] }
   | { type: "examples"; items: { kr: string; ru: string }[] };
 
-export type GrammarNote = { title: string; blocks: GrammarNoteBlock[] };
+/** section: true — раздел с подписью («КАК ОБРАЗУЕТСЯ») между правилами и
+ * примерами; иначе сноска с заголовком после примеров. */
+export type GrammarNote = { title: string; blocks: GrammarNoteBlock[]; section?: boolean };
 
 export type GrammarPoint = {
   id: string;

@@ -263,15 +263,14 @@ export type GrammarPointBlock = ContentBlockBase & {
   section: string;
   explanation: string | null;
   rules?: string[];
+  /** Правила таблицей (вместо списка rules): head — заголовки столбцов,
+   * rows[i][j] — ячейка; при трёх и более столбцах первый — заголовки строк. */
+  rules_table?: { head: string[]; rows: string[][] };
   examples: string[];
   /** Переводы слов, встречающихся именно в examples[] этой грамматики —
    * не рукописный словарь раздела, а локальные подсказки под конкретные
    * примеры (см. тот же паттерн у GrammarExerciseBlock.example.vocab). */
   vocab?: { ko: string; translation_ru: string }[];
-  details_link?: {
-    label: string;
-    href: string | null;
-  };
 };
 
 export type GrammarExerciseBlock = ContentBlockBase & {

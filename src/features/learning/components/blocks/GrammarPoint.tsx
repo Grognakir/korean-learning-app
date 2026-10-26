@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NoteTable } from "@/features/dictionary/components/GrammarPointDetails";
 import { RichExplanation, formatRich } from "@/features/dictionary/richText";
 import type { GrammarPointBlock } from "@/features/learning/types";
 import { GrammarDetailsButton } from "./GrammarDetailsButton";
@@ -9,34 +9,15 @@ export function GrammarPoint({
   block,
   id,
   vocabItems,
-  hasDictionary = false,
+  dictionaryRef = null,
 }: {
   block: GrammarPointBlock;
   id?: string;
   vocabItems?: VocabItem[];
-  /** В словаре есть конструкция с таким же pattern — показываем «Изучить подробнее». */
-  hasDictionary?: boolean;
+  /** external_id статьи словаря; null — статьи нет, окно покажет описание из урока. */
+  dictionaryRef?: string | null;
 }) {
   const seenVocab = new Set<string>();
-
-  // Прежняя заглушка/ссылка details_link — только когда статьи в словаре нет.
-  const legacyAction =
-    !hasDictionary &&
-    block.details_link &&
-    (block.details_link.href ? (
-      <Link href={block.details_link.href} className={styles.grammarDetailsAction}>
-        {block.details_link.label}
-      </Link>
-    ) : (
-      <button
-        type="button"
-        className={styles.grammarDetailsAction}
-        disabled
-        title="Подробный разбор появится позже"
-      >
-        {block.details_link.label}
-      </button>
-    ));
 
   return (
     <div id={id} className={styles.block}>
@@ -61,7 +42,7 @@ export function GrammarPoint({
                 strokeLinejoin="round"
               />
             </svg>
-            {hasDictionary && <GrammarDetailsButton pattern={block.pattern} variant="summary" />}
+            <GrammarDetailsButton block={block} dictionaryRef={dictionaryRef} variant="summary" />
           </summary>
           <div className={styles.grammarNote}>
             <RichExplanation
@@ -70,17 +51,25 @@ export function GrammarPoint({
               paragraphClassName={styles.explanation}
               listClassName={styles.rules}
             />
-            {block.rules && block.rules.length > 0 && (
+            {block.rules_table ? (
               <div className={styles.rulesSection}>
                 <span className={styles.rulesLabel}>Правила</span>
-                <ul className={styles.rules}>
-                  {block.rules.map((rule, i) => (
-                    <li key={i}>{formatRich(rule)}</li>
-                  ))}
-                </ul>
+                <NoteTable head={block.rules_table.head} rows={block.rules_table.rows} />
               </div>
+            ) : (
+              block.rules &&
+              block.rules.length > 0 && (
+                <div className={styles.rulesSection}>
+                  <span className={styles.rulesLabel}>Правила</span>
+                  <ul className={styles.rules}>
+                    {block.rules.map((rule, i) => (
+                      <li key={i}>{formatRich(rule)}</li>
+                    ))}
+                  </ul>
+                </div>
+              )
             )}
-            {legacyAction}
+            <GrammarDetailsButton block={block} dictionaryRef={dictionaryRef} variant="footer" />
           </div>
         </details>
       ) : (
@@ -93,12 +82,9 @@ export function GrammarPoint({
           </p>
         ))}
       </div>
-      {!block.explanation &&
-        (hasDictionary ? (
-          <GrammarDetailsButton pattern={block.pattern} variant="footer" />
-        ) : (
-          legacyAction
-        ))}
+      {!block.explanation && (
+        <GrammarDetailsButton block={block} dictionaryRef={dictionaryRef} variant="standalone" />
+      )}
     </div>
   );
 }

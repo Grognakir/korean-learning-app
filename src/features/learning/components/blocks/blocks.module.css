@@ -703,17 +703,23 @@
 
 .grammarDetailsAction {
   align-self: flex-start;
-  border: 1px solid var(--blue);
-  border-radius: var(--radius-control);
-  padding: 8px 12px;
-  background: #fff;
-  color: var(--blue);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 6px 12px;
+  margin-top: 6px;
+  background: var(--paper-2);
+  color: var(--ink-soft);
   font: inherit;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 12.5px;
+  font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
   cursor: pointer;
+}
+
+.grammarDetailsAction:hover {
+  color: var(--ink);
+  border-color: var(--stone);
 }
 
 .grammarDetailsActionTop {
@@ -721,9 +727,21 @@
   align-self: center;
 }
 
-.grammarDetailsAction:disabled {
-  cursor: not-allowed;
-  opacity: 0.58;
+/* Десктоп: кнопка в строке заголовка. Планшет и телефон: длинные названия
+   грамматик не оставляют места рядом со стрелкой, кнопка уходит в раскрытый
+   блок под объяснением. */
+.grammarDetailsActionFooter {
+  display: none;
+}
+
+@media (--to-compact) {
+  .grammarDetailsActionTop {
+    display: none;
+  }
+
+  .grammarDetailsActionFooter {
+    display: inline-block;
+  }
 }
 
 .examples {

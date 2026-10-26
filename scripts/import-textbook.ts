@@ -38,6 +38,7 @@ const LESSON_DIR_2_6 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_06");
 const LESSON_DIR_2_7 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_07");
 const LESSON_DIR_2_8 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_08");
 const LESSON_DIR_2_9 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_09");
+const LESSON_DIR_2_10 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_10");
 
 const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: string[] }> = {
   7: {
@@ -71,6 +72,17 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
       "illustration_3_pharmacy.png",
       "illustration_4_healthy_habits.png",
       "illustration_5_donguibogam.png",
+    ],
+  },
+  10: {
+    path: join(LESSON_DIR_2_10, "lesson-10.json"),
+    audio: [237, 238, 239, 240],
+    images: [
+      "illustration_1_hairstyle_plans.png",
+      "illustration_2_interview_suit.png",
+      "illustration_3_style_advice.png",
+      "illustration_4_shared_hobbies.png",
+      "illustration_5_korean_clothing.png",
     ],
   },
 };
@@ -399,7 +411,7 @@ async function main() {
     return;
   }
 
-  for (const lessonNumber of [7, 8, 9]) {
+  for (const lessonNumber of [7, 8, 9, 10]) {
     if (!process.argv.includes(`--lesson-${lessonNumber}-only`)) continue;
 
     const { data: textbook2, error: textbookError } = await supabase
@@ -768,7 +780,12 @@ async function main() {
     LATE_LESSONS_2[8].path,
     textbook2Lesson7NextIndex,
   );
-  await importLesson(textbook2.id, LATE_LESSONS_2[9].path, textbook2Lesson8NextIndex);
+  const textbook2Lesson9NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[9].path,
+    textbook2Lesson8NextIndex,
+  );
+  await importLesson(textbook2.id, LATE_LESSONS_2[10].path, textbook2Lesson9NextIndex);
 
   // Ассеты: только то, что реально используется этим уроком, не всё
   // содержимое справочных папок разом.
@@ -1013,6 +1030,7 @@ async function main() {
     ...LATE_LESSONS_2[7].audio,
     ...LATE_LESSONS_2[8].audio,
     ...LATE_LESSONS_2[9].audio,
+    ...LATE_LESSONS_2[10].audio,
   ]);
 
   console.log("Готово.");
