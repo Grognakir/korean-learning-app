@@ -3,7 +3,6 @@
    ложилась на соседние чипы строки и они «мигали». */
 .hintChip {
   --chip-tip-gap: 1px;
-  --chip-tip-shadow: none;
   --chip-tip-transition: none;
   --chip-underline-style: solid;
   --chip-underline-offset: 2px;
