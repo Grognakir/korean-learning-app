@@ -36,8 +36,15 @@ export type GrammarNoteBlock =
   | { type: "examples"; items: { kr: string; ru: string }[] };
 
 /** section: true — раздел с подписью («КАК ОБРАЗУЕТСЯ») между правилами и
- * примерами; иначе сноска с заголовком после примеров. */
-export type GrammarNote = { title: string; blocks: GrammarNoteBlock[]; section?: boolean };
+ * примерами; иначе сноска с заголовком после примеров. after_examples — раздел
+ * ставится после примеров; callout — оформляется выделенной плашкой. */
+export type GrammarNote = {
+  title: string;
+  blocks: GrammarNoteBlock[];
+  section?: boolean;
+  after_examples?: boolean;
+  callout?: boolean;
+};
 
 export type GrammarPoint = {
   id: string;

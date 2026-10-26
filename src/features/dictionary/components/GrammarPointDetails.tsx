@@ -103,7 +103,7 @@ function GrammarSections({ notes }: { notes: GrammarNote[] }) {
   return (
     <>
       {notes.map((note, i) => (
-        <div key={i} className={styles.detailSection}>
+        <div key={i} className={note.callout ? styles.callout : styles.detailSection}>
           <span className={styles.detailLabel}>{note.title}</span>
           <NoteBlocks blocks={note.blocks} />
         </div>
@@ -116,7 +116,8 @@ function GrammarSections({ notes }: { notes: GrammarNote[] }) {
 // сноски. Используется в списке словаря и в модальном окне из урока.
 export function GrammarPointDetails({ point }: { point: GrammarPoint }) {
   const examples = Array.isArray(point.examples) ? point.examples : [];
-  const sectionNotes = (point.notes ?? []).filter((note) => note.section);
+  const sectionNotes = (point.notes ?? []).filter((note) => note.section && !note.after_examples);
+  const sectionNotesAfter = (point.notes ?? []).filter((note) => note.section && note.after_examples);
   const footNotes = (point.notes ?? []).filter((note) => !note.section);
   // Чипы короткие: grammar_group («Тема|Подтема» через «|») или сокращённая категория.
   const tags = point.grammar_group
@@ -175,6 +176,7 @@ export function GrammarPointDetails({ point }: { point: GrammarPoint }) {
           </ul>
         </div>
       )}
+      {sectionNotesAfter.length > 0 && <GrammarSections notes={sectionNotesAfter} />}
       {footNotes.length > 0 && <GrammarNotes notes={footNotes} />}
       {(point.vocab?.length ?? 0) > 0 && (
         <div className={styles.detailSection}>

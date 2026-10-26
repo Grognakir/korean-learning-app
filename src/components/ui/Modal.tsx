@@ -13,9 +13,24 @@ type ModalProps = {
   heading?: ReactNode;
   /** Широкое окно для чтения с почти невидимой полосой прокрутки. */
   reading?: boolean;
+  /** Своя предельная ширина окна в пикселях (вместо 520/760). */
+  maxWidth?: number;
+  /** Окно крепится сверху: верхний край ставится так, будто окно высотой
+   * anchorHeight стоит по центру экрана. При меньшей высоте оно выглядит
+   * чуть выше центра, при росте содержимого растёт вниз и не прыгает. */
+  anchorHeight?: number;
 };
 
-export function Modal({ open, onClose, children, title, heading, reading = false }: ModalProps) {
+export function Modal({
+  open,
+  onClose,
+  children,
+  title,
+  heading,
+  reading = false,
+  maxWidth,
+  anchorHeight,
+}: ModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -47,7 +62,14 @@ export function Modal({ open, onClose, children, title, heading, reading = false
 
   return createPortal(
     <div
-      className={styles.overlay}
+      className={
+        anchorHeight ? `${styles.overlay} ${styles.overlayTop}` : styles.overlay
+      }
+      style={
+        anchorHeight
+          ? { paddingTop: `max(20px, calc((100dvh - ${anchorHeight}px) / 2))` }
+          : undefined
+      }
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -55,7 +77,10 @@ export function Modal({ open, onClose, children, title, heading, reading = false
     >
       <div
         ref={dialogRef}
-        className={reading ? `${styles.dialog} ${styles.dialogReading}` : styles.dialog}
+        className={
+          reading ? `${styles.dialog} ${styles.dialogReading}` : styles.dialog
+        }
+        style={maxWidth ? { maxWidth } : undefined}
         role="dialog"
         aria-modal="true"
         aria-label={title}
@@ -82,7 +107,11 @@ export function Modal({ open, onClose, children, title, heading, reading = false
             ×
           </button>
         )}
-        <div className={reading ? `${styles.body} ${styles.bodyQuiet}` : styles.body}>
+        <div
+          className={
+            reading ? `${styles.body} ${styles.bodyQuiet}` : styles.body
+          }
+        >
           {children}
         </div>
       </div>

@@ -285,6 +285,9 @@ export type GrammarExerciseBlock = ContentBlockBase & {
     dialogue: string[];
     emphasis?: string[][];
     vocab?: { ko: string; translation_ru: string }[];
+    /** 받침, которое нельзя подкрасить внутри слога (큰 → ㄴ): после слога
+     * text в строке line диалога ставится маленькая рамка с буквой jamo. */
+    jamo_marks?: { line: number; text: string; jamo: string }[];
   };
   // Те же строки, что и example.dialogue, но со вставками {0},{1}... на
   // месте пропусков — явный шаблон вместо угадывания места пропуска

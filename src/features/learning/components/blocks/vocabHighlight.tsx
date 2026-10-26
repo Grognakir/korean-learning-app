@@ -41,22 +41,24 @@ const TOKEN_BREAK = /[\s/.,?!:;"'“”‘’()〈〉~…]/;
 // Односложная основа считается глаголом, только если дальше идёт окончание
 // (не "기", которое чаще часть слова: 감기, 빨리, 오위노...).
 const STEM_ENDINGS = /^[아어여았었였으세셨시겠고서지면는은을게요야려라니며]/;
-const HADA_FORMS = /^[하해했할합한드]/;
+const HADA_FORMS = /^[하해했할합한]/;
 // Односложное существительное — слово целиком, только если дальше конец слова
 // или частица (눈이, 눈썰매 — уже другое слово; 이번 — не 이 «зуб»).
 const NOUN_FOLLOWERS = /^[이가은는을를에의도와과로만께랑마까부처하입예]/;
 
-/** Чип обязан покрывать слово целиком, а не только основу: докручивает
- * конец совпадения до границы слова (반갑 → 반갑습니다). Существительное
- * расширяется только на -하다-хвост (환영 → 환영합니다), частицы остаются
- * снаружи (쇼핑몰|을). */
-function wordEnd(text: string, matchEnd: number, item: VocabItem): number {
+/** Конец чипа: подсвечивается основа слова. Окончание или частица, вросшие
+ * в последний слог основы (큰, 갔, 어렸, 축구할), уже входят в сам needle;
+ * отдельные слоги (잘하는 → 잘하, 어렸을 → 어렸, 가요 → 가) в чип не
+ * попадают. Существительное, за которым стоит 하다, берёт только слог
+ * 하/해/했/할/합/한 (환영합|니다). */
+function chipEnd(text: string, start: number, needle: string, item: VocabItem): number {
+  const matchEnd = start + needle.length;
+  if (needle !== item.ko && needle.endsWith("요") && item.ko.endsWith("다")) {
+    return matchEnd - 1;
+  }
   const next = text[matchEnd];
-  if (next === undefined || TOKEN_BREAK.test(next)) return matchEnd;
-  if (!isVerbLike(item) && !HADA_FORMS.test(next)) return matchEnd;
-  let end = matchEnd;
-  while (end < text.length && !TOKEN_BREAK.test(text[end])) end++;
-  return end;
+  if (next === undefined || isVerbLike(item) || !HADA_FORMS.test(next)) return matchEnd;
+  return matchEnd + 1;
 }
 
 function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
@@ -98,7 +100,7 @@ function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
         }
         candidates.push({
           start,
-          end: wordEnd(text, start + needle.length, item),
+          end: chipEnd(text, start, needle, item),
           translation: item.translation_ru,
           ko: item.ko,
         });

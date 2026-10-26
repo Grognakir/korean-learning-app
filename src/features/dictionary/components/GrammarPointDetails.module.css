@@ -96,6 +96,21 @@
   border-top: 1px dashed var(--line);
 }
 
+/* Важная пометка: выделенная плашка вместо обычного раздела. */
+.callout {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: color-mix(in srgb, var(--blue) 6%, var(--paper));
+  border: 1px solid color-mix(in srgb, var(--blue) 45%, var(--line));
+}
+
+.callout .detailLabel {
+  color: var(--blue);
+}
+
 .noteTitle {
   font-size: 15px;
   font-weight: 700;
@@ -109,6 +124,7 @@
 
 .tableWrap {
   overflow-x: auto;
+  margin-bottom: 5px;
 }
 
 /* Таблица без прокрутки: overflow обрезал бы подсказки чипов в ячейках. */
@@ -139,6 +155,14 @@
 .noteTable tbody th {
   font-weight: 600;
   color: var(--ink-soft);
+}
+
+/* Первый столбец — подписи строк; на широком экране не переносим. */
+@media not (--to-compact) {
+  .noteTable:not(.stackOnMobile) tr > :first-child {
+    width: 1%;
+    white-space: nowrap;
+  }
 }
 
 /* Двухколоночная таблица на узком экране — стопка карточек: слева-направо

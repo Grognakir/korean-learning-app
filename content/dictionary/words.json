@@ -46281,7 +46281,7 @@
         "Глаголы"
       ],
       "translations": [
-        "строить (дом); составлять (предложение, выражение)"
+        "строить (дом); составлять (предложение, выражение); делать (улыбку, выражение лица)"
       ],
       "examples": [],
       "notes": [],
@@ -50078,7 +50078,7 @@
     },
     {
       "external_id": "word-가름하다",
-      "headword": "가름하다",
+      "headword": "갸름하다",
       "reading": null,
       "part_of_speech": "adjective",
       "level_tag": null,
@@ -50089,9 +50089,7 @@
         "вытянутый, продолговатый (о лице)"
       ],
       "examples": [],
-      "notes": [
-        "в учебнике напечатано так; обычная форма — 갸름하다 (о лице: слегка вытянутое, изящное)"
-      ],
+      "notes": [],
       "forms": [],
       "related": []
     },
@@ -51119,6 +51117,23 @@
       ],
       "translations": [
         "забота, чуткость"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-잘하다",
+      "headword": "잘하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "хорошо делать, уметь"
       ],
       "examples": [],
       "notes": [],

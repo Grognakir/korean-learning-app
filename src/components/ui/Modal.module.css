@@ -9,6 +9,10 @@
   background: rgba(28, 27, 25, 0.45);
 }
 
+.overlayTop {
+  align-items: flex-start;
+}
+
 .dialog {
   position: relative;
   display: flex;

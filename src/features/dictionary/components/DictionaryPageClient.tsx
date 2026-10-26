@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDictionaryCache } from "@/features/dictionary/DictionaryCacheContext";
+import {
+  replaceDictionaryUrl,
+  type DictionaryTab,
+} from "@/features/dictionary/dictionarySearchUrl";
 import type { CategoryOption } from "@/features/dictionary/types";
 import { AddWordButton } from "./AddWordButton";
 import { GrammarList } from "./GrammarList";
@@ -15,6 +19,8 @@ type DictionaryPageClientProps = {
   phraseCategories: string[];
   grammarCategories: string[];
   userId: string | null;
+  initialTab?: DictionaryTab;
+  initialGrammarQuery?: string;
 };
 
 export function DictionaryPageClient({
@@ -22,10 +28,18 @@ export function DictionaryPageClient({
   phraseCategories,
   grammarCategories,
   userId,
+  initialTab = "words",
+  initialGrammarQuery = "",
 }: DictionaryPageClientProps) {
-  const [tab, setTab] = useState<"words" | "phrases" | "grammar">("words");
+  const [tab, setTab] = useState<DictionaryTab>(initialTab);
+  const [grammarQuery, setGrammarQuery] = useState(initialGrammarQuery);
   const router = useRouter();
   const { clearResultsCache } = useDictionaryCache();
+
+  const selectTab = (next: DictionaryTab) => {
+    setTab(next);
+    replaceDictionaryUrl(next, next === "grammar" ? grammarQuery : "");
+  };
 
   const handleWordsChanged = () => {
     clearResultsCache();
@@ -44,7 +58,7 @@ export function DictionaryPageClient({
             className={tab === "words" ? styles.typeTabActive : styles.typeTab}
             role="tab"
             aria-selected={tab === "words"}
-            onClick={() => setTab("words")}
+            onClick={() => selectTab("words")}
           >
             Слова
           </button>
@@ -55,7 +69,7 @@ export function DictionaryPageClient({
             }
             role="tab"
             aria-selected={tab === "phrases"}
-            onClick={() => setTab("phrases")}
+            onClick={() => selectTab("phrases")}
           >
             Фразы
           </button>
@@ -66,7 +80,7 @@ export function DictionaryPageClient({
             }
             role="tab"
             aria-selected={tab === "grammar"}
-            onClick={() => setTab("grammar")}
+            onClick={() => selectTab("grammar")}
           >
             Грамматика
           </button>
@@ -88,7 +102,14 @@ export function DictionaryPageClient({
       ) : tab === "phrases" ? (
         <PhraseList categories={phraseCategories} />
       ) : (
-        <GrammarList categories={grammarCategories} />
+        <GrammarList
+          categories={grammarCategories}
+          query={grammarQuery}
+          onQueryChange={(value) => {
+            setGrammarQuery(value);
+            replaceDictionaryUrl("grammar", value);
+          }}
+        />
       )}
     </>
   );

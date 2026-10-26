@@ -150,26 +150,34 @@ it("однослоговое слово совпадает только с на�
   expect(vocabKeysInText("화가 났어요.", items)).toEqual(["화"]);
 });
 
-it("чип покрывает слово целиком вместе с окончанием, но не частицей", () => {
+it("чип покрывает основу и вросший слог, но не отдельные окончания и частицы", () => {
   const items = [
     { ko: "반갑다", translation_ru: "рад" },
     { ko: "환영", translation_ru: "приветствие" },
     { ko: "쇼핑몰", translation_ru: "магазин" },
     { ko: "오다", translation_ru: "приходить" },
+    { ko: "가다", translation_ru: "идти" },
     { ko: "걱정되", translation_ru: "форма от 걱정되다 (тревожиться)" },
+    { ko: "잘하", translation_ru: "форма от 잘하다 (хорошо делать)" },
+    { ko: "어렸", translation_ru: "форма от 어리다 (быть молодым)" },
+    { ko: "축구할", translation_ru: "форма от 축구하다 (играть в футбол)" },
   ];
-  const whole = (text: string) => {
+  const chipText = (text: string) => {
     const { container } = render(<div>{highlightDialogueSpeakers(text, items)}</div>);
     const chip = container.querySelector('[class*="vocabKo"]');
     cleanup();
     return chip?.textContent ?? null;
   };
-  expect(whole("만나서 반갑습니다.")).toBe("반갑습니다");
-  expect(whole("모두 환영합니다.")).toBe("환영합니다");
-  expect(whole("쇼핑몰을 알아요?")).toBe("쇼핑몰");
-  expect(whole("조금 걱정되네요.")).toBe("걱정되네요");
-  expect(whole("오위노 씨는요?")).toBeNull();
-  expect(whole("오면 전화하세요.")).toBe("오면");
+  expect(chipText("만나서 반갑습니다.")).toBe("반갑");
+  expect(chipText("모두 환영합니다.")).toBe("환영합");
+  expect(chipText("쇼핑몰을 알아요?")).toBe("쇼핑몰");
+  expect(chipText("조금 걱정되네요.")).toBe("걱정되");
+  expect(chipText("오위노 씨는요?")).toBeNull();
+  expect(chipText("오면 전화하세요.")).toBe("오");
+  expect(chipText("학교에 가요.")).toBe("가");
+  expect(chipText("달리기를 잘하는 편이었어요.")).toBe("잘하");
+  expect(chipText("어렸을 때는 달리기를 했어요.")).toBe("어렸");
+  expect(chipText("친구들과 축구할 거예요.")).toBe("축구할");
 });
 
 it("односложное существительное не совпадает с началом другого слова", () => {

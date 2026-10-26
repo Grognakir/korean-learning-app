@@ -68,8 +68,15 @@ function GrammarCard({
   );
 }
 
-export function GrammarList({ categories }: { categories: string[] }) {
-  const [query, setQuery] = useState("");
+export function GrammarList({
+  categories,
+  query,
+  onQueryChange,
+}: {
+  categories: string[];
+  query: string;
+  onQueryChange: (query: string) => void;
+}) {
   const [rawDebouncedQuery] = useDebouncedValue(query, 300);
   const debouncedQuery = rawDebouncedQuery.trim();
   const [category, setCategory] = useState("");
@@ -125,7 +132,7 @@ export function GrammarList({ categories }: { categories: string[] }) {
           placeholder="Конструкция…"
           value={query}
           onChange={(e) => {
-            setQuery(e.target.value);
+            onQueryChange(e.target.value);
             setPage(1);
             setExpandedId(null);
           }}
