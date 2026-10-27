@@ -1923,3 +1923,14 @@
   user-select: none;
   pointer-events: none;
 }
+
+/* Чипы-переводы в пунктах упражнений: фон-маркер вместо подчёркивания
+   (линия упиралась в рамку пункта). Фон выходит за буквы, но не раздвигает
+   строку. В тексте уроков и грамматике чипы остаются с подчёркиванием. */
+.exerciseItems .inlineVocab .vocabKo {
+  text-decoration: none;
+  background: color-mix(in srgb, var(--stone) 22%, transparent);
+  border-radius: 4px;
+  padding: 0 2px;
+  margin: 0 -2px;
+}

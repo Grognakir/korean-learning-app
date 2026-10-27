@@ -7,13 +7,17 @@ import { LabelInfo } from "./LabelInfo";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
-type Segment = { kind: "text"; text: string } | { kind: "blank"; index: number };
+type Segment =
+  { kind: "text"; text: string } | { kind: "blank"; index: number };
 
 const PROMPT_TRANSLATION =
   "Попробовать проговорить примеры и для всех вариантов правильно заполнить по образцу на корейском";
 
 const EXAMPLE_EMPHASIS_FALLBACK: Record<string, string[][]> = {
-  "가: 지금 무엇을 해요?\n나: 이메일을 쓰는 중이에요.": [["지금 무엇을 해요"], ["는 중이에요"]],
+  "가: 지금 무엇을 해요?\n나: 이메일을 쓰는 중이에요.": [
+    ["지금 무엇을 해요"],
+    ["는 중이에요"],
+  ],
   "가: 언제 빵을 샀어요?\n나: 학교에 가는 중에 빵을 샀어요.": [
     ["언제", "어요"],
     ["는 중에", "어요"],
@@ -42,10 +46,11 @@ const EXAMPLE_EMPHASIS_FALLBACK: Record<string, string[][]> = {
     ["언제", "어요"],
     ["은 다음에", "어요"],
   ],
-  "가: 언제부터 그 노래를 좋아하게 되었어요?\n나: 드라마를 본 후부터 그 노래를 좋아하게 되었어요.": [
-    ["언제부터", "게 되었어요"],
-    ["후부터", "게 되었어요"],
-  ],
+  "가: 언제부터 그 노래를 좋아하게 되었어요?\n나: 드라마를 본 후부터 그 노래를 좋아하게 되었어요.":
+    [
+      ["언제부터", "게 되었어요"],
+      ["후부터", "게 되었어요"],
+    ],
 };
 
 // Шаблон вида "가: {0}으니까 {1}게 {2}하세요." — явные позиции пропусков,
@@ -65,7 +70,8 @@ function parseTemplate(template: string[]): Segment[][] {
       segments.push({ kind: "blank", index: Number(match[1]) });
       last = match.index + match[0].length;
     }
-    if (last < line.length) segments.push({ kind: "text", text: line.slice(last) });
+    if (last < line.length)
+      segments.push({ kind: "text", text: line.slice(last) });
     return segments;
   });
 }
@@ -88,13 +94,20 @@ export function inputWidthEm(value: string): number {
   return Math.max(units, 3);
 }
 
-function cueLines(cues: string[] | undefined, given: string[], expandPair: boolean): string[] {
+function cueLines(
+  cues: string[] | undefined,
+  given: string[],
+  expandPair: boolean,
+): string[] {
   if (cues?.length) return cues;
   if (expandPair && given.length === 2) return [given[1], given.join(" / ")];
   return [given.join(" / ")];
 }
 
-type SavedState = { inputs: Record<number, string[]>; checked: Record<number, boolean> };
+type SavedState = {
+  inputs: Record<number, string[]>;
+  checked: Record<number, boolean>;
+};
 
 export function GrammarExercise({
   block,
@@ -116,12 +129,22 @@ export function GrammarExercise({
 }) {
   const lines = useMemo(() => parseTemplate(block.template), [block.template]);
   const blankIndexes = useMemo(
-    () => new Set(lines.flatMap((line) => line.flatMap((segment) => (segment.kind === "blank" ? [segment.index] : [])))),
+    () =>
+      new Set(
+        lines.flatMap((line) =>
+          line.flatMap((segment) =>
+            segment.kind === "blank" ? [segment.index] : [],
+          ),
+        ),
+      ),
     [lines],
   );
-  const expandPairCues = blankIndexes.size === 2 && !block.template.some((line) => line.includes(" / "));
+  const expandPairCues =
+    blankIndexes.size === 2 &&
+    !block.template.some((line) => line.includes(" / "));
   const exampleEmphasis =
-    block.example.emphasis ?? EXAMPLE_EMPHASIS_FALLBACK[block.example.dialogue.join("\n")];
+    block.example.emphasis ??
+    EXAMPLE_EMPHASIS_FALLBACK[block.example.dialogue.join("\n")];
   const key = storageKey(block.id, textbookSlug, lessonNumber);
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -147,10 +170,16 @@ export function GrammarExercise({
     }
   }, [key]);
 
-  function persist(nextInputs: Record<number, string[]>, nextChecked: Record<number, boolean>) {
+  function persist(
+    nextInputs: Record<number, string[]>,
+    nextChecked: Record<number, boolean>,
+  ) {
     if (!key) return;
     try {
-      window.localStorage.setItem(key, JSON.stringify({ inputs: nextInputs, checked: nextChecked }));
+      window.localStorage.setItem(
+        key,
+        JSON.stringify({ inputs: nextInputs, checked: nextChecked }),
+      );
     } catch {
       // см. комментарий выше
     }
@@ -171,7 +200,10 @@ export function GrammarExercise({
     setActiveIndex(itemIndex);
     setInputs((prev) => {
       if (prev[itemIndex]) return prev;
-      const next = { ...prev, [itemIndex]: Array(targetsFor(itemIndex).length).fill("") };
+      const next = {
+        ...prev,
+        [itemIndex]: Array(targetsFor(itemIndex).length).fill(""),
+      };
       persist(next, checked);
       return next;
     });
@@ -179,7 +211,8 @@ export function GrammarExercise({
 
   function updateBlank(itemIndex: number, blankIndex: number, value: string) {
     setInputs((prev) => {
-      const current = prev[itemIndex] ?? Array(targetsFor(itemIndex).length).fill("");
+      const current =
+        prev[itemIndex] ?? Array(targetsFor(itemIndex).length).fill("");
       const nextValues = [...current];
       nextValues[blankIndex] = value;
       const next = { ...prev, [itemIndex]: nextValues };
@@ -206,7 +239,11 @@ export function GrammarExercise({
   const activeTargets = activeIndex !== null ? targetsFor(activeIndex) : [];
   const isChecked = activeIndex !== null && Boolean(checked[activeIndex]);
   const activeCorrect = activeIndex !== null && isCorrect(activeIndex);
-  const blankStatus = !isChecked ? "neutral" : activeCorrect ? "correct" : "incorrect";
+  const blankStatus = !isChecked
+    ? "neutral"
+    : activeCorrect
+      ? "correct"
+      : "incorrect";
   const blankClass =
     blankStatus === "correct"
       ? styles.blankCorrect
@@ -232,7 +269,11 @@ export function GrammarExercise({
       <div className={styles.exerciseDialogue}>
         <span className={styles.exerciseDialogueLabel}>Пример</span>
         <div className={styles.exerciseCues}>
-          {cueLines(block.example.cues, block.example.given, expandPairCues).map((cue, i) => (
+          {cueLines(
+            block.example.cues,
+            block.example.given,
+            expandPairCues,
+          ).map((cue, i) => (
             <p key={i} className="kr">
               {cue}
             </p>
@@ -267,7 +308,9 @@ export function GrammarExercise({
 
         {activeIndex !== null && (
           <div className={styles.exerciseAttempt}>
-            <span className={styles.exerciseDialogueLabel}>Заполните пропуски</span>
+            <span className={styles.exerciseDialogueLabel}>
+              Заполните пропуски
+            </span>
             {lines.map((segments, i) => (
               <p key={i} className="kr">
                 {segments.map((segment, j) =>
@@ -288,7 +331,9 @@ export function GrammarExercise({
                         width: `calc(${inputWidthEm(activeValues[segment.index] ?? "")}em + 14px)`,
                       }}
                       value={activeValues[segment.index] ?? ""}
-                      onChange={(e) => updateBlank(activeIndex!, segment.index, e.target.value)}
+                      onChange={(e) =>
+                        updateBlank(activeIndex!, segment.index, e.target.value)
+                      }
                     />
                   ),
                 )}
@@ -296,8 +341,18 @@ export function GrammarExercise({
             ))}
 
             {isChecked && (
-              <p className={activeCorrect ? styles.exerciseResultCorrect : styles.exerciseResultIncorrect}>
-                {activeCorrect ? "✓ Верно!" : <>✕ Неверно. Правильный ответ: {activeTargets.join(", ")}</>}
+              <p
+                className={
+                  activeCorrect
+                    ? styles.exerciseResultCorrect
+                    : styles.exerciseResultIncorrect
+                }
+              >
+                {activeCorrect ? (
+                  "✓ Верно!"
+                ) : (
+                  <>✕ Неверно. Правильный ответ: {activeTargets.join(", ")}</>
+                )}
               </p>
             )}
 
