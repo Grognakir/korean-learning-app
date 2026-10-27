@@ -97,7 +97,7 @@
   .item:hover { border-color: var(--stone); transform: translateY(-1px); }
   .item.worn { border-color: var(--blue); }
   .item.selected { box-shadow: 0 0 0 3px rgba(31,78,140,.3); }
-  .item img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .item img { width: 100%; height: 100%; object-fit: contain; }
   .item .tag {
     position: absolute; top: 6px; right: 6px; font-size: 11px; background: var(--blue); color: #fff;
     border-radius: 999px; padding: 1px 7px;
@@ -147,6 +147,7 @@
         <div class="figure idle" id="figure">
           <img id="face" src="img/base.webp" alt="Персонаж">
           <div id="layers"></div>
+          <img id="hand" src="img/hand_palm.webp" alt="">
         </div>
       </div>
     </div>
@@ -183,11 +184,11 @@ const COLORS = {
 
 // order — порядок слоёв снизу вверх; color: false — вещь не перекрашивается
 const ITEMS = {
-  pants:   { ko: "바지",   cat: "bottom", imp: "입으세요", past: "입었어요", ruNom: "брюки",   ruNotNeeded: "Брюки не нужны",   def: "green",  order: 1 },
+  pants:   { ko: "바지",   cat: "bottom", imp: "입으세요", past: "입었어요", ruNom: "брюки",   ruNotNeeded: "Брюки не нужны",   def: "green",  order: 2 },
   shirt:   { ko: "셔츠",   cat: "top",    imp: "입으세요", past: "입었어요", ruNom: "рубашка", ruNotNeeded: "Рубашка не нужна", def: "yellow", order: 2 },
   tie:     { ko: "넥타이", cat: "acc",    imp: "매세요",  past: "맸어요",  ruNom: "галстук", ruNotNeeded: "Галстук не нужен", def: "yellow", order: 3 },
   jacket:  { ko: "재킷",   cat: "top",    imp: "입으세요", past: "입었어요", ruNom: "пиджак",  ruNotNeeded: "Пиджак не нужен",  def: "brown",  order: 4 },
-  shoes:   { ko: "구두",   cat: "shoes",  imp: "신으세요", past: "신었어요", ruNom: "туфли",   ruNotNeeded: "Туфли не нужны",   def: "red",    order: 5 },
+  shoes:   { ko: "구두",   cat: "shoes",  imp: "신으세요", past: "신었어요", ruNom: "туфли",   ruNotNeeded: "Туфли не нужны",   def: "red",    order: 1 },
   glasses: { ko: "안경",   cat: "acc",    imp: "쓰세요",  past: "썼어요",  ruNom: "очки",    ruNotNeeded: "Очки не нужны",    def: null,     order: 6 },
 };
 
@@ -239,6 +240,9 @@ const IMG = {};
 function load(name) {
   return new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = `img/${name}.webp`; IMG[name] = i; });
 }
+function loadIcon(name) {
+  return new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = `img/icons/${name}.webp`; IMG['icon_' + name] = i; });
+}
 const BOX = {};
 function bbox(img) {
   const c = document.createElement("canvas"); c.width = img.width; c.height = img.height;
@@ -250,8 +254,8 @@ function bbox(img) {
   }
   return [x0, y0, x1 - x0 + 2, y1 - y0 + 2];
 }
-function tinted(id, color, crop) {
-  const img = IMG[id]; const [sx, sy, sw, sh] = crop ? BOX[id] : [0, 0, img.width, img.height];
+function tinted(id, color, icon) {
+  const img = icon ? IMG['icon_' + id] : IMG[id]; const [sx, sy, sw, sh] = [0, 0, img.width, img.height];
   const c = document.createElement("canvas"); c.width = sw; c.height = sh;
   const x = c.getContext("2d");
   x.drawImage(img, sx, sy, sw, sh, 0, 0, sw, sh);
@@ -388,8 +392,7 @@ $("ruToggle").addEventListener("click", e => {
 });
 $("next").addEventListener("click", () => start((sitIndex + 1) % SITUATIONS.length));
 
-Promise.all([...FRAMES, ...Object.keys(ITEMS)].map(load)).then(() => {
-  Object.keys(ITEMS).forEach(id => { BOX[id] = bbox(IMG[id]); });
+Promise.all([...FRAMES, "hand_palm", ...Object.keys(ITEMS)].map(load).concat(Object.keys(ITEMS).map(loadIcon))).then(() => {
   start(0); blinkLoop();
 });
 </script>
