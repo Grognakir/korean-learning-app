@@ -1,4 +1,4 @@
-"""Cut cumulative clothing-stack masks and build an eight-outfit contact sheet.
+"""Cut clothing masks and catalog icons and build a diagnostic contact sheet.
 
 Run from any directory with Python, Pillow and numpy installed.
 """
@@ -14,6 +14,7 @@ ART = ROOT / "public/images/clothing-game"
 STACK = ART / "test2/stack"
 MASKS = ART / "test2/masks"
 LAYERS = ART / "test2/layers"
+ICONS = ART / "test2/icons"
 SIZE = (1024, 1536)
 ITEMS = ("shoes", "pants", "shirt", "tie", "jacket", "glasses")
 STAGES = dict(pants=1, shoes=2, shirt=3, tie=4, jacket=5, glasses=6)
@@ -135,6 +136,11 @@ def edge_colors(rgb, mask, alpha):
 def save_layer(name, source, mask, grayscale=False):
     alpha = smooth_alpha(mask)
     colors = edge_colors(source, mask, alpha)
+    if name in ("hand_front", "hand_palm"):
+        values = colors.astype(np.int16)
+        warm = (values[:, :, 0] > values[:, :, 1] + 18) & (
+            values[:, :, 1] > values[:, :, 2] + 10)
+        colors[(alpha > 0) & ~warm] = 18
     if grayscale:
         gray = np.rint(colors @ np.array([0.299, 0.587, 0.114])).astype(np.uint8)
         colors = np.repeat(gray[:, :, None], 3, axis=2)
@@ -181,10 +187,10 @@ def build_preview(layers):
         dict(jacket="#2F3B52"),
         dict(glasses=None),
         dict(pants="#8B5A33", shirt="#F1C232", shoes="#FFFFFF"),
-        dict(pants="#3A3A40", shirt="#9EC5E8", tie="#D9443B",
+        dict(pants="#3A3A40", shirt="#F1C232", tie="#D9443B",
              jacket="#1F2F5C", shoes="#5A3A22", glasses=None),
     )
-    preview = Image.new("RGB", (4096, 3072), "#FAF6EE")
+    preview = Image.new("RGB", (4096, 4608), "#FAF6EE")
     for index, outfit in enumerate(outfits):
         frame = Image.new("RGBA", SIZE, "#FAF6EE")
         frame.alpha_composite(Image.fromarray(layers["base"]))
@@ -193,8 +199,51 @@ def build_preview(layers):
                 frame.alpha_composite(tint(layers[item], outfit[item]))
         frame.alpha_composite(Image.fromarray(layers["hand_palm"]))
         preview.paste(frame.convert("RGB"), ((index % 4) * 1024, (index // 4) * 1536))
+    frame = Image.new("RGBA", SIZE, "#FAF6EE")
+    frame.alpha_composite(Image.fromarray(layers["base"]))
+    outfit = dict(pants="#3A3A40", shirt="#F1C232", tie="#D9443B",
+                  jacket="#1F2F5C", shoes="#5A3A22", glasses=None)
+    for item in ITEMS:
+        frame.alpha_composite(tint(layers[item], outfit[item]))
+    frame.alpha_composite(Image.fromarray(layers["hand_palm"]))
+    close = frame.crop((490, 555, 705, 695)).resize((1290, 840), Image.Resampling.LANCZOS)
+    preview.paste(close.convert("RGB"), (32, 3140))
+    shirt = Image.new("RGBA", SIZE, "#FAF6EE")
+    shirt.alpha_composite(Image.fromarray(layers["base"]))
+    shirt.alpha_composite(tint(layers["pants"], "#8B5A33"))
+    shirt.alpha_composite(tint(layers["shirt"], "#F1C232"))
+    shirt.alpha_composite(Image.fromarray(layers["hand_palm"]))
+    detail = shirt.crop((340, 570, 680, 745)).resize((1836, 945), Image.Resampling.LANCZOS)
+    preview.paste(detail.convert("RGB"), (1500, 3100))
+    colors = dict(shirt="#F1C232", pants="#3F6FC6", tie="#D9443B",
+                  jacket="#4F9A5A", shoes="#8B5A33", glasses=None)
+    for i, name in enumerate(("shirt", "pants", "tie", "jacket", "shoes", "glasses")):
+        icon = np.array(Image.open(ICONS / "cut" / f"{name}.png").convert("RGBA"))
+        preview.paste(tint(icon, colors[name]), (128 + i * 640, 4096), tint(icon, colors[name]))
     preview.save(ART / "test2/preview.png", optimize=True)
-    print("OK preview: 4096x3072, eight outfits, shoes below pants, palm on top")
+    print("OK preview: eight outfits, yellow-shirt hand/hem closeups, six recolored icons")
+
+
+def cut_icons():
+    (ICONS / "cut").mkdir(parents=True, exist_ok=True)
+    for name in ITEMS:
+        source = np.array(Image.open(ICONS / f"{name}.png").convert("RGB"))
+        marked = np.array(Image.open(ICONS / f"{name}_mask.png").convert("RGB"))
+        assert source.shape == marked.shape == (512, 512, 3)
+        mask = (marked == MAGENTA).all(axis=2)
+        assert mask.any() and np.array_equal(source[~mask], marked[~mask])
+        assert (source[:8] == 255).all() and (source[-8:] == 255).all()
+        assert (source[:, :8] == 255).all() and (source[:, -8:] == 255).all()
+        alpha = smooth_alpha(mask)
+        colors = edge_colors(source, mask, alpha)
+        colors[(alpha > 0) & ~erode(mask)] = 18
+        if name != "glasses":
+            gray = np.rint(colors @ np.array([0.299, 0.587, 0.114])).astype(np.uint8)
+            colors = np.repeat(gray[:, :, None], 3, axis=2)
+        colors[alpha == 0] = 0
+        Image.fromarray(np.dstack((colors, alpha))).save(ICONS / "cut" / f"{name}.png", optimize=True)
+        assert not colors[alpha == 0].any()
+        print(f"OK icon {name}: RGB/mask 512x512 white background; RGBA cut; transparent RGB=0")
 
 
 def validate_coverage(layers, base):
@@ -240,6 +289,7 @@ def main():
         complete = complete_clothing(name, source, mask, palm)
         layers[name] = save_layer(name, complete, mask, grayscale=name != "glasses")
     validate_coverage(layers, base)
+    cut_icons()
     build_preview(layers)
 
 
