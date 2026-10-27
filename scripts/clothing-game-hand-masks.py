@@ -1,4 +1,4 @@
-# Слои вещей по ручной обводке (заливка #FF00FF поверх картинки вещи из test/clothes).
+# Слои вещей по ручной обводке (заливка #FF00FF поверх картинки вещи; картинка — в SOURCES).
 # Обводка = силуэт вещи, берётся как есть, ничего не обрезается. Внутри силуэта:
 # пиксели вещи (белые/серые) берутся из картинки; где под обводкой не вещь (кожа, фон) —
 # дорисовывается ткань; по краю силуэта, где нет своего контура, рисуется контур.
@@ -12,11 +12,13 @@ from scipy import ndimage as nd
 ART = Path("public/images/clothing-game")
 FABRIC = 236   # светлый тон дорисованной ткани (белая вещь до перекраски)
 INK = 22       # цвет контура
+# на какой картинке сделана обводка (с неё же берётся рисунок вещи)
+SOURCES = dict(pants="test2/stack/stack_1.png")
 
 for name in sys.argv[1:]:
     painted_path = sorted((ART / "test2/hand-masks").glob(f"{name}_mask.*"))[0]
     painted = np.array(Image.open(painted_path).convert("RGB")).astype(np.int16)
-    src = np.array(Image.open(ART / f"test/clothes/{name}.png").convert("RGB")).astype(np.int16)
+    src = np.array(Image.open(ART / SOURCES.get(name, f"test/clothes/{name}.png")).convert("RGB")).astype(np.int16)
     mag = (painted[..., 0] > 190) & (painted[..., 1] < 100) & (painted[..., 2] > 190)
     mag = nd.binary_fill_holes(nd.binary_closing(mag, iterations=2))
     # контур вещи прямо за краем обводки тоже входит в вещь
