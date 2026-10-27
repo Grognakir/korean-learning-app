@@ -121,6 +121,26 @@
   @keyframes hop { 40% { transform: translateY(-6px); } }
   .jump { animation: jump .6s ease-out 2; }
   @keyframes jump { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-26px); } }
+  /* Телефон: персонаж закреплён сверху, магазин прокручивается под ним */
+  @media (max-width: 760px) {
+    .wrap { padding: 10px 12px 24px; }
+    .top { margin-bottom: 8px; }
+    .top h1 { font-size: 17px; }
+    .top h1 small { display: none; }
+    .btn { padding: 6px 10px; font-size: 13px; }
+    .situation { padding: 10px 12px; margin-bottom: 8px; }
+    .situation .intro { font-size: 15px; }
+    .reqs { margin-top: 6px; gap: 3px; }
+    .reqs li { font-size: 14px; }
+    .main { gap: 8px; }
+    .stage { position: sticky; top: 0; z-index: 5; padding: 50px 8px 4px; border-radius: 0 0 16px 16px; }
+    .figure { height: 34vh; }
+    .bubble { font-size: 13px; padding: 6px 10px; top: 6px; left: 6px; right: 6px; }
+    .items { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 8px; }
+    .item { padding: 6px; }
+    .sw { width: 30px; height: 30px; }
+    .swatches { gap: 8px; }
+  }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
 </style>
 </head>
