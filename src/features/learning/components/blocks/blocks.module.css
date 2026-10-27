@@ -505,7 +505,7 @@
 .vocabTranslation {
   position: absolute;
   left: 50%;
-  bottom: calc(100% + var(--chip-tip-gap, 6px));
+  bottom: calc(100% + var(--chip-tip-gap, 1px));
   transform: translateX(-50%);
   z-index: 3;
   width: max-content;
@@ -550,7 +550,7 @@
   border-radius: 0;
   text-decoration: underline;
   text-decoration-style: var(--chip-underline-style, solid);
-  text-underline-offset: var(--chip-underline-offset, 5px);
+  text-underline-offset: var(--chip-underline-offset, 4px);
   text-decoration-color: var(--chip-underline-color, currentColor);
 }
 
@@ -1924,18 +1924,13 @@
   pointer-events: none;
 }
 
-/* Чипы-переводы в пунктах упражнений: в покое обычный текст, при наведении
-   (и при касании — focus-within) появляется тонкая серая линия вплотную к
-   буквам: сплошное подчёркивание упиралось в рамку пункта. В тексте уроков
-   и грамматике чипы остаются с подчёркиванием. */
+/* Чипы-переводы в пунктах упражнений: тонкая серая линия вплотную к буквам
+   видна всегда (по ней понятно, у какого слова есть перевод) и при
+   наведении не меняется. Обычное сплошное подчёркивание упиралось в рамку
+   пункта. В тексте уроков и грамматике — своё подчёркивание. */
 .exerciseItems .inlineVocab .vocabKo {
-  text-decoration: none;
-}
-
-.exerciseItems .inlineVocab:hover .vocabKo,
-.exerciseItems .inlineVocab:focus-within .vocabKo {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
-  text-decoration-color: color-mix(in srgb, var(--stone) 80%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--stone) 70%, transparent);
 }

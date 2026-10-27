@@ -31,6 +31,6 @@ export function clampTooltipToViewport(tooltip: HTMLElement) {
   }
   if (boundary && rect.top < bounds.top) {
     tooltip.style.bottom = "auto";
-    tooltip.style.top = "calc(100% + var(--chip-tip-gap, 6px))";
+    tooltip.style.top = "calc(100% + var(--chip-tip-gap, 1px))";
   }
 }
