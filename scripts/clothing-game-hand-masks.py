@@ -22,13 +22,17 @@ for name in sys.argv[1:]:
     mag = nd.binary_fill_holes(nd.binary_closing(mag, iterations=2))
     # контур вещи прямо за краем обводки тоже входит в вещь
     lum = src @ np.array([0.299, 0.587, 0.114])
-    ring = nd.binary_dilation(mag, iterations=3) & ~mag
-    shape = mag | (ring & (lum < 70))
+    # контур целиком: тёмные пиксели в полосе до 7 px за краем обводки, связанные с ней
+    ring = nd.binary_dilation(mag, iterations=7) & ~mag
+    line = ring & (lum < 110)
+    lab, _ = nd.label(line | mag)
+    shape = np.isin(lab, np.unique(lab[mag]))
+    shape = nd.binary_closing(shape, iterations=2) | mag
     mx, mn = src.max(2), src.min(2)
-    cloth = ((mx - mn) / np.maximum(mx, 1) < 0.15) & (mn < 250)   # белая/серая вещь и контур
+    cloth = (((mx - mn) / np.maximum(mx, 1) < 0.15) & (mn < 250)) | (mx < 110)   # белая/серая вещь и контур
     out = np.where(cloth, lum, FABRIC).astype(np.float32)
     edge = shape & ~nd.binary_erosion(shape, iterations=3)
-    has_line = nd.binary_dilation(lum < 70, iterations=1)
+    has_line = nd.binary_dilation(lum < 70, iterations=4)
     out[edge & ~has_line] = INK
     alpha = (nd.gaussian_filter(shape.astype(np.float32), 0.6) * 255).astype(np.uint8)
     o = np.dstack([out, out, out]).clip(0, 255).astype(np.uint8)
