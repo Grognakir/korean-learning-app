@@ -1924,13 +1924,18 @@
   pointer-events: none;
 }
 
-/* Чипы-переводы в пунктах упражнений: фон-маркер вместо подчёркивания
-   (линия упиралась в рамку пункта). Фон выходит за буквы, но не раздвигает
-   строку. В тексте уроков и грамматике чипы остаются с подчёркиванием. */
+/* Чипы-переводы в пунктах упражнений: в покое обычный текст, при наведении
+   (и при касании — focus-within) появляется тонкая серая линия вплотную к
+   буквам: сплошное подчёркивание упиралось в рамку пункта. В тексте уроков
+   и грамматике чипы остаются с подчёркиванием. */
 .exerciseItems .inlineVocab .vocabKo {
   text-decoration: none;
-  background: color-mix(in srgb, var(--stone) 22%, transparent);
-  border-radius: 4px;
-  padding: 0 2px;
-  margin: 0 -2px;
+}
+
+.exerciseItems .inlineVocab:hover .vocabKo,
+.exerciseItems .inlineVocab:focus-within .vocabKo {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: color-mix(in srgb, var(--stone) 80%, transparent);
 }
