@@ -42,6 +42,12 @@ def save(mask, name):
 for lower, upper in PAIRS:
     stack = rgb(ROOT / "stack" / f"stack_{STAGE[upper]}.png")
     band = nd.binary_dilation(alpha(upper), iterations=BAND)
+    if lower == "base" and upper != "shoes":
+        # тело под вещью скрываем по форме самой вещи (+1 px, чтобы контур тела не выглядывал);
+        # стопки тут не годятся: слой вещи может быть нарисован по ручной обводке
+        save(~nd.binary_dilation(alpha(upper), iterations=1), f"{lower}__{upper}")
+        print("ok", lower, "under", upper, "(by item shape)")
+        continue
     mx, mn = stack.max(2), stack.min(2)
     # нижний слой скрыт там, где на стопке белое: сама верхняя вещь или пустой фон.
     # Служебные цвета нижних вещей и кожа никогда не белые, поэтому видимые части
