@@ -165,7 +165,7 @@
       <div class="bubble empty" id="bubble"><div class="kr" id="bKo"></div><div class="ru" id="bRu"></div></div>
       <div id="react">
         <div class="figure idle" id="figure">
-          <img id="face" src="img/base.webp" alt="Персонаж">
+          <canvas id="face" width="512" height="768" aria-label="Персонаж"></canvas>
           <div id="layers"></div>
           <img id="hand" src="img/hand_palm.webp" alt="">
         </div>
@@ -263,16 +263,20 @@ function load(name) {
 function loadIcon(name) {
   return new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = `img/icons/${name}.webp`; IMG['icon_' + name] = i; });
 }
-const BOX = {};
-function bbox(img) {
-  const c = document.createElement("canvas"); c.width = img.width; c.height = img.height;
-  const x = c.getContext("2d"); x.drawImage(img, 0, 0);
-  const d = x.getImageData(0, 0, c.width, c.height).data;
-  let x0 = c.width, y0 = c.height, x1 = 0, y1 = 0;
-  for (let y = 0; y < c.height; y += 2) for (let xx = 0; xx < c.width; xx += 2) {
-    if (d[(y * c.width + xx) * 4 + 3] > 40) { if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; if (y < y0) y0 = y; if (y > y1) y1 = y; }
-  }
-  return [x0, y0, x1 - x0 + 2, y1 - y0 + 2];
+// маски видимости «нижний слой — верхняя вещь»: что остаётся видно от нижнего слоя,
+// когда сверху надета вещь (замена, а не наложение)
+const CLIPS = ["base__pants", "base__shoes", "base__shirt", "base__tie", "base__jacket",
+  "pants__shirt", "pants__jacket", "shirt__tie", "shirt__jacket", "tie__jacket"];
+function loadClip(name) {
+  return new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = `img/clip/${name}.webp`; IMG["clip_" + name] = i; });
+}
+function applyClips(ctx, lower) {
+  ctx.globalCompositeOperation = "destination-in";
+  Object.keys(worn).forEach(upper => {
+    const m = IMG[`clip_${lower}__${upper}`];
+    if (m) ctx.drawImage(m, 0, 0, ctx.canvas.width, ctx.canvas.height);
+  });
+  ctx.globalCompositeOperation = "source-over";
 }
 function tinted(id, color, icon) {
   const img = icon ? IMG['icon_' + id] : IMG[id]; const [sx, sy, sw, sh] = [0, 0, img.width, img.height];
@@ -283,19 +287,26 @@ function tinted(id, color, icon) {
     x.globalCompositeOperation = "multiply"; x.fillStyle = COLORS[color].hex; x.fillRect(0, 0, sw, sh);
     x.globalCompositeOperation = "destination-in"; x.drawImage(img, sx, sy, sw, sh, 0, 0, sw, sh);
   }
+  if (!icon) applyClips(x, id);
   return c;
 }
 
-let sitIndex = 0, sit, worn, selected, tab = "top", won, faceTimer;
+let sitIndex = 0, sit, worn = {}, selected, tab = "top", won, faceTimer, face = "base";
 
+function drawFace() {
+  const x = $("face").getContext("2d");
+  x.clearRect(0, 0, 512, 768);
+  x.drawImage(IMG[face], 0, 0, 512, 768);
+  applyClips(x, "base");
+}
 function setFace(name, ms) {
   clearTimeout(faceTimer);
-  $("face").src = IMG[name].src;
-  if (ms) faceTimer = setTimeout(() => { $("face").src = IMG.base.src; }, ms);
+  face = name; drawFace();
+  if (ms) faceTimer = setTimeout(() => { face = "base"; drawFace(); }, ms);
 }
 function blinkLoop() {
   setTimeout(() => {
-    if ($("face").src.endsWith("img/base.webp")) { setFace("base_blink", 140); }
+    if (face === "base") { setFace("base_blink", 140); }
     blinkLoop();
   }, 2600 + Math.random() * 2600);
 }
@@ -340,6 +351,7 @@ function render() {
 }
 
 function drawLayers(newId) {
+  drawFace();
   const box = $("layers"); box.innerHTML = "";
   Object.keys(worn).sort((a, b) => ITEMS[a].order - ITEMS[b].order).forEach(id => {
     const c = tinted(id, worn[id]);
@@ -412,7 +424,7 @@ $("ruToggle").addEventListener("click", e => {
 });
 $("next").addEventListener("click", () => start((sitIndex + 1) % SITUATIONS.length));
 
-Promise.all([...FRAMES, "hand_palm", ...Object.keys(ITEMS)].map(load).concat(Object.keys(ITEMS).map(loadIcon))).then(() => {
+Promise.all([...FRAMES, "hand_palm", ...Object.keys(ITEMS)].map(load).concat(Object.keys(ITEMS).map(loadIcon), CLIPS.map(loadClip))).then(() => {
   start(0); blinkLoop();
 });
 </script>
