@@ -3,15 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Примерочная — макет</title>
+<title>Примерочная</title>
 <style>
   :root {
     --paper: #faf6ee; --paper-2: #f1ebdc; --ink: #1c1b19; --ink-soft: #57534a;
     --stone: #8a8478; --line: #ddd5c2; --red: #c23b34; --blue: #1f4e8c;
     --green: #4c7a5e; --amber: #b4802a;
     --card-shadow: 0 1px 2px rgba(28,27,25,.06), 0 8px 24px rgba(28,27,25,.08);
+    --surface: #fff; --bad-line: #e6b3ae; --bad-bg: #fdf3f2; --good-line: #b5cfbe; --good-bg: #f2f8f4;
+    --win-bg: #fdf6e6; --worn-bg: #eef3fa; --floor: #e9dfc8; --stage-top: #fdfaf3;
     --fur: #e8a15c; --fur-light: #f7ddbb; --outline: #5b3a1e;
   }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #1b1a18; --paper-2: #24221f; --ink: #ece7dc; --ink-soft: #b9b2a4; --stone: #8f897d; --line: #3a3732;
+    --blue: #7ea6e0; --green: #6fa383; --surface: #26241f; --bad-line: #7a3b36; --bad-bg: #3a2422; --good-line: #3f6a50;
+    --good-bg: #1f2f25; --win-bg: #3a3020; --worn-bg: #22304a; --floor: #3a352b; --stage-top: #2a2723; } }
+  :root[data-theme="dark"] { --paper: #1b1a18; --paper-2: #24221f; --ink: #ece7dc; --ink-soft: #b9b2a4; --stone: #8f897d; --line: #3a3732;
+    --blue: #7ea6e0; --green: #6fa383; --surface: #26241f; --bad-line: #7a3b36; --bad-bg: #3a2422; --good-line: #3f6a50;
+    --good-bg: #1f2f25; --win-bg: #3a3020; --worn-bg: #22304a; --floor: #3a352b; --stage-top: #2a2723; }
   * { box-sizing: border-box; }
   body {
     margin: 0; background: var(--paper); color: var(--ink);
@@ -24,7 +32,7 @@
   .top h1 { font-size: 20px; margin: 0; }
   .top h1 small { color: var(--stone); font-weight: 400; font-size: 14px; margin-left: 6px; }
   .btn {
-    font: inherit; font-size: 14px; border: 1px solid var(--line); background: #fff; color: var(--ink);
+    font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
     border-radius: 12px; padding: 7px 12px; cursor: pointer;
   }
   .btn:hover { border-color: var(--stone); }
@@ -35,7 +43,7 @@
   body.showRu .ru { display: block; }
 
   .situation {
-    background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--card-shadow);
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--card-shadow);
     padding: 14px 16px; margin-bottom: 14px;
   }
   .situation .intro { font-size: 17px; line-height: 1.5; }
@@ -53,21 +61,21 @@
 
   .stage {
     position: relative; border-radius: 16px; border: 1px solid var(--line); overflow: hidden;
-    background: radial-gradient(ellipse at 50% 92%, #e9dfc8 0 26%, transparent 27%), linear-gradient(#fdfaf3, var(--paper-2));
+    background: radial-gradient(ellipse at 50% 92%, var(--floor) 0 26%, transparent 27%), linear-gradient(var(--stage-top), var(--paper-2));
     min-height: 420px; display: grid; place-items: end center; padding-top: 70px;
   }
   .stage svg.char { width: min(260px, 70%); height: auto; overflow: visible; }
   .bubble {
-    position: absolute; top: 12px; left: 12px; right: 12px; background: #fff; border: 1px solid var(--line);
+    position: absolute; top: 12px; left: 12px; right: 12px; background: var(--surface); border: 1px solid var(--line);
     border-radius: 14px; padding: 9px 12px; font-size: 15px; line-height: 1.4; box-shadow: var(--card-shadow);
     transition: opacity .2s, transform .2s;
   }
   .bubble.empty { opacity: 0; transform: translateY(-6px); }
-  .bubble.bad { border-color: #e6b3ae; background: #fdf3f2; }
-  .bubble.good { border-color: #b5cfbe; background: #f2f8f4; }
-  .bubble.win { border-color: var(--amber); background: #fdf6e6; font-weight: 600; }
+  .bubble.bad { border-color: var(--bad-line); background: var(--bad-bg); }
+  .bubble.good { border-color: var(--good-line); background: var(--good-bg); }
+  .bubble.win { border-color: var(--amber); background: var(--win-bg); font-weight: 600; }
 
-  .shop { background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--card-shadow); padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+  .shop { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--card-shadow); padding: 12px; display: flex; flex-direction: column; gap: 12px; }
   .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
   .tab { font: inherit; border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 6px 14px; cursor: pointer; font-size: 15px; }
   .tab[aria-selected="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -80,7 +88,7 @@
     aspect-ratio: 1; display: grid; place-items: center; cursor: pointer; padding: 10px; transition: .15s;
   }
   .item:hover { border-color: var(--stone); transform: translateY(-1px); }
-  .item.worn { border-color: var(--blue); background: #eef3fa; }
+  .item.worn { border-color: var(--blue); background: var(--worn-bg); }
   .item.selected { box-shadow: 0 0 0 3px rgba(31,78,140,.25); }
   .item svg { width: 100%; height: 100%; }
   .item .tag {
