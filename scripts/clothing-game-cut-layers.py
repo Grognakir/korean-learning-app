@@ -1,4 +1,4 @@
-"""Cut approved clothing masks and build a four-outfit contact sheet.
+"""Cut cumulative clothing-stack masks and build an eight-outfit contact sheet.
 
 Run from any directory with Python, Pillow and numpy installed.
 """
@@ -11,11 +11,12 @@ from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / "public/images/clothing-game"
-SOURCES = ART / "test/clothes"
+STACK = ART / "test2/stack"
 MASKS = ART / "test2/masks"
 LAYERS = ART / "test2/layers"
 SIZE = (1024, 1536)
-ITEMS = ("pants", "shirt", "tie", "jacket", "shoes", "glasses")
+ITEMS = ("shoes", "pants", "shirt", "tie", "jacket", "glasses")
+STAGES = dict(pants=1, shoes=2, shirt=3, tie=4, jacket=5, glasses=6)
 EXPRESSIONS = ("base", "base_blink", "base_happy", "base_oops")
 MAGENTA = np.array([255, 0, 255], dtype=np.int16)
 
@@ -25,6 +26,80 @@ def read_rgb(path):
     if image.size != SIZE:
         raise ValueError(f"Unexpected size: {path}: {image.size}")
     return np.array(image)
+
+
+def dilate(mask, pixels=1):
+    return np.array(Image.fromarray(mask.astype(np.uint8) * 255).filter(
+        ImageFilter.MaxFilter(2 * pixels + 1))) > 0
+
+
+def erode(mask, pixels=1):
+    return np.array(Image.fromarray(mask.astype(np.uint8) * 255).filter(
+        ImageFilter.MinFilter(2 * pixels + 1))) > 0
+
+
+def exterior_background(source):
+    white = source.min(axis=2) >= 248
+    image = Image.fromarray(white.astype(np.uint8) * 255).copy()
+    for seed in ((0, 0), (1023, 0), (0, 1535), (1023, 1535), (650, 530)):
+        if image.getpixel(seed) == 255:
+            ImageDraw.floodfill(image, seed, 128)
+    return np.array(image) == 128
+
+
+def read_mask(name, source):
+    marked = read_rgb(MASKS / f"{name}_mask.png")
+    mask = np.abs(marked.astype(np.int16) - MAGENTA).max(axis=2) <= 40
+    if not mask.any():
+        raise ValueError(f"Empty mask: {name}")
+    if mask[0].any() or mask[-1].any() or mask[:, 0].any() or mask[:, -1].any():
+        raise ValueError(f"Mask includes the canvas border: {name}")
+    if not np.array_equal(marked[~mask], source[~mask]):
+        raise ValueError(f"Pixels outside the mask changed: {name}")
+    if not (marked[mask] == MAGENTA).all():
+        raise ValueError(f"Mask fill must be flat #FF00FF: {name}")
+    print(f"OK mask {name}: flat #FF00FF; outside pixels identical")
+    return mask
+
+
+def complete_clothing(name, source, mask, palm):
+    if name == "glasses":
+        return source
+    colors = source.copy()
+    values = source.astype(np.int16)
+    warm = (values[:, :, 0] > values[:, :, 1] + 18) & (
+        values[:, :, 1] > values[:, :, 2] + 10)
+    hand_region = np.zeros(mask.shape, dtype=bool)
+    hand_region[568:685, 503:675] = True
+    hidden = mask & dilate((warm & hand_region) | palm, 4)
+    if name not in ("pants", "shirt", "jacket"):
+        hidden[:] = False
+    colors[hidden] = 255
+    colors[hidden & ~erode(mask)] = 20
+    background = exterior_background(source)
+    neutral = values.max(axis=2) - values.min(axis=2) < 25
+    invalid = mask & (background | ~neutral) & ~hidden
+    known = mask & ~invalid
+    propagation = dilate(mask, 4)
+    for _ in range(40):
+        if not (mask & ~known).any():
+            break
+        missing = propagation & ~known
+        previous = known.copy()
+        for dy, dx in ((0, 1), (0, -1), (1, 0), (-1, 0),
+                       (1, 1), (1, -1), (-1, 1), (-1, -1)):
+            take = np.roll(previous, (dy, dx), axis=(0, 1)) & missing
+            shifted = np.roll(colors, (dy, dx), axis=(0, 1))
+            colors[take] = shifted[take]
+            known[take] = True
+            missing[take] = False
+    if (mask & ~known).any():
+        raise ValueError(f"Unresolved hidden fabric: {name}")
+    if name != "glasses":
+        colors[mask & ~erode(mask, 2)] = 20
+    colors[~mask] = source[~mask]
+    Image.fromarray(colors).save(STACK / f"stack_{STAGES[name]}_cloth.png", optimize=True)
+    return colors
 
 
 def smooth_alpha(mask):
@@ -99,23 +174,54 @@ def tint(layer, color):
 
 def build_preview(layers):
     outfits = (
-        dict(pants="#3A3A40", shirt="#FFFFFF", tie="#D9443B",
-             jacket="#3A3A40", shoes="#5A3A22", glasses=None),
-        dict(pants="#9B9A9F", shirt="#9EC5E8", tie="#1F2F5C",
-             jacket="#1F2F5C", shoes="#2E2D31"),
-        dict(pants="#8B5A33", shirt="#F1C232", tie="#4F9A5A", shoes="#FFFFFF"),
-        dict(pants="#3F6FC6", shirt="#F29BB5", glasses=None),
+        dict(pants="#3F6FC6"),
+        dict(shoes="#6B4A2B"),
+        dict(shirt="#F29BB5"),
+        dict(tie="#4F9A5A"),
+        dict(jacket="#2F3B52"),
+        dict(glasses=None),
+        dict(pants="#8B5A33", shirt="#F1C232", shoes="#FFFFFF"),
+        dict(pants="#3A3A40", shirt="#9EC5E8", tie="#D9443B",
+             jacket="#1F2F5C", shoes="#5A3A22", glasses=None),
     )
-    preview = Image.new("RGB", (4096, 1536), "#FAF6EE")
+    preview = Image.new("RGB", (4096, 3072), "#FAF6EE")
     for index, outfit in enumerate(outfits):
         frame = Image.new("RGBA", SIZE, "#FAF6EE")
         frame.alpha_composite(Image.fromarray(layers["base"]))
         for item in ITEMS:
             if item in outfit:
                 frame.alpha_composite(tint(layers[item], outfit[item]))
-        preview.paste(frame.convert("RGB"), (index * 1024, 0))
+        frame.alpha_composite(Image.fromarray(layers["hand_palm"]))
+        preview.paste(frame.convert("RGB"), ((index % 4) * 1024, (index // 4) * 1536))
     preview.save(ART / "test2/preview.png", optimize=True)
-    print("OK preview: 4096x1536, four outfits, multiply colors, requested layer order")
+    print("OK preview: 4096x3072, eight outfits, shoes below pants, palm on top")
+
+
+def validate_coverage(layers, base):
+    values = base.astype(np.int16)
+    skin = (values[:, :, 0] > values[:, :, 1] + 18) & (
+        values[:, :, 1] > values[:, :, 2] + 10)
+    alpha = {name: image[:, :, 3].astype(float) / 255 for name, image in layers.items()}
+    ankles = np.zeros(skin.shape, dtype=bool)
+    ankles[1310:1490, 350:812] = True
+    exposed = (1 - alpha["pants"]) * (1 - alpha["shoes"])
+    if (skin & ankles & (exposed > 0.02)).any():
+        raise ValueError("Skin exposed at the trousers/shoes join")
+    shoulders = np.zeros(skin.shape, dtype=bool)
+    shoulders[285:570, 305:710] = True
+    if (skin & shoulders & (alpha["shirt"] < 0.98)).any():
+        raise ValueError("Body exposed through the shirt silhouette")
+    for name in ("pants", "shirt", "jacket"):
+        if alpha[name][625, 550] != 1:
+            raise ValueError(f"Hand-shaped hole in {name}")
+    for x in (270, 285, 300):
+        shirt_end = np.where(alpha["shirt"][710:790, x] > 0.5)[0].max()
+        jacket_end = np.where(alpha["jacket"][710:790, x] > 0.5)[0].max()
+        if not 8 <= shirt_end - jacket_end <= 12:
+            raise ValueError(f"Uneven hanging cuff at x={x}")
+    if not alpha["hand_front"][550, 730] or alpha["hand_palm"][550, 730]:
+        raise ValueError("Forearm/palm overlay separation is invalid")
+    print("OK coverage: no skin at joins; complete hidden fabric; cuff=8–12px; separate palm overlay")
 
 
 def main():
@@ -125,20 +231,15 @@ def main():
     layers = {}
     for name in EXPRESSIONS:
         layers[name] = save_layer(name, read_rgb(ART / f"test2/{name}.png"), silhouette)
+    palm = read_mask("hand_palm", base)
+    for name in ("hand_front", "hand_palm"):
+        layers[name] = save_layer(name, base, read_mask(name, base))
     for name in ITEMS:
-        source = read_rgb(SOURCES / f"{name}.png")
-        marked = read_rgb(MASKS / f"{name}_mask.png")
-        mask = np.abs(marked.astype(np.int16) - MAGENTA).max(axis=2) <= 40
-        if not mask.any():
-            raise ValueError(f"Empty mask: {name}")
-        if mask[0].any() or mask[-1].any() or mask[:, 0].any() or mask[:, -1].any():
-            raise ValueError(f"Mask includes the canvas border: {name}")
-        if not np.array_equal(marked[~mask], source[~mask]):
-            raise ValueError(f"Pixels outside the mask changed: {name}")
-        if not (marked[mask] == MAGENTA).all():
-            raise ValueError(f"Mask fill must be flat #FF00FF: {name}")
-        print(f"OK mask {name}: flat #FF00FF; outside pixels identical")
-        layers[name] = save_layer(name, source, mask, grayscale=name != "glasses")
+        source = read_rgb(STACK / f"stack_{STAGES[name]}.png")
+        mask = read_mask(name, source)
+        complete = complete_clothing(name, source, mask, palm)
+        layers[name] = save_layer(name, complete, mask, grayscale=name != "glasses")
+    validate_coverage(layers, base)
     build_preview(layers)
 
 
