@@ -7,8 +7,9 @@ import numpy as np
 from PIL import Image
 from scipy import ndimage as nd
 
-ROOT = Path("public/images/clothing-game/test2")
-OUT = ROOT / "clip"
+ROOT = Path("public/images/clothing-game/test2")  # стопки Codex
+PROD = Path("public/images/clothing-game/prod")
+OUT = PROD / "clip"
 OUT.mkdir(exist_ok=True)
 
 # в каком stack_N вещь надета впервые
@@ -28,7 +29,7 @@ def hexrgb(h):
 
 
 def alpha(name):
-    return np.array(Image.open(ROOT / "layers" / f"{name}.png"))[..., 3] > 127
+    return np.array(Image.open(PROD / "layers" / f"{name}.png"))[..., 3] > 127
 
 
 def save(mask, name):
