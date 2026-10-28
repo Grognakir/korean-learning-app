@@ -76,9 +76,13 @@ for name in sys.argv[1:]:
         levels[-1] = max(levels[-1], 250)   # свет — почти белый, чтобы белая вещь не серела
         out = np.where(flat, levels[np.clip(tone, 0, 2)], out)
     # тени глубже: белая вещь при перекраске (умножении) теряет светлые тени, поэтому
-    # расстояние тона от белого увеличиваем в 1.6 раза (только ткань, не линии)
+    # светлые тени (тон 225+) углубляем в 1.6 раза; средние и тёмные (190 и ниже) — как на
+    # исходнике, между ними плавно. Иначе средне-серые грани (каблук) уходят в тёмные.
     fabric = area & (out >= 120)
-    out = np.where(fabric, 255 - (255 - out) * 1.6, out).clip(0, 255)
+    k = 1 + 0.6 * np.clip((out - 190) / 35, 0, 1)
+    deeper = np.where(out >= 190, np.maximum(255 - (255 - out) * k, 190), out)
+    out = np.where(fabric, deeper, out)
+    out = out.clip(0, 255)
     # контур дорисовывается только там, где розовое шире нарисованной вещи (своей линии нет)
     edge = area & ~nd.binary_erosion(area, iterations=3)
     out[edge & ~nd.binary_dilation(lum < 70, iterations=4) & (skin | background)] = INK
