@@ -43,6 +43,15 @@ def save(mask, name):
 for lower, upper in PAIRS:
     stack = rgb(ROOT / "stack" / f"stack_{STAGE[upper]}.png")
     band = nd.binary_dilation(alpha(upper), iterations=BAND)
+    replace = sorted((PROD / "replace").glob(f"{upper}_replace.*"))
+    if lower == "base" and replace:
+        # ручное выделение: на prod/sources/base.png залито #FF00FF то, что исчезает под вещью
+        painted = np.array(Image.open(replace[0]).convert("RGB")).astype(np.int16)
+        gone = (painted[..., 0] > 190) & (painted[..., 1] < 100) & (painted[..., 2] > 190)
+        gone = nd.binary_fill_holes(nd.binary_closing(gone, iterations=2))
+        save(~gone, f"{lower}__{upper}")
+        print("ok", lower, "under", upper, "(by hand)")
+        continue
     if lower == "base" and upper != "shoes":
         # тело под вещью скрываем по форме самой вещи (+1 px, чтобы контур тела не выглядывал);
         # стопки тут не годятся: слой вещи может быть нарисован по ручной обводке
