@@ -71,6 +71,12 @@ for lower, upper in PAIRS:
                 col = np.where(part[:, x])[0]
                 top = col.min() + 6 if len(col) else mid
                 gone[top:, x] = True
+        legs_file = PROD / "layers" / "shoes_legs.json"
+        if legs_file.exists():
+            import json
+            # низ ног берётся с картинки туфель: ноги base прячутся ниже линии перехода
+            for leg in json.loads(legs_file.read_text()):
+                gone[leg["cut"]:, leg["x0"]:leg["x1"] + 1] = True
         save(~gone, f"{lower}__{upper}")
         print("ok", lower, "under", upper, "(whole foot)")
         continue

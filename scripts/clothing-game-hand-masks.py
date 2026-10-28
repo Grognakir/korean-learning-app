@@ -15,6 +15,9 @@ FABRIC = 236   # светлый тон дорисованной ткани (бе
 INK = 22       # цвет контура
 # исходники, пришедшие сжатыми (webp через чат): их заливку выравниваем до 2 тонов
 FLATTEN = {"shoes"}
+# вещи, у которых вместе с вещью берётся и низ ног с той же картинки (на ней ноги стоят иначе)
+LEGS = {"shoes"}
+BASE = np.array(Image.open(PROD / "sources" / "base.png").convert("RGB")).astype(np.int16)
 
 for name in sys.argv[1:]:
     painted_path = sorted((PROD / "masks").glob(f"{name}_mask.*"))[0]
@@ -93,8 +96,34 @@ for name in sys.argv[1:]:
     Image.fromarray(res).save(PROD / "layers" / f"{name}.png", optimize=True)
     # 2) контур за краем — без перекраски, как на картинке
     line = line & ~area
-    la = (np.clip((140 - lum) / 70, 0, 1) * line * 255).astype(np.uint8)
+    la = np.clip((140 - lum) / 70, 0, 1) * line
+    legs = []
+    if name in LEGS:
+        # низ ног с картинки вещи: от линии, где она лучше всего совпадает с base, вниз.
+        # Переход плавный (12 px), ниже линии ноги base прячутся (см. clip-маски).
+        body = ~background & ~area
+        lab_f, nf = nd.label(nd.binary_closing(area, iterations=3))
+        for i in range(1, nf + 1):
+            foot = lab_f == i
+            ys, xs = np.where(foot)
+            if len(ys) < 500:
+                continue
+            x0, x1 = max(xs.min() - 40, 0), min(xs.max() + 40, src.shape[1] - 1)
+            top = ys.min()
+            diff = np.abs(src - BASE).sum(2)
+            rows = range(max(top - 110, 0), top - 25)
+            cut = min(rows, key=lambda y: diff[y, x0:x1][body[y, x0:x1]].mean() if body[y, x0:x1].any() else 1e9)
+            ramp = np.clip((np.arange(src.shape[0]) - (cut - 12)) / 12, 0, 1)[:, None]
+            zone = np.zeros_like(body); zone[cut - 12:, x0:x1 + 1] = True
+            skin_a = (body & zone) * ramp
+            la = np.maximum(la, skin_a)
+            legs.append(dict(x0=int(x0), x1=int(x1), cut=int(cut)))
+        line = line | (la > 0)
+    la = (la * 255).astype(np.uint8)
     res = np.dstack([src.clip(0, 255).astype(np.uint8), la]); res[la == 0] = 0
     Image.fromarray(res).save(PROD / "layers" / f"{name}_line.png", optimize=True)
     shape = area | line
+    if legs:
+        import json
+        (PROD / "layers" / f"{name}_legs.json").write_text(json.dumps(legs))
     print("ok", name, int(shape.sum()), "px")
