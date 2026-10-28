@@ -18,7 +18,7 @@ for name in sys.argv[1:]:
     painted_path = sorted((PROD / "masks").glob(f"{name}_mask.*"))[0]
     painted = np.array(Image.open(painted_path).convert("RGB")).astype(np.int16)
     src = np.array(Image.open(PROD / "sources" / f"{name}.png").convert("RGB")).astype(np.int16)
-    mag = (painted[..., 0] > 190) & (painted[..., 1] < 100) & (painted[..., 2] > 190)
+    mag = (painted[..., 0] - painted[..., 1] > 90) & (painted[..., 2] - painted[..., 1] > 90)  # розовый по оттенку: заливка может быть полупрозрачной
     mag = nd.binary_fill_holes(nd.binary_closing(mag, iterations=2))
     lum = src @ np.array([0.299, 0.587, 0.114])
     # 1) перекрашиваемая часть — строго выделенная область

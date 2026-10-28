@@ -47,10 +47,32 @@ for lower, upper in PAIRS:
     if lower == "base" and replace:
         # ручное выделение: на prod/sources/base.png залито #FF00FF то, что исчезает под вещью
         painted = np.array(Image.open(replace[0]).convert("RGB")).astype(np.int16)
-        gone = (painted[..., 0] > 190) & (painted[..., 1] < 100) & (painted[..., 2] > 190)
+        gone = (painted[..., 0] - painted[..., 1] > 90) & (painted[..., 2] - painted[..., 1] > 90)  # розовый по оттенку: заливка может быть полупрозрачной
         gone = nd.binary_fill_holes(nd.binary_closing(gone, iterations=2))
         save(~gone, f"{lower}__{upper}")
         print("ok", lower, "under", upper, "(by hand)")
+        continue
+    if lower == "base" and upper == "shoes" and (PROD / "masks" / "shoes_mask.png").exists():
+        # ступня внутри туфли не существует: под каждой туфлей стираем всё тело ниже её канта
+        # (в столбцах туфли — ниже её верхнего края, по бокам — ниже середины туфли),
+        # чтобы пальцы не выглядывали, даже если ступня на base чуть шире или ниже туфли
+        shoe = alpha("shoes")
+        gone = np.zeros_like(shoe)
+        lab, n = nd.label(nd.binary_closing(shoe, iterations=3))
+        h, w = shoe.shape
+        for i in range(1, n + 1):
+            part = lab == i
+            ys, xs = np.where(part)
+            if len(ys) < 500:
+                continue
+            x0, x1 = max(xs.min() - 30, 0), min(xs.max() + 30, w - 1)
+            mid = int((ys.min() + ys.max()) / 2)
+            for x in range(x0, x1 + 1):
+                col = np.where(part[:, x])[0]
+                top = col.min() + 6 if len(col) else mid
+                gone[top:, x] = True
+        save(~gone, f"{lower}__{upper}")
+        print("ok", lower, "under", upper, "(whole foot)")
         continue
     if lower == "base" and upper != "shoes":
         # тело под вещью скрываем по форме самой вещи, только под её плотной частью:
