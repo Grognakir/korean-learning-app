@@ -117,28 +117,9 @@
   #prev { opacity: 0; pointer-events: none; }
   #prev.fade { animation: fade .32s ease-out forwards; }
   @keyframes fade { from { opacity: 1; } to { opacity: 0; } }
-  #fx { pointer-events: none; }
-  .fxbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; font-size: 13px; color: var(--ink-soft); }
-  .fxbar button { font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
-    border-radius: 999px; padding: 4px 11px; cursor: pointer; }
-  .fxbar button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  #prev.flashout { animation: fade .14s .12s ease-out forwards; }
-  .flash { animation: flash .42s ease-out; }
-  @keyframes flash { 0% { filter: brightness(1); } 35% { filter: brightness(1.9) saturate(.6); } 100% { filter: brightness(1); } }
-  #prev.wipe { animation: wipe .5s ease-in-out forwards; }
-  @keyframes wipe { from { clip-path: inset(0 0 0 0); opacity: 1; } to { clip-path: inset(100% 0 0 0); opacity: 1; } }
   #prev.snap { animation: fade .06s .17s forwards; }
   .squash { animation: squash .45s ease-out; transform-origin: 50% 96%; }
   @keyframes squash { 0% { transform: none; } 35% { transform: scale(1.04, .95); } 65% { transform: scale(.98, 1.03); } 100% { transform: none; } }
-  .puff { position: absolute; width: 90px; height: 90px; margin: -45px 0 0 -45px; border-radius: 50%; pointer-events: none;
-    background: radial-gradient(circle, rgba(255,255,255,.95) 0 30%, rgba(255,255,255,.6) 50%, transparent 70%);
-    animation: puff .55s ease-out forwards; }
-  @keyframes puff { from { transform: translate(0,0) scale(.3); opacity: 1; } to { transform: translate(var(--dx), var(--dy)) scale(1.5); opacity: 0; } }
-  .spark { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; pointer-events: none;
-    background: radial-gradient(circle, #fff 0 25%, rgba(255,236,170,.9) 26% 45%, transparent 46%);
-    animation: spark .6s ease-out forwards; }
-  @keyframes spark { from { transform: translate(0, 0) scale(.4); opacity: 1; }
-    to { transform: translate(var(--dx), var(--dy)) scale(1.1); opacity: 0; } }
   .shake { animation: shake .45s; }
   @keyframes shake { 20% { transform: translateX(-6px) rotate(-1deg); } 50% { transform: translateX(6px) rotate(1deg); } 80% { transform: translateX(-3px); } }
   .hop { animation: hop .32s ease-out; }
@@ -186,14 +167,12 @@
 
   <div class="main">
     <div>
-    <div class="fxbar" id="fxbar">Эффект смены: </div>
     <div class="stage">
       <div class="bubble empty" id="bubble"><div class="kr" id="bKo"></div><div class="ru" id="bRu"></div></div>
       <div id="react"><div id="squash">
         <div class="figure idle" id="figure">
           <canvas id="scene" width="512" height="768" aria-label="Персонаж"></canvas>
           <canvas id="prev" width="512" height="768" aria-hidden="true"></canvas>
-          <canvas id="fx" width="512" height="768" aria-hidden="true"></canvas>
           <div id="sparks" style="position:absolute;inset:0"></div>
         </div>
       </div></div>
@@ -357,18 +336,6 @@ function drawScene() {
   if (IMG.hand_palm && IMG.hand_palm.width) x.drawImage(IMG.hand_palm, 0, 0, 512, 768);
 }
 const drawFace = drawScene;
-// где на фигуре вспыхивают искорки (доля высоты)
-const SPARK_Y = { shoes: .93, pants: .62, shirt: .33, tie: .3, jacket: .36, glasses: .1 };
-function sparkle(id) {
-  const box = $("sparks"); if (!box || !(id in SPARK_Y)) return;
-  for (let i = 0; i < 8; i++) {
-    const sp = document.createElement("span"); sp.className = "spark";
-    const a = Math.PI * 2 * i / 8 + Math.random() * .5, r = 26 + Math.random() * 22;
-    sp.style.left = (46 + Math.random() * 8) + "%"; sp.style.top = SPARK_Y[id] * 100 + "%";
-    sp.style.setProperty("--dx", Math.cos(a) * r + "px"); sp.style.setProperty("--dy", Math.sin(a) * r + "px");
-    box.appendChild(sp); setTimeout(() => sp.remove(), 650);
-  }
-}
 function setFace(name, ms) {
   clearTimeout(faceTimer);
   face = name; drawFace();
@@ -421,75 +388,21 @@ function render() {
   }
 }
 
-// эффекты смены одежды: все работают с цельными кадрами (старый и новый), пустот не бывает
-const EFFECTS = [
-  ["fade", "Растворение"], ["flash", "Вспышка"], ["wipe", "Шторка"],
-  ["shine", "Блеск"], ["squash", "Пружинка"], ["puff", "Дымок"],
-];
-let effect = "fade", lastChanged = null;
-try { effect = localStorage.getItem("fitting-fx") || "fade"; } catch (e) {}
-function puffs(id) {
-  const box = $("sparks"); if (!(id in SPARK_Y)) return;
-  for (let i = 0; i < 6; i++) {
-    const d = document.createElement("span"); d.className = "puff";
-    const a = Math.PI * 2 * i / 6 + Math.random() * .6;
-    d.style.left = (44 + Math.random() * 12) + "%"; d.style.top = SPARK_Y[id] * 100 + "%";
-    d.style.setProperty("--dx", Math.cos(a) * 30 + "px"); d.style.setProperty("--dy", Math.sin(a) * 22 + "px");
-    box.appendChild(d); setTimeout(() => d.remove(), 600);
-  }
-}
-function shine() {
-  // светлая полоса проходит по фигуре (рисуется только поверх персонажа, не по фону)
-  const c = $("fx"), x = c.getContext("2d"), t0 = performance.now(), dur = 520;
-  (function frame(t) {
-    const k = Math.min((t - t0) / dur, 1);
-    x.globalCompositeOperation = "source-over"; x.clearRect(0, 0, 512, 768);
-    if (k < 1) {
-      x.drawImage($("scene"), 0, 0);
-      x.globalCompositeOperation = "source-in";
-      const pos = -300 + k * 1100;
-      const g = x.createLinearGradient(pos, 0, pos + 260, 260);
-      g.addColorStop(0, "rgba(255,255,255,0)"); g.addColorStop(.5, "rgba(255,255,240,.75)"); g.addColorStop(1, "rgba(255,255,255,0)");
-      x.fillStyle = g; x.fillRect(0, 0, 512, 768);
-      requestAnimationFrame(frame);
-    }
-  })(t0);
-}
-function playEffect(id) {
-  const prev = $("prev"), fig = $("figure"), sq = $("squash");
-  prev.className = ""; fig.classList.remove("flash"); sq.classList.remove("squash"); void prev.offsetWidth;
-  if (effect === "fade") { prev.classList.add("fade"); sparkle(id); }
-  else if (effect === "flash") { prev.classList.add("flashout"); fig.classList.add("flash"); }
-  else if (effect === "wipe") { prev.classList.add("wipe"); }
-  else if (effect === "shine") { prev.classList.add("fade"); shine(); }
-  else if (effect === "squash") { prev.classList.add("snap"); sq.classList.add("squash"); }
-  else if (effect === "puff") { prev.classList.add("fade"); puffs(id); }
+// смена одежды — «пружинка»: персонаж пружинисто приседает и выпрямляется уже в новой вещи;
+// старый цельный кадр исчезает в момент приседания, пустот не видно
+function playEffect() {
+  const prev = $("prev"), sq = $("squash");
+  prev.className = ""; sq.classList.remove("squash"); void prev.offsetWidth;
+  prev.classList.add("snap"); sq.classList.add("squash");
 }
 function drawLayers(changedId) {
   // снимок прежнего кадра кладётся сверху, под ним уже готов новый кадр
   const px = $("prev").getContext("2d");
   px.clearRect(0, 0, 512, 768); px.drawImage($("scene"), 0, 0);
   drawScene();
-  if (changedId) { lastChanged = changedId; playEffect(changedId); }
+  if (changedId) playEffect();
   else { $("prev").className = ""; }
 }
-function renderFxBar() {
-  const bar = $("fxbar");
-  bar.innerHTML = "Эффект смены: " + EFFECTS.map(([id, name]) =>
-    `<button data-fx="${id}" aria-pressed="${id === effect}">${name}</button>`).join("");
-}
-$("fxbar").addEventListener("click", e => {
-  const b = e.target.closest("[data-fx]"); if (!b) return;
-  effect = b.dataset.fx;
-  try { localStorage.setItem("fitting-fx", effect); } catch (err) {}
-  renderFxBar();
-  // показать эффект сразу: последняя изменённая вещь «снимается» и надевается снова
-  const id = lastChanged && lastChanged in worn ? lastChanged : Object.keys(worn).pop();
-  if (!id) return;
-  const keep = worn[id]; delete worn[id]; drawScene(); worn[id] = keep;
-  drawLayers(id);
-});
-renderFxBar();
 
 function say(msg, kind) {
   $("bubble").className = "bubble " + (msg ? kind : "empty");
