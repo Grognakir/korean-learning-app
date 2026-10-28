@@ -20,46 +20,75 @@ for name in sys.argv[1:]:
     painted_path = sorted((PROD / "masks").glob(f"{name}_mask.*"))[0]
     painted = np.array(Image.open(painted_path).convert("RGB")).astype(np.int16)
     src = np.array(Image.open(PROD / "sources" / f"{name}.png").convert("RGB")).astype(np.int16)
-    mag = (painted[..., 0] - painted[..., 1] > 45) & (painted[..., 2] - painted[..., 1] > 45)  # розовый по оттенку: заливка может быть полупрозрачной
-    mag = nd.binary_fill_holes(nd.binary_closing(mag, iterations=2))
     lum = src @ np.array([0.299, 0.587, 0.114])
+    mx, mn = src.max(2), src.min(2)
+    skin = ((mx - mn) / np.maximum(mx, 1) > 0.18) & (mx > 60)
+    light = mn > 225
+    lab, _ = nd.label(light)
+    border = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    background = np.isin(lab, border[border > 0])
+    # розовый по оттенку (заливка может быть полупрозрачной). Бледный розовый принимается
+    # только поверх самой вещи; на коже и фоне — только плотный, чтобы ореол кисти за контуром
+    # не считался заливкой
+    dr, db = painted[..., 0] - painted[..., 1], painted[..., 2] - painted[..., 1]
+    strong = (dr > 90) & (db > 90)
+    faint = (dr > 45) & (db > 45)
+    mag = strong | (faint & ~skin & ~background)
+    mag = nd.binary_fill_holes(mag)
     # контур вещи за краем выделения: тёмные пиксели в полосе до 7 px, связанные с выделением
     ring = nd.binary_dilation(mag, iterations=7) & ~mag
     lab, _ = nd.label((ring & (lum < 140)) | mag)
     line = np.isin(lab, np.unique(lab[mag])) & ~mag
-    # светлая каёмка между выделением и контуром — тоже вещь (иначе там белые точки)
-    area = nd.binary_fill_holes(mag | line) & ~(line & (lum < 90))
-    area = nd.binary_fill_holes(area | mag)
+    # Правило: цвет только в пределах розового и никогда за чёрный контур.
+    # Светлые пиксели самой вещи между розовым и чёрной линией (до 4 px) тоже вещь — иначе
+    # там белые точки. Но не кожа, не фон и не то, что за линией.
+    rim = nd.binary_dilation(mag, iterations=4) & ~mag & (lum >= 90) & ~skin & ~background
+    lab, _ = nd.label(rim | mag)
+    area = np.isin(lab, np.unique(lab[mag]))
     # 1) перекрашиваемая часть
-    mx, mn = src.max(2), src.min(2)
     cloth = (((mx - mn) / np.maximum(mx, 1) < 0.15) & (mn < 250)) | (mx < 110)
     out = np.where(cloth, lum, FABRIC).astype(np.float32)
-    # ровная заливка как у cel-shading: светлые места сводим к 2 тонам (свет и тень), мелкие
-    # островки (< 120 px) поглощаются соседним тоном. Это убирает пятна от сжатия картинки.
-    # Линии и швы (тёмное) остаются как нарисованы.
+    # ровная заливка как у cel-shading: светлые места сводим к 3 тонам (свет, полутень, тень),
+    # островки < 150 px поглощаются соседним тоном — так пропадают пятна от сжатия,
+    # а все плоскости света и тени остаются. Линии и швы (тёмное) — как нарисованы.
     flat = area & (out >= 150)
     if name in FLATTEN and flat.sum() > 100:
-        smooth = nd.median_filter(out, size=7)
-        thr = np.percentile(smooth[flat], 30)
-        shadow = flat & (smooth < thr - 4)
-        for _ in range(2):
-            lab, n = nd.label(shadow)
-            small = np.isin(lab, np.where(nd.sum(shadow, lab, range(1, n + 1)) < 120)[0] + 1)
-            shadow &= ~small
-            lab, n = nd.label(flat & ~shadow)
-            small = np.isin(lab, np.where(nd.sum(flat & ~shadow, lab, range(1, n + 1)) < 120)[0] + 1)
-            shadow |= small
-        light_v = np.median(smooth[flat & ~shadow]) if (flat & ~shadow).any() else 240
-        shadow_v = np.median(smooth[shadow]) if shadow.any() else light_v - 25
-        out = np.where(flat, np.where(shadow, shadow_v, light_v), out)
+        smooth = nd.median_filter(out, size=5)
+        v = smooth[flat]
+        levels = np.percentile(v, [10, 40, 85])
+        for _ in range(15):
+            idx = np.abs(v[:, None] - levels[None]).argmin(1)
+            levels = np.array([v[idx == k].mean() if (idx == k).any() else levels[k] for k in range(3)])
+        tone = np.full(out.shape, -1)
+        tone[flat] = np.abs(v[:, None] - levels[None]).argmin(1)
+        for _ in range(3):
+            for k in range(3):
+                lab, n = nd.label(tone == k)
+                if not n:
+                    continue
+                small = np.isin(lab, np.where(nd.sum(tone == k, lab, range(1, n + 1)) < 150)[0] + 1)
+                if small.any():
+                    # островок берёт самый частый тон вокруг себя
+                    ring = nd.binary_dilation(small, iterations=2) & ~small & flat
+                    vals = tone[ring]
+                    vals = vals[vals >= 0]
+                    tone[small] = np.bincount(vals, minlength=3).argmax() if len(vals) else k
+        levels[-1] = max(levels[-1], 250)   # свет — почти белый, чтобы белая вещь не серела
+        out = np.where(flat, levels[np.clip(tone, 0, 2)], out)
+    # тени глубже: белая вещь при перекраске (умножении) теряет светлые тени, поэтому
+    # расстояние тона от белого увеличиваем в 1.6 раза (только ткань, не линии)
+    fabric = area & (out >= 120)
+    out = np.where(fabric, 255 - (255 - out) * 1.6, out).clip(0, 255)
+    # контур дорисовывается только там, где розовое шире нарисованной вещи (своей линии нет)
     edge = area & ~nd.binary_erosion(area, iterations=3)
-    out[edge & ~nd.binary_dilation(lum < 70, iterations=4)] = INK   # контур там, где своего нет
-    a = (nd.gaussian_filter(area.astype(np.float32), 0.5) * 255).astype(np.uint8)
+    out[edge & ~nd.binary_dilation(lum < 70, iterations=4) & (skin | background)] = INK
+    # край сглаживается только внутрь: наружу за area цвет не выходит ни на пиксель
+    a = (nd.gaussian_filter(area.astype(np.float32), 0.5) * area * 255).astype(np.uint8)
     o = np.dstack([out] * 3).clip(0, 255).astype(np.uint8)
     res = np.dstack([o, a]); res[a == 0] = 0
     Image.fromarray(res).save(PROD / "layers" / f"{name}.png", optimize=True)
     # 2) контур за краем — без перекраски, как на картинке
-    line = line & ~area | (line & (lum < 90))
+    line = line & ~area
     la = (np.clip((140 - lum) / 70, 0, 1) * line * 255).astype(np.uint8)
     res = np.dstack([src.clip(0, 255).astype(np.uint8), la]); res[la == 0] = 0
     Image.fromarray(res).save(PROD / "layers" / f"{name}_line.png", optimize=True)
