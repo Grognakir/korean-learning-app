@@ -53,9 +53,10 @@ for lower, upper in PAIRS:
         print("ok", lower, "under", upper, "(by hand)")
         continue
     if lower == "base" and upper != "shoes":
-        # тело под вещью скрываем по форме самой вещи (+1 px, чтобы контур тела не выглядывал);
-        # стопки тут не годятся: слой вещи может быть нарисован по ручной обводке
-        save(~nd.binary_dilation(alpha(upper), iterations=1), f"{lower}__{upper}")
+        # тело под вещью скрываем по форме самой вещи, только под её плотной частью:
+        # мягкий (полупрозрачный) край вещи должен лечь на тело, а не на пустоту,
+        # иначе по контуру просвечивает фон светлой линией
+        save(~nd.binary_erosion(alpha(upper), iterations=2), f"{lower}__{upper}")
         print("ok", lower, "under", upper, "(by item shape)")
         continue
     mx, mn = stack.max(2), stack.min(2)
