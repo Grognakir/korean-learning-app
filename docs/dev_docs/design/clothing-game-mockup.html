@@ -265,6 +265,8 @@ function loadIcon(name) {
 }
 // маски видимости «нижний слой — верхняя вещь»: что остаётся видно от нижнего слоя,
 // когда сверху надета вещь (замена, а не наложение)
+// вещи с ручной обводкой: у них контур лежит отдельным слоем без перекраски
+const LINES = ["pants"];
 const CLIPS = ["base__pants", "base__shoes", "base__shirt", "base__tie", "base__jacket",
   "pants__shirt", "pants__jacket", "shirt__tie", "shirt__jacket", "tie__jacket"];
 function loadClip(name) {
@@ -431,7 +433,7 @@ $("ruToggle").addEventListener("click", e => {
 });
 $("next").addEventListener("click", () => start((sitIndex + 1) % SITUATIONS.length));
 
-Promise.all([...FRAMES, "hand_palm", ...Object.keys(ITEMS), ...Object.keys(ITEMS).map(k => k + "_line")].map(load).concat(Object.keys(ITEMS).map(loadIcon), CLIPS.map(loadClip))).then(() => {
+Promise.all([...FRAMES, "hand_palm", ...Object.keys(ITEMS), ...LINES.map(k => k + "_line")].map(load).concat(Object.keys(ITEMS).map(loadIcon), CLIPS.map(loadClip))).then(() => {
   start(0); blinkLoop();
 });
 </script>
