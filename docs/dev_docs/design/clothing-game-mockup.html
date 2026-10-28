@@ -288,7 +288,11 @@ function tinted(id, color, icon) {
   if (color) {
     x.globalCompositeOperation = "multiply"; x.fillStyle = COLORS[color].hex; x.fillRect(0, 0, sw, sh);
     x.globalCompositeOperation = "destination-in"; x.drawImage(img, sx, sy, sw, sh, 0, 0, sw, sh);
+    x.globalCompositeOperation = "source-over";
   }
+  // контур вещи за краем перекрашиваемой области — как нарисован, без цвета
+  const line = !icon && IMG[id + "_line"];
+  if (line && line.width) x.drawImage(line, 0, 0, sw, sh);
   if (!icon) applyClips(x, id);
   return c;
 }
@@ -427,7 +431,7 @@ $("ruToggle").addEventListener("click", e => {
 });
 $("next").addEventListener("click", () => start((sitIndex + 1) % SITUATIONS.length));
 
-Promise.all([...FRAMES, "hand_palm", ...Object.keys(ITEMS)].map(load).concat(Object.keys(ITEMS).map(loadIcon), CLIPS.map(loadClip))).then(() => {
+Promise.all([...FRAMES, "hand_palm", ...Object.keys(ITEMS), ...Object.keys(ITEMS).map(k => k + "_line")].map(load).concat(Object.keys(ITEMS).map(loadIcon), CLIPS.map(loadClip))).then(() => {
   start(0); blinkLoop();
 });
 </script>

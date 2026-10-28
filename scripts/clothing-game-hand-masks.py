@@ -1,8 +1,8 @@
 # Слои вещей по ручной обводке: prod/masks/<вещь>_mask.png — заливка #FF00FF поверх
 # prod/sources/<вещь>.png; результат — prod/layers/<вещь>.png.
-# Обводка = силуэт вещи, берётся как есть, ничего не обрезается. Внутри силуэта:
-# пиксели вещи (белые/серые) берутся из картинки; где под обводкой не вещь (кожа, фон) —
-# дорисовывается ткань; по краю силуэта, где нет своего контура, рисуется контур.
+# Перекрашивается строго выделенная область (layers/<вещь>.png); чёрный контур вещи за краем
+# выделения кладётся отдельно, без перекраски (layers/<вещь>_line.png). Где под выделением
+# не вещь (кожа, фон) — дорисовывается ткань, по краю без своего контура — контур.
 # Запуск из корня: python3 scripts/clothing-game-hand-masks.py pants shoes shirt ...
 import sys
 from pathlib import Path
@@ -20,22 +20,25 @@ for name in sys.argv[1:]:
     src = np.array(Image.open(PROD / "sources" / f"{name}.png").convert("RGB")).astype(np.int16)
     mag = (painted[..., 0] > 190) & (painted[..., 1] < 100) & (painted[..., 2] > 190)
     mag = nd.binary_fill_holes(nd.binary_closing(mag, iterations=2))
-    # контур вещи прямо за краем обводки тоже входит в вещь
     lum = src @ np.array([0.299, 0.587, 0.114])
-    # контур целиком: тёмные пиксели в полосе до 7 px за краем обводки, связанные с ней
-    ring = nd.binary_dilation(mag, iterations=7) & ~mag
-    line = ring & (lum < 110)
-    lab, _ = nd.label(line | mag)
-    shape = np.isin(lab, np.unique(lab[mag]))
-    shape = nd.binary_closing(shape, iterations=2) | mag
+    # 1) перекрашиваемая часть — строго выделенная область
     mx, mn = src.max(2), src.min(2)
-    cloth = (((mx - mn) / np.maximum(mx, 1) < 0.15) & (mn < 250)) | (mx < 110)   # белая/серая вещь и контур
+    cloth = (((mx - mn) / np.maximum(mx, 1) < 0.15) & (mn < 250)) | (mx < 110)
     out = np.where(cloth, lum, FABRIC).astype(np.float32)
-    edge = shape & ~nd.binary_erosion(shape, iterations=3)
-    has_line = nd.binary_dilation(lum < 70, iterations=4)
-    out[edge & ~has_line] = INK
-    alpha = (nd.gaussian_filter(shape.astype(np.float32), 0.6) * 255).astype(np.uint8)
-    o = np.dstack([out, out, out]).clip(0, 255).astype(np.uint8)
-    res = np.dstack([o, alpha]); res[alpha == 0] = 0
+    edge = mag & ~nd.binary_erosion(mag, iterations=3)
+    out[edge & ~nd.binary_dilation(lum < 70, iterations=4)] = INK   # контур там, где своего нет
+    a = (nd.gaussian_filter(mag.astype(np.float32), 0.5) * 255).astype(np.uint8)
+    o = np.dstack([out] * 3).clip(0, 255).astype(np.uint8)
+    res = np.dstack([o, a]); res[a == 0] = 0
     Image.fromarray(res).save(PROD / "layers" / f"{name}.png", optimize=True)
+    # 2) контур вещи за краем выделения — без перекраски, как на картинке
+    ring = nd.binary_dilation(mag, iterations=7) & ~mag
+    line = ring & (lum < 140)
+    lab, _ = nd.label(line | mag)
+    line = np.isin(lab, np.unique(lab[mag])) & ~mag
+    la = np.clip((140 - lum) / 70, 0, 1) * line          # мягкий край линии по её яркости
+    la = (la * 255).astype(np.uint8)
+    res = np.dstack([src.clip(0, 255).astype(np.uint8), la]); res[la == 0] = 0
+    Image.fromarray(res).save(PROD / "layers" / f"{name}_line.png", optimize=True)
+    shape = mag | line
     print("ok", name, int(shape.sum()), "px")
