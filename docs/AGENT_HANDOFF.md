@@ -84,7 +84,7 @@
 - `Episode`: `kind` (self/forJia), `placeKo/placeRu`, `praise`; упрёк и шапка сцены берут место из эпизода. Цель `jia` в `TARGETS`; `Situation.kind = "shopping"` — без требования полного наряда. Тест `tests/story-episodes.test.ts`.
 - Мобильная версия игры (≤640px): на весь экран; звонок — панель канала в карточке; магазин — один манекен, вкладки 남성/여성, столбик зон слева, полка-шторка снизу (прячется, пока открыта карточка вещи), корзина-полоса с раскрытием, «очистить». На ПК без изменений.
 - Цветные вещи: в `public/.../colored` — 197 настоящих картинок генератора (`use-generated.py`), 144 пары пока перекраска скриптом; промпт на догенерацию в `docs/claude/clothing-trainer-codex-prompts.md`. Узоры — по списку `ClothingItem.patterns`, маски по крою ждут Codex.
-- Коммита, деплоя и синхронизации production не было.
+- **Релиз 2026-10-30:** коммит `5b9b897` (`origin/main`). Vercel: `npx vercel deploy --prod --yes` → `dpl_2zjUH1bqgkyG76Khz67byZ7XiRAr`, Ready (деплой от push тоже Ready), алиас `korean-learning-gray.vercel.app` указывает на него; `/login` — 200, `colored/suit/navy.webp` — 200. Production Supabase не трогали: учебные JSON не менялись (урок 10 со стикером синхронизирован релизом `eaf8b87`). Не закоммичены: `content/reference/art-sources/` (594 МБ исходников), новые варианты иллюстраций 11과 `img/*_v2–v6.png` (черновики), `content/reference/inha_workbook_photo/`, `scripts/__pycache__/`.
 
 ### 2026-10-30 — карта утверждена, третья иллюстрация урока 11
 
