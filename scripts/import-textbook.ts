@@ -447,7 +447,37 @@ async function main() {
     return;
   }
 
-  for (const lessonNumber of [7, 8, 9, 10]) {
+  const pagesOnly = process.argv.find((arg) => arg.startsWith("--lesson2-pages-only="));
+  if (pagesOnly) {
+    const lessonNumber = Number(pagesOnly.split("=")[1]);
+    const { data: textbook2, error: textbookError } = await supabase
+      .from("textbooks")
+      .select("id")
+      .eq("slug", TEXTBOOK_2.slug)
+      .single();
+    if (textbookError) throw textbookError;
+
+    const paths: Record<number, string> = {
+      1: join(LESSON_DIR_2, "lesson-01.json"),
+      2: join(LESSON_DIR_2_2, "lesson-02.json"),
+      3: join(LESSON_DIR_2_3, "lesson-03.json"),
+      4: join(LESSON_DIR_2_4, "lesson-04.json"),
+      5: join(LESSON_DIR_2_5, "lesson-05.json"),
+      6: join(LESSON_DIR_2_6, "lesson-06.json"),
+    };
+    for (const [number, lesson] of Object.entries(LATE_LESSONS_2)) paths[Number(number)] = lesson.path;
+
+    let startIndex = 0;
+    for (let n = 1; n < lessonNumber; n++) {
+      const previous: LessonFile = JSON.parse(readFileSync(paths[n], "utf-8"));
+      startIndex += previous.pages.length;
+    }
+    await importLesson(textbook2.id, paths[lessonNumber], startIndex);
+    console.log("Готово.");
+    return;
+  }
+
+  for (const lessonNumber of [7, 8, 9, 10, 11, 12, 13, 14, 15, 16]) {
     if (!process.argv.includes(`--lesson-${lessonNumber}-only`)) continue;
 
     const { data: textbook2, error: textbookError } = await supabase
