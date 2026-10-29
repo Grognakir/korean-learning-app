@@ -35,7 +35,13 @@ function pointFromBlock(block: GrammarPointBlock): GrammarPoint {
           {
             title: "Правила",
             section: true,
-            blocks: [{ type: "table", head: block.rules_table.head, rows: block.rules_table.rows }],
+            blocks: [
+              {
+                type: "table",
+                head: block.rules_table.head,
+                rows: block.rules_table.rows,
+              },
+            ],
           },
         ]
       : null,
@@ -44,18 +50,14 @@ function pointFromBlock(block: GrammarPointBlock): GrammarPoint {
 }
 
 // «Изучить подробнее»: открывает модальное окно с полным описанием конструкции
-// из словаря. variant "summary" стоит в строке заголовка (не должна сворачивать
-// блок; на планшетах и телефонах скрыта), "footer" — под объяснением в раскрытом
-// блоке (видна только на планшетах и телефонах), "standalone" — у блока без
-// раскрывающегося объяснения.
+// из словаря. Положение кнопки (в строке заголовка, под объяснением, у блока без
+// объяснения) задаёт обёртка в GrammarPoint.
 export function GrammarDetailsButton({
   block,
   dictionaryRef,
-  variant,
 }: {
   block: GrammarPointBlock;
   dictionaryRef: string | null;
-  variant: "summary" | "footer" | "standalone";
 }) {
   const pattern = block.pattern;
   const [open, setOpen] = useState(false);
@@ -63,7 +65,11 @@ export function GrammarDetailsButton({
 
   const load = useCallback(async () => {
     if (!dictionaryRef) {
-      setState({ status: "ready", point: pointFromBlock(block), fromLesson: true });
+      setState({
+        status: "ready",
+        point: pointFromBlock(block),
+        fromLesson: true,
+      });
       return;
     }
     setState({ status: "loading" });
@@ -76,7 +82,12 @@ export function GrammarDetailsButton({
     const point = (data?.[0] ?? null) as GrammarPoint | null;
     if (error) setState({ status: "error" });
     else if (point) setState({ status: "ready", point, fromLesson: false });
-    else setState({ status: "ready", point: pointFromBlock(block), fromLesson: true });
+    else
+      setState({
+        status: "ready",
+        point: pointFromBlock(block),
+        fromLesson: true,
+      });
   }, [block, dictionaryRef]);
 
   const handleOpen = (event: React.MouseEvent) => {
@@ -90,13 +101,7 @@ export function GrammarDetailsButton({
     <>
       <button
         type="button"
-        className={`${styles.grammarDetailsAction} ${
-          variant === "summary"
-            ? styles.grammarDetailsActionTop
-            : variant === "footer"
-              ? styles.grammarDetailsActionFooter
-              : ""
-        }`}
+        className={styles.grammarDetailsAction}
         onClick={handleOpen}
       >
         Изучить подробнее
@@ -112,7 +117,8 @@ export function GrammarDetailsButton({
           <>
             {state.fromLesson && (
               <p className={styles.grammarModalHint}>
-                Отдельной статьи в словаре пока нет — показано описание из урока.
+                Отдельной статьи в словаре пока нет — показано описание из
+                урока.
               </p>
             )}
             <GrammarPointDetails point={state.point} />
@@ -120,7 +126,11 @@ export function GrammarDetailsButton({
         ) : state.status === "error" ? (
           <p className={styles.grammarModalHint}>
             Не удалось загрузить описание.{" "}
-            <button type="button" className={styles.grammarModalRetry} onClick={() => void load()}>
+            <button
+              type="button"
+              className={styles.grammarModalRetry}
+              onClick={() => void load()}
+            >
               Повторить
             </button>
           </p>

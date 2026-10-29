@@ -380,6 +380,84 @@
   color: var(--ink);
 }
 
+.vocabHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+}
+
+.segTabs {
+  display: inline-flex;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.segTab,
+.segTabActive {
+  padding: 6px 12px;
+  border: 0;
+  background: none;
+  color: var(--ink-soft);
+  font: inherit;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.segTab:hover {
+  color: var(--ink);
+}
+
+.segTab + .segTab,
+.segTab + .segTabActive,
+.segTabActive + .segTab {
+  border-left: 1px solid var(--line);
+}
+
+.segTabActive {
+  background: var(--paper-2);
+  color: var(--ink);
+}
+
+.extraGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 8px;
+}
+
+/* Группа — подложка, название сидит плашкой на её верхней границе. */
+.extraSubGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+}
+
+.extraGroupTitle {
+  position: absolute;
+  top: -9px;
+  left: 10px;
+  padding: 1px 9px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: #fff;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .vocabCards {
   display: flex;
   flex-direction: column;
@@ -820,20 +898,29 @@
   color: var(--ink);
 }
 
-.grammarDetailsAction {
+.grammarActions {
+  display: inline-flex;
+  align-items: center;
   align-self: flex-start;
-  border: 1px solid var(--line);
-  border-radius: 100px;
-  padding: 6px 12px;
+  gap: 6px;
   margin-top: 6px;
+}
+
+.grammarDetailsAction {
+  border: 1px solid var(--line);
   background: var(--paper-2);
   color: var(--ink-soft);
   font: inherit;
+  cursor: pointer;
+}
+
+.grammarDetailsAction {
+  border-radius: 100px;
+  padding: 6px 12px;
   font-size: 12.5px;
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .grammarDetailsAction:hover {
@@ -841,25 +928,25 @@
   border-color: var(--stone);
 }
 
-.grammarDetailsActionTop {
+.grammarActionsTop {
   margin-left: auto;
   align-self: center;
 }
 
-/* Десктоп: кнопка в строке заголовка. Планшет и телефон: длинные названия
-   грамматик не оставляют места рядом со стрелкой, кнопка уходит в раскрытый
+/* Десктоп: кнопки в строке заголовка. Планшет и телефон: длинные названия
+   грамматик не оставляют места рядом со стрелкой, кнопки уходят в раскрытый
    блок под объяснением. */
-.grammarDetailsActionFooter {
+.grammarActionsFooter {
   display: none;
 }
 
 @media (--to-compact) {
-  .grammarDetailsActionTop {
+  .grammarActionsTop {
     display: none;
   }
 
-  .grammarDetailsActionFooter {
-    display: inline-block;
+  .grammarActionsFooter {
+    display: inline-flex;
   }
 }
 

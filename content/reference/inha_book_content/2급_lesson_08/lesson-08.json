@@ -265,19 +265,115 @@
           "items": [
             {
               "ko": "편입",
-              "translation_ru": "перевод (в другой вуз или на старший курс)"
+              "translation_ru": "перевод (в другой вуз или на старший курс)",
+              "group": "학교"
             },
             {
               "ko": "동아리",
-              "translation_ru": "кружок, клуб"
+              "translation_ru": "кружок, клуб",
+              "group": "학교"
             },
             {
               "ko": "전환",
-              "translation_ru": "смена, переключение (기분 전환 — развеяться)"
+              "translation_ru": "смена, переключение (기분 전환 — развеяться)",
+              "group": "학교"
             },
             {
               "ko": "취소되다",
-              "translation_ru": "быть отменённым"
+              "translation_ru": "быть отменённым",
+              "group": "학교"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "학교",
+              "title_ru": "Учёба и перевод",
+              "items": [
+                {
+                  "ko": "전학",
+                  "translation_ru": "перевод в другую школу"
+                },
+                {
+                  "ko": "입학",
+                  "translation_ru": "поступление"
+                },
+                {
+                  "ko": "합격하다",
+                  "translation_ru": "сдать экзамен"
+                },
+                {
+                  "ko": "집중하다",
+                  "translation_ru": "сосредоточиться"
+                },
+                {
+                  "ko": "스트레칭",
+                  "translation_ru": "растяжка"
+                },
+                {
+                  "ko": "전공",
+                  "translation_ru": "специальность"
+                }
+              ]
+            },
+            {
+              "title": "건강",
+              "title_ru": "Самочувствие",
+              "items": [
+                {
+                  "ko": "피곤하다",
+                  "translation_ru": "уставший"
+                },
+                {
+                  "ko": "입맛",
+                  "translation_ru": "аппетит"
+                },
+                {
+                  "ko": "병이 나다",
+                  "translation_ru": "заболеть"
+                },
+                {
+                  "ko": "기분 전환",
+                  "translation_ru": "смена обстановки"
+                }
+              ]
+            },
+            {
+              "title": "여가",
+              "title_ru": "Свободное время",
+              "items": [
+                {
+                  "ko": "여가 활동",
+                  "translation_ru": "досуг"
+                },
+                {
+                  "ko": "취미 활동",
+                  "translation_ru": "хобби"
+                },
+                {
+                  "ko": "독서",
+                  "translation_ru": "чтение"
+                },
+                {
+                  "ko": "음악 감상",
+                  "translation_ru": "музыка"
+                },
+                {
+                  "ko": "영화 감상",
+                  "translation_ru": "фильмы"
+                },
+                {
+                  "ko": "컴퓨터 게임",
+                  "translation_ru": "компьютерные игры"
+                },
+                {
+                  "ko": "캠핑",
+                  "translation_ru": "кемпинг"
+                },
+                {
+                  "ko": "낚시",
+                  "translation_ru": "рыбалка"
+                }
+              ]
             }
           ]
         }
@@ -831,79 +927,226 @@
           "items": [
             {
               "ko": "신입",
-              "translation_ru": "новичок, новый (о члене, сотруднике)"
+              "translation_ru": "новичок, новый (о члене, сотруднике)",
+              "group": "동아리"
             },
             {
               "ko": "회원",
-              "translation_ru": "член (клуба, организации)"
+              "translation_ru": "член (клуба, организации)",
+              "group": "동아리"
             },
             {
               "ko": "모집하다",
-              "translation_ru": "набирать (участников)"
+              "translation_ru": "набирать (участников)",
+              "group": "동아리"
             },
             {
               "ko": "회비",
-              "translation_ru": "членский взнос"
+              "translation_ru": "членский взнос",
+              "group": "동아리"
             },
             {
               "ko": "초보자",
-              "translation_ru": "новичок, начинающий"
+              "translation_ru": "новичок, начинающий",
+              "group": "동아리"
             },
             {
               "ko": "사범",
-              "translation_ru": "наставник, мастер-инструктор (в единоборствах)"
+              "translation_ru": "наставник, мастер-инструктор (в единоборствах)",
+              "group": "동아리"
             },
             {
               "ko": "교육비",
-              "translation_ru": "плата за обучение"
+              "translation_ru": "плата за обучение",
+              "group": "동아리"
             },
             {
               "ko": "개인",
-              "translation_ru": "личный, индивидуальный; частное лицо"
+              "translation_ru": "личный, индивидуальный; частное лицо",
+              "group": "동아리"
             },
             {
               "ko": "중급",
-              "translation_ru": "средний уровень"
+              "translation_ru": "средний уровень",
+              "group": "동아리"
             },
             {
               "ko": "중요하다",
-              "translation_ru": "быть важным"
+              "translation_ru": "быть важным",
+              "group": "연습"
             },
             {
               "ko": "노트북",
-              "translation_ru": "ноутбук"
+              "translation_ru": "ноутбук",
+              "group": "연습"
             },
             {
               "ko": "행복",
-              "translation_ru": "счастье"
+              "translation_ru": "счастье",
+              "group": "연습"
             },
             {
               "ko": "어휘",
-              "translation_ru": "лексика, словарный запас"
+              "translation_ru": "лексика, словарный запас",
+              "group": "연습"
             },
             {
               "ko": "간편하다",
-              "translation_ru": "быть простым и удобным"
+              "translation_ru": "быть простым и удобным",
+              "group": "연습"
             },
             {
               "ko": "환승하다",
-              "translation_ru": "делать пересадку"
+              "translation_ru": "делать пересадку",
+              "group": "연습"
             },
             {
               "ko": "취미",
-              "translation_ru": "хобби"
+              "translation_ru": "хобби",
+              "group": "연습"
             },
             {
               "ko": "우정",
-              "translation_ru": "дружба"
+              "translation_ru": "дружба",
+              "group": "연습"
             },
             {
               "ko": "성공",
-              "translation_ru": "успех"
+              "translation_ru": "успех",
+              "group": "연습"
             },
             {
               "ko": "행복하다",
-              "translation_ru": "быть счастливым"
+              "translation_ru": "быть счастливым",
+              "group": "연습"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "동아리",
+              "title_ru": "Клуб",
+              "items": [
+                {
+                  "ko": "가입하다",
+                  "translation_ru": "вступать"
+                },
+                {
+                  "ko": "탈퇴하다",
+                  "translation_ru": "выходить"
+                },
+                {
+                  "ko": "동아리방",
+                  "translation_ru": "комната клуба"
+                },
+                {
+                  "ko": "포스터",
+                  "translation_ru": "плакат"
+                },
+                {
+                  "ko": "게다가",
+                  "translation_ru": "к тому же"
+                },
+                {
+                  "ko": "누구나",
+                  "translation_ru": "любой"
+                },
+                {
+                  "ko": "권유하다",
+                  "translation_ru": "предлагать"
+                },
+                {
+                  "ko": "신청하다",
+                  "translation_ru": "подавать заявку"
+                }
+              ]
+            },
+            {
+              "title": "태권도",
+              "title_ru": "Боевые искусства",
+              "items": [
+                {
+                  "ko": "사범님",
+                  "translation_ru": "тренер"
+                },
+                {
+                  "ko": "검은 띠",
+                  "translation_ru": "чёрный пояс"
+                },
+                {
+                  "ko": "띠",
+                  "translation_ru": "пояс"
+                },
+                {
+                  "ko": "도복",
+                  "translation_ru": "форма"
+                },
+                {
+                  "ko": "도장",
+                  "translation_ru": "додзё, зал"
+                },
+                {
+                  "ko": "검도",
+                  "translation_ru": "кендо"
+                },
+                {
+                  "ko": "바둑",
+                  "translation_ru": "го"
+                },
+                {
+                  "ko": "무술",
+                  "translation_ru": "боевое искусство"
+                },
+                {
+                  "ko": "도전하다",
+                  "translation_ru": "бросать вызов"
+                },
+                {
+                  "ko": "시합",
+                  "translation_ru": "соревнование"
+                }
+              ]
+            },
+            {
+              "title": "연습",
+              "title_ru": "Слова из упражнений",
+              "items": [
+                {
+                  "ko": "발음하다",
+                  "translation_ru": "произносить"
+                },
+                {
+                  "ko": "따라 하다",
+                  "translation_ru": "повторять"
+                },
+                {
+                  "ko": "외우다",
+                  "translation_ru": "заучивать"
+                },
+                {
+                  "ko": "평소",
+                  "translation_ru": "обычно"
+                },
+                {
+                  "ko": "반복하다",
+                  "translation_ru": "повторять"
+                },
+                {
+                  "ko": "보관하다",
+                  "translation_ru": "хранить"
+                },
+                {
+                  "ko": "기억하다",
+                  "translation_ru": "запоминать"
+                },
+                {
+                  "ko": "취업하다",
+                  "translation_ru": "устроиться на работу"
+                },
+                {
+                  "ko": "지도",
+                  "translation_ru": "карта"
+                }
+              ]
             }
           ]
         }
@@ -1459,15 +1702,58 @@
           "items": [
             {
               "ko": "제안하다",
-              "translation_ru": "предлагать"
+              "translation_ru": "предлагать",
+              "group": "스터디"
             },
             {
               "ko": "답답하다",
-              "translation_ru": "быть томительно, тяжело на душе; душно"
+              "translation_ru": "быть томительно, тяжело на душе; душно",
+              "group": "스터디"
             },
             {
               "ko": "자신",
-              "translation_ru": "уверенность (в себе); сам"
+              "translation_ru": "уверенность (в себе); сам",
+              "group": "스터디"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "스터디",
+              "title_ru": "Учебные встречи",
+              "items": [
+                {
+                  "ko": "스터디",
+                  "translation_ru": "учебная группа"
+                },
+                {
+                  "ko": "모임",
+                  "translation_ru": "встреча, клуб"
+                },
+                {
+                  "ko": "포스터",
+                  "translation_ru": "плакат"
+                },
+                {
+                  "ko": "요리하다",
+                  "translation_ru": "готовить"
+                },
+                {
+                  "ko": "도움이 되다",
+                  "translation_ru": "быть полезным"
+                },
+                {
+                  "ko": "게다가",
+                  "translation_ru": "к тому же"
+                },
+                {
+                  "ko": "누구나",
+                  "translation_ru": "любой"
+                },
+                {
+                  "ko": "권유하다",
+                  "translation_ru": "предлагать"
+                }
+              ]
             }
           ]
         }
@@ -1573,51 +1859,91 @@
           "items": [
             {
               "ko": "사물놀이",
-              "translation_ru": "самульнори (традиционная музыка на ударных)"
+              "translation_ru": "самульнори (традиционная музыка на ударных)",
+              "group": "연주"
             },
             {
               "ko": "회장",
-              "translation_ru": "председатель (клуба)"
+              "translation_ru": "председатель (клуба)",
+              "group": "연주"
             },
             {
               "ko": "악기",
-              "translation_ru": "музыкальный инструмент"
+              "translation_ru": "музыкальный инструмент",
+              "group": "연주"
             },
             {
               "ko": "북",
-              "translation_ru": "барабан (пук)"
+              "translation_ru": "барабан (пук)",
+              "group": "연주"
             },
             {
               "ko": "장구",
-              "translation_ru": "чангу (барабан-«песочные часы»)"
+              "translation_ru": "чангу (барабан-«песочные часы»)",
+              "group": "연주"
             },
             {
               "ko": "징",
-              "translation_ru": "чин (большой гонг)"
+              "translation_ru": "чин (большой гонг)",
+              "group": "연주"
             },
             {
               "ko": "꽹과리",
-              "translation_ru": "кввэнгвари (малый гонг)"
+              "translation_ru": "кввэнгвари (малый гонг)",
+              "group": "연주"
             },
             {
               "ko": "연주하다",
-              "translation_ru": "исполнять (на инструменте)"
+              "translation_ru": "исполнять (на инструменте)",
+              "group": "연주"
             },
             {
               "ko": "참가하다",
-              "translation_ru": "участвовать"
+              "translation_ru": "участвовать",
+              "group": "연주"
             },
             {
               "ko": "끝",
-              "translation_ru": "конец"
+              "translation_ru": "конец",
+              "group": "연주"
             },
             {
               "ko": "방법",
-              "translation_ru": "способ, метод"
+              "translation_ru": "способ, метод",
+              "group": "연주"
             },
             {
               "ko": "신청서",
-              "translation_ru": "заявление, анкета"
+              "translation_ru": "заявление, анкета",
+              "group": "연주"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "연주",
+              "title_ru": "Игра на инструментах",
+              "items": [
+                {
+                  "ko": "전통 악기",
+                  "translation_ru": "традиционные инструменты"
+                },
+                {
+                  "ko": "체험하다",
+                  "translation_ru": "испытывать на себе"
+                },
+                {
+                  "ko": "끝으로",
+                  "translation_ru": "в заключение"
+                },
+                {
+                  "ko": "참석하다",
+                  "translation_ru": "присутствовать"
+                },
+                {
+                  "ko": "축제",
+                  "translation_ru": "фестиваль"
+                }
+              ]
             }
           ]
         }
@@ -1761,27 +2087,95 @@
           "items": [
             {
               "ko": "댄스",
-              "translation_ru": "танцы"
+              "translation_ru": "танцы",
+              "group": "동아리"
             },
             {
               "ko": "모집",
-              "translation_ru": "набор (участников)"
+              "translation_ru": "набор (участников)",
+              "group": "동아리"
             },
             {
               "ko": "신입생",
-              "translation_ru": "первокурсник; новичок"
+              "translation_ru": "первокурсник; новичок",
+              "group": "동아리"
             },
             {
               "ko": "재작년",
-              "translation_ru": "позапрошлый год"
+              "translation_ru": "позапрошлый год",
+              "group": "시기"
             },
             {
               "ko": "대회",
-              "translation_ru": "соревнование, конкурс"
+              "translation_ru": "соревнование, конкурс",
+              "group": "동아리"
             },
             {
               "ko": "환영하다",
-              "translation_ru": "приветствовать"
+              "translation_ru": "приветствовать",
+              "group": "동아리"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "시기",
+              "title_ru": "Время",
+              "items": [
+                {
+                  "ko": "작년",
+                  "translation_ru": "прошлый год"
+                },
+                {
+                  "ko": "올해",
+                  "translation_ru": "этот год"
+                },
+                {
+                  "ko": "내년",
+                  "translation_ru": "следующий год"
+                },
+                {
+                  "ko": "학기",
+                  "translation_ru": "семестр"
+                },
+                {
+                  "ko": "매주",
+                  "translation_ru": "каждую неделю"
+                },
+                {
+                  "ko": "저녁",
+                  "translation_ru": "вечер"
+                }
+              ]
+            },
+            {
+              "title": "동아리",
+              "title_ru": "Клуб",
+              "items": [
+                {
+                  "ko": "학생회관",
+                  "translation_ru": "студенческий центр"
+                },
+                {
+                  "ko": "동아리방",
+                  "translation_ru": "комната клуба"
+                },
+                {
+                  "ko": "초보자",
+                  "translation_ru": "новичок"
+                },
+                {
+                  "ko": "회원",
+                  "translation_ru": "член клуба"
+                },
+                {
+                  "ko": "상",
+                  "translation_ru": "награда"
+                },
+                {
+                  "ko": "받다",
+                  "translation_ru": "получать"
+                }
+              ]
             }
           ]
         }
@@ -1792,6 +2186,108 @@
       "page_role": "content",
       "source_photo": "IMG_0780",
       "blocks": [
+        {
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "모집",
+              "title_ru": "Набор в клуб",
+              "items": [
+                {
+                  "ko": "회원 모집",
+                  "translation_ru": "набор участников"
+                },
+                {
+                  "ko": "가입하다",
+                  "translation_ru": "вступать"
+                },
+                {
+                  "ko": "신청하다",
+                  "translation_ru": "подавать заявку"
+                },
+                {
+                  "ko": "환영하다",
+                  "translation_ru": "приветствовать"
+                },
+                {
+                  "ko": "누구나",
+                  "translation_ru": "любой"
+                },
+                {
+                  "ko": "초보자",
+                  "translation_ru": "новичок"
+                },
+                {
+                  "ko": "신입생",
+                  "translation_ru": "новичок, первокурсник"
+                }
+              ]
+            },
+            {
+              "title": "시간",
+              "title_ru": "Время и место",
+              "items": [
+                {
+                  "ko": "매주",
+                  "translation_ru": "каждую неделю"
+                },
+                {
+                  "ko": "저녁",
+                  "translation_ru": "вечер"
+                },
+                {
+                  "ko": "학생회관",
+                  "translation_ru": "студенческий центр"
+                },
+                {
+                  "ko": "동아리방",
+                  "translation_ru": "комната клуба"
+                },
+                {
+                  "ko": "일주일",
+                  "translation_ru": "неделя"
+                }
+              ]
+            },
+            {
+              "title": "변화",
+              "title_ru": "Рост и падение",
+              "items": [
+                {
+                  "ko": "증가하다",
+                  "translation_ru": "увеличиваться"
+                },
+                {
+                  "ko": "감소하다",
+                  "translation_ru": "уменьшаться"
+                },
+                {
+                  "ko": "반면에",
+                  "translation_ru": "зато"
+                },
+                {
+                  "ko": "높아지다",
+                  "translation_ru": "становиться выше"
+                },
+                {
+                  "ko": "낮아지다",
+                  "translation_ru": "становиться ниже"
+                },
+                {
+                  "ko": "비율",
+                  "translation_ru": "доля"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "writing-club",
           "toc_section": "쓰기",
@@ -1902,15 +2398,104 @@
           "items": [
             {
               "ko": "늘다",
-              "translation_ru": "увеличиваться, расти"
+              "translation_ru": "увеличиваться, расти",
+              "group": "여가"
             },
             {
               "ko": "직장인",
-              "translation_ru": "работающий человек, служащий"
+              "translation_ru": "работающий человек, служащий",
+              "group": "여가"
             },
             {
               "ko": "즐기다",
-              "translation_ru": "наслаждаться, увлекаться"
+              "translation_ru": "наслаждаться, увлекаться",
+              "group": "여가"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "여가",
+              "title_ru": "Свободное время",
+              "items": [
+                {
+                  "ko": "독서",
+                  "translation_ru": "чтение"
+                },
+                {
+                  "ko": "음악 감상",
+                  "translation_ru": "музыка"
+                },
+                {
+                  "ko": "컴퓨터 게임",
+                  "translation_ru": "компьютерные игры"
+                },
+                {
+                  "ko": "헬스",
+                  "translation_ru": "фитнес"
+                },
+                {
+                  "ko": "운동",
+                  "translation_ru": "спорт"
+                },
+                {
+                  "ko": "등산",
+                  "translation_ru": "альпинизм"
+                },
+                {
+                  "ko": "주말",
+                  "translation_ru": "выходные"
+                },
+                {
+                  "ko": "산책",
+                  "translation_ru": "прогулка"
+                },
+                {
+                  "ko": "그래프",
+                  "translation_ru": "график"
+                },
+                {
+                  "ko": "응답",
+                  "translation_ru": "ответ"
+                }
+              ]
+            },
+            {
+              "title": "스포츠",
+              "title_ru": "Спорт и хобби",
+              "items": [
+                {
+                  "ko": "공을 차다",
+                  "translation_ru": "бить по мячу"
+                },
+                {
+                  "ko": "축구",
+                  "translation_ru": "футбол"
+                },
+                {
+                  "ko": "야구",
+                  "translation_ru": "бейсбол"
+                },
+                {
+                  "ko": "농구",
+                  "translation_ru": "баскетбол"
+                },
+                {
+                  "ko": "배구",
+                  "translation_ru": "волейбол"
+                },
+                {
+                  "ko": "수영",
+                  "translation_ru": "плавание"
+                },
+                {
+                  "ko": "캠핑",
+                  "translation_ru": "кемпинг"
+                },
+                {
+                  "ko": "낚시",
+                  "translation_ru": "рыбалка"
+                }
+              ]
             }
           ]
         },

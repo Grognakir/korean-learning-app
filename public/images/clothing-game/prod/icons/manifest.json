@@ -1,0 +1,247 @@
+[
+  {
+    "id": "dress_shirt",
+    "ko": "와이셔츠",
+    "slot": "top",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "tshirt",
+    "ko": "티셔츠",
+    "slot": "top",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "blouse",
+    "ko": "블라우스",
+    "slot": "top",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "pants",
+    "ko": "바지",
+    "slot": "bottom",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "jeans",
+    "ko": "청바지",
+    "slot": "bottom",
+    "recolorable": false,
+    "patternable": false
+  },
+  {
+    "id": "skirt",
+    "ko": "치마",
+    "slot": "bottom",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "shorts",
+    "ko": "반바지",
+    "slot": "bottom",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "suit",
+    "ko": "정장/양복",
+    "slot": "full",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "dress",
+    "ko": "원피스",
+    "slot": "full",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "tracksuit",
+    "ko": "운동복",
+    "slot": "full",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "hiking_wear",
+    "ko": "등산복",
+    "slot": "full",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "hanbok",
+    "ko": "한복",
+    "slot": "full",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "school_uniform",
+    "ko": "교복",
+    "slot": "full",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "swimsuit",
+    "ko": "수영복",
+    "slot": "full",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "jacket",
+    "ko": "재킷",
+    "slot": "outer",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "coat",
+    "ko": "코트",
+    "slot": "outer",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "padded_jacket",
+    "ko": "점퍼",
+    "slot": "outer",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "vest",
+    "ko": "조끼",
+    "slot": "outer",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "raincoat",
+    "ko": "비옷",
+    "slot": "outer",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "dress_shoes",
+    "ko": "구두",
+    "slot": "shoes",
+    "recolorable": true,
+    "patternable": false
+  },
+  {
+    "id": "sneakers",
+    "ko": "운동화",
+    "slot": "shoes",
+    "recolorable": true,
+    "patternable": false
+  },
+  {
+    "id": "boots",
+    "ko": "부츠",
+    "slot": "shoes",
+    "recolorable": true,
+    "patternable": false
+  },
+  {
+    "id": "hiking_boots",
+    "ko": "등산화",
+    "slot": "shoes",
+    "recolorable": true,
+    "patternable": false
+  },
+  {
+    "id": "slippers",
+    "ko": "슬리퍼",
+    "slot": "shoes",
+    "recolorable": true,
+    "patternable": false
+  },
+  {
+    "id": "socks",
+    "ko": "양말",
+    "slot": "shoes",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "hat",
+    "ko": "모자",
+    "slot": "head",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "glasses",
+    "ko": "안경",
+    "slot": "head",
+    "recolorable": false,
+    "patternable": false
+  },
+  {
+    "id": "tie",
+    "ko": "넥타이",
+    "slot": "neck",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "muffler",
+    "ko": "목도리",
+    "slot": "neck",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "scarf",
+    "ko": "스카프",
+    "slot": "neck",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "gloves",
+    "ko": "장갑",
+    "slot": "hands",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "ring",
+    "ko": "반지",
+    "slot": "hands",
+    "recolorable": false,
+    "patternable": false
+  },
+  {
+    "id": "watch",
+    "ko": "시계",
+    "slot": "hands",
+    "recolorable": true,
+    "patternable": false
+  },
+  {
+    "id": "bag",
+    "ko": "가방",
+    "slot": "other",
+    "recolorable": true,
+    "patternable": true
+  },
+  {
+    "id": "earrings",
+    "ko": "귀걸이",
+    "slot": "other",
+    "recolorable": false,
+    "patternable": false
+  }
+]

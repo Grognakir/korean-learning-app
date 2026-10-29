@@ -4,7 +4,8 @@ import { displayName, getProfileRow, requireUser } from "@/features/auth/require
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
-import { buildLessonNav } from "@/features/learning/lessonNav";
+import { buildLessonNav, findLessonToc } from "@/features/learning/lessonNav";
+import { LessonSticker } from "@/features/lessonSticker/LessonSticker";
 import { resolveBlockAssets, textbookAssetPrefix } from "@/features/learning/resolveBlockAssets";
 import type { Block, TextbookPageRow } from "@/features/learning/types";
 import styles from "../lesson.module.css";
@@ -68,6 +69,7 @@ export default async function LessonSectionPage({
   const orderedBlocks = [...vocabBlocks, ...otherBlocks];
 
   const nav = buildLessonNav(pages, textbookSlug, lessonNumber, sectionKey);
+  const sticker = findLessonToc(pages)?.sticker;
 
   const heading = (
     <h1 className={styles.title}>
@@ -147,6 +149,7 @@ export default async function LessonSectionPage({
         </div>
       </main>
 
+      {sticker && <LessonSticker config={sticker} />}
       <BottomTabBar />
     </div>
   );

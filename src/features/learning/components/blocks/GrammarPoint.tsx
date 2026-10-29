@@ -18,6 +18,19 @@ export function GrammarPoint({
   dictionaryRef?: string | null;
 }) {
   const seenVocab = new Set<string>();
+  const actions = (variant: "top" | "footer" | "standalone") => (
+    <span
+      className={`${styles.grammarActions} ${
+        variant === "top"
+          ? styles.grammarActionsTop
+          : variant === "footer"
+            ? styles.grammarActionsFooter
+            : ""
+      }`}
+    >
+      <GrammarDetailsButton block={block} dictionaryRef={dictionaryRef} />
+    </span>
+  );
 
   return (
     <div id={id} className={styles.block}>
@@ -42,7 +55,7 @@ export function GrammarPoint({
                 strokeLinejoin="round"
               />
             </svg>
-            <GrammarDetailsButton block={block} dictionaryRef={dictionaryRef} variant="summary" />
+            {actions("top")}
           </summary>
           <div className={styles.grammarNote}>
             <RichExplanation
@@ -54,7 +67,10 @@ export function GrammarPoint({
             {block.rules_table ? (
               <div className={styles.rulesSection}>
                 <span className={styles.rulesLabel}>Правила</span>
-                <NoteTable head={block.rules_table.head} rows={block.rules_table.rows} />
+                <NoteTable
+                  head={block.rules_table.head}
+                  rows={block.rules_table.rows}
+                />
               </div>
             ) : (
               block.rules &&
@@ -69,7 +85,7 @@ export function GrammarPoint({
                 </div>
               )
             )}
-            <GrammarDetailsButton block={block} dictionaryRef={dictionaryRef} variant="footer" />
+            {actions("footer")}
           </div>
         </details>
       ) : (
@@ -78,13 +94,16 @@ export function GrammarPoint({
       <div className={styles.examples}>
         {block.examples.map((example, i) => (
           <p key={i} className={`${styles.example} kr`}>
-            {highlightDialogueSpeakers(example, vocabItems, `grammar-${i}-`, seenVocab)}
+            {highlightDialogueSpeakers(
+              example,
+              vocabItems,
+              `grammar-${i}-`,
+              seenVocab,
+            )}
           </p>
         ))}
       </div>
-      {!block.explanation && (
-        <GrammarDetailsButton block={block} dictionaryRef={dictionaryRef} variant="standalone" />
-      )}
+      {!block.explanation && actions("standalone")}
     </div>
   );
 }

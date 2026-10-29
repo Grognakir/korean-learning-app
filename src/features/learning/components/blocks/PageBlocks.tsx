@@ -1,4 +1,8 @@
-import type { Block, HintBlock, VocabListBlock } from "@/features/learning/types";
+import type {
+  Block,
+  HintBlock,
+  VocabListBlock,
+} from "@/features/learning/types";
 import { vocabKeysInText, type VocabItem } from "./vocabHighlight";
 import { LessonToc } from "./LessonToc";
 import { TextBlock } from "./TextBlock";
@@ -69,6 +73,7 @@ function blockTexts(block: Block): string[] {
     return [
       ...block.example.dialogue,
       ...block.template,
+      ...block.items.flatMap((item) => item.template ?? []),
       ...block.items.flatMap((item) => item.given),
     ];
   }
@@ -77,7 +82,8 @@ function blockTexts(block: Block): string[] {
 
 function uniqueVocab(items: VocabItem[]): VocabItem[] {
   return items.filter(
-    (item, index) => items.findIndex((candidate) => candidate.ko === item.ko) === index,
+    (item, index) =>
+      items.findIndex((candidate) => candidate.ko === item.ko) === index,
   );
 }
 
@@ -120,7 +126,8 @@ function vocabForEachBlock(
  * дополнительным заданием того же упражнения (см. TextBlock.exercise_title). */
 function exerciseTitleOf(block: Block): string | null {
   if (block.type === "grammar_exercise") return block.exercise_title;
-  if (block.type === "text" && block.exercise_title) return block.exercise_title;
+  if (block.type === "text" && block.exercise_title)
+    return block.exercise_title;
   return null;
 }
 
@@ -174,7 +181,8 @@ export function PageBlocks({
       {blocks.map((block, i) => {
         switch (block.type) {
           case "lesson_toc":
-            if (textbookSlug == null || lessonNumber == null || !blockTypeById) return null;
+            if (textbookSlug == null || lessonNumber == null || !blockTypeById)
+              return null;
             return (
               <LessonToc
                 key={i}
@@ -191,19 +199,14 @@ export function PageBlocks({
                 id={block.id}
                 block={block}
                 vocabItems={blockVocab[i]}
-                relatedHint={
-                  block.id ? hintMap.get(block.id) : undefined
-                }
+                relatedHint={block.id ? hintMap.get(block.id) : undefined}
                 titleSuffix={exerciseTitleIndex[i]}
               />
             );
           case "vocab_list":
             return <VocabList key={i} id={block.id} block={block} />;
           case "hint":
-            if (
-              block.related_text_ref &&
-              textIds.has(block.related_text_ref)
-            ) {
+            if (block.related_text_ref && textIds.has(block.related_text_ref)) {
               return null;
             }
             return <Hint key={i} id={block.id} block={block} />;
@@ -214,13 +217,19 @@ export function PageBlocks({
           case "phrase_gallery":
             return <PhraseGallery key={i} id={block.id} block={block} />;
           case "grammar_point":
-            return <GrammarPoint
+            return (
+              <GrammarPoint
                 key={i}
                 id={block.id}
                 block={block}
                 vocabItems={blockVocab[i]}
-                dictionaryRef={grammarDictionaryRef(textbookSlug, lessonNumber, block.id)}
-              />;
+                dictionaryRef={grammarDictionaryRef(
+                  textbookSlug,
+                  lessonNumber,
+                  block.id,
+                )}
+              />
+            );
           case "grammar_exercise":
             return (
               <GrammarExercise
@@ -234,7 +243,9 @@ export function PageBlocks({
               />
             );
           case "comprehension_exercise":
-            return <ComprehensionExercise key={i} id={block.id} block={block} />;
+            return (
+              <ComprehensionExercise key={i} id={block.id} block={block} />
+            );
           case "writing_exercise":
             return <WritingExercise key={i} id={block.id} block={block} />;
           case "pronunciation":

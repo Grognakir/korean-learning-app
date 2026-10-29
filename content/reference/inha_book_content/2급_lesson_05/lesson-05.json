@@ -228,43 +228,129 @@
           "items": [
             {
               "ko": "깜짝",
-              "translation_ru": "внезапно, неожиданно (깜짝 파티 — вечеринка-сюрприз)"
+              "translation_ru": "внезапно, неожиданно (깜짝 파티 — вечеринка-сюрприз)",
+              "group": "부사"
             },
             {
               "ko": "몰래",
-              "translation_ru": "тайком, украдкой"
+              "translation_ru": "тайком, украдкой",
+              "group": "부사"
             },
             {
               "ko": "미역국",
-              "translation_ru": "суп из морской капусты (традиционно едят в день рождения)"
+              "translation_ru": "суп из морской капусты (традиционно едят в день рождения)",
+              "group": "생일"
             },
             {
               "ko": "양초",
-              "translation_ru": "свеча"
+              "translation_ru": "свеча",
+              "group": "생일"
             },
             {
               "ko": "풍선",
-              "translation_ru": "воздушный шарик"
+              "translation_ru": "воздушный шарик",
+              "group": "생일"
             },
             {
               "ko": "싸우다",
-              "translation_ru": "ссориться, драться"
+              "translation_ru": "ссориться, драться",
+              "group": "이유"
             },
             {
               "ko": "다이어트",
-              "translation_ru": "диета"
+              "translation_ru": "диета",
+              "group": "이유"
             },
             {
               "ko": "영화감독",
-              "translation_ru": "кинорежиссёр"
+              "translation_ru": "кинорежиссёр",
+              "group": "이유"
             },
             {
               "ko": "우산",
-              "translation_ru": "зонт"
+              "translation_ru": "зонт",
+              "group": "이유"
             },
             {
               "ko": "장마",
-              "translation_ru": "сезон дождей"
+              "translation_ru": "сезон дождей",
+              "group": "이유"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "부사",
+              "title_ru": "Наречия",
+              "items": [
+                {
+                  "ko": "깜빡",
+                  "translation_ru": "на миг, совсем (забыть)"
+                },
+                {
+                  "ko": "잠깐",
+                  "translation_ru": "ненадолго"
+                }
+              ]
+            },
+            {
+              "title": "생일",
+              "title_ru": "Вечеринка",
+              "items": [
+                {
+                  "ko": "케이크",
+                  "translation_ru": "торт"
+                },
+                {
+                  "ko": "파티",
+                  "translation_ru": "вечеринка"
+                },
+                {
+                  "ko": "생일",
+                  "translation_ru": "день рождения"
+                },
+                {
+                  "ko": "어버이날",
+                  "translation_ru": "День родителей"
+                },
+                {
+                  "ko": "선물",
+                  "translation_ru": "подарок"
+                }
+              ]
+            },
+            {
+              "title": "이유",
+              "title_ru": "Причины",
+              "items": [
+                {
+                  "ko": "이불",
+                  "translation_ru": "одеяло"
+                },
+                {
+                  "ko": "덮다",
+                  "translation_ru": "накрывать"
+                },
+                {
+                  "ko": "늦다",
+                  "translation_ru": "опаздывать"
+                },
+                {
+                  "ko": "시험 기간",
+                  "translation_ru": "период экзаменов"
+                },
+                {
+                  "ko": "빈자리",
+                  "translation_ru": "свободное место"
+                },
+                {
+                  "ko": "열람실",
+                  "translation_ru": "читальный зал"
+                },
+                {
+                  "ko": "카메라",
+                  "translation_ru": "фотоаппарат"
+                }
+              ]
             }
           ]
         }
@@ -847,71 +933,230 @@
           "items": [
             {
               "ko": "식사하다",
-              "translation_ru": "принимать пищу, есть"
+              "translation_ru": "принимать пищу, есть",
+              "group": "방문"
             },
             {
               "ko": "방문하다",
-              "translation_ru": "посещать, наносить визит"
+              "translation_ru": "посещать, наносить визит",
+              "group": "방문"
             },
             {
               "ko": "초대",
-              "translation_ru": "приглашение"
+              "translation_ru": "приглашение",
+              "group": "방문"
             },
             {
               "ko": "떡",
-              "translation_ru": "рисовые лепёшки (ток)"
+              "translation_ru": "рисовые лепёшки (ток)",
+              "group": "방문"
             },
             {
               "ko": "조언",
-              "translation_ru": "совет"
+              "translation_ru": "совет",
+              "group": "방문"
             },
             {
               "ko": "잊어버리다",
-              "translation_ru": "забывать (совсем)"
+              "translation_ru": "забывать (совсем)",
+              "group": "감정"
             },
             {
               "ko": "실수",
-              "translation_ru": "ошибка, промах"
+              "translation_ru": "ошибка, промах",
+              "group": "감정"
             },
             {
               "ko": "보람",
-              "translation_ru": "чувство удовлетворения, отдача (от дела)"
+              "translation_ru": "чувство удовлетворения, отдача (от дела)",
+              "group": "감정"
             },
             {
               "ko": "느끼다",
-              "translation_ru": "чувствовать, ощущать"
+              "translation_ru": "чувствовать, ощущать",
+              "group": "감정"
             },
             {
               "ko": "콘서트",
-              "translation_ru": "концерт"
+              "translation_ru": "концерт",
+              "group": "취미"
             },
             {
               "ko": "중고품",
-              "translation_ru": "подержанная вещь, б/у товар"
+              "translation_ru": "подержанная вещь, б/у товар",
+              "group": "중고"
             },
             {
               "ko": "신입 사원",
-              "translation_ru": "новый сотрудник (недавно принятый на работу)"
+              "translation_ru": "новый сотрудник (недавно принятый на работу)",
+              "group": "취미"
             },
             {
               "ko": "지루하다",
-              "translation_ru": "быть скучным"
+              "translation_ru": "быть скучным",
+              "group": "감정"
             },
             {
               "ko": "부탁",
-              "translation_ru": "просьба"
+              "translation_ru": "просьба",
+              "group": "관계"
             },
             {
               "ko": "거절하다",
-              "translation_ru": "отказывать(ся)"
+              "translation_ru": "отказывать(ся)",
+              "group": "관계"
             },
             {
               "ko": "부끄럽다",
-              "translation_ru": "стесняться, стыдиться"
+              "translation_ru": "стесняться, стыдиться",
+              "group": "감정"
             },
             {
               "ko": "자신감",
-              "translation_ru": "уверенность в себе"
+              "translation_ru": "уверенность в себе",
+              "group": "감정"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "방문",
+              "title_ru": "Приглашение в гости",
+              "items": [
+                {
+                  "ko": "빈손",
+                  "translation_ru": "пустые руки"
+                },
+                {
+                  "ko": "도움",
+                  "translation_ru": "помощь"
+                },
+                {
+                  "ko": "놀다",
+                  "translation_ru": "гулять, веселиться"
+                },
+                {
+                  "ko": "집들이",
+                  "translation_ru": "новоселье"
+                },
+                {
+                  "ko": "선물",
+                  "translation_ru": "подарок"
+                }
+              ]
+            },
+            {
+              "title": "감정",
+              "title_ru": "Чувства и ощущения",
+              "items": [
+                {
+                  "ko": "익숙해지다",
+                  "translation_ru": "привыкать"
+                },
+                {
+                  "ko": "쳐다보다",
+                  "translation_ru": "смотреть на"
+                },
+                {
+                  "ko": "기쁘다",
+                  "translation_ru": "радостный"
+                },
+                {
+                  "ko": "걱정하다",
+                  "translation_ru": "беспокоиться"
+                }
+              ]
+            },
+            {
+              "title": "관계",
+              "title_ru": "Общение",
+              "items": [
+                {
+                  "ko": "연락하다",
+                  "translation_ru": "связываться"
+                },
+                {
+                  "ko": "소개받다",
+                  "translation_ru": "быть представленным"
+                }
+              ]
+            },
+            {
+              "title": "취미",
+              "title_ru": "Клубы и музыка",
+              "items": [
+                {
+                  "ko": "동호회",
+                  "translation_ru": "клуб по интересам"
+                },
+                {
+                  "ko": "기타",
+                  "translation_ru": "гитара"
+                },
+                {
+                  "ko": "악보",
+                  "translation_ru": "ноты"
+                },
+                {
+                  "ko": "연주하다",
+                  "translation_ru": "играть (на инструменте)"
+                },
+                {
+                  "ko": "빌려주다",
+                  "translation_ru": "одалживать"
+                },
+                {
+                  "ko": "가수",
+                  "translation_ru": "певец"
+                },
+                {
+                  "ko": "공연",
+                  "translation_ru": "выступление"
+                },
+                {
+                  "ko": "경기",
+                  "translation_ru": "матч, игра"
+                }
+              ]
+            },
+            {
+              "title": "중고",
+              "title_ru": "Подержанное",
+              "items": [
+                {
+                  "ko": "중고차",
+                  "translation_ru": "подержанный автомобиль"
+                }
+              ]
+            },
+            {
+              "title": "횟수",
+              "title_ru": "Счётные слова",
+              "items": [
+                {
+                  "ko": "번",
+                  "translation_ru": "раз"
+                },
+                {
+                  "ko": "병",
+                  "translation_ru": "бутылка"
+                },
+                {
+                  "ko": "권",
+                  "translation_ru": "том, книга (счётное)"
+                },
+                {
+                  "ko": "잔",
+                  "translation_ru": "чашка, стакан"
+                },
+                {
+                  "ko": "시간",
+                  "translation_ru": "час"
+                },
+                {
+                  "ko": "며칠",
+                  "translation_ru": "несколько дней"
+                }
+              ]
             }
           ]
         },
@@ -1515,15 +1760,54 @@
           "items": [
             {
               "ko": "양로원",
-              "translation_ru": "дом престарелых"
+              "translation_ru": "дом престарелых",
+              "group": "봉사"
             },
             {
               "ko": "의상",
-              "translation_ru": "костюм, наряд (здесь — традиционный костюм)"
+              "translation_ru": "костюм, наряд (здесь — традиционный костюм)",
+              "group": "봉사"
             },
             {
               "ko": "어른",
-              "translation_ru": "взрослый; здесь также — старшие, пожилые люди"
+              "translation_ru": "взрослый; здесь также — старшие, пожилые люди",
+              "group": "봉사"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "봉사",
+              "title_ru": "Волонтёрство",
+              "items": [
+                {
+                  "ko": "봉사활동",
+                  "translation_ru": "волонтёрство"
+                },
+                {
+                  "ko": "청소하다",
+                  "translation_ru": "убирать"
+                },
+                {
+                  "ko": "노래",
+                  "translation_ru": "песня"
+                },
+                {
+                  "ko": "부르다",
+                  "translation_ru": "петь"
+                },
+                {
+                  "ko": "기뻐하다",
+                  "translation_ru": "радоваться"
+                },
+                {
+                  "ko": "모습",
+                  "translation_ru": "вид, облик"
+                },
+                {
+                  "ko": "권유하다",
+                  "translation_ru": "предлагать, приглашать"
+                }
+              ]
             }
           ]
         }
@@ -1634,15 +1918,68 @@
           "items": [
             {
               "ko": "집들이",
-              "translation_ru": "новоселье"
+              "translation_ru": "новоселье",
+              "group": "집들이"
             },
             {
               "ko": "휴지",
-              "translation_ru": "туалетная бумага, салфетки"
+              "translation_ru": "туалетная бумага, салфетки",
+              "group": "선물"
             },
             {
               "ko": "세제",
-              "translation_ru": "моющее средство"
+              "translation_ru": "моющее средство",
+              "group": "선물"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "집들이",
+              "title_ru": "Новоселье",
+              "items": [
+                {
+                  "ko": "이사",
+                  "translation_ru": "переезд"
+                },
+                {
+                  "ko": "손님",
+                  "translation_ru": "гость"
+                },
+                {
+                  "ko": "축하하다",
+                  "translation_ru": "поздравлять"
+                },
+                {
+                  "ko": "건물",
+                  "translation_ru": "здание"
+                },
+                {
+                  "ko": "구경",
+                  "translation_ru": "осмотр"
+                }
+              ]
+            },
+            {
+              "title": "선물",
+              "title_ru": "Подарки",
+              "items": [
+                {
+                  "ko": "선물",
+                  "translation_ru": "подарок"
+                },
+                {
+                  "ko": "비누",
+                  "translation_ru": "мыло"
+                },
+                {
+                  "ko": "수건",
+                  "translation_ru": "полотенце"
+                },
+                {
+                  "ko": "생기다",
+                  "translation_ru": "появляться, случаться"
+                }
+              ]
             }
           ]
         }
@@ -1774,31 +2111,112 @@
           "items": [
             {
               "ko": "동문회",
-              "translation_ru": "ассоциация выпускников, встреча выпускников"
+              "translation_ru": "ассоциация выпускников, встреча выпускников",
+              "group": "대학"
             },
             {
               "ko": "졸업생",
-              "translation_ru": "выпускник"
+              "translation_ru": "выпускник",
+              "group": "대학"
             },
             {
               "ko": "여러분",
-              "translation_ru": "вы все (уважительное обращение к группе)"
+              "translation_ru": "вы все (уважительное обращение к группе)",
+              "group": "초대장"
             },
             {
               "ko": "특별하다",
-              "translation_ru": "быть особенным"
+              "translation_ru": "быть особенным",
+              "group": "초대장"
             },
             {
               "ko": "행사",
-              "translation_ru": "мероприятие"
+              "translation_ru": "мероприятие",
+              "group": "초대장"
             },
             {
               "ko": "참석하다",
-              "translation_ru": "присутствовать, участвовать"
+              "translation_ru": "присутствовать, участвовать",
+              "group": "초대장"
             },
             {
               "ko": "학생회",
-              "translation_ru": "студенческий совет"
+              "translation_ru": "студенческий совет",
+              "group": "대학"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "초대장",
+              "title_ru": "Пригласительное письмо",
+              "items": [
+                {
+                  "ko": "초대장",
+                  "translation_ru": "пригласительное"
+                },
+                {
+                  "ko": "날짜",
+                  "translation_ru": "дата"
+                },
+                {
+                  "ko": "장소",
+                  "translation_ru": "место"
+                },
+                {
+                  "ko": "시간",
+                  "translation_ru": "время"
+                },
+                {
+                  "ko": "감사드리다",
+                  "translation_ru": "выражать благодарность"
+                },
+                {
+                  "ko": "모시다",
+                  "translation_ru": "приглашать (почтительно)"
+                },
+                {
+                  "ko": "빛내다",
+                  "translation_ru": "украшать собой"
+                },
+                {
+                  "ko": "바쁘다",
+                  "translation_ru": "занятый"
+                }
+              ]
+            },
+            {
+              "title": "대학",
+              "title_ru": "Университет",
+              "items": [
+                {
+                  "ko": "대강당",
+                  "translation_ru": "большой актовый зал"
+                },
+                {
+                  "ko": "소강당",
+                  "translation_ru": "малый актовый зал"
+                },
+                {
+                  "ko": "입학생",
+                  "translation_ru": "поступивший"
+                },
+                {
+                  "ko": "본관",
+                  "translation_ru": "главный корпус"
+                },
+                {
+                  "ko": "축제",
+                  "translation_ru": "фестиваль"
+                },
+                {
+                  "ko": "공연",
+                  "translation_ru": "выступление"
+                },
+                {
+                  "ko": "올해",
+                  "translation_ru": "в этом году"
+                }
+              ]
             }
           ]
         }
@@ -1869,6 +2287,78 @@
       "page_role": "content",
       "source_photo": "IMG_0699",
       "blocks": [
+        {
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "초대장 쓰기",
+              "title_ru": "Приглашение",
+              "items": [
+                {
+                  "ko": "말하기 대회",
+                  "translation_ru": "конкурс по говорению"
+                },
+                {
+                  "ko": "대강당",
+                  "translation_ru": "большой актовый зал"
+                },
+                {
+                  "ko": "본관",
+                  "translation_ru": "главный корпус"
+                },
+                {
+                  "ko": "준비되다",
+                  "translation_ru": "быть подготовленным"
+                },
+                {
+                  "ko": "개최하다",
+                  "translation_ru": "проводить (мероприятие)"
+                },
+                {
+                  "ko": "날짜",
+                  "translation_ru": "дата"
+                },
+                {
+                  "ko": "장소",
+                  "translation_ru": "место"
+                }
+              ]
+            },
+            {
+              "title": "문장",
+              "title_ru": "Формулы",
+              "items": [
+                {
+                  "ko": "초대하다",
+                  "translation_ru": "приглашать"
+                },
+                {
+                  "ko": "참석하다",
+                  "translation_ru": "присутствовать"
+                },
+                {
+                  "ko": "바쁘다",
+                  "translation_ru": "занятый"
+                },
+                {
+                  "ko": "빛내다",
+                  "translation_ru": "украшать собой"
+                },
+                {
+                  "ko": "감사드리다",
+                  "translation_ru": "выражать благодарность"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "writing-invitation",
           "toc_section": "쓰기",
@@ -2018,51 +2508,113 @@
           "items": [
             {
               "ko": "기쁨",
-              "translation_ru": "радость"
+              "translation_ru": "радость",
+              "group": "소망"
             },
             {
               "ko": "잔치",
-              "translation_ru": "празднество, торжество, пир"
+              "translation_ru": "празднество, торжество, пир",
+              "group": "잔치"
             },
             {
               "ko": "신랑",
-              "translation_ru": "жених"
+              "translation_ru": "жених",
+              "group": "잔치"
             },
             {
               "ko": "신부",
-              "translation_ru": "невеста"
+              "translation_ru": "невеста",
+              "group": "잔치"
             },
             {
               "ko": "결혼식",
-              "translation_ru": "свадьба, церемония бракосочетания"
+              "translation_ru": "свадьба, церемония бракосочетания",
+              "group": "잔치"
             },
             {
               "ko": "돌잔치",
-              "translation_ru": "празднование первого дня рождения ребёнка"
+              "translation_ru": "празднование первого дня рождения ребёнка",
+              "group": "잔치"
             },
             {
               "ko": "태어나다",
-              "translation_ru": "родиться"
+              "translation_ru": "родиться",
+              "group": "소망"
             },
             {
               "ko": "미래",
-              "translation_ru": "будущее"
+              "translation_ru": "будущее",
+              "group": "소망"
             },
             {
               "ko": "기원하다",
-              "translation_ru": "желать, молиться о (пожелании)"
+              "translation_ru": "желать, молиться о (пожелании)",
+              "group": "소망"
             },
             {
               "ko": "환갑",
-              "translation_ru": "60-летний юбилей (традиционное празднование)"
+              "translation_ru": "60-летний юбилей (традиционное празднование)",
+              "group": "잔치"
             },
             {
               "ko": "수명",
-              "translation_ru": "продолжительность жизни"
+              "translation_ru": "продолжительность жизни",
+              "group": "소망"
             },
             {
               "ko": "장수",
-              "translation_ru": "долголетие"
+              "translation_ru": "долголетие",
+              "group": "소망"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "잔치",
+              "title_ru": "Праздники",
+              "items": [
+                {
+                  "ko": "친척",
+                  "translation_ru": "родственник"
+                },
+                {
+                  "ko": "결혼",
+                  "translation_ru": "свадьба"
+                },
+                {
+                  "ko": "축하하다",
+                  "translation_ru": "поздравлять"
+                },
+                {
+                  "ko": "손님",
+                  "translation_ru": "гость"
+                },
+                {
+                  "ko": "한복",
+                  "translation_ru": "ханбок"
+                },
+                {
+                  "ko": "신혼여행",
+                  "translation_ru": "свадебное путешествие"
+                }
+              ]
+            },
+            {
+              "title": "소망",
+              "title_ru": "Пожелания",
+              "items": [
+                {
+                  "ko": "건강",
+                  "translation_ru": "здоровье"
+                },
+                {
+                  "ko": "감사",
+                  "translation_ru": "благодарность"
+                },
+                {
+                  "ko": "옛날",
+                  "translation_ru": "старые времена"
+                }
+              ]
             }
           ]
         },

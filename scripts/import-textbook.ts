@@ -39,6 +39,12 @@ const LESSON_DIR_2_7 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_07");
 const LESSON_DIR_2_8 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_08");
 const LESSON_DIR_2_9 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_09");
 const LESSON_DIR_2_10 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_10");
+const LESSON_DIR_2_11 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_11");
+const LESSON_DIR_2_12 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_12");
+const LESSON_DIR_2_13 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_13");
+const LESSON_DIR_2_14 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_14");
+const LESSON_DIR_2_15 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_15");
+const LESSON_DIR_2_16 = join(REFERENCE_DIR, "inha_book_content/2급_lesson_16");
 
 const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: string[] }> = {
   7: {
@@ -84,6 +90,36 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
       "illustration_4_shared_hobbies.png",
       "illustration_5_korean_clothing.png",
     ],
+  },
+  11: {
+    path: join(LESSON_DIR_2_11, "lesson-11.json"),
+    audio: [241, 242, 243, 244],
+    images: [],
+  },
+  12: {
+    path: join(LESSON_DIR_2_12, "lesson-12.json"),
+    audio: [245, 246, 247, 248],
+    images: [],
+  },
+  13: {
+    path: join(LESSON_DIR_2_13, "lesson-13.json"),
+    audio: [249, 250, 251, 252],
+    images: [],
+  },
+  14: {
+    path: join(LESSON_DIR_2_14, "lesson-14.json"),
+    audio: [253, 254, 255, 256],
+    images: [],
+  },
+  15: {
+    path: join(LESSON_DIR_2_15, "lesson-15.json"),
+    audio: [257, 258, 259, 260],
+    images: [],
+  },
+  16: {
+    path: join(LESSON_DIR_2_16, "lesson-16.json"),
+    audio: [261, 262, 263, 264],
+    images: [],
   },
 };
 
@@ -785,7 +821,37 @@ async function main() {
     LATE_LESSONS_2[9].path,
     textbook2Lesson8NextIndex,
   );
-  await importLesson(textbook2.id, LATE_LESSONS_2[10].path, textbook2Lesson9NextIndex);
+  const textbook2Lesson10NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[10].path,
+    textbook2Lesson9NextIndex,
+  );
+  const textbook2Lesson11NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[11].path,
+    textbook2Lesson10NextIndex,
+  );
+  const textbook2Lesson12NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[12].path,
+    textbook2Lesson11NextIndex,
+  );
+  const textbook2Lesson13NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[13].path,
+    textbook2Lesson12NextIndex,
+  );
+  const textbook2Lesson14NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[14].path,
+    textbook2Lesson13NextIndex,
+  );
+  const textbook2Lesson15NextIndex = await importLesson(
+    textbook2.id,
+    LATE_LESSONS_2[15].path,
+    textbook2Lesson14NextIndex,
+  );
+  await importLesson(textbook2.id, LATE_LESSONS_2[16].path, textbook2Lesson15NextIndex);
 
   // Ассеты: только то, что реально используется этим уроком, не всё
   // содержимое справочных папок разом.
@@ -1031,6 +1097,12 @@ async function main() {
     ...LATE_LESSONS_2[8].audio,
     ...LATE_LESSONS_2[9].audio,
     ...LATE_LESSONS_2[10].audio,
+    ...LATE_LESSONS_2[11].audio,
+    ...LATE_LESSONS_2[12].audio,
+    ...LATE_LESSONS_2[13].audio,
+    ...LATE_LESSONS_2[14].audio,
+    ...LATE_LESSONS_2[15].audio,
+    ...LATE_LESSONS_2[16].audio,
   ]);
 
   console.log("Готово.");

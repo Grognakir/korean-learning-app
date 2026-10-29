@@ -1,0 +1,122 @@
+.sticker {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 19;
+  width: 112px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  filter: drop-shadow(0 3px 8px rgba(28, 27, 25, 0.25));
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (--to-compact) {
+  .sticker {
+    right: 12px;
+    bottom: calc(var(--mobile-tabbar-height) + env(safe-area-inset-bottom, 0px) + 10px);
+    width: 68px;
+  }
+}
+
+.face {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  transition: transform 0.15s ease;
+}
+
+.sticker:hover .face,
+.sticker:focus-visible .face {
+  transform: rotate(-4deg) scale(1.05);
+}
+
+.sticker:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+.ringing .face {
+  animation: ring 0.35s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ringing .face {
+    animation: none;
+  }
+}
+
+/* Окно игры: тёмный терминал во всю площадь, без светлых полей Modal. */
+.terminal {
+  background: #050a06;
+  border-color: #0a5c2a;
+  box-shadow: 0 0 40px rgba(0, 255, 102, 0.15);
+}
+
+.terminal > div:last-child {
+  padding: 0;
+}
+
+/* Крестик — квадрат в правом верхнем углу по внутренним отступам экрана
+   игры (14px сверху, 18px справа; на телефоне 12px). */
+.terminal > button[aria-label="Закрыть"] {
+  z-index: 2;
+  top: 14px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid #0fbf4f;
+  background: #050a06;
+  font-size: 26px;
+  line-height: 1;
+  color: #0fbf4f;
+}
+
+.terminal > button[aria-label="Закрыть"]:hover,
+.terminal > button[aria-label="Закрыть"]:focus-visible {
+  background: #00ff66;
+  border-color: #00ff66;
+  color: #050a06;
+  outline: none;
+}
+
+/* На телефоне игра на весь экран; inline max-width/max-height от Modal
+   перебиваются !important. */
+@media (max-width: 640px) {
+  .terminal {
+    position: fixed;
+    inset: 0;
+    width: auto;
+    max-width: none !important;
+    max-height: none !important;
+    height: 100dvh;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .terminal > button[aria-label="Закрыть"] {
+    top: 12px;
+    right: 12px;
+  }
+}

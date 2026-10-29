@@ -7,7 +7,7 @@ import { LabelInfo } from "./LabelInfo";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
-type Segment =
+export type Segment =
   { kind: "text"; text: string } | { kind: "blank"; index: number };
 
 const PROMPT_TRANSLATION =
@@ -57,7 +57,7 @@ const EXAMPLE_EMPHASIS_FALLBACK: Record<string, string[][]> = {
 // без поиска словарной формы по уже проспрягованному тексту (см. историю
 // правок: искать given-строку подстрокой в example.dialogue ломалось на
 // любом спряжении — "작다" не находится в "작으니까").
-function parseTemplate(template: string[]): Segment[][] {
+export function parseTemplate(template: string[]): Segment[][] {
   return template.map((line) => {
     const segments: Segment[] = [];
     const re = /\{(\d+)\}/g;
@@ -74,6 +74,17 @@ function parseTemplate(template: string[]): Segment[][] {
       segments.push({ kind: "text", text: line.slice(last) });
     return segments;
   });
+}
+
+export function matchesAnswers(
+  values: string[],
+  item: GrammarExerciseBlock["items"][number],
+): boolean {
+  return [item.answers, ...(item.alternatives ?? [])].some(
+    (targets) =>
+      values.length === targets.length &&
+      targets.every((target, i) => values[i]?.trim() === target.trim()),
+  );
 }
 
 function storageKey(
@@ -127,17 +138,20 @@ export function GrammarExercise({
   textbookSlug?: string;
   lessonNumber?: number;
 }) {
-  const lines = useMemo(() => parseTemplate(block.template), [block.template]);
+  const blockLines = useMemo(
+    () => parseTemplate(block.template),
+    [block.template],
+  );
   const blankIndexes = useMemo(
     () =>
       new Set(
-        lines.flatMap((line) =>
+        blockLines.flatMap((line) =>
           line.flatMap((segment) =>
             segment.kind === "blank" ? [segment.index] : [],
           ),
         ),
       ),
-    [lines],
+    [blockLines],
   );
   const expandPairCues =
     blankIndexes.size === 2 &&
@@ -191,9 +205,7 @@ export function GrammarExercise({
 
   function isCorrect(itemIndex: number): boolean {
     const values = inputs[itemIndex];
-    const targets = targetsFor(itemIndex);
-    if (!values || values.length !== targets.length) return false;
-    return targets.every((target, i) => values[i]?.trim() === target.trim());
+    return values ? matchesAnswers(values, block.items[itemIndex]) : false;
   }
 
   function selectItem(itemIndex: number) {
@@ -235,6 +247,12 @@ export function GrammarExercise({
     });
   }
 
+  const activeTemplate =
+    activeIndex !== null ? block.items[activeIndex].template : undefined;
+  const lines = useMemo(
+    () => (activeTemplate ? parseTemplate(activeTemplate) : blockLines),
+    [activeTemplate, blockLines],
+  );
   const activeValues = activeIndex !== null ? (inputs[activeIndex] ?? []) : [];
   const activeTargets = activeIndex !== null ? targetsFor(activeIndex) : [];
   const isChecked = activeIndex !== null && Boolean(checked[activeIndex]);

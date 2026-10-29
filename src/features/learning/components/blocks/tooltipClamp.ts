@@ -9,6 +9,8 @@
 // Если у предка есть data-tooltip-boundary (карточка с overflow:hidden,
 // которая иначе обрезает тултип), границы берутся от него, а не от окна;
 // тултип, не помещающийся над чипом внутри такой области, открывается под ним.
+// data-tooltip-bounds-x — то же только по горизонтали: тултип не выходит за
+// боковые края блока (вертикально блок не обрезает, под чип тултип не уходит).
 const EDGE_PADDING = 8;
 
 export function clampTooltipToViewport(tooltip: HTMLElement) {
@@ -16,8 +18,10 @@ export function clampTooltipToViewport(tooltip: HTMLElement) {
   tooltip.style.bottom = "";
   tooltip.style.top = "";
   const boundary = tooltip.closest<HTMLElement>("[data-tooltip-boundary]");
-  const bounds = boundary
-    ? boundary.getBoundingClientRect()
+  const sideBoundary =
+    boundary ?? tooltip.closest<HTMLElement>("[data-tooltip-bounds-x]");
+  const bounds = sideBoundary
+    ? sideBoundary.getBoundingClientRect()
     : { left: 0, right: window.innerWidth, top: 0 };
   const rect = tooltip.getBoundingClientRect();
   let shift = 0;

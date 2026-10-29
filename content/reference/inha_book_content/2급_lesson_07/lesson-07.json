@@ -180,67 +180,211 @@
           "items": [
             {
               "ko": "쇼핑몰",
-              "translation_ru": "интернет-магазин; торговый центр"
+              "translation_ru": "интернет-магазин; торговый центр",
+              "group": "인터넷 쇼핑"
             },
             {
               "ko": "훨씬",
-              "translation_ru": "намного, гораздо"
+              "translation_ru": "намного, гораздо",
+              "group": "비교"
             },
             {
               "ko": "공짜",
-              "translation_ru": "бесплатно, даром"
+              "translation_ru": "бесплатно, даром",
+              "group": "가격"
             },
             {
               "ko": "이따가",
-              "translation_ru": "чуть позже, попозже"
+              "translation_ru": "чуть позже, попозже",
+              "group": "비교"
             },
             {
               "ko": "비교하다",
-              "translation_ru": "сравнивать"
+              "translation_ru": "сравнивать",
+              "group": "비교"
             },
             {
               "ko": "구매",
-              "translation_ru": "покупка"
+              "translation_ru": "покупка",
+              "group": "인터넷 쇼핑"
             },
             {
               "ko": "후기",
-              "translation_ru": "отзыв, впечатления (после покупки или использования)"
+              "translation_ru": "отзыв, впечатления (после покупки или использования)",
+              "group": "인터넷 쇼핑"
             },
             {
               "ko": "상품",
-              "translation_ru": "товар"
+              "translation_ru": "товар",
+              "group": "인터넷 쇼핑"
             },
             {
               "ko": "풀다",
-              "translation_ru": "решать (задачу); развязывать"
+              "translation_ru": "решать (задачу); развязывать",
+              "group": "비교"
             },
             {
               "ko": "전부",
-              "translation_ru": "всё, целиком"
+              "translation_ru": "всё, целиком",
+              "group": "비교"
             },
             {
               "ko": "가사",
-              "translation_ru": "слова песни"
+              "translation_ru": "слова песни",
+              "group": "비교"
             },
             {
               "ko": "틀리다",
-              "translation_ru": "ошибаться, быть неверным"
+              "translation_ru": "ошибаться, быть неверным",
+              "group": "비교"
             },
             {
               "ko": "교환하다",
-              "translation_ru": "обменивать"
+              "translation_ru": "обменивать",
+              "group": "비교"
             },
             {
               "ko": "사용법",
-              "translation_ru": "способ использования, инструкция"
+              "translation_ru": "способ использования, инструкция",
+              "group": "비교"
             },
             {
               "ko": "간단하다",
-              "translation_ru": "быть простым"
+              "translation_ru": "быть простым",
+              "group": "비교"
             },
             {
               "ko": "봉투",
-              "translation_ru": "конверт; пакет"
+              "translation_ru": "конверт; пакет",
+              "group": "비교"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "인터넷 쇼핑",
+              "title_ru": "Онлайн-покупки",
+              "items": [
+                {
+                  "ko": "구매하다",
+                  "translation_ru": "покупать"
+                },
+                {
+                  "ko": "주문하다",
+                  "translation_ru": "заказывать"
+                },
+                {
+                  "ko": "결제하다",
+                  "translation_ru": "оплачивать"
+                },
+                {
+                  "ko": "배송하다",
+                  "translation_ru": "доставлять"
+                },
+                {
+                  "ko": "계산하다",
+                  "translation_ru": "оплачивать"
+                },
+                {
+                  "ko": "택배",
+                  "translation_ru": "курьерская доставка"
+                },
+                {
+                  "ko": "택배비",
+                  "translation_ru": "плата за доставку"
+                },
+                {
+                  "ko": "장바구니",
+                  "translation_ru": "корзина"
+                },
+                {
+                  "ko": "회원 가입",
+                  "translation_ru": "регистрация"
+                },
+                {
+                  "ko": "쿠폰",
+                  "translation_ru": "купон"
+                },
+                {
+                  "ko": "비밀번호",
+                  "translation_ru": "пароль"
+                },
+                {
+                  "ko": "로그인",
+                  "translation_ru": "вход"
+                },
+                {
+                  "ko": "품절",
+                  "translation_ru": "нет в наличии"
+                }
+              ]
+            },
+            {
+              "title": "가격",
+              "title_ru": "Цена и оплата",
+              "items": [
+                {
+                  "ko": "선불",
+                  "translation_ru": "предоплата"
+                },
+                {
+                  "ko": "착불",
+                  "translation_ru": "оплата при получении"
+                },
+                {
+                  "ko": "후불",
+                  "translation_ru": "постоплата"
+                },
+                {
+                  "ko": "현금",
+                  "translation_ru": "наличные"
+                },
+                {
+                  "ko": "카드",
+                  "translation_ru": "карта"
+                },
+                {
+                  "ko": "난방비",
+                  "translation_ru": "плата за отопление"
+                },
+                {
+                  "ko": "세일",
+                  "translation_ru": "распродажа"
+                },
+                {
+                  "ko": "가격",
+                  "translation_ru": "цена"
+                }
+              ]
+            },
+            {
+              "title": "비교",
+              "title_ru": "Сравнение",
+              "items": [
+                {
+                  "ko": "작성하다",
+                  "translation_ru": "писать (отзыв)"
+                },
+                {
+                  "ko": "별점",
+                  "translation_ru": "оценка звёздами"
+                },
+                {
+                  "ko": "교환",
+                  "translation_ru": "обмен"
+                },
+                {
+                  "ko": "환불",
+                  "translation_ru": "возврат денег"
+                },
+                {
+                  "ko": "반품",
+                  "translation_ru": "возврат товара"
+                },
+                {
+                  "ko": "사이즈",
+                  "translation_ru": "размер"
+                }
+              ]
             }
           ]
         }
@@ -787,55 +931,126 @@
           "items": [
             {
               "ko": "사이즈",
-              "translation_ru": "размер"
+              "translation_ru": "размер",
+              "group": "환불"
             },
             {
               "ko": "맞다",
-              "translation_ru": "подходить, быть впору; быть верным"
+              "translation_ru": "подходить, быть впору; быть верным",
+              "group": "환불"
             },
             {
               "ko": "영수증",
-              "translation_ru": "чек, квитанция"
+              "translation_ru": "чек, квитанция",
+              "group": "환불"
             },
             {
               "ko": "확인",
-              "translation_ru": "проверка, подтверждение"
+              "translation_ru": "проверка, подтверждение",
+              "group": "환불"
             },
             {
               "ko": "하늘색",
-              "translation_ru": "голубой цвет"
+              "translation_ru": "голубой цвет",
+              "group": "환불"
             },
             {
               "ko": "대신",
-              "translation_ru": "вместо, взамен"
+              "translation_ru": "вместо, взамен",
+              "group": "묘사"
             },
             {
               "ko": "흰색",
-              "translation_ru": "белый цвет"
+              "translation_ru": "белый цвет",
+              "group": "환불"
             },
             {
               "ko": "설탕",
-              "translation_ru": "сахар"
+              "translation_ru": "сахар",
+              "group": "묘사"
             },
             {
               "ko": "흔들다",
-              "translation_ru": "встряхивать; махать"
+              "translation_ru": "встряхивать; махать",
+              "group": "묘사"
             },
             {
               "ko": "화",
-              "translation_ru": "гнев, злость (화가 나다 — рассердиться)"
+              "translation_ru": "гнев, злость (화가 나다 — рассердиться)",
+              "group": "묘사"
             },
             {
               "ko": "새벽",
-              "translation_ru": "рассвет, предрассветное время"
+              "translation_ru": "рассвет, предрассветное время",
+              "group": "묘사"
             },
             {
               "ko": "클래식",
-              "translation_ru": "классическая музыка"
+              "translation_ru": "классическая музыка",
+              "group": "묘사"
             },
             {
               "ko": "가요",
-              "translation_ru": "корейская эстрадная песня"
+              "translation_ru": "корейская эстрадная песня",
+              "group": "묘사"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "환불",
+              "title_ru": "Обмен и возврат",
+              "items": [
+                {
+                  "ko": "교환",
+                  "translation_ru": "обмен"
+                },
+                {
+                  "ko": "환불하다",
+                  "translation_ru": "возвращать деньги"
+                },
+                {
+                  "ko": "반품",
+                  "translation_ru": "возврат"
+                },
+                {
+                  "ko": "신발 가게",
+                  "translation_ru": "магазин обуви"
+                },
+                {
+                  "ko": "색깔",
+                  "translation_ru": "цвет"
+                }
+              ]
+            },
+            {
+              "title": "묘사",
+              "title_ru": "Описание вещей",
+              "items": [
+                {
+                  "ko": "가볍다",
+                  "translation_ru": "лёгкий"
+                },
+                {
+                  "ko": "무겁다",
+                  "translation_ru": "тяжёлый"
+                },
+                {
+                  "ko": "튼튼하다",
+                  "translation_ru": "прочный"
+                },
+                {
+                  "ko": "불편하다",
+                  "translation_ru": "неудобный"
+                },
+                {
+                  "ko": "오래되다",
+                  "translation_ru": "старый, давний"
+                },
+                {
+                  "ko": "노트북",
+                  "translation_ru": "ноутбук"
+                }
+              ]
             }
           ]
         }
@@ -1496,19 +1711,67 @@
           "items": [
             {
               "ko": "종류",
-              "translation_ru": "вид, тип"
+              "translation_ru": "вид, тип",
+              "group": "선택"
             },
             {
               "ko": "결정",
-              "translation_ru": "решение"
+              "translation_ru": "решение",
+              "group": "선택"
             },
             {
               "ko": "추천",
-              "translation_ru": "рекомендация"
+              "translation_ru": "рекомендация",
+              "group": "선택"
             },
             {
               "ko": "발",
-              "translation_ru": "ступня, нога"
+              "translation_ru": "ступня, нога",
+              "group": "선택"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "선택",
+              "title_ru": "Выбор",
+              "items": [
+                {
+                  "ko": "신발 가게",
+                  "translation_ru": "магазин обуви"
+                },
+                {
+                  "ko": "세일",
+                  "translation_ru": "распродажа"
+                },
+                {
+                  "ko": "마트",
+                  "translation_ru": "супермаркет"
+                },
+                {
+                  "ko": "운동화",
+                  "translation_ru": "кроссовки"
+                },
+                {
+                  "ko": "등산화",
+                  "translation_ru": "горные ботинки"
+                },
+                {
+                  "ko": "무겁다",
+                  "translation_ru": "тяжёлый"
+                },
+                {
+                  "ko": "가볍다",
+                  "translation_ru": "лёгкий"
+                },
+                {
+                  "ko": "튼튼하다",
+                  "translation_ru": "прочный"
+                },
+                {
+                  "ko": "조건",
+                  "translation_ru": "условие"
+                }
+              ]
             }
           ]
         }
@@ -1626,15 +1889,50 @@
           "items": [
             {
               "ko": "기사",
-              "translation_ru": "водитель; курьер (택배 기사)"
+              "translation_ru": "водитель; курьер (택배 기사)",
+              "group": "택배"
             },
             {
               "ko": "매번",
-              "translation_ru": "каждый раз"
+              "translation_ru": "каждый раз",
+              "group": "택배"
             },
             {
               "ko": "얼른",
-              "translation_ru": "быстро, поскорее"
+              "translation_ru": "быстро, поскорее",
+              "group": "택배"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "택배",
+              "title_ru": "Курьерская доставка",
+              "items": [
+                {
+                  "ko": "앞집",
+                  "translation_ru": "соседний дом напротив"
+                },
+                {
+                  "ko": "아주머니",
+                  "translation_ru": "тётя, женщина среднего возраста"
+                },
+                {
+                  "ko": "혹시",
+                  "translation_ru": "вдруг, случайно"
+                },
+                {
+                  "ko": "나중에",
+                  "translation_ru": "потом"
+                },
+                {
+                  "ko": "죄송하다",
+                  "translation_ru": "извините"
+                },
+                {
+                  "ko": "냉장고",
+                  "translation_ru": "холодильник"
+                }
+              ]
             }
           ]
         }
@@ -1766,23 +2064,106 @@
           "items": [
             {
               "ko": "작성자",
-              "translation_ru": "автор (записи, отзыва)"
+              "translation_ru": "автор (записи, отзыва)",
+              "group": "후기"
             },
             {
               "ko": "점수",
-              "translation_ru": "балл, оценка"
+              "translation_ru": "балл, оценка",
+              "group": "후기"
             },
             {
               "ko": "가구점",
-              "translation_ru": "мебельный магазин"
+              "translation_ru": "мебельный магазин",
+              "group": "후기"
             },
             {
               "ko": "택배비",
-              "translation_ru": "стоимость доставки"
+              "translation_ru": "стоимость доставки",
+              "group": "후기"
             },
             {
               "ko": "높이",
-              "translation_ru": "высота"
+              "translation_ru": "высота",
+              "group": "후기"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "후기",
+              "title_ru": "Отзывы",
+              "items": [
+                {
+                  "ko": "구매하다",
+                  "translation_ru": "покупать"
+                },
+                {
+                  "ko": "후회하다",
+                  "translation_ru": "сожалеть"
+                },
+                {
+                  "ko": "식탁",
+                  "translation_ru": "обеденный стол"
+                },
+                {
+                  "ko": "색깔",
+                  "translation_ru": "цвет"
+                },
+                {
+                  "ko": "다리",
+                  "translation_ru": "ножка, нога"
+                },
+                {
+                  "ko": "사진",
+                  "translation_ru": "фотография"
+                },
+                {
+                  "ko": "추천하다",
+                  "translation_ru": "рекомендовать"
+                },
+                {
+                  "ko": "이용하다",
+                  "translation_ru": "пользоваться"
+                }
+              ]
+            },
+            {
+              "title": "충동구매",
+              "title_ru": "Импульсивные покупки",
+              "items": [
+                {
+                  "ko": "충동구매",
+                  "translation_ru": "импульсивная покупка"
+                },
+                {
+                  "ko": "신중하다",
+                  "translation_ru": "осторожный"
+                },
+                {
+                  "ko": "목록",
+                  "translation_ru": "список"
+                },
+                {
+                  "ko": "예산",
+                  "translation_ru": "бюджет"
+                },
+                {
+                  "ko": "지출",
+                  "translation_ru": "расход"
+                },
+                {
+                  "ko": "절약하다",
+                  "translation_ru": "экономить"
+                },
+                {
+                  "ko": "낭비하다",
+                  "translation_ru": "тратить зря"
+                },
+                {
+                  "ko": "쉽게",
+                  "translation_ru": "легко"
+                }
+              ]
             }
           ]
         }
@@ -1793,6 +2174,82 @@
       "page_role": "content",
       "source_photo": "IMG_0766",
       "blocks": [
+        {
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "변화",
+              "title_ru": "Рост и падение",
+              "items": [
+                {
+                  "ko": "증가하다",
+                  "translation_ru": "увеличиваться"
+                },
+                {
+                  "ko": "감소하다",
+                  "translation_ru": "уменьшаться"
+                },
+                {
+                  "ko": "높아지다",
+                  "translation_ru": "становиться выше"
+                },
+                {
+                  "ko": "낮아지다",
+                  "translation_ru": "становиться ниже"
+                },
+                {
+                  "ko": "이용률",
+                  "translation_ru": "доля пользователей"
+                },
+                {
+                  "ko": "비율",
+                  "translation_ru": "доля"
+                },
+                {
+                  "ko": "반면에",
+                  "translation_ru": "зато, а вот"
+                },
+                {
+                  "ko": "변화",
+                  "translation_ru": "изменение"
+                }
+              ]
+            },
+            {
+              "title": "장소",
+              "title_ru": "Где покупают",
+              "items": [
+                {
+                  "ko": "편의점",
+                  "translation_ru": "магазин у дома"
+                },
+                {
+                  "ko": "전통시장",
+                  "translation_ru": "традиционный рынок"
+                },
+                {
+                  "ko": "백화점",
+                  "translation_ru": "универмаг"
+                },
+                {
+                  "ko": "시장",
+                  "translation_ru": "рынок"
+                },
+                {
+                  "ko": "인터넷 쇼핑몰",
+                  "translation_ru": "интернет-магазин"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "writing-review",
           "toc_section": "쓰기",
@@ -1884,31 +2341,78 @@
           "items": [
             {
               "ko": "성",
-              "translation_ru": "святой (перед именем)"
+              "translation_ru": "святой (перед именем)",
+              "group": "데이"
             },
             {
               "ko": "기념하다",
-              "translation_ru": "отмечать (событие), чтить память"
+              "translation_ru": "отмечать (событие), чтить память",
+              "group": "데이"
             },
             {
               "ko": "초콜릿",
-              "translation_ru": "шоколад"
+              "translation_ru": "шоколад",
+              "group": "데이"
             },
             {
               "ko": "사탕",
-              "translation_ru": "конфета, леденец"
+              "translation_ru": "конфета, леденец",
+              "group": "데이"
             },
             {
               "ko": "닭고기",
-              "translation_ru": "курица (мясо)"
+              "translation_ru": "курица (мясо)",
+              "group": "데이"
             },
             {
               "ko": "오이",
-              "translation_ru": "огурец"
+              "translation_ru": "огурец",
+              "group": "데이"
             },
             {
               "ko": "막대",
-              "translation_ru": "палочка, брусок"
+              "translation_ru": "палочка, брусок",
+              "group": "데이"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "데이",
+              "title_ru": "Особые дни",
+              "items": [
+                {
+                  "ko": "밸런타인데이",
+                  "translation_ru": "День Валентина"
+                },
+                {
+                  "ko": "화이트데이",
+                  "translation_ru": "Белый день"
+                },
+                {
+                  "ko": "삼겹살데이",
+                  "translation_ru": "День самгепсаля"
+                },
+                {
+                  "ko": "빼빼로데이",
+                  "translation_ru": "День Пепперо"
+                },
+                {
+                  "ko": "돼지고기",
+                  "translation_ru": "свинина"
+                },
+                {
+                  "ko": "과자",
+                  "translation_ru": "печенье, снэки"
+                },
+                {
+                  "ko": "모양",
+                  "translation_ru": "форма"
+                },
+                {
+                  "ko": "숫자",
+                  "translation_ru": "цифра"
+                }
+              ]
             }
           ]
         },
