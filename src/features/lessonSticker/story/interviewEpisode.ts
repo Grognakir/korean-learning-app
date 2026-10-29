@@ -45,6 +45,10 @@ const rules: Situation = {
 export const INTERVIEW_EPISODE: Episode = {
   id: "interview",
   title: "Собеседование",
+  kind: "self",
+  placeKo: "면접에",
+  placeRu: "на собеседование",
+  praise: { text: "와, 정말 멋있어요! 면접 잘 보세요!", ru: "Вау, выглядишь отлично! Удачи на собеседовании!" },
   rules,
   advice: "검은색이나 남색 정장, 흰색 와이셔츠, 넥타이, 까만 구두",
   adviceRu: "чёрный или тёмно-синий костюм, белую рубашку, галстук и чёрные туфли",

@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { buildSentence, objectParticle } from "../clothing/buildSentence";
 import type { OutfitPiece } from "../clothing/situations";
-import { writeProgress } from "../progress";
+import { readProgress, writeProgress } from "../progress";
 import { Character, HologramFilter } from "./Character";
 import { IncomingScreen } from "./IncomingScreen";
 import { ShopScene, type ClerkLine } from "./ShopScene";
@@ -21,7 +21,16 @@ const GREETING: ClerkLine = {
   ru: "Что вам подать? Нажмите на манекен или напишите, что хотите купить.",
 };
 
-export function StoryGame({ episode, progressKey }: { episode: Episode; progressKey: string }) {
+export function StoryGame({
+  episode,
+  progressKey,
+  onRestart,
+}: {
+  episode: Episode;
+  progressKey: string;
+  /** «처음부터» после успеха: родитель подставляет другую ситуацию. */
+  onRestart?: () => void;
+}) {
   const { steps, rules, assortment } = episode;
   const shopIndex = steps.findIndex((s) => s.type === "shop");
 
@@ -56,38 +65,34 @@ export function StoryGame({ episode, progressKey }: { episode: Episode; progress
   const verdict = useMemo(() => judge(rules, cart), [rules, cart]);
   const verdictLines: Line[] = useMemo(() => {
     if (verdict.ok) {
-      return [
-        {
-          who: "jia",
-          pose: "happy",
-          lang: "ko",
-          text: "와, 정말 멋있어요! 면접 잘 보세요!",
-          ru: "Вау, выглядишь отлично! Удачи на собеседовании!",
-        },
-      ];
+      const { text, ru, pose = "happy" } = episode.praise;
+      return [{ who: "jia", pose, lang: "ko", text, ru }];
     }
     const wrong = verdict.wrongKo;
+    const forJia = episode.kind === "forJia";
+    const backKo = forJia
+      ? `이걸 입고 ${episode.placeKo} 갈 수 없어요. 다시 가게에 가 줄래요?`
+      : `이렇게 ${episode.placeKo} 가면 안 돼요. 빨리 다시 가게에 가세요!`;
+    const backRu = forJia
+      ? `В этом я ${episode.placeRu} не пойду. Сходишь ещё раз в магазин?`
+      : `Так ${episode.placeRu} нельзя. Быстро обратно в магазин!`;
     return [
       {
         who: "jia",
         pose: "angry",
         lang: "ko",
-        text: `뭘 산 거예요?! 제가 ${episode.advice}${objectParticle(episode.advice)} 사라고 했잖아요!`,
-        ru: `Что ты купил?! Я же говорила купить: ${episode.adviceRu}!`,
+        text: `뭘 산 거예요?! 제가 ${episode.advice}${objectParticle(episode.advice)} ${forJia ? "사 달라고" : "사라고"} 했잖아요!`,
+        ru: `Что ты купил?! Я же ${forJia ? "просила купить мне" : "говорила купить"}: ${episode.adviceRu}!`,
       },
       {
         who: "jia",
         pose: "facepalm",
         lang: "ko",
-        text: wrong
-          ? `그런데 이건 뭐예요? ${wrong}… 이렇게 면접에 가면 안 돼요. 빨리 다시 가게에 가세요!`
-          : "필요한 옷이 없잖아요! 이렇게 면접에 가면 안 돼요. 빨리 다시 가게에 가세요!",
-        ru: wrong
-          ? `А это что такое? ${verdict.wrongRu[0].toUpperCase()}${verdict.wrongRu.slice(1)}… Так на собеседование нельзя. Быстро обратно в магазин!`
-          : "Тут же нет нужной одежды! Так на собеседование нельзя. Быстро обратно в магазин!",
+        text: `${wrong ? `그런데 이건 뭐예요? ${wrong}…` : forJia ? "제가 부탁한 옷이 없잖아요!" : "필요한 옷이 없잖아요!"} ${backKo}`,
+        ru: `${wrong ? `А это что такое? ${verdict.wrongRu[0].toUpperCase()}${verdict.wrongRu.slice(1)}…` : forJia ? "Тут нет того, что я просила!" : "Тут же нет нужной одежды!"} ${backRu}`,
       },
     ];
-  }, [verdict, episode.advice, episode.adviceRu]);
+  }, [verdict, episode]);
 
   let line: Line | null = null;
   if (step.type === "line") line = step;
@@ -112,6 +117,7 @@ export function StoryGame({ episode, progressKey }: { episode: Episode; progress
   };
 
   const restart = () => {
+    if (onRestart) return onRestart();
     setIndex(0);
     setCart([]);
     setClerk(GREETING);
@@ -142,7 +148,7 @@ export function StoryGame({ episode, progressKey }: { episode: Episode; progress
     if (step.type === "verdict") {
       if (verdictOver) return;
       const last = verdictStep >= verdictLines.length - 1;
-      if (last && verdict.ok) writeProgress(progressKey, [episode.id]);
+      if (last && verdict.ok) writeProgress(progressKey, [...new Set([...readProgress(progressKey), episode.id])]);
       setVerdictStep((v) => v + 1);
       setShowRu(false);
       return;
@@ -178,9 +184,12 @@ export function StoryGame({ episode, progressKey }: { episode: Episode; progress
   }, []);
 
   const live = step.type === "verdict";
+  // Место встречи — последняя системная строка перед вердиктом («회사 앞»).
+  const lastSystem = steps.findLast((s) => s.type === "system");
+  const meeting = lastSystem?.type === "system" ? (lastSystem.lines.at(-1) ?? "") : "";
   const scene =
     step.type === "verdict" || (step.type === "system" && index > shopIndex)
-      ? "회사 앞"
+      ? meeting
       : index > steps.findIndex((s) => s.type === "system")
         ? "ONLINE STORE"
         : "CALL";
@@ -222,7 +231,7 @@ export function StoryGame({ episode, progressKey }: { episode: Episode; progress
       ) : (
         <>
       <div
-        className={`${styles.stage} ${live ? styles.stageLive : ""}`}
+        className={`${styles.stage} ${live && episode.background ? styles.stageLive : ""}`}
         style={live && episode.background ? ({ "--bg": `url(${episode.background})` } as CSSProperties) : undefined}
       >
         {!live && <MatrixRain className={styles.rainStage} />}

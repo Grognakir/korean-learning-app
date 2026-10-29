@@ -25,6 +25,13 @@ export type StoryStep =
 export type Episode = {
   id: string;
   title: string;
+  /** self — игрок одевается сам; forJia — покупает одежду для 지아. */
+  kind: "self" | "forJia";
+  /** Куда идут, с частицей: «면접에», «할머니 댁에» — для упрёка. */
+  placeKo: string;
+  placeRu: string;
+  /** Похвала 지아 за верный наряд. */
+  praise: { text: string; ru: string; pose?: string };
   /** Все шаги эпизода; персонажи на расстоянии (remote), кроме шага verdict. */
   steps: StoryStep[];
   assortment: string[];

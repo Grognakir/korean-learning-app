@@ -13,7 +13,8 @@ export type StickerTrainer = {
 export const TRAINERS: Record<string, StickerTrainer> = {
   interview: {
     title: "Входящий звонок",
-    total: 1,
+    /** Все ситуации из story/episodeList.ts. */
+    total: 16,
     Component: dynamic(() => import("./story/InterviewGame").then((m) => m.InterviewGame)),
   },
 };

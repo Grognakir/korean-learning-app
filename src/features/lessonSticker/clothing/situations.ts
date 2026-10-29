@@ -1,7 +1,7 @@
 import { BRIGHT, type ColorId, type PatternId } from "./colors";
 import type { Slot } from "./items";
 
-export type TargetId = "me" | "player" | "friend" | "brother" | "mom" | "dad" | "grandma";
+export type TargetId = "me" | "player" | "jia" | "friend" | "brother" | "mom" | "dad" | "grandma";
 
 export type Target = {
   id: TargetId;
@@ -32,6 +32,15 @@ export const TARGETS: Record<TargetId, Target> = {
     male: true,
     elder: false,
     avatar: "/images/dialogue/jia/idle.webp",
+  },
+  /** 지아 из диалоговой игры: игрок покупает одежду для неё. */
+  jia: {
+    id: "jia",
+    ru: "지아",
+    topic: "지아는",
+    male: false,
+    elder: false,
+    avatar: "/images/lesson-sticker/jia-call/idle.png",
   },
   friend: {
     id: "friend",
@@ -100,7 +109,9 @@ export type OutfitPiece = { id: string; color: ColorId; pattern: PatternId };
 export type Situation = {
   id: string;
   target: TargetId;
-  kind: "outfit" | "gift";
+  /** outfit — полный наряд (верх, низ, обувь); gift — одна вещь;
+   * shopping — купить то, что просили (проверяются только правила). */
+  kind: "outfit" | "gift" | "shopping";
   titleKo: string;
   ko: string;
   ru: string;
