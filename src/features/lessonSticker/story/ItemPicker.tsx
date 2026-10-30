@@ -26,6 +26,10 @@ export function ItemPicker({
       role="group"
       aria-label={`${ZONES[zone].ko} · ${ZONES[zone].ru}`}
     >
+      <div className={styles.shelfTitle} aria-hidden="true">
+        <span className="kr">{ZONES[zone].ko}</span>
+        <span>{ZONES[zone].ru}</span>
+      </div>
       {items.length === 0 ? (
         <span className={styles.hint}>Здесь ничего нет.</span>
       ) : (

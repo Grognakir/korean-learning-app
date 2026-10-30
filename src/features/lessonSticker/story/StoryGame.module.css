@@ -1093,6 +1093,27 @@
   gap: 4px;
 }
 
+/* Заголовок полки — название части одежды; в окне диалога сидит в верхней
+   полоске слева от крестика, на телефоне — в шторке напротив крестика. */
+.shelfTitle {
+  position: absolute;
+  top: 4px;
+  right: 46px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.06em;
+  color: var(--t-mid);
+  pointer-events: none;
+}
+
+.shelfTitle .kr {
+  color: var(--t-bright);
+}
+
 .picker_shelf .pickerItems {
   display: flex;
   gap: 8px;
@@ -1411,13 +1432,17 @@
   .screen {
     box-sizing: border-box;
     min-height: 100dvh;
+    min-height: 100svh;
   }
 
+  /* max-height: на высоком окне сцена не растягивается на весь экран и окно
+     диалога остаётся рядом с ней, а не уезжает вниз. */
   .stage {
     justify-content: flex-start;
     flex: 1 1 auto;
     height: auto;
     min-height: 214px;
+    max-height: 600px;
   }
 
   /* У картинки прозрачные поля — сдвиг прижимает фигуру к краю сцены. */
@@ -1677,6 +1702,8 @@
     cursor: pointer;
   }
 
+  .mqZone:hover,
+  .mqZone[data-hot="true"],
   .mqZone[aria-pressed="true"] {
     border-color: var(--t-bright);
     background: rgba(0, 255, 102, 0.18);
@@ -1713,6 +1740,19 @@
   .shelfSheet .shelfClose {
     top: 6px;
     right: 6px;
+  }
+
+  .shelfSheet .shelfTitle {
+    top: 6px;
+    right: auto;
+    left: 12px;
+    height: 26px;
+    font-size: 13px;
+    line-height: 26px;
+  }
+
+  .shelfSheet .shelfTitle .kr {
+    font-size: 16px;
   }
 
   .shelfSheet .pickerItems {

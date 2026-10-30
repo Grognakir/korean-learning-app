@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { expect, it, vi } from "vitest";
+import { beforeEach, expect, it, vi } from "vitest";
 
 vi.mock("@/features/lessonSticker/trainers", () => ({
   TRAINERS: {
@@ -13,6 +13,9 @@ vi.mock("@/features/lessonSticker/trainers", () => ({
 
 import { LessonSticker } from "@/features/lessonSticker/LessonSticker";
 import { emotionSrc } from "@/features/lessonSticker/characters";
+import { markOpen, readGame, writeGame } from "@/features/lessonSticker/session";
+
+beforeEach(() => window.sessionStorage.clear());
 
 it("открывает окно игры по нажатию на стикер", () => {
   render(<LessonSticker config={{ character: "jia-call", trainer: "interview" }} />);
@@ -32,4 +35,30 @@ it("ничего не рендерит для неизвестного перс�
 it("эмоция без картинки показывается как idle", () => {
   const character = { base: "/x", emotions: ["idle" as const], alt: "" };
   expect(emotionSrc(character, "ringing")).toBe("/x/idle.png");
+});
+
+it("после перезагрузки окно игры открывается снова, пока его не закрыли", () => {
+  markOpen("interview");
+  const { unmount } = render(<LessonSticker config={{ character: "jia-call", trainer: "interview" }} />);
+  expect(screen.getByRole("dialog")).toBeTruthy();
+  unmount();
+
+  render(<LessonSticker config={{ character: "jia-call", trainer: "interview" }} />);
+  expect(screen.getByRole("dialog")).toBeTruthy();
+  writeGame("interview", { episodeId: "rain", index: 3 });
+  fireEvent.click(screen.getByRole("button", { name: "Закрыть" }));
+  expect(screen.queryByRole("dialog")).toBeNull();
+  expect(readGame("interview")).toBeNull();
+
+  render(<LessonSticker config={{ character: "jia-call", trainer: "interview" }} />);
+  expect(screen.queryByRole("dialog")).toBeNull();
+});
+
+it("не открывает окно на другой странице", () => {
+  window.sessionStorage.setItem(
+    "lesson-sticker:open:interview",
+    JSON.stringify({ path: "/somewhere-else", at: Date.now() }),
+  );
+  render(<LessonSticker config={{ character: "jia-call", trainer: "interview" }} />);
+  expect(screen.queryByRole("dialog")).toBeNull();
 });

@@ -4,6 +4,8 @@ import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react"
 import { buildSentence, objectParticle } from "../clothing/buildSentence";
 import type { OutfitPiece } from "../clothing/situations";
 import { readProgress, writeProgress } from "../progress";
+import { readGame, writeGame } from "../session";
+import { ITEM_BY_ID } from "../clothing/items";
 import { Character, HologramFilter } from "./Character";
 import { IncomingScreen } from "./IncomingScreen";
 import { ShopScene, type ClerkLine } from "./ShopScene";
@@ -21,6 +23,39 @@ const GREETING: ClerkLine = {
   ru: "Что вам подать? Нажмите на манекен или напишите, что хотите купить.",
 };
 
+type SavedGame = {
+  index: number;
+  cart: OutfitPiece[];
+  clerk: ClerkLine;
+  paid: boolean;
+  verdictStep: number;
+};
+
+/** Сохранённый ход игры этой ситуации; всё непроверенное отбрасывается. */
+function restoreGame(trainer: string, episodeId: string, stepCount: number): SavedGame | null {
+  const raw = readGame(trainer) as Record<string, unknown> | null;
+  if (!raw || raw.episodeId !== episodeId) return null;
+  const index = raw.index;
+  if (typeof index !== "number" || !Number.isInteger(index) || index < 0 || index >= stepCount) return null;
+  const cart = Array.isArray(raw.cart)
+    ? raw.cart.filter(
+        (p): p is OutfitPiece =>
+          Boolean(p) &&
+          typeof p.id === "string" &&
+          Boolean(ITEM_BY_ID[p.id]) &&
+          typeof p.color === "string" &&
+          typeof p.pattern === "string",
+      )
+    : [];
+  const c = raw.clerk as Partial<ClerkLine> | undefined;
+  const clerk =
+    c && typeof c.pose === "string" && typeof c.text === "string"
+      ? { pose: c.pose, text: c.text, ru: typeof c.ru === "string" ? c.ru : undefined }
+      : GREETING;
+  const verdictStep = typeof raw.verdictStep === "number" && raw.verdictStep >= 0 ? raw.verdictStep : 0;
+  return { index, cart, clerk, paid: raw.paid === true, verdictStep };
+}
+
 export function StoryGame({
   episode,
   progressKey,
@@ -34,12 +69,18 @@ export function StoryGame({
   const { steps, rules, assortment } = episode;
   const shopIndex = steps.findIndex((s) => s.type === "shop");
 
-  const [index, setIndex] = useState(0);
+  // Ход игры после перезагрузки страницы: шаг, корзина, ответ продавца.
+  const [saved] = useState(() => restoreGame(progressKey, episode.id, steps.length));
+  const [index, setIndex] = useState(saved?.index ?? 0);
   const [showRu, setShowRu] = useState(false);
-  const [cart, setCart] = useState<OutfitPiece[]>([]);
-  const [clerk, setClerk] = useState(GREETING);
-  const [paid, setPaid] = useState(false);
-  const [verdictStep, setVerdictStep] = useState(0);
+  const [cart, setCart] = useState<OutfitPiece[]>(saved?.cart ?? []);
+  const [clerk, setClerk] = useState(saved?.clerk ?? GREETING);
+  const [paid, setPaid] = useState(saved?.paid ?? false);
+  const [verdictStep, setVerdictStep] = useState(saved?.verdictStep ?? 0);
+
+  useEffect(() => {
+    writeGame(progressKey, { episodeId: episode.id, index, cart, clerk, paid, verdictStep });
+  }, [progressKey, episode.id, index, cart, clerk, paid, verdictStep]);
 
   const step = steps[index];
   const screenRef = useRef<HTMLDivElement>(null);
