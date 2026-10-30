@@ -73,6 +73,12 @@
 
 ## Журнал выполненных работ
 
+### 2026-10-31 — Чистка репозитория (ветка `claude/solomon-os`)
+
+- Удалены неиспользуемые файлы (на них нет ссылок в коде): прототипы игры «Одежда» `public/images/clothing-game/test/` и `test2/` (59 картинок) и нарезавший `test2` скрипт `scripts/clothing-game-cut-layers.py`; JPG-обложки `public/images/learning/{grammar,topics,programs,trainers}.jpg` (страницы используют PNG); компонент `src/components/ui/StreakBadge.tsx` с `.module.css`. Фото книг, тетрадей, аудио и экзамены не трогались.
+- Оставлено по решению пользователя: аватарки `prod/avatars` и старые 15 ситуаций `SITUATIONS` (используются только тестами).
+- Проверено: `tsc`, ESLint, 291 тест, `next build`.
+
 ### 2026-10-31 — Solomon OS: магазин в узком окне, полка, узоры, смена цветов
 
 - Мобильная раскладка игры урока 10 теперь по ширине экрана игры, а не окна браузера: `.screen` — контейнер `game` (`container: game / inline-size`), правила `@media (max-width: 640px)` переведены в `@container game (max-width: 640px)` (кроме правил самого `.screen` для полноэкранного стикера). JS-часть (`ShopScene` полка-шторка, `MannequinRow`/`Mannequin`) — `useCompact(ref)` в `story/usePhone.ts` (меряет ближайший `[data-game-screen]`). В узком окне ОС магазин перестраивается как на телефоне.
