@@ -45,8 +45,8 @@
   .seal { position: absolute; right: 6%; bottom: 8%; width: min(38vw, 360px); aspect-ratio: 1; color: var(--mid); opacity: .07; pointer-events: none; }
   .seal svg { width: 100%; height: 100%; }
   .grid-hint { position: absolute; pointer-events: none; border: 1px dashed var(--mid); border-radius: 8px; background: rgba(34,163,84,.08); display: none; }
-  .icon { position: absolute; width: var(--cell-w); height: var(--cell-h); display: flex; flex-direction: column; align-items: center; gap: 6px;
-    padding-top: 8px; border-radius: 8px; border: 1px solid transparent; cursor: default; touch-action: none; transition: left .12s, top .12s; }
+  .icon { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding-top: 8px; border-radius: 8px; border: 1px solid transparent; cursor: default; touch-action: none; transition: left .15s, top .15s; }
   .icon.dragging { transition: none; z-index: 999; opacity: .85; }
   .icon.sel { background: rgba(34,163,84,.14); border-color: rgba(34,163,84,.35); }
   .icon .pic { position: relative; width: 46px; height: 46px; }
@@ -224,26 +224,42 @@ const store = {
 
 /* ================= сетка иконок ================= */
 const PAD = 10;
-function cell() { const cs = getComputedStyle(document.documentElement); return [parseFloat(cs.getPropertyValue("--cell-w")), parseFloat(cs.getPropertyValue("--cell-h"))]; }
-function gridSize() { const [cw, ch] = cell(); return [Math.max(1, Math.floor((desk.clientWidth - PAD * 2) / cw)), Math.max(1, Math.floor((desk.clientHeight - PAD * 2) / ch))]; }
-let pos = store.get("icons", null);
-function defaultPos() { const [, rows] = gridSize(); const p = {}; APPS.forEach((a, i) => { p[a.id] = [Math.floor(i / rows), i % rows]; }); return p; }
-function fitPositions() {
-  // все иконки внутри сетки и без наложений (после смены размера окна браузера)
-  const [cols, rows] = gridSize(); const used = new Set(); const out = {};
-  const take = (c, r) => { used.add(c + ":" + r); return [c, r]; };
+// Сетка тянется на всю ширину и высоту рабочего стола: число колонок — сколько влезает клеток
+// минимального размера, а сами клетки растягиваются, чтобы последняя колонка доходила до края.
+function minCell() { const cs = getComputedStyle(document.documentElement); return [parseFloat(cs.getPropertyValue("--cell-w")), parseFloat(cs.getPropertyValue("--cell-h"))]; }
+function gridSize() { const [mw, mh] = minCell(); return [Math.max(1, Math.floor((desk.clientWidth - PAD * 2) / mw)), Math.max(1, Math.floor((desk.clientHeight - PAD * 2) / mh))]; }
+function cell() { const [cols, rows] = gridSize(); return [(desk.clientWidth - PAD * 2) / cols, (desk.clientHeight - PAD * 2) / rows]; }
+// Желаемое место иконки хранится относительно ближайшего края: { x, ax: "l"|"r", y, ay: "t"|"b" }.
+// Иконка у правого края остаётся у правого края при любом размере окна; реальная клетка (pos)
+// пересчитывается при каждой раскладке, а желаемое место меняется только перетаскиванием.
+let want = store.get("icons2", null), pos = {};
+function toWant(c, r) {
+  const [cols, rows] = gridSize(), ax = c > (cols - 1) / 2 ? "r" : "l", ay = r > (rows - 1) / 2 ? "b" : "t";
+  return { x: ax === "l" ? c : cols - 1 - c, ax, y: ay === "t" ? r : rows - 1 - r, ay };
+}
+function defaultWant() { const [, rows] = gridSize(); const w = {}; APPS.forEach((a, i) => { w[a.id] = { x: Math.floor(i / rows), ax: "l", y: i % rows, ay: "t" }; }); return w; }
+function layout() {
+  // каждая иконка — в своей желаемой клетке; если она занята или вне сетки — в ближайшую свободную
+  const [cols, rows] = gridSize(), used = new Set();
   APPS.forEach(a => {
-    let [c, r] = (pos && pos[a.id]) || [0, 0];
+    const w = want[a.id] || { x: 0, ax: "l", y: 0, ay: "t" };
+    let c = w.ax === "l" ? w.x : cols - 1 - w.x, r = w.ay === "t" ? w.y : rows - 1 - w.y;
     c = Math.min(Math.max(c, 0), cols - 1); r = Math.min(Math.max(r, 0), rows - 1);
     if (used.has(c + ":" + r)) {
-      outer: for (let cc = 0; cc < cols; cc++) for (let rr = 0; rr < rows; rr++) if (!used.has(cc + ":" + rr)) { c = cc; r = rr; break outer; }
+      let best = null, bd = Infinity;
+      for (let cc = 0; cc < cols; cc++) for (let rr = 0; rr < rows; rr++) {
+        if (used.has(cc + ":" + rr)) continue;
+        const d = (cc - c) ** 2 + (rr - r) ** 2; if (d < bd) { bd = d; best = [cc, rr]; }
+      }
+      if (best) [c, r] = best;
     }
-    out[a.id] = take(c, r);
+    used.add(c + ":" + r); pos[a.id] = [c, r];
   });
-  pos = out;
+  const [cw, ch] = cell();
+  APPS.forEach(a => { const el = icons[a.id], [c, r] = pos[a.id];
+    Object.assign(el.style, { left: PAD + c * cw + "px", top: PAD + r * ch + "px", width: cw + "px", height: ch + "px" }); });
 }
 const icons = {};
-function placeIcon(id) { const [cw, ch] = cell(); const [c, r] = pos[id]; icons[id].style.left = PAD + c * cw + "px"; icons[id].style.top = PAD + r * ch + "px"; }
 function buildIcons() {
   APPS.forEach(a => {
     const el = document.createElement("div");
@@ -251,8 +267,8 @@ function buildIcons() {
     el.innerHTML = `<div class="pic"><svg><use href="#${a.icon}"/></svg>${a.locked ? '<i class="lock">🔒</i>' : ""}${a.id === "msg" ? '<b class="badge" id="badge">1</b>' : ""}</div><span>${a.ko}</span>`;
     desk.appendChild(el); icons[a.id] = el; bindIcon(el, a);
   });
-  if (!pos) pos = defaultPos();
-  fitPositions(); APPS.forEach(a => placeIcon(a.id));
+  if (!want) want = defaultWant();
+  layout();
 }
 function select(id) { Object.values(icons).forEach(i => i.classList.toggle("sel", i.dataset.id === id)); }
 function bindIcon(el, a) {
@@ -277,8 +293,8 @@ function bindIcon(el, a) {
     if (moved) {
       const d = desk.getBoundingClientRect(); const [c, r] = snap(e.clientX - d.left - ox, e.clientY - d.top - oy);
       const other = APPS.find(x => x.id !== a.id && pos[x.id][0] === c && pos[x.id][1] === r);
-      if (other) { pos[other.id] = pos[a.id]; placeIcon(other.id); }   // занято — меняемся местами
-      pos[a.id] = [c, r]; placeIcon(a.id); store.set("icons", pos);
+      if (other) want[other.id] = toWant(...pos[a.id]);   // занято — меняемся местами
+      want[a.id] = toWant(c, r); layout(); store.set("icons2", want);
     } else {
       // компьютер: двойной клик; телефон: одно касание
       const now = Date.now();
@@ -383,7 +399,7 @@ function bindWin(id) {
     }, save);
   }));
 }
-addEventListener("resize", () => { fitPositions(); APPS.forEach(a => placeIcon(a.id)); Object.keys(wins).forEach(applyGeo); });
+addEventListener("resize", () => { layout(); Object.keys(wins).forEach(applyGeo); });
 
 /* ================= приложения ================= */
 function fillApp(id, box) {
@@ -393,7 +409,7 @@ function fillApp(id, box) {
   if (id === "term") return terminal(box);
   if (id === "set") {
     box.innerHTML = `<div class="pad kr"><h4>설정</h4>Solomon OS v0.1 · макет<br><span style="color:var(--soft)">Расположение иконок и окон сохраняется в браузере.</span><br><button class="btn" id="reset">Сбросить расположение</button></div>`;
-    box.querySelector("#reset").onclick = () => { store.set("icons", null); store.set("windows", {}); store.set("chat", null); location.reload(); };
+    box.querySelector("#reset").onclick = () => { store.set("icons2", null); store.set("windows", {}); store.set("chat", null); location.reload(); };
   }
 }
 
