@@ -17,6 +17,7 @@ export type IconName =
   | "restore"
   | "close"
   | "bell"
+  | "refresh"
   | "power";
 
 const S = { stroke: "currentColor", strokeLinejoin: "round" as const };
@@ -212,6 +213,15 @@ const PATHS: Record<IconName, { box: number; body: React.ReactNode }> = {
         stroke="currentColor"
         strokeWidth="1.5"
       />
+    ),
+  },
+  refresh: {
+    box: 24,
+    body: (
+      <g fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3" />
+        <path d="M19.5 4v4.5H15" />
+      </g>
     ),
   },
   bell: {

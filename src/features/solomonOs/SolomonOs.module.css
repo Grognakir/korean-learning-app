@@ -1127,9 +1127,11 @@
 
 /* ---------- уведомления: колокольчик и список ---------- */
 
+/* Без position: список позиционируется от всей верхней панели и прижат к её
+   правому краю с её отступом (8px). */
 .bellBox {
-  position: relative;
   display: flex;
+  gap: 2px;
 }
 
 .bell {
@@ -1173,10 +1175,10 @@
 
 .notePanel {
   position: absolute;
-  top: calc(100% + 8px);
-  right: -60px;
+  top: calc(100% + 6px);
+  right: 8px;
   z-index: 1600;
-  width: min(340px, calc(100vw - 16px));
+  width: min(360px, calc(100% - 16px));
   max-height: min(420px, 70vh);
   display: flex;
   flex-direction: column;

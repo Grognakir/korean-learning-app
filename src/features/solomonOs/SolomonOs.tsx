@@ -390,6 +390,13 @@ export function SolomonOs() {
               setNotes([]);
               setToastId(null);
             }}
+            onTest={() =>
+              notify({
+                who: "SYSTEM",
+                text: "테스트 알림 · тестовое уведомление",
+                app: "msg",
+              })
+            }
           />
           <span>{clock}</span>
           <span className={styles.sig} aria-hidden="true">

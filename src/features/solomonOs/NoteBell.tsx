@@ -19,12 +19,15 @@ export function NoteBell({
   onOpenNote,
   onReadAll,
   onClear,
+  onTest,
 }: {
   notes: OsNote[];
   avatar: string;
   onOpenNote: (note: OsNote) => void;
   onReadAll: () => void;
   onClear: () => void;
+  /** Кнопка рядом с колокольчиком: показать тестовое уведомление. */
+  onTest: () => void;
 }) {
   const [open, setOpen] = useState(false);
   const box = useRef<HTMLDivElement>(null);
@@ -46,6 +49,15 @@ export function NoteBell({
 
   return (
     <div className={styles.bellBox} ref={box}>
+      <button
+        type="button"
+        className={styles.bell}
+        aria-label="Тестовое уведомление"
+        title="Тестовое уведомление"
+        onClick={onTest}
+      >
+        <OsIcon name="refresh" />
+      </button>
       <button
         type="button"
         className={styles.bell}
