@@ -222,11 +222,21 @@ export function StoryGame({
     if (step.type === "reply" && i < step.options.length) next();
   };
 
+  // Подсвеченный вариант ответа: стрелки двигают, Enter или пробел выбирают.
+  // Для каждого шага с ответами начинается с первого варианта.
+  const [cursor, setCursor] = useState({ at: -1, i: 0 });
+  const activeReply = cursor.at === index ? cursor.i : 0;
+  const replyCount = step.type === "reply" ? step.options.length : 0;
+  const moveReply = (delta: number) =>
+    setCursor({ at: index, i: (activeReply + delta + replyCount) % replyCount });
+
   const advanceRef = useRef(advance);
   const choiceRef = useRef(choose);
+  const replyRef = useRef({ count: replyCount, active: activeReply, move: moveReply });
   useEffect(() => {
     advanceRef.current = advance;
     choiceRef.current = choose;
+    replyRef.current = { count: replyCount, active: activeReply, move: moveReply };
   });
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -235,6 +245,24 @@ export function StoryGame({
       if (/^[1-9]$/.test(e.key)) {
         choiceRef.current(Number(e.key) - 1);
         return;
+      }
+      const reply = replyRef.current;
+      if (reply.count > 1) {
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+          e.preventDefault();
+          reply.move(1);
+          return;
+        }
+        if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+          e.preventDefault();
+          reply.move(-1);
+          return;
+        }
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          choiceRef.current(reply.active);
+          return;
+        }
       }
       if (e.key !== "Enter" && e.key !== " ") return;
       if (target?.closest("button, a")) return;
@@ -338,7 +366,14 @@ export function StoryGame({
           <div className={styles.replies} role="group" aria-label="Ваш ответ">
             <span className={styles.repliesLabel}>ВАШ ОТВЕТ</span>
             {step.options.map((o, i) => (
-              <button key={o.text} type="button" className={styles.reply} onClick={next}>
+              <button
+                key={o.text}
+                type="button"
+                className={`${styles.reply} ${i === activeReply ? styles.replyActive : ""}`}
+                aria-current={i === activeReply}
+                onMouseEnter={() => setCursor({ at: index, i })}
+                onClick={next}
+              >
                 <span className={styles.replyKey}>{i + 1}</span>
                 <span className={styles.replyText}>
                   <span className={o.ru ? "kr" : undefined}>&gt; {o.text}</span>

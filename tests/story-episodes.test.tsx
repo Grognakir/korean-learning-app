@@ -1,6 +1,8 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import { StoryGame } from "@/features/lessonSticker/story/StoryGame";
 import { ITEM_BY_ID } from "@/features/lessonSticker/clothing/items";
 import { EPISODES } from "@/features/lessonSticker/story/episodeList";
 import { pickEpisode } from "@/features/lessonSticker/story/InterviewGame";
@@ -54,5 +56,34 @@ describe("ситуации диалоговой игры (2급 10과)", () => {
     }
     const seen = new Set(Array.from({ length: 16 }, (_, i) => pickEpisode(null, () => i / 16).id));
     expect(seen.size).toBe(16);
+  });
+
+  it("у каждой ситуации свои ответы на приветствие и реакция 지아", () => {
+    const made = EPISODES.filter((e) => e.id !== "interview");
+    const firstReplies = made.map((e) => {
+      const reply = e.steps.find((s) => s.type === "reply");
+      return reply?.type === "reply" ? reply.options.map((o) => o.text).join("|") : "";
+    });
+    expect(new Set(firstReplies).size).toBe(made.length);
+  });
+});
+
+describe("ответ клавиатурой", () => {
+  it("стрелки двигают подсветку, Enter выбирает", () => {
+    const wedding = EPISODES.find((e) => e.id === "wedding")!;
+    render(<StoryGame episode={wedding} progressKey="test-keys" persist={false} />);
+    fireEvent.click(screen.getByRole("button", { name: "[ START ]" }));
+    for (let i = 0; i < 4 && !screen.queryByRole("group", { name: "Ваш ответ" }); i++) {
+      fireEvent.click(screen.getByRole("button", { name: "▶ 다음" }));
+    }
+    const options = () => within(screen.getByRole("group", { name: "Ваш ответ" })).getAllByRole("button");
+    expect(options()[0].getAttribute("aria-current")).toBe("true");
+    fireEvent.keyDown(document.body, { key: "ArrowDown" });
+    expect(options()[1].getAttribute("aria-current")).toBe("true");
+    fireEvent.keyDown(document.body, { key: "ArrowDown" });
+    expect(options()[0].getAttribute("aria-current")).toBe("true");
+    fireEvent.keyDown(document.body, { key: "ArrowUp" });
+    fireEvent.keyDown(document.body, { key: "Enter" });
+    expect(screen.queryByRole("group", { name: "Ваш ответ" })).toBeNull();
   });
 });

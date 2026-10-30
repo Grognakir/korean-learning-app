@@ -10,6 +10,10 @@ export type EpisodeSpec = {
   kind: Episode["kind"];
   /** Первая реплика 지아 по-русски. */
   hello: string;
+  /** Варианты ответа игрока на приветствие (свои в каждой ситуации). */
+  replies: [string, string];
+  /** Реакция 지아 на ответ — подходит к любому из вариантов. */
+  react: string;
   /** Корейские реплики 지아: повод, что купить, чего нельзя. */
   call: Say[];
   /** Ответ игрока в конце разговора. */
@@ -28,10 +32,16 @@ export type EpisodeSpec = {
 /** Все вещи магазина: манекены сами раскладывают их по зонам. */
 export const ALL_ITEMS = ITEMS.map((it) => it.id);
 
-const HELLO_REPLIES: Record<Episode["kind"], { text: string }[]> = {
-  self: [{ text: "Привет! Что случилось?" }, { text: "Да, слушаю." }],
-  forJia: [{ text: "Конечно, что нужно?" }, { text: "Смотря о чём…" }],
-};
+/** Переход на корейский — разные фразы, чтобы ситуации не звучали одинаково. */
+const TO_KOREAN = [
+  "Только давай по-корейски — заодно потренируешься.",
+  "Так, слушай. Дальше по-корейски — тебе полезно!",
+  "Ладно, переходим на корейский. Практика, ты же помнишь!",
+  "А теперь — по-корейски. Не отлынивай, ха-ха!",
+];
+
+const toKorean = (id: string) =>
+  TO_KOREAN[[...id].reduce((n, ch) => n + ch.charCodeAt(0), 0) % TO_KOREAN.length];
 
 const BYE: Record<Episode["kind"], Say> = {
   self: { pose: "call-talk", text: "좋아요. 화이팅!", ru: "Отлично. Удачи!" },
@@ -44,14 +54,9 @@ export function makeEpisode(spec: EpisodeSpec): Episode {
   const steps: StoryStep[] = [
     { type: "incoming", caller: "지아", avatar: "/images/lesson-sticker/jia-call/idle.png" },
     { type: "line", who: "jia", pose: "call-talk", lang: "ru", text: spec.hello },
-    { type: "reply", options: HELLO_REPLIES[spec.kind] },
-    {
-      type: "line",
-      who: "jia",
-      pose: "call-smirk",
-      lang: "ru",
-      text: "Только давай по-корейски — заодно потренируешься.",
-    },
+    { type: "reply", options: spec.replies.map((text) => ({ text })) },
+    { type: "line", who: "jia", pose: "call-smirk", lang: "ru", text: spec.react },
+    { type: "line", who: "jia", pose: "call-talk", lang: "ru", text: toKorean(spec.id) },
     ...spec.call.map((s): StoryStep => ({ type: "line", who: "jia", lang: "ko", ...s })),
     { type: "reply", options: [spec.agree] },
     { type: "line", who: "jia", lang: "ko", ...BYE[spec.kind] },

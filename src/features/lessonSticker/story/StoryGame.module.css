@@ -688,12 +688,8 @@
   cursor: var(--cursor-pointer, pointer);
 }
 
-.reply:first-of-type {
-  border-color: var(--t-bright);
-  box-shadow: 0 0 18px rgba(0, 255, 102, 0.18);
-}
-
-.reply:hover,
+/* Подсвеченный вариант (стрелки, наведение) — выбирается Enter. */
+.replyActive,
 .reply:focus-visible {
   border-color: var(--t-bright);
   background: rgba(0, 40, 18, 0.95);
