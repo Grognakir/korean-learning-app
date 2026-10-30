@@ -307,6 +307,7 @@ export function StoryGame({
                 RU
               </button>
           </div>
+          <div className={styles.lineBody}>
           {step.type === "system" ? (
             <ul className={styles.systemLog}>
               {typed.shown.split("\n").map((row, i, rows) => (
@@ -323,6 +324,7 @@ export function StoryGame({
             </p>
           )}
           {canTranslate && showRu && <p className={styles.lineRu}>{line?.ru}</p>}
+          </div>
           <div className={styles.dialogueActions}>
             {showNext && (
               <button type="button" className={styles.nextButton} onClick={advance}>

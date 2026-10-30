@@ -532,6 +532,15 @@
   cursor: pointer;
 }
 
+/* С открытым переводом окно растёт по тексту (не ниже обычной высоты), чтобы
+   реплика и перевод были видны целиком без прокрутки; рост — по нажатию RU,
+   поэтому экран не прыгает сам по себе. Очень длинный текст прокручивается. */
+.dialogue:has(.lineRu) {
+  height: auto;
+  min-height: 150px;
+  max-height: 45vh;
+}
+
 /* Табличка с именем на верхней рамке окна и рядом кнопка перевода. */
 .nameRow {
   position: absolute;
@@ -550,14 +559,27 @@
   color: var(--t-bright);
 }
 
-/* Прокрутка у текста, а не у окна: иначе обрезается табличка с именем,
-   выступающая за верхнюю рамку. */
-.lineText {
-  margin: 0;
-  flex: 0 1 auto;
+/* Реплика и перевод прокручиваются вместе, одним блоком: прокрутка у него, а не
+   у окна (иначе обрезается табличка с именем над рамкой). Раньше прокручивалась
+   только реплика и сжималась, а перевод занимал своё место целиком — длинная
+   корейская реплика уходила под перевод. */
+.lineBody {
+  flex: 1 1 auto;
   min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   overflow-y: auto;
   scrollbar-width: none;
+}
+
+.lineBody::-webkit-scrollbar {
+  display: none;
+}
+
+.lineText {
+  margin: 0;
+  flex: none;
   font-size: 18px;
   line-height: 1.6;
   color: var(--t-bright);
@@ -567,6 +589,7 @@
    текст занимает слишком много места в окне диалога. */
 .lineRu {
   margin: 0;
+  flex: none;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 13px;
   line-height: 1.4;
