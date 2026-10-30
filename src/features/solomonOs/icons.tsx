@@ -53,31 +53,18 @@ const PATHS: Record<IconName, { box: number; body: React.ReactNode }> = {
       </>
     ),
   },
-  // Пакет с ценником: сумка с ручкой и бирка с дырочкой на шнурке.
+  // Витрина магазина: навес с фестонами, стена и дверь (выбран вариант 3).
   shop: {
     box: 24,
     body: (
       <>
-        <path d="M3.5 8h13l-1.2 13H4.7z" {...S} strokeWidth="1.4" />
         <path
-          d="M7 8V6.5a3 3 0 0 1 6 0V8"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.6"
-        />
-        <path
-          d="M13 6.5c2 0 3.2 1.4 4.4 3.3"
-          fill="none"
-          stroke="currentColor"
+          d="M3 9.5 4.5 4h15L21 9.5a2.25 2.25 0 0 1-4.5 0 2.25 2.25 0 0 1-4.5 0 2.25 2.25 0 0 1-4.5 0A2.25 2.25 0 0 1 3 9.5z"
+          {...S}
           strokeWidth="1.1"
         />
-        <path
-          d="M16.2 9.4l4.6-1.1 2 4.6-4.4 1.9-2.6-1.2z"
-          {...S}
-          strokeWidth="1.3"
-        />
-        <circle cx="18.3" cy="10.4" r="0.9" fill="currentColor" />
-        <path d="M18.6 12.4l2.4-1" stroke="currentColor" strokeWidth="1.1" />
+        <path d="M4.5 12v8h15v-8" {...S} strokeWidth="1.2" />
+        <path d="M10 20v-4.5h4V20" fill="none" stroke="currentColor" strokeWidth="1.2" />
       </>
     ),
   },
