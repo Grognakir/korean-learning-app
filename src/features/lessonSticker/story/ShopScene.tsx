@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type Dispatch, type SetStateAction } from "react";
+import { useId, useRef, useState, type Dispatch, type SetStateAction } from "react";
 import { describePiece } from "../clothing/buildSentence";
 import { ClothingIcon } from "../clothing/ClothingIcon";
 import { ITEM_BY_ID } from "../clothing/items";
@@ -12,7 +12,7 @@ import { zoneItems, type MannequinKind, type ZoneId } from "./mannequins";
 import { Palette } from "./Palette";
 import { parsePurchase, type PurchaseResult } from "./parsePurchase";
 import { ChannelStatus, MatrixRain } from "./Terminal";
-import { usePhone } from "./usePhone";
+import { useCompact } from "./usePhone";
 import { useTypewriter } from "./useTypewriter";
 import styles from "./StoryGame.module.css";
 
@@ -40,8 +40,10 @@ export function ShopScene({
   onNext: () => void;
 }) {
   const [selection, setSelection] = useState<Selection | null>(null);
-  const phone = usePhone();
-  // На телефоне полка — шторка снизу сцены, на компьютере — в окне диалога.
+  // Узкий экран игры (телефон или узкое окно ОС): полка — шторка снизу сцены,
+  // иначе — в окне диалога.
+  const stageRef = useRef<HTMLDivElement>(null);
+  const phone = useCompact(stageRef);
   const shelfOnStage = phone;
   const [cartOpen, setCartOpen] = useState(false);
   const [picked, setPicked] = useState<string | null>(null);
@@ -196,10 +198,11 @@ export function ShopScene({
 
   return (
     <>
-      <div className={`${styles.stage} ${styles.shopStage}`}>
+      <div className={`${styles.stage} ${styles.shopStage}`} ref={stageRef}>
         <MatrixRain className={styles.rainStage} />
         <Character who="clerk" pose={clerk.pose} presence="remote" />
         <MannequinRow
+          compact={phone}
           kinds={["male", "female"]}
           selected={selection}
           hideCallouts={Boolean(picked)}

@@ -40,7 +40,7 @@ export function Shop({
     onCart(typeof next === "function" ? next(task.cart) : next);
 
   return (
-    <div className={`${storyStyles.screen} ${storyStyles.embedded}`}>
+    <div className={`${storyStyles.screen} ${storyStyles.embedded}`} data-game-screen>
       <HologramFilter />
       <header className={storyStyles.bar}>
         <span>KOREAN LEARNING // ONLINE STORE</span>

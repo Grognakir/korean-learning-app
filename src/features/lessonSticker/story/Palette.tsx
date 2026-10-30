@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ClothingIcon } from "../clothing/ClothingIcon";
 import { COLOR_BY_ID, COLORS, PATTERN_BY_ID, PATTERNS, type ColorId, type PatternId } from "../clothing/colors";
 import { ITEM_BY_ID, itemPattern } from "../clothing/items";
+import { recolorIcon } from "../clothing/recolorIcon";
 import type { PurchaseResult } from "./parsePurchase";
 import styles from "./StoryGame.module.css";
 
@@ -23,6 +24,13 @@ export function Palette({
   const item = ITEM_BY_ID[id];
   const [color, setColor] = useState<ColorId | null>(null);
   const [pattern, setPattern] = useState<PatternId>("plain");
+
+  // Все цвета вещи (с выбранным узором) грузятся заранее, чтобы переключение
+  // было мгновенным; recolorIcon кеширует результат.
+  useEffect(() => {
+    if (!item.recolorable) return;
+    for (const c of COLORS) void recolorIcon(id, c.id, itemPattern(item, pattern));
+  }, [id, item, pattern]);
 
   const phrase = [
     color && item.recolorable ? COLOR_BY_ID[color].ko : null,

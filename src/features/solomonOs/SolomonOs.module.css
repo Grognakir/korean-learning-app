@@ -44,7 +44,9 @@
   box-sizing: border-box;
 }
 
-.os button {
+/* :where — нулевой вес, чтобы не перебивать цвета кнопок игры урока внутри окон
+   (выбранный узор, «▶ 다음» и т. п.). */
+:where(.os) button {
   font: inherit;
   color: inherit;
 }

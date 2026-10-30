@@ -262,14 +262,14 @@ export function StoryGame({
 
   if (step.type === "incoming") {
     return (
-      <div className={`${styles.screen} ${styles.screenIncoming}`}>
+      <div className={`${styles.screen} ${styles.screenIncoming}`} data-game-screen>
         <IncomingScreen caller={step.caller} avatar={step.avatar} onStart={next} />
       </div>
     );
   }
 
   return (
-    <div className={`${styles.screen} ${className ?? ""}`} ref={screenRef} tabIndex={-1}>
+    <div className={`${styles.screen} ${className ?? ""}`} ref={screenRef} tabIndex={-1} data-game-screen>
       <HologramFilter />
       <header className={styles.bar}>
         <span>KOREAN LEARNING // {scene}</span>

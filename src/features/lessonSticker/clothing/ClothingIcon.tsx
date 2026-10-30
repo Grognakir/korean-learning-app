@@ -22,13 +22,13 @@ export function ClothingIcon({
   const effectiveColor = item.recolorable ? color : "white";
   const effectivePattern = itemPattern(item, pattern);
   const key = `${id}:${effectiveColor}:${effectivePattern}`;
-  const [rendered, setRendered] = useState<{ key: string; src: string } | null>(null);
+  const [rendered, setRendered] = useState<{ id: string; key: string; src: string } | null>(null);
 
   useEffect(() => {
     if (!item.recolorable) return;
     let alive = true;
     recolorIcon(id, effectiveColor, effectivePattern).then((src) => {
-      if (alive && src) setRendered({ key, src });
+      if (alive && src) setRendered({ id, key, src });
     });
     return () => {
       alive = false;
@@ -36,7 +36,9 @@ export function ClothingIcon({
   }, [id, item.recolorable, effectiveColor, effectivePattern, key]);
 
   const plain = effectiveColor === "white" && effectivePattern === "plain";
-  const src = !plain && rendered?.key === key ? rendered.src : `${ICON_BASE}/${id}.png`;
+  // Пока грузится новый цвет, остаётся прежняя картинка этой вещи — без
+  // мигания белой иконкой между цветами.
+  const src = !plain && rendered?.id === id ? rendered.src : `${ICON_BASE}/${id}.png`;
 
   return (
     // eslint-disable-next-line @next/next/no-img-element

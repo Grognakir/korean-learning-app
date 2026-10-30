@@ -16,6 +16,9 @@
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 15px;
   outline: none;
+  /* Мобильная раскладка — по ширине самого экрана игры, а не окна браузера:
+     в узком окне Solomon OS магазин тоже перестраивается. */
+  container: game / inline-size;
 }
 
 /* Сканлинии CRT поверх всего экрана. */
@@ -420,7 +423,7 @@
 
 /* На телефоне панель канала компактнее (без FREQ и ENC) и прижата к
    правому краю, персонаж — к левому, чтобы они не перекрывались. */
-@media (max-width: 640px) {
+@container game (max-width: 640px) {
   .stageStatus {
     top: 8px;
     right: 8px;
@@ -727,7 +730,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@container game (max-width: 640px) {
   .replies {
     left: 10px;
     right: 10px;
@@ -851,14 +854,17 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  container-type: inline-size;
 }
 
 /* Прозрачные поля картинок манекенов перекрываются, но сами фигуры
    стоят с промежутком. */
+/* На широком окне манекены понемногу расходятся: перекрытие полей уменьшается
+   с −40px (ряд 600px) до 0 (ряд ~1270px и шире). */
 .mannequin {
   position: relative;
   height: 100%;
-  margin: 0 -40px;
+  margin: 0 clamp(-40px, calc((100cqw - 600px) * 0.06 - 40px), 0px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1090,6 +1096,8 @@
 }
 
 .picker_shelf {
+  flex: 1;
+  min-height: 0;
   gap: 4px;
 }
 
@@ -1114,9 +1122,15 @@
   color: var(--t-bright);
 }
 
+/* Плитки — по высоте окна диалога (на очень широком экране ряд просто
+   длиннее и прижат влево; не помещается — прокрутка вбок). */
 .picker_shelf .pickerItems {
+  flex: 1;
+  min-height: 0;
   display: flex;
   gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 /* Плитки полки во всю высоту окна диалога; слева — по табличке с именем
@@ -1126,8 +1140,11 @@
 }
 
 .picker_shelf .pickerItem {
-  width: 112px;
-  height: 112px;
+  flex: none;
+  width: auto;
+  height: 100%;
+  max-height: 150px;
+  aspect-ratio: 1;
   padding: 0;
   justify-content: center;
   border-color: var(--t-dim);
@@ -1142,6 +1159,11 @@
   outline: none;
   border-color: var(--t-mid);
   box-shadow: 0 0 10px rgba(0, 255, 102, 0.25);
+}
+
+.picker_shelf .pickerItem img {
+  width: 82% !important;
+  height: 82% !important;
 }
 
 .picker_shelf .pickerItem.pickerItemOn {
@@ -1404,13 +1426,7 @@
   color: var(--t-text);
 }
 
-@media (max-width: 640px) {
-  /* Игра на весь экран телефона: отступы от выреза, скруглённых углов и
-     полоски «домой» на iPhone (safe area). */
-  .screen {
-    padding: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px))
-      calc(12px + env(safe-area-inset-bottom, 0px)) calc(12px + env(safe-area-inset-left, 0px));
-  }
+@container game (max-width: 640px) {
 
   .verdictCard {
     translate: none;
@@ -1428,12 +1444,6 @@
     white-space: nowrap;
   }
 
-  /* Игра на весь экран телефона: сцена занимает свободную высоту. */
-  .screen {
-    box-sizing: border-box;
-    min-height: 100dvh;
-    min-height: 100svh;
-  }
 
   /* max-height: на высоком окне сцена не растягивается на весь экран и окно
      диалога остаётся рядом с ней, а не уезжает вниз. */
@@ -1585,7 +1595,7 @@
   display: none;
 }
 
-@media (max-width: 640px) {
+@container game (max-width: 640px) {
   .incomingTop {
     padding-right: 48px;
   }
@@ -1616,7 +1626,7 @@
   display: none;
 }
 
-@media (max-width: 640px) {
+@container game (max-width: 640px) {
   .mqBack {
     display: none;
   }
@@ -1676,7 +1686,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@container game (max-width: 640px) {
   /* Столбик зон слева от манекена (выноски на телефоне смотрят вправо). */
   .mqZones {
     position: absolute;
@@ -1713,7 +1723,7 @@
 
 /* ---------- полка на телефоне: шторка снизу сцены ---------- */
 
-@media (max-width: 640px) {
+@container game (max-width: 640px) {
   .shelfSheet {
     position: absolute;
     left: 0;
@@ -1728,13 +1738,6 @@
     background: rgba(5, 10, 6, 0.96);
     box-shadow: 0 0 18px rgba(0, 255, 102, 0.2);
     animation: sheetUp 0.2s ease-out;
-  }
-
-  @keyframes sheetUp {
-    from {
-      translate: 0 30%;
-      opacity: 0;
-    }
   }
 
   .shelfSheet .shelfClose {
@@ -1765,6 +1768,8 @@
   .shelfSheet .pickerItem {
     width: auto;
     height: 96px;
+    max-height: none;
+    aspect-ratio: auto;
   }
 
   .shelfSheet .pickerItem img {
@@ -1790,4 +1795,29 @@
   height: auto;
   min-height: 160px;
   max-height: none;
+}
+
+/* Сам экран (контейнер) на телефоне — по ширине окна браузера: стикер урока
+   открывается на весь экран. */
+@media (max-width: 640px) {
+  /* Игра на весь экран телефона: отступы от выреза, скруглённых углов и
+     полоски «домой» на iPhone (safe area). */
+  .screen {
+    padding: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px))
+      calc(12px + env(safe-area-inset-bottom, 0px)) calc(12px + env(safe-area-inset-left, 0px));
+  }
+
+  /* Игра на весь экран телефона: сцена занимает свободную высоту. */
+  .screen {
+    box-sizing: border-box;
+    min-height: 100dvh;
+    min-height: 100svh;
+  }
+}
+
+@keyframes sheetUp {
+  from {
+    translate: 0 30%;
+    opacity: 0;
+  }
 }

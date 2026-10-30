@@ -19,7 +19,6 @@ import {
   type ZoneId,
 } from "./mannequins";
 import styles from "./StoryGame.module.css";
-import { usePhone } from "./usePhone";
 
 type ZoneMap = { data: Uint8ClampedArray; highlight: Map<ZoneId, string> };
 
@@ -139,12 +138,15 @@ function ZoneCallout({
  * вниз), чья зона под курсором. На телефоне виден один манекен, вкладки
  * 남성 / 여성 сверху переключают его. */
 export function MannequinRow({
+  compact,
   kinds,
   selected,
   hideCallouts,
   onSelect,
   onDeselect,
 }: {
+  /** Узкий экран игры: один манекен, выноски вправо. */
+  compact: boolean;
   kinds: MannequinKind[];
   selected: { kind: MannequinKind; zone: ZoneId } | null;
   hideCallouts: boolean;
@@ -202,6 +204,7 @@ export function MannequinRow({
           hideCallouts={hideCallouts}
           onSelect={onSelect}
           className={kind === front ? styles.mqFront : styles.mqBack}
+          compact={compact}
         />
       ))}
       {/* На телефоне мелкие зоны (серьги, шарф) удобнее выбирать списком. */}
@@ -288,6 +291,7 @@ export function Mannequin({
   onSelect,
   className,
   ref,
+  compact = false,
 }: {
   kind: MannequinKind;
   selected: ZoneId | null;
@@ -297,10 +301,10 @@ export function Mannequin({
   onSelect: (anchor: ZoneAnchor) => void;
   className?: string;
   ref?: Ref<MannequinHandle>;
+  compact?: boolean;
 }) {
   const boxRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<ZoneMap | null>(null);
-  const phone = usePhone();
 
   useEffect(() => {
     let alive = true;
@@ -390,7 +394,7 @@ export function Mannequin({
                   key={zone}
                   kind={kind}
                   zone={zone}
-                  left={kind === "male" && !phone}
+                  left={kind === "male" && !compact}
                 />
               ),
           )}
