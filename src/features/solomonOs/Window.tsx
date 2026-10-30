@@ -2,7 +2,7 @@
 
 import { useState, type ReactNode } from "react";
 import type { OsApp } from "./apps";
-import { OsIcon } from "./icons";
+import { AppIcon, OsIcon } from "./icons";
 import styles from "./SolomonOs.module.css";
 
 export type Geo = { x: number; y: number; w: number; h: number };
@@ -144,7 +144,7 @@ export function OsWindow({
             onChange({ max: !state.max }, true);
         }}
       >
-        <OsIcon name={app.icon} className={styles.titleIcon} />
+        <AppIcon id={app.id} className={styles.titleIcon} />
         <span className={`${styles.title} kr`}>{title}</span>
         <span className={styles.btns}>
           <button

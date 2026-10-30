@@ -263,3 +263,20 @@ export function OsIcon({
     </svg>
   );
 }
+
+/** Иконка приложения ОС — картинка (public/images/solomon-os/apps, рисовал
+ * Codex), @2x для чётких экранов. */
+export function AppIcon({ id, className }: { id: string; className?: string }) {
+  const base = `/images/solomon-os/apps/${id}`;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      className={className}
+      src={`${base}.png`}
+      srcSet={`${base}.png 1x, ${base}@2x.png 2x`}
+      alt=""
+      draggable={false}
+      aria-hidden="true"
+    />
+  );
+}

@@ -17,7 +17,7 @@ import { Desktop } from "./Desktop";
 import { NoteBell } from "./NoteBell";
 import { makeNote, markNotesRead, NOTES_KEY, pushNote, type OsNote } from "./notifications";
 import { Toast } from "./Toast";
-import { OsIcon } from "./icons";
+import { AppIcon, OsIcon } from "./icons";
 import {
   addOutgoing,
   afterPass,
@@ -375,7 +375,7 @@ export function SolomonOs() {
                 else focusWin(id);
               }}
             >
-              <OsIcon name={APP_BY_ID[id].icon} />
+              <AppIcon id={id} />
               {APP_BY_ID[id].ko}
             </button>
           ))}

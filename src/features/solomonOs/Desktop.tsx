@@ -9,7 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { APPS, type AppId } from "./apps";
-import { OsIcon } from "./icons";
+import { AppIcon, OsIcon } from "./icons";
 import {
   attach,
   colX,
@@ -211,7 +211,7 @@ export function Desktop({
             }}
           >
             <span className={styles.pic}>
-              <OsIcon name={a.icon} />
+              <AppIcon id={a.id} />
               {a.locked && <i className={styles.lock}>🔒</i>}
               {badge > 0 && <b className={styles.badge}>{badge}</b>}
             </span>
