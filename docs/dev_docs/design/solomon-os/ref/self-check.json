@@ -1,0 +1,85 @@
+{
+  "screens": [
+    {
+      "file": "01_boot.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "visual_review": "PASS"
+    },
+    {
+      "file": "02_login.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "visual_review": "PASS"
+    },
+    {
+      "file": "03_desktop.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "visual_review": "PASS"
+    },
+    {
+      "file": "04_notification.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "visual_review": "PASS"
+    },
+    {
+      "file": "05_chats.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "visual_review": "PASS"
+    },
+    {
+      "file": "06_chat.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "visual_review": "PASS"
+    }
+  ],
+  "checks": {
+    "six_screens": "PASS",
+    "exact_size": "PASS",
+    "screen_only_no_device": "PASS",
+    "shared_top_panel_font_frames_palette": "PASS",
+    "no_existing_brand_logos": "PASS",
+    "jia_hologram_avatar_consistency": "PASS",
+    "requested_screen_contents": "PASS"
+  },
+  "limitations": [
+    "Static concept images: scanlines, cursor, rain and notification motion are depicted, not animated.",
+    "Generated UI typography is a visual reference; implementation must use real text.",
+    "At phone width, tiny system metadata and locked labels have lower contrast than main content."
+  ],
+  "overview": {
+    "layout": "six screens in one horizontal row",
+    "size": [
+      1648,
+      432
+    ]
+  }
+}
