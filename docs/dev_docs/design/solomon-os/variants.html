@@ -139,7 +139,13 @@
   .v2 .titlebar .btns i:last-child { background: var(--mid); }
   .v2 .msg { border-radius: 12px; font-family: var(--sans); }
   .v2 .msg.in { background: #14241a; border-color: #1d3326; color: #c9f7d8; }
-  .v2 .msg.out { background: #0f6b33; border-color: #0f6b33; color: #eafff1; }
+  /* на зелёном — чёрный текст (как в варианте 6) */
+  .v2 .msg.out { background: #22a354; border-color: #22a354; color: #04150a; }
+  .v2 .msg.out .st { color: inherit; opacity: .7; }
+  .v2 .msg.out .tr { color: #0b3d1f; }
+  .v2 .ru[aria-pressed="true"] { background: #22a354; border-color: #22a354; color: #04150a; }
+  .v2 .reply:hover .tr { color: #0b3d1f; }
+  .v2 .app .badge { color: #04150a; }
   .v2 .reply { border-radius: 8px; font-family: var(--sans); border-color: #1d3326; background: #14241a; color: #c9f7d8; }
   .v2 .reply:hover { background: var(--mid); color: #000; }
   .v2 .ru { border-radius: 5px; }
@@ -315,15 +321,15 @@
 <script>
   const V = [
     ["v1", "1 · Звонок", "Язык нашего экрана звонка 지아: рамки, табличка имени на рамке, сканлинии, дождь хангыля"],
-    ["v2", "2 · Kali", "Обычные окна Xfce, заполненные иконки, спокойный шрифт — в нашей зелёной палитре"],
+    ["v2", "2 · Kali ✓", "Выбран: окна Xfce, заполненные иконки, спокойный шрифт; на зелёном — чёрный текст"],
     ["v3", "3 · Некрон", "Скошенные углы, свечение, глифы, печать Соломона, шестиугольные аватары"],
     ["v4", "4 · tmux", "Чистый терминал: панели, приглашения 지아> / you>, выбор ответа как [ ] пункт"],
     ["v5", "5 · Голограмма", "Стеклянные окна поверх дождя, большой голограммный портрет 지아"],
     ["v6", "6 · Спокойный", "Ближе к обычному приложению: тёмные карточки, мягкие пузыри, без эффектов"],
   ];
   const os = document.getElementById("os"), sw = document.getElementById("sw"), cap = document.getElementById("cap");
-  let cur = "v1";
-  try { cur = new URLSearchParams(location.search).get("v") || localStorage.getItem("solomon-v") || "v1"; } catch (e) {}
+  let cur = "v2";
+  try { cur = new URLSearchParams(location.search).get("v") || "v2"; } catch (e) {}
   function set(v) {
     cur = v; os.className = "os scan " + v + (os.classList.contains("showru") ? " showru" : "");
     sw.innerHTML = V.map(([id, n]) => `<button data-v="${id}" aria-pressed="${id === v}">${n}</button>`).join("");
