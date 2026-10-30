@@ -343,7 +343,7 @@
   font: inherit;
   font-size: 20px;
   letter-spacing: 0.1em;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .startButton:hover,
@@ -536,7 +536,7 @@
   padding: 18px 16px 12px;
   border: 1px solid var(--t-mid);
   background: var(--t-panel);
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 /* Табличка с именем на верхней рамке окна и рядом кнопка перевода. */
@@ -626,7 +626,7 @@
   color: var(--t-bright);
   font: inherit;
   font-size: 15px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .nextButton:hover,
@@ -685,7 +685,7 @@
   font: inherit;
   font-size: 17px;
   text-align: left;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .reply:first-of-type {
@@ -750,7 +750,7 @@
   background: transparent;
   color: var(--t-text);
   font-size: 15px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .chip:hover {
@@ -819,7 +819,7 @@
   background: none;
   color: #3d5c48;
   font-size: 18px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .checkout {
@@ -829,7 +829,7 @@
 
 .checkout:disabled {
   opacity: 0.4;
-  cursor: default;
+  cursor: var(--cursor-default, default);
 }
 
 /* ---------- магазин на манекенах ---------- */
@@ -879,7 +879,7 @@
 }
 
 .mannequinHot {
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .mannequinImg,
@@ -993,7 +993,7 @@
 }
 
 .cartTitle {
-  cursor: default;
+  cursor: var(--cursor-default, default);
 }
 
 /* Стрелка раскрытия списка — только на телефоне. */
@@ -1002,7 +1002,7 @@
 }
 
 .cartClear {
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
   text-decoration: underline dotted;
   text-underline-offset: 3px;
 }
@@ -1013,7 +1013,7 @@
 
 .cartClear:disabled {
   opacity: 0.35;
-  cursor: default;
+  cursor: var(--cursor-default, default);
   text-decoration: none;
 }
 
@@ -1082,7 +1082,7 @@
   color: #10241a;
   font: inherit;
   font-size: 13px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .pickerItem small {
@@ -1242,7 +1242,7 @@
   font: inherit;
   font-size: 16px;
   line-height: 1;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .swatchGrid {
@@ -1260,7 +1260,7 @@
   background: transparent;
   color: var(--t-text);
   font-size: 15px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .swatch:hover {
@@ -1309,7 +1309,7 @@
 
 .buyButton:disabled {
   opacity: 0.4;
-  cursor: default;
+  cursor: var(--cursor-default, default);
 }
 
 /* V6 — полка в окне диалога: реплика сверху, без печати. */
@@ -1323,7 +1323,7 @@
   font: inherit;
   font-size: 12px;
   letter-spacing: 0.06em;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 .ruToggle:hover {
@@ -1332,7 +1332,7 @@
 
 .ruToggle:disabled {
   opacity: 0.35;
-  cursor: default;
+  cursor: var(--cursor-default, default);
 }
 
 .ruToggle:disabled:hover {
@@ -1357,7 +1357,7 @@
   font: inherit;
   font-size: 16px;
   line-height: 1;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 
 /* ---------- итог ---------- */
@@ -1505,7 +1505,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer, pointer);
     font-size: 13px;
     color: var(--t-bright);
   }
@@ -1665,7 +1665,7 @@
     color: var(--t-bright);
     font: inherit;
     font-size: 14px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer, pointer);
   }
 
   .mqThumb + .mqThumb {
@@ -1709,7 +1709,7 @@
     color: var(--t-mid);
     font: inherit;
     font-size: 13px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer, pointer);
   }
 
   .mqZone:hover,

@@ -184,7 +184,10 @@ export function OsWindow({
         />
       ))}
       {dragging && (
-        <div className={styles.shield} style={{ cursor: dragging }} />
+        <div
+          className={styles.shield}
+          style={{ cursor: `var(--cursor-${dragging}, ${dragging})` }}
+        />
       )}
     </section>
   );
