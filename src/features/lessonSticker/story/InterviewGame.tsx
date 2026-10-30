@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { readGame } from "../session";
 import { EPISODES } from "./episodeList";
 import { StoryGame } from "./StoryGame";
 import type { Episode } from "./types";
@@ -23,7 +24,11 @@ function readLast(): string | null {
 
 /** Стикер урока 10: при каждом открытии — случайная ситуация с одеждой. */
 export function InterviewGame() {
-  const [episode, setEpisode] = useState(() => pickEpisode(readLast()));
+  const [episode, setEpisode] = useState(() => {
+    // После перезагрузки продолжаем ту же ситуацию, а не берём новую.
+    const saved = readGame("interview") as { episodeId?: unknown } | null;
+    return EPISODES.find((e) => e.id === saved?.episodeId) ?? pickEpisode(readLast());
+  });
 
   useEffect(() => {
     try {

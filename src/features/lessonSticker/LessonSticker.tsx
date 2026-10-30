@@ -5,6 +5,7 @@ import { Modal } from "@/components/ui/Modal";
 import type { LessonSticker as LessonStickerConfig } from "@/features/learning/types";
 import { CHARACTERS, emotionSrc, type Emotion } from "./characters";
 import { readProgress, subscribeProgress } from "./progress";
+import { markClosed, markOpen, wasOpen } from "./session";
 import { TRAINERS } from "./trainers";
 import styles from "./LessonSticker.module.css";
 
@@ -17,6 +18,23 @@ export function LessonSticker({ config }: { config: LessonStickerConfig }) {
   const [hover, setHover] = useState(false);
   const [beat, setBeat] = useState<"idle" | "blink" | "ringing">("idle");
   const preloaded = useRef(false);
+
+  // Перезагрузка страницы не сворачивает игру: окно открывается снова.
+  useEffect(() => {
+    if (wasOpen(config.trainer)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setOpen(true);
+    }
+  }, [config.trainer]);
+
+  const openGame = () => {
+    markOpen(config.trainer);
+    setOpen(true);
+  };
+  const closeGame = () => {
+    markClosed(config.trainer);
+    setOpen(false);
+  };
 
   const doneCount = useSyncExternalStore(
     subscribeProgress,
@@ -67,7 +85,7 @@ export function LessonSticker({ config }: { config: LessonStickerConfig }) {
         className={`${styles.sticker} ${emotion === "ringing" ? styles.ringing : ""}`}
         onClick={() => {
           preload();
-          setOpen(true);
+          openGame();
         }}
         onMouseEnter={() => {
           preload();
@@ -84,7 +102,7 @@ export function LessonSticker({ config }: { config: LessonStickerConfig }) {
 
       <Modal
         open={open}
-        onClose={() => setOpen(false)}
+        onClose={closeGame}
         title={trainer.title}
         maxWidth={980}
         maxHeight={900}
