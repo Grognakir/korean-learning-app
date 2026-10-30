@@ -17,7 +17,7 @@ import styles from "./StoryGame.module.css";
 
 type Line = { who: Speaker; pose: string; text: string; lang: "ko" | "ru"; ru?: string };
 
-const GREETING: ClerkLine = {
+export const GREETING: ClerkLine = {
   pose: "smile",
   text: "뭘 드릴까요? 마네킹을 누르거나 원하시는 걸 말씀해 주세요.",
   ru: "Что вам подать? Нажмите на манекен или напишите, что хотите купить.",
@@ -60,27 +60,44 @@ export function StoryGame({
   episode,
   progressKey,
   onRestart,
+  range,
+  onRangeEnd,
+  initialCart,
+  persist = true,
+  onFinish,
+  className,
 }: {
   episode: Episode;
   progressKey: string;
   /** «처음부터» после успеха: родитель подставляет другую ситуацию. */
   onRestart?: () => void;
+  /** Только часть шагов (Solomon OS: звонок в окне телефона, встреча — отдельно). */
+  range?: { from: number; to: number };
+  /** Пройден последний шаг диапазона. */
+  onRangeEnd?: () => void;
+  /** Корзина, с которой начинается встреча (покупки из магазина ОС). */
+  initialCart?: OutfitPiece[];
+  /** Сохранять ход игры для перезагрузки (стикер урока); ОС хранит своё сама. */
+  persist?: boolean;
+  /** Итог встречи в ОС: вместо «처음부터 / 가게로 돌아가기» — «Mission completed» или «Перекупить». */
+  onFinish?: (ok: boolean) => void;
+  className?: string;
 }) {
   const { steps, rules, assortment } = episode;
   const shopIndex = steps.findIndex((s) => s.type === "shop");
 
   // Ход игры после перезагрузки страницы: шаг, корзина, ответ продавца.
-  const [saved] = useState(() => restoreGame(progressKey, episode.id, steps.length));
-  const [index, setIndex] = useState(saved?.index ?? 0);
+  const [saved] = useState(() => (persist ? restoreGame(progressKey, episode.id, steps.length) : null));
+  const [index, setIndex] = useState(range?.from ?? saved?.index ?? 0);
   const [showRu, setShowRu] = useState(false);
-  const [cart, setCart] = useState<OutfitPiece[]>(saved?.cart ?? []);
+  const [cart, setCart] = useState<OutfitPiece[]>(initialCart ?? saved?.cart ?? []);
   const [clerk, setClerk] = useState(saved?.clerk ?? GREETING);
   const [paid, setPaid] = useState(saved?.paid ?? false);
   const [verdictStep, setVerdictStep] = useState(saved?.verdictStep ?? 0);
 
   useEffect(() => {
-    writeGame(progressKey, { episodeId: episode.id, index, cart, clerk, paid, verdictStep });
-  }, [progressKey, episode.id, index, cart, clerk, paid, verdictStep]);
+    if (persist) writeGame(progressKey, { episodeId: episode.id, index, cart, clerk, paid, verdictStep });
+  }, [persist, progressKey, episode.id, index, cart, clerk, paid, verdictStep]);
 
   const step = steps[index];
   const screenRef = useRef<HTMLDivElement>(null);
@@ -153,6 +170,10 @@ export function StoryGame({
   const verdictOver = step.type === "verdict" && verdictStep >= verdictLines.length;
 
   const next = () => {
+    if (range && index >= range.to) {
+      onRangeEnd?.();
+      return;
+    }
     setIndex((i) => Math.min(i + 1, steps.length - 1));
     setShowRu(false);
   };
@@ -248,7 +269,7 @@ export function StoryGame({
   }
 
   return (
-    <div className={styles.screen} ref={screenRef} tabIndex={-1}>
+    <div className={`${styles.screen} ${className ?? ""}`} ref={screenRef} tabIndex={-1}>
       <HologramFilter />
       <header className={styles.bar}>
         <span>KOREAN LEARNING // {scene}</span>
@@ -372,7 +393,22 @@ export function StoryGame({
                 ▶ 다음
               </button>
             )}
+            {verdictOver && onFinish && (
+              <button
+                type="button"
+                className={`${styles.nextButton} ${styles.withIcon} ${verdict.ok ? "" : "kr"}`}
+                onClick={() => onFinish(verdict.ok)}
+              >
+                {verdict.ok ? "Mission completed ▶" : (
+                  <>
+                    <RetryIcon />
+                    다시 사기 · Перекупить
+                  </>
+                )}
+              </button>
+            )}
             {verdictOver &&
+              !onFinish &&
               (verdict.ok ? (
                 <button type="button" className={`${styles.nextButton} ${styles.withIcon} kr`} onClick={restart}>
                   <RetryIcon />
