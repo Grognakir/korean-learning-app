@@ -219,7 +219,19 @@ export function MannequinRow({
             type="button"
             className={`${styles.mqZone} kr`}
             aria-pressed={selected?.kind === front && selected.zone === zone}
+            data-hot={hover?.kind === front && hover.zone === zone}
             onClick={() => handles.current.get(front)?.select(zone)}
+            onPointerEnter={(e) => {
+              if (e.pointerType === "mouse") setHover({ kind: front, zone });
+            }}
+            onPointerLeave={(e) => {
+              if (e.pointerType === "mouse") setHover(null);
+            }}
+            onFocus={(e) => {
+              if (e.currentTarget.matches(":focus-visible"))
+                setHover({ kind: front, zone });
+            }}
+            onBlur={() => setHover(null)}
           >
             {ZONES[zone].ko}
           </button>
