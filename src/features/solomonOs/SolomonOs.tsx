@@ -7,13 +7,16 @@ import { HologramFilter } from "../lessonSticker/story/Character";
 import { IncomingScreen } from "../lessonSticker/story/IncomingScreen";
 import { StoryGame } from "../lessonSticker/story/StoryGame";
 import storyStyles from "../lessonSticker/story/StoryGame.module.css";
-import { APP_BY_ID, APPS, type AppId } from "./apps";
+import { APP_BY_ID, APPS, JIA_AVATAR, type AppId } from "./apps";
 import { Messenger, readChat } from "./apps/Messenger";
 import { Phone, type ActiveCall } from "./apps/Phone";
 import { Locked, Settings } from "./apps/Settings";
 import { Shop } from "./apps/Shop";
 import { Terminal } from "./apps/Terminal";
 import { Desktop } from "./Desktop";
+import { NoteBell } from "./NoteBell";
+import { makeNote, markNotesRead, NOTES_KEY, pushNote, type OsNote } from "./notifications";
+import { Toast } from "./Toast";
 import { OsIcon } from "./icons";
 import {
   addOutgoing,
@@ -39,7 +42,6 @@ import { clampGeo, OsWindow, type Geo, type WinState } from "./Window";
 import styles from "./SolomonOs.module.css";
 
 type Sys = { schedule: ScheduleState; log: CallEntry[]; ring: Ring | null };
-type Toast = { who: string; text: string; app: AppId; avatar?: string } | null;
 type Wins = Partial<Record<AppId, WinState>>;
 
 const TICK_MS = 1000;
@@ -69,7 +71,15 @@ export function SolomonOs() {
   const [call, setCall] = useState<ActiveCall | null>(null);
   const [meeting, setMeeting] = useState(false);
   const [msgUnread, setMsgUnread] = useState(() => (readChat().shown ? 0 : 1));
-  const [toast, setToast] = useState<Toast>(null);
+  const [notes, setNotes] = useState<OsNote[]>(() => load<OsNote[]>(NOTES_KEY, []));
+  const [toastId, setToastId] = useState<string | null>(null);
+  const notesRef = useRef(notes);
+  useEffect(() => {
+    notesRef.current = notes;
+  });
+  // Сколько пропущенных было до входа: новые — повод для уведомления.
+  const [missedBefore] = useState(() => unseenMissed(load<CallEntry[]>("calls", [])));
+  const missedSeen = useRef(missedBefore);
   const [clock, setClock] = useState(() => koTime(new Date()));
 
   useEffect(() => {
@@ -78,26 +88,39 @@ export function SolomonOs() {
   useEffect(() => save("schedule", sys.schedule), [sys.schedule]);
   useEffect(() => save("calls", sys.log), [sys.log]);
   useEffect(() => save("task", task), [task]);
+  useEffect(() => save(NOTES_KEY, notes), [notes]);
 
-  // Уведомление при входе: пропущенный звонок, иначе сообщение 지아.
+  /** Новое уведомление: баннер сверху и запись под колокольчиком. */
+  const notify = useCallback((note: Omit<OsNote, "id" | "at" | "read">) => {
+    const n = makeNote(note, Date.now());
+    setNotes((l) => pushNote(l, n));
+    setToastId(n.id);
+  }, []);
+
+  // Новый пропущенный (при входе или пока ОС открыта) — уведомление.
+  const missedNow = unseenMissed(sys.log);
   useEffect(() => {
+    if (missedNow <= missedSeen.current) {
+      missedSeen.current = missedNow;
+      return;
+    }
+    // Счётчик обновляется в момент показа: повторный запуск эффекта (Strict
+    // Mode, перерисовка) не должен «съесть» уведомление.
     const t = setTimeout(() => {
-      const missed = unseenMissed(sys.log);
-      if (missed)
-        setToast({ who: "지아", text: `부재중 전화 ${missed}통`, app: "call" });
-      else if (msgUnread)
-        setToast({ who: "지아", text: "뭐 해요? 😊", app: "msg" });
-    }, 900);
+      missedSeen.current = missedNow;
+      notify({ who: "지아", text: `부재중 전화 ${missedNow}통`, app: "call" });
+    }, 600);
+    return () => clearTimeout(t);
+  }, [missedNow, notify]);
+
+  // Первое сообщение 지아 в мессенджере — одно уведомление.
+  useEffect(() => {
+    if (!msgUnread || notesRef.current.some((n) => n.app === "msg") || missedNow > missedBefore) return;
+    const t = setTimeout(() => notify({ who: "지아", text: "뭐 해요? 😊", app: "msg" }), 900);
     return () => clearTimeout(t);
     // только при входе
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  useEffect(() => {
-    if (!toast) return;
-    const t = setTimeout(() => setToast(null), 6000);
-    return () => clearTimeout(t);
-  }, [toast]);
 
   // Пока ОС открыта: пришло время — звонок; минута без ответа — пропущенный.
   useEffect(() => {
@@ -121,7 +144,12 @@ export function SolomonOs() {
 
   const openApp = useCallback(
     (id: AppId) => {
-      setToast((t) => (t?.app === id ? null : t));
+      // Открыли приложение — его уведомления прочитаны, баннер убирается.
+      const own = notesRef.current.filter((n) => n.app === id).map((n) => n.id);
+      if (own.length) {
+        setNotes((l) => markNotesRead(l, own));
+        setToastId((t) => (t && own.includes(t) ? null : t));
+      }
       setWins((prev) => {
         const z = ++zTop.current;
         const cur = prev[id];
@@ -239,11 +267,7 @@ export function SolomonOs() {
       cart: prev?.episodeId === call.episode.id ? prev.cart : [],
     }));
     setCall(null);
-    setToast({
-      who: "쇼핑",
-      text: "지아의 부탁 — 옷을 사러 가요",
-      app: "shop",
-    });
+    notify({ who: "쇼핑", text: "지아의 부탁 — 옷을 사러 가요", app: "shop" });
   };
 
   const finishMeeting = (ok: boolean) => {
@@ -272,6 +296,7 @@ export function SolomonOs() {
     shop: task && !wins.shop ? 1 : 0,
   };
 
+  const toast = toastId ? notes.find((n) => n.id === toastId) : undefined;
   const meetingEpisode =
     meeting && task ? episodeById(task.episodeId) : undefined;
   const ringing = sys.ring && !call ? sys.ring : null;
@@ -356,6 +381,16 @@ export function SolomonOs() {
           ))}
         </div>
         <div className={`${styles.tray} kr`}>
+          <NoteBell
+            notes={notes}
+            avatar={JIA_AVATAR}
+            onOpenNote={(n) => openApp(n.app)}
+            onReadAll={() => setNotes((l) => markNotesRead(l))}
+            onClear={() => {
+              setNotes([]);
+              setToastId(null);
+            }}
+          />
           <span>{clock}</span>
           <span className={styles.sig} aria-hidden="true">
             {[4, 7, 10, 12].map((h) => (
@@ -394,26 +429,18 @@ export function SolomonOs() {
             {content(id)}
           </OsWindow>
         ))}
-        <button
-          type="button"
-          className={`${styles.toast} ${toast ? styles.toastShow : ""} kr`}
-          tabIndex={toast ? 0 : -1}
-          aria-hidden={!toast}
-          onClick={() => toast && openApp(toast.app)}
-        >
-          <span className={styles.ava}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className={styles.holo}
-              src={trainerById("lesson10-clothes")?.avatar}
-              alt=""
-            />
-          </span>
-          <span>
-            <b>{toast?.who}</b>
-            <small>{toast?.text}</small>
-          </span>
-        </button>
+        {toast && (
+          <Toast
+            key={toast.id}
+            note={toast}
+            avatar={JIA_AVATAR}
+            onOpen={() => {
+              setToastId(null);
+              openApp(toast.app);
+            }}
+            onClose={() => setToastId(null)}
+          />
+        )}
       </Desktop>
 
       {ringing && (

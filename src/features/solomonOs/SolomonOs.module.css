@@ -110,9 +110,11 @@
 
 /* ---------- верхняя панель (Xfce) ---------- */
 
+/* Выше баннера уведомления (1500): список под колокольчиком перекрывает его;
+   ниже входящего звонка и встречи (1800). */
 .panel {
   position: relative;
-  z-index: 1000;
+  z-index: 1700;
   flex: none;
   display: flex;
   align-items: center;
@@ -1032,40 +1034,223 @@
   color: var(--soft);
 }
 
-/* ---------- уведомление ---------- */
+/* ---------- уведомления: баннер ---------- */
 
+/* Баннер въезжает сверху; тянется пальцем/мышью в любую сторону и, если
+   смахнуть дальше порога, улетает (Toast.tsx). */
 .toast {
   position: absolute;
   z-index: 1500;
   top: 10px;
   right: 10px;
-  width: min(330px, calc(100% - 20px));
+  width: min(340px, calc(100% - 20px));
   display: flex;
   gap: 10px;
   align-items: center;
-  padding: 10px 12px;
-  background: #101a14;
+  padding: 10px 8px 10px 12px;
+  background: rgba(16, 26, 20, 0.96);
   border: 1px solid #2c5a3c;
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(34, 163, 84, 0.12);
   text-align: left;
   cursor: var(--cursor-pointer, pointer);
-  transform: translateY(-140%);
-  transition: transform 0.3s ease;
+  touch-action: none;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition:
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.22s ease;
+  animation: toastIn 0.32s cubic-bezier(0.2, 0.9, 0.25, 1.15);
 }
 
-.toastShow {
-  transform: none;
+.toast:focus-visible {
+  outline: 2px solid var(--mid);
+  outline-offset: 2px;
 }
 
-.toast b {
+@keyframes toastIn {
+  from {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+}
+
+.toastBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.toastBody b {
   display: block;
   font-size: 13px;
+  color: var(--text);
 }
 
-.toast small {
+.toastBody small {
+  display: block;
   font-size: 13px;
   color: var(--soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toastClose {
+  flex: none;
+  align-self: flex-start;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--soft);
+  cursor: var(--cursor-pointer, pointer);
+  transition: background 0.15s, color 0.15s;
+}
+
+.toastClose svg {
+  width: 10px;
+  height: 10px;
+}
+
+.toastClose:hover,
+.toastClose:focus-visible {
+  background: #1d3326;
+  color: var(--text);
+  outline: none;
+}
+
+/* ---------- уведомления: колокольчик и список ---------- */
+
+.bellBox {
+  position: relative;
+  display: flex;
+}
+
+.bell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  color: var(--soft);
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.bell:hover,
+.bell[aria-expanded="true"] {
+  background: #14241a;
+  color: var(--text);
+}
+
+.bell svg {
+  width: 16px;
+  height: 16px;
+}
+
+.bellBadge {
+  position: absolute;
+  top: -3px;
+  right: -2px;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--amber);
+  color: var(--ink);
+  font: 700 10px/15px var(--sans);
+  text-align: center;
+}
+
+.notePanel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: -60px;
+  z-index: 1600;
+  width: min(340px, calc(100vw - 16px));
+  max-height: min(420px, 70vh);
+  display: flex;
+  flex-direction: column;
+  background: rgba(16, 26, 20, 0.98);
+  border: 1px solid #2c5a3c;
+  border-radius: 12px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+  animation: panelIn 0.18s ease-out;
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.noteHead {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.noteClear {
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: none;
+  font-size: 12px;
+  color: var(--soft);
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.noteClear:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--ink);
+}
+
+.noteList {
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+  padding: 4px 0;
+  overflow: auto;
+  list-style: none;
+}
+
+.noteItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  border: 0;
+  background: none;
+  text-align: left;
+  color: var(--text);
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.noteItem:hover {
+  background: #14241a;
+}
+
+.noteItem .ava {
+  width: 32px;
+  height: 32px;
 }
 
 /* ---------- входящий звонок и встреча поверх ОС ---------- */

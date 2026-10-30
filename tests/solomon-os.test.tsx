@@ -118,4 +118,24 @@ describe("Solomon OS: звонок 지아 → магазин → встреча"
     expect(screen.getByRole("button", { name: /^전화 — Телефон, 1$/ })).toBeTruthy();
     vi.useRealTimers();
   });
+
+  it("уведомление: баннер с крестиком, колокольчик со счётчиком и списком", () => {
+    vi.useFakeTimers({ toFake: ["setTimeout", "clearTimeout", "setInterval", "clearInterval"] });
+    render(<SolomonOs />);
+    act(() => vi.advanceTimersByTime(700));
+    // Пропущенный при входе — баннер и счётчик на колокольчике.
+    const banner = screen.getByRole("status", { name: /지아: 부재중 전화 1통/ });
+    expect(screen.getByRole("button", { name: /Уведомления: 1 новых/ })).toBeTruthy();
+    fireEvent.click(within(banner).getByRole("button", { name: "Закрыть уведомление" }));
+    act(() => vi.advanceTimersByTime(300));
+    expect(screen.queryByRole("status")).toBeNull();
+    // Запись осталась в списке; открытие списка отмечает прочитанным.
+    fireEvent.click(screen.getByRole("button", { name: /Уведомления/ }));
+    const panel = screen.getByRole("dialog", { name: "Уведомления" });
+    expect(within(panel).getByText("부재중 전화 1통")).toBeTruthy();
+    expect(screen.getByRole("button", { name: "Уведомления" })).toBeTruthy();
+    fireEvent.click(within(panel).getByRole("button", { name: /부재중 전화 1통/ }));
+    expect(screen.getByRole("dialog", { name: "전화" })).toBeTruthy();
+    vi.useRealTimers();
+  });
 });
