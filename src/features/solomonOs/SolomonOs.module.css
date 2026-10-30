@@ -37,20 +37,37 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 
-  /* Курсоры в стиле ОС (public/images/solomon-os/cursors), с запасным
-     системным. Правила игры урока используют эти же переменные, поэтому
-     внутри окон ОС курсоры тоже свои, а на странице урока — обычные. */
-  --cursor-default: url("/images/solomon-os/cursors/arrow.svg") 3 2, default;
-  --cursor-pointer: url("/images/solomon-os/cursors/pointer.svg") 11 3, pointer;
-  --cursor-grab: url("/images/solomon-os/cursors/grab.svg") 16 16, grab;
-  --cursor-grabbing: url("/images/solomon-os/cursors/grabbing.svg") 16 16, grabbing;
-  --cursor-move: url("/images/solomon-os/cursors/move.svg") 16 16, move;
-  --cursor-ew-resize: url("/images/solomon-os/cursors/ew-resize.svg") 16 16, ew-resize;
-  --cursor-ns-resize: url("/images/solomon-os/cursors/ns-resize.svg") 16 16, ns-resize;
-  --cursor-nwse-resize: url("/images/solomon-os/cursors/nwse-resize.svg") 16 16, nwse-resize;
-  --cursor-nesw-resize: url("/images/solomon-os/cursors/nesw-resize.svg") 16 16, nesw-resize;
-  --cursor-text: url("/images/solomon-os/cursors/text.svg") 16 16, text;
+  /* Курсоры в стиле ОС (public/images/solomon-os/cursors, рисовал Codex;
+     точки нажатия — hotspots.json): PNG 32×32, на чётких экранах — @2x
+     (ниже, @supports). Правила игры урока используют эти же переменные,
+     поэтому внутри окон ОС курсоры тоже свои, а на странице урока — обычные. */
+  --cursor-default: url("/images/solomon-os/cursors/arrow.png") 3 2, default;
+  --cursor-pointer: url("/images/solomon-os/cursors/pointer.png") 11 3, pointer;
+  --cursor-grab: url("/images/solomon-os/cursors/grab.png") 16 16, grab;
+  --cursor-grabbing: url("/images/solomon-os/cursors/grabbing.png") 16 16, grabbing;
+  --cursor-move: url("/images/solomon-os/cursors/move.png") 16 16, move;
+  --cursor-ew-resize: url("/images/solomon-os/cursors/ew-resize.png") 16 16, ew-resize;
+  --cursor-ns-resize: url("/images/solomon-os/cursors/ns-resize.png") 16 16, ns-resize;
+  --cursor-nwse-resize: url("/images/solomon-os/cursors/nwse-resize.png") 16 16, nwse-resize;
+  --cursor-nesw-resize: url("/images/solomon-os/cursors/nesw-resize.png") 16 16, nesw-resize;
+  --cursor-text: url("/images/solomon-os/cursors/text.png") 16 16, text;
   cursor: var(--cursor-default);
+}
+
+/* Где курсор понимает image-set — чёткий @2x на экранах высокой плотности. */
+@supports (cursor: image-set(url("/images/solomon-os/cursors/arrow.png") 1x) 3 2, auto) {
+  .os {
+    --cursor-default: image-set(url("/images/solomon-os/cursors/arrow.png") 1x, url("/images/solomon-os/cursors/arrow@2x.png") 2x) 3 2, default;
+    --cursor-pointer: image-set(url("/images/solomon-os/cursors/pointer.png") 1x, url("/images/solomon-os/cursors/pointer@2x.png") 2x) 11 3, pointer;
+    --cursor-grab: image-set(url("/images/solomon-os/cursors/grab.png") 1x, url("/images/solomon-os/cursors/grab@2x.png") 2x) 16 16, grab;
+    --cursor-grabbing: image-set(url("/images/solomon-os/cursors/grabbing.png") 1x, url("/images/solomon-os/cursors/grabbing@2x.png") 2x) 16 16, grabbing;
+    --cursor-move: image-set(url("/images/solomon-os/cursors/move.png") 1x, url("/images/solomon-os/cursors/move@2x.png") 2x) 16 16, move;
+    --cursor-ew-resize: image-set(url("/images/solomon-os/cursors/ew-resize.png") 1x, url("/images/solomon-os/cursors/ew-resize@2x.png") 2x) 16 16, ew-resize;
+    --cursor-ns-resize: image-set(url("/images/solomon-os/cursors/ns-resize.png") 1x, url("/images/solomon-os/cursors/ns-resize@2x.png") 2x) 16 16, ns-resize;
+    --cursor-nwse-resize: image-set(url("/images/solomon-os/cursors/nwse-resize.png") 1x, url("/images/solomon-os/cursors/nwse-resize@2x.png") 2x) 16 16, nwse-resize;
+    --cursor-nesw-resize: image-set(url("/images/solomon-os/cursors/nesw-resize.png") 1x, url("/images/solomon-os/cursors/nesw-resize@2x.png") 2x) 16 16, nesw-resize;
+    --cursor-text: image-set(url("/images/solomon-os/cursors/text.png") 1x, url("/images/solomon-os/cursors/text@2x.png") 2x) 16 16, text;
+  }
 }
 
 :where(.os) :where(button, a, [role="button"], summary, label) {
