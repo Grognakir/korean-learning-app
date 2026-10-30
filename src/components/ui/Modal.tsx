@@ -15,6 +15,10 @@ type ModalProps = {
   reading?: boolean;
   /** Своя предельная ширина окна в пикселях (вместо 520/760). */
   maxWidth?: number;
+  /** Своя предельная высота окна в пикселях (вместо 720). */
+  maxHeight?: number;
+  /** Дополнительный класс окна — для окон со своим оформлением. */
+  className?: string;
   /** Окно крепится сверху: верхний край ставится так, будто окно высотой
    * anchorHeight стоит по центру экрана. При меньшей высоте оно выглядит
    * чуть выше центра, при росте содержимого растёт вниз и не прыгает. */
@@ -29,6 +33,8 @@ export function Modal({
   heading,
   reading = false,
   maxWidth,
+  maxHeight,
+  className,
   anchorHeight,
 }: ModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -37,7 +43,8 @@ export function Modal({
     if (!open) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      // defaultPrevented — Escape уже обработан внутри (например, отмена ввода).
+      if (e.key === "Escape" && !e.defaultPrevented) onClose();
     };
 
     // Блокируем прокрутку на <html>, а не на <body>: у body уже стоит
@@ -77,10 +84,17 @@ export function Modal({
     >
       <div
         ref={dialogRef}
-        className={
-          reading ? `${styles.dialog} ${styles.dialogReading}` : styles.dialog
+        className={[styles.dialog, reading && styles.dialogReading, className]
+          .filter(Boolean)
+          .join(" ")}
+        style={
+          maxWidth || maxHeight
+            ? {
+                maxWidth,
+                maxHeight: maxHeight ? `min(92dvh, ${maxHeight}px)` : undefined,
+              }
+            : undefined
         }
-        style={maxWidth ? { maxWidth } : undefined}
         role="dialog"
         aria-modal="true"
         aria-label={title}

@@ -310,19 +310,29 @@
    "unit": "교통",
    "grammar": [
     {
-     "label": "V-다가"
+     "label": "V-다가",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "V-(으)ㄴ/는지, N인지"
+     "label": "V-(으)ㄴ/는지, N인지",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "AV-아/어/여 있다"
+     "label": "AV-아/어/여 있다",
+     "section": "준비하기 2",
+     "block": "grammar-3"
     },
     {
-     "label": "르 동사"
+     "label": "르 동사",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     },
     {
-     "label": "N만큼"
+     "label": "N만큼",
+     "section": "준비하기 2",
+     "block": "grammar-5"
     }
    ]
   },
@@ -331,19 +341,29 @@
    "unit": "다툼과 화해",
    "grammar": [
     {
-     "label": "AV-기 위해(서), N을/를 위해(서)"
+     "label": "AV-기 위해(서), N을/를 위해(서)",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "AV-고 나서"
+     "label": "AV-고 나서",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "AV-(으)ㄹ까 하다/보다"
+     "label": "AV-(으)ㄹ까 하다/보다",
+     "section": "준비하기 1",
+     "block": "grammar-3"
     },
     {
-     "label": "AV-(으)ㄴ 덕분에, N 덕분에"
+     "label": "AV-(으)ㄴ 덕분에, N 덕분에",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     },
     {
-     "label": "V-았/었/였으면, N이었/였으면"
+     "label": "V-았/었/였으면, N이었/였으면",
+     "section": "준비하기 2",
+     "block": "grammar-5"
     }
    ]
   },
@@ -352,16 +372,24 @@
    "unit": "고민과 조언",
    "grammar": [
     {
-     "label": "AV-고 나면"
+     "label": "AV-고 나면",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "AV-아/어/여야겠다"
+     "label": "AV-아/어/여야겠다",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "V-(으)ㄹ까 봐"
+     "label": "V-(으)ㄹ까 봐",
+     "section": "준비하기 2",
+     "block": "grammar-3"
     },
     {
-     "label": "V-(으)ㄹ 수밖에 없다, N일 수밖에 없다"
+     "label": "V-(으)ㄹ 수밖에 없다, N일 수밖에 없다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     }
    ]
   },
@@ -370,16 +398,24 @@
    "unit": "공공장소와 규칙",
    "grammar": [
     {
-     "label": "V-았/었/였다가, N이었/였다가"
+     "label": "V-았/었/였다가, N이었/였다가",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "N에 따라(서)"
+     "label": "N에 따라(서)",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "V-(으)나①, N이나"
+     "label": "V-(으)나①, N이나",
+     "section": "준비하기 2",
+     "block": "grammar-3"
     },
     {
-     "label": "AV-ㄴ/는다, DV-다, N(이)다"
+     "label": "AV-ㄴ/는다, DV-다, N(이)다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     }
    ]
   },
@@ -388,16 +424,24 @@
    "unit": "여행",
    "grammar": [
     {
-     "label": "V-(으)ㄴ/는 반면에"
+     "label": "V-(으)ㄴ/는 반면에",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "AV-는 길이다"
+     "label": "AV-는 길이다",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "AV-(으)ㄹ까 말까"
+     "label": "AV-(으)ㄹ까 말까",
+     "section": "준비하기 2",
+     "block": "grammar-3"
     },
     {
-     "label": "V-(으)면 좋겠다 / -았/었/였으면 좋겠다, N(이)면 좋겠다 / 이었/였으면 좋겠다"
+     "label": "V-(으)면 좋겠다 / -았/었/였으면 좋겠다, N(이)면 좋겠다 / 이었/였으면 좋겠다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     }
    ]
   },
@@ -406,19 +450,29 @@
    "unit": "연락",
    "grammar": [
     {
-     "label": "V-(으)ㄹ걸요, N일걸요"
+     "label": "V-(으)ㄹ걸요, N일걸요",
+     "section": "준비하기 1",
+     "block": "grammar-1"
     },
     {
-     "label": "AV-고 나니(까)"
+     "label": "AV-고 나니(까)",
+     "section": "준비하기 1",
+     "block": "grammar-2"
     },
     {
-     "label": "(아무리) V-아/어/여도, N(이)라도"
+     "label": "(아무리) V-아/어/여도, N(이)라도",
+     "section": "준비하기 1",
+     "block": "grammar-3"
     },
     {
-     "label": "AV-나 보다 / -는가 보다, DV-(으)ㄴ가 보다, N인가 보다"
+     "label": "AV-나 보다 / -는가 보다, DV-(으)ㄴ가 보다, N인가 보다",
+     "section": "준비하기 2",
+     "block": "grammar-4"
     },
     {
-     "label": "AV-자마자"
+     "label": "AV-자마자",
+     "section": "준비하기 2",
+     "block": "grammar-5"
     }
    ]
   }

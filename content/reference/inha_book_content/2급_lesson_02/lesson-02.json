@@ -194,23 +194,108 @@
           "items": [
             {
               "ko": "부족하다",
-              "translation_ru": "не хватать"
+              "translation_ru": "не хватать",
+              "group": "부족"
             },
             {
               "ko": "잃어버리다",
-              "translation_ru": "потерять"
+              "translation_ru": "потерять",
+              "group": "질문"
             },
             {
               "ko": "출입국관리사무소",
-              "translation_ru": "миграционная служба"
+              "translation_ru": "миграционная служба",
+              "group": "서류"
             },
             {
               "ko": "신청하다",
-              "translation_ru": "подавать заявление"
+              "translation_ru": "подавать заявление",
+              "group": "서류"
             },
             {
               "ko": "물어보다",
-              "translation_ru": "спрашивать"
+              "translation_ru": "спрашивать",
+              "group": "질문"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "서류",
+              "title_ru": "Документы и учреждения",
+              "items": [
+                {
+                  "ko": "여권",
+                  "translation_ru": "загранпаспорт"
+                },
+                {
+                  "ko": "비자",
+                  "translation_ru": "виза"
+                },
+                {
+                  "ko": "학생증",
+                  "translation_ru": "студенческий билет"
+                },
+                {
+                  "ko": "외국인 등록증",
+                  "translation_ru": "карта иностранца"
+                },
+                {
+                  "ko": "통장",
+                  "translation_ru": "банковская книжка"
+                },
+                {
+                  "ko": "교통 카드",
+                  "translation_ru": "транспортная карта"
+                },
+                {
+                  "ko": "할인",
+                  "translation_ru": "скидка"
+                }
+              ]
+            },
+            {
+              "title": "부족",
+              "title_ru": "Хватает или нет",
+              "items": [
+                {
+                  "ko": "충분하다",
+                  "translation_ru": "достаточный"
+                },
+                {
+                  "ko": "모자라다",
+                  "translation_ru": "не хватать"
+                },
+                {
+                  "ko": "적응하다",
+                  "translation_ru": "привыкать, адаптироваться"
+                }
+              ]
+            },
+            {
+              "title": "질문",
+              "title_ru": "Потерять и спросить",
+              "items": [
+                {
+                  "ko": "잊어버리다",
+                  "translation_ru": "забыть"
+                },
+                {
+                  "ko": "묻다",
+                  "translation_ru": "спрашивать"
+                },
+                {
+                  "ko": "질문하다",
+                  "translation_ru": "задавать вопрос"
+                },
+                {
+                  "ko": "정류장",
+                  "translation_ru": "остановка"
+                },
+                {
+                  "ko": "편의점",
+                  "translation_ru": "магазин у дома"
+                }
+              ]
             }
           ]
         }
@@ -795,39 +880,154 @@
           "items": [
             {
               "ko": "이사",
-              "translation_ru": "переезд"
+              "translation_ru": "переезд",
+              "group": "집"
             },
             {
               "ko": "구하다",
-              "translation_ru": "искать, найти (здесь: жильё)"
+              "translation_ru": "искать, найти (здесь: жильё)",
+              "group": "집"
             },
             {
               "ko": "아직",
-              "translation_ru": "ещё (не)"
+              "translation_ru": "ещё (не)",
+              "group": "시간"
             },
             {
               "ko": "전세",
-              "translation_ru": "чонсе (аренда с крупным залогом, без ежемесячной платы)"
+              "translation_ru": "чонсе (аренда с крупным залогом, без ежемесячной платы)",
+              "group": "집"
             },
             {
               "ko": "월세",
-              "translation_ru": "вольсе (аренда с ежемесячной платой)"
+              "translation_ru": "вольсе (аренда с ежемесячной платой)",
+              "group": "집"
             },
             {
               "ko": "차이",
-              "translation_ru": "разница"
+              "translation_ru": "разница",
+              "group": "비교"
             },
             {
               "ko": "보증금",
-              "translation_ru": "залог, депозит"
+              "translation_ru": "залог, депозит",
+              "group": "집"
             },
             {
               "ko": "내다",
-              "translation_ru": "платить, вносить"
+              "translation_ru": "платить, вносить",
+              "group": "비용"
             },
             {
               "ko": "궁금하다",
-              "translation_ru": "интересно, хочется узнать"
+              "translation_ru": "интересно, хочется узнать",
+              "group": "비교"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "집",
+              "title_ru": "Жильё",
+              "items": [
+                {
+                  "ko": "부동산 중개사 사무소",
+                  "translation_ru": "агентство недвижимости"
+                },
+                {
+                  "ko": "계약하다",
+                  "translation_ru": "заключать договор"
+                },
+                {
+                  "ko": "계약서",
+                  "translation_ru": "договор"
+                },
+                {
+                  "ko": "주차",
+                  "translation_ru": "парковка"
+                },
+                {
+                  "ko": "기숙사",
+                  "translation_ru": "общежитие"
+                },
+                {
+                  "ko": "근처",
+                  "translation_ru": "поблизости"
+                }
+              ]
+            },
+            {
+              "title": "비용",
+              "title_ru": "Расходы",
+              "items": [
+                {
+                  "ko": "방값",
+                  "translation_ru": "плата за комнату"
+                },
+                {
+                  "ko": "관리비",
+                  "translation_ru": "коммунальные платежи"
+                },
+                {
+                  "ko": "가격",
+                  "translation_ru": "цена"
+                },
+                {
+                  "ko": "값",
+                  "translation_ru": "цена, стоимость"
+                },
+                {
+                  "ko": "저렴하다",
+                  "translation_ru": "недорогой"
+                },
+                {
+                  "ko": "매월",
+                  "translation_ru": "каждый месяц"
+                },
+                {
+                  "ko": "매달",
+                  "translation_ru": "каждый месяц"
+                }
+              ]
+            },
+            {
+              "title": "시간",
+              "title_ru": "Уже или ещё нет",
+              "items": [
+                {
+                  "ko": "이미",
+                  "translation_ru": "уже"
+                },
+                {
+                  "ko": "벌써",
+                  "translation_ru": "уже, раньше ожидаемого"
+                }
+              ]
+            },
+            {
+              "title": "비교",
+              "title_ru": "Сравнение",
+              "items": [
+                {
+                  "ko": "연세",
+                  "translation_ru": "возраст (о старших)"
+                },
+                {
+                  "ko": "성능",
+                  "translation_ru": "характеристики, мощность"
+                },
+                {
+                  "ko": "품질",
+                  "translation_ru": "качество"
+                },
+                {
+                  "ko": "결과",
+                  "translation_ru": "результат"
+                },
+                {
+                  "ko": "건강하다",
+                  "translation_ru": "здоровый"
+                }
+              ]
             }
           ]
         }
@@ -1412,11 +1612,67 @@
           "items": [
             {
               "ko": "취직",
-              "translation_ru": "трудоустройство"
+              "translation_ru": "трудоустройство",
+              "group": "진로"
             },
             {
               "ko": "추천하다",
-              "translation_ru": "рекомендовать"
+              "translation_ru": "рекомендовать",
+              "group": "학교"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "진로",
+              "title_ru": "Планы на будущее",
+              "items": [
+                {
+                  "ko": "계획",
+                  "translation_ru": "план"
+                },
+                {
+                  "ko": "계속",
+                  "translation_ru": "продолжать, всё время"
+                },
+                {
+                  "ko": "돌아가다",
+                  "translation_ru": "возвращаться"
+                },
+                {
+                  "ko": "디자인",
+                  "translation_ru": "дизайн"
+                }
+              ]
+            },
+            {
+              "title": "학교",
+              "title_ru": "Учёба",
+              "items": [
+                {
+                  "ko": "고등학교",
+                  "translation_ru": "старшая школа"
+                },
+                {
+                  "ko": "교수님",
+                  "translation_ru": "профессор"
+                },
+                {
+                  "ko": "시험",
+                  "translation_ru": "экзамен"
+                },
+                {
+                  "ko": "대학원",
+                  "translation_ru": "магистратура"
+                },
+                {
+                  "ko": "입학하다",
+                  "translation_ru": "поступать"
+                },
+                {
+                  "ko": "졸업하다",
+                  "translation_ru": "оканчивать"
+                }
+              ]
             }
           ]
         }
@@ -1427,6 +1683,90 @@
       "page_role": "content",
       "source_photo": "photo_27",
       "blocks": [
+        {
+          "id": "vocab-listening",
+          "toc_section": "듣고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "쇼핑",
+              "title_ru": "Покупки",
+              "items": [
+                {
+                  "ko": "광고",
+                  "translation_ru": "реклама"
+                },
+                {
+                  "ko": "행사",
+                  "translation_ru": "акция, мероприятие"
+                },
+                {
+                  "ko": "기간",
+                  "translation_ru": "срок, период"
+                },
+                {
+                  "ko": "끝나다",
+                  "translation_ru": "заканчиваться"
+                },
+                {
+                  "ko": "여름옷",
+                  "translation_ru": "летняя одежда"
+                },
+                {
+                  "ko": "가을옷",
+                  "translation_ru": "осенняя одежда"
+                },
+                {
+                  "ko": "벌",
+                  "translation_ru": "комплект (счётное слово для одежды)"
+                }
+              ]
+            },
+            {
+              "title": "집",
+              "title_ru": "Поиск жилья",
+              "items": [
+                {
+                  "ko": "공인중개사",
+                  "translation_ru": "риелтор"
+                },
+                {
+                  "ko": "침대",
+                  "translation_ru": "кровать"
+                },
+                {
+                  "ko": "옷장",
+                  "translation_ru": "шкаф для одежды"
+                },
+                {
+                  "ko": "냉장고",
+                  "translation_ru": "холодильник"
+                },
+                {
+                  "ko": "인터넷",
+                  "translation_ru": "интернет"
+                },
+                {
+                  "ko": "기본",
+                  "translation_ru": "базовое, стандарт"
+                },
+                {
+                  "ko": "유치원",
+                  "translation_ru": "детский сад"
+                },
+                {
+                  "ko": "뒤쪽",
+                  "translation_ru": "задняя сторона"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "listening-housing-search",
           "toc_section": "듣고 말하기",
@@ -1565,23 +1905,108 @@
           "items": [
             {
               "ko": "독특하다",
-              "translation_ru": "своеобразный, уникальный"
+              "translation_ru": "своеобразный, уникальный",
+              "group": "맛"
             },
             {
               "ko": "냄새",
-              "translation_ru": "запах"
+              "translation_ru": "запах",
+              "group": "음식"
             },
             {
               "ko": "마늘",
-              "translation_ru": "чеснок"
+              "translation_ru": "чеснок",
+              "group": "음식"
             },
             {
               "ko": "옆집",
-              "translation_ru": "соседний дом, соседи"
+              "translation_ru": "соседний дом, соседи",
+              "group": "몸"
             },
             {
               "ko": "놀라다",
-              "translation_ru": "удивляться"
+              "translation_ru": "удивляться",
+              "group": "몸"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "맛",
+              "title_ru": "Вкус",
+              "items": [
+                {
+                  "ko": "맵다",
+                  "translation_ru": "острый"
+                },
+                {
+                  "ko": "짜다",
+                  "translation_ru": "солёный"
+                },
+                {
+                  "ko": "달다",
+                  "translation_ru": "сладкий"
+                },
+                {
+                  "ko": "싱겁다",
+                  "translation_ru": "пресный"
+                },
+                {
+                  "ko": "시다",
+                  "translation_ru": "кислый"
+                }
+              ]
+            },
+            {
+              "title": "음식",
+              "title_ru": "Еда",
+              "items": [
+                {
+                  "ko": "김치찌개",
+                  "translation_ru": "суп с кимчи"
+                },
+                {
+                  "ko": "불고기",
+                  "translation_ru": "пулькоги"
+                },
+                {
+                  "ko": "된장찌개",
+                  "translation_ru": "суп с пастой твенджан"
+                },
+                {
+                  "ko": "식당",
+                  "translation_ru": "ресторан, столовая"
+                },
+                {
+                  "ko": "주문하다",
+                  "translation_ru": "заказывать"
+                },
+                {
+                  "ko": "음식",
+                  "translation_ru": "еда"
+                },
+                {
+                  "ko": "맛",
+                  "translation_ru": "вкус"
+                }
+              ]
+            },
+            {
+              "title": "몸",
+              "title_ru": "Реакция",
+              "items": [
+                {
+                  "ko": "땀",
+                  "translation_ru": "пот"
+                },
+                {
+                  "ko": "이마",
+                  "translation_ru": "лоб"
+                },
+                {
+                  "ko": "싫어하다",
+                  "translation_ru": "не любить"
+                }
+              ]
             }
           ]
         }
@@ -1593,6 +2018,78 @@
       "source_photo": "photo_31",
       "blocks": [
         {
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "이사",
+              "title_ru": "Переезд",
+              "items": [
+                {
+                  "ko": "도와주다",
+                  "translation_ru": "помогать"
+                },
+                {
+                  "ko": "마치다",
+                  "translation_ru": "заканчивать"
+                },
+                {
+                  "ko": "신기하다",
+                  "translation_ru": "удивительный"
+                },
+                {
+                  "ko": "짜장면",
+                  "translation_ru": "чачжанмён"
+                }
+              ]
+            },
+            {
+              "title": "경험",
+              "title_ru": "Опыт в Корее",
+              "items": [
+                {
+                  "ko": "특별하다",
+                  "translation_ru": "особенный"
+                },
+                {
+                  "ko": "변하다",
+                  "translation_ru": "меняться"
+                },
+                {
+                  "ko": "관찰하다",
+                  "translation_ru": "наблюдать"
+                },
+                {
+                  "ko": "등산하다",
+                  "translation_ru": "ходить в горы"
+                },
+                {
+                  "ko": "자연",
+                  "translation_ru": "природа"
+                },
+                {
+                  "ko": "산",
+                  "translation_ru": "гора"
+                },
+                {
+                  "ko": "문화",
+                  "translation_ru": "культура"
+                },
+                {
+                  "ko": "경험",
+                  "translation_ru": "опыт"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "writing-korea-experience",
           "toc_section": "쓰기",
           "type": "writing_exercise",
@@ -1603,21 +2100,30 @@
               "stage": "처음",
               "explanation": "Введение: расскажите, какой случай вам запомнился.",
               "questions": [
-                { "kr": "어떤 일이 기억납니까?", "ru": "Какой случай вам запомнился?" }
+                {
+                  "kr": "어떤 일이 기억납니까?",
+                  "ru": "Какой случай вам запомнился?"
+                }
               ]
             },
             {
               "stage": "가운데",
               "explanation": "Основная часть: опишите, каким этот случай был вначале.",
               "questions": [
-                { "kr": "그 일이 처음에 어땠습니까?", "ru": "Каким был этот случай вначале?" }
+                {
+                  "kr": "그 일이 처음에 어땠습니까?",
+                  "ru": "Каким был этот случай вначале?"
+                }
               ]
             },
             {
               "stage": "끝",
               "explanation": "Заключение: расскажите, как обстоят дела с этим сейчас.",
               "questions": [
-                { "kr": "그 일이 지금은 어떻습니까?", "ru": "Как обстоят дела с этим сейчас?" }
+                {
+                  "kr": "그 일이 지금은 어떻습니까?",
+                  "ru": "Как обстоят дела с этим сейчас?"
+                }
               ]
             }
           ],
@@ -1678,11 +2184,13 @@
             },
             {
               "ko": "하숙집",
-              "translation_ru": "пансион (комната с питанием от хозяина)"
+              "translation_ru": "пансион (комната с питанием от хозяина)",
+              "group": "집"
             },
             {
               "ko": "자취방",
-              "translation_ru": "съёмная комната для самостоятельного проживания"
+              "translation_ru": "съёмная комната для самостоятельного проживания",
+              "group": "집"
             },
             {
               "ko": "등",
@@ -1690,7 +2198,8 @@
             },
             {
               "ko": "집주인",
-              "translation_ru": "хозяин дома"
+              "translation_ru": "хозяин дома",
+              "group": "집"
             },
             {
               "ko": "모이다",
@@ -1702,7 +2211,88 @@
             },
             {
               "ko": "스스로",
-              "translation_ru": "самостоятельно"
+              "translation_ru": "самостоятельно",
+              "group": "생활"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "집",
+              "title_ru": "Жильё студентов",
+              "items": [
+                {
+                  "ko": "기숙사",
+                  "translation_ru": "общежитие"
+                },
+                {
+                  "ko": "층",
+                  "translation_ru": "этаж"
+                },
+                {
+                  "ko": "화장실",
+                  "translation_ru": "туалет"
+                },
+                {
+                  "ko": "근처",
+                  "translation_ru": "поблизости"
+                }
+              ]
+            },
+            {
+              "title": "생활",
+              "title_ru": "Быт",
+              "items": [
+                {
+                  "ko": "생활",
+                  "translation_ru": "жизнь, быт"
+                },
+                {
+                  "ko": "요리",
+                  "translation_ru": "готовка"
+                },
+                {
+                  "ko": "빨래",
+                  "translation_ru": "стирка"
+                },
+                {
+                  "ko": "혼자",
+                  "translation_ru": "один, самостоятельно"
+                },
+                {
+                  "ko": "직접",
+                  "translation_ru": "лично"
+                },
+                {
+                  "ko": "함께",
+                  "translation_ru": "вместе"
+                },
+                {
+                  "ko": "부모님",
+                  "translation_ru": "родители"
+                }
+              ]
+            },
+            {
+              "title": "특징",
+              "title_ru": "Расстояние и цена",
+              "items": [
+                {
+                  "ko": "가깝다",
+                  "translation_ru": "близкий"
+                },
+                {
+                  "ko": "멀다",
+                  "translation_ru": "далёкий"
+                },
+                {
+                  "ko": "깨끗하다",
+                  "translation_ru": "чистый"
+                },
+                {
+                  "ko": "싸다",
+                  "translation_ru": "дешёвый"
+                }
+              ]
             }
           ]
         },
@@ -1713,9 +2303,15 @@
           "rule": "받침 'ㅌ'+'ㅣ' (구개음화②)",
           "audio_id": "208",
           "examples": [
-            { "text": "같이" },
-            { "text": "붙이다" },
-            { "text": "살살이" }
+            {
+              "text": "같이"
+            },
+            {
+              "text": "붙이다"
+            },
+            {
+              "text": "살살이"
+            }
           ]
         }
       ]

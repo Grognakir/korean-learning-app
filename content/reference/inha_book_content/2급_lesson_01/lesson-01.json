@@ -196,19 +196,125 @@
           "items": [
             {
               "ko": "개월",
-              "translation_ru": "месяц (счётное слово)"
+              "translation_ru": "месяц (счётное слово)",
+              "group": "시간"
             },
             {
               "ko": "앞으로",
-              "translation_ru": "в будущем, впредь"
+              "translation_ru": "в будущем, впредь",
+              "group": "시간"
             },
             {
               "ko": "지내다",
-              "translation_ru": "проводить время"
+              "translation_ru": "проводить время",
+              "group": "관계"
             },
             {
               "ko": "자세하다",
-              "translation_ru": "подробный"
+              "translation_ru": "подробный",
+              "group": "형용사"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "시간",
+              "title_ru": "Срок и события",
+              "items": [
+                {
+                  "ko": "얼마나",
+                  "translation_ru": "как долго, насколько"
+                },
+                {
+                  "ko": "얼마",
+                  "translation_ru": "сколько, немного"
+                },
+                {
+                  "ko": "입학하다",
+                  "translation_ru": "поступать (в вуз)"
+                },
+                {
+                  "ko": "졸업하다",
+                  "translation_ru": "оканчивать (учебу)"
+                },
+                {
+                  "ko": "헤어지다",
+                  "translation_ru": "расставаться"
+                },
+                {
+                  "ko": "통화하다",
+                  "translation_ru": "разговаривать по телефону"
+                }
+              ]
+            },
+            {
+              "title": "관계",
+              "title_ru": "Знакомство",
+              "items": [
+                {
+                  "ko": "친하다",
+                  "translation_ru": "близкий, дружный"
+                },
+                {
+                  "ko": "반갑다",
+                  "translation_ru": "рад(а) встрече"
+                },
+                {
+                  "ko": "가르치다",
+                  "translation_ru": "учить, преподавать"
+                }
+              ]
+            },
+            {
+              "title": "한국 생활",
+              "title_ru": "Корейская жизнь",
+              "items": [
+                {
+                  "ko": "동아리",
+                  "translation_ru": "кружок, клуб"
+                },
+                {
+                  "ko": "사물놀이",
+                  "translation_ru": "самульнори"
+                },
+                {
+                  "ko": "선배",
+                  "translation_ru": "старший по учёбе"
+                },
+                {
+                  "ko": "한옥",
+                  "translation_ru": "ханок, традиционный дом"
+                }
+              ]
+            },
+            {
+              "title": "형용사",
+              "title_ru": "Прилагательные для -게",
+              "items": [
+                {
+                  "ko": "따뜻하다",
+                  "translation_ru": "тёплый"
+                },
+                {
+                  "ko": "예쁘다",
+                  "translation_ru": "красивый"
+                },
+                {
+                  "ko": "짧다",
+                  "translation_ru": "короткий"
+                },
+                {
+                  "ko": "싱겁다",
+                  "translation_ru": "пресный, недосолёный"
+                },
+                {
+                  "ko": "밝다",
+                  "translation_ru": "светлый, яркий"
+                },
+                {
+                  "ko": "시끄럽다",
+                  "translation_ru": "шумный"
+                }
+              ]
             }
           ]
         },
@@ -789,63 +895,224 @@
           "items": [
             {
               "ko": "관심",
-              "translation_ru": "интерес"
+              "translation_ru": "интерес",
+              "group": "화제"
             },
             {
               "ko": "전공",
-              "translation_ru": "специальность"
+              "translation_ru": "специальность",
+              "group": "전공"
             },
             {
               "ko": "한국학",
-              "translation_ru": "корееведение"
+              "translation_ru": "корееведение",
+              "group": "전공"
             },
             {
               "ko": "한국어교육학",
-              "translation_ru": "методика преподавания корейского"
+              "translation_ru": "методика преподавания корейского",
+              "group": "전공"
             },
             {
               "ko": "영문학",
-              "translation_ru": "английская литература"
+              "translation_ru": "английская литература",
+              "group": "전공"
             },
             {
               "ko": "역사학",
-              "translation_ru": "история"
+              "translation_ru": "история",
+              "group": "전공"
             },
             {
               "ko": "신문방송학",
-              "translation_ru": "журналистика и вещание"
+              "translation_ru": "журналистика и вещание",
+              "group": "전공"
             },
             {
               "ko": "경제학",
-              "translation_ru": "экономика"
+              "translation_ru": "экономика",
+              "group": "전공"
             },
             {
               "ko": "경영학",
-              "translation_ru": "менеджмент"
+              "translation_ru": "менеджмент",
+              "group": "전공"
             },
             {
               "ko": "무역학",
-              "translation_ru": "торговое дело"
+              "translation_ru": "торговое дело",
+              "group": "전공"
             },
             {
               "ko": "국제무역학",
-              "translation_ru": "международная торговля"
+              "translation_ru": "международная торговля",
+              "group": "전공"
             },
             {
               "ko": "기계공학",
-              "translation_ru": "машиностроение"
+              "translation_ru": "машиностроение",
+              "group": "전공"
             },
             {
               "ko": "물리학",
-              "translation_ru": "физика"
+              "translation_ru": "физика",
+              "group": "전공"
             },
             {
               "ko": "생물학",
-              "translation_ru": "биология"
+              "translation_ru": "биология",
+              "group": "전공"
             },
             {
               "ko": "연극영화학",
-              "translation_ru": "театральное и киноискусство"
+              "translation_ru": "театральное и киноискусство",
+              "group": "전공"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "전공",
+              "title_ru": "Специальности и науки",
+              "items": [
+                {
+                  "ko": "문학",
+                  "translation_ru": "литература"
+                },
+                {
+                  "ko": "과학",
+                  "translation_ru": "наука"
+                },
+                {
+                  "ko": "정치",
+                  "translation_ru": "политика"
+                },
+                {
+                  "ko": "사회",
+                  "translation_ru": "общество"
+                },
+                {
+                  "ko": "경영",
+                  "translation_ru": "управление, бизнес"
+                },
+                {
+                  "ko": "환경",
+                  "translation_ru": "окружающая среда"
+                },
+                {
+                  "ko": "무역",
+                  "translation_ru": "торговля"
+                }
+              ]
+            },
+            {
+              "title": "직업",
+              "title_ru": "Профессии и мечта",
+              "items": [
+                {
+                  "ko": "꿈",
+                  "translation_ru": "мечта"
+                },
+                {
+                  "ko": "영화감독",
+                  "translation_ru": "кинорежиссёр"
+                },
+                {
+                  "ko": "기자",
+                  "translation_ru": "журналист"
+                },
+                {
+                  "ko": "과학자",
+                  "translation_ru": "учёный"
+                },
+                {
+                  "ko": "디자이너",
+                  "translation_ru": "дизайнер"
+                },
+                {
+                  "ko": "번역가",
+                  "translation_ru": "переводчик"
+                },
+                {
+                  "ko": "취직",
+                  "translation_ru": "трудоустройство"
+                },
+                {
+                  "ko": "CEO",
+                  "translation_ru": "генеральный директор"
+                }
+              ]
+            },
+            {
+              "title": "-려고",
+              "title_ru": "Цели и планы",
+              "items": [
+                {
+                  "ko": "찾다",
+                  "translation_ru": "искать"
+                },
+                {
+                  "ko": "모으다",
+                  "translation_ru": "собирать"
+                },
+                {
+                  "ko": "초대하다",
+                  "translation_ru": "приглашать"
+                },
+                {
+                  "ko": "예매하다",
+                  "translation_ru": "заказывать заранее"
+                },
+                {
+                  "ko": "이사하다",
+                  "translation_ru": "переезжать"
+                },
+                {
+                  "ko": "정리하다",
+                  "translation_ru": "приводить в порядок"
+                },
+                {
+                  "ko": "주문하다",
+                  "translation_ru": "заказывать"
+                },
+                {
+                  "ko": "청소하다",
+                  "translation_ru": "убирать"
+                },
+                {
+                  "ko": "서점",
+                  "translation_ru": "книжный магазин"
+                }
+              ]
+            },
+            {
+              "title": "화제",
+              "title_ru": "Тема разговора",
+              "items": [
+                {
+                  "ko": "최신",
+                  "translation_ru": "новейший"
+                },
+                {
+                  "ko": "경험",
+                  "translation_ru": "опыт"
+                },
+                {
+                  "ko": "소식",
+                  "translation_ru": "новость"
+                },
+                {
+                  "ko": "전하다",
+                  "translation_ru": "передавать"
+                },
+                {
+                  "ko": "인정받다",
+                  "translation_ru": "получать признание"
+                },
+                {
+                  "ko": "국적",
+                  "translation_ru": "гражданство"
+                }
+              ]
             }
           ]
         },
@@ -1278,6 +1545,74 @@
       "source_photo": "photo_28",
       "blocks": [
         {
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "대학",
+              "title_ru": "Университет",
+              "items": [
+                {
+                  "ko": "언어교육원",
+                  "translation_ru": "языковой институт"
+                },
+                {
+                  "ko": "대학생",
+                  "translation_ru": "студент"
+                },
+                {
+                  "ko": "대학원",
+                  "translation_ru": "магистратура, аспирантура"
+                },
+                {
+                  "ko": "입학",
+                  "translation_ru": "поступление"
+                },
+                {
+                  "ko": "졸업하다",
+                  "translation_ru": "оканчивать (учёбу)"
+                },
+                {
+                  "ko": "전공하다",
+                  "translation_ru": "специализироваться"
+                },
+                {
+                  "ko": "준비하다",
+                  "translation_ru": "готовиться"
+                }
+              ]
+            },
+            {
+              "title": "대화",
+              "title_ru": "О чём говорят",
+              "items": [
+                {
+                  "ko": "문학",
+                  "translation_ru": "литература"
+                },
+                {
+                  "ko": "국제무역",
+                  "translation_ru": "международная торговля"
+                },
+                {
+                  "ko": "소개하다",
+                  "translation_ru": "представлять"
+                },
+                {
+                  "ko": "고향",
+                  "translation_ru": "родина, родные места"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "text-speaking-summary",
           "toc_section": "말하기",
           "type": "text",
@@ -1370,6 +1705,66 @@
       "source_photo": "photo_29",
       "blocks": [
         {
+          "id": "vocab-listening",
+          "toc_section": "듣고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "직장",
+              "title_ru": "Работа и компании",
+              "items": [
+                {
+                  "ko": "무역회사",
+                  "translation_ru": "торговая компания"
+                },
+                {
+                  "ko": "자동차",
+                  "translation_ru": "автомобиль"
+                },
+                {
+                  "ko": "회사",
+                  "translation_ru": "компания"
+                },
+                {
+                  "ko": "일하다",
+                  "translation_ru": "работать"
+                }
+              ]
+            },
+            {
+              "title": "학교",
+              "title_ru": "Учёба и традиции",
+              "items": [
+                {
+                  "ko": "교실",
+                  "translation_ru": "классная комната"
+                },
+                {
+                  "ko": "대학교",
+                  "translation_ru": "университет"
+                },
+                {
+                  "ko": "전통",
+                  "translation_ru": "традиция"
+                },
+                {
+                  "ko": "의상",
+                  "translation_ru": "костюм, наряд"
+                },
+                {
+                  "ko": "일본",
+                  "translation_ru": "Япония"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "listening-personal-info",
           "toc_section": "듣고 말하기",
           "type": "comprehension_exercise",
@@ -1448,6 +1843,80 @@
       "source_photo": "photo_30",
       "blocks": [
         {
+          "id": "vocab-reading",
+          "toc_section": "읽고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "일",
+              "title_ru": "Работа и торговля",
+              "items": [
+                {
+                  "ko": "무역회사",
+                  "translation_ru": "торговая компания"
+                },
+                {
+                  "ko": "경영하다",
+                  "translation_ru": "управлять, вести (бизнес)"
+                },
+                {
+                  "ko": "연결하다",
+                  "translation_ru": "соединять, связывать"
+                },
+                {
+                  "ko": "돕다",
+                  "translation_ru": "помогать"
+                },
+                {
+                  "ko": "번역",
+                  "translation_ru": "перевод"
+                }
+              ]
+            },
+            {
+              "title": "학교",
+              "title_ru": "Учёба и опыт",
+              "items": [
+                {
+                  "ko": "편입하다",
+                  "translation_ru": "переводиться в другой вуз"
+                },
+                {
+                  "ko": "졸업",
+                  "translation_ru": "окончание учёбы"
+                },
+                {
+                  "ko": "경험",
+                  "translation_ru": "опыт"
+                },
+                {
+                  "ko": "열심히",
+                  "translation_ru": "усердно"
+                }
+              ]
+            },
+            {
+              "title": "문학",
+              "title_ru": "Книги и случай",
+              "items": [
+                {
+                  "ko": "소설책",
+                  "translation_ru": "роман, художественная книга"
+                },
+                {
+                  "ko": "우연히",
+                  "translation_ru": "случайно"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "text-reading-jargal-intro",
           "toc_section": "읽고 말하기",
           "type": "text",
@@ -1511,6 +1980,66 @@
       "page_role": "content",
       "source_photo": "photo_32",
       "blocks": [
+        {
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "구조",
+              "title_ru": "Структура текста",
+              "items": [
+                {
+                  "ko": "자기소개서",
+                  "translation_ru": "самопредставление"
+                },
+                {
+                  "ko": "개요",
+                  "translation_ru": "план, краткое содержание"
+                },
+                {
+                  "ko": "처음",
+                  "translation_ru": "начало"
+                },
+                {
+                  "ko": "가운데",
+                  "translation_ru": "середина"
+                },
+                {
+                  "ko": "끝",
+                  "translation_ru": "конец"
+                }
+              ]
+            },
+            {
+              "title": "내용",
+              "title_ru": "Что написать",
+              "items": [
+                {
+                  "ko": "소개하다",
+                  "translation_ru": "представлять"
+                },
+                {
+                  "ko": "고향",
+                  "translation_ru": "родина, родные места"
+                },
+                {
+                  "ko": "돌아가다",
+                  "translation_ru": "возвращаться"
+                },
+                {
+                  "ko": "계획",
+                  "translation_ru": "план"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "writing-self-intro",
           "toc_section": "쓰기",
@@ -1609,19 +2138,73 @@
           "items": [
             {
               "ko": "악수",
-              "translation_ru": "рукопожатие"
+              "translation_ru": "рукопожатие",
+              "group": "인사"
             },
             {
               "ko": "잡다",
-              "translation_ru": "брать, держать"
+              "translation_ru": "брать, держать",
+              "group": "인사"
             },
             {
               "ko": "상대방",
-              "translation_ru": "собеседник"
+              "translation_ru": "собеседник",
+              "group": "인사"
             },
             {
               "ko": "배",
-              "translation_ru": "живот"
+              "translation_ru": "живот",
+              "group": "몸"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "인사",
+              "title_ru": "Приветствие и этикет",
+              "items": [
+                {
+                  "ko": "인사",
+                  "translation_ru": "приветствие"
+                },
+                {
+                  "ko": "숙이다",
+                  "translation_ru": "наклонять (голову)"
+                },
+                {
+                  "ko": "예절",
+                  "translation_ru": "этикет"
+                },
+                {
+                  "ko": "어른",
+                  "translation_ru": "взрослый, старший"
+                },
+                {
+                  "ko": "존경하다",
+                  "translation_ru": "уважать"
+                },
+                {
+                  "ko": "의미",
+                  "translation_ru": "значение, смысл"
+                },
+                {
+                  "ko": "마음",
+                  "translation_ru": "душа, сердце"
+                }
+              ]
+            },
+            {
+              "title": "몸",
+              "title_ru": "Части тела",
+              "items": [
+                {
+                  "ko": "머리",
+                  "translation_ru": "голова"
+                },
+                {
+                  "ko": "손",
+                  "translation_ru": "рука, кисть"
+                }
+              ]
             }
           ]
         },

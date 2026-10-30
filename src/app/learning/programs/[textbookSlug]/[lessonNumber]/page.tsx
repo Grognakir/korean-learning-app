@@ -3,8 +3,9 @@ import { displayName, getProfileRow, requireUser } from "@/features/auth/require
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
+import { findLessonToc } from "@/features/learning/lessonNav";
 import { ProgramBreadcrumbs } from "../../ProgramBreadcrumbs";
-import type { Block, LessonTocBlock, TextbookPageRow } from "@/features/learning/types";
+import type { Block, TextbookPageRow } from "@/features/learning/types";
 import styles from "./lesson.module.css";
 
 function buildBlockTypeById(
@@ -19,15 +20,6 @@ function buildBlockTypeById(
     }
   }
   return map;
-}
-
-function findLessonToc(pages: TextbookPageRow[]): LessonTocBlock | null {
-  for (const page of pages) {
-    for (const block of page.content.blocks) {
-      if (block.type === "lesson_toc") return block;
-    }
-  }
-  return null;
 }
 
 export default async function LessonPage({

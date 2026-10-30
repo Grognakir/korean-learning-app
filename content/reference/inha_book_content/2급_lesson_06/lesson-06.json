@@ -229,99 +229,405 @@
           "items": [
             {
               "ko": "쌀",
-              "translation_ru": "рис (сырой, зерно)"
+              "translation_ru": "рис (сырой, зерно)",
+              "group": "재료"
             },
             {
               "ko": "콩나물",
-              "translation_ru": "соевые ростки"
+              "translation_ru": "соевые ростки",
+              "group": "재료"
             },
             {
               "ko": "버섯",
-              "translation_ru": "гриб"
+              "translation_ru": "гриб",
+              "group": "재료"
             },
             {
               "ko": "시금치",
-              "translation_ru": "шпинат"
+              "translation_ru": "шпинат",
+              "group": "재료"
             },
             {
               "ko": "고추장",
-              "translation_ru": "кочхуджан (острая перечная паста)"
+              "translation_ru": "кочхуджан (острая перечная паста)",
+              "group": "재료"
             },
             {
               "ko": "참기름",
-              "translation_ru": "кунжутное масло"
+              "translation_ru": "кунжутное масло",
+              "group": "재료"
             },
             {
               "ko": "볶다",
-              "translation_ru": "жарить, обжаривать"
+              "translation_ru": "жарить, обжаривать",
+              "group": "조리"
             },
             {
               "ko": "삶다",
-              "translation_ru": "варить (отваривать)"
+              "translation_ru": "варить (отваривать)",
+              "group": "조리"
             },
             {
               "ko": "비비다",
-              "translation_ru": "перемешивать"
+              "translation_ru": "перемешивать",
+              "group": "조리"
             },
             {
               "ko": "고소하다",
-              "translation_ru": "быть ароматным (о поджаристом, ореховом вкусе/запахе)"
+              "translation_ru": "быть ароматным (о поджаристом, ореховом вкусе/запахе)",
+              "group": "맛"
             },
             {
               "ko": "포도주",
-              "translation_ru": "вино (виноградное)"
+              "translation_ru": "вино (виноградное)",
+              "group": "음료"
             },
             {
               "ko": "나무",
-              "translation_ru": "дерево"
+              "translation_ru": "дерево",
+              "group": "물건"
             },
             {
               "ko": "컵",
-              "translation_ru": "стакан, чашка"
+              "translation_ru": "стакан, чашка",
+              "group": "도구"
             },
             {
               "ko": "벽돌",
-              "translation_ru": "кирпич"
+              "translation_ru": "кирпич",
+              "group": "물건"
             },
             {
               "ko": "튼튼하다",
-              "translation_ru": "быть крепким, прочным"
+              "translation_ru": "быть крепким, прочным",
+              "group": "물건"
             },
             {
               "ko": "러시아어",
-              "translation_ru": "русский язык"
+              "translation_ru": "русский язык",
+              "group": "언어"
             },
             {
               "ko": "걸다",
-              "translation_ru": "вешать"
+              "translation_ru": "вешать",
+              "group": "물건"
             },
             {
               "ko": "옷걸이",
-              "translation_ru": "вешалка"
+              "translation_ru": "вешалка",
+              "group": "물건"
             },
             {
               "ko": "대사관",
-              "translation_ru": "посольство"
+              "translation_ru": "посольство",
+              "group": "물건"
             },
             {
               "ko": "냄비",
-              "translation_ru": "кастрюля"
+              "translation_ru": "кастрюля",
+              "group": "도구"
             },
             {
               "ko": "데우다",
-              "translation_ru": "подогревать"
+              "translation_ru": "подогревать",
+              "group": "물건"
             },
             {
               "ko": "전자레인지",
-              "translation_ru": "микроволновая печь"
+              "translation_ru": "микроволновая печь",
+              "group": "도구"
             },
             {
               "ko": "삼겹살",
-              "translation_ru": "самгёпсаль (жирная свиная грудинка)"
+              "translation_ru": "самгёпсаль (жирная свиная грудинка)",
+              "group": "재료"
             },
             {
               "ko": "프라이팬",
-              "translation_ru": "сковорода"
+              "translation_ru": "сковорода",
+              "group": "도구"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "재료",
+              "title_ru": "Продукты",
+              "items": [
+                {
+                  "ko": "채소",
+                  "translation_ru": "овощи"
+                },
+                {
+                  "ko": "야채",
+                  "translation_ru": "овощи"
+                },
+                {
+                  "ko": "소고기",
+                  "translation_ru": "говядина"
+                },
+                {
+                  "ko": "양파",
+                  "translation_ru": "лук"
+                },
+                {
+                  "ko": "마늘",
+                  "translation_ru": "чеснок"
+                },
+                {
+                  "ko": "간장",
+                  "translation_ru": "соевый соус"
+                },
+                {
+                  "ko": "깨",
+                  "translation_ru": "кунжут"
+                },
+                {
+                  "ko": "참깨",
+                  "translation_ru": "белый кунжут"
+                },
+                {
+                  "ko": "계란",
+                  "translation_ru": "яйцо"
+                },
+                {
+                  "ko": "밀가루",
+                  "translation_ru": "мука"
+                },
+                {
+                  "ko": "반죽",
+                  "translation_ru": "тесто"
+                },
+                {
+                  "ko": "두부",
+                  "translation_ru": "тофу"
+                }
+              ]
+            },
+            {
+              "title": "조리",
+              "title_ru": "Способы готовки",
+              "items": [
+                {
+                  "ko": "썰다",
+                  "translation_ru": "резать"
+                },
+                {
+                  "ko": "끓이다",
+                  "translation_ru": "кипятить, варить"
+                },
+                {
+                  "ko": "섞다",
+                  "translation_ru": "перемешивать"
+                },
+                {
+                  "ko": "굽다",
+                  "translation_ru": "жарить на огне"
+                },
+                {
+                  "ko": "담다",
+                  "translation_ru": "класть в посуду"
+                },
+                {
+                  "ko": "펴다",
+                  "translation_ru": "раскатывать"
+                }
+              ]
+            },
+            {
+              "title": "맛",
+              "title_ru": "Вкус",
+              "items": [
+                {
+                  "ko": "담백하다",
+                  "translation_ru": "нежирный, лёгкий"
+                },
+                {
+                  "ko": "느끼하다",
+                  "translation_ru": "жирный, приторный"
+                },
+                {
+                  "ko": "맵다",
+                  "translation_ru": "острый"
+                },
+                {
+                  "ko": "짜다",
+                  "translation_ru": "солёный"
+                },
+                {
+                  "ko": "달다",
+                  "translation_ru": "сладкий"
+                },
+                {
+                  "ko": "싱겁다",
+                  "translation_ru": "пресный"
+                }
+              ]
+            },
+            {
+              "title": "도구",
+              "title_ru": "Кухонная утварь",
+              "items": [
+                {
+                  "ko": "숟가락",
+                  "translation_ru": "ложка"
+                },
+                {
+                  "ko": "젓가락",
+                  "translation_ru": "палочки"
+                },
+                {
+                  "ko": "포크",
+                  "translation_ru": "вилка"
+                },
+                {
+                  "ko": "주걱",
+                  "translation_ru": "лопатка для риса"
+                },
+                {
+                  "ko": "국자",
+                  "translation_ru": "половник"
+                },
+                {
+                  "ko": "집게",
+                  "translation_ru": "щипцы"
+                },
+                {
+                  "ko": "가위",
+                  "translation_ru": "ножницы"
+                },
+                {
+                  "ko": "도마",
+                  "translation_ru": "разделочная доска"
+                },
+                {
+                  "ko": "칼",
+                  "translation_ru": "нож"
+                },
+                {
+                  "ko": "접시",
+                  "translation_ru": "тарелка"
+                },
+                {
+                  "ko": "오븐",
+                  "translation_ru": "духовка"
+                },
+                {
+                  "ko": "전기밥솥",
+                  "translation_ru": "рисоварка"
+                }
+              ]
+            },
+            {
+              "title": "음식",
+              "title_ru": "Корейские блюда",
+              "items": [
+                {
+                  "ko": "김치찌개",
+                  "translation_ru": "суп с кимчи"
+                },
+                {
+                  "ko": "칼국수",
+                  "translation_ru": "калгуксу"
+                },
+                {
+                  "ko": "김치전",
+                  "translation_ru": "кимчи-чон"
+                },
+                {
+                  "ko": "잡채",
+                  "translation_ru": "чапчхэ"
+                },
+                {
+                  "ko": "국",
+                  "translation_ru": "суп"
+                },
+                {
+                  "ko": "찌개",
+                  "translation_ru": "густой суп"
+                },
+                {
+                  "ko": "반찬",
+                  "translation_ru": "закуска к рису"
+                }
+              ]
+            },
+            {
+              "title": "물건",
+              "title_ru": "Вещи и места",
+              "items": [
+                {
+                  "ko": "꽂다",
+                  "translation_ru": "вставлять, ставить"
+                },
+                {
+                  "ko": "책꽂이",
+                  "translation_ru": "книжная полка"
+                },
+                {
+                  "ko": "탁자",
+                  "translation_ru": "столик"
+                },
+                {
+                  "ko": "바르다",
+                  "translation_ru": "намазывать"
+                },
+                {
+                  "ko": "두다",
+                  "translation_ru": "класть, оставлять"
+                },
+                {
+                  "ko": "놓다",
+                  "translation_ru": "ставить"
+                },
+                {
+                  "ko": "붙이다",
+                  "translation_ru": "клеить"
+                },
+                {
+                  "ko": "버리다",
+                  "translation_ru": "выбрасывать"
+                },
+                {
+                  "ko": "재활용",
+                  "translation_ru": "переработка"
+                },
+                {
+                  "ko": "상자",
+                  "translation_ru": "коробка"
+                }
+              ]
+            },
+            {
+              "title": "음료",
+              "title_ru": "Напитки",
+              "items": [
+                {
+                  "ko": "소주",
+                  "translation_ru": "соджу"
+                },
+                {
+                  "ko": "막걸리",
+                  "translation_ru": "макколи"
+                },
+                {
+                  "ko": "맥주",
+                  "translation_ru": "пиво"
+                }
+              ]
+            },
+            {
+              "title": "언어",
+              "title_ru": "Языки и места",
+              "items": [
+                {
+                  "ko": "외국어",
+                  "translation_ru": "иностранный язык"
+                },
+                {
+                  "ko": "한국어",
+                  "translation_ru": "корейский язык"
+                }
+              ]
             }
           ]
         }
@@ -1029,75 +1335,226 @@
           "items": [
             {
               "ko": "빌라",
-              "translation_ru": "вилла (малоэтажный жилой дом)"
+              "translation_ru": "вилла (малоэтажный жилой дом)",
+              "group": "중국집"
             },
             {
               "ko": "짜장면",
-              "translation_ru": "чачжанмён (лапша с чёрным соевым соусом)"
+              "translation_ru": "чачжанмён (лапша с чёрным соевым соусом)",
+              "group": "중국집"
             },
             {
               "ko": "배달되다",
-              "translation_ru": "доставляться"
+              "translation_ru": "доставляться",
+              "group": "중국집"
             },
             {
               "ko": "짬뽕",
-              "translation_ru": "чамппон (острый суп с лапшой и морепродуктами)"
+              "translation_ru": "чамппон (острый суп с лапшой и морепродуктами)",
+              "group": "중국집"
             },
             {
               "ko": "탕수육",
-              "translation_ru": "тансуюк (кисло-сладкое мясо)"
+              "translation_ru": "тансуюк (кисло-сладкое мясо)",
+              "group": "중국집"
             },
             {
               "ko": "짓다",
-              "translation_ru": "строить (дом); составлять (предложение) — неправильный ㅅ"
+              "translation_ru": "строить (дом); составлять (предложение) — неправильный ㅅ",
+              "group": "ㅅ"
             },
             {
               "ko": "붓다",
-              "translation_ru": "наливать; опухать — неправильный ㅅ"
+              "translation_ru": "наливать; опухать — неправильный ㅅ",
+              "group": "ㅅ"
             },
             {
               "ko": "젓다",
-              "translation_ru": "мешать, помешивать — неправильный ㅅ"
+              "translation_ru": "мешать, помешивать — неправильный ㅅ",
+              "group": "ㅅ"
             },
             {
               "ko": "스푼",
-              "translation_ru": "ложка"
+              "translation_ru": "ложка",
+              "group": "ㅅ"
             },
             {
               "ko": "자",
-              "translation_ru": "линейка"
+              "translation_ru": "линейка",
+              "group": "ㅅ"
             },
             {
               "ko": "줄",
-              "translation_ru": "линия, черта"
+              "translation_ru": "линия, черта",
+              "group": "ㅅ"
             },
             {
               "ko": "똑바로",
-              "translation_ru": "прямо, ровно"
+              "translation_ru": "прямо, ровно",
+              "group": "ㅅ"
             },
             {
               "ko": "긋다",
-              "translation_ru": "проводить (линию) — неправильный ㅅ"
+              "translation_ru": "проводить (линию) — неправильный ㅅ",
+              "group": "ㅅ"
             },
             {
               "ko": "미소",
-              "translation_ru": "улыбка"
+              "translation_ru": "улыбка",
+              "group": "ㅅ"
             },
             {
               "ko": "컵라면",
-              "translation_ru": "лапша быстрого приготовления в стакане"
+              "translation_ru": "лапша быстрого приготовления в стакане",
+              "group": "중국집"
             },
             {
               "ko": "감다",
-              "translation_ru": "мыть (голову), закрывать (глаза)"
+              "translation_ru": "мыть (голову), закрывать (глаза)",
+              "group": "ㅅ"
             },
             {
               "ko": "빨다",
-              "translation_ru": "стирать"
+              "translation_ru": "стирать",
+              "group": "ㅅ"
             },
             {
               "ko": "포장",
               "translation_ru": "упаковка"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "중국집",
+              "title_ru": "Заказ еды",
+              "items": [
+                {
+                  "ko": "배달하다",
+                  "translation_ru": "доставлять"
+                },
+                {
+                  "ko": "그릇",
+                  "translation_ru": "миска, порция"
+                },
+                {
+                  "ko": "인분",
+                  "translation_ru": "порция"
+                },
+                {
+                  "ko": "영수증",
+                  "translation_ru": "чек"
+                },
+                {
+                  "ko": "택배",
+                  "translation_ru": "курьерская доставка"
+                },
+                {
+                  "ko": "주문하다",
+                  "translation_ru": "заказывать"
+                }
+              ]
+            },
+            {
+              "title": "ㅅ",
+              "title_ru": "Глаголы на ㅅ",
+              "items": [
+                {
+                  "ko": "낫다",
+                  "translation_ru": "выздоравливать"
+                },
+                {
+                  "ko": "잇다",
+                  "translation_ru": "соединять"
+                },
+                {
+                  "ko": "빗다",
+                  "translation_ru": "причёсывать"
+                },
+                {
+                  "ko": "벗다",
+                  "translation_ru": "снимать"
+                },
+                {
+                  "ko": "씻다",
+                  "translation_ru": "мыть"
+                },
+                {
+                  "ko": "웃다",
+                  "translation_ru": "смеяться"
+                }
+              ]
+            },
+            {
+              "title": "놓다",
+              "title_ru": "Положить и оставить",
+              "items": [
+                {
+                  "ko": "넣다",
+                  "translation_ru": "класть внутрь"
+                },
+                {
+                  "ko": "두다",
+                  "translation_ru": "оставлять"
+                },
+                {
+                  "ko": "저장하다",
+                  "translation_ru": "сохранять"
+                },
+                {
+                  "ko": "켜다",
+                  "translation_ru": "включать"
+                },
+                {
+                  "ko": "끄다",
+                  "translation_ru": "выключать"
+                },
+                {
+                  "ko": "열다",
+                  "translation_ru": "открывать"
+                },
+                {
+                  "ko": "닫다",
+                  "translation_ru": "закрывать"
+                },
+                {
+                  "ko": "밑줄",
+                  "translation_ru": "подчёркивание"
+                },
+                {
+                  "ko": "외우다",
+                  "translation_ru": "заучивать"
+                }
+              ]
+            },
+            {
+              "title": "일상",
+              "title_ru": "Быт и здоровье",
+              "items": [
+                {
+                  "ko": "몸살",
+                  "translation_ru": "ломота в теле"
+                },
+                {
+                  "ko": "감기",
+                  "translation_ru": "простуда"
+                },
+                {
+                  "ko": "칼국수",
+                  "translation_ru": "калгуксу"
+                },
+                {
+                  "ko": "세탁기",
+                  "translation_ru": "стиральная машина"
+                },
+                {
+                  "ko": "가스레인지",
+                  "translation_ru": "газовая плита"
+                },
+                {
+                  "ko": "청소",
+                  "translation_ru": "уборка"
+                }
+              ]
             }
           ]
         }
@@ -1704,6 +2161,94 @@
       "source_photo": "IMG_0715",
       "blocks": [
         {
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "조리",
+              "title_ru": "Как готовить",
+              "items": [
+                {
+                  "ko": "김치찌개",
+                  "translation_ru": "суп с кимчи"
+                },
+                {
+                  "ko": "두부",
+                  "translation_ru": "тофу"
+                },
+                {
+                  "ko": "파",
+                  "translation_ru": "зелёный лук"
+                },
+                {
+                  "ko": "썰다",
+                  "translation_ru": "резать"
+                },
+                {
+                  "ko": "끓이다",
+                  "translation_ru": "кипятить"
+                },
+                {
+                  "ko": "볶다",
+                  "translation_ru": "жарить"
+                },
+                {
+                  "ko": "붓다",
+                  "translation_ru": "вливать"
+                },
+                {
+                  "ko": "프라이팬",
+                  "translation_ru": "сковорода"
+                },
+                {
+                  "ko": "냄비",
+                  "translation_ru": "кастрюля"
+                },
+                {
+                  "ko": "순서",
+                  "translation_ru": "порядок"
+                }
+              ]
+            },
+            {
+              "title": "발표",
+              "title_ru": "Презентация",
+              "items": [
+                {
+                  "ko": "발표",
+                  "translation_ru": "презентация"
+                },
+                {
+                  "ko": "이유",
+                  "translation_ru": "причина"
+                },
+                {
+                  "ko": "샤슬릭",
+                  "translation_ru": "шашлык"
+                },
+                {
+                  "ko": "모닥불",
+                  "translation_ru": "костёр"
+                },
+                {
+                  "ko": "재료",
+                  "translation_ru": "ингредиенты"
+                },
+                {
+                  "ko": "맛",
+                  "translation_ru": "вкус"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "text-speaking-summary",
           "toc_section": "말하기",
           "type": "text",
@@ -1901,11 +2446,67 @@
           "items": [
             {
               "ko": "낳다",
-              "translation_ru": "рожать (ребёнка)"
+              "translation_ru": "рожать (ребёнка)",
+              "group": "생일"
             },
             {
               "ko": "볶음밥",
-              "translation_ru": "жареный рис"
+              "translation_ru": "жареный рис",
+              "group": "생일"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "생일",
+              "title_ru": "День рождения",
+              "items": [
+                {
+                  "ko": "미역국",
+                  "translation_ru": "суп из ламинарии"
+                },
+                {
+                  "ko": "간장",
+                  "translation_ru": "соевый соус"
+                },
+                {
+                  "ko": "의미",
+                  "translation_ru": "значение"
+                },
+                {
+                  "ko": "생일",
+                  "translation_ru": "день рождения"
+                }
+              ]
+            },
+            {
+              "title": "명절",
+              "title_ru": "Праздничная еда",
+              "items": [
+                {
+                  "ko": "명절",
+                  "translation_ru": "праздник"
+                },
+                {
+                  "ko": "소고기",
+                  "translation_ru": "говядина"
+                },
+                {
+                  "ko": "떡볶이",
+                  "translation_ru": "ттокпокки"
+                },
+                {
+                  "ko": "양파",
+                  "translation_ru": "лук"
+                },
+                {
+                  "ko": "깨",
+                  "translation_ru": "кунжут"
+                },
+                {
+                  "ko": "불",
+                  "translation_ru": "огонь"
+                }
+              ]
             }
           ]
         }
@@ -1916,6 +2517,82 @@
       "page_role": "content",
       "source_photo": "IMG_0717",
       "blocks": [
+        {
+          "id": "vocab-reading-samgyetang",
+          "toc_section": "읽고 말하기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "삼계탕",
+              "title_ru": "Ингредиенты",
+              "items": [
+                {
+                  "ko": "찹쌀",
+                  "translation_ru": "клейкий рис"
+                },
+                {
+                  "ko": "인삼",
+                  "translation_ru": "женьшень"
+                },
+                {
+                  "ko": "대추",
+                  "translation_ru": "унаби, китайский финик"
+                },
+                {
+                  "ko": "마늘",
+                  "translation_ru": "чеснок"
+                },
+                {
+                  "ko": "닭",
+                  "translation_ru": "курица"
+                },
+                {
+                  "ko": "뱃속",
+                  "translation_ru": "нутро, живот"
+                },
+                {
+                  "ko": "재료",
+                  "translation_ru": "ингредиенты"
+                },
+                {
+                  "ko": "땀",
+                  "translation_ru": "пот"
+                },
+                {
+                  "ko": "여름",
+                  "translation_ru": "лето"
+                }
+              ]
+            },
+            {
+              "title": "방법",
+              "title_ru": "Способ",
+              "items": [
+                {
+                  "ko": "씻다",
+                  "translation_ru": "мыть"
+                },
+                {
+                  "ko": "붓다",
+                  "translation_ru": "вливать"
+                },
+                {
+                  "ko": "끓이다",
+                  "translation_ru": "варить"
+                },
+                {
+                  "ko": "냄비",
+                  "translation_ru": "кастрюля"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "text-reading-samgyetang",
           "toc_section": "읽고 말하기",
@@ -2033,6 +2710,110 @@
       "page_role": "content",
       "source_photo": "IMG_0718",
       "blocks": [
+        {
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "음식",
+              "title_ru": "Блюда и вкус",
+              "items": [
+                {
+                  "ko": "반찬",
+                  "translation_ru": "закуска к рису"
+                },
+                {
+                  "ko": "국",
+                  "translation_ru": "суп"
+                },
+                {
+                  "ko": "찌개",
+                  "translation_ru": "густой суп"
+                },
+                {
+                  "ko": "면",
+                  "translation_ru": "лапша"
+                },
+                {
+                  "ko": "한식",
+                  "translation_ru": "корейская кухня"
+                },
+                {
+                  "ko": "양식",
+                  "translation_ru": "европейская кухня"
+                },
+                {
+                  "ko": "중식",
+                  "translation_ru": "китайская кухня"
+                },
+                {
+                  "ko": "일식",
+                  "translation_ru": "японская кухня"
+                },
+                {
+                  "ko": "비빔밥",
+                  "translation_ru": "бибимбап"
+                },
+                {
+                  "ko": "김밥",
+                  "translation_ru": "кимбап"
+                },
+                {
+                  "ko": "불고기",
+                  "translation_ru": "пулькоги"
+                },
+                {
+                  "ko": "잡채",
+                  "translation_ru": "чапчхэ"
+                },
+                {
+                  "ko": "냉면",
+                  "translation_ru": "холодная лапша"
+                }
+              ]
+            },
+            {
+              "title": "방법",
+              "title_ru": "Как приготовить",
+              "items": [
+                {
+                  "ko": "재료",
+                  "translation_ru": "ингредиенты"
+                },
+                {
+                  "ko": "썰다",
+                  "translation_ru": "резать"
+                },
+                {
+                  "ko": "섞다",
+                  "translation_ru": "перемешивать"
+                },
+                {
+                  "ko": "끓이다",
+                  "translation_ru": "варить"
+                },
+                {
+                  "ko": "굽다",
+                  "translation_ru": "жарить"
+                },
+                {
+                  "ko": "순서",
+                  "translation_ru": "порядок"
+                },
+                {
+                  "ko": "맛있다",
+                  "translation_ru": "вкусный"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "writing-hometown-food",
           "toc_section": "쓰기",
@@ -2158,27 +2939,91 @@
           "items": [
             {
               "ko": "설날",
-              "translation_ru": "Соллаль (корейский Новый год по лунному календарю)"
+              "translation_ru": "Соллаль (корейский Новый год по лунному календарю)",
+              "group": "명절"
             },
             {
               "ko": "소망",
-              "translation_ru": "желание, надежда"
+              "translation_ru": "желание, надежда",
+              "group": "의미"
             },
             {
               "ko": "뜻",
-              "translation_ru": "смысл, значение"
+              "translation_ru": "смысл, значение",
+              "group": "의미"
             },
             {
               "ko": "쌀가루",
-              "translation_ru": "рисовая мука"
+              "translation_ru": "рисовая мука",
+              "group": "명절"
             },
             {
               "ko": "달",
-              "translation_ru": "луна"
+              "translation_ru": "луна",
+              "group": "명절"
             },
             {
               "ko": "추수",
-              "translation_ru": "сбор урожая"
+              "translation_ru": "сбор урожая",
+              "group": "명절"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "명절",
+              "title_ru": "Праздники",
+              "items": [
+                {
+                  "ko": "추석",
+                  "translation_ru": "Чхусок"
+                },
+                {
+                  "ko": "떡국",
+                  "translation_ru": "ттоккук (суп с рисовыми клёцками)"
+                },
+                {
+                  "ko": "송편",
+                  "translation_ru": "сонпхён"
+                },
+                {
+                  "ko": "음력",
+                  "translation_ru": "лунный календарь"
+                },
+                {
+                  "ko": "새해",
+                  "translation_ru": "Новый год"
+                },
+                {
+                  "ko": "첫날",
+                  "translation_ru": "первый день"
+                },
+                {
+                  "ko": "한과",
+                  "translation_ru": "корейские сладости"
+                },
+                {
+                  "ko": "식혜",
+                  "translation_ru": "сикхе"
+                }
+              ]
+            },
+            {
+              "title": "의미",
+              "title_ru": "Смысл праздника",
+              "items": [
+                {
+                  "ko": "감사",
+                  "translation_ru": "благодарность"
+                },
+                {
+                  "ko": "건강",
+                  "translation_ru": "здоровье"
+                },
+                {
+                  "ko": "가족",
+                  "translation_ru": "семья"
+                }
+              ]
             }
           ]
         },

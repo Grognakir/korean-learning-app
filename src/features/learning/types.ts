@@ -4,9 +4,18 @@ export type TocItem = {
   block_ref: string | null;
 };
 
+/** Кнопка-стикер урока: персонаж из реестра characters и тренажёр из
+ * реестра trainers (src/features/lessonSticker). Есть только у уроков, где
+ * поле поставлено вручную. */
+export type LessonSticker = {
+  character: string;
+  trainer: string;
+};
+
 export type LessonTocBlock = {
   type: "lesson_toc";
   sections: { key: string; items: TocItem[] }[];
+  sticker?: LessonSticker;
 };
 
 /**
@@ -115,7 +124,17 @@ export type VocabListBlock = ContentBlockBase & {
   title_ru?: string;
   related_text_ref?: string | null;
   source_note?: string;
-  items: { ko: string; translation_ru: string }[];
+  /** group — title одной из extra_groups: в режиме «Все» слово показывается
+   * в этой тематической группе вместе с дополнительными. Слова без group
+   * попадают в группу «Другие». */
+  items: { ko: string; translation_ru: string; group?: string }[];
+  /** Дополнительные слова по теме раздела, сгруппированные (узоры, одежда…).
+   * Показываются через свитч «Основные / Дополнительные / Все». */
+  extra_groups?: {
+    title: string;
+    title_ru?: string;
+    items: { ko: string; translation_ru: string }[];
+  }[];
 };
 
 export type HintItem = {
@@ -295,7 +314,20 @@ export type GrammarExerciseBlock = ContentBlockBase & {
   template: string[];
   // answers — реальные проспрягованные формы (по одной на каждый {n} в
   // template), а не словарная форма given.
-  items: { given: string[]; cues?: string[]; answers: string[] }[];
+  // alternatives — другие допустимые наборы ответов (по одному на каждый
+  // {n}), которые тоже засчитываются; answers остаётся основным и
+  // показывается как «Правильный ответ».
+  // template у пункта — своё предложение с пропусками вместо общего
+  // template блока: так одно задание книги с общим примером и несколькими
+  // разными предложениями живёт в одном блоке, а не в отдельной карточке
+  // на каждое предложение.
+  items: {
+    given: string[];
+    cues?: string[];
+    template?: string[];
+    answers: string[];
+    alternatives?: string[][];
+  }[];
 };
 
 export type Block =

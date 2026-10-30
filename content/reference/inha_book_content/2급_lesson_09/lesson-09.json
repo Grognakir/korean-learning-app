@@ -222,75 +222,189 @@
           "items": [
             {
               "ko": "예약하다",
-              "translation_ru": "бронировать, записываться заранее"
+              "translation_ru": "бронировать, записываться заранее",
+              "group": "병원"
             },
             {
               "ko": "성함",
-              "translation_ru": "имя (уважительно)"
+              "translation_ru": "имя (уважительно)",
+              "group": "병원"
             },
             {
               "ko": "치과",
-              "translation_ru": "стоматология"
+              "translation_ru": "стоматология",
+              "group": "과"
             },
             {
               "ko": "가능하다",
-              "translation_ru": "быть возможным"
+              "translation_ru": "быть возможным",
+              "group": "병원"
             },
             {
               "ko": "변경하다",
-              "translation_ru": "изменять, менять"
+              "translation_ru": "изменять, менять",
+              "group": "병원"
             },
             {
               "ko": "메시지",
-              "translation_ru": "сообщение"
+              "translation_ru": "сообщение",
+              "group": "병원"
             },
             {
               "ko": "변경",
-              "translation_ru": "изменение"
+              "translation_ru": "изменение",
+              "group": "병원"
             },
             {
               "ko": "반드시",
-              "translation_ru": "обязательно, непременно"
+              "translation_ru": "обязательно, непременно",
+              "group": "병원"
             },
             {
               "ko": "학생증",
-              "translation_ru": "студенческий билет"
+              "translation_ru": "студенческий билет",
+              "group": "준비"
             },
             {
               "ko": "테니스장",
-              "translation_ru": "теннисный корт"
+              "translation_ru": "теннисный корт",
+              "group": "준비"
             },
             {
               "ko": "주차장",
-              "translation_ru": "парковка"
+              "translation_ru": "парковка",
+              "group": "준비"
             },
             {
               "ko": "세탁하다",
-              "translation_ru": "стирать"
+              "translation_ru": "стирать",
+              "group": "준비"
             },
             {
               "ko": "한의원",
-              "translation_ru": "клиника корейской традиционной медицины"
+              "translation_ru": "клиника корейской традиционной медицины",
+              "group": "과"
             },
             {
               "ko": "산부인과",
-              "translation_ru": "акушерство и гинекология"
+              "translation_ru": "акушерство и гинекология",
+              "group": "과"
             },
             {
               "ko": "외과",
-              "translation_ru": "хирургия"
+              "translation_ru": "хирургия",
+              "group": "과"
             },
             {
               "ko": "안과",
-              "translation_ru": "офтальмология"
+              "translation_ru": "офтальмология",
+              "group": "과"
             },
             {
               "ko": "내과",
-              "translation_ru": "терапия (внутренние болезни)"
+              "translation_ru": "терапия (внутренние болезни)",
+              "group": "과"
             },
             {
               "ko": "이비인후과",
-              "translation_ru": "отоларингология (ухо, горло, нос)"
+              "translation_ru": "отоларингология (ухо, горло, нос)",
+              "group": "과"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "과",
+              "title_ru": "Отделения",
+              "items": [
+                {
+                  "ko": "성형외과",
+                  "translation_ru": "пластическая хирургия"
+                },
+                {
+                  "ko": "정형외과",
+                  "translation_ru": "травматология"
+                },
+                {
+                  "ko": "피부과",
+                  "translation_ru": "дерматология"
+                },
+                {
+                  "ko": "소아청소년과",
+                  "translation_ru": "педиатрия"
+                },
+                {
+                  "ko": "비뇨기과",
+                  "translation_ru": "урология"
+                },
+                {
+                  "ko": "신경과",
+                  "translation_ru": "неврология"
+                },
+                {
+                  "ko": "정신과",
+                  "translation_ru": "психиатрия"
+                },
+                {
+                  "ko": "종합병원",
+                  "translation_ru": "многопрофильная больница"
+                }
+              ]
+            },
+            {
+              "title": "병원",
+              "title_ru": "В больнице",
+              "items": [
+                {
+                  "ko": "병원",
+                  "translation_ru": "больница"
+                },
+                {
+                  "ko": "약국",
+                  "translation_ru": "аптека"
+                },
+                {
+                  "ko": "진찰받다",
+                  "translation_ru": "проходить осмотр"
+                },
+                {
+                  "ko": "입원하다",
+                  "translation_ru": "ложиться в больницу"
+                },
+                {
+                  "ko": "퇴원하다",
+                  "translation_ru": "выписываться"
+                },
+                {
+                  "ko": "수술",
+                  "translation_ru": "операция"
+                },
+                {
+                  "ko": "주사",
+                  "translation_ru": "укол"
+                }
+              ]
+            },
+            {
+              "title": "준비",
+              "title_ru": "Что нужно взять",
+              "items": [
+                {
+                  "ko": "여권",
+                  "translation_ru": "загранпаспорт"
+                },
+                {
+                  "ko": "비행기 표",
+                  "translation_ru": "авиабилет"
+                },
+                {
+                  "ko": "휴가",
+                  "translation_ru": "отпуск"
+                },
+                {
+                  "ko": "예매하다",
+                  "translation_ru": "покупать заранее"
+                }
+              ]
             }
           ]
         }
@@ -834,75 +948,231 @@
           "items": [
             {
               "ko": "진찰실",
-              "translation_ru": "кабинет врача"
+              "translation_ru": "кабинет врача",
+              "group": "병원"
             },
             {
               "ko": "꽃가루",
-              "translation_ru": "пыльца"
+              "translation_ru": "пыльца",
+              "group": "증상"
             },
             {
               "ko": "알레르기",
-              "translation_ru": "аллергия"
+              "translation_ru": "аллергия",
+              "group": "증상"
             },
             {
               "ko": "가렵다",
-              "translation_ru": "чесаться, зудеть"
+              "translation_ru": "чесаться, зудеть",
+              "group": "증상"
             },
             {
               "ko": "따갑다",
-              "translation_ru": "щипать, колоть"
+              "translation_ru": "щипать, колоть",
+              "group": "증상"
             },
             {
               "ko": "치료하다",
-              "translation_ru": "лечить"
+              "translation_ru": "лечить",
+              "group": "병원"
             },
             {
               "ko": "환자",
-              "translation_ru": "пациент"
+              "translation_ru": "пациент",
+              "group": "병원"
             },
             {
               "ko": "치료실",
-              "translation_ru": "процедурный кабинет"
+              "translation_ru": "процедурный кабинет",
+              "group": "병원"
             },
             {
               "ko": "힘",
-              "translation_ru": "сила"
+              "translation_ru": "сила",
+              "group": "몸"
             },
             {
               "ko": "소설가",
-              "translation_ru": "писатель-прозаик"
+              "translation_ru": "писатель-прозаик",
+              "group": "직업"
             },
             {
               "ko": "소화",
-              "translation_ru": "пищеварение"
+              "translation_ru": "пищеварение",
+              "group": "증상"
             },
             {
               "ko": "소화제",
-              "translation_ru": "средство для пищеварения"
+              "translation_ru": "средство для пищеварения",
+              "group": "증상"
             },
             {
               "ko": "나른하다",
-              "translation_ru": "быть вялым, расслабленным"
+              "translation_ru": "быть вялым, расслабленным",
+              "group": "증상"
             },
             {
               "ko": "스트레칭",
-              "translation_ru": "растяжка"
+              "translation_ru": "растяжка",
+              "group": "몸"
             },
             {
               "ko": "어지럽다",
-              "translation_ru": "кружиться (о голове)"
+              "translation_ru": "кружиться (о голове)",
+              "group": "증상"
             },
             {
               "ko": "장학금",
-              "translation_ru": "стипендия"
+              "translation_ru": "стипендия",
+              "group": "직업"
             },
             {
               "ko": "시인",
-              "translation_ru": "поэт"
+              "translation_ru": "поэт",
+              "group": "직업"
             },
             {
               "ko": "사장",
-              "translation_ru": "директор, владелец компании"
+              "translation_ru": "директор, владелец компании",
+              "group": "직업"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "증상",
+              "title_ru": "Симптомы",
+              "items": [
+                {
+                  "ko": "열",
+                  "translation_ru": "температура, жар"
+                },
+                {
+                  "ko": "기침",
+                  "translation_ru": "кашель"
+                },
+                {
+                  "ko": "콧물",
+                  "translation_ru": "насморк"
+                },
+                {
+                  "ko": "재채기",
+                  "translation_ru": "чихание"
+                },
+                {
+                  "ko": "두통",
+                  "translation_ru": "головная боль"
+                },
+                {
+                  "ko": "복통",
+                  "translation_ru": "боль в животе"
+                },
+                {
+                  "ko": "설사",
+                  "translation_ru": "диарея"
+                },
+                {
+                  "ko": "배탈",
+                  "translation_ru": "расстройство желудка"
+                },
+                {
+                  "ko": "소화불량",
+                  "translation_ru": "расстройство желудка"
+                },
+                {
+                  "ko": "토하다",
+                  "translation_ru": "тошнить"
+                },
+                {
+                  "ko": "쑤시다",
+                  "translation_ru": "ныть (о боли)"
+                }
+              ]
+            },
+            {
+              "title": "병원",
+              "title_ru": "Врач и пациент",
+              "items": [
+                {
+                  "ko": "의사",
+                  "translation_ru": "врач"
+                },
+                {
+                  "ko": "간호사",
+                  "translation_ru": "медсестра"
+                },
+                {
+                  "ko": "약사",
+                  "translation_ru": "фармацевт"
+                },
+                {
+                  "ko": "처방전",
+                  "translation_ru": "рецепт"
+                },
+                {
+                  "ko": "진찰",
+                  "translation_ru": "осмотр"
+                },
+                {
+                  "ko": "치료",
+                  "translation_ru": "лечение"
+                },
+                {
+                  "ko": "수술",
+                  "translation_ru": "операция"
+                },
+                {
+                  "ko": "입원하다",
+                  "translation_ru": "ложиться в больницу"
+                }
+              ]
+            },
+            {
+              "title": "몸",
+              "title_ru": "Тело",
+              "items": [
+                {
+                  "ko": "부러지다",
+                  "translation_ru": "ломаться"
+                },
+                {
+                  "ko": "다치다",
+                  "translation_ru": "получить травму"
+                },
+                {
+                  "ko": "뼈",
+                  "translation_ru": "кость"
+                },
+                {
+                  "ko": "근육",
+                  "translation_ru": "мышца"
+                },
+                {
+                  "ko": "심장",
+                  "translation_ru": "сердце"
+                },
+                {
+                  "ko": "피부",
+                  "translation_ru": "кожа"
+                },
+                {
+                  "ko": "심해지다",
+                  "translation_ru": "усугубляться"
+                }
+              ]
+            },
+            {
+              "title": "직업",
+              "title_ru": "Люди и профессии",
+              "items": [
+                {
+                  "ko": "담임선생님",
+                  "translation_ru": "классный руководитель"
+                },
+                {
+                  "ko": "종합",
+                  "translation_ru": "комплекс, общий"
+                }
+              ]
             }
           ]
         }
@@ -1604,15 +1874,62 @@
           "items": [
             {
               "ko": "여드름",
-              "translation_ru": "прыщи, акне"
+              "translation_ru": "прыщи, акне",
+              "group": "피부"
             },
             {
               "ko": "피부과",
-              "translation_ru": "дерматология"
+              "translation_ru": "дерматология",
+              "group": "피부"
             },
             {
               "ko": "연고",
-              "translation_ru": "мазь"
+              "translation_ru": "мазь",
+              "group": "피부"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "피부",
+              "title_ru": "Кожа и лечение",
+              "items": [
+                {
+                  "ko": "피부",
+                  "translation_ru": "кожа"
+                },
+                {
+                  "ko": "세수하다",
+                  "translation_ru": "умываться"
+                },
+                {
+                  "ko": "세수",
+                  "translation_ru": "умывание"
+                },
+                {
+                  "ko": "처방전",
+                  "translation_ru": "рецепт"
+                },
+                {
+                  "ko": "진찰",
+                  "translation_ru": "осмотр"
+                },
+                {
+                  "ko": "스트레스",
+                  "translation_ru": "стресс"
+                },
+                {
+                  "ko": "약국",
+                  "translation_ru": "аптека"
+                },
+                {
+                  "ko": "약",
+                  "translation_ru": "лекарство"
+                },
+                {
+                  "ko": "낫다",
+                  "translation_ru": "выздоравливать"
+                }
+              ]
             }
           ]
         }
@@ -1631,6 +1948,54 @@
           "title": "약사에게 증상을 말하기",
           "title_ru": "Рассказывать фармацевту о симптомах",
           "audio_id": "235",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "약사",
+                "text": "어서 오세요. 어떻게 오셨어요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "목이 가렵고 따가워요."
+              },
+              {
+                "speaker": "약사",
+                "text": "열도 나나요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 열이 나면서 어지러워요. 그리고 목이 부어서 그런지 음식을 먹으려고 하면 아파서 잘 못 먹겠어요."
+              },
+              {
+                "speaker": "약사",
+                "text": "콧물이나 기침은요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "콧물은 나는데 기침은 안 해요."
+              },
+              {
+                "speaker": "약사",
+                "text": "병원에는 가 봤어요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아니요, 시간이 없어서 못 갔어요."
+              },
+              {
+                "speaker": "약사",
+                "text": "그러면 이 종합 감기약을 드셔 보시고 낫지 않으면 병원에 가 보세요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "하루에 몇 번 먹어야 돼요?"
+              },
+              {
+                "speaker": "약사",
+                "text": "하루에 3번 식후 30분에 드시고 주무시기 전에 이 물약을 드세요."
+              }
+            ]
+          },
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
             "prompt_ru": "Что делает этот человек? Расскажите.",
@@ -1657,7 +2022,7 @@
                 "목이 부었습니다.",
                 "기침을 합니다."
               ],
-              "correct": null
+              "correct": 3
             },
             {
               "kind": "choice",
@@ -1669,7 +2034,7 @@
                 "남자는 식사를 한 다음에 약을 먹어야 합니다.",
                 "여자는 약을 먹은 후에 병원에 가려고 합니다."
               ],
-              "correct": null
+              "correct": 2
             }
           ],
           "followup": "여러분은 약국에서 약을 산 적이 있습니까? 친구들과 이야기해 보십시오.",
@@ -1686,7 +2051,74 @@
           "items": [
             {
               "ko": "종합",
-              "translation_ru": "комплексный, сводный"
+              "translation_ru": "комплексный, сводный",
+              "group": "약"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "약",
+              "title_ru": "Лекарства",
+              "items": [
+                {
+                  "ko": "알약",
+                  "translation_ru": "таблетка"
+                },
+                {
+                  "ko": "가루약",
+                  "translation_ru": "порошок"
+                },
+                {
+                  "ko": "물약",
+                  "translation_ru": "жидкое лекарство"
+                },
+                {
+                  "ko": "파스",
+                  "translation_ru": "пластырь-компресс"
+                },
+                {
+                  "ko": "반창고",
+                  "translation_ru": "пластырь"
+                },
+                {
+                  "ko": "붕대",
+                  "translation_ru": "бинт"
+                },
+                {
+                  "ko": "연고",
+                  "translation_ru": "мазь"
+                }
+              ]
+            },
+            {
+              "title": "증상",
+              "title_ru": "Что болит",
+              "items": [
+                {
+                  "ko": "열",
+                  "translation_ru": "жар"
+                },
+                {
+                  "ko": "기침",
+                  "translation_ru": "кашель"
+                },
+                {
+                  "ko": "콧물",
+                  "translation_ru": "насморк"
+                },
+                {
+                  "ko": "두통",
+                  "translation_ru": "головная боль"
+                },
+                {
+                  "ko": "복통",
+                  "translation_ru": "боль в животе"
+                },
+                {
+                  "ko": "설사",
+                  "translation_ru": "диарея"
+                }
+              ]
             }
           ]
         }
@@ -1796,7 +2228,74 @@
           "items": [
             {
               "ko": "되찾다",
-              "translation_ru": "вернуть, обрести вновь"
+              "translation_ru": "вернуть, обрести вновь",
+              "group": "건강"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "건강",
+              "title_ru": "Здоровье",
+              "items": [
+                {
+                  "ko": "건강",
+                  "translation_ru": "здоровье"
+                },
+                {
+                  "ko": "관리",
+                  "translation_ru": "уход"
+                },
+                {
+                  "ko": "예방하다",
+                  "translation_ru": "предотвращать"
+                },
+                {
+                  "ko": "수면",
+                  "translation_ru": "сон"
+                },
+                {
+                  "ko": "푹",
+                  "translation_ru": "крепко"
+                },
+                {
+                  "ko": "쉬다",
+                  "translation_ru": "отдыхать"
+                },
+                {
+                  "ko": "운동",
+                  "translation_ru": "спорт"
+                },
+                {
+                  "ko": "스트레스",
+                  "translation_ru": "стресс"
+                },
+                {
+                  "ko": "피로",
+                  "translation_ru": "усталость"
+                }
+              ]
+            },
+            {
+              "title": "습관",
+              "title_ru": "Привычки",
+              "items": [
+                {
+                  "ko": "계절",
+                  "translation_ru": "сезон"
+                },
+                {
+                  "ko": "감기에 걸리다",
+                  "translation_ru": "простудиться"
+                },
+                {
+                  "ko": "따라 하다",
+                  "translation_ru": "повторять"
+                },
+                {
+                  "ko": "집중",
+                  "translation_ru": "концентрация"
+                }
+              ]
             }
           ]
         }
@@ -1807,6 +2306,82 @@
       "page_role": "content",
       "source_photo": "IMG_0928",
       "blocks": [
+        {
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "type": "vocab_list",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "사고",
+              "title_ru": "Травма",
+              "items": [
+                {
+                  "ko": "다치다",
+                  "translation_ru": "получить травму"
+                },
+                {
+                  "ko": "부러지다",
+                  "translation_ru": "ломаться"
+                },
+                {
+                  "ko": "수술",
+                  "translation_ru": "операция"
+                },
+                {
+                  "ko": "입원하다",
+                  "translation_ru": "ложиться в больницу"
+                },
+                {
+                  "ko": "퇴원하다",
+                  "translation_ru": "выписываться"
+                },
+                {
+                  "ko": "치료",
+                  "translation_ru": "лечение"
+                },
+                {
+                  "ko": "조심하다",
+                  "translation_ru": "быть осторожным"
+                },
+                {
+                  "ko": "예방",
+                  "translation_ru": "профилактика"
+                }
+              ]
+            },
+            {
+              "title": "원인",
+              "title_ru": "Причины",
+              "items": [
+                {
+                  "ko": "넘어지다",
+                  "translation_ru": "упасть"
+                },
+                {
+                  "ko": "미끄러지다",
+                  "translation_ru": "поскользнуться"
+                },
+                {
+                  "ko": "부주의",
+                  "translation_ru": "неосторожность"
+                },
+                {
+                  "ko": "스키",
+                  "translation_ru": "лыжи"
+                },
+                {
+                  "ko": "운동",
+                  "translation_ru": "спорт"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "writing-health",
           "toc_section": "쓰기",
@@ -1934,47 +2509,102 @@
           "items": [
             {
               "ko": "자연",
-              "translation_ru": "природа"
+              "translation_ru": "природа",
+              "group": "한방"
             },
             {
               "ko": "치료법",
-              "translation_ru": "способ лечения"
+              "translation_ru": "способ лечения",
+              "group": "한방"
             },
             {
               "ko": "세기",
-              "translation_ru": "век, столетие"
+              "translation_ru": "век, столетие",
+              "group": "한방"
             },
             {
               "ko": "생강",
-              "translation_ru": "имбирь"
+              "translation_ru": "имбирь",
+              "group": "한방"
             },
             {
               "ko": "뿌리",
-              "translation_ru": "корень"
+              "translation_ru": "корень",
+              "group": "한방"
             },
             {
               "ko": "꿀",
-              "translation_ru": "мёд"
+              "translation_ru": "мёд",
+              "group": "한방"
             },
             {
               "ko": "무즙",
-              "translation_ru": "сок редьки"
+              "translation_ru": "сок редьки",
+              "group": "한방"
             },
             {
               "ko": "매실차",
-              "translation_ru": "чай из японской сливы (мэсиль)"
+              "translation_ru": "чай из японской сливы (мэсиль)",
+              "group": "한방"
             },
             {
               "ko": "마사지하다",
-              "translation_ru": "делать массаж"
+              "translation_ru": "делать массаж",
+              "group": "한방"
             },
             {
               "ko": "피로",
-              "translation_ru": "усталость"
+              "translation_ru": "усталость",
+              "group": "한방"
             },
             {
               "ko": "풀리다",
-              "translation_ru": "рассасываться; проходить (об усталости)"
+              "translation_ru": "рассасываться; проходить (об усталости)",
+              "group": "한방"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "한방",
+              "title_ru": "Народная медицина",
+              "items": [
+                {
+                  "ko": "한의원",
+                  "translation_ru": "клиника восточной медицины"
+                },
+                {
+                  "ko": "약",
+                  "translation_ru": "лекарство"
+                },
+                {
+                  "ko": "마사지",
+                  "translation_ru": "массаж"
+                },
+                {
+                  "ko": "소화",
+                  "translation_ru": "пищеварение"
+                },
+                {
+                  "ko": "체하다",
+                  "translation_ru": "несварение"
+                },
+                {
+                  "ko": "감기에 걸리다",
+                  "translation_ru": "простудиться"
+                },
+                {
+                  "ko": "차",
+                  "translation_ru": "чай"
+                },
+                {
+                  "ko": "열",
+                  "translation_ru": "жар"
+                },
+                {
+                  "ko": "기침",
+                  "translation_ru": "кашель"
+                }
+              ]
             }
           ]
         },

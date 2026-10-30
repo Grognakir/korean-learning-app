@@ -1,0 +1,1716 @@
+.screen {
+  --t-bg: #050a06;
+  --t-panel: #07130b;
+  --t-bright: #00ff66;
+  --t-mid: #0fbf4f;
+  --t-dim: #0a5c2a;
+  --t-text: #b8ffd0;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 18px 18px;
+  background: var(--t-bg);
+  color: var(--t-text);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Сканлинии CRT поверх всего экрана. */
+.screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0, 255, 102, 0.04) 0 1px, transparent 1px 4px);
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 34px;
+  padding-right: 48px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--t-mid);
+}
+
+/* ---------- входящий звонок ---------- */
+
+.screenIncoming {
+  min-height: min(620px, 80dvh);
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(10, 92, 42, 0.18) 1px, transparent 1px) 0 0 / 100% 32px,
+    linear-gradient(90deg, rgba(10, 92, 42, 0.18) 1px, transparent 1px) 0 0 / 32px 100%,
+    radial-gradient(ellipse at center, #08200f 0%, var(--t-bg) 70%);
+}
+
+.rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* На экране звонка дождь только по краям, центр — под карточкой. */
+.rainEdges {
+  mask: linear-gradient(90deg, #000 0 22%, transparent 34% 66%, #000 78%);
+  -webkit-mask: linear-gradient(90deg, #000 0 22%, transparent 34% 66%, #000 78%);
+}
+
+/* В сцене дождь приглушён и сверху/снизу растворяется. */
+.rainStage {
+  opacity: 0.55;
+  mask: linear-gradient(to bottom, transparent, #000 15% 80%, transparent);
+  -webkit-mask: linear-gradient(to bottom, transparent, #000 15% 80%, transparent);
+}
+
+.stageStatus {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+}
+
+.rainColumn {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.25;
+  color: var(--t-dim);
+  white-space: pre;
+  animation: rain 9s linear infinite;
+}
+
+.rainColumn::first-line {
+  color: var(--t-bright);
+}
+
+@keyframes rain {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(110%);
+  }
+}
+
+.incomingTop,
+.incomingBottom {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding-right: 48px;
+}
+
+.incomingBottom {
+  align-items: flex-end;
+  margin-top: auto;
+  padding-right: 0;
+}
+
+.boot {
+  margin: 0;
+  padding: 6px 10px;
+  border-left: 2px solid var(--t-dim);
+  background: rgba(5, 10, 6, 0.75);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--t-mid);
+  white-space: pre;
+}
+
+/* Панель канала: подписи слева, значения справа фиксированной ширины,
+   чтобы при смене цифр панель не «дышала». */
+.status {
+  flex: none;
+  width: 184px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid var(--t-dim);
+  border-left: 2px solid var(--t-mid);
+  background: rgba(5, 10, 6, 0.85);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--t-mid);
+  font-variant-numeric: tabular-nums;
+}
+
+.statusHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed var(--t-dim);
+  color: var(--t-bright);
+  letter-spacing: 0.04em;
+}
+
+.statusRows {
+  margin: 0;
+}
+
+.statusRows > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.statusRows dt {
+  color: var(--t-mid);
+  letter-spacing: 0.06em;
+}
+
+.statusRows dd {
+  margin: 0;
+  color: var(--t-bright);
+  white-space: nowrap;
+}
+
+.bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+}
+
+.bars i {
+  width: 4px;
+  background: var(--t-dim);
+}
+
+.bars i:nth-child(1) {
+  height: 25%;
+}
+
+.bars i:nth-child(2) {
+  height: 50%;
+}
+
+.bars i:nth-child(3) {
+  height: 75%;
+}
+
+.bars i:nth-child(4) {
+  height: 100%;
+}
+
+.bars .barOn {
+  background: var(--t-bright);
+}
+
+.statusEnded {
+  border-left-color: #b4802a;
+}
+
+.statusEnded .statusHead {
+  color: #e0a23a;
+}
+
+.incoming {
+  position: relative;
+  align-self: center;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: min(440px, 100%);
+  padding: 30px 20px 22px;
+  border: 1px solid var(--t-dim);
+  background: rgba(5, 14, 8, 0.88);
+  box-shadow: 0 0 24px rgba(0, 255, 102, 0.12) inset;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+/* Уголки рамки карточки. */
+.corners {
+  position: absolute;
+  inset: -6px;
+  pointer-events: none;
+  --c: var(--t-bright);
+  background:
+    linear-gradient(var(--c), var(--c)) top left / 18px 2px,
+    linear-gradient(var(--c), var(--c)) top left / 2px 18px,
+    linear-gradient(var(--c), var(--c)) top right / 18px 2px,
+    linear-gradient(var(--c), var(--c)) top right / 2px 18px,
+    linear-gradient(var(--c), var(--c)) bottom left / 18px 2px,
+    linear-gradient(var(--c), var(--c)) bottom left / 2px 18px,
+    linear-gradient(var(--c), var(--c)) bottom right / 18px 2px,
+    linear-gradient(var(--c), var(--c)) bottom right / 2px 18px;
+  background-repeat: no-repeat;
+}
+
+.avatarRing {
+  position: relative;
+  padding: 6px;
+}
+
+.avatarRing::before,
+.avatarRing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--t-mid);
+  border-radius: 50%;
+  animation: ripple 2s ease-out infinite;
+}
+
+.avatarRing::after {
+  animation-delay: 1s;
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.incomingAvatar {
+  position: relative;
+  display: block;
+  width: 128px;
+  height: 128px;
+  border: 2px solid var(--t-bright);
+  border-radius: 50%;
+  background: #fff;
+  object-fit: cover;
+}
+
+.incomingTitle {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--t-bright);
+  text-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
+}
+
+.incomingKo {
+  margin: 0;
+  font-size: 22px;
+  color: var(--t-bright);
+}
+
+.wave {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+}
+
+.wave span {
+  width: 4px;
+  height: 100%;
+  background: var(--t-mid);
+  animation: wave 0.9s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleY(0.25);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.startButton {
+  margin-top: 4px;
+  padding: 10px 34px;
+  border: 1px solid var(--t-bright);
+  background: transparent;
+  color: var(--t-bright);
+  font: inherit;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.startButton:hover,
+.startButton:focus-visible {
+  background: var(--t-bright);
+  color: var(--t-bg);
+  outline: none;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(5, 10, 6, 0.75);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--t-mid);
+}
+
+.linkBar {
+  display: block;
+  width: 220px;
+  height: 6px;
+  border: 1px solid var(--t-dim);
+}
+
+.linkBar span {
+  display: block;
+  height: 100%;
+  background: var(--t-mid);
+  animation: link 2.4s ease-in-out infinite;
+}
+
+@keyframes link {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.clock {
+  padding: 6px 10px;
+  white-space: nowrap;
+  background: rgba(5, 10, 6, 0.75);
+  font-size: 12px;
+  color: var(--t-mid);
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 36px rgba(0, 255, 102, 0.28) inset;
+  }
+}
+
+/* ---------- сцена и персонаж ---------- */
+
+.stage {
+  position: relative;
+  background:
+    linear-gradient(rgba(10, 92, 42, 0.14) 1px, transparent 1px) 0 0 / 100% 32px,
+    linear-gradient(90deg, rgba(10, 92, 42, 0.14) 1px, transparent 1px) 0 0 / 32px 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex: none;
+  height: clamp(234px, calc(46dvh - 6px), 414px);
+  border: 1px solid var(--t-dim);
+  overflow: hidden;
+}
+
+.stageLive {
+  background: var(--bg) center / cover no-repeat;
+}
+
+/* На телефоне панель канала компактнее (без FREQ и ENC) и прижата к
+   правому краю, персонаж — к левому, чтобы они не перекрывались. */
+@media (max-width: 640px) {
+  .stageStatus {
+    top: 8px;
+    right: 8px;
+    width: 116px;
+    padding: 5px 7px;
+    font-size: 10px;
+  }
+
+  .stageStatus .statusRows > div:nth-child(2),
+  .stageStatus .statusRows > div:nth-child(3) {
+    display: none;
+  }
+}
+
+.character {
+  position: relative;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  margin-left: 4%;
+  animation: appear 0.45s steps(4) both;
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  user-select: none;
+}
+
+.hologram img {
+  filter: url(#story-hologram) drop-shadow(0 0 10px rgba(0, 255, 102, 0.35));
+  opacity: 0.92;
+}
+
+.hologram::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0 1px, transparent 1px 4px);
+  mask: var(--pose) bottom center / contain no-repeat;
+  -webkit-mask: var(--pose) bottom center / contain no-repeat;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Системные строки — компактный лог терминала: маркер, строка, без
+   прокрутки (три строки помещаются в окно постоянной высоты). */
+.systemLog {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--t-bright);
+}
+
+.systemLog li::before {
+  content: "›";
+  display: inline-block;
+  width: 1.4em;
+  color: var(--t-mid);
+}
+
+.systemLog .systemAlert {
+  color: #e0a23a;
+  letter-spacing: 0.06em;
+}
+
+.systemLog .systemAlert::before {
+  content: "■";
+  color: #e0a23a;
+}
+
+/* ---------- окно диалога ---------- */
+
+/* Высота окна диалога постоянная — экран не прыгает между репликой,
+   выбором ответа и системными строками. */
+/* margin-top: табличка с именем выступает над рамкой на 12px, между ней и
+   сценой остаётся ~6px (сцена на столько же ниже). */
+.dialogue {
+  margin-top: 6px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 150px;
+  box-sizing: border-box;
+  padding: 18px 16px 12px;
+  border: 1px solid var(--t-mid);
+  background: var(--t-panel);
+  cursor: pointer;
+}
+
+/* Табличка с именем на верхней рамке окна и рядом кнопка перевода. */
+.nameRow {
+  position: absolute;
+  top: -12px;
+  left: 14px;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.nameTag {
+  padding: 1px 12px;
+  border: 1px solid var(--t-mid);
+  background: var(--t-bg);
+  font-size: 14px;
+  color: var(--t-bright);
+}
+
+/* Прокрутка у текста, а не у окна: иначе обрезается табличка с именем,
+   выступающая за верхнюю рамку. */
+.lineText {
+  margin: 0;
+  flex: 0 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--t-bright);
+}
+
+/* Перевод — пропорциональным шрифтом и мельче: моноширинный русский
+   текст занимает слишком много места в окне диалога. */
+.lineRu {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--t-mid);
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  margin-left: 4px;
+  vertical-align: -0.12em;
+  background: var(--t-bright);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.dialogueActions {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.nextButton,
+.ghost,
+.checkout {
+  padding: 7px 16px;
+  border: 1px solid var(--t-mid);
+  background: transparent;
+  color: var(--t-bright);
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nextButton:hover,
+.nextButton:focus-visible,
+.checkout:hover:not(:disabled),
+.checkout:focus-visible {
+  background: var(--t-bright);
+  color: var(--t-bg);
+  outline: none;
+}
+
+.ghost {
+  border-color: var(--t-dim);
+  color: var(--t-mid);
+}
+
+.ghost:hover {
+  color: var(--t-bright);
+}
+
+.hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--t-mid);
+}
+
+/* ---------- ответы игрока ---------- */
+
+/* Варианты ответа — карточками поверх сцены, справа от персонажа. */
+.replies {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(400px, 52%);
+  animation: rise 0.25s ease-out both;
+}
+
+.repliesLabel {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--t-mid);
+}
+
+.reply {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--t-dim);
+  background: rgba(5, 14, 8, 0.92);
+  color: var(--t-bright);
+  font: inherit;
+  font-size: 17px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.reply:first-of-type {
+  border-color: var(--t-bright);
+  box-shadow: 0 0 18px rgba(0, 255, 102, 0.18);
+}
+
+.reply:hover,
+.reply:focus-visible {
+  border-color: var(--t-bright);
+  background: rgba(0, 40, 18, 0.95);
+  box-shadow: 0 0 18px rgba(0, 255, 102, 0.25);
+  outline: none;
+}
+
+.replyKey {
+  flex: none;
+  min-width: 20px;
+  padding: 0 4px;
+  border: 1px solid var(--t-dim);
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--t-mid);
+}
+
+.replyText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.replyRu {
+  font-size: 13px;
+  color: var(--t-mid);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (max-width: 640px) {
+  .replies {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+  }
+}
+
+/* ---------- магазин ---------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--t-dim);
+  background: transparent;
+  color: var(--t-text);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--t-mid);
+}
+
+.chipActive {
+  border-color: var(--t-bright);
+  background: var(--t-bright);
+  color: var(--t-bg);
+}
+
+.chipDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Ввод игрока на месте реплики продавца — тем же шрифтом, без рамки. */
+.prompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--t-bright);
+}
+
+/* Клавиатура и Enter сменяют друг друга — размер фиксирован, чтобы кнопка
+   не прыгала. */
+.iconButton {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 56px;
+  height: 34px;
+  padding: 0;
+}
+
+.phrase {
+  flex: 1;
+  min-width: 0;
+}
+
+.terminalInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: var(--t-bright);
+  font: inherit;
+  caret-color: var(--t-bright);
+  outline: none;
+}
+
+.terminalInput::placeholder {
+  color: var(--t-dim);
+}
+
+.remove {
+  border: none;
+  background: none;
+  color: #3d5c48;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.checkout {
+  align-self: flex-end;
+  font-size: 16px;
+}
+
+.checkout:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ---------- магазин на манекенах ---------- */
+
+.shopStage {
+  justify-content: flex-start;
+}
+
+/* Продавец в магазине чуть меньше и ближе к левому краю. */
+.shopStage .character {
+  height: 90%;
+  margin-left: 1.5%;
+}
+
+.mannequins {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 28%;
+  right: 214px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Прозрачные поля картинок манекенов перекрываются, но сами фигуры
+   стоят с промежутком. */
+.mannequin {
+  position: relative;
+  height: 100%;
+  margin: 0 -40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mannequinBox {
+  position: relative;
+  height: 88%;
+  margin-bottom: 4px;
+  aspect-ratio: 2 / 3;
+}
+
+.mannequinHot {
+  cursor: pointer;
+}
+
+.mannequinImg,
+.zoneGlow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
+}
+
+.mannequinImg {
+  filter: url(#story-hologram) drop-shadow(0 0 8px rgba(0, 255, 102, 0.3));
+  opacity: 0.9;
+}
+
+.zoneGlow {
+  filter: drop-shadow(0 0 4px #00ff66) drop-shadow(0 0 10px rgba(0, 255, 102, 0.7));
+  mix-blend-mode: screen;
+}
+
+.callout {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.callout polyline {
+  fill: none;
+  stroke: var(--t-bright);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 3px rgba(0, 255, 102, 0.8));
+}
+
+.callout rect {
+  fill: var(--t-bg);
+  stroke: var(--t-bright);
+  stroke-width: 1.5;
+}
+
+.calloutLabel {
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-50%);
+  padding: 2px 10px;
+  border: 1px solid var(--t-bright);
+  background: rgba(5, 14, 8, 0.94);
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
+  font-size: 14px;
+  color: var(--t-bright);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.shopSide {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 184px;
+}
+
+.cartPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--t-dim);
+  background: rgba(5, 10, 6, 0.85);
+}
+
+.shopSide .cartPanel {
+  flex: 1;
+}
+
+.cartHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartTitle,
+.cartClear {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--t-mid);
+}
+
+.cartTitle {
+  cursor: default;
+}
+
+/* Стрелка раскрытия списка — только на телефоне. */
+.cartArrow {
+  display: none;
+}
+
+.cartClear {
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+.cartClear:hover {
+  color: var(--t-bright);
+}
+
+.cartClear:disabled {
+  opacity: 0.35;
+  cursor: default;
+  text-decoration: none;
+}
+
+.cartRows {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.cartRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--t-bright);
+}
+
+.cartRow > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.cartRow .remove {
+  color: var(--t-mid);
+}
+
+.cartPanel .checkout {
+  align-self: stretch;
+  font-size: 14px;
+}
+
+/* Выбор вещи (общий для трёх раскладок). */
+.picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pickerTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--t-mid);
+}
+
+.pickerItems {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.pickerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 6px 4px;
+  border: 1px solid var(--t-dim);
+  background: #e9f5ec;
+  color: #10241a;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pickerItem small {
+  font-size: 10px;
+  color: #3d5c48;
+}
+
+.pickerItem:hover,
+.pickerItem:focus-visible {
+  outline: 2px solid var(--t-bright);
+}
+
+.picker_shelf {
+  gap: 4px;
+}
+
+.picker_shelf .pickerItems {
+  display: flex;
+  gap: 8px;
+}
+
+/* Плитки полки во всю высоту окна диалога; слева — по табличке с именем
+   (.nameRow, left: 14px). */
+.dialogue:has(.picker_shelf) {
+  padding: 18px 18px 18px 14px;
+}
+
+.picker_shelf .pickerItem {
+  width: 112px;
+  height: 112px;
+  padding: 0;
+  justify-content: center;
+  border-color: var(--t-dim);
+  background: radial-gradient(circle at 50% 45%, rgba(0, 255, 102, 0.14), rgba(0, 24, 10, 0.85) 72%);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.picker_shelf .pickerItem:hover,
+.picker_shelf .pickerItem:focus-visible {
+  outline: none;
+  border-color: var(--t-mid);
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.25);
+}
+
+.picker_shelf .pickerItem.pickerItemOn {
+  outline: none;
+  border-color: var(--t-bright);
+  box-shadow:
+    0 0 0 1px var(--t-bright),
+    0 0 14px rgba(0, 255, 102, 0.4);
+}
+
+/* ---------- окно-примерочная (выбор цвета и узора) ---------- */
+
+.paletteDim {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: rgba(2, 6, 3, 0.72);
+}
+
+.palettePanel {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid var(--t-bright);
+  background: rgba(5, 14, 8, 0.96);
+  box-shadow: 0 0 22px rgba(0, 255, 102, 0.25);
+}
+
+/* Окно-примерочная: от левого края сцены до колонки статуса и корзины
+   (184px + отступ 12px) с зазором 10px. */
+.fittingRoom {
+  top: 12px;
+  bottom: 12px;
+  left: 12px;
+  right: 206px;
+}
+
+.palettePreview {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38%;
+  max-width: 230px;
+  background: radial-gradient(circle at 50% 45%, rgba(0, 255, 102, 0.14), rgba(0, 24, 10, 0.85) 72%);
+  border: 1px solid var(--t-dim);
+}
+
+.paletteBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Заголовок палитры: название вещи слева, крестик справа — по тем же
+   внутренним отступам, что и остальное содержимое. */
+.paletteHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.paletteClose {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--t-dim);
+  background: var(--t-bg);
+  color: var(--t-mid);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.swatchGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.swatch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border: 1px solid var(--t-dim);
+  background: transparent;
+  color: var(--t-text);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.swatch:hover {
+  border-color: var(--t-mid);
+}
+
+.swatchOn {
+  border-color: var(--t-bright);
+  background: rgba(0, 255, 102, 0.12);
+  color: var(--t-bright);
+}
+
+.swatchDot {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.paletteRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.paletteRow .chip {
+  padding: 5px 12px;
+  font-size: 14px;
+}
+
+.paletteBuy {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  color: var(--t-bright);
+}
+
+.buyButton {
+  flex: none;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+
+.buyButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* V6 — полка в окне диалога: реплика сверху, без печати. */
+/* Полка занимает всё окно: реплика продавца скрыта, вернётся после
+   закрытия полки. */
+.ruToggle {
+  padding: 0 8px;
+  border: 1px solid var(--t-dim);
+  background: var(--t-bg);
+  color: var(--t-mid);
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.ruToggle:hover {
+  color: var(--t-bright);
+}
+
+.ruToggle:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.ruToggle:disabled:hover {
+  color: var(--t-mid);
+}
+
+.ruToggle[aria-pressed="true"] {
+  border-color: var(--t-mid);
+  color: var(--t-bright);
+}
+
+.shelfClose {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--t-dim);
+  background: transparent;
+  color: var(--t-mid);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ---------- итог ---------- */
+
+.complete {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--t-bright);
+  text-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
+}
+
+/* Итог эпизода — карточка на сцене правее 지아, по центру по высоте. */
+.verdictCard {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  translate: 0 -50%;
+  z-index: 3;
+  width: min(400px, 42%);
+  max-height: calc(100% - 32px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--t-mid);
+  background: rgba(5, 10, 6, 0.88);
+  box-shadow: 0 0 18px rgba(0, 255, 102, 0.18);
+  overflow-y: auto;
+  animation: verdictIn 0.3s ease-out;
+}
+
+@keyframes verdictIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+}
+
+.withIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verdictTitle {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--t-mid);
+}
+
+.verdictSentence {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--t-bright);
+}
+
+.notes {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--t-text);
+}
+
+@media (max-width: 640px) {
+  /* Игра на весь экран телефона: отступы от выреза, скруглённых углов и
+     полоски «домой» на iPhone (safe area). */
+  .screen {
+    padding: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px))
+      calc(12px + env(safe-area-inset-bottom, 0px)) calc(12px + env(safe-area-inset-left, 0px));
+  }
+
+  .verdictCard {
+    translate: none;
+    top: auto;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+    max-height: 62%;
+  }
+
+  .bar {
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  /* Игра на весь экран телефона: сцена занимает свободную высоту. */
+  .screen {
+    box-sizing: border-box;
+    min-height: 100dvh;
+  }
+
+  .stage {
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 214px;
+  }
+
+  /* У картинки прозрачные поля — сдвиг прижимает фигуру к краю сцены. */
+  .character {
+    margin-left: 0;
+    translate: -10% 0;
+  }
+
+  .shopStage .character,
+  .shopSide > :first-child {
+    display: none;
+  }
+
+  /* Корзина — полосой сверху, манекены под ней по ширине сцены
+     (высота по контейнеру: два манекена с перекрытием полей в ширину). */
+  .mannequins {
+    top: 92px;
+    left: 0;
+    right: 0;
+    container-type: size;
+  }
+
+  .mannequinBox {
+    height: min(96cqh, calc((50cqw + 80px) * 1.5));
+  }
+
+  .shopSide {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: auto;
+    width: auto;
+  }
+
+  /* Корзина свёрнута в полосу; нажатие на «CART · n» раскрывает список. */
+  .cartRows {
+    display: none;
+  }
+
+  .cartOpen .cartRows {
+    display: flex;
+    max-height: 240px;
+  }
+
+  .cartOpen {
+    background: rgba(5, 10, 6, 0.97);
+  }
+
+  .cartTitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--t-bright);
+  }
+
+  .cartArrow {
+    display: block;
+    transition: rotate 0.15s;
+  }
+
+  .cartOpen .cartArrow {
+    rotate: 180deg;
+  }
+
+  .fittingRoom {
+    left: 8px;
+    right: 8px;
+    width: auto;
+    flex-direction: column;
+  }
+
+  .fittingRoom .palettePreview {
+    width: auto;
+    max-width: none;
+    height: 170px;
+  }
+
+  .palettePreview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* Полка: плитки мельче, лента прокручивается, справа место под крестик. */
+  .dialogue:has(.picker_shelf) {
+    padding-right: 44px;
+  }
+
+  .picker_shelf .pickerItems {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .picker_shelf .pickerItem {
+    flex: none;
+    width: 96px;
+    height: 112px;
+  }
+
+  .picker_shelf .pickerItem img {
+    width: 84px;
+    height: 84px;
+  }
+
+  .lineText {
+    font-size: 16px;
+  }
+
+  .lineRu {
+    font-size: 12.5px;
+  }
+
+  .linkBar {
+    width: 150px;
+  }
+
+  .clockDate {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .incoming,
+  .character,
+  .cursor,
+  .rainColumn,
+  .avatarRing::before,
+  .avatarRing::after,
+  .wave span,
+  .linkBar span {
+    animation: none;
+  }
+}
+
+/* ---------- входящий звонок: панель канала в карточке (телефон) ---------- */
+
+.statusCard {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .incomingTop {
+    padding-right: 48px;
+  }
+
+  .statusTop {
+    display: none;
+  }
+
+  .statusCard {
+    position: relative;
+    display: grid;
+    width: 100%;
+    max-width: 260px;
+    border-left-width: 1px;
+  }
+
+  .statusCard .statusRows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 14px;
+  }
+}
+
+/* ---------- магазин на телефоне: один манекен, вкладки 남성 / 여성 ---------- */
+
+.mqThumbs,
+.mqZones {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mqBack {
+    display: none;
+  }
+
+  /* Манекен чуть правее центра — слева столбик зон. */
+  .mannequins .mannequin {
+    margin: 0;
+    translate: 10px 0;
+  }
+
+  .mannequins .mannequinBox {
+    height: min(calc(96cqh - 40px), 110cqw);
+  }
+
+  .mqThumbs {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Соседние вкладки перекрываются на 1px; активная — поверх, поэтому её
+     рамка видна целиком с обеих сторон. */
+  .mqThumb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 34px;
+    padding: 0 14px;
+    border: 1px solid var(--t-dim);
+    background: rgba(5, 10, 6, 0.92);
+    color: var(--t-bright);
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .mqThumb + .mqThumb {
+    margin-left: -1px;
+  }
+
+  .mqThumbImg {
+    width: 20px;
+    height: 30px;
+    object-fit: contain;
+    filter: url(#story-hologram);
+  }
+
+  .mqThumbOn {
+    z-index: 1;
+    border-color: var(--t-bright);
+    background: rgba(0, 255, 102, 0.18);
+  }
+}
+
+@media (max-width: 640px) {
+  /* Столбик зон слева от манекена (выноски на телефоне смотрят вправо). */
+  .mqZones {
+    position: absolute;
+    top: 46px;
+    bottom: 4px;
+    left: 6px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .mqZone {
+    min-width: 52px;
+    height: 30px;
+    padding: 0 6px;
+    border: 1px solid var(--t-dim);
+    background: rgba(5, 10, 6, 0.9);
+    color: var(--t-mid);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .mqZone[aria-pressed="true"] {
+    border-color: var(--t-bright);
+    background: rgba(0, 255, 102, 0.18);
+    color: var(--t-bright);
+  }
+}
+
+/* ---------- полка на телефоне: шторка снизу сцены ---------- */
+
+@media (max-width: 640px) {
+  .shelfSheet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    box-sizing: border-box;
+    max-height: 55%;
+    padding: 38px 12px 12px;
+    overflow-y: auto;
+    border: 1px solid var(--t-bright);
+    background: rgba(5, 10, 6, 0.96);
+    box-shadow: 0 0 18px rgba(0, 255, 102, 0.2);
+    animation: sheetUp 0.2s ease-out;
+  }
+
+  @keyframes sheetUp {
+    from {
+      translate: 0 30%;
+      opacity: 0;
+    }
+  }
+
+  .shelfSheet .shelfClose {
+    top: 6px;
+    right: 6px;
+  }
+
+  .shelfSheet .pickerItems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    overflow: visible;
+  }
+
+  .shelfSheet .pickerItem {
+    width: auto;
+    height: 96px;
+  }
+
+  .shelfSheet .pickerItem img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}

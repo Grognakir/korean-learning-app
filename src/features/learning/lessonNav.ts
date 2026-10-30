@@ -14,7 +14,7 @@ export type LessonNav = {
   next: LessonNavSection | null;
 };
 
-function findLessonToc(pages: TextbookPageRow[]): LessonTocBlock | null {
+export function findLessonToc(pages: TextbookPageRow[]): LessonTocBlock | null {
   for (const page of pages) {
     for (const block of page.content.blocks) {
       if (block.type === "lesson_toc") return block;

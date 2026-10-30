@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  // Без cover iOS отдаёт env(safe-area-inset-*) = 0, и полноэкранные блоки
+  // уходят под скруглённые углы и полоску «домой».
+  viewportFit: "cover",
   themeColor: "#1f4e8c",
 };
 
