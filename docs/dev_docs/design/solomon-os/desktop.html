@@ -225,46 +225,114 @@ const store = {
 
 /* ================= сетка иконок ================= */
 const PAD = 10;
-// Клетки постоянного размера. Сетка «двусторонняя»: левая половина считается от левого края,
-// правая — от правого (верх — от верха, низ — от низа). Поэтому иконка у правого края стоит на
-// одном и том же расстоянии от него при любой ширине и едет вместе с краем, не отставая и не обгоняя.
-// Остаток места, меньший клетки, оказывается посередине, где его не видно.
+/* Раскладка иконок — строками, как текст.
+   Модель (сохраняется): rows = [{ y, ay: "t"|"b", left: [{id, gap}], right: [{id, gap}] }].
+   left — иконки, прилипшие к левому краю (по порядку от края), right — к правому (от края внутрь).
+   gap — сколько пустых клеток перед иконкой (от края или от предыдущей иконки той же стороны);
+   0 — иконка прилипла к соседу или к краю.
+   При сжатии сначала исчезают зазоры (внутренние — первыми), потом последняя иконка левой стопки
+   переносится на следующую строку к левому краю (если левой стопки нет — внутренняя иконка правой).
+   Перенос считается заново при каждой раскладке, поэтому при растяжении иконки возвращаются.
+   Если строка заполнена целиком, остаток ширины (меньше клетки) делится поровну между иконками.
+   Строки верхней половины держатся верха, нижней — низа. */
 function cell() { const cs = getComputedStyle(document.documentElement); return [parseFloat(cs.getPropertyValue("--cell-w")), parseFloat(cs.getPropertyValue("--cell-h"))]; }
 function gridSize() { const [cw, ch] = cell(); return [Math.max(1, Math.floor((desk.clientWidth - PAD * 2) / cw)), Math.max(1, Math.floor((desk.clientHeight - PAD * 2) / ch))]; }
-// остаток по ширине и высоте — сдвиг правой/нижней половины сетки
 function slack() { const [cw, ch] = cell(), [cols, rows] = gridSize(); return [desk.clientWidth - PAD * 2 - cols * cw, desk.clientHeight - PAD * 2 - rows * ch]; }
-const half = (i, n) => i > (n - 1) / 2;
-function cellXY(c, r) { const [cw, ch] = cell(), [cols, rows] = gridSize(), [sx, sy] = slack();
-  return [PAD + c * cw + (half(c, cols) ? sx : 0), PAD + r * ch + (half(r, rows) ? sy : 0)]; }
-// Желаемое место иконки хранится относительно ближайшего края: { x, ax: "l"|"r", y, ay: "t"|"b" }.
-// Иконка у правого края остаётся у правого края при любом размере окна; реальная клетка (pos)
-// пересчитывается при каждой раскладке, а желаемое место меняется только перетаскиванием.
-let want = store.get("icons2", null), pos = {};
-function toWant(c, r) {
-  const [cols, rows] = gridSize(), ax = c > (cols - 1) / 2 ? "r" : "l", ay = r > (rows - 1) / 2 ? "b" : "t";
-  return { x: ax === "l" ? c : cols - 1 - c, ax, y: ay === "t" ? r : rows - 1 - r, ay };
+const rowY = (r) => { const [, ch] = cell(), [, rows] = gridSize(), [, sy] = slack(); return PAD + r * ch + (r > (rows - 1) / 2 ? sy : 0); };
+
+let model = store.get("icons3", null);
+const pos = {};      // id -> { r, c, x, y } — результат последней раскладки
+function defaultModel() {
+  const [, rows] = gridSize(), m = [];
+  APPS.forEach((a, i) => { const r = i % rows, ay = r > (rows - 1) / 2 ? "b" : "t";
+    if (!m[r]) m[r] = { y: ay === "t" ? r : rows - 1 - r, ay, left: [], right: [] }; m[r].left.push({ id: a.id, gap: 0 }); });
+  return m.filter(Boolean);
 }
-function defaultWant() { const [, rows] = gridSize(); const w = {}; APPS.forEach((a, i) => { w[a.id] = { x: Math.floor(i / rows), ax: "l", y: i % rows, ay: "t" }; }); return w; }
-function layout() {
-  // каждая иконка — в своей желаемой клетке; если она занята или вне сетки — в ближайшую свободную
-  const [cols, rows] = gridSize(), used = new Set();
-  APPS.forEach(a => {
-    const w = want[a.id] || { x: 0, ax: "l", y: 0, ay: "t" };
-    let c = w.ax === "l" ? w.x : cols - 1 - w.x, r = w.ay === "t" ? w.y : rows - 1 - w.y;
-    c = Math.min(Math.max(c, 0), cols - 1); r = Math.min(Math.max(r, 0), rows - 1);
-    if (used.has(c + ":" + r)) {
-      let best = null, bd = Infinity;
-      for (let cc = 0; cc < cols; cc++) for (let rr = 0; rr < rows; rr++) {
-        if (used.has(cc + ":" + rr)) continue;
-        const d = (cc - c) ** 2 + (rr - r) ** 2; if (d < bd) { bd = d; best = [cc, rr]; }
-      }
-      if (best) [c, r] = best;
+const rowIndex = (row, rows) => row.ay === "t" ? row.y : rows - 1 - row.y;
+
+// раскладка: из модели — реальные строки/колонки с переносами (модель не меняется)
+function compute(skip) {
+  const [cols, rows] = gridSize(), [cw] = cell(), [sx] = slack();
+  const lines = new Map();
+  const line = r => { if (!lines.has(r)) lines.set(r, { left: [], right: [] }); return lines.get(r); };
+  model.forEach(row => { const L = line(Math.min(Math.max(0, rowIndex(row, rows)), rows - 1));
+    row.left.forEach(it => it.id !== skip && L.left.push({ ...it })); row.right.forEach(it => it.id !== skip && L.right.push({ ...it })); });
+  const out = {};
+  for (let r = 0; lines.size && r <= Math.max(...lines.keys()); r++) {
+    const L = lines.get(r); if (!L) continue;
+    const need = () => L.left.reduce((s, i) => s + i.gap + 1, 0) + L.right.reduce((s, i) => s + i.gap + 1, 0);
+    // 1) убираем зазоры, начиная с внутренних
+    const inner = () => { const g = []; for (let k = Math.max(L.left.length, L.right.length) - 1; k >= 0; k--) { if (L.left[k]) g.push(L.left[k]); if (L.right[k]) g.push(L.right[k]); } return g; };
+    while (need() > cols) { const g = inner().find(i => i.gap > 0); if (!g) break; g.gap--; }
+    // 2) переносим лишние иконки на следующую строку
+    while (need() > cols) {
+      const N = line(r + 1);
+      if (L.left.length) N.left.unshift({ ...L.left.pop(), gap: 0 });
+      else N.right.push({ ...L.right.pop(), gap: 0 });
     }
-    used.add(c + ":" + r); pos[a.id] = [c, r];
-  });
-  const [cw, ch] = cell();
-  APPS.forEach(a => { const el = icons[a.id], [x, y] = cellXY(...pos[a.id]);
-    Object.assign(el.style, { left: x + "px", top: y + "px", width: cw + "px", height: ch + "px" }); });
+    // колонки
+    const items = []; let c = 0;
+    L.left.forEach(it => { c += it.gap; items.push({ id: it.id, c, side: "l" }); c++; });
+    c = cols - 1;
+    L.right.forEach(it => { c -= it.gap; items.push({ id: it.id, c, side: "r" }); c--; });
+    items.sort((p, q) => p.c - q.c);
+    const full = items.length === cols && items.length > 1;
+    const step = full ? (desk.clientWidth - PAD * 2 - cw) / (cols - 1) : cw;   // заполнена — делим остаток поровну
+    items.forEach(it => {
+      const x = full ? PAD + it.c * step : PAD + it.c * cw + (it.side === "r" ? sx : 0);
+      out[it.id] = { r, c: it.c, side: it.side, x, y: rowY(r) };
+    });
+  }
+  return out;
+}
+function layout() {
+  const res = compute(), [cw, ch] = cell();
+  Object.keys(pos).forEach(k => delete pos[k]); Object.assign(pos, res);
+  APPS.forEach(a => { const p = pos[a.id], el = icons[a.id]; if (!p) return;
+    Object.assign(el.style, { left: p.x + "px", top: p.y + "px", width: cw + "px", height: ch + "px" }); });
+}
+// клетка под точкой (x, y): строка и колонка (левая половина считается от левого края, правая — от правого)
+function snap(x, y) {
+  const [cw, ch] = cell(), [cols, rows] = gridSize(), [sx] = slack();
+  let r = 0, bd = Infinity; for (let i = 0; i < rows; i++) { const d = Math.abs(rowY(i) - y); if (d < bd) { bd = d; r = i; } }
+  const cl = Math.round((x - PAD) / cw), cr = Math.round((x - PAD - sx) / cw);
+  let c = (cl + cr) / 2 > (cols - 1) / 2 ? cr : cl;
+  return [Math.min(Math.max(c, 0), cols - 1), r];
+}
+function hintXY(c, r) { const [cw] = cell(), [cols] = gridSize(), [sx] = slack(); return [PAD + c * cw + (c > (cols - 1) / 2 ? sx : 0), rowY(r)]; }
+// убрать иконку из модели, не сдвигая остальных
+function detach(id) {
+  model.forEach(row => ["left", "right"].forEach(side => {
+    const i = row[side].findIndex(it => it.id === id); if (i < 0) return;
+    const [it] = row[side].splice(i, 1); if (row[side][i]) row[side][i].gap += it.gap + 1;
+  }));
+  model = model.filter(row => row.left.length || row.right.length);
+}
+// положить иконку в клетку (c, r): прилипает к соседу слева, иначе к соседу справа, иначе к ближайшему краю
+function attach(id, c, r) {
+  const [cols, rows] = gridSize(), cur = compute(id);
+  const inRow = Object.entries(cur).filter(([, p]) => p.r === r).map(([k, p]) => ({ id: k, ...p }));
+  const at = col => inRow.find(p => p.c === col);
+  // сторона: занятая клетка — сторона того, кто там стоит; иначе сосед слева (приоритет), иначе справа,
+  // иначе ближайший край
+  const side = (at(c) && at(c).side) || (at(c - 1) && at(c - 1).side) || (at(c + 1) && at(c + 1).side) || (c > (cols - 1) / 2 ? "r" : "l");
+  let list = inRow.filter(p => p.side === side).map(p => ({ id: p.id, c: p.c }));
+  // клетка занята — сдвигаем только сплошную цепочку соседей (левая сторона — вправо, правая — влево)
+  if (side === "l") { let k = c; while (list.some(p => p.c === k)) k++; list.forEach(p => { if (p.c >= c && p.c < k) p.c++; }); }
+  else { let k = c; while (list.some(p => p.c === k)) k--; list.forEach(p => { if (p.c <= c && p.c > k) p.c--; }); }
+  list.push({ id, c });
+  // строка в модели
+  let row = model.find(rw => rowIndex(rw, rows) === r);
+  if (!row) { const ay = r > (rows - 1) / 2 ? "b" : "t"; row = { y: ay === "t" ? r : rows - 1 - r, ay, left: [], right: [] }; model.push(row); }
+  // иконки, перенесённые в эту строку из других строк модели, остаются в своих строках; здесь — только свои
+  const key = side === "l" ? "left" : "right";
+  const own = new Set([...row[key].map(i => i.id), id]);
+  // свои иконки, которые сейчас перенесены на другую строку, остаются в конце стороны
+  const wrapped = row[key].filter(i => !list.some(p => p.id === i.id)).map(i => ({ id: i.id, gap: 0 }));
+  list = list.filter(p => own.has(p.id));
+  let prev = side === "l" ? -1 : cols;
+  list.sort((p, q) => side === "l" ? p.c - q.c : q.c - p.c);
+  row[key] = list.map(p => { const g = Math.max(0, side === "l" ? p.c - prev - 1 : prev - p.c - 1); prev = p.c; return { id: p.id, gap: g }; }).concat(wrapped);
 }
 const icons = {};
 function buildIcons() {
@@ -274,7 +342,7 @@ function buildIcons() {
     el.innerHTML = `<div class="pic"><svg><use href="#${a.icon}"/></svg>${a.locked ? '<i class="lock">🔒</i>' : ""}${a.id === "msg" ? '<b class="badge" id="badge">1</b>' : ""}</div><span>${a.ko}</span>`;
     desk.appendChild(el); icons[a.id] = el; bindIcon(el, a);
   });
-  if (!want) want = defaultWant();
+  if (!model || !APPS.every(a => model.some(rw => [...rw.left, ...rw.right].some(i => i.id === a.id)))) model = defaultModel();
   layout();
 }
 function select(id) { Object.values(icons).forEach(i => i.classList.toggle("sel", i.dataset.id === id)); }
@@ -292,20 +360,18 @@ function bindIcon(el, a) {
     moved = true; el.classList.add("dragging");
     const d = desk.getBoundingClientRect(); const x = e.clientX - d.left - ox, y = e.clientY - d.top - oy;
     el.style.left = x + "px"; el.style.top = y + "px";
-    const [hx, hy] = cellXY(...snap(x, y)), [cw, ch] = cell();
+    const [hx, hy] = hintXY(...snap(x, y)), [cw, ch] = cell();
     Object.assign(hint.style, { display: "block", left: hx + "px", top: hy + "px", width: cw + "px", height: ch + "px" });
   });
   const end = e => {
     if (!start) return; start = null; hint.style.display = "none"; el.classList.remove("dragging");
     if (moved) {
       const d = desk.getBoundingClientRect(); const [c, r] = snap(e.clientX - d.left - ox, e.clientY - d.top - oy);
-      const other = APPS.find(x => x.id !== a.id && pos[x.id][0] === c && pos[x.id][1] === r);
-      if (other) want[other.id] = toWant(...pos[a.id]);   // занято — меняемся местами
-      want[a.id] = toWant(c, r);
+      detach(a.id); attach(a.id, c, r);
       // плавно встают в клетку только после перетаскивания; при изменении размера окна — мгновенно
       Object.values(icons).forEach(i => i.classList.add("settle")); layout();
       setTimeout(() => Object.values(icons).forEach(i => i.classList.remove("settle")), 200);
-      store.set("icons2", want);
+      store.set("icons3", model);
     } else {
       // компьютер: двойной клик; телефон: одно касание
       const now = Date.now();
@@ -314,15 +380,6 @@ function bindIcon(el, a) {
     }
   };
   el.addEventListener("pointerup", end); el.addEventListener("pointercancel", end);
-}
-// ближайшая клетка к точке (x, y) — с учётом сдвига правой/нижней половины
-function snap(x, y) {
-  const [cols, rows] = gridSize(); let best = [0, 0], bd = Infinity;
-  for (let c = 0; c < cols; c++) for (let r = 0; r < rows; r++) {
-    const [cx, cy] = cellXY(c, r), d = (cx - x) ** 2 + (cy - y) ** 2;
-    if (d < bd) { bd = d; best = [c, r]; }
-  }
-  return best;
 }
 desk.addEventListener("pointerdown", e => { if (e.target === desk || e.target.closest(".seal")) select(null); });
 
@@ -432,7 +489,7 @@ function fillApp(id, box) {
   if (id === "term") return terminal(box);
   if (id === "set") {
     box.innerHTML = `<div class="pad kr"><h4>설정</h4>Solomon OS v0.1 · макет<br><span style="color:var(--soft)">Расположение иконок и окон сохраняется в браузере.</span><br><button class="btn" id="reset">Сбросить расположение</button></div>`;
-    box.querySelector("#reset").onclick = () => { store.set("icons2", null); store.set("windows", {}); store.set("chat", null); location.reload(); };
+    box.querySelector("#reset").onclick = () => { store.set("icons3", null); store.set("windows", {}); store.set("chat", null); location.reload(); };
   }
 }
 
