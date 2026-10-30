@@ -1366,8 +1366,11 @@
 }
 
 @media (max-width: 640px) {
+  /* Игра на весь экран телефона: отступы от выреза, скруглённых углов и
+     полоски «домой» на iPhone (safe area). */
   .screen {
-    padding: 12px;
+    padding: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px))
+      calc(12px + env(safe-area-inset-bottom, 0px)) calc(12px + env(safe-area-inset-left, 0px));
   }
 
   .verdictCard {

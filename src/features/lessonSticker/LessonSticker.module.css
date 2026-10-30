@@ -116,7 +116,7 @@
   }
 
   .terminal > button[aria-label="Закрыть"] {
-    top: 12px;
-    right: 12px;
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    right: calc(12px + env(safe-area-inset-right, 0px));
   }
 }
