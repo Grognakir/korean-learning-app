@@ -55,6 +55,14 @@ export function UserMenu({ username, avatar }: { username: string; avatar: Avata
           >
             Настройки
           </Link>
+          <Link
+            href="/os"
+            className={styles.menuItem}
+            role="menuitem"
+            onClick={() => setOpen(false)}
+          >
+            Solomon OS
+          </Link>
           <form action={signOut}>
             <button type="submit" className={styles.menuItemDanger}>
               Выйти
