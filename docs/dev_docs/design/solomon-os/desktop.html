@@ -233,12 +233,21 @@ const PAD = 10;
    При сжатии сначала исчезают зазоры (внутренние — первыми), потом последняя иконка левой стопки
    переносится на следующую строку к левому краю (если левой стопки нет — внутренняя иконка правой).
    Перенос считается заново при каждой раскладке, поэтому при растяжении иконки возвращаются.
-   Если строка заполнена целиком, остаток ширины (меньше клетки) делится поровну между иконками.
-   Строки верхней половины держатся верха, нижней — низа. */
+   Колонки и строки — общая сетка с одинаковым промежутком (см. pitch). Строки верхней половины
+   держатся верха, нижней — низа. */
 function cell() { const cs = getComputedStyle(document.documentElement); return [parseFloat(cs.getPropertyValue("--cell-w")), parseFloat(cs.getPropertyValue("--cell-h"))]; }
 function gridSize() { const [cw, ch] = cell(); return [Math.max(1, Math.floor((desk.clientWidth - PAD * 2) / cw)), Math.max(1, Math.floor((desk.clientHeight - PAD * 2) / ch))]; }
-function slack() { const [cw, ch] = cell(), [cols, rows] = gridSize(); return [desk.clientWidth - PAD * 2 - cols * cw, desk.clientHeight - PAD * 2 - rows * ch]; }
-const rowY = (r) => { const [, ch] = cell(), [, rows] = gridSize(), [, sy] = slack(); return PAD + r * ch + (r > (rows - 1) / 2 ? sy : 0); };
+// Общая сетка для всех строк: размер иконки постоянный, а остаток ширины/высоты (меньше одной
+// клетки) делится поровну между колонками/строками. Крайние колонки и строки — вплотную к краям
+// (отступ PAD), промежуток одинаковый везде и меняется вместе с размером окна.
+function pitch() {
+  const [cw, ch] = cell(), [cols, rows] = gridSize();
+  const gx = cols > 1 ? (desk.clientWidth - PAD * 2 - cols * cw) / (cols - 1) : 0;
+  const gy = rows > 1 ? (desk.clientHeight - PAD * 2 - rows * ch) / (rows - 1) : 0;
+  return [cw + gx, ch + gy];
+}
+const colX = c => PAD + c * pitch()[0];
+const rowY = r => PAD + r * pitch()[1];
 
 let model = store.get("icons3", null);
 const pos = {};      // id -> { r, c, x, y } — результат последней раскладки
@@ -252,7 +261,7 @@ const rowIndex = (row, rows) => row.ay === "t" ? row.y : rows - 1 - row.y;
 
 // раскладка: из модели — реальные строки/колонки с переносами (модель не меняется)
 function compute(skip) {
-  const [cols, rows] = gridSize(), [cw] = cell(), [sx] = slack();
+  const [cols, rows] = gridSize();
   const lines = new Map();
   const line = r => { if (!lines.has(r)) lines.set(r, { left: [], right: [] }); return lines.get(r); };
   model.forEach(row => { const L = line(Math.min(Math.max(0, rowIndex(row, rows)), rows - 1));
@@ -275,13 +284,7 @@ function compute(skip) {
     L.left.forEach(it => { c += it.gap; items.push({ id: it.id, c, side: "l" }); c++; });
     c = cols - 1;
     L.right.forEach(it => { c -= it.gap; items.push({ id: it.id, c, side: "r" }); c--; });
-    items.sort((p, q) => p.c - q.c);
-    const full = items.length === cols && items.length > 1;
-    const step = full ? (desk.clientWidth - PAD * 2 - cw) / (cols - 1) : cw;   // заполнена — делим остаток поровну
-    items.forEach(it => {
-      const x = full ? PAD + it.c * step : PAD + it.c * cw + (it.side === "r" ? sx : 0);
-      out[it.id] = { r, c: it.c, side: it.side, x, y: rowY(r) };
-    });
+    items.forEach(it => { out[it.id] = { r, c: it.c, side: it.side, x: colX(it.c), y: rowY(r) }; });
   }
   return out;
 }
@@ -293,13 +296,10 @@ function layout() {
 }
 // клетка под точкой (x, y): строка и колонка (левая половина считается от левого края, правая — от правого)
 function snap(x, y) {
-  const [cw, ch] = cell(), [cols, rows] = gridSize(), [sx] = slack();
-  let r = 0, bd = Infinity; for (let i = 0; i < rows; i++) { const d = Math.abs(rowY(i) - y); if (d < bd) { bd = d; r = i; } }
-  const cl = Math.round((x - PAD) / cw), cr = Math.round((x - PAD - sx) / cw);
-  let c = (cl + cr) / 2 > (cols - 1) / 2 ? cr : cl;
-  return [Math.min(Math.max(c, 0), cols - 1), r];
+  const [cols, rows] = gridSize(), [px, py] = pitch();
+  return [Math.min(Math.max(Math.round((x - PAD) / px), 0), cols - 1), Math.min(Math.max(Math.round((y - PAD) / py), 0), rows - 1)];
 }
-function hintXY(c, r) { const [cw] = cell(), [cols] = gridSize(), [sx] = slack(); return [PAD + c * cw + (c > (cols - 1) / 2 ? sx : 0), rowY(r)]; }
+const hintXY = (c, r) => [colX(c), rowY(r)];
 // убрать иконку из модели, не сдвигая остальных
 function detach(id) {
   model.forEach(row => ["left", "right"].forEach(side => {
