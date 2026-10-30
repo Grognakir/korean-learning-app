@@ -1,0 +1,110 @@
+{
+  "tool": "built-in image_gen",
+  "plan_read_from": "origin/claude/gracious-fermi-53ar6s:docs/dev_docs/7-solomon-os.md",
+  "plan_revision": "aeef876",
+  "screens": [
+    {
+      "file": "01_boot.png",
+      "raw": "/Users/tensolomon/.codex/generated_images/01a17d98-e75d-70a0-9e09-a3f37d11428a/exec-eecb930a-e407-4b2e-b632-0ae6a23c61a4.png",
+      "prompt": "Use case: ui-mockup / precise-object-edit. IMAGE1 is the approved MASTER Solomon OS desktop style reference. Produce ONE matching1024x1536 PORTRAIT screen, aspect2:3. Only flat screen UI pixels edge-to-edge, no device bezel/frame/notch, no hands or physical phone. Match master EXACTLY: top panel layout/time/signal/battery, luminous green monospace font family, thin1px angular chamfered frames, restrained soft green bloom, faint CRT scanlines, low-opacity Hangul digital rain and quiet circuit ornaments at edges, generous spacing, black background. Palette only black and greens #00ff66 / #1fbf55 / #0b3d1f; rare amber #e0a23a for unread badge only. No whites, greys, cyan, pink, red, multicolour emoji, brand logos/names, dragons or skulls. Own thin-line two-triangle hexagram emblem only. Text crisp, not blurred by glow; main body40–44px at1024 so readable at375px, metadata28–30px. Preserve MASTER top status panel at y0..96 with 'SOLOMON OS' and '오후 3:20 · 10월 30일' and status icons.  SCREEN01 BOOT. Replace desktop content below the top status panel with sparse boot screen. Center a large fine luminous geometric hexagram at y400..680, title 'SOLOMON OS' below it y760, clean thin progress bar about70 percent complete y900. Bottom area has three left-aligned readable terminal log lines '[ OK ] Mounting /home/user', '[ OK ] Starting network', '시스템 부팅 중...' around y1130..1320, and a block cursor. No apps or dock on this pre-login screen. Quiet black negative space. Exact1024x1536.",
+      "mode": "edit",
+      "references": [
+        "/Users/tensolomon/Documents/GitHub/korean-learning-app/docs/dev_docs/design/solomon-os/ref/03_desktop.png"
+      ],
+      "native_size": [
+        1024,
+        1536
+      ],
+      "export_size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "02_login.png",
+      "raw": "/Users/tensolomon/.codex/generated_images/01a17d98-e75d-70a0-9e09-a3f37d11428a/exec-67199af6-0360-4214-955a-bc0ad9039bf6.png",
+      "prompt": "Use case: ui-mockup / precise-object-edit. IMAGE1 is the approved MASTER Solomon OS desktop style reference. Produce ONE matching1024x1536 PORTRAIT screen, aspect2:3. Only flat screen UI pixels edge-to-edge, no device bezel/frame/notch, no hands or physical phone. Match master EXACTLY: top panel layout/time/signal/battery, luminous green monospace font family, thin1px angular chamfered frames, restrained soft green bloom, faint CRT scanlines, low-opacity Hangul digital rain and quiet circuit ornaments at edges, generous spacing, black background. Palette only black and greens #00ff66 / #1fbf55 / #0b3d1f; rare amber #e0a23a for unread badge only. No whites, greys, cyan, pink, red, multicolour emoji, brand logos/names, dragons or skulls. Own thin-line two-triangle hexagram emblem only. Text crisp, not blurred by glow; main body40–44px at1024 so readable at375px, metadata28–30px. Preserve MASTER top status panel at y0..96 with 'SOLOMON OS' and '오후 3:20 · 10월 30일' and status icons.  SCREEN02 LOGIN. Replace content below shared status panel with login screen. Large clock '15:20' at y280..440, date '10월 30일 목요일' below it. Thin hexagram centered y620..820. Wide angular outlined user field 'user: ____' around y970, large outlined button '로그인' around y1150. Small footer 'Solomon OS v0.1' y1450. No apps or dock on this pre-login screen. Calm generous black space. Exact1024x1536.",
+      "mode": "edit",
+      "references": [
+        "/Users/tensolomon/Documents/GitHub/korean-learning-app/docs/dev_docs/design/solomon-os/ref/03_desktop.png"
+      ],
+      "native_size": [
+        1024,
+        1536
+      ],
+      "export_size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "03_desktop.png",
+      "raw": "/Users/tensolomon/.codex/generated_images/01a17d98-e75d-70a0-9e09-a3f37d11428a/exec-df36ae87-cd3e-4333-bd77-57ccbd7414bc.png",
+      "prompt": "Use case: ui-mockup. Generate ONE finished phone OPERATING-SYSTEM SCREEN concept for original fictional SOLOMON OS, exact1024x1536 portrait aspect2:3. SCREEN PIXELS ONLY fill entire canvas edge to edge: NO phone device, bezel, rounded device frame, notch, camera, hands, desk or scene. This is a clean readable mobile software UI concept, NOT code. BLACK background #000000, restrained phosphor green monochrome palette bright #00ff66, mid #1fbf55, dim #0b3d1f. Rare amber #e0a23a ONLY for unread badge. Fine crisp luminous monospace typography, light1px green outlines, subtle soft glow around edges rather than blurry text, very faint CRT scanlines. Dormant ancient alien circuitry expressed by angular chamfered software window corners, thin circuit traces and sparse abstract glyphs near margins. Faint falling Hangul digital rain only in empty background at3% opacity. No clutter, lots of breathing room; no realistic textures. NEVER use real brand names, logos, dragon emblems, skulls, commercial mobile OS UI, fantasy characters or copyrighted insignia. Own emblem: simple thin-line geometric hexagram seal, two interlocking triangles, no letters inside.\nSCREEN03 DESKTOP, defines the design system for all six screens. Persistent TOP STATUS PANEL from y0..96: left small hexagram and 'SOLOMON OS', time '오후 3:20 · 10월 30일' and simple signal/battery at right, hairline lower divider. Keep status text visually large enough for a375px phone. Below around y150 small terminal prompt 'solomon@seoul:~$' and a small solid block cursor. A quiet medium hexagram watermark may sit behind the content at5% opacity, never overwhelm apps. MAIN APPLICATION GRID exact THREE columns by FOUR rows, generous gutters and side margins56px, from roughly y300 to y1200. Every app tile has a crisp thin green chamfered rectangular frame, minimal custom geometric line icon above a short Korean label. Row1: 메시지 / 전화 / 지도. Row2: 쇼핑 / 은행 / 일정. Row3: 사진 / 터미널 / 설정. Row4: ??? / ??? / ???. No additional duplicate apps. 메시지 is the ONLY bright active tile with a small amber badge '2' at its top-right. Other tiles are dim green and carry a tiny clear lock icon, but labels remain readable. Labels about36–40px at1024, distinguishable with room around them. Dimming is green luminance, NOT grey or other colours. No colored illustrations or avatars on this desktop. Bottom DOCK software panel around y1360..1490: thin angular frame, three minimal back/home/apps line symbols, small glowing selected home indicator; no device outline. Tiny version 'v0.1' may sit above dock. Hierarchy: confident clean top panel, readable evenly spaced app tiles, precise restrained green glow. Empty areas mostly pure black. Return ONLY the one1024x1536 portrait desktop UI screen.",
+      "mode": "generate",
+      "references": [],
+      "native_size": [
+        1024,
+        1536
+      ],
+      "export_size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "04_notification.png",
+      "raw": "/Users/tensolomon/.codex/generated_images/01a17d98-e75d-70a0-9e09-a3f37d11428a/exec-da42d5c9-8b8e-4f89-a64f-6de0c58574e2.png",
+      "prompt": "Use case: ui-mockup / precise-object-edit. IMAGE1 is the approved MASTER Solomon OS desktop style reference. Produce ONE matching1024x1536 PORTRAIT screen, aspect2:3. Only flat screen UI pixels edge-to-edge, no device bezel/frame/notch, no hands or physical phone. Match master EXACTLY: top panel layout/time/signal/battery, luminous green monospace font family, thin1px angular chamfered frames, restrained soft green bloom, faint CRT scanlines, low-opacity Hangul digital rain and quiet circuit ornaments at edges, generous spacing, black background. Palette only black and greens #00ff66 / #1fbf55 / #0b3d1f; rare amber #e0a23a for unread badge only. No whites, greys, cyan, pink, red, multicolour emoji, brand logos/names, dragons or skulls. Own thin-line two-triangle hexagram emblem only. Text crisp, not blurred by glow; main body40–44px at1024 so readable at375px, metadata28–30px. Preserve MASTER top status panel at y0..96 with 'SOLOMON OS' and '오후 3:20 · 10월 30일' and status icons.  SCREEN04 NOTIFICATION. Edit image1 desktop: KEEP entire desktop grid, dock, top status panel, icons positions, labels, locks, badge2 and backdrop unchanged. ONLY add a wide chamfered thin-green notification banner below topbar across y120..340, overlaying prompt and empty space ABOVE app grid. Inside banner small circular avatar at left, name '지아', message '뭐 해요? 😊', small timestamp '방금' at right. Emoji monochrome green outline, never yellow. IMAGE2 is Jia identity reference ONLY: her young face, chin-length choppy bob and blunt bangs, eyeliner, ear studs. Convert her head to monochrome green hologram inside circle; no hands, phone, torso or color hair. Do not copy image2 layout. Banner clean readable40px text. Exact1024x1536.",
+      "mode": "edit",
+      "references": [
+        "/Users/tensolomon/Documents/GitHub/korean-learning-app/docs/dev_docs/design/solomon-os/ref/03_desktop.png",
+        "/Users/tensolomon/Documents/GitHub/korean-learning-app/public/images/dialogue/jia/call-smirk.webp"
+      ],
+      "native_size": [
+        1024,
+        1536
+      ],
+      "export_size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "05_chats.png",
+      "raw": "/Users/tensolomon/.codex/generated_images/01a17d98-e75d-70a0-9e09-a3f37d11428a/exec-e4805c65-303d-4b78-bab0-4202b15f2acb.png",
+      "prompt": "Use case: ui-mockup / precise-object-edit. IMAGE1 is the approved MASTER Solomon OS desktop style reference. Produce ONE matching1024x1536 PORTRAIT screen, aspect2:3. Only flat screen UI pixels edge-to-edge, no device bezel/frame/notch, no hands or physical phone. Match master EXACTLY: top panel layout/time/signal/battery, luminous green monospace font family, thin1px angular chamfered frames, restrained soft green bloom, faint CRT scanlines, low-opacity Hangul digital rain and quiet circuit ornaments at edges, generous spacing, black background. Palette only black and greens #00ff66 / #1fbf55 / #0b3d1f; rare amber #e0a23a for unread badge only. No whites, greys, cyan, pink, red, multicolour emoji, brand logos/names, dragons or skulls. Own thin-line two-triangle hexagram emblem only. Text crisp, not blurred by glow; main body40–44px at1024 so readable at375px, metadata28–30px. Preserve MASTER top status panel at y0..96 with 'SOLOMON OS' and '오후 3:20 · 10월 30일' and status icons.  SCREEN05 CHAT LIST. Image1 master style; image2 EXACT Jia avatar reference to reuse. Replace desktop grid with messenger app, keep topbar and bottom navigation dock. Header '메시지' at y150 with small back arrow, thin divider. Wide search field y260 with magnifier and '검색'. Main chat row y420..650: same circular green hologram Jia head avatar at left, bold name '지아', last message '뭐 해요? 😊' using monochrome green smile icon, time '15:20' and small rare amber unread badge '2' right. Two separate dim-green locked chat rows below around y780 and y1000, each geometric placeholder avatar, label '???', small lock icon and no story text. No extra active chats. Broad side margins, large readable Korean labels, generous empty black space. Quiet Hangul rain visible only in backdrop, not over message text. Keep avatar bob/bangs/face identical to image2. Exact1024x1536.",
+      "mode": "edit",
+      "references": [
+        "/Users/tensolomon/Documents/GitHub/korean-learning-app/docs/dev_docs/design/solomon-os/ref/03_desktop.png",
+        "/Users/tensolomon/Documents/GitHub/korean-learning-app/docs/dev_docs/design/solomon-os/ref/04_notification.png"
+      ],
+      "native_size": [
+        1024,
+        1536
+      ],
+      "export_size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "06_chat.png",
+      "raw": "/Users/tensolomon/.codex/generated_images/01a17d98-e75d-70a0-9e09-a3f37d11428a/exec-42f42806-c023-4a03-a583-a80192ff52b6.png",
+      "prompt": "Use case: ui-mockup / precise-object-edit. IMAGE1 is the approved MASTER Solomon OS desktop style reference. Produce ONE matching1024x1536 PORTRAIT screen, aspect2:3. Only flat screen UI pixels edge-to-edge, no device bezel/frame/notch, no hands or physical phone. Match master EXACTLY: top panel layout/time/signal/battery, luminous green monospace font family, thin1px angular chamfered frames, restrained soft green bloom, faint CRT scanlines, low-opacity Hangul digital rain and quiet circuit ornaments at edges, generous spacing, black background. Palette only black and greens #00ff66 / #1fbf55 / #0b3d1f; rare amber #e0a23a for unread badge only. No whites, greys, cyan, pink, red, multicolour emoji, brand logos/names, dragons or skulls. Own thin-line two-triangle hexagram emblem only. Text crisp, not blurred by glow; main body40–44px at1024 so readable at375px, metadata28–30px. Preserve MASTER top status panel at y0..96 with 'SOLOMON OS' and '오후 3:20 · 10월 30일' and status icons.  SCREEN06 CONVERSATION. Image1 OS style master, image2 exact Jia hologram head avatar, same face/hair to reuse. Replace app content with one chat, preserving shared topbar and bottom navigation dock. At y125..300 header: back arrow, small circular same Jia avatar, name '지아', status '온라인' and small online dot. Chat messages from y370..1010, spacious padding, body44px readable: incoming LEFT outlined angular bubble '안녕!' ; outgoing RIGHT dark-green-filled chamfered bubble '안녕, 지아.' with small '읽음' below; next incoming LEFT outlined bubble '지금 뭐 해요?' ; next outgoing RIGHT filled bubble '저는 공부해요.' with '읽음' below. Clear distinct left/right alignment, no duplicated or garbled lines. Below show small incoming typing indicator '입력 중...' and three dots. Bottom ABOVE persistent navigation dock, instead of keyboard, THREE generous angular answer buttons in vertical stack approx y1110..1310: '공부해요.', '집에 있어요.', '지금 가요.' and small separate button 'RU' at right of heading '답장 선택'. No keyboard, no emoji stickers, no additional illustrations or invented story. Dark panel behind message text prevents rain interference. Chat takes visual priority, precise restrained thin frames and green glow matching existing screens. Exact1024x1536.",
+      "mode": "edit",
+      "references": [
+        "/Users/tensolomon/Documents/GitHub/korean-learning-app/docs/dev_docs/design/solomon-os/ref/03_desktop.png",
+        "/Users/tensolomon/Documents/GitHub/korean-learning-app/docs/dev_docs/design/solomon-os/ref/05_chats.png"
+      ],
+      "native_size": [
+        1024,
+        1536
+      ],
+      "export_size": [
+        1024,
+        1536
+      ]
+    }
+  ]
+}
