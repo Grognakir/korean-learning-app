@@ -46,7 +46,8 @@
   .seal svg { width: 100%; height: 100%; }
   .grid-hint { position: absolute; pointer-events: none; border: 1px dashed var(--mid); border-radius: 8px; background: rgba(34,163,84,.08); display: none; }
   .icon { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 6px;
-    padding-top: 8px; border-radius: 8px; border: 1px solid transparent; cursor: default; touch-action: none; transition: left .15s, top .15s; }
+    padding-top: 8px; border-radius: 8px; border: 1px solid transparent; cursor: default; touch-action: none; }
+  .icon.settle { transition: left .15s, top .15s; }
   .icon.dragging { transition: none; z-index: 999; opacity: .85; }
   .icon.sel { background: rgba(34,163,84,.14); border-color: rgba(34,163,84,.35); }
   .icon .pic { position: relative; width: 46px; height: 46px; }
@@ -224,11 +225,17 @@ const store = {
 
 /* ================= сетка иконок ================= */
 const PAD = 10;
-// Сетка тянется на всю ширину и высоту рабочего стола: число колонок — сколько влезает клеток
-// минимального размера, а сами клетки растягиваются, чтобы последняя колонка доходила до края.
-function minCell() { const cs = getComputedStyle(document.documentElement); return [parseFloat(cs.getPropertyValue("--cell-w")), parseFloat(cs.getPropertyValue("--cell-h"))]; }
-function gridSize() { const [mw, mh] = minCell(); return [Math.max(1, Math.floor((desk.clientWidth - PAD * 2) / mw)), Math.max(1, Math.floor((desk.clientHeight - PAD * 2) / mh))]; }
-function cell() { const [cols, rows] = gridSize(); return [(desk.clientWidth - PAD * 2) / cols, (desk.clientHeight - PAD * 2) / rows]; }
+// Клетки постоянного размера. Сетка «двусторонняя»: левая половина считается от левого края,
+// правая — от правого (верх — от верха, низ — от низа). Поэтому иконка у правого края стоит на
+// одном и том же расстоянии от него при любой ширине и едет вместе с краем, не отставая и не обгоняя.
+// Остаток места, меньший клетки, оказывается посередине, где его не видно.
+function cell() { const cs = getComputedStyle(document.documentElement); return [parseFloat(cs.getPropertyValue("--cell-w")), parseFloat(cs.getPropertyValue("--cell-h"))]; }
+function gridSize() { const [cw, ch] = cell(); return [Math.max(1, Math.floor((desk.clientWidth - PAD * 2) / cw)), Math.max(1, Math.floor((desk.clientHeight - PAD * 2) / ch))]; }
+// остаток по ширине и высоте — сдвиг правой/нижней половины сетки
+function slack() { const [cw, ch] = cell(), [cols, rows] = gridSize(); return [desk.clientWidth - PAD * 2 - cols * cw, desk.clientHeight - PAD * 2 - rows * ch]; }
+const half = (i, n) => i > (n - 1) / 2;
+function cellXY(c, r) { const [cw, ch] = cell(), [cols, rows] = gridSize(), [sx, sy] = slack();
+  return [PAD + c * cw + (half(c, cols) ? sx : 0), PAD + r * ch + (half(r, rows) ? sy : 0)]; }
 // Желаемое место иконки хранится относительно ближайшего края: { x, ax: "l"|"r", y, ay: "t"|"b" }.
 // Иконка у правого края остаётся у правого края при любом размере окна; реальная клетка (pos)
 // пересчитывается при каждой раскладке, а желаемое место меняется только перетаскиванием.
@@ -256,8 +263,8 @@ function layout() {
     used.add(c + ":" + r); pos[a.id] = [c, r];
   });
   const [cw, ch] = cell();
-  APPS.forEach(a => { const el = icons[a.id], [c, r] = pos[a.id];
-    Object.assign(el.style, { left: PAD + c * cw + "px", top: PAD + r * ch + "px", width: cw + "px", height: ch + "px" }); });
+  APPS.forEach(a => { const el = icons[a.id], [x, y] = cellXY(...pos[a.id]);
+    Object.assign(el.style, { left: x + "px", top: y + "px", width: cw + "px", height: ch + "px" }); });
 }
 const icons = {};
 function buildIcons() {
@@ -285,8 +292,8 @@ function bindIcon(el, a) {
     moved = true; el.classList.add("dragging");
     const d = desk.getBoundingClientRect(); const x = e.clientX - d.left - ox, y = e.clientY - d.top - oy;
     el.style.left = x + "px"; el.style.top = y + "px";
-    const [c, rr] = snap(x, y), [cw, ch] = cell();
-    Object.assign(hint.style, { display: "block", left: PAD + c * cw + "px", top: PAD + rr * ch + "px", width: cw + "px", height: ch + "px" });
+    const [hx, hy] = cellXY(...snap(x, y)), [cw, ch] = cell();
+    Object.assign(hint.style, { display: "block", left: hx + "px", top: hy + "px", width: cw + "px", height: ch + "px" });
   });
   const end = e => {
     if (!start) return; start = null; hint.style.display = "none"; el.classList.remove("dragging");
@@ -294,7 +301,11 @@ function bindIcon(el, a) {
       const d = desk.getBoundingClientRect(); const [c, r] = snap(e.clientX - d.left - ox, e.clientY - d.top - oy);
       const other = APPS.find(x => x.id !== a.id && pos[x.id][0] === c && pos[x.id][1] === r);
       if (other) want[other.id] = toWant(...pos[a.id]);   // занято — меняемся местами
-      want[a.id] = toWant(c, r); layout(); store.set("icons2", want);
+      want[a.id] = toWant(c, r);
+      // плавно встают в клетку только после перетаскивания; при изменении размера окна — мгновенно
+      Object.values(icons).forEach(i => i.classList.add("settle")); layout();
+      setTimeout(() => Object.values(icons).forEach(i => i.classList.remove("settle")), 200);
+      store.set("icons2", want);
     } else {
       // компьютер: двойной клик; телефон: одно касание
       const now = Date.now();
@@ -304,8 +315,15 @@ function bindIcon(el, a) {
   };
   el.addEventListener("pointerup", end); el.addEventListener("pointercancel", end);
 }
-function snap(x, y) { const [cw, ch] = cell(), [cols, rows] = gridSize();
-  return [Math.min(Math.max(Math.round((x - PAD) / cw), 0), cols - 1), Math.min(Math.max(Math.round((y - PAD) / ch), 0), rows - 1)]; }
+// ближайшая клетка к точке (x, y) — с учётом сдвига правой/нижней половины
+function snap(x, y) {
+  const [cols, rows] = gridSize(); let best = [0, 0], bd = Infinity;
+  for (let c = 0; c < cols; c++) for (let r = 0; r < rows; r++) {
+    const [cx, cy] = cellXY(c, r), d = (cx - x) ** 2 + (cy - y) ** 2;
+    if (d < bd) { bd = d; best = [c, r]; }
+  }
+  return best;
+}
 desk.addEventListener("pointerdown", e => { if (e.target === desk || e.target.closest(".seal")) select(null); });
 
 /* ================= окна ================= */
@@ -399,7 +417,12 @@ function bindWin(id) {
     }, save);
   }));
 }
-addEventListener("resize", () => { layout(); Object.keys(wins).forEach(applyGeo); });
+// раскладка пересчитывается на каждый кадр изменения размера рабочего стола (ResizeObserver
+// срабатывает синхронно с отрисовкой, поэтому иконки не отстают от края и не обгоняют его)
+const relayout = () => { layout(); Object.keys(wins).forEach(applyGeo); };
+if ("ResizeObserver" in window) new ResizeObserver(relayout).observe(desk);
+addEventListener("resize", relayout);
+addEventListener("orientationchange", () => setTimeout(relayout, 50));
 
 /* ================= приложения ================= */
 function fillApp(id, box) {
