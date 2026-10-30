@@ -453,9 +453,10 @@
   text-overflow: ellipsis;
 }
 
+/* Кнопки вплотную: между ними нет щели, где курсор становится «перемещением». */
 .btns {
   display: flex;
-  gap: 2px;
+  gap: 0;
 }
 
 .btns button {
