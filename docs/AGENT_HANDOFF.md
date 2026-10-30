@@ -74,6 +74,7 @@
 ### 2026-10-30 — iPhone: отступы safe area в полноэкранной игре
 
 - `src/app/layout.tsx`: `viewport.viewportFit = "cover"` — без него iOS отдаёт `env(safe-area-inset-*)` = 0 (из-за этого и отступ нижней панели `BottomTabBar` не работал). Игра на телефоне (`.screen` в `StoryGame.module.css`, крестик в `LessonSticker.module.css`) получила отступы `12px + env(safe-area-inset-*)`: окно диалога больше не уходит под скруглённые углы и полоску «домой».
+- **Релиз:** коммит `c0e7b1f` (`origin/main`), Vercel `dpl_6ujSpMS3FVkT9RiLPupzJRBiHqrD` Ready, алиас `korean-learning-gray.vercel.app`; в HTML прода `viewport-fit=cover` есть. База не затронута. На живом iPhone не проверено.
 
 ### 2026-10-30 — возвращение к цветным иконкам: 144 AI-редактирования
 
