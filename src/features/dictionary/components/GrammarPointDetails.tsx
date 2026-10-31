@@ -1,5 +1,5 @@
 import type { GrammarNote, GrammarNoteBlock, GrammarPoint } from "@/features/dictionary/types";
-import { RichExplanation, formatRich } from "@/features/dictionary/richText";
+import { RichExplanation, formatRich, richItem } from "@/features/dictionary/richText";
 import { areaLabel } from "@/features/trainers/grammar/areas";
 import styles from "./GrammarPointDetails.module.css";
 
@@ -62,7 +62,7 @@ function NoteBlocks({ blocks }: { blocks: GrammarNoteBlock[] }) {
           return (
             <ul key={j} className={styles.bulletList}>
               {block.items.map((item, k) => (
-                <li key={k}>{formatRich(item)}</li>
+                <li key={k}>{richItem(item)}</li>
               ))}
             </ul>
           );

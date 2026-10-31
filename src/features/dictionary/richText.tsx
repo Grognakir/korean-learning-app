@@ -80,6 +80,23 @@ export function formatRich(rawText: string): ReactNode[] {
 
 // Строки, начинающиеся с «• », в тексте становятся списком, остальные —
 // абзацами. Классы задаёт вызывающий код (словарь и урок оформлены по-разному).
+/** Пункт списка: первая строка — сам пункт, следующие — подпункты
+ * («в зависимости от …:\nㅏ/ㅗ → -아지다\n…»). */
+export function richItem(item: string): ReactNode {
+  const [head, ...sub] = item.split("\n").filter((line) => line.trim() !== "");
+  if (!sub.length) return formatRich(item);
+  return (
+    <>
+      {formatRich(head)}
+      <ul>
+        {sub.map((line, i) => (
+          <li key={i}>{formatRich(line)}</li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
 export function RichExplanation({
   text,
   className,

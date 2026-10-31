@@ -67,6 +67,13 @@
   line-height: 1.45;
 }
 
+/* Подпункты правила («в зависимости от …:» → варианты). */
+.bulletList ul {
+  margin-top: 4px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
 .examples {
   list-style: none;
   display: flex;

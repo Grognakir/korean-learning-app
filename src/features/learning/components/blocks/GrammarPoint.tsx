@@ -1,5 +1,5 @@
 import { NoteTable } from "@/features/dictionary/components/GrammarPointDetails";
-import { RichExplanation, formatRich } from "@/features/dictionary/richText";
+import { RichExplanation, richItem } from "@/features/dictionary/richText";
 import type { GrammarPointBlock } from "@/features/learning/types";
 import { GrammarDetailsButton } from "./GrammarDetailsButton";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
@@ -79,7 +79,7 @@ export function GrammarPoint({
                   <span className={styles.rulesLabel}>Правила</span>
                   <ul className={styles.rules}>
                     {block.rules.map((rule, i) => (
-                      <li key={i}>{formatRich(rule)}</li>
+                      <li key={i}>{richItem(rule)}</li>
                     ))}
                   </ul>
                 </div>
