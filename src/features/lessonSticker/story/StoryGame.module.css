@@ -610,11 +610,22 @@
   }
 }
 
+/* Кнопки лежат поверх текста в правом нижнем углу: реплика и перевод
+   занимают всё окно. Отступ снизу у прокрутки даёт дочитать последнюю
+   строку над кнопкой. */
 .dialogueActions {
-  margin-top: auto;
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
   display: flex;
   justify-content: flex-end;
   gap: 8px;
+}
+
+.dialogue:has(.dialogueActions > *) .lineBody::after {
+  content: "";
+  flex: none;
+  height: 30px;
 }
 
 .nextButton,
@@ -2220,24 +2231,12 @@
   height: clamp(112px, 20cqh, 170px);
 }
 
-/* В магазине кнопки — в правом нижнем углу, реплика во всю высоту окна, а
-   высота окна — целое число строк реплики (18px × 1.6), чтобы строка не
-   обрезалась посередине: от трёх до пяти строк. */
-.dialogueShop .dialogueActions {
-  position: absolute;
-  right: 14px;
-  bottom: 12px;
-  margin: 0;
-}
-
-.dialogueShop .lineBody {
-  padding-right: 64px;
-}
-
 .dialogueShop .prompt {
   padding-right: 124px;
 }
 
+/* В магазине высота окна — целое число строк реплики (18px × 1.6), чтобы
+   строка не обрезалась посередине: от трёх до пяти строк. */
 .embedded .dialogueShop {
   height: calc(30px + round(down, clamp(86.4px, 20cqh - 30px, 144px), 28.8px));
 }
