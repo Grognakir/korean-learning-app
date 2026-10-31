@@ -139,4 +139,23 @@ describe("Solomon OS: звонок 지아 → магазин → встреча"
     expect(screen.getByRole("dialog", { name: "전화 — 지아" })).toBeTruthy();
     vi.useRealTimers();
   });
+
+  it("달력: встреча из задания, нажатие открывает её заметку; повторение — 전화", () => {
+    localStorage.setItem(
+      "solomon:task",
+      JSON.stringify({ id: "shopping-1", assignedAt: Date.now(), trainerId: "lesson10-clothes", episodeId: "interview", cart: [] }),
+    );
+    render(<SolomonOs />);
+    openIcon(/^달력 — Календарь$/);
+    const cal = screen.getByRole("dialog", { name: "달력" });
+    const meeting = within(cal).getByRole("button", { name: /\d\d:\d\d Собеседование$/ });
+    fireEvent.click(meeting);
+    const notes = screen.getByRole("dialog", { name: "메모" });
+    expect(within(notes).getByRole("heading", { name: "Собеседование" })).toBeTruthy();
+    // Что осталось сделать — пустые чекбоксы шагов.
+    expect(within(notes).getAllByRole("img", { name: "Не выполнено" }).length).toBeGreaterThan(0);
+
+    fireEvent.click(within(cal).getAllByRole("button", { name: /Повторение · 지아/ })[0]);
+    expect(screen.getByRole("dialog", { name: /^전화/ })).toBeTruthy();
+  });
 });

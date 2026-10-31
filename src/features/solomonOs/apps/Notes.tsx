@@ -29,8 +29,11 @@ export function Notes({
   notes,
   onOpen,
   initialStyle,
+  focusId,
 }: {
   notes: MissionNote[];
+  /** Открыть сразу эту заметку (переход из календаря). */
+  focusId?: string;
   onOpen: (note: MissionNote) => void;
   initialStyle?: NoteStyle;
 }) {
@@ -38,8 +41,8 @@ export function Notes({
   const [style] = useState<NoteStyle>(
     () => initialStyle ?? store.load("noteStyle", "paper"),
   );
-  const [selected, setSelected] = useState<string>();
-  const [inNote, setInNote] = useState(false);
+  const [selected, setSelected] = useState<string | undefined>(focusId);
+  const [inNote, setInNote] = useState(Boolean(focusId));
   const [ru, setRu] = useState(false);
   const shown = [...notes].sort(
     (a, b) => Number(a.completed) - Number(b.completed) || b.at - a.at,

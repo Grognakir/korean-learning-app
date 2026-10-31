@@ -63,12 +63,13 @@ export const APPS: OsApp[] = [
   },
   {
     id: "cal",
-    ko: "일정",
+    ko: "달력",
     ru: "Календарь",
     icon: "cal",
-    w: 460,
-    h: 320,
-    locked: true,
+    w: 900,
+    h: 640,
+    minW: 360,
+    minH: 420,
   },
   {
     id: "photo",

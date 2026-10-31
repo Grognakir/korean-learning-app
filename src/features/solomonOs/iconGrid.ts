@@ -82,18 +82,37 @@ export function defaultModel(ids: string[], rows: number): GridModel {
   return m.filter(Boolean);
 }
 
-/** Все id есть в модели (иначе модель устарела — новая раскладка по умолчанию). */
-export function modelHasAll(
+/** Сохранённая раскладка при новом наборе приложений: расстановка игрока
+ * остаётся, иконок удалённых приложений больше нет, новые встают каждая в
+ * свою свободную строку сверху у левого края. Битая модель — раскладка по
+ * умолчанию. */
+export function withApps(
   model: GridModel | null,
   ids: string[],
-): model is GridModel {
-  if (!Array.isArray(model)) return false;
-  const inModel = new Set(
-    model.flatMap((row) =>
-      [...(row.left ?? []), ...(row.right ?? [])].map((i) => i.id),
-    ),
-  );
-  return ids.every((id) => inModel.has(id));
+  rows: number,
+): GridModel {
+  if (!Array.isArray(model)) return defaultModel(ids, rows);
+  const known = new Set(ids);
+  const kept = model
+    .filter((row) => row && Array.isArray(row.left) && Array.isArray(row.right))
+    .map((row) => ({
+      ...row,
+      left: row.left.filter((i) => known.has(i.id)),
+      right: row.right.filter((i) => known.has(i.id)),
+    }))
+    .filter((row) => row.left.length || row.right.length);
+  if (!kept.length) return defaultModel(ids, rows);
+  const placed = new Set(kept.flatMap((r) => [...r.left, ...r.right].map((i) => i.id)));
+  const missing = ids.filter((id) => !placed.has(id));
+  if (!missing.length) return kept;
+  const used = new Set(kept.map((row) => rowIndex(row, rows)));
+  let r = 0;
+  for (const id of missing) {
+    while (used.has(r)) r++;
+    used.add(r);
+    kept.push({ y: r, ay: "t", left: [{ id, gap: 0 }], right: [] });
+  }
+  return kept;
 }
 
 /** Реальные строки и колонки с переносами; модель не меняется. */

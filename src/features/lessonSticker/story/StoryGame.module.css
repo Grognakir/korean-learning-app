@@ -562,6 +562,8 @@
    только реплика и сжималась, а перевод занимал своё место целиком — длинная
    корейская реплика уходила под перевод. */
 .lineBody {
+  -webkit-user-select: text;
+  user-select: text;
   flex: 1 1 auto;
   min-height: 0;
   display: flex;

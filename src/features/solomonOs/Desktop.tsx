@@ -14,10 +14,9 @@ import {
   attach,
   colX,
   compute,
-  defaultModel,
   detach,
   gridGeometry,
-  modelHasAll,
+  withApps,
   rowY,
   snap,
   type GridModel,
@@ -66,7 +65,7 @@ export function Desktop({
     [size, cw, ch],
   );
   const model = useMemo(
-    () => (modelHasAll(saved, IDS) ? saved : defaultModel(IDS, geo.rows)),
+    () => withApps(saved, IDS, geo.rows),
     [saved, geo.rows],
   );
   const places = useMemo(() => compute(model, geo), [model, geo]);

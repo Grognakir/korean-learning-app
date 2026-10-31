@@ -477,11 +477,21 @@
   height: 12px;
 }
 
+/* Текст в окнах приложений можно выделять (панель, рабочий стол и
+   заголовки окон — нет); кнопки не выделяются. */
 .content {
   flex: 1;
   min-height: 0;
   position: relative;
   overflow: hidden;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.content button,
+.content [role="button"] {
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .resize {

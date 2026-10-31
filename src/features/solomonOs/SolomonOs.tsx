@@ -16,6 +16,8 @@ import { Phone, type ActiveCall } from "./apps/Phone";
 import { Locked, Settings } from "./apps/Settings";
 import { Shop } from "./apps/Shop";
 import { Notes } from "./apps/Notes";
+import { Calendar } from "./apps/Calendar";
+import { calendarEvents } from "./calendar";
 import { MapApp } from "./map/MapApp";
 import { freshWorkspace, type MapWorkspace } from "./map/missions";
 import { routeNote, shoppingNote, type MissionNote } from "./missions";
@@ -151,6 +153,7 @@ function OsDesktop() {
   );
   const missedSeen = useRef(missedBefore);
   const [clock, setClock] = useState(() => koTime(new Date()));
+  const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
     savedGeo.current = load("windows", {});
@@ -234,6 +237,7 @@ function OsDesktop() {
   useEffect(() => {
     const timer = setInterval(() => {
       setClock(koTime(new Date()));
+      setNow(Date.now());
       setSys((prev) => {
         const now = Date.now();
         const r = reconcile(SCHEDULED_TRAINERS, prev.schedule, prev.log, now, {
@@ -451,6 +455,13 @@ function OsDesktop() {
     ...workspace.runs.map(routeNote),
     ...archive,
   ];
+  const [noteFocus, setNoteFocus] = useState<{ id: string; n: number } | null>(
+    null,
+  );
+  const showNote = (id: string) => {
+    setNoteFocus((f) => ({ id, n: (f?.n ?? 0) + 1 }));
+    openApp("notes");
+  };
   const openMission = (note: MissionNote) => {
     if (note.routeRunId) {
       const run = workspace.runs.find((r) => r.id === note.routeRunId);
@@ -470,7 +481,27 @@ function OsDesktop() {
       case "msg":
         return <Messenger phone={phone} onRead={() => setMsgUnread(0)} />;
       case "notes":
-        return <Notes notes={missionNotes} onOpen={openMission} />;
+        return (
+          <Notes
+            key={noteFocus?.n}
+            notes={missionNotes}
+            focusId={noteFocus?.id}
+            onOpen={openMission}
+          />
+        );
+      case "cal":
+        return (
+          <Calendar
+            now={now}
+            events={calendarEvents({
+              notes: missionNotes,
+              schedule: sys.schedule,
+              trainers: SCHEDULED_TRAINERS,
+              now,
+            })}
+            onOpen={(e) => (e.noteId ? showNote(e.noteId) : openApp(e.app))}
+          />
+        );
       case "map":
         return (
           <MapApp

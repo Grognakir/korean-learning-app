@@ -234,6 +234,8 @@
 /* ---------- сама карта (SVG) ---------- */
 
 .canvas {
+  -webkit-user-select: none;
+  user-select: none;
   --ground: #070c09;
   --block: #0c1510;
   --block-edge: #14261b;

@@ -1,0 +1,385 @@
+/* 달력: месяц сеткой, справа (или снизу на узком окне) — события дня. */
+
+.cal {
+  container: cal / inline-size;
+  height: 100%;
+  overflow: hidden;
+  background: var(--win2);
+  color: var(--text);
+  font: 14px/1.4 var(--sans);
+  outline: none;
+}
+
+.cal button {
+  font: inherit;
+  color: inherit;
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.cal button:focus-visible {
+  outline: 2px solid var(--bright);
+  outline-offset: 1px;
+}
+
+.layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+}
+
+.main {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px 14px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.head h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--soft);
+}
+
+.head h3 b {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+}
+
+.nav button {
+  min-width: 32px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: none;
+  font-size: 16px;
+}
+
+.nav button:hover {
+  border-color: var(--green);
+  color: var(--bright);
+}
+
+.nav .today {
+  font-size: 13px;
+}
+
+.weekdays,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.weekdays span {
+  padding: 0 8px 6px;
+  color: var(--soft);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.weekdays [data-dow="0"],
+.cell[data-dow="0"] .num {
+  color: #ff7b72;
+}
+
+.weekdays [data-dow="6"],
+.cell[data-dow="6"] .num {
+  color: #79b8ff;
+}
+
+.grid {
+  flex: 1;
+  min-height: 0;
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.cell {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  container: cell / inline-size;
+  cursor: var(--cursor-pointer, pointer);
+}
+
+/* В узкой ячейке на плашке только название. */
+@container cell (max-width: 110px) {
+  .chip time {
+    display: none;
+  }
+}
+
+.cell:hover {
+  background: #111f16;
+}
+
+.cell[aria-selected="true"] {
+  background: #14241a;
+  box-shadow: inset 0 0 0 1px var(--green);
+}
+
+.cell[data-out="true"] .num {
+  opacity: 0.35;
+}
+
+.num {
+  align-self: flex-end;
+  display: grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 4px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cell .num[data-today="true"] {
+  background: var(--bright);
+  color: var(--ink);
+}
+
+.chips {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chip {
+  display: block;
+  width: 100%;
+  padding: 1px 5px;
+  border: 0;
+  border-left: 3px solid var(--kind);
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--kind) 18%, transparent);
+  font-size: 12px !important;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chip time {
+  color: var(--soft);
+}
+
+.chip:hover {
+  background: color-mix(in srgb, var(--kind) 32%, transparent);
+}
+
+.chips small {
+  padding-left: 5px;
+  color: var(--soft);
+  font-size: 11px;
+}
+
+.cal [data-kind="meeting"] {
+  --kind: var(--amber);
+}
+
+.cal [data-kind="route"] {
+  --kind: #5aa9ff;
+}
+
+.cal [data-kind="repeat"] {
+  --kind: #b48cff;
+}
+
+.chip[data-done="true"],
+.event[data-done="true"] {
+  opacity: 0.55;
+}
+
+.dots {
+  display: none;
+  justify-content: center;
+  gap: 3px;
+}
+
+.dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--kind);
+}
+
+.dots i[data-done="true"] {
+  opacity: 0.45;
+}
+
+/* ---------- события дня ---------- */
+
+.side {
+  min-width: 0;
+  overflow: auto;
+  padding: 16px 14px;
+  border-left: 1px solid var(--line);
+}
+
+.side h4 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.side h4 span {
+  color: var(--soft);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.side ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.event {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--kind);
+  border-radius: 6px;
+  background: none;
+  text-align: left;
+}
+
+.event:hover {
+  background: #111f16;
+}
+
+.eventTime {
+  color: var(--soft);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Название и подпись — в одну строку; не влезло — многоточие, полностью в
+   заметке. */
+.eventBody {
+  min-width: 0;
+}
+
+.eventBody b,
+.eventBody small {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.eventBody b {
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.eventBody small {
+  color: var(--soft);
+  font-size: 12px;
+}
+
+.arrow {
+  color: var(--bright);
+}
+
+.empty {
+  margin: 0;
+  color: var(--soft);
+  font-size: 14px;
+}
+
+/* Узкое окно: список дня под сеткой. */
+@container cal (max-width: 700px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+  .side {
+    max-height: 40%;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+/* Совсем узко: в ячейках точки вместо плашек. */
+@container cal (max-width: 520px) {
+  .chips {
+    display: none;
+  }
+
+  .dots {
+    display: flex;
+  }
+
+  .num {
+    align-self: center;
+  }
+
+  .main {
+    padding: 10px 8px;
+  }
+
+  /* Телефон: сетка своей высоты, список дня под ней, всё прокручивается. */
+  .layout {
+    overflow-y: auto;
+    grid-template-rows: auto auto;
+    align-content: start;
+  }
+
+  .grid {
+    flex: none;
+    grid-template-rows: repeat(6, 52px);
+  }
+
+  .side {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .weekdays span {
+    padding: 0 0 6px;
+    text-align: center;
+  }
+}
+
+@media (pointer: coarse) {
+  .nav button {
+    min-width: 44px;
+    height: 40px;
+  }
+
+  .event {
+    min-height: 52px;
+  }
+}

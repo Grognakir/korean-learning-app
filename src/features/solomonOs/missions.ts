@@ -4,12 +4,19 @@ import { wrongPieces } from "../lessonSticker/story/verdict";
 import type { Episode } from "../lessonSticker/story/types";
 import { placeById } from "./map/catalog";
 import { scenarioById, type RouteRun } from "./map/missions";
+import { meetingDate } from "./calendar";
 import { requestLines, type OsTask } from "./trainers";
 
 export type MissionStep = {id:string; text:string; detail?:string; status:"todo"|"done"|"attention"};
 export type MissionLine = {ko:string; ru?:string};
-export type MissionNote = {id:string; kind:"shopping"|"route"; title:string; ko:string; brief:string; said:MissionLine[]; at:number; completed:boolean; steps:MissionStep[]; rules:string[]; app:"shop"|"map"; routeRunId?:string};
+export type MissionNote = {id:string; kind:"shopping"|"route"; title:string; ko:string; brief:string; said:MissionLine[]; at:number; completed:boolean; steps:MissionStep[]; rules:string[]; app:"shop"|"map"; routeRunId?:string; eventAt?:number; eventTime?:string; eventPlace?:string};
 
+/** Время и место встречи: системные строки после магазина («토요일 11:30», «결혼식장 앞»). */
+function meetingPlace(episode:Episode):string[]|null {
+  const shop=episode.steps.findIndex((s)=>s.type==="shop");
+  const next=episode.steps[shop+1];
+  return shop>=0&&next?.type==="system"?next.lines:null;
+}
 export function shoppingNote(task:OsTask,episode:Episode):MissionNote {
   const bad=new Set(wrongPieces(episode.rules,task.cart).map((p)=>p.id));
   const steps:MissionStep[]=(episode.rules.required??[]).map((group,i)=>{
@@ -17,7 +24,9 @@ export function shoppingNote(task:OsTask,episode:Episode):MissionNote {
     return {id:`required-${i}`,text:`${group.anyOf.map((id)=>ITEM_BY_ID[id]?.ko??id).join(" / ")} 사기`,detail:purchased.length?purchased.map(describePiece).join(", "):group.ru,status:purchased.length?purchased.some((p)=>bad.has(p.id))?"attention":"done":"todo"};
   });
   if(episode.rules.kind==="outfit" && task.cart.some((p)=>p.id==="jacket")&&!task.cart.some((p)=>["suit","pants"].includes(p.id)))steps.push({id:"pants",text:"바지 사기",detail:"К пиджаку нужны брюки",status:"todo"});
-  return {id:task.id??`shopping-${episode.id}`,kind:"shopping",title:episode.title,ko:"지아의 부탁",brief:`Купить ${episode.adviceRu}. ${episode.kind==="forJia"?"Для 지아":"Для себя"} — ${episode.placeRu}.`,said:requestLines(episode),at:task.assignedAt??0,completed:false,steps,rules:[...(episode.rules.colors??[]).map((r)=>r.ru),...(episode.rules.patterns??[]).map((r)=>r.ru),...(episode.rules.forbidden??[]).map((r)=>r.ru)],app:"shop"};
+  const place=meetingPlace(episode);
+  const meet=task.assignedAt&&place?meetingDate(place[0],task.assignedAt):null;
+  return {id:task.id??`shopping-${episode.id}`,...(meet&&{eventAt:meet.at,eventTime:meet.time,eventPlace:place?.[1]}),kind:"shopping",title:episode.title,ko:"지아의 부탁",brief:`Купить ${episode.adviceRu}. ${episode.kind==="forJia"?"Для 지아":"Для себя"} — ${episode.placeRu}.`,said:requestLines(episode),at:task.assignedAt??0,completed:false,steps,rules:[...(episode.rules.colors??[]).map((r)=>r.ru),...(episode.rules.patterns??[]).map((r)=>r.ru),...(episode.rules.forbidden??[]).map((r)=>r.ru)],app:"shop"};
 }
 export function routeNote(run:RouteRun):MissionNote {
   const scenario=scenarioById(run.scenarioId);

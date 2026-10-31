@@ -65,7 +65,7 @@
 .noteList b {
   display: block;
   overflow: hidden;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -74,13 +74,13 @@
 .noteList small {
   display: block;
   color: var(--soft);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .empty {
   padding: 20px 14px;
   color: var(--soft);
-  font-size: 12.5px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -112,7 +112,7 @@
 
 .title h3 {
   margin: 0;
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 1.25;
 }
@@ -145,7 +145,7 @@
 
 .said p {
   margin: 0 0 6px;
-  font-size: 14px;
+  font-size: 16.5px;
   line-height: 1.55;
 }
 
@@ -156,7 +156,7 @@
 .said small {
   display: block;
   color: var(--soft);
-  font-size: 12.5px;
+  font-size: 15px;
 }
 
 .ru {
@@ -187,19 +187,19 @@
   align-items: center;
   gap: 10px;
   padding: 7px 0;
-  font-size: 14.5px;
+  font-size: 17px;
 }
 
 .check {
   flex: none;
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border: 1.5px solid var(--green);
   border-radius: 4px;
   color: var(--ink);
-  font: 700 11px/1 var(--mono);
+  font: 700 12px/1 var(--mono);
 }
 
 .steps [data-status="done"] .check {

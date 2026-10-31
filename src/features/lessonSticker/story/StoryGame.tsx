@@ -404,6 +404,8 @@ export function StoryGame({
         <div
           className={styles.dialogue}
           onClick={(e) => {
+            // Выделили текст реплики — это не нажатие «дальше».
+            if (window.getSelection()?.toString()) return;
             if (!(e.target as HTMLElement).closest("button")) advance();
           }}
         >

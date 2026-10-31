@@ -5,7 +5,7 @@ import {
   defaultModel,
   detach,
   gridGeometry,
-  modelHasAll,
+  withApps,
   snap,
   type GridModel,
 } from "@/features/solomonOs/iconGrid";
@@ -32,8 +32,16 @@ describe("сетка иконок Solomon OS", () => {
     const m = defaultModel(["a", "b", "c", "d"], 4);
     expect(cells(m, 5, 4)).toEqual({ a: [0, 0], b: [1, 0], c: [2, 0], d: [3, 0] });
     expect(m.map((r) => r.ay)).toEqual(["t", "t", "b", "b"]);
-    expect(modelHasAll(m, ["a", "d"])).toBe(true);
-    expect(modelHasAll(m, ["a", "z"])).toBe(false);
+  });
+
+  it("новое приложение не сбрасывает расстановку: новая иконка — в свободную строку", () => {
+    const saved: GridModel = [
+      { y: 0, ay: "t", left: [], right: [{ id: "b", gap: 0 }] },
+      { y: 0, ay: "b", left: [{ id: "a", gap: 2 }, { id: "old", gap: 0 }], right: [] },
+    ];
+    const m = withApps(saved, ["a", "b", "c"], 4);
+    expect(cells(m, 5, 4)).toEqual({ b: [0, 4], a: [3, 2], c: [1, 0] });
+    expect(withApps(null, ["a", "b"], 4)).toEqual(defaultModel(["a", "b"], 4));
   });
 
   it("при сужении сначала исчезают зазоры, потом иконка переносится; при расширении возвращается", () => {
