@@ -423,7 +423,7 @@
 
 /* На телефоне панель канала компактнее (без FREQ и ENC) и прижата к
    правому краю, персонаж — к левому, чтобы они не перекрывались. */
-@container game (max-width: 640px) {
+@container game (max-width: 640px) or (max-aspect-ratio: 5 / 4) {
   .stageStatus {
     top: 8px;
     right: 8px;
@@ -726,7 +726,7 @@
   }
 }
 
-@container game (max-width: 640px) {
+@container game (max-width: 640px) or (max-aspect-ratio: 5 / 4) {
   .replies {
     left: 10px;
     right: 10px;
@@ -872,6 +872,127 @@
   height: 88%;
   margin-bottom: 4px;
   aspect-ratio: 2 / 3;
+}
+
+/* Фигуры не уменьшаются под ширину: манекены начинаются справа от продавца
+   (его ширина — 72% высоты сцены, 0.85 — без прозрачного поля картинки), а
+   когда двум манекенам в полный рост не хватает места, остаётся один с
+   переключателем (data-layout="single", считает useShopLayout). */
+@container game (min-width: 641px) {
+  .shopStage {
+    container: shop / size;
+  }
+
+  .shopStage .mannequins {
+    left: calc(1.5cqw + 72cqh * 0.85);
+  }
+
+  .shopStage[data-layout="single"] .mqBack {
+    display: none;
+  }
+
+  .shopStage[data-layout="single"] .mannequins .mannequin {
+    margin: 0;
+  }
+
+  .shopStage[data-layout="single"] .mqThumbs {
+    display: flex;
+  }
+
+  /* Очень широкая сцена: манекены вплотную к продавцу и друг к другу (по
+     58.7cqh шириной, у картинки ~25% прозрачного поля с каждой стороны —
+     заходят друг на друга до 7cqh, промежуток между фигурами вдвое меньше,
+     но не уже 88px: туда встают выноски, они смотрят влево); полка —
+     панелью во всю высоту вплотную к блоку сети и корзины, от двух до
+     четырёх столбцов. Такой же расчёт — в useShopLayout. */
+  .shopStage[data-layout="wide"] {
+    --mq-overlap: min(0px, max(-7cqh, calc(44px - 14.85cqh)));
+    --mq-row: calc(117.4cqh + 4 * var(--mq-overlap));
+  }
+
+  .shopStage[data-layout="wide"] .mannequins {
+    right: auto;
+    width: var(--mq-row);
+  }
+
+  .shopStage[data-layout="wide"] .mannequins .mannequin {
+    margin: 0 var(--mq-overlap);
+  }
+
+  .shopStage[data-layout="wide"] .shelfSheet {
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: calc(1.5cqw + 72cqh * 0.85 + var(--mq-row) + 16px);
+    right: 204px;
+    z-index: 5;
+    box-sizing: border-box;
+    max-width: 630px;
+    margin-left: auto;
+    padding: 44px 12px 12px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid var(--t-bright);
+    background: rgba(5, 10, 6, 0.96);
+    box-shadow: 0 0 18px rgba(0, 255, 102, 0.2);
+    animation: sheetUp 0.2s ease-out;
+  }
+
+  .shopStage[data-layout="wide"] .shelfEmpty {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px;
+    text-align: center;
+    color: var(--t-mid);
+    font-size: 13px;
+  }
+
+  .shopStage[data-layout="wide"] .shelfEmpty .kr {
+    color: var(--t-bright);
+    font-size: 18px;
+  }
+
+  .shopStage[data-layout="wide"] .shelfClose {
+    top: 8px;
+    right: 8px;
+  }
+
+  .shopStage[data-layout="wide"] .shelfTitle {
+    display: flex;
+    top: 8px;
+    left: 12px;
+    height: 26px;
+    font-size: 13px;
+    line-height: 26px;
+  }
+
+  .shopStage[data-layout="wide"] .shelfTitle .kr {
+    font-size: 16px;
+  }
+
+  .shopStage[data-layout="wide"] .pickerItems {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+    overflow: visible;
+  }
+
+  .shopStage[data-layout="wide"] .pickerItem {
+    width: auto;
+    height: auto;
+    max-height: none;
+    aspect-ratio: 1;
+  }
+
+  .shopStage[data-layout="wide"] .pickerItem img {
+    width: 76% !important;
+    height: 76% !important;
+  }
 }
 
 .mannequinHot {
@@ -1097,18 +1218,13 @@
   gap: 4px;
 }
 
-/* Заголовок полки — название части одежды; в окне диалога сидит в верхней
-   полоске слева от крестика, на телефоне — в шторке напротив крестика. */
+/* Заголовок полки — название части одежды; только в шторке на телефоне,
+   напротив крестика. В окне диалога его нет: зону видно по выноске. */
 .shelfTitle {
   position: absolute;
-  top: 4px;
-  right: 46px;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 8px;
-  height: 14px;
-  font-size: 12px;
-  line-height: 14px;
   letter-spacing: 0.06em;
   color: var(--t-mid);
   pointer-events: none;
@@ -1126,13 +1242,35 @@
   display: flex;
   gap: 8px;
   overflow-x: auto;
-  scrollbar-width: none;
+}
+
+/* Прокрутка полки — тонкая зелёная полоска в цвет терминала. */
+.picker_shelf .pickerItems,
+.shelfSheet {
+  scrollbar-width: thin;
+  scrollbar-color: var(--t-mid) transparent;
+}
+
+.picker_shelf .pickerItems::-webkit-scrollbar,
+.shelfSheet::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.picker_shelf .pickerItems::-webkit-scrollbar-thumb,
+.shelfSheet::-webkit-scrollbar-thumb {
+  background: var(--t-mid);
+}
+
+.picker_shelf .pickerItems::-webkit-scrollbar-track,
+.shelfSheet::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Плитки полки во всю высоту окна диалога; слева — по табличке с именем
    (.nameRow, left: 14px). */
 .dialogue:has(.picker_shelf) {
-  padding: 18px 18px 18px 14px;
+  padding: 18px 48px 18px 14px;
 }
 
 .picker_shelf .pickerItem {
@@ -1180,6 +1318,7 @@
 }
 
 .palettePanel {
+  container: room / size;
   position: absolute;
   z-index: 5;
   display: flex;
@@ -1218,12 +1357,12 @@
   gap: 8px;
 }
 
-/* Заголовок палитры: название вещи слева, крестик справа — по тем же
-   внутренним отступам, что и остальное содержимое. */
+/* Заголовок палитры: название вещи слева, крестик в правом верхнем углу —
+   по тем же внутренним отступам, что и остальное содержимое. */
 .paletteHead {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -1422,7 +1561,7 @@
   color: var(--t-text);
 }
 
-@container game (max-width: 640px) {
+@container game (max-width: 640px) or (max-aspect-ratio: 5 / 4) {
 
   .verdictCard {
     translate: none;
@@ -1464,7 +1603,7 @@
 
   /* Корзина — полосой сверху, манекены под ней по ширине сцены
      (высота по контейнеру: два манекена с перекрытием полей в ширину). */
-  .mannequins {
+  .shopStage .mannequins {
     top: 92px;
     left: 0;
     right: 0;
@@ -1516,6 +1655,8 @@
   }
 
   .fittingRoom {
+    top: 8px;
+    bottom: 8px;
     left: 8px;
     right: 8px;
     width: auto;
@@ -1541,7 +1682,6 @@
 
   .picker_shelf .pickerItems {
     overflow-x: auto;
-    scrollbar-width: none;
   }
 
   .picker_shelf .pickerItem {
@@ -1572,6 +1712,253 @@
   }
 }
 
+/* Примерочная столбиком (картинка над цветами) — только на узком экране.
+   Высокое окно ОС шире 640px получает раскладку телефона, но по высоте там
+   цвета под картинкой не помещаются — картинка остаётся слева. */
+@container game (min-width: 641px) {
+  .fittingRoom {
+    flex-direction: row;
+  }
+
+  .fittingRoom .palettePreview {
+    width: 38%;
+    max-width: 230px;
+    height: auto;
+  }
+}
+
+/* Строка с названием выбранного цвета и узора и образцы узоров — только на
+   узком экране (там у кружков и образцов нет подписей). */
+.paletteChosen,
+.patternSample,
+.paletteThumb {
+  display: none;
+}
+
+/* Узкий экран: картинка вещи — значок 56px рядом с названием. */
+@container game (max-width: 640px) {
+  .fittingRoom .palettePreview {
+    display: none;
+  }
+
+  .paletteThumb {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--t-dim);
+    background: radial-gradient(circle at 50% 45%, rgba(0, 255, 102, 0.14), rgba(0, 24, 10, 0.85) 72%);
+  }
+
+  .paletteThumb img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media (pointer: coarse) {
+    .paletteThumb {
+      width: 88px;
+      height: 88px;
+    }
+  }
+}
+
+.paletteTitles {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Узкая или низкая примерочная: цвета — кружки в два ряда по шесть, узоры —
+   квадратики с рисунком, что выбрано — строкой под названием. Так всё
+   помещается без прокрутки. */
+@container room (max-width: 620px) or (max-height: 320px) {
+  /* Цвет и узор — одной строкой, если самая длинная пара помещается,
+     иначе всегда двумя: поведение не зависит от того, что выбрано. */
+  .paletteChosen {
+    display: flex;
+    gap: 2px 14px;
+    font-size: 15px;
+    color: var(--t-bright);
+  }
+
+  .paletteChosen > span {
+    white-space: nowrap;
+  }
+
+  /* Самая длинная пара («보라색 · фиолетовый» + «물방울무늬 · горошек») при
+     мелком шрифте помещается в 340px; уже — всегда двумя строками. Под палец
+     шрифт крупнее — там всегда двумя (ниже, в pointer: coarse). */
+  @container palette (max-width: 339px) {
+    .paletteChosen {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .paletteChosen b {
+    font-weight: inherit;
+  }
+
+  .paletteChosen small {
+    font-size: 13px;
+    color: var(--t-mid);
+  }
+
+  .paletteChosen small::before {
+    content: " · ";
+  }
+
+  .swatchGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .swatch {
+    justify-content: center;
+    padding: 4px 0;
+  }
+
+  .swatchDot {
+    width: 24px;
+    height: 24px;
+  }
+
+  .swatchName {
+    display: none;
+  }
+
+  .paletteRow .chip {
+    padding: 4px;
+  }
+
+  .patternSample {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: #d9eadf;
+  }
+
+  .patternSample[data-pattern="stripes"] {
+    background: repeating-linear-gradient(90deg, #d9eadf 0 4px, #2f4a8f 4px 7px);
+  }
+
+  .patternSample[data-pattern="check"] {
+    background:
+      linear-gradient(90deg, rgba(47, 74, 143, 0.55) 50%, transparent 0) 0 0 / 8px 8px,
+      linear-gradient(rgba(47, 74, 143, 0.55) 50%, transparent 0) 0 0 / 8px 8px,
+      #d9eadf;
+  }
+
+  .patternSample[data-pattern="dots"] {
+    background:
+      radial-gradient(#2f4a8f 1.8px, transparent 2.3px) 0 0 / 7px 7px,
+      #d9eadf;
+  }
+
+  .patternSample[data-pattern="floral"] {
+    background:
+      radial-gradient(#d81b60 2.2px, transparent 2.7px) 0 0 / 11px 11px,
+      radial-gradient(#2e7d32 1.4px, transparent 1.9px) 5.5px 5.5px / 11px 11px,
+      #d9eadf;
+  }
+
+  /* Палец: цвета и узоры — кнопки 48px, крупнее подписи. */
+  @media (pointer: coarse) {
+    .swatch {
+      min-height: 48px;
+    }
+
+    .swatchDot {
+      width: 32px;
+      height: 32px;
+    }
+
+    .paletteRow .chip {
+      padding: 4px;
+    }
+
+    .patternSample {
+      width: 38px;
+      height: 38px;
+    }
+
+    .paletteChosen {
+      flex-direction: column;
+      gap: 0;
+      font-size: 17px;
+    }
+
+    .paletteChosen small {
+      font-size: 14px;
+    }
+
+    /* Невысокая примерочная (телефон 375×667): чуть плотнее, чтобы всё
+       помещалось без прокрутки. */
+    @container room (max-height: 420px) {
+      .paletteBody {
+        gap: 6px;
+      }
+
+      .paletteThumb {
+        width: 64px;
+        height: 64px;
+      }
+
+      .swatch {
+        min-height: 44px;
+      }
+
+      .swatchDot {
+        width: 30px;
+        height: 30px;
+      }
+
+      .patternSample {
+        width: 34px;
+        height: 34px;
+      }
+
+      .paletteChosen {
+        font-size: 16px;
+        line-height: 1.3;
+      }
+
+      .paletteBody .paletteBuy {
+        padding-top: 2px;
+      }
+    }
+  }
+}
+
+.paletteBuy {
+  position: sticky;
+  bottom: 0;
+  padding-top: 6px;
+  background: rgba(5, 14, 8, 0.96);
+}
+
+.paletteBody {
+  container: palette / inline-size;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--t-mid) transparent;
+}
+
+.paletteBody::-webkit-scrollbar {
+  width: 4px;
+}
+
+.paletteBody::-webkit-scrollbar-thumb {
+  background: var(--t-mid);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .incoming,
   .character,
@@ -1591,7 +1978,7 @@
   display: none;
 }
 
-@container game (max-width: 640px) {
+@container game (max-width: 640px) or (max-aspect-ratio: 5 / 4) {
   .incomingTop {
     padding-right: 48px;
   }
@@ -1617,12 +2004,57 @@
 
 /* ---------- магазин на телефоне: один манекен, вкладки 남성 / 여성 ---------- */
 
-.mqThumbs,
 .mqZones {
   display: none;
 }
 
-@container game (max-width: 640px) {
+/* Вкладки 남성 / 여성 над манекеном: на телефоне и когда рядом с продавцом
+   помещается только один манекен. */
+.mqThumbs {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: none;
+  justify-content: center;
+}
+
+/* Соседние вкладки перекрываются на 1px; активная — поверх, поэтому её
+   рамка видна целиком с обеих сторон. */
+.mqThumb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--t-dim);
+  background: rgba(5, 10, 6, 0.92);
+  color: var(--t-bright);
+  font: inherit;
+  font-size: 14px;
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.mqThumb + .mqThumb {
+  margin-left: -1px;
+}
+
+.mqThumbImg {
+  width: 20px;
+  height: 30px;
+  object-fit: contain;
+  filter: url(#story-hologram);
+}
+
+.mqThumbOn {
+  z-index: 1;
+  border-color: var(--t-bright);
+  background: rgba(0, 255, 102, 0.18);
+}
+
+@container game (max-width: 640px) or (max-aspect-ratio: 5 / 4) {
   .mqBack {
     display: none;
   }
@@ -1638,51 +2070,11 @@
   }
 
   .mqThumbs {
-    position: absolute;
-    top: 4px;
-    left: 0;
-    right: 0;
-    z-index: 3;
     display: flex;
-    justify-content: center;
-  }
-
-  /* Соседние вкладки перекрываются на 1px; активная — поверх, поэтому её
-     рамка видна целиком с обеих сторон. */
-  .mqThumb {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    height: 34px;
-    padding: 0 14px;
-    border: 1px solid var(--t-dim);
-    background: rgba(5, 10, 6, 0.92);
-    color: var(--t-bright);
-    font: inherit;
-    font-size: 14px;
-    cursor: var(--cursor-pointer, pointer);
-  }
-
-  .mqThumb + .mqThumb {
-    margin-left: -1px;
-  }
-
-  .mqThumbImg {
-    width: 20px;
-    height: 30px;
-    object-fit: contain;
-    filter: url(#story-hologram);
-  }
-
-  .mqThumbOn {
-    z-index: 1;
-    border-color: var(--t-bright);
-    background: rgba(0, 255, 102, 0.18);
   }
 }
 
-@container game (max-width: 640px) {
+@container game (max-width: 640px) or (max-aspect-ratio: 5 / 4) {
   /* Столбик зон слева от манекена (выноски на телефоне смотрят вправо). */
   .mqZones {
     position: absolute;
@@ -1694,6 +2086,17 @@
     flex-direction: column;
     justify-content: center;
     gap: 5px;
+  }
+
+  /* Не поместились в столбик слева — вторая половина справа от манекена
+     (MannequinRow); манекен тогда ровно по центру. */
+  .mqZonesRight {
+    left: auto;
+    right: 6px;
+  }
+
+  .mqSplit .mannequin {
+    translate: 0 0;
   }
 
   .mqZone {
@@ -1719,7 +2122,7 @@
 
 /* ---------- полка на телефоне: шторка снизу сцены ---------- */
 
-@container game (max-width: 640px) {
+@container game (max-width: 640px) or (max-aspect-ratio: 5 / 4) {
   .shelfSheet {
     position: absolute;
     left: 0;
@@ -1727,8 +2130,9 @@
     bottom: 0;
     z-index: 5;
     box-sizing: border-box;
-    max-height: 55%;
+    max-height: 75%;
     padding: 38px 12px 12px;
+    overflow-x: hidden;
     overflow-y: auto;
     border: 1px solid var(--t-bright);
     background: rgba(5, 10, 6, 0.96);
@@ -1742,8 +2146,8 @@
   }
 
   .shelfSheet .shelfTitle {
+    display: flex;
     top: 6px;
-    right: auto;
     left: 12px;
     height: 26px;
     font-size: 13px;
@@ -1754,9 +2158,11 @@
     font-size: 16px;
   }
 
+  /* Плитки фиксированного размера: на широком (планшетном) окне их больше в
+     ряду, а не три растянутые на всю ширину. */
   .shelfSheet .pickerItems {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
     gap: 8px;
     overflow: visible;
   }
@@ -1778,19 +2184,62 @@
 
 /* Экран занимает окно приложения целиком, без отступов полноэкранного режима
    телефона (их даёт сама ОС). */
+/* Размер окна известен, поэтому контейнер по обеим осям: в высоком узком
+   окне (выше, чем шире) включается раскладка телефона — один крупный манекен. */
+/* Окно ниже, чем нужно игре (телефон боком), — игра прокручивается целиком,
+   а не обрезается. */
 .screen.embedded {
   position: absolute;
   inset: 0;
   min-height: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--t-mid) transparent;
   padding: 12px;
+  container-type: size;
+}
+
+/* В окне ОС нет кнопки закрытия игры справа — REMOTE прижат к краю. */
+.embedded .bar {
+  padding-right: 0;
 }
 
 .embedded .stage {
   flex: 1 1 auto;
   height: auto;
-  min-height: 160px;
+  min-height: 300px;
   max-height: none;
+}
+
+/* Высота диалога зависит только от высоты окна, а не от того, открыта ли
+   полка, — ничего не прыгает. Не больше ~пятой части окна; длинная реплика
+   прокручивается внутри (.lineBody). */
+.embedded .dialogue {
+  height: clamp(112px, 20cqh, 170px);
+}
+
+/* В магазине кнопки — в правом нижнем углу, реплика во всю высоту окна, а
+   высота окна — целое число строк реплики (18px × 1.6), чтобы строка не
+   обрезалась посередине: от трёх до пяти строк. */
+.dialogueShop .dialogueActions {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  margin: 0;
+}
+
+.dialogueShop .lineBody {
+  padding-right: 64px;
+}
+
+.dialogueShop .prompt {
+  padding-right: 124px;
+}
+
+.embedded .dialogueShop {
+  height: calc(30px + round(down, clamp(86.4px, 20cqh - 30px, 144px), 28.8px));
 }
 
 /* Сам экран (контейнер) на телефоне — по ширине окна браузера: стикер урока
@@ -1815,5 +2264,325 @@
   from {
     translate: 0 30%;
     opacity: 0;
+  }
+}
+
+/* ---------- палец (телефон, планшет): всё, во что тыкают, — от 40px ---------- */
+
+@media (pointer: coarse) {
+  .mqZone {
+    height: 44px;
+    min-width: 60px;
+    font-size: 15px;
+  }
+
+  .mqThumb {
+    height: 44px;
+  }
+
+  .shelfClose,
+  .paletteClose {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dialogue:has(.picker_shelf) {
+    padding-right: 58px;
+  }
+
+  /* Крестик 40px — плитки шторки начинаются под ним, а не рядом. */
+  .shelfSheet {
+    padding-top: 54px;
+  }
+
+  .shopStage[data-layout="wide"] .shelfSheet {
+    padding-top: 58px;
+  }
+
+  .shelfSheet .shelfTitle {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .iconButton {
+    width: 64px;
+    height: 48px;
+  }
+
+  .buyButton {
+    min-height: 48px;
+  }
+
+  /* Входящий звонок: «ответить» — крупная кнопка под большой палец. */
+  .startButton {
+    min-height: 56px;
+    min-width: 200px;
+    font-size: 18px;
+  }
+}
+
+/* ---------- телефон, ввод с клавиатуры: чат с продавцом и подсказки ---------- */
+
+/* Сцена с манекенами при наборе не нужна — место отдано чату. */
+.stageHidden {
+  display: none !important;
+}
+
+.chatPane {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 0 2px;
+  overflow: hidden;
+}
+
+.chatHead {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--t-mid);
+}
+
+.chipTabs {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chipTab {
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--t-dim);
+  background: transparent;
+  color: var(--t-mid);
+  font: inherit;
+  font-size: 15px;
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.chipTab[aria-selected="true"] {
+  border-color: var(--t-bright);
+  background: rgba(0, 255, 102, 0.12);
+  color: var(--t-bright);
+}
+
+/* Слова переносятся по строкам; если не помещаются — прокрутка вниз. */
+.chips {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--t-mid) transparent;
+}
+
+/* Вещи идут сплошным потоком, перед каждой зоной — её подпись мелко. */
+.chipGroup {
+  display: contents;
+}
+
+.chipGroup > span {
+  align-self: center;
+  margin-left: 4px;
+  font-size: 12px;
+  color: var(--t-mid);
+}
+
+.wordChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--t-dim);
+  background: rgba(5, 10, 6, 0.85);
+  color: var(--t-text);
+  font: inherit;
+  font-size: 16px;
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.wordChip:active {
+  border-color: var(--t-bright);
+  background: rgba(0, 255, 102, 0.18);
+}
+
+.wordChipEnd {
+  margin-left: auto;
+  border-color: var(--t-mid);
+  color: var(--t-bright);
+}
+
+.wordDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Окно диалога в чате — одна строка ввода с кнопками справа. */
+.dialogue.dialogueShop.dialogueChat {
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 12px 12px;
+}
+
+.dialogueChat .prompt {
+  flex: 1;
+  min-width: 0;
+  padding-right: 0;
+}
+
+.dialogueChat .dialogueActions {
+  position: static;
+}
+
+/* В чате строка «KOREAN LEARNING // …» не нужна — место подсказкам. */
+.screen:has(.chatPane) .bar {
+  display: none;
+}
+
+.wordChipOn {
+  border-color: var(--t-bright);
+  background: rgba(0, 255, 102, 0.18);
+  color: var(--t-bright);
+}
+
+.chipTab small {
+  margin-right: 4px;
+  font-size: 11px;
+  color: var(--t-dim);
+}
+
+.chipTab:disabled {
+  opacity: 0.35;
+  cursor: var(--cursor-default, default);
+}
+
+/* Поле ввода — textarea в одну строку, растёт по тексту до трёх строк. */
+textarea.terminalInput {
+  display: block;
+  height: 1.6em;
+  max-height: 4.8em;
+  padding: 0;
+  line-height: 1.6;
+  resize: none;
+  overflow: hidden;
+}
+
+/* В чате игра не прокручивается целиком: iOS не «уводит» её при фокусе. */
+.screen:has(.chatPane) {
+  overflow: hidden;
+}
+
+/* Клавиатура открыта — места мало: только шаги, подсказки и строка ввода
+   (data-keyboard ставит useKeyboardViewport). */
+:global(html[data-keyboard="open"]) .chatHead {
+  display: none;
+}
+
+/* ---------- своя корейская клавиатура (телефон, режим ввода) ---------- */
+
+.krKeyboard {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px -12px -12px;
+  padding: 8px 4px calc(8px + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--t-dim);
+  background: rgba(3, 8, 4, 0.98);
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.krRow {
+  display: flex;
+  gap: 5px;
+}
+
+/* Второй ряд на одну клавишу короче — со сдвигом, как на телефоне. */
+.krRow:nth-child(2) {
+  padding: 0 5%;
+}
+
+.krKey {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--t-dim);
+  border-radius: 6px;
+  background: rgba(10, 30, 16, 0.95);
+  color: var(--t-text);
+  font: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: var(--cursor-pointer, pointer);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.krKey:active {
+  border-color: var(--t-bright);
+  background: rgba(0, 255, 102, 0.22);
+  color: var(--t-bright);
+}
+
+.krKeyWide {
+  flex: 1.5 1 0;
+  font-size: 18px;
+  color: var(--t-mid);
+}
+
+.krKeyOn {
+  border-color: var(--t-bright);
+  background: rgba(0, 255, 102, 0.18);
+  color: var(--t-bright);
+}
+
+.krSpace {
+  flex: 3 1 0;
+  font-size: 15px;
+  color: var(--t-mid);
+}
+
+.krSend {
+  flex: 1.6 1 0;
+  border-color: var(--t-mid);
+  font-size: 15px;
+  color: var(--t-bright);
+}
+
+/* Поле ввода без фокуса браузера — надпись с курсором в конце. */
+.fakeInput {
+  min-height: 1.6em;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.fakePlaceholder {
+  color: var(--t-dim);
+}
+
+/* Невысокий телефон — клавиши чуть ниже, чтобы подсказкам хватило места. */
+@media (max-height: 640px) {
+  .krKey {
+    height: 40px;
+  }
+
+  .krKeyboard {
+    gap: 5px;
   }
 }

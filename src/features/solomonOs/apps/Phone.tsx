@@ -1,16 +1,26 @@
 "use client";
 
 import { useEffect } from "react";
-import { StoryGame } from "../../lessonSticker/story/StoryGame";
+import {
+  StoryGame,
+  type StorySnapshot,
+} from "../../lessonSticker/story/StoryGame";
 import storyStyles from "../../lessonSticker/story/StoryGame.module.css";
 import type { Episode } from "../../lessonSticker/story/types";
+import { useOsStore } from "../OsStorage";
 import { OsIcon } from "../icons";
 import type { CallEntry } from "../schedule";
 import { callRange, trainerById } from "../trainers";
 import { koTime } from "../useOsPhone";
 import styles from "../SolomonOs.module.css";
 
-export type ActiveCall = { trainerId: string; episode: Episode };
+export type ActiveCall = {
+  trainerId: string;
+  episode: Episode;
+  snapshot?: StorySnapshot;
+  /** Повторный звонок при уже данном задании — напоминание (reminderEpisode). */
+  reminder?: boolean;
+};
 
 const KIND: Record<CallEntry["kind"], string> = {
   missed: "부재중 · пропущенный",
@@ -32,13 +42,18 @@ export function Phone({
   onCallBack,
   onCallEnd,
   onSeen,
+  active = true,
+  onSnapshot,
 }: {
   log: CallEntry[];
   call: ActiveCall | null;
   onCallBack: (trainerId: string) => void;
   onCallEnd: () => void;
   onSeen: () => void;
+  active?: boolean;
+  onSnapshot?: (snapshot: StorySnapshot) => void;
 }) {
+  const { userId } = useOsStore();
   useEffect(() => {
     if (!call) onSeen();
   }, [call, log, onSeen]);
@@ -47,12 +62,15 @@ export function Phone({
     const trainer = trainerById(call.trainerId);
     return (
       <StoryGame
-        key={call.episode.id}
+        key={`${call.episode.id}${call.reminder ? ":reminder" : ""}`}
         episode={call.episode}
-        progressKey={trainer?.progressKey ?? call.trainerId}
+        progressKey={`${userId ? `user:${userId}:` : ""}${trainer?.progressKey ?? call.trainerId}`}
         range={callRange(call.episode)}
         onRangeEnd={onCallEnd}
         persist={false}
+        active={active}
+        initialSnapshot={call.snapshot}
+        onSnapshotChange={onSnapshot}
         className={storyStyles.embedded}
       />
     );

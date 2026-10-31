@@ -23,7 +23,8 @@ export const GREETING: ClerkLine = {
   ru: "Что вам подать? Нажмите на манекен или напишите, что хотите купить.",
 };
 
-type SavedGame = {
+export type StorySnapshot = {
+  episodeId: string;
   index: number;
   cart: OutfitPiece[];
   clerk: ClerkLine;
@@ -32,8 +33,8 @@ type SavedGame = {
 };
 
 /** Сохранённый ход игры этой ситуации; всё непроверенное отбрасывается. */
-function restoreGame(trainer: string, episodeId: string, stepCount: number): SavedGame | null {
-  const raw = readGame(trainer) as Record<string, unknown> | null;
+function restoreGame(rawValue: unknown, episodeId: string, stepCount: number): StorySnapshot | null {
+  const raw = rawValue as Record<string, unknown> | null;
   if (!raw || raw.episodeId !== episodeId) return null;
   const index = raw.index;
   if (typeof index !== "number" || !Number.isInteger(index) || index < 0 || index >= stepCount) return null;
@@ -53,7 +54,7 @@ function restoreGame(trainer: string, episodeId: string, stepCount: number): Sav
       ? { pose: c.pose, text: c.text, ru: typeof c.ru === "string" ? c.ru : undefined }
       : GREETING;
   const verdictStep = typeof raw.verdictStep === "number" && raw.verdictStep >= 0 ? raw.verdictStep : 0;
-  return { index, cart, clerk, paid: raw.paid === true, verdictStep };
+  return { episodeId, index, cart, clerk, paid: raw.paid === true, verdictStep };
 }
 
 export function StoryGame({
@@ -66,6 +67,9 @@ export function StoryGame({
   persist = true,
   onFinish,
   className,
+  active = true,
+  initialSnapshot,
+  onSnapshotChange,
 }: {
   episode: Episode;
   progressKey: string;
@@ -82,21 +86,28 @@ export function StoryGame({
   /** Итог встречи в ОС: вместо «처음부터 / 가게로 돌아가기» — «Mission completed» или «Перекупить». */
   onFinish?: (ok: boolean) => void;
   className?: string;
+  active?: boolean;
+  initialSnapshot?: unknown;
+  onSnapshotChange?: (snapshot: StorySnapshot) => void;
 }) {
   const { steps, rules, assortment } = episode;
   const shopIndex = steps.findIndex((s) => s.type === "shop");
 
   // Ход игры после перезагрузки страницы: шаг, корзина, ответ продавца.
-  const [saved] = useState(() => (persist ? restoreGame(progressKey, episode.id, steps.length) : null));
-  const [index, setIndex] = useState(range?.from ?? saved?.index ?? 0);
+  const [saved] = useState(() => restoreGame(initialSnapshot ?? (persist ? readGame(progressKey) : null), episode.id, steps.length));
+  const [index, setIndex] = useState(() => saved && (!range || (saved.index >= range.from && saved.index <= range.to)) ? saved.index : range?.from ?? 0);
   const [showRu, setShowRu] = useState(false);
   const [cart, setCart] = useState<OutfitPiece[]>(initialCart ?? saved?.cart ?? []);
   const [clerk, setClerk] = useState(saved?.clerk ?? GREETING);
   const [paid, setPaid] = useState(saved?.paid ?? false);
   const [verdictStep, setVerdictStep] = useState(saved?.verdictStep ?? 0);
 
+  const snapshotCallback = useRef(onSnapshotChange);
+  useEffect(() => { snapshotCallback.current = onSnapshotChange; });
   useEffect(() => {
-    if (persist) writeGame(progressKey, { episodeId: episode.id, index, cart, clerk, paid, verdictStep });
+    const snapshot = { episodeId: episode.id, index, cart, clerk, paid, verdictStep };
+    if (persist) writeGame(progressKey, snapshot);
+    snapshotCallback.current?.(snapshot);
   }, [persist, progressKey, episode.id, index, cart, clerk, paid, verdictStep]);
 
   const step = steps[index];
@@ -105,10 +116,11 @@ export function StoryGame({
   // После смены шага фокус — на экран игры, чтобы Enter листал диалог, а не
   // нажимал крестик или кнопку, на которой фокус остался.
   useEffect(() => {
-    const active = document.activeElement;
-    if (active instanceof HTMLInputElement) return;
+    if (!active) return;
+    const focusedElement = document.activeElement;
+    if (focusedElement instanceof HTMLInputElement) return;
     if (step.type !== "incoming") screenRef.current?.focus({ preventScroll: true });
-  }, [index, step.type]);
+  }, [index, step.type, active]);
 
   useEffect(() => {
     for (const s of steps) {
@@ -240,7 +252,10 @@ export function StoryGame({
   });
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (!active || e.isComposing || e.defaultPrevented) return;
       const target = e.target as HTMLElement | null;
+      const ownerWindow = screenRef.current?.closest('[role="dialog"]');
+      if (ownerWindow && target && !ownerWindow.contains(target)) return;
       if (target?.closest("input, textarea, select, [contenteditable]")) return;
       if (/^[1-9]$/.test(e.key)) {
         choiceRef.current(Number(e.key) - 1);
@@ -271,7 +286,7 @@ export function StoryGame({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [active]);
 
   const live = step.type === "verdict";
   // Место встречи — последняя системная строка перед вердиктом («회사 앞»).

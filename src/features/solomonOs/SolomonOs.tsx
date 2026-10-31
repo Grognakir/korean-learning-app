@@ -5,17 +5,30 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { OutfitPiece } from "../lessonSticker/clothing/situations";
 import { HologramFilter } from "../lessonSticker/story/Character";
 import { IncomingScreen } from "../lessonSticker/story/IncomingScreen";
-import { StoryGame } from "../lessonSticker/story/StoryGame";
+import {
+  StoryGame,
+  type StorySnapshot,
+} from "../lessonSticker/story/StoryGame";
 import storyStyles from "../lessonSticker/story/StoryGame.module.css";
 import { APP_BY_ID, APPS, JIA_AVATAR, type AppId } from "./apps";
 import { Messenger, readChat } from "./apps/Messenger";
 import { Phone, type ActiveCall } from "./apps/Phone";
 import { Locked, Settings } from "./apps/Settings";
 import { Shop } from "./apps/Shop";
+import { Notes } from "./apps/Notes";
+import { MapApp } from "./map/MapApp";
+import { freshWorkspace, type MapWorkspace } from "./map/missions";
+import { routeNote, shoppingNote, type MissionNote } from "./missions";
 import { Terminal } from "./apps/Terminal";
 import { Desktop } from "./Desktop";
 import { NoteBell } from "./NoteBell";
-import { makeNote, markNotesRead, NOTES_KEY, pushNote, type OsNote } from "./notifications";
+import {
+  makeNote,
+  markNotesRead,
+  NOTES_KEY,
+  pushNote,
+  type OsNote,
+} from "./notifications";
 import { Toast } from "./Toast";
 import { AppIcon, OsIcon } from "./icons";
 import {
@@ -29,15 +42,16 @@ import {
   type Ring,
   type ScheduleState,
 } from "./schedule";
-import { load, save } from "./store";
+import { OsStorageProvider, useOsStore } from "./OsStorage";
 import {
   episodeById,
   meetingRange,
+  reminderEpisode,
   SCHEDULED_TRAINERS,
   trainerById,
   type OsTask,
 } from "./trainers";
-import { koTime, useOsPhone } from "./useOsPhone";
+import { koTime, useKeyboardViewport, useOsDevice } from "./useOsPhone";
 import { clampGeo, OsWindow, type Geo, type WinState } from "./Window";
 import styles from "./SolomonOs.module.css";
 
@@ -47,11 +61,53 @@ type Wins = Partial<Record<AppId, WinState>>;
 const TICK_MS = 1000;
 
 /** Звонки, задание и окна ОС. Состояние — в браузере (store.ts). */
-export function SolomonOs() {
-  const phone = useOsPhone();
+export function SolomonOs({ userId }: { userId?: string } = {}) {
+  return (
+    <OsStorageProvider userId={userId}>
+      <OsDesktop key={userId ?? "local"} />
+    </OsStorageProvider>
+  );
+}
+
+function OsDesktop() {
+  const store = useOsStore();
+  const { load, save } = store;
+  const [call, setCall] = useState<ActiveCall | null>(() => {
+    const saved = load<{
+      trainerId: string;
+      episodeId: string;
+      snapshot?: StorySnapshot;
+      reminder?: boolean;
+    } | null>("activeCall", null);
+    const found = saved && episodeById(saved.episodeId);
+    const episode = found && saved.reminder ? reminderEpisode(found) : found;
+    return saved && episode && trainerById(saved.trainerId)
+      ? {
+          trainerId: saved.trainerId,
+          episode,
+          snapshot: saved.snapshot,
+          reminder: saved.reminder,
+        }
+      : null;
+  });
+  const device = useOsDevice();
+  const phone = device === "phone";
+  const rootRef = useRef<HTMLDivElement>(null);
+  useKeyboardViewport(rootRef);
   const [desk, setDesk] = useState({ w: 0, h: 0 });
-  const [wins, setWins] = useState<Wins>({});
-  const [focus, setFocus] = useState<AppId | null>(null);
+  const [wins, setWins] = useState<Wins>(() =>
+    call
+      ? {
+          call: {
+            g: { x: 20, y: 20, w: 860, h: 680 },
+            max: false,
+            min: false,
+            z: 11,
+          },
+        }
+      : {},
+  );
+  const [focus, setFocus] = useState<AppId | null>(call ? "call" : null);
   const zTop = useRef(10);
   const savedGeo = useRef<Partial<Record<AppId, Geo & { max: boolean }>>>({});
 
@@ -65,30 +121,66 @@ export function SolomonOs() {
     });
     return { schedule, log: r.log, ring: null };
   });
+  const [workspace, setWorkspace] = useState<MapWorkspace>(() =>
+    load("routeWorkspace", freshWorkspace()),
+  );
+  const [archive, setArchive] = useState<MissionNote[]>(() =>
+    load("missionArchive", []),
+  );
   const [task, setTask] = useState<OsTask | null>(() =>
     load<OsTask | null>("task", null),
   );
-  const [call, setCall] = useState<ActiveCall | null>(null);
-  const [meeting, setMeeting] = useState(false);
-  const [msgUnread, setMsgUnread] = useState(() => (readChat().shown ? 0 : 1));
-  const [notes, setNotes] = useState<OsNote[]>(() => load<OsNote[]>(NOTES_KEY, []));
+  const [meeting, setMeeting] = useState(() => load("meeting", false));
+  const [meetingSnapshot, setMeetingSnapshot] = useState<StorySnapshot | null>(
+    () => load("meetingSnapshot", null),
+  );
+  const [msgUnread, setMsgUnread] = useState(() =>
+    readChat(store).shown ? 0 : 1,
+  );
+  const [notes, setNotes] = useState<OsNote[]>(() =>
+    load<OsNote[]>(NOTES_KEY, []),
+  );
   const [toastId, setToastId] = useState<string | null>(null);
   const notesRef = useRef(notes);
   useEffect(() => {
     notesRef.current = notes;
   });
   // Сколько пропущенных было до входа: новые — повод для уведомления.
-  const [missedBefore] = useState(() => unseenMissed(load<CallEntry[]>("calls", [])));
+  const [missedBefore] = useState(() =>
+    unseenMissed(load<CallEntry[]>("calls", [])),
+  );
   const missedSeen = useRef(missedBefore);
   const [clock, setClock] = useState(() => koTime(new Date()));
 
   useEffect(() => {
     savedGeo.current = load("windows", {});
-  }, []);
-  useEffect(() => save("schedule", sys.schedule), [sys.schedule]);
-  useEffect(() => save("calls", sys.log), [sys.log]);
-  useEffect(() => save("task", task), [task]);
-  useEffect(() => save(NOTES_KEY, notes), [notes]);
+  }, [load]);
+  useEffect(
+    () =>
+      save(
+        "activeCall",
+        call
+          ? {
+              trainerId: call.trainerId,
+              episodeId: call.episode.id,
+              snapshot: call.snapshot,
+              reminder: call.reminder,
+            }
+          : null,
+      ),
+    [call, save],
+  );
+  useEffect(() => save("routeWorkspace", workspace), [workspace, save]);
+  useEffect(() => save("missionArchive", archive), [archive, save]);
+  useEffect(() => save("meeting", meeting), [meeting, save]);
+  useEffect(
+    () => save("meetingSnapshot", meetingSnapshot),
+    [meetingSnapshot, save],
+  );
+  useEffect(() => save("schedule", sys.schedule), [sys.schedule, save]);
+  useEffect(() => save("calls", sys.log), [sys.log, save]);
+  useEffect(() => save("task", task), [task, save]);
+  useEffect(() => save(NOTES_KEY, notes), [notes, save]);
 
   /** Новое уведомление: баннер сверху и запись под колокольчиком. */
   const notify = useCallback((note: Omit<OsNote, "id" | "at" | "read">) => {
@@ -99,6 +191,9 @@ export function SolomonOs() {
 
   // Новый пропущенный (при входе или пока ОС открыта) — уведомление.
   const missedNow = unseenMissed(sys.log);
+  const missedFrom = sys.log.findLast(
+    (e) => e.kind === "missed" && !e.seen,
+  )?.trainerId;
   useEffect(() => {
     if (missedNow <= missedSeen.current) {
       missedSeen.current = missedNow;
@@ -108,15 +203,28 @@ export function SolomonOs() {
     // Mode, перерисовка) не должен «съесть» уведомление.
     const t = setTimeout(() => {
       missedSeen.current = missedNow;
-      notify({ who: "지아", text: `부재중 전화 ${missedNow}통`, app: "call" });
+      notify({
+        who: "지아",
+        text: `부재중 전화 ${missedNow}통`,
+        app: "call",
+        trainerId: missedFrom,
+      });
     }, 600);
     return () => clearTimeout(t);
-  }, [missedNow, notify]);
+  }, [missedNow, missedFrom, notify]);
 
   // Первое сообщение 지아 в мессенджере — одно уведомление.
   useEffect(() => {
-    if (!msgUnread || notesRef.current.some((n) => n.app === "msg") || missedNow > missedBefore) return;
-    const t = setTimeout(() => notify({ who: "지아", text: "뭐 해요? 😊", app: "msg" }), 900);
+    if (
+      !msgUnread ||
+      notesRef.current.some((n) => n.app === "msg") ||
+      missedNow > missedBefore
+    )
+      return;
+    const t = setTimeout(
+      () => notify({ who: "지아", text: "뭐 해요? 😊", app: "msg" }),
+      900,
+    );
     return () => clearTimeout(t);
     // только при входе
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -179,7 +287,10 @@ export function SolomonOs() {
 
   const persistGeo = (w: Wins) => {
     for (const [id, s] of Object.entries(w) as [AppId, WinState][]) {
-      savedGeo.current[id] = { ...clampGeo(s.g, desk), max: s.max };
+      savedGeo.current[id] = {
+        ...clampGeo(s.g, desk, APP_BY_ID[id]),
+        max: s.max,
+      };
     }
     save("windows", savedGeo.current);
   };
@@ -202,7 +313,6 @@ export function SolomonOs() {
     });
 
   const closeApp = (id: AppId) => {
-    if (id === "call") setCall(null);
     setWins((prev) => {
       persistGeo(prev);
       const next = { ...prev };
@@ -225,10 +335,21 @@ export function SolomonOs() {
   const startCall = (trainerId: string) => {
     const trainer = trainerById(trainerId);
     if (!trainer) return;
+    if (call?.trainerId === trainerId) {
+      openApp("call");
+      return;
+    }
+    // Задание уже дано — 지아 помнит разговор и только напоминает просьбу.
     const same =
       task?.trainerId === trainerId ? episodeById(task.episodeId) : undefined;
-    const episode =
-      same ?? trainer.pickEpisode(load<string | null>("lastEpisode", null));
+    if (same) {
+      setCall({ trainerId, episode: reminderEpisode(same), reminder: true });
+      openApp("call");
+      return;
+    }
+    const episode = trainer.pickEpisode(
+      load<string | null>("lastEpisode", null),
+    );
     save("lastEpisode", episode.id);
     setCall({ trainerId, episode });
     openApp("call");
@@ -248,6 +369,13 @@ export function SolomonOs() {
     startCall(trainerId);
   };
 
+  /** Нажатие на уведомление: пропущенный звонок — сразу перезвонить, как на
+   * телефоне; остальное — открыть приложение. */
+  const openNote = (n: OsNote) => {
+    if (n.app === "call" && n.trainerId) callBack(n.trainerId);
+    else openApp(n.app);
+  };
+
   const answer = (yes: boolean) => {
     const ring = sys.ring;
     if (!ring) return;
@@ -261,7 +389,17 @@ export function SolomonOs() {
 
   const endCall = () => {
     if (!call) return;
+    if (call.reminder) {
+      setCall(null);
+      return;
+    }
     setTask((prev) => ({
+      id:
+        prev?.episodeId === call.episode.id
+          ? prev.id
+          : `shopping-${Date.now()}`,
+      assignedAt:
+        prev?.episodeId === call.episode.id ? prev.assignedAt : Date.now(),
       trainerId: call.trainerId,
       episodeId: call.episode.id,
       cart: prev?.episodeId === call.episode.id ? prev.cart : [],
@@ -273,6 +411,11 @@ export function SolomonOs() {
   const finishMeeting = (ok: boolean) => {
     setMeeting(false);
     if (!ok || !task) return;
+    const completedEpisode = episodeById(task.episodeId);
+    if (completedEpisode) {
+      const note = { ...shoppingNote(task, completedEpisode), completed: true };
+      setArchive((prev) => [...prev.filter((n) => n.id !== note.id), note]);
+    }
     // Одобрила: тренажёр пройден, следующее повторение по расписанию.
     setSys((prev) => ({
       ...prev,
@@ -294,6 +437,7 @@ export function SolomonOs() {
     call: unseenMissed(sys.log),
     msg: msgUnread,
     shop: task && !wins.shop ? 1 : 0,
+    notes: (task ? 1 : 0) + workspace.runs.filter((r) => !r.completed).length,
   };
 
   const toast = toastId ? notes.find((n) => n.id === toastId) : undefined;
@@ -301,10 +445,40 @@ export function SolomonOs() {
     meeting && task ? episodeById(task.episodeId) : undefined;
   const ringing = sys.ring && !call ? sys.ring : null;
 
+  const currentEpisode = task && episodeById(task.episodeId);
+  const missionNotes = [
+    ...(task && currentEpisode ? [shoppingNote(task, currentEpisode)] : []),
+    ...workspace.runs.map(routeNote),
+    ...archive,
+  ];
+  const openMission = (note: MissionNote) => {
+    if (note.routeRunId) {
+      const run = workspace.runs.find((r) => r.id === note.routeRunId);
+      if (run)
+        setWorkspace((w) => ({
+          ...w,
+          mode: run.mode,
+          scenarioId: run.scenarioId,
+          active: { ...w.active, [run.mode]: run.id },
+        }));
+    }
+    openApp(note.app);
+  };
+
   const content = (id: AppId) => {
     switch (id) {
       case "msg":
         return <Messenger phone={phone} onRead={() => setMsgUnread(0)} />;
+      case "notes":
+        return <Notes notes={missionNotes} onOpen={openMission} />;
+      case "map":
+        return (
+          <MapApp
+            workspace={workspace}
+            onChange={setWorkspace}
+            onNotes={() => openApp("notes")}
+          />
+        );
       case "term":
         return <Terminal phone={phone} />;
       case "set":
@@ -317,6 +491,12 @@ export function SolomonOs() {
             onCallBack={callBack}
             onCallEnd={endCall}
             onSeen={onPhoneSeen}
+            active={focus === "call" && !wins.call?.min && !meeting && !ringing}
+            onSnapshot={(snapshot) =>
+              setCall((current) =>
+                current ? { ...current, snapshot } : current,
+              )
+            }
           />
         );
       case "shop":
@@ -326,7 +506,10 @@ export function SolomonOs() {
             onCart={(cart: OutfitPiece[]) =>
               setTask((t) => (t ? { ...t, cart } : t))
             }
-            onPay={() => setMeeting(true)}
+            onPay={() => {
+              setMeetingSnapshot(null);
+              setMeeting(true);
+            }}
           />
         );
       default:
@@ -349,7 +532,7 @@ export function SolomonOs() {
   );
 
   return (
-    <div className={styles.os}>
+    <div ref={rootRef} className={styles.os} data-device={device}>
       <HologramFilter />
       <header className={styles.panel}>
         <div className={styles.logo}>
@@ -384,7 +567,7 @@ export function SolomonOs() {
           <NoteBell
             notes={notes}
             avatar={JIA_AVATAR}
-            onOpenNote={(n) => openApp(n.app)}
+            onOpenNote={openNote}
             onReadAll={() => setNotes((l) => markNotesRead(l))}
             onClear={() => {
               setNotes([]);
@@ -441,9 +624,10 @@ export function SolomonOs() {
             key={toast.id}
             note={toast}
             avatar={JIA_AVATAR}
+            mobile={device !== "desktop"}
             onOpen={() => {
               setToastId(null);
-              openApp(toast.app);
+              openNote(toast);
             }}
             onClose={() => setToastId(null)}
           />
@@ -484,12 +668,12 @@ export function SolomonOs() {
           <div>
             <StoryGame
               episode={meetingEpisode}
-              progressKey={
-                trainerById(task.trainerId)?.progressKey ?? task.trainerId
-              }
+              progressKey={`${store.userId ? `user:${store.userId}:` : ""}${trainerById(task.trainerId)?.progressKey ?? task.trainerId}`}
               range={meetingRange(meetingEpisode)}
               initialCart={task.cart}
               persist={false}
+              initialSnapshot={meetingSnapshot}
+              onSnapshotChange={setMeetingSnapshot}
               onFinish={finishMeeting}
               className={storyStyles.embedded}
             />

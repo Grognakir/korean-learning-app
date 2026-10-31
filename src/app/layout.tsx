@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { getAuthUser, getProfileRow } from "@/features/auth/requireUser";
 import { DictionaryPreload } from "@/features/dictionary/DictionaryPreload";
 import { DictionaryCacheProvider } from "@/features/dictionary/DictionaryCacheContext";
+import { StorageUserProvider } from "@/lib/StorageUser";
 import { fontVariables } from "@/styles/fonts";
 import { fontKrCssVar, fontUiCssVar } from "@/features/settings/fontOptions";
 import "@/styles/globals.css";
@@ -49,7 +50,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       }
     >
       <body>
-        <DictionaryCacheProvider key={user?.id ?? "guest"}><DictionaryPreload userId={user?.id ?? null} />{children}</DictionaryCacheProvider>
+        <StorageUserProvider key={user?.id ?? "guest"} userId={user?.id}><DictionaryCacheProvider key={user?.id ?? "guest"}><DictionaryPreload userId={user?.id ?? null} />{children}</DictionaryCacheProvider></StorageUserProvider>
       </body>
     </html>
   );

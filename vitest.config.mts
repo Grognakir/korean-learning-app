@@ -6,6 +6,7 @@ export default defineConfig({
   css: { postcss: { plugins: [] } },
   esbuild: { jsx: "automatic" },
   test: {
+    include: ["tests/**/*.test.{ts,tsx}"],
     environment: "jsdom",
     setupFiles: ["./tests/setup.ts"],
     clearMocks: true,

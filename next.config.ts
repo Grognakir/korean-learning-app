@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Дев-сервер с iPhone в той же сети Wi-Fi (http://<IP мака>:3000).
+  allowedDevOrigins: ["192.168.*.*"],
   async redirects() {
     return [
       { source: "/learning/plans", destination: "/learning/programs", permanent: true },

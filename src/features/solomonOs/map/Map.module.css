@@ -1,0 +1,1295 @@
+/* Карта (지도): тёмная схема в стиле Solomon OS — тонкие улицы, круглые
+   метки, светящийся маршрут. Цвета — переменные темы (OsTheme.module.css). */
+
+.app {
+  container: route-map / inline-size;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--win2);
+  color: var(--text);
+  font: 13px/1.45 var(--sans);
+}
+
+.app button,
+.app select,
+.app textarea {
+  font: inherit;
+}
+
+.app button {
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.app button:disabled {
+  opacity: 0.4;
+  cursor: var(--cursor-default, default);
+}
+
+.app button:focus-visible,
+.app select:focus-visible,
+.app textarea:focus-visible,
+.place:focus-visible .bWall {
+  stroke: var(--bright);
+}
+
+.korean {
+  font-family: var(--font-noto-sans-kr, var(--sans));
+  word-break: keep-all;
+}
+
+/* ---------- верхняя строка: задание, район, маршрут ---------- */
+
+.header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--line);
+  background: var(--win);
+}
+
+.header > b {
+  margin-right: 4px;
+  font: 600 11px/1 var(--mono);
+  letter-spacing: 0.08em;
+  color: var(--mid);
+  white-space: nowrap;
+}
+
+.header select {
+  min-width: 0;
+  max-width: 200px;
+  height: 26px;
+  padding: 0 24px 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--panel)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%238fbfa0'/%3E%3C/svg%3E")
+    no-repeat right 8px center;
+  color: var(--text);
+  font-size: 12px;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.header select:hover {
+  border-color: var(--green);
+}
+
+.notesButton {
+  margin-left: auto;
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: none;
+  color: var(--soft);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.notesButton:hover {
+  border-color: var(--green);
+  color: var(--text);
+}
+
+.transportFacts {
+  flex: none;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--line);
+  background: var(--win);
+  color: var(--soft);
+  font: 11px/1.5 var(--mono);
+}
+
+.transportFacts summary {
+  cursor: var(--cursor-pointer, pointer);
+  list-style: none;
+}
+
+.transportFacts summary::-webkit-details-marker {
+  display: none;
+}
+
+.transportFacts summary::before {
+  content: "▸ ";
+  color: var(--mid);
+}
+
+.transportFacts[open] summary::before {
+  content: "▾ ";
+}
+
+.transportFacts > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px 0 4px;
+  font-family: var(--sans);
+}
+
+.transportFacts article {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--mid);
+  border-radius: 4px;
+  background: var(--win2);
+}
+
+.transportFacts article b {
+  color: var(--text);
+  font-size: 12px;
+}
+
+.transportFacts article p {
+  margin: 3px 0;
+  font-size: 12px;
+}
+
+.transportFacts a {
+  color: var(--mid);
+  font-size: 11px;
+}
+
+/* ---------- раскладка: карта + панель задания ---------- */
+
+.workspace {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  overflow: hidden;
+}
+
+.app[data-layout="focus"] .workspace {
+  grid-template-columns: minmax(0, 1fr) 270px;
+}
+
+.app[data-layout="call"] .workspace {
+  grid-template-columns: minmax(0, 1fr) 320px;
+}
+
+.app[data-layout="itinerary"] .workspace,
+.app[data-layout="builder"] .workspace {
+  grid-template-columns: 300px minmax(0, 1fr);
+}
+
+.app[data-layout="itinerary"] .missionPanel,
+.app[data-layout="builder"] .missionPanel {
+  grid-column: 1;
+  grid-row: 1;
+  border-left: 0;
+  border-right: 1px solid var(--line);
+}
+
+.app[data-layout="itinerary"] .mapPanel,
+.app[data-layout="builder"] .mapPanel {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.mapPanel {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapHeading {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: rgb(7 12 9 / 0.85);
+  pointer-events: none;
+}
+
+.mapHeading b {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mapHeading b::before {
+  content: "◉ ";
+  color: var(--bright);
+  font-size: 10px;
+}
+
+.mapHeading span {
+  font: 10px var(--mono);
+  color: var(--soft);
+}
+
+/* ---------- сама карта (SVG) ---------- */
+
+.canvas {
+  --ground: #070c09;
+  --block: #0c1510;
+  --block-edge: #14261b;
+  --road: #13231a;
+  --edge: #1f3a2a;
+  --park: #0d2416;
+  --water: #0b2427;
+  --pin: #0a120d;
+  --label: var(--text);
+  --sub: var(--soft);
+  --accent: var(--mid);
+  --metro: var(--amber);
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--ground);
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+
+.mapGround {
+  fill: var(--ground);
+}
+
+.gridLine {
+  stroke: var(--line);
+  stroke-width: 1;
+  opacity: 0.45;
+}
+
+.block {
+  fill: var(--block);
+  stroke: var(--block-edge);
+  stroke-width: 1;
+}
+
+.parkBlock {
+  fill: var(--park);
+  stroke: #1d4a2c;
+  stroke-width: 1.5;
+}
+
+.parkTree {
+  fill: #12341f;
+  stroke: #1d4a2c;
+  stroke-width: 1;
+}
+
+.parkLabel {
+  fill: var(--green);
+  font: 600 21px var(--font-noto-sans-kr, var(--sans));
+  paint-order: stroke;
+  stroke: var(--park);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+.water {
+  fill: none;
+  stroke: var(--water);
+  stroke-width: 38;
+  stroke-linecap: round;
+}
+
+.roadEdge {
+  fill: none;
+  stroke: var(--edge);
+  stroke-width: 20;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.road {
+  fill: none;
+  stroke: var(--road);
+  stroke-width: 16;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.metro {
+  fill: none;
+  stroke: var(--metro);
+  stroke-width: 4;
+  stroke-dasharray: 10 6;
+  opacity: 0.75;
+}
+
+.metroLabel,
+.roadLabel {
+  fill: var(--sub);
+  font: 13px var(--mono);
+}
+
+.metroLabel {
+  fill: var(--metro);
+  opacity: 0.85;
+}
+
+.areaLabel {
+  fill: var(--green);
+  font: 600 15px var(--mono);
+  letter-spacing: 6px;
+  opacity: 0.55;
+}
+
+.barrier {
+  fill: none;
+  stroke: var(--edge);
+  stroke-width: 46;
+}
+
+.underpass {
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-dasharray: 8 7;
+}
+
+/* маршрут: подложка-свечение + бегущий пунктир */
+.routeGlow {
+  fill: none;
+  stroke: var(--bright);
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.route {
+  fill: none;
+  stroke: var(--bright);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 14 9;
+  color: var(--bright);
+  pointer-events: none;
+  animation: routeRun 1s linear infinite;
+}
+
+@keyframes routeRun {
+  to {
+    stroke-dashoffset: -23;
+  }
+}
+
+/* метки мест */
+.place {
+  cursor: var(--cursor-pointer, pointer);
+  outline: none;
+}
+
+.hit {
+  fill: transparent;
+}
+
+/* здания: тёмные стены с зелёным контуром, тёплые окна */
+.building {
+  transition: filter 0.15s;
+}
+
+.bBase {
+  fill: rgb(0 0 0 / 0.45);
+}
+
+.bWall,
+.bRoof,
+.bDark,
+.bTree,
+.bLight,
+.bAmber,
+.bRed {
+  stroke: var(--green);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.bWall {
+  fill: #0f2218;
+}
+
+.bRoof {
+  fill: #1b4129;
+}
+
+.bDark {
+  fill: #050a07;
+}
+
+.bTree {
+  fill: #1c5a33;
+}
+
+.bLight {
+  fill: #d9eadf;
+  stroke-width: 1;
+}
+
+.bAmber {
+  fill: var(--amber);
+  stroke-width: 1;
+}
+
+.bRed {
+  fill: var(--red);
+  stroke-width: 1;
+}
+
+.bWin {
+  fill: var(--amber);
+  opacity: 0.7;
+}
+
+.bLine,
+.bInk,
+.bArc {
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bLine {
+  stroke: var(--green);
+}
+
+.bInk {
+  stroke: #050a07;
+}
+
+.bArc {
+  stroke-width: 3;
+}
+
+.place:hover .bWall,
+.place:hover .bRoof {
+  stroke: var(--bright);
+}
+
+.placeSelected .building {
+  filter: drop-shadow(0 0 6px rgb(0 255 102 / 0.6));
+}
+
+.placeSelected .bWall,
+.placeSelected .bRoof {
+  stroke: var(--bright);
+}
+
+.placeSelected .bBase {
+  fill: rgb(0 255 102 / 0.35);
+}
+
+/* номер шага маршрута или точки атласа */
+.badge circle {
+  fill: var(--pin);
+  stroke: var(--green);
+  stroke-width: 1.5;
+}
+
+.badge text {
+  fill: var(--mid);
+  font: 700 12px var(--mono);
+  pointer-events: none;
+}
+
+.badge .badgeOn {
+  fill: var(--bright);
+  stroke: var(--bright);
+}
+
+.badge .badgeOn + text {
+  fill: var(--ink);
+}
+
+.placeSecondary {
+  opacity: 0.5;
+}
+
+.placeKo {
+  fill: var(--label);
+  font: 600 17px var(--font-noto-sans-kr, var(--sans));
+  paint-order: stroke;
+  stroke: var(--ground);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.placeRu {
+  fill: var(--sub);
+  font: 12px var(--mono);
+  paint-order: stroke;
+  stroke: var(--ground);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.placeSelected .placeKo {
+  fill: var(--bright);
+}
+
+/* цель — янтарное кольцо с пульсом */
+.goalHalo {
+  fill: rgb(224 162 58 / 0.1);
+  stroke: var(--amber);
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+}
+
+.goalPulse {
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse 2s ease-out infinite;
+}
+
+/* «Я здесь» */
+.actorGroup {
+  pointer-events: none;
+}
+
+.actor {
+  fill: var(--bright);
+  stroke: var(--ink);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 8px rgb(0 255 102 / 0.6));
+}
+
+.actorArrow {
+  fill: var(--ink);
+}
+
+.actorPulse {
+  fill: none;
+  stroke: var(--bright);
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse 1.6s ease-out infinite;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+}
+
+.compassRing {
+  fill: rgb(7 12 9 / 0.8);
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+
+.compassNorth {
+  fill: var(--bright);
+}
+
+.compass {
+  fill: var(--green);
+  opacity: 0.6;
+}
+
+.compassLabel {
+  fill: var(--mid);
+  font: 700 13px var(--mono);
+}
+
+/* масштаб и сдвиг */
+.zoom,
+.pan {
+  position: absolute;
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgb(7 12 9 / 0.85);
+}
+
+.zoom {
+  right: 8px;
+  bottom: 30px;
+  flex-direction: column;
+}
+
+.pan {
+  left: 8px;
+  bottom: 30px;
+}
+
+.zoom button,
+.pan button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: none;
+  color: var(--soft);
+  font: 15px/1 var(--mono);
+}
+
+.zoom button + button {
+  border-top: 1px solid var(--line);
+}
+
+.pan button + button {
+  border-left: 1px solid var(--line);
+}
+
+.zoom button:hover,
+.pan button:hover {
+  background: #14241a;
+  color: var(--bright);
+}
+
+.mapCredit {
+  position: absolute;
+  left: 8px;
+  bottom: 6px;
+  color: var(--soft);
+  font: 10px var(--mono);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* варианты карты отличаются формой, не палитрой */
+.canvas[data-map-style="district"] .road {
+  stroke-width: 26;
+}
+
+.canvas[data-map-style="district"] .roadEdge {
+  stroke-width: 30;
+}
+
+.canvas[data-map-style="transit"] .road {
+  stroke-width: 3;
+}
+
+.canvas[data-map-style="transit"] .roadEdge {
+  stroke-width: 6;
+}
+
+.canvas[data-map-style="transit"] .metro {
+  stroke-width: 10;
+  stroke-dasharray: none;
+  opacity: 0.6;
+}
+
+.canvas[data-map-style="atlas"] .road {
+  stroke-dasharray: 6 5;
+  stroke-width: 10;
+}
+
+.canvas[data-map-style="atlas"] .gridLine {
+  opacity: 0.8;
+}
+
+.canvas[data-map-style="night"] {
+  --ground: #050906;
+  --block: #08100b;
+}
+
+/* карточка выбранного места */
+.placeInfo {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  padding: 7px 10px;
+  border-top: 1px solid var(--line);
+  background: var(--win);
+  font-size: 12px;
+}
+
+.placeInfo b {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.placeInfo span {
+  color: var(--soft);
+}
+
+.placeInfo small {
+  margin-left: auto;
+  padding: 1px 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--mid);
+  font: 10px var(--mono);
+}
+
+.placeInfo p {
+  width: 100%;
+  margin: 0;
+  color: var(--soft);
+}
+
+.placeInfo a {
+  color: var(--mid);
+}
+
+.mobilePlaces {
+  display: none;
+}
+
+/* ---------- панель задания ---------- */
+
+.missionPanel {
+  min-width: 0;
+  overflow: auto;
+  padding: 12px 14px 16px;
+  border-left: 1px solid var(--line);
+  background: var(--win2);
+  overflow-wrap: anywhere;
+}
+
+.missionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eyebrow {
+  color: var(--mid);
+  font: 11px var(--mono);
+  letter-spacing: 0.08em;
+}
+
+.eyebrow::before {
+  content: "> ";
+  color: var(--bright);
+}
+
+.missionTop button {
+  padding: 2px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: none;
+  color: var(--soft);
+  font-size: 12px;
+}
+
+.missionTop button[aria-pressed="true"] {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--ink);
+}
+
+.missionPanel h3 {
+  margin: 8px 0 4px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.missionPanel > .korean {
+  margin: 6px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.brief {
+  margin: 6px 0 12px;
+  color: var(--soft);
+  font-size: 12.5px;
+}
+
+.hint {
+  margin: 10px 0;
+  color: var(--soft);
+  font-size: 12px;
+}
+
+.hint summary {
+  color: var(--mid);
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.hint .korean {
+  margin: 6px 0 2px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.hint p {
+  margin: 2px 0;
+}
+
+/* кнопки как в ОС */
+.primary,
+.actions > button,
+.success button,
+.builder button,
+.callCard button {
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #14241a;
+  color: var(--text);
+  font-size: 12.5px;
+}
+
+.actions > button:not(:disabled):hover,
+.success button:hover,
+.builder button:not(:disabled):hover,
+.callCard button:hover {
+  border-color: var(--green);
+}
+
+.primary {
+  border-color: var(--green) !important;
+  background: var(--green) !important;
+  color: var(--ink) !important;
+  font-weight: 600;
+}
+
+.primary:not(:disabled):hover {
+  background: var(--mid) !important;
+}
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 8px;
+  margin: 10px 0 6px;
+  color: var(--soft);
+  font: 11px var(--mono);
+}
+
+.progress > div {
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.progress i {
+  display: block;
+  height: 100%;
+  background: var(--bright);
+  box-shadow: 0 0 6px var(--bright);
+  transition: width 0.25s;
+}
+
+.instructions {
+  margin: 4px 0;
+}
+
+.instruction {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line2);
+}
+
+.instruction > span {
+  flex: none;
+  padding-top: 2px;
+  color: var(--mid);
+  font: 11px var(--mono);
+}
+
+.instruction p {
+  margin: 0;
+}
+
+.instruction .korean {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.instruction p:not(.korean) {
+  margin-top: 2px;
+  color: var(--soft);
+  font-size: 12px;
+}
+
+/* реплика брата — как входящее в 메시지 */
+.message {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border-bottom-left-radius: 4px;
+  background: #14241a;
+  color: #e0f8e8;
+}
+
+.message > b {
+  display: block;
+  color: var(--mid);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.message p {
+  margin: 3px 0 0;
+  font-size: 12.5px;
+}
+
+.message .korean {
+  font-size: 14.5px;
+}
+
+.message > p:not(.korean) {
+  color: var(--soft);
+}
+
+.app[data-layout="chat"] .instruction {
+  margin: 6px 0;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 12px;
+  border-bottom-left-radius: 4px;
+  background: #14241a;
+}
+
+.field {
+  display: block;
+  margin: 10px 0;
+  color: var(--soft);
+  font: 11px var(--mono);
+}
+
+.field select,
+.field textarea {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--panel);
+  color: var(--text);
+  font: 13px var(--sans);
+}
+
+.field select {
+  height: 30px;
+  padding: 0 8px;
+}
+
+.field textarea {
+  min-height: 66px;
+  padding: 8px 10px;
+  resize: vertical;
+  font-family: var(--font-noto-sans-kr, var(--sans));
+  caret-color: var(--bright);
+}
+
+.formula {
+  padding: 8px 10px;
+  border-left: 2px solid var(--mid);
+  background: var(--panel);
+}
+
+.formula small {
+  color: var(--soft);
+  font: 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.formula p {
+  margin: 3px 0 0;
+  font-size: 13px;
+}
+
+.builder > p {
+  margin: 0 0 6px;
+  color: var(--soft);
+  font: 11px var(--mono);
+}
+
+.builder > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.builder > div button {
+  padding: 5px 9px;
+  font-family: var(--font-noto-sans-kr, var(--sans));
+  font-size: 13.5px;
+}
+
+.builder output {
+  display: block;
+  min-height: 38px;
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: var(--panel);
+  color: var(--bright);
+  font: 14px var(--font-noto-sans-kr, var(--sans));
+}
+
+.selected {
+  margin: 10px 0;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--soft);
+  font-size: 12px;
+}
+
+.selected b {
+  color: var(--bright);
+}
+
+.feedbackOk,
+.feedbackError {
+  margin: 10px 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 12.5px;
+}
+
+.feedbackOk {
+  border-left: 2px solid var(--bright);
+  background: #0f2a19;
+  color: var(--text);
+}
+
+.feedbackError {
+  border-left: 2px solid var(--red);
+  background: #2a1513;
+  color: #f2c7c2;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.actions .primary {
+  flex: 1;
+}
+
+.routeList {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: route;
+  font-size: 13px;
+}
+
+.routeList li {
+  counter-increment: route;
+  padding: 3px 0;
+  font-family: var(--font-noto-sans-kr, var(--sans));
+}
+
+.routeList li::before {
+  content: counter(route) " → ";
+  color: var(--mid);
+  font: 11px var(--mono);
+}
+
+.success {
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  background: #0f2a19;
+}
+
+.success b {
+  color: var(--bright);
+  font-size: 14px;
+}
+
+.success p {
+  margin: 6px 0 10px;
+  color: var(--soft);
+  font-size: 12.5px;
+}
+
+.success button {
+  margin: 0 6px 0 0;
+}
+
+.history {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.history > b {
+  color: var(--soft);
+  font: 11px var(--mono);
+}
+
+.history p {
+  margin: 6px 0 0;
+  padding: 6px 10px;
+  border-radius: 12px;
+  border-bottom-right-radius: 4px;
+  background: var(--green);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.callCard {
+  margin-top: 10px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  text-align: center;
+}
+
+.callCard > div {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 8px;
+  border: 1px solid var(--green);
+  border-radius: 50%;
+  background: #0f2a19;
+  color: var(--bright);
+  font-family: var(--font-noto-sans-kr, var(--sans));
+}
+
+.callCard > b {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+}
+
+/* ---------- узкое окно ---------- */
+
+@container route-map (max-width: 800px) {
+  .workspace,
+  .app[data-layout] .workspace {
+    grid-template-columns: minmax(0, 1fr) 250px;
+  }
+
+  .app[data-layout] .missionPanel,
+  .app[data-layout] .mapPanel {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .app[data-layout] .missionPanel {
+    border-right: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header select {
+    max-width: 160px;
+  }
+
+  .transportFacts > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@container route-map (max-width: 520px) {
+  .workspace,
+  .app[data-layout] .workspace {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .mapPanel {
+    flex: none;
+    height: 46%;
+    min-height: 230px;
+  }
+
+  .app[data-layout] .missionPanel {
+    flex: 1;
+    overflow: visible;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .header > b {
+    display: none;
+  }
+
+  .header select {
+    flex: 1;
+    max-width: none;
+  }
+
+  .mapHeading span {
+    display: none;
+  }
+
+  .mapCredit {
+    display: none;
+  }
+}
+
+@container route-map (max-width: 430px) {
+  .placeKo {
+    font-size: 19px;
+  }
+
+  .placeRu {
+    display: none;
+  }
+
+  .mobilePlaces {
+    flex: none;
+    display: flex;
+    gap: 5px;
+    padding: 6px;
+    overflow-x: auto;
+    border-top: 1px solid var(--line);
+    background: var(--panel);
+  }
+
+  .mobilePlaces button {
+    min-height: 36px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--win2);
+    color: var(--text) !important;
+    font: 13px var(--font-noto-sans-kr, var(--sans));
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route,
+  .goalPulse,
+  .actorPulse {
+    animation: none;
+  }
+}

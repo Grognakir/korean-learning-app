@@ -1,0 +1,316 @@
+/* Заметки (메모): список слева, заметка справа — минимум служебного текста. */
+
+.notes {
+  container: mission-notes / inline-size;
+  height: 100%;
+  overflow: hidden;
+  background: var(--win2);
+  color: var(--text);
+  font: 13px/1.45 var(--sans);
+}
+
+.notes button {
+  font: inherit;
+  cursor: var(--cursor-pointer, pointer);
+}
+
+.notes button:focus-visible {
+  outline: 2px solid var(--bright);
+  outline-offset: 2px;
+}
+
+.body {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  overflow: hidden;
+}
+
+/* ---------- список ---------- */
+
+.sidebar {
+  min-width: 0;
+  overflow: auto;
+  border-right: 1px solid var(--line);
+}
+
+.noteList {
+  display: grid;
+  padding: 6px 0;
+}
+
+.noteList > button {
+  min-width: 0;
+  padding: 9px 14px;
+  border: 0;
+  border-left: 2px solid transparent;
+  background: none;
+  color: var(--text);
+  text-align: left;
+}
+
+.noteList > button:hover {
+  background: #111f16;
+}
+
+.noteList > button.selected {
+  border-left-color: var(--bright);
+  background: #14241a;
+}
+
+.noteList > button[data-done="true"] {
+  opacity: 0.55;
+}
+
+.noteList b {
+  display: block;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.noteList small {
+  display: block;
+  color: var(--soft);
+  font-size: 12px;
+}
+
+.empty {
+  padding: 20px 14px;
+  color: var(--soft);
+  font-size: 12.5px;
+  text-align: center;
+}
+
+/* ---------- заметка ---------- */
+
+.note {
+  min-width: 0;
+  overflow: auto;
+  padding: 16px 20px 20px;
+  overflow-wrap: anywhere;
+}
+
+.back {
+  display: none;
+  margin-bottom: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--mid);
+  font-size: 13px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.title h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.go {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1.5px solid var(--green);
+  border-radius: 6px;
+  background: none;
+  color: var(--bright);
+  font: 600 16px/1 var(--sans) !important;
+}
+
+.go:hover {
+  background: var(--green);
+  color: var(--ink);
+}
+
+.said {
+  position: relative;
+  margin-bottom: 14px;
+  padding: 2px 34px 2px 12px;
+  border-left: 2px solid var(--green);
+}
+
+.said p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.said p:last-of-type {
+  margin-bottom: 0;
+}
+
+.said small {
+  display: block;
+  color: var(--soft);
+  font-size: 12.5px;
+}
+
+.ru {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: none;
+  color: var(--soft);
+  font: 600 10px/1.6 var(--mono) !important;
+}
+
+.ru[aria-pressed="true"] {
+  border-color: var(--green);
+  color: var(--bright);
+}
+
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  font-size: 14.5px;
+}
+
+.check {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--green);
+  border-radius: 4px;
+  color: var(--ink);
+  font: 700 11px/1 var(--mono);
+}
+
+.steps [data-status="done"] .check {
+  background: var(--green);
+}
+
+.steps [data-status="attention"] .check {
+  border-color: var(--amber);
+}
+
+.steps [data-status="done"] > span:last-child {
+  color: var(--soft);
+  text-decoration: line-through;
+  text-decoration-color: var(--green);
+}
+
+/* ---------- варианты из /os/lab: та же палитра, другая форма ---------- */
+
+.notes[data-note-style="checklist"] .steps li {
+  margin: 6px 0;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--win);
+}
+
+.notes[data-note-style="cards"] .noteList {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 6px 10px;
+}
+
+.notes[data-note-style="cards"] .noteList > button {
+  min-height: 64px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--win);
+}
+
+.notes[data-note-style="cards"] .noteList > button.selected {
+  border-color: var(--green);
+  background: #14241a;
+}
+
+.notes[data-note-style="cards"] .body {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+}
+
+.notes[data-note-style="journal"] .steps {
+  margin-left: 9px;
+  border-left: 1px solid var(--line);
+}
+
+.notes[data-note-style="journal"] .check {
+  margin-left: -10px;
+  border-radius: 50%;
+  background: var(--win2);
+}
+
+.notes[data-note-style="journal"] .steps [data-status="done"] .check {
+  background: var(--green);
+}
+
+/* ---------- узкое окно ---------- */
+
+@container mission-notes (max-width: 650px) {
+  .body,
+  .notes[data-note-style="cards"] .body {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+
+  .notes[data-note-style="cards"] .noteList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@container mission-notes (max-width: 430px) {
+  .body,
+  .notes[data-note-style="cards"] .body {
+    display: block;
+    overflow: auto;
+  }
+
+  .sidebar {
+    overflow: visible;
+    border-right: 0;
+  }
+
+  .note {
+    overflow: visible;
+    padding: 12px;
+  }
+
+  .notes[data-in-note="false"] .note,
+  .notes[data-in-note="true"] .sidebar {
+    display: none;
+  }
+
+  .back {
+    display: block;
+  }
+}
+
+@media (pointer: coarse) {
+  .noteList > button,
+  .back {
+    min-height: 40px;
+  }
+
+  .go {
+    width: 36px;
+    height: 36px;
+  }
+}

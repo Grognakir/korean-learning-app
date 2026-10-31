@@ -1,3 +1,6 @@
+"use client";
+
+import { useDraft } from "@/lib/useDraft";
 import type { WritingExerciseBlock } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
 import { Manuscript } from "./Manuscript";
@@ -6,10 +9,15 @@ import styles from "./blocks.module.css";
 export function WritingExercise({
   block,
   id,
+  textbookSlug,
+  lessonNumber,
 }: {
   block: WritingExerciseBlock;
   id?: string;
+  textbookSlug?: string;
+  lessonNumber?: number;
 }) {
+  const draftKey = `writing:${textbookSlug ?? "book"}:${lessonNumber ?? "lesson"}:${block.id ?? id ?? "writing"}`;
   return (
     <div id={id} className={styles.block}>
       <span className={styles.labelRow}>
@@ -51,7 +59,7 @@ export function WritingExercise({
                   </span>
                 </td>
                 <td className={styles.writingOutlineAnswerCell}>
-                  <textarea className={`${styles.writingOutlineAnswer} kr`} rows={3} />
+                  <OutlineAnswer storageKey={`${draftKey}:outline:${i}`} label={stage.questions.map((q) => q.kr).join(" ")} />
                 </td>
               </tr>
             ))}
@@ -62,7 +70,12 @@ export function WritingExercise({
         {block.manuscript_prompt}
         {block.manuscript_prompt_ru && <LabelInfo translation={block.manuscript_prompt_ru} />}
       </p>
-      <Manuscript />
+      <Manuscript storageKey={`${draftKey}:essay`} />
     </div>
   );
+}
+
+function OutlineAnswer({ storageKey, label }: { storageKey: string; label: string }) {
+  const [value, setValue] = useDraft(storageKey);
+  return <textarea aria-label={label} className={`${styles.writingOutlineAnswer} kr`} rows={3} value={value} onChange={(e) => setValue(e.target.value)} />;
 }

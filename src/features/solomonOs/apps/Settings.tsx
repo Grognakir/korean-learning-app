@@ -1,10 +1,12 @@
 "use client";
 
-import { remove } from "../store";
+import type { OsStore } from "../store";
+import { useOsStore } from "../OsStorage";
 import styles from "../SolomonOs.module.css";
 
 /** Настройки из макета: версия и сброс расположения иконок, окон и переписки. */
 export function Settings() {
+  const store = useOsStore();
   return (
     <div className={`${styles.pad} kr`}>
       <h4>설정</h4>
@@ -18,7 +20,7 @@ export function Settings() {
         type="button"
         className={styles.btn}
         onClick={() => {
-          ["icons3", "windows", "chat"].forEach(remove);
+          resetLayout(store);
           window.location.reload();
         }}
       >
@@ -39,4 +41,8 @@ export function Locked() {
       </div>
     </div>
   );
+}
+
+export function resetLayout(store: OsStore) {
+  ["icons3", "windows"].forEach(store.remove);
 }

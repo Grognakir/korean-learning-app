@@ -6,6 +6,6 @@ export const metadata: Metadata = { title: "Solomon OS" };
 
 /** Полноэкранная игровая ОС: без шапки и нижней панели приложения. */
 export default async function SolomonOsPage() {
-  await requireUser();
-  return <SolomonOsClient />;
+  const { user } = await requireUser();
+  return <SolomonOsClient key={user.id} userId={user.id} />;
 }

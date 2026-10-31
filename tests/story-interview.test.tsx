@@ -80,7 +80,9 @@ describe("StoryGame", () => {
     fireEvent.click(screen.getByRole("button", { name: "남성: 겉옷" }));
     fireEvent.click(screen.getByRole("button", { name: /정장/ }));
     const palette = screen.getByRole("dialog", { name: "Цвет: 정장" });
-    expect((within(palette).getByRole("button", { name: "주세요" }) as HTMLButtonElement).disabled).toBe(true);
+    // Белый выбран сразу — купить можно без выбора цвета.
+    expect(within(palette).getByRole("button", { name: "흰색" }).getAttribute("aria-pressed")).toBe("true");
+    expect((within(palette).getByRole("button", { name: "주세요" }) as HTMLButtonElement).disabled).toBe(false);
     fireEvent.click(within(palette).getByRole("button", { name: /남색/ }));
     fireEvent.click(within(palette).getByRole("button", { name: "주세요" }));
     expect(screen.queryByRole("dialog", { name: "Цвет: 정장" })).toBeNull();

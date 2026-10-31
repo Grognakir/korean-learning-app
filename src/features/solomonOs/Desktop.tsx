@@ -22,7 +22,7 @@ import {
   snap,
   type GridModel,
 } from "./iconGrid";
-import { load, save } from "./store";
+import { useOsStore } from "./OsStorage";
 import styles from "./SolomonOs.module.css";
 
 const MODEL_KEY = "icons3";
@@ -46,6 +46,7 @@ export function Desktop({
   onSize?: (size: { w: number; h: number }) => void;
   children?: ReactNode;
 }) {
+  const { load, save } = useOsStore();
   const deskRef = useRef<HTMLElement>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
   const [saved, setSaved] = useState<GridModel | null>(() =>

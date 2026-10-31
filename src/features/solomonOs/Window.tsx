@@ -12,9 +12,15 @@ const MIN_W = 300;
 const MIN_H = 220;
 
 /** Окно нельзя потерять за краем рабочего стола. */
-export function clampGeo(g: Geo, desk: { w: number; h: number }): Geo {
-  const w = Math.min(Math.max(g.w, MIN_W), Math.max(desk.w, MIN_W));
-  const h = Math.min(Math.max(g.h, MIN_H), Math.max(desk.h, MIN_H));
+export function clampGeo(
+  g: Geo,
+  desk: { w: number; h: number },
+  app?: Pick<OsApp, "minW" | "minH">,
+): Geo {
+  const minW = app?.minW ?? MIN_W;
+  const minH = app?.minH ?? MIN_H;
+  const w = Math.min(Math.max(g.w, minW), Math.max(desk.w, MIN_W));
+  const h = Math.min(Math.max(g.h, minH), Math.max(desk.h, MIN_H));
   return {
     w,
     h,
@@ -55,7 +61,7 @@ export function OsWindow({
 }) {
   const [dragging, setDragging] = useState<string | null>(null);
   const max = state.max || phone;
-  const g = clampGeo(state.g, desk);
+  const g = clampGeo(state.g, desk, app);
 
   /** Общий перетаскиватель: «щит» поверх всего, чтобы курсор не терялся. */
   const drag = (
@@ -112,7 +118,7 @@ export function OsWindow({
       if (k.includes("r")) n.w = g0.w + dx;
       if (k.includes("b")) n.h = g0.h + dy;
       if (k.includes("l")) {
-        const w = Math.max(MIN_W, g0.w - dx);
+        const w = Math.max(app.minW ?? MIN_W, g0.w - dx);
         n.x = g0.x + (g0.w - w);
         n.w = w;
       }
@@ -135,6 +141,7 @@ export function OsWindow({
       role="dialog"
       aria-label={title}
       onPointerDownCapture={onFocus}
+      onFocusCapture={onFocus}
     >
       <div
         className={styles.titlebar}

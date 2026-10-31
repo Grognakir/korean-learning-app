@@ -95,8 +95,9 @@ function ZoneCallout({
   const sx = left ? x : x + w;
   const sy = y + h / 2;
   const ex = sx + dir * 22;
-  const ly = Math.max(24, sy - 40);
-  const lx = left ? Math.min(ex - 24, 96) : Math.max(ex + 24, width - 96);
+  // Не выше 72px от верха картинки: над манекеном переключатель 남성 / 여성.
+  const ly = Math.max(72, sy - 40);
+  const lx = left ? Math.min(ex - 24, 120) : Math.max(ex + 24, width - 96);
   const tx = lx + dir * 28;
 
   return (
@@ -139,6 +140,8 @@ function ZoneCallout({
  * 남성 / 여성 сверху переключают его. */
 export function MannequinRow({
   compact,
+  calloutsLeft = false,
+  zonesHidden = false,
   kinds,
   selected,
   hideCallouts,
@@ -147,6 +150,10 @@ export function MannequinRow({
 }: {
   /** Узкий экран игры: один манекен, выноски вправо. */
   compact: boolean;
+  /** Выноски обоих манекенов влево: справа от них открыта полка. */
+  calloutsLeft?: boolean;
+  /** Скрыть кнопки зон (их накрыла бы шторка с полкой). */
+  zonesHidden?: boolean;
   kinds: MannequinKind[];
   selected: { kind: MannequinKind; zone: ZoneId } | null;
   hideCallouts: boolean;
@@ -170,6 +177,29 @@ export function MannequinRow({
     zone: ZoneId;
   } | null>(null);
   const [front, setFront] = useState<MannequinKind>(kinds[0]);
+  // На телефоне зоны — столбиком слева; если в высоту не помещаются, вторая
+  // половина встаёт столбиком справа (кнопка 30px, под палец 44px, +
+  // промежуток 5px; сверху 46px под вкладки, снизу 4px).
+  const rowRef = useRef<HTMLDivElement>(null);
+  const [perColumn, setPerColumn] = useState(Infinity);
+  useEffect(() => {
+    const el = rowRef.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const pitch = window.matchMedia?.("(pointer: coarse)").matches ? 49 : 35;
+    const ro = new ResizeObserver(() =>
+      setPerColumn(Math.max(1, Math.floor((el.clientHeight - 50 + 5) / pitch))),
+    );
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  const zones = ZONE_BY_INDEX.filter((z): z is ZoneId =>
+    Boolean(z && ZONE_BOXES[front][z]),
+  );
+  const split = compact && zones.length > perColumn;
+  const half = split ? Math.ceil(zones.length / 2) : zones.length;
+  const zoneGroups = zonesHidden
+    ? []
+    : [zones.slice(0, half), zones.slice(half)];
   // Кнопки поверх сцены не должны выбирать зону манекена под собой.
   const own = { onClick: stop, onPointerMove: stop };
 
@@ -183,7 +213,8 @@ export function MannequinRow({
 
   return (
     <div
-      className={`${styles.mannequins} ${hover ? styles.mannequinHot : ""}`}
+      ref={rowRef}
+      className={`${styles.mannequins} ${hover ? styles.mannequinHot : ""} ${split ? styles.mqSplit : ""}`}
       onPointerMove={(e) => setHover(hit(e))}
       onPointerLeave={() => setHover(null)}
       onClick={(e) => {
@@ -201,45 +232,54 @@ export function MannequinRow({
           }}
           selected={selected?.kind === kind ? selected.zone : null}
           hover={hover?.kind === kind ? hover.zone : null}
-          hideCallouts={hideCallouts}
+          // Зоны с двух сторон: выбранная подсвечена кнопкой, выноске некуда.
+          hideCallouts={hideCallouts || split}
           onSelect={onSelect}
           className={kind === front ? styles.mqFront : styles.mqBack}
           compact={compact}
+          calloutsLeft={calloutsLeft}
         />
       ))}
       {/* На телефоне мелкие зоны (серьги, шарф) удобнее выбирать списком. */}
-      <div
-        className={styles.mqZones}
-        role="group"
-        aria-label="Зоны манекена"
-        {...own}
-      >
-        {ZONE_BY_INDEX.filter((z): z is ZoneId =>
-          Boolean(z && ZONE_BOXES[front][z]),
-        ).map((zone) => (
-          <button
-            key={zone}
-            type="button"
-            className={`${styles.mqZone} kr`}
-            aria-pressed={selected?.kind === front && selected.zone === zone}
-            data-hot={hover?.kind === front && hover.zone === zone}
-            onClick={() => handles.current.get(front)?.select(zone)}
-            onPointerEnter={(e) => {
-              if (e.pointerType === "mouse") setHover({ kind: front, zone });
-            }}
-            onPointerLeave={(e) => {
-              if (e.pointerType === "mouse") setHover(null);
-            }}
-            onFocus={(e) => {
-              if (e.currentTarget.matches(":focus-visible"))
-                setHover({ kind: front, zone });
-            }}
-            onBlur={() => setHover(null)}
-          >
-            {ZONES[zone].ko}
-          </button>
-        ))}
-      </div>
+      {zoneGroups.map(
+        (group, side) =>
+          group.length > 0 && (
+            <div
+              key={side}
+              className={`${styles.mqZones} ${side ? styles.mqZonesRight : ""}`}
+              role="group"
+              aria-label="Зоны манекена"
+              {...own}
+            >
+              {group.map((zone) => (
+                <button
+                  key={zone}
+                  type="button"
+                  className={`${styles.mqZone} kr`}
+                  aria-pressed={
+                    selected?.kind === front && selected.zone === zone
+                  }
+                  data-hot={hover?.kind === front && hover.zone === zone}
+                  onClick={() => handles.current.get(front)?.select(zone)}
+                  onPointerEnter={(e) => {
+                    if (e.pointerType === "mouse")
+                      setHover({ kind: front, zone });
+                  }}
+                  onPointerLeave={(e) => {
+                    if (e.pointerType === "mouse") setHover(null);
+                  }}
+                  onFocus={(e) => {
+                    if (e.currentTarget.matches(":focus-visible"))
+                      setHover({ kind: front, zone });
+                  }}
+                  onBlur={() => setHover(null)}
+                >
+                  {ZONES[zone].ko}
+                </button>
+              ))}
+            </div>
+          ),
+      )}
       <div
         className={styles.mqThumbs}
         role="group"
@@ -292,6 +332,7 @@ export function Mannequin({
   className,
   ref,
   compact = false,
+  calloutsLeft = false,
 }: {
   kind: MannequinKind;
   selected: ZoneId | null;
@@ -302,6 +343,7 @@ export function Mannequin({
   className?: string;
   ref?: Ref<MannequinHandle>;
   compact?: boolean;
+  calloutsLeft?: boolean;
 }) {
   const boxRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<ZoneMap | null>(null);
@@ -385,19 +427,15 @@ export function Mannequin({
                 />
               ),
           )}
-        {/* Выноска выбранной зоны остаётся, у наведённой появляется вторая. */}
-        {!hideCallouts &&
-          [selected, hover !== selected ? hover : null].map(
-            (zone) =>
-              zone && (
-                <ZoneCallout
-                  key={zone}
-                  kind={kind}
-                  zone={zone}
-                  left={kind === "male" && !compact}
-                />
-              ),
-          )}
+        {/* Одна выноска: у наведённой зоны, иначе у выбранной — две
+            подписи рядом налезали бы друг на друга. */}
+        {!hideCallouts && (hover ?? selected) && (
+          <ZoneCallout
+            kind={kind}
+            zone={(hover ?? selected)!}
+            left={!compact && (kind === "male" || calloutsLeft)}
+          />
+        )}
       </div>
       <div className={styles.srOnly}>
         {zones.map((zone) => (

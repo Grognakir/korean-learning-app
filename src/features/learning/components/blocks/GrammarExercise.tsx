@@ -230,7 +230,6 @@ export function GrammarExercise({
       const next = { ...prev, [itemIndex]: nextValues };
       // Правки после проверки — снова «непроверено», пока не нажмут «Проверить».
       setChecked((prevChecked) => {
-        if (!prevChecked[itemIndex]) return prevChecked;
         const nextC = { ...prevChecked, [itemIndex]: false };
         persist(next, nextC);
         return nextC;

@@ -247,7 +247,7 @@ export function PageBlocks({
               <ComprehensionExercise key={i} id={block.id} block={block} />
             );
           case "writing_exercise":
-            return <WritingExercise key={i} id={block.id} block={block} />;
+            return <WritingExercise key={i} id={block.id} block={block} textbookSlug={textbookSlug} lessonNumber={lessonNumber} />;
           case "pronunciation":
             return <Pronunciation key={i} id={block.id} block={block} />;
           default:

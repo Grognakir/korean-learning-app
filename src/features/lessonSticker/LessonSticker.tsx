@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useTrainerStorageKey } from "@/lib/StorageUser";
 import { Modal } from "@/components/ui/Modal";
 import type { LessonSticker as LessonStickerConfig } from "@/features/learning/types";
 import { CHARACTERS, emotionSrc, type Emotion } from "./characters";
@@ -12,8 +13,9 @@ import styles from "./LessonSticker.module.css";
 /** Кнопка-стикер урока в правом нижнем углу экрана. Пока тренажёр не
  * пройден, стикер время от времени «звонит». */
 export function LessonSticker({ config }: { config: LessonStickerConfig }) {
+  const storageKey = useTrainerStorageKey(config.trainer);
   const character = CHARACTERS[config.character];
-  const trainer = TRAINERS[config.trainer];
+  const trainer = TRAINERS[storageKey];
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(false);
   const [beat, setBeat] = useState<"idle" | "blink" | "ringing">("idle");
@@ -21,24 +23,24 @@ export function LessonSticker({ config }: { config: LessonStickerConfig }) {
 
   // Перезагрузка страницы не сворачивает игру: окно открывается снова.
   useEffect(() => {
-    if (wasOpen(config.trainer)) {
+    if (wasOpen(storageKey)) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setOpen(true);
     }
-  }, [config.trainer]);
+  }, [storageKey]);
 
   const openGame = () => {
-    markOpen(config.trainer);
+    markOpen(storageKey);
     setOpen(true);
   };
   const closeGame = () => {
-    markClosed(config.trainer);
+    markClosed(storageKey);
     setOpen(false);
   };
 
   const doneCount = useSyncExternalStore(
     subscribeProgress,
-    () => readProgress(config.trainer).length,
+    () => readProgress(storageKey).length,
     () => 0,
   );
   const allDone = Boolean(trainer) && doneCount >= trainer.total;

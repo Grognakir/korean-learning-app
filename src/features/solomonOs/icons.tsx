@@ -2,6 +2,7 @@
  * контур — currentColor (тёмный «ink»). */
 
 export type IconName =
+  | "notes"
   | "msg"
   | "call"
   | "map"
@@ -23,6 +24,10 @@ export type IconName =
 const S = { stroke: "currentColor", strokeLinejoin: "round" as const };
 
 const PATHS: Record<IconName, { box: number; body: React.ReactNode }> = {
+  notes: {
+    box: 24,
+    body: <><rect x="3" y="2" width="18" height="20" rx="2" fill="#22a354"/><path d="M3 7h18" stroke="#0a632c" strokeWidth="1.5"/><path d="M7 11h10M7 15h10M7 19h7" stroke="#04150a" strokeWidth="1.3"/></>,
+  },
   msg: {
     box: 24,
     body: (
@@ -267,6 +272,7 @@ export function OsIcon({
 /** Иконка приложения ОС — картинка (public/images/solomon-os/apps, рисовал
  * Codex), @2x для чётких экранов. */
 export function AppIcon({ id, className }: { id: string; className?: string }) {
+  if (id === "notes") return <OsIcon name="notes" className={className} />;
   const base = `/images/solomon-os/apps/${id}`;
   return (
     // eslint-disable-next-line @next/next/no-img-element

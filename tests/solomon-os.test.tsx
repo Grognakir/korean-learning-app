@@ -134,8 +134,9 @@ describe("Solomon OS: звонок 지아 → магазин → встреча"
     const panel = screen.getByRole("dialog", { name: "Уведомления" });
     expect(within(panel).getByText("부재중 전화 1통")).toBeTruthy();
     expect(screen.getByRole("button", { name: "Уведомления" })).toBeTruthy();
+    // Пропущенный — как на телефоне: нажатие сразу перезванивает.
     fireEvent.click(within(panel).getByRole("button", { name: /부재중 전화 1통/ }));
-    expect(screen.getByRole("dialog", { name: "전화" })).toBeTruthy();
+    expect(screen.getByRole("dialog", { name: "전화 — 지아" })).toBeTruthy();
     vi.useRealTimers();
   });
 });

@@ -123,7 +123,7 @@ async function render(id: string, color: ColorId, pattern: PatternId): Promise<s
     if (!marks) continue;
     // Линии и швы исходника остаются чистыми.
     const clear = Math.min(1, Math.max(0, (light - 0.42) / 0.25));
-    const p = (marks[i + 3] / 255) * (inkA / 255) * m * clear;
+    const p = (marks[i + 3] / 255) * (inkA / 255) * m * clear * (out[i + 3] / 255);
     if (p === 0) continue;
     // Метка в складке темнеет так же, как ткань под ней.
     const shade = Math.min(1, light / 0.93);

@@ -2,27 +2,12 @@
    перенесён из docs/dev_docs/design/solomon-os/desktop.html. */
 
 .os {
-  --bg: #0d1410;
-  --panel: #0a0f0c;
-  --win: #101a14;
-  --win2: #0e1712;
-  --line: #1d3326;
-  --line2: #16261c;
-  --bright: #00ff66;
-  --mid: #0fbf4f;
-  --green: #22a354;
-  --ink: #04150a;
-  --text: #c9f7d8;
-  --soft: #8fbfa0;
-  --amber: #e0a23a;
-  --red: #e2564d;
-  --sans:
-    system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    sans-serif;
-  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  composes: theme from "./OsTheme.module.css";
 
+  /* Видимая часть экрана (над клавиатурой iOS) — useKeyboardViewport. */
   position: fixed;
-  inset: 0;
+  inset: var(--vv-top, 0px) 0 auto 0;
+  height: var(--vv-h, 100%);
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -1342,4 +1327,160 @@
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* ---------- сенсорные устройства (телефон, планшет) ---------- */
+
+/* Всё, во что тыкают пальцем, — не меньше 44px, как в iOS. */
+.os:is([data-device="phone"], [data-device="tablet"]) .panel {
+  height: 48px;
+  gap: 4px;
+  padding: 0 4px 0 8px;
+  font-size: 14px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .task {
+  padding: 9px 12px;
+  font-size: 14px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .task svg,
+.os:is([data-device="phone"], [data-device="tablet"]) .task img {
+  width: 18px;
+  height: 18px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .bell,
+.os:is([data-device="phone"], [data-device="tablet"]) .exit {
+  width: 44px;
+  height: 44px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .bell svg,
+.os:is([data-device="phone"], [data-device="tablet"]) .exit svg {
+  width: 20px;
+  height: 20px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .titlebar {
+  height: 48px;
+  gap: 10px;
+  padding: 0 2px 0 14px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .titleIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .btns button {
+  width: 44px;
+  height: 44px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .btns svg {
+  width: 18px;
+  height: 18px;
+}
+
+.os:is([data-device="phone"], [data-device="tablet"]) .decline {
+  min-height: 56px;
+  padding: 16px 28px;
+  font-size: 16px;
+}
+
+/* Планшет: окна остаются окнами, ручки изменения размера под палец. */
+.os[data-device="tablet"] .resize_r,
+.os[data-device="tablet"] .resize_l {
+  top: 48px;
+  width: 20px;
+}
+
+.os[data-device="tablet"] .resize_r {
+  right: -10px;
+}
+
+.os[data-device="tablet"] .resize_l {
+  left: -10px;
+}
+
+.os[data-device="tablet"] .resize_b {
+  bottom: -10px;
+  height: 20px;
+}
+
+.os[data-device="tablet"] .resize_br,
+.os[data-device="tablet"] .resize_bl {
+  width: 32px;
+  height: 32px;
+}
+
+/* Уведомление на телефоне и планшете — карточка как в iOS: сверху по центру,
+   строка приложения («전화 · 지금»), под ней аватар и текст. Убирается
+   смахиванием вверх. */
+.toast.toastMobile {
+  top: 8px;
+  left: 0;
+  right: 0;
+  width: min(560px, calc(100% - 16px));
+  margin-inline: auto;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  padding: 12px 16px 14px;
+  border-radius: 20px;
+  background: rgba(20, 32, 25, 0.94);
+}
+
+.toastApp {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--soft);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.toastAppIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  fill: var(--mid);
+  color: var(--ink);
+}
+
+.toastApp time {
+  margin-left: auto;
+}
+
+.toastMobile .ava {
+  width: 44px;
+  height: 44px;
+}
+
+.toastMobile .toastBody b {
+  font-size: 16px;
+}
+
+.toastMobile .toastBody small {
+  font-size: 15px;
+}
+
+/* Телефон, открыта экранная клавиатура: панель ОС и заголовок окна прячутся —
+   всё место над клавиатурой отдано приложению (useKeyboardViewport). */
+.os[data-device="phone"][data-keyboard="open"] .panel,
+.os[data-device="phone"][data-keyboard="open"] .titlebar {
+  display: none;
+}
+
+/* Телефон, в магазине открыт ввод со своей клавиатурой: панель ОС и
+   заголовок окна прячутся, место отдано подсказкам (выход — кнопкой ←). */
+.os[data-device="phone"]:has([data-typing-panel]) .panel,
+.os[data-device="phone"]:has([data-typing-panel]) .titlebar {
+  display: none;
 }

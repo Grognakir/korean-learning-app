@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTrainerStorageKey } from "@/lib/StorageUser";
 import { readGame } from "../session";
 import { EPISODES } from "./episodeList";
 import { StoryGame } from "./StoryGame";
@@ -14,9 +15,9 @@ export function pickEpisode(last: string | null, random: () => number = Math.ran
   return pool[Math.floor(random() * pool.length)];
 }
 
-function readLast(): string | null {
+function readLast(storageKey: string): string | null {
   try {
-    return localStorage.getItem(LAST_KEY);
+    return localStorage.getItem(storageKey);
   } catch {
     return null;
   }
@@ -24,23 +25,25 @@ function readLast(): string | null {
 
 /** Стикер урока 10: при каждом открытии — случайная ситуация с одеждой. */
 export function InterviewGame() {
+  const progressKey = useTrainerStorageKey("interview");
+  const lastKey = progressKey === "interview" ? LAST_KEY : `${LAST_KEY}:${progressKey}`;
   const [episode, setEpisode] = useState(() => {
     // После перезагрузки продолжаем ту же ситуацию, а не берём новую.
-    const saved = readGame("interview") as { episodeId?: unknown } | null;
-    return EPISODES.find((e) => e.id === saved?.episodeId) ?? pickEpisode(readLast());
+    const saved = readGame(progressKey) as { episodeId?: unknown } | null;
+    return EPISODES.find((e) => e.id === saved?.episodeId) ?? pickEpisode(readLast(lastKey));
   });
 
   useEffect(() => {
     try {
-      localStorage.setItem(LAST_KEY, episode.id);
+      localStorage.setItem(lastKey, episode.id);
     } catch {}
-  }, [episode.id]);
+  }, [episode.id, lastKey]);
 
   return (
     <StoryGame
       key={episode.id}
       episode={episode}
-      progressKey="interview"
+      progressKey={progressKey}
       onRestart={() => setEpisode(pickEpisode(episode.id))}
     />
   );

@@ -1,0 +1,20 @@
+.theme {
+  --bg: #0d1410;
+  --panel: #0a0f0c;
+  --win: #101a14;
+  --win2: #0e1712;
+  --line: #1d3326;
+  --line2: #16261c;
+  --bright: #00ff66;
+  --mid: #0fbf4f;
+  --green: #22a354;
+  --ink: #04150a;
+  --text: #c9f7d8;
+  --soft: #8fbfa0;
+  --amber: #e0a23a;
+  --red: #e2564d;
+  --sans:
+    system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}

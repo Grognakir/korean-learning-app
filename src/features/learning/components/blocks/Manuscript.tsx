@@ -1,5 +1,6 @@
 "use client";
 
+import { useDraft } from "@/lib/useDraft";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { layoutManuscript, MANUSCRIPT_COLS, type ManuscriptCell } from "./manuscriptGrid";
 import styles from "./blocks.module.css";
@@ -15,8 +16,11 @@ const ROW_NUMBER_EVERY_CELLS = 100;
 // фокуса между клетками на каждый слог. Клик по клетке ставит курсор
 // textarea сразу после её содержимого (см. manuscriptGrid.ts), поэтому
 // Backspace удаляет символ выбранной клетки.
-export function Manuscript({ rows: minRows = 20 }: { rows?: number }) {
-  const [value, setValue] = useState("");
+export function Manuscript({ rows: minRows = 20, storageKey }: { rows?: number; storageKey?: string }) {
+  const [localValue, setLocalValue] = useState("");
+  const [draft, setDraft] = useDraft(storageKey ?? "manuscript:unbound");
+  const value = storageKey ? draft : localValue;
+  const setValue = storageKey ? setDraft : setLocalValue;
   const [caret, setCaret] = useState(0);
   const [isFocused, setIsFocused] = useState(false);
   const [columns, setColumns] = useState(MANUSCRIPT_COLS);

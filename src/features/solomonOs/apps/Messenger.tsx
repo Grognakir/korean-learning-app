@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { JIA_AVATAR } from "../apps";
-import { load, save } from "../store";
+import { createOsStore, type OsStore } from "../store";
+import { useOsStore } from "../OsStorage";
 import styles from "../SolomonOs.module.css";
 
 /** Тестовый диалог из макета desktop.html (заглушка до пролога). */
@@ -51,6 +52,7 @@ export type ChatState = {
   node: string;
   log: ["in" | "out", string, string][];
   shown: boolean;
+  pending: [string, string][];
 };
 
 export const CHAT_KEY = "chat";
@@ -58,11 +60,14 @@ export const freshChat = (): ChatState => ({
   node: "start",
   log: [],
   shown: false,
+  pending: [...SCRIPT.start.jia],
 });
 
-export function readChat(): ChatState {
-  const c = load<ChatState | null>(CHAT_KEY, null);
-  return c && SCRIPT[c.node] && Array.isArray(c.log) ? c : freshChat();
+export function readChat(store: OsStore = createOsStore()): ChatState {
+  const c = store.load<ChatState | null>(CHAT_KEY, null);
+  if (!c || !SCRIPT[c.node] || !Array.isArray(c.log)) return freshChat();
+  const delivered = c.log.slice(c.log.findLastIndex(([who]) => who === "out") + 1).filter(([who]) => who === "in").length;
+  return { ...c, pending: Array.isArray(c.pending) ? c.pending : SCRIPT[c.node].jia.slice(delivered) };
 }
 
 export function Messenger({
@@ -72,59 +77,36 @@ export function Messenger({
   phone: boolean;
   onRead: () => void;
 }) {
-  // Первое открытие: переписка начинается с реплик 지아.
-  const [intro] = useState(() => !readChat().shown);
-  const [chat, setChat] = useState<ChatState>(() => ({
-    ...readChat(),
-    shown: true,
-  }));
+  const store = useOsStore();
+  const [chat, setChat] = useState<ChatState>(() => ({ ...readChat(store), shown: true }));
   const [inChat, setInChat] = useState(phone);
   const [showRu, setShowRu] = useState(false);
-  const [typing, setTyping] = useState(false);
   const msgsRef = useRef<HTMLDivElement>(null);
-  const queue = useRef<[string, string][]>([]);
-  const introStarted = useRef(false);
+  const onReadRef = useRef(onRead);
+  const typing = chat.pending.length > 0;
 
-  useEffect(() => save(CHAT_KEY, chat), [chat]);
+  useEffect(() => store.save(CHAT_KEY, chat), [chat, store]);
   useEffect(() => {
-    msgsRef.current?.scrollTo({ top: msgsRef.current.scrollHeight });
+    msgsRef.current?.scrollTo?.({ top: msgsRef.current.scrollHeight });
   }, [chat.log.length, typing]);
-
-  // 지아 «печатает»: реплики из очереди по одной.
-  const say = (lines: [string, string][]) => {
-    queue.current = [...lines];
-    const step = (): void => {
-      const next = queue.current.shift();
-      if (!next) {
-        setTyping(false);
-        return;
-      }
-      setTyping(true);
-      setTimeout(() => {
-        setChat((c) => ({ ...c, log: [...c.log, ["in", next[0], next[1]]] }));
-        step();
-      }, 900);
-    };
-    setTimeout(step, 0);
-  };
-
+  useEffect(() => { onReadRef.current(); }, []);
   useEffect(() => {
-    onRead();
-    if (intro && !introStarted.current) {
-      introStarted.current = true;
-      say(SCRIPT.start.jia);
-    }
-    // только при открытии
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (!chat.pending.length) return;
+    const timer = setTimeout(() => {
+      setChat((c) => {
+        const [next, ...pending] = c.pending;
+        return next ? { ...c, pending, log: [...c.log, ["in", next[0], next[1]]] } : c;
+      });
+    }, 900);
+    return () => clearTimeout(timer);
+  }, [chat.pending]);
 
   const node = SCRIPT[chat.node];
   const last = chat.log.at(-1);
 
   const answer = (i: number) => {
     const [k, r, to] = node.replies[i];
-    setChat((c) => ({ ...c, node: to, log: [...c.log, ["out", k, r]] }));
-    say(SCRIPT[to].jia);
+    setChat((c) => ({ ...c, node: to, log: [...c.log, ["out", k, r]], pending: [...SCRIPT[to].jia] }));
   };
 
   return (
@@ -234,7 +216,6 @@ export function Messenger({
                 type="button"
                 onClick={() => {
                   setChat({ ...freshChat(), shown: true });
-                  say(SCRIPT.start.jia);
                 }}
               >
                 처음부터

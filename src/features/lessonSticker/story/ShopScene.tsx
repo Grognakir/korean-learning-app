@@ -1,6 +1,13 @@
 "use client";
 
-import { useId, useRef, useState, type Dispatch, type SetStateAction } from "react";
+import {
+  useLayoutEffect,
+  useRef,
+  useState,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
+import { flushSync } from "react-dom";
 import { describePiece } from "../clothing/buildSentence";
 import { ClothingIcon } from "../clothing/ClothingIcon";
 import { ITEM_BY_ID } from "../clothing/items";
@@ -11,8 +18,11 @@ import { MannequinRow, type ZoneAnchor } from "./Mannequin";
 import { zoneItems, type MannequinKind, type ZoneId } from "./mannequins";
 import { Palette } from "./Palette";
 import { parsePurchase, type PurchaseResult } from "./parsePurchase";
+import { backspace, typeJamo } from "./hangul";
+import { KoreanKeyboard } from "./KoreanKeyboard";
 import { ChannelStatus, MatrixRain } from "./Terminal";
-import { useCompact } from "./usePhone";
+import { TypingPanel } from "./TypingPanel";
+import { useCompact, useShopLayout } from "./usePhone";
 import { useTypewriter } from "./useTypewriter";
 import styles from "./StoryGame.module.css";
 
@@ -44,7 +54,8 @@ export function ShopScene({
   // иначе — в окне диалога.
   const stageRef = useRef<HTMLDivElement>(null);
   const phone = useCompact(stageRef);
-  const shelfOnStage = phone;
+  const layout = useShopLayout(stageRef);
+  const shelfOnStage = phone || layout === "wide";
   const [cartOpen, setCartOpen] = useState(false);
   const [picked, setPicked] = useState<string | null>(null);
 
@@ -52,7 +63,14 @@ export function ShopScene({
   const [input, setInput] = useState("");
   const [showRu, setShowRu] = useState(false);
   const typed = useTypewriter(clerk.text);
-  const formId = useId();
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+  // Поле растёт по тексту (до трёх строк, предел — max-height в CSS).
+  useLayoutEffect(() => {
+    const ta = inputRef.current;
+    if (!ta) return;
+    ta.style.height = "auto";
+    ta.style.height = `${ta.scrollHeight}px`;
+  }, [input, typing]);
 
   const respond = (result: PurchaseResult) => {
     setShowRu(false);
@@ -194,15 +212,31 @@ export function ShopScene({
 
   const shelfOpen = selection && !typing && !paid;
   const shelfInBox = shelfOpen && !shelfOnStage;
+  const sidePanel = !phone && layout === "wide" && !paid;
+  const send = () => {
+    if (!input.trim()) return;
+    respond(parsePurchase(input, assortment));
+    setInput("");
+    setTyping(false);
+  };
+  // Телефон, игрок пишет сам: вместо сцены — чат с продавцом и подсказки,
+  // строка ввода остаётся прямо над клавиатурой.
+  const chatMode = typing && phone && !paid;
   const canTranslate = Boolean(clerk.ru) && !typing && !shelfInBox;
 
   return (
     <>
-      <div className={`${styles.stage} ${styles.shopStage}`} ref={stageRef}>
+      <div
+        className={`${styles.stage} ${styles.shopStage} ${chatMode ? styles.stageHidden : ""}`}
+        ref={stageRef}
+        data-layout={phone ? "phone" : layout}
+      >
         <MatrixRain className={styles.rainStage} />
         <Character who="clerk" pose={clerk.pose} presence="remote" />
         <MannequinRow
           compact={phone}
+          calloutsLeft={!phone && layout === "wide"}
+          zonesHidden={Boolean(shelfOpen) && phone}
           kinds={["male", "female"]}
           selected={selection}
           hideCallouts={Boolean(picked)}
@@ -215,18 +249,30 @@ export function ShopScene({
           {cartList}
         </div>
 
-        {/* Пока открыта карточка вещи, шторка с полкой спрятана. */}
-        {shelfOpen && shelfOnStage && !picked && (
+        {/* Пока открыта карточка вещи, шторка с полкой спрятана. На широкой
+            сцене полка стоит всегда: без выбранной зоны — подсказка. */}
+        {!picked && (shelfOpen ? shelfOnStage : sidePanel) && (
           <div className={styles.shelfSheet}>
-            <button
-              type="button"
-              className={styles.shelfClose}
-              onClick={closeShelf}
-              aria-label="Закрыть полку"
-            >
-              ×
-            </button>
-            {picker}
+            {shelfOpen ? (
+              <>
+                <button
+                  type="button"
+                  className={styles.shelfClose}
+                  onClick={closeShelf}
+                  aria-label="Закрыть полку"
+                >
+                  ×
+                </button>
+                {picker}
+              </>
+            ) : (
+              <div className={styles.shelfEmpty}>
+                <span className="kr">부위를 선택하세요</span>
+                <small>
+                  Нажмите на часть манекена — здесь появятся вещи для неё.
+                </small>
+              </div>
+            )}
           </div>
         )}
 
@@ -244,7 +290,17 @@ export function ShopScene({
         )}
       </div>
 
-      <div className={styles.dialogue}>
+      {chatMode && (
+        <TypingPanel
+          cartCount={cart.length}
+          assortment={assortment}
+          onPhrase={setInput}
+        />
+      )}
+
+      <div
+        className={`${styles.dialogue} ${styles.dialogueShop} ${chatMode ? styles.dialogueChat : ""}`}
+      >
         <div className={styles.nameRow}>
           <span className={`${styles.nameTag} kr`}>
             {typing && !paid ? "나" : "점원"}
@@ -273,37 +329,63 @@ export function ShopScene({
           </>
         ) : (
           <>
-            {typing && !paid ? (
-              // Игрок пишет прямо на месте реплики продавца.
-              <form
-                id={formId}
-                className={styles.prompt}
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  if (!input.trim()) return;
-                  respond(parsePurchase(input, assortment));
-                  setInput("");
-                  setTyping(false);
-                }}
-              >
+            {chatMode ? (
+              // Телефон: своя клавиатура снизу, поле — просто надпись с
+              // курсором. Фокуса браузера нет, поэтому iOS не показывает свою
+              // клавиатуру и строки над ней и не сдвигает страницу.
+              <div className={styles.prompt}>
                 <span aria-hidden>&gt;</span>
-                <input
+                <div
+                  role="textbox"
+                  aria-label="Что купить"
+                  className={`${styles.terminalInput} ${styles.fakeInput} kr`}
+                >
+                  {input || (
+                    <span className={styles.fakePlaceholder}>
+                      검은색 정장 주세요
+                    </span>
+                  )}
+                  <span className={styles.cursor} />
+                </div>
+              </div>
+            ) : typing && !paid ? (
+              // Игрок пишет прямо на месте реплики продавца. Поле —
+              // однострочный textarea без формы: у него iOS не показывает
+              // панель «Passwords / Cards / Data» и стрелки «пред./след.».
+              <div className={styles.prompt}>
+                <span aria-hidden>&gt;</span>
+                <textarea
+                  ref={inputRef}
+                  rows={1}
                   className={`${styles.terminalInput} kr`}
                   value={input}
-                  onChange={(e) => setInput(e.target.value)}
+                  onChange={(e) => setInput(e.target.value.replace(/\n/g, ""))}
                   onKeyDown={(e) => {
                     if (e.key === "Escape") {
                       e.preventDefault();
                       setTyping(false);
                     }
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      send();
+                    }
                   }}
                   placeholder="검은색 정장 주세요"
                   aria-label="Что купить"
+                  autoComplete="off"
+                  autoCorrect="off"
+                  autoCapitalize="off"
+                  spellCheck={false}
+                  enterKeyHint="send"
+                  // Без подсказок iOS «Help with text / Fix / Rewrite».
+                  {...{ writingsuggestions: "false" }}
                   autoFocus
                 />
-              </form>
+              </div>
             ) : (
-              <>
+              // Реплика прокручивается внутри: в низком окне кнопки снизу
+              // остаются на месте.
+              <div className={styles.lineBody}>
                 <p className={`${styles.lineText} kr`}>
                   {typed.shown}
                   {typed.done && <span className={styles.cursor} />}
@@ -311,7 +393,7 @@ export function ShopScene({
                 {clerk.ru && showRu && (
                   <p className={styles.lineRu}>{clerk.ru}</p>
                 )}
-              </>
+              </div>
             )}
             <div className={styles.dialogueActions}>
               {!paid &&
@@ -330,10 +412,10 @@ export function ShopScene({
                       <BackIcon />
                     </button>
                     <button
-                      type="submit"
-                      form={formId}
+                      type="button"
                       className={`${styles.ghost} ${styles.iconButton}`}
                       aria-label="Enter"
+                      onClick={send}
                     >
                       <EnterIcon />
                     </button>
@@ -343,9 +425,14 @@ export function ShopScene({
                     type="button"
                     className={`${styles.ghost} ${styles.iconButton}`}
                     onClick={() => {
-                      setTyping(true);
-                      setSelection(null);
-                      setPicked(null);
+                      // Поле появляется и получает фокус в том же касании —
+                      // иначе iOS не открывает клавиатуру.
+                      flushSync(() => {
+                        setTyping(true);
+                        setSelection(null);
+                        setPicked(null);
+                      });
+                      inputRef.current?.focus();
                     }}
                     title="Написать фразу самому"
                     aria-label="Написать фразу самому"
@@ -366,6 +453,16 @@ export function ShopScene({
           </>
         )}
       </div>
+      {chatMode && (
+        <KoreanKeyboard
+          onJamo={(jamo) => setInput((t) => typeJamo(t, jamo))}
+          onSpace={() =>
+            setInput((t) => (!t.trim() || t.endsWith(" ") ? t : `${t} `))
+          }
+          onBackspace={() => setInput(backspace)}
+          onSend={send}
+        />
+      )}
     </>
   );
 }

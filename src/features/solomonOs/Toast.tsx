@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { OsIcon } from "./icons";
+import { APP_BY_ID } from "./apps";
+import { AppIcon, OsIcon } from "./icons";
 import type { OsNote } from "./notifications";
 import styles from "./SolomonOs.module.css";
 
@@ -11,18 +12,22 @@ type Offset = { x: number; y: number };
 
 /** Баннер уведомления: нажатие открывает приложение, крестик или смахивание
  * вправо/влево/вверх/вниз убирает (запись остаётся в списке под колокольчиком).
- * Через 6 с уезжает сам. */
+ * Через 6 с уезжает сам. На телефоне и планшете (mobile) — карточка как в iOS:
+ * сверху по центру, строка приложения и «지금», без крестика (смахнуть вверх). */
 export function Toast({
   note,
   avatar,
+  mobile = false,
   onOpen,
   onClose,
 }: {
   note: OsNote;
   avatar: string;
+  mobile?: boolean;
   onOpen: () => void;
   onClose: () => void;
 }) {
+  const app = APP_BY_ID[note.app];
   const [offset, setOffset] = useState<Offset>({ x: 0, y: 0 });
   const [dragging, setDragging] = useState(false);
   const [leaving, setLeaving] = useState<Offset | null>(null);
@@ -86,7 +91,7 @@ export function Toast({
 
   return (
     <div
-      className={`${styles.toast} kr`}
+      className={`${styles.toast} ${mobile ? styles.toastMobile : ""} kr`}
       role="status"
       style={{
         transform: `translate(${pos.x}px, ${pos.y}px)`,
@@ -104,6 +109,13 @@ export function Toast({
       tabIndex={0}
       aria-label={`${note.who}: ${note.text}`}
     >
+      {mobile && app && (
+        <span className={styles.toastApp}>
+          <AppIcon id={app.id} className={styles.toastAppIcon} />
+          <span>{app.ko}</span>
+          <time>지금</time>
+        </span>
+      )}
       <span className={styles.ava}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className={styles.holo} src={avatar} alt="" draggable={false} />
@@ -112,14 +124,16 @@ export function Toast({
         <b>{note.who}</b>
         <small>{note.text}</small>
       </span>
-      <button
-        type="button"
-        className={styles.toastClose}
-        aria-label="Закрыть уведомление"
-        onClick={() => leave({ x: 420, y: 0 })}
-      >
-        <OsIcon name="close" />
-      </button>
+      {!mobile && (
+        <button
+          type="button"
+          className={styles.toastClose}
+          aria-label="Закрыть уведомление"
+          onClick={() => leave({ x: 420, y: 0 })}
+        >
+          <OsIcon name="close" />
+        </button>
+      )}
     </div>
   );
 }
