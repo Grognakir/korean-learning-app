@@ -49,7 +49,7 @@ export function withKr(text: string, keyPrefix: string): ReactNode[] {
 }
 
 // {{конструкция|краткое значение}} — жирный чип с подсказкой при наведении;
-// **жирный** и корейский шрифт — как обычно.
+// **жирный**, ~~зачёркнутый~~ (неверная форма) и корейский шрифт — как обычно.
 export function formatRich(rawText: string): ReactNode[] {
   // «без받침» / «с받침» в данных слитно — на выводе ставим пробел.
   const text = rawText.replace(/([А-Яа-яЁё])(받침)/g, "$1 $2");
@@ -61,7 +61,11 @@ export function formatRich(rawText: string): ReactNode[] {
         if (j % 2 === 1) {
           out.push(<strong key={`b${i}-${j}`}>{withKr(seg, `s${i}-${j}`)}</strong>);
         } else {
-          out.push(...withKr(seg, `t${i}-${j}`));
+          seg.split(/~~(.+?)~~/g).forEach((piece, k) => {
+            if (k % 2 === 1)
+              out.push(<s key={`x${i}-${j}-${k}`}>{withKr(piece, `x${i}-${j}-${k}`)}</s>);
+            else out.push(...withKr(piece, `t${i}-${j}-${k}`));
+          });
         }
       });
     } else if (i % 3 === 1) {
