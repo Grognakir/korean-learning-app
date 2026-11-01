@@ -84,6 +84,13 @@
 
 ## Журнал выполненных работ
 
+### 2026-11-01 — Выкладка: стандарт грамматик 2급 1–4과 (коммит b3790dd)
+
+- Коммит `b3790dd` (поверх `238472e`) запушен в `origin/main`. Vercel: Production Ready (deployment `korean-learning-lzwqdlc5g`), статус GitHub `Vercel – korean-learning`: success; `https://korean-learning-gray.vercel.app/login` — 200.
+- Production Supabase синхронизирован скриптами импорта через временный `SUPABASE_SERVICE_ROLE_KEY` из Vercel Development (файлы env и скрипт запуска удалены): `import-grammar.ts` (159 статей) и `import-textbook.ts --lesson2-pages-only=1…4` (страницы 2급 1–4과). Сверка чтением REST: 159/159 статей совпали с локальным `grammar.json` (pattern, explanation, examples, notes, grammar_group); 19/19 блоков `grammar_point` уроков 1–4 совпали с `lesson-0N.json`.
+- Пользователю: удалить ключ `SUPABASE_SERVICE_ROLE_KEY` в Vercel Development и отозвать его в Supabase.
+- Дальше по плану `~/.claude/plans/soft-dreaming-deer.md`: партия 2 (2급 5과, 6과).
+
 ### 2026-11-01 — шесть грамматик 2급 1과 и 2과 переписаны по новому алгоритму (локально, не опубликовано)
 
 - Второстепенный чип «Предположение» (`grammar_group` = «<область>|Предположение») добавлен 10 статьям: 것 같다, 나 보다, (으)ㄹ걸요, (으)ㄹ 수도 있다, 서 그런지, (으)ㄹ 거예요②, N-일 거예요, 겠-②, (으)ㄹ까요?②, N-일까요?. Не закоммичено.
