@@ -74,6 +74,33 @@ function BulletText({ text, exampleClassName }: { text: string; exampleClassName
   );
 }
 
+type BulletNode = { text: string; children: BulletNode[] };
+
+function bulletTree(items: string[]): BulletNode[] {
+  const roots: BulletNode[] = [];
+  const stack: BulletNode[] = [];
+  for (const item of items) {
+    let depth = 0;
+    let text = item;
+    while (text.startsWith("– ") && depth < stack.length + 1) {
+      depth += 1;
+      text = text.slice(2);
+    }
+    const node: BulletNode = { text, children: [] };
+    if (depth === 0 || stack.length === 0) {
+      roots.push(node);
+      stack.length = 0;
+      stack.push(node);
+    } else {
+      const parentDepth = Math.min(depth, stack.length);
+      stack[parentDepth - 1].children.push(node);
+      stack.length = parentDepth;
+      stack.push(node);
+    }
+  }
+  return roots;
+}
+
 export function BulletItems({
   items,
   className,
@@ -83,29 +110,14 @@ export function BulletItems({
   className?: string;
   exampleClassName?: string;
 }) {
-  const groups: { text: string; sub: string[] }[] = [];
-  for (const item of items) {
-    if (item.startsWith("– ") && groups.length > 0) groups[groups.length - 1].sub.push(item.slice(2));
-    else groups.push({ text: item, sub: [] });
-  }
-  return (
-    <>
-      {groups.map((group, i) => (
-        <li key={i}>
-          <BulletText text={group.text} exampleClassName={exampleClassName} />
-          {group.sub.length > 0 && (
-            <ul className={className}>
-              {group.sub.map((sub, j) => (
-                <li key={j}>
-                  <BulletText text={sub} exampleClassName={exampleClassName} />
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
-    </>
-  );
+  const render = (nodes: BulletNode[]): ReactNode =>
+    nodes.map((node, i) => (
+      <li key={i}>
+        <BulletText text={node.text} exampleClassName={exampleClassName} />
+        {node.children.length > 0 && <ul className={className}>{render(node.children)}</ul>}
+      </li>
+    ));
+  return <>{render(bulletTree(items))}</>;
 }
 
 // {{конструкция|краткое значение}} — жирный чип с подсказкой при наведении;

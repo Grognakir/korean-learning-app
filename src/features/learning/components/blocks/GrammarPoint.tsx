@@ -64,19 +64,13 @@ export function GrammarPoint({
               paragraphClassName={styles.explanation}
               listClassName={styles.rules}
             />
-            {block.rules_table ? (
+            {(block.rules_table || (block.rules && block.rules.length > 0)) && (
               <div className={styles.rulesSection}>
                 <span className={styles.rulesLabel}>Правила</span>
-                <NoteTable
-                  head={block.rules_table.head}
-                  rows={block.rules_table.rows}
-                />
-              </div>
-            ) : (
-              block.rules &&
-              block.rules.length > 0 && (
-                <div className={styles.rulesSection}>
-                  <span className={styles.rulesLabel}>Правила</span>
+                {block.rules_table && (
+                  <NoteTable head={block.rules_table.head} rows={block.rules_table.rows} />
+                )}
+                {block.rules && block.rules.length > 0 && (
                   <ul className={styles.rules}>
                     <BulletItems
                       items={block.rules}
@@ -84,8 +78,8 @@ export function GrammarPoint({
                       exampleClassName={styles.ruleExample}
                     />
                   </ul>
-                </div>
-              )
+                )}
+              </div>
             )}
             {actions("footer")}
           </div>
