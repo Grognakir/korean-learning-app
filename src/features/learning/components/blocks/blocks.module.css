@@ -898,11 +898,10 @@
   color: var(--ink);
 }
 
-/* Подпункты правила («в зависимости от …:» → варианты). */
-.rules ul {
+.ruleExample {
   margin-top: 4px;
-  padding-left: 20px;
-  list-style: disc;
+  padding-left: 10px;
+  border-left: 2px solid var(--line);
 }
 
 .grammarActions {

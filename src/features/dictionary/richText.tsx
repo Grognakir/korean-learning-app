@@ -48,8 +48,68 @@ export function withKr(text: string, keyPrefix: string): ReactNode[] {
   return out;
 }
 
+// ~~зачёркнутое~~ — неверная форма; корейский шрифт сохраняется.
+function strike(text: string, keyPrefix: string): ReactNode[] {
+  const out: ReactNode[] = [];
+  text.split(/~~(.+?)~~/g).forEach((seg, k) => {
+    if (k % 2 === 1) out.push(<s key={`${keyPrefix}-x${k}`}>{withKr(seg, `${keyPrefix}-y${k}`)}</s>);
+    else out.push(...withKr(seg, `${keyPrefix}-z${k}`));
+  });
+  return out;
+}
+
+// Пункты списка: строка, начинающаяся с «– », вкладывается в предыдущий пункт;
+// после «\n» идёт пример — отдельной строкой с чертой слева.
+function BulletText({ text, exampleClassName }: { text: string; exampleClassName?: string }) {
+  const [head, ...examples] = text.split("\n");
+  return (
+    <>
+      {formatRich(head)}
+      {examples.map((line, i) => (
+        <div key={i} className={exampleClassName}>
+          {formatRich(line)}
+        </div>
+      ))}
+    </>
+  );
+}
+
+export function BulletItems({
+  items,
+  className,
+  exampleClassName,
+}: {
+  items: string[];
+  className?: string;
+  exampleClassName?: string;
+}) {
+  const groups: { text: string; sub: string[] }[] = [];
+  for (const item of items) {
+    if (item.startsWith("– ") && groups.length > 0) groups[groups.length - 1].sub.push(item.slice(2));
+    else groups.push({ text: item, sub: [] });
+  }
+  return (
+    <>
+      {groups.map((group, i) => (
+        <li key={i}>
+          <BulletText text={group.text} exampleClassName={exampleClassName} />
+          {group.sub.length > 0 && (
+            <ul className={className}>
+              {group.sub.map((sub, j) => (
+                <li key={j}>
+                  <BulletText text={sub} exampleClassName={exampleClassName} />
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </>
+  );
+}
+
 // {{конструкция|краткое значение}} — жирный чип с подсказкой при наведении;
-// **жирный**, ~~зачёркнутый~~ (неверная форма) и корейский шрифт — как обычно.
+// **жирный** и корейский шрифт — как обычно.
 export function formatRich(rawText: string): ReactNode[] {
   // «без받침» / «с받침» в данных слитно — на выводе ставим пробел.
   const text = rawText.replace(/([А-Яа-яЁё])(받침)/g, "$1 $2");
@@ -59,13 +119,9 @@ export function formatRich(rawText: string): ReactNode[] {
     if (i % 3 === 0) {
       part.split(/\*\*(.+?)\*\*/g).forEach((seg, j) => {
         if (j % 2 === 1) {
-          out.push(<strong key={`b${i}-${j}`}>{withKr(seg, `s${i}-${j}`)}</strong>);
+          out.push(<strong key={`b${i}-${j}`}>{strike(seg, `s${i}-${j}`)}</strong>);
         } else {
-          seg.split(/~~(.+?)~~/g).forEach((piece, k) => {
-            if (k % 2 === 1)
-              out.push(<s key={`x${i}-${j}-${k}`}>{withKr(piece, `x${i}-${j}-${k}`)}</s>);
-            else out.push(...withKr(piece, `t${i}-${j}-${k}`));
-          });
+          out.push(...strike(seg, `t${i}-${j}`));
         }
       });
     } else if (i % 3 === 1) {
@@ -84,23 +140,6 @@ export function formatRich(rawText: string): ReactNode[] {
 
 // Строки, начинающиеся с «• », в тексте становятся списком, остальные —
 // абзацами. Классы задаёт вызывающий код (словарь и урок оформлены по-разному).
-/** Пункт списка: первая строка — сам пункт, следующие — подпункты
- * («в зависимости от …:\nㅏ/ㅗ → -아지다\n…»). */
-export function richItem(item: string): ReactNode {
-  const [head, ...sub] = item.split("\n").filter((line) => line.trim() !== "");
-  if (!sub.length) return formatRich(item);
-  return (
-    <>
-      {formatRich(head)}
-      <ul>
-        {sub.map((line, i) => (
-          <li key={i}>{formatRich(line)}</li>
-        ))}
-      </ul>
-    </>
-  );
-}
-
 export function RichExplanation({
   text,
   className,
