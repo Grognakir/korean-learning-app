@@ -1,5 +1,5 @@
 import { NoteTable } from "@/features/dictionary/components/GrammarPointDetails";
-import { BulletItems, RichExplanation } from "@/features/dictionary/richText";
+import { BulletItems, RichExplanation, formatRich } from "@/features/dictionary/richText";
 import type { GrammarPointBlock } from "@/features/learning/types";
 import { GrammarDetailsButton } from "./GrammarDetailsButton";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
@@ -30,6 +30,16 @@ export function GrammarPoint({
     >
       <GrammarDetailsButton block={block} dictionaryRef={dictionaryRef} />
     </span>
+  );
+
+  const rulesList = block.rules && block.rules.length > 0 && (
+    <ul className={styles.rules}>
+      <BulletItems
+        items={block.rules}
+        className={styles.rules}
+        exampleClassName={styles.ruleExample}
+      />
+    </ul>
   );
 
   return (
@@ -67,18 +77,14 @@ export function GrammarPoint({
             {(block.rules_table || (block.rules && block.rules.length > 0)) && (
               <div className={styles.rulesSection}>
                 <span className={styles.rulesLabel}>Правила</span>
+                {block.rules_first && rulesList}
+                {block.rules_table?.caption && (
+                  <p className={styles.explanation}>{formatRich(block.rules_table.caption)}</p>
+                )}
                 {block.rules_table && (
                   <NoteTable head={block.rules_table.head} rows={block.rules_table.rows} />
                 )}
-                {block.rules && block.rules.length > 0 && (
-                  <ul className={styles.rules}>
-                    <BulletItems
-                      items={block.rules}
-                      className={styles.rules}
-                      exampleClassName={styles.ruleExample}
-                    />
-                  </ul>
-                )}
+                {!block.rules_first && rulesList}
               </div>
             )}
             {actions("footer")}

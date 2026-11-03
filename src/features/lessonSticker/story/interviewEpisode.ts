@@ -1,4 +1,5 @@
 import type { Situation } from "../clothing/situations";
+import { ALL_ITEMS } from "./episodes";
 import type { Episode } from "./types";
 
 const rules: Situation = {
@@ -16,7 +17,7 @@ const rules: Situation = {
   ],
   forbidden: [
     {
-      items: ["jeans", "sneakers", "tshirt", "shorts", "slippers", "hat"],
+      items: ["jeans", "sneakers", "tshirt", "shorts", "slippers", "hat", "tracksuit", "hiking_wear", "hiking_boots", "swimsuit"],
       ru: "Это слишком повседневно для 면접.",
     },
   ],
@@ -53,35 +54,7 @@ export const INTERVIEW_EPISODE: Episode = {
   advice: "검은색이나 남색 정장, 흰색 와이셔츠, 넥타이, 까만 구두",
   adviceRu: "чёрный или тёмно-синий костюм, белую рубашку, галстук и чёрные туфли",
   background: "/images/dialogue/bg/office-entrance.webp",
-  assortment: [
-    "suit",
-    "jacket",
-    "pants",
-    "jeans",
-    "shorts",
-    "dress_shirt",
-    "tshirt",
-    "vest",
-    "coat",
-    "padded_jacket",
-    "tie",
-    "dress_shoes",
-    "sneakers",
-    "boots",
-    "slippers",
-    "socks",
-    "hat",
-    "watch",
-    "bag",
-    "glasses",
-    "muffler",
-    "scarf",
-    "blouse",
-    "skirt",
-    "gloves",
-    "ring",
-    "earrings",
-  ],
+  assortment: ALL_ITEMS,
   steps: [
     { type: "incoming", caller: "지아", avatar: "/images/lesson-sticker/jia-call/idle.png" },
     {

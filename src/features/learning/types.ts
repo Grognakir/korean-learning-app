@@ -284,7 +284,9 @@ export type GrammarPointBlock = ContentBlockBase & {
   rules?: string[];
   /** Правила таблицей (вместо списка rules): head — заголовки столбцов,
    * rows[i][j] — ячейка; при трёх и более столбцах первый — заголовки строк. */
-  rules_table?: { head: string[]; rows: string[][] };
+  rules_table?: { head: string[]; rows: string[][]; caption?: string };
+  /** Список rules показывается раньше таблицы rules_table. */
+  rules_first?: boolean;
   examples: string[];
   /** Переводы слов, встречающихся именно в examples[] этой грамматики —
    * не рукописный словарь раздела, а локальные подсказки под конкретные

@@ -31,8 +31,9 @@ describe("parsePurchase", () => {
   });
 
   it("просит цвет, если его нет, и не знает чужих вещей", () => {
+    expect(parsePurchase("파란색 등산복 주세요", assortment)).toMatchObject({ piece: { id: "hiking_wear", color: "blue" } });
     expect(parsePurchase("구두 주세요", assortment)).toEqual({ kind: "needColor", id: "dress_shoes" });
-    expect(parsePurchase("빨간색 원피스 주세요", assortment)).toEqual({ kind: "unknown" });
+    expect(parsePurchase("빨간색 우산 주세요", assortment)).toEqual({ kind: "unknown" });
     expect(parsePurchase("Чёрный костюм, пожалуйста", assortment)).toEqual({ kind: "foreign", lang: "ru" });
     expect(parsePurchase("black suit please", assortment)).toEqual({ kind: "foreign", lang: "en" });
   });

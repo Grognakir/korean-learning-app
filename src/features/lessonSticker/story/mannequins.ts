@@ -20,15 +20,18 @@ export const ZONE_BY_INDEX: (ZoneId | null)[] = [
   "bag",
 ];
 
+/** Одежда на всё тело стоит там же, где костюм: в верхней одежде и в низе. */
+const FULL_BODY = ["dress", "tracksuit", "hiking_wear", "hanbok", "school_uniform", "swimsuit"];
+
 export const ZONES: Record<ZoneId, { ko: string; ru: string; items: string[] }> = {
   head: { ko: "모자", ru: "голова", items: ["hat"] },
   face: { ko: "안경", ru: "лицо", items: ["glasses"] },
   neck: { ko: "목", ru: "шея", items: ["tie", "muffler", "scarf"] },
   top: { ko: "상의", ru: "верх", items: ["dress_shirt", "tshirt", "blouse"] },
-  outer: { ko: "겉옷", ru: "верхняя одежда", items: ["suit", "jacket", "coat", "padded_jacket", "vest"] },
+  outer: { ko: "겉옷", ru: "верхняя одежда", items: ["suit", ...FULL_BODY, "jacket", "coat", "padded_jacket", "vest", "raincoat"] },
   hands: { ko: "손목", ru: "руки", items: ["watch", "gloves", "ring"] },
-  bottom: { ko: "하의", ru: "низ", items: ["suit", "pants", "jeans", "shorts", "skirt"] },
-  shoes: { ko: "신발", ru: "обувь", items: ["dress_shoes", "sneakers", "boots", "slippers", "socks"] },
+  bottom: { ko: "하의", ru: "низ", items: ["suit", ...FULL_BODY, "pants", "jeans", "shorts", "skirt"] },
+  shoes: { ko: "신발", ru: "обувь", items: ["dress_shoes", "sneakers", "boots", "hiking_boots", "slippers", "socks"] },
   ears: { ko: "귀걸이", ru: "уши", items: ["earrings"] },
   bag: { ko: "가방", ru: "сумка", items: ["bag"] },
 };
