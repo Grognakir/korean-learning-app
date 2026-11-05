@@ -5,6 +5,8 @@ export type AppId =
   | "call"
   | "shop"
   | "notes"
+  | "viewer"
+  | "dict"
   | "term"
   | "set"
   | "map"
@@ -42,6 +44,8 @@ export const APPS: OsApp[] = [
     minH: 560,
   },
   { id: "notes", ko: "메모", ru: "Заметки", icon: "notes", w: 800, h: 590 },
+  { id: "viewer", ko: "문서 뷰어", ru: "Просмотр документов", icon: "viewer", w: 620, h: 620 },
+  { id: "dict", ko: "단어장", ru: "Словарь", icon: "dict", w: 860, h: 640, minW: 360, minH: 440 },
   { id: "term", ko: "터미널", ru: "Терминал", icon: "term", w: 600, h: 380 },
   { id: "set", ko: "설정", ru: "Настройки", icon: "set", w: 440, h: 320 },
   {

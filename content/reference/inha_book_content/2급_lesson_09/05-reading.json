@@ -1,0 +1,184 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 153,
+      "page_role": "content",
+      "source_photo": "IMG_0927",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-health",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_9/illustration_4_healthy_habits.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 어렸을 때 건강이 좋지 않았습니다. 계절이 바뀔 때마다 감기에 걸렸고 몸이 약해서 늘 피곤했습니다. 고등학교에 다니면서도 몸이 좋지 않았습니다. 그런데 고등학교 2학년 때 담임선생님께서 주신 책 한 권 때문에 저는 건강을 되찾을 수 있었습니다. 그 책에는 다음과 같은 방법이 있었습니다."
+            },
+            {
+              "text": "첫째, 집중을 잘 하려면 클래식 음악을 자주 들으세요.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "둘째, 일주일에 두세 번씩 운동을 하세요.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "셋째, 친구들과 즐거운 이야기를 자주 하세요.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "넷째, 하루에 6~7시간 정도 주무세요.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "힘든 방법이 아니었지만 처음에는 따라 하기가 힘들었습니다. 그래서 아침, 점심, 저녁에 할 수 있는 것을 조금씩 해 보았습니다. 그렇게 해 보니까 재미도 있고 힘들지도 않았습니다. 이제는 습관이 ( ㉠ ) 쉽게 할 수 있습니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "되찾",
+              "translation_ru": "форма от 되찾다 (вернуть, обрести вновь)"
+            },
+            {
+              "ko": "담임선생님",
+              "translation_ru": "классный руководитель"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-health",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "건강 관리법을 읽고 말하기",
+          "title_ru": "Прочитать о способах заботы о здоровье и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "㉠에 들어갈 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее выражение для ㉠.",
+              "choices": [
+                "있어서 그런지",
+                "되어서 그런지",
+                "되니까 그런지",
+                "있으니까 그런지"
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "choice",
+              "prompt": "다음 중 이 사람의 건강 관리법이 아닌 것은 무엇입니까?",
+              "prompt_ru": "Что из этого НЕ является способом заботы о здоровье этого человека?",
+              "choices": [
+                "공부를 잘하려고 클래식을 자주 듣습니다.",
+                "친구들과 재미있는 시간을 보냅니다.",
+                "일주일에 2~3회씩 운동을 한다.",
+                "매일 7시에 일어납니다."
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 건강 관리법이 있습니까? 친구들과 이야기해 보십시오.",
+              "prompt_ru": "Есть ли у вас свой способ заботы о здоровье? Расскажите друзьям."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-health",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-health",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "되찾다",
+              "translation_ru": "вернуть, обрести вновь",
+              "group": "건강"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "건강",
+              "title_ru": "Здоровье",
+              "items": [
+                {
+                  "ko": "건강",
+                  "translation_ru": "здоровье"
+                },
+                {
+                  "ko": "관리",
+                  "translation_ru": "уход"
+                },
+                {
+                  "ko": "예방하다",
+                  "translation_ru": "предотвращать"
+                },
+                {
+                  "ko": "수면",
+                  "translation_ru": "сон"
+                },
+                {
+                  "ko": "푹",
+                  "translation_ru": "крепко"
+                },
+                {
+                  "ko": "쉬다",
+                  "translation_ru": "отдыхать"
+                },
+                {
+                  "ko": "운동",
+                  "translation_ru": "спорт"
+                },
+                {
+                  "ko": "스트레스",
+                  "translation_ru": "стресс"
+                },
+                {
+                  "ko": "피로",
+                  "translation_ru": "усталость"
+                }
+              ]
+            },
+            {
+              "title": "습관",
+              "title_ru": "Привычки",
+              "items": [
+                {
+                  "ko": "계절",
+                  "translation_ru": "сезон"
+                },
+                {
+                  "ko": "감기에 걸리다",
+                  "translation_ru": "простудиться"
+                },
+                {
+                  "ko": "따라 하다",
+                  "translation_ru": "повторять"
+                },
+                {
+                  "ko": "집중",
+                  "translation_ru": "концентрация"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

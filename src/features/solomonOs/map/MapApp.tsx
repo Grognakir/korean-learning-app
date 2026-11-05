@@ -24,6 +24,7 @@ import {
   type RouteMode,
 } from "./missions";
 import { MapCanvas } from "./MapCanvas";
+import { OsSelect } from "../controls/OsSelect";
 import styles from "./Map.module.css";
 
 export function MapApp({
@@ -210,44 +211,9 @@ export function MapApp({
         <b>지도 · Карта</b>
         {!comparison && (
           <>
-            <select
-              aria-label="Тип задания"
-              value={mode}
-              onChange={(e) => setMode(e.target.value as RouteMode)}
-            >
-              <option value="self">Мой маршрут</option>
-              <option value="guide">Помочь брату 지아</option>
-            </select>
-            <select
-              aria-label="Район карты"
-              value={region}
-              onChange={(e) => {
-                setRegion(e.target.value as RegionId);
-                setSelected(undefined);
-              }}
-            >
-              {REGIONS.map((r) => (
-                <option key={r.id} value={r.id}>
-                  {r.ru}
-                </option>
-              ))}
-            </select>
-            <select
-              aria-label="Маршрут задания"
-              value={workspace.scenarioId}
-              onChange={(e) => {
-                onChange({ ...workspace, scenarioId: e.target.value });
-                setRegion(scenarioById(e.target.value).region);
-                setSelected(undefined);
-                setFeedback(null);
-              }}
-            >
-              {SCENARIOS.map((s) => (
-                <option key={s.id} value={s.id}>
-                  {s.title}
-                </option>
-              ))}
-            </select>
+            <OsSelect label="Тип задания" value={mode} onChange={(value) => setMode(value as RouteMode)} options={[{ value: "self", label: "Мой маршрут" }, { value: "guide", label: "Помочь брату 지아" }]}/>
+            <OsSelect label="Район карты" value={region} onChange={(value) => { setRegion(value as RegionId); setSelected(undefined); }} options={REGIONS.map((r) => ({ value: r.id, label: r.ru }))}/>
+            <OsSelect label="Маршрут задания" value={workspace.scenarioId} onChange={(value) => { onChange({ ...workspace, scenarioId: value }); setRegion(scenarioById(value).region); setSelected(undefined); setFeedback(null); }} options={SCENARIOS.map((s) => ({ value: s.id, label: s.title }))}/>
           </>
         )}
         <button type="button" className={styles.notesButton} onClick={onNotes}>
@@ -463,19 +429,7 @@ export function MapApp({
                       </p>
                       <label className={styles.field}>
                         Действие
-                        <select
-                          aria-label="Глагол для маршрута"
-                          value={action}
-                          onChange={(e) =>
-                            setAction(e.target.value as RouteAction)
-                          }
-                        >
-                          {ACTIONS.map((a) => (
-                            <option key={a.id} value={a.id}>
-                              {a.ko} · {a.ru}
-                            </option>
-                          ))}
-                        </select>
+                        <OsSelect label="Глагол для маршрута" value={action} onChange={(value) => setAction(value as RouteAction)} options={ACTIONS.map((a) => ({ value: a.id, label: `${a.ko} · ${a.ru}` }))}/>
                       </label>
                       {variant === 4 ? (
                         <label className={styles.field}>

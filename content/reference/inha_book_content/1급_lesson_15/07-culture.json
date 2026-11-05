@@ -1,0 +1,143 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-15.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 251,
+      "page_role": "content",
+      "source_photo": "IMG_1175",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-leisure",
+          "toc_section": "문화 이해하기",
+          "title": "한국인의 여가 활동",
+          "title_ru": "Досуг корейцев",
+          "illustration": {
+            "storage_path": "lesson_15/illustration_5_relaxing_leisure.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오. 다음을 읽고 물음에 답하십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите. Прочитайте и ответьте на вопросы.",
+          "lines": [
+            {
+              "text": "여가 활동은 ‘하고 싶어서 하는 활동’입니다. 그래서 여가 활동을 하면 기분이 좋습니다. 과거에 한국 사람들은 여가 활동보다 일을 더 많이 했습니다. 하지만 최근에는 운동, 등산, 봉사 활동, 여행 등 여가 활동을 많이 합니다."
+            },
+            {
+              "text": "즐거운 여가 활동을 하면 스트레스가 없습니다. 스트레스가 없으면 일도 잘할 수 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-leisure",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국인의 여가 활동",
+          "title_ru": "Досуг корейцев",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "최근에는 한국 사람들은 어떤 여가 활동을 좋아합니까?",
+              "prompt_ru": "Какой досуг сегодня любят корейцы?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라 사람들은 어떤 여가 활동을 좋아합니까? 이야기해 보십시오.",
+              "prompt_ru": "Какой досуг любят в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-leisure",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "여가",
+              "translation_ru": "досуг"
+            },
+            {
+              "ko": "활동",
+              "translation_ru": "деятельность, активность"
+            },
+            {
+              "ko": "최근",
+              "translation_ru": "недавно, в последнее время"
+            },
+            {
+              "ko": "봉사",
+              "translation_ru": "волонтёрство, служение"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-15",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㄻ’",
+          "audio_id": "160",
+          "examples": [
+            {
+              "text": "삶",
+              "translation_ru": "жизнь"
+            },
+            {
+              "text": "앎",
+              "translation_ru": "знание"
+            },
+            {
+              "text": "굶다",
+              "translation_ru": "голодать"
+            },
+            {
+              "text": "닮다",
+              "translation_ru": "быть похожим"
+            },
+            {
+              "text": "삶다",
+              "translation_ru": "варить"
+            },
+            {
+              "text": "젊다",
+              "translation_ru": "быть молодым"
+            },
+            {
+              "text": "삶에서",
+              "translation_ru": "в жизни"
+            },
+            {
+              "text": "앎으로",
+              "translation_ru": "знанием"
+            },
+            {
+              "text": "굶어서",
+              "translation_ru": "голодая"
+            },
+            {
+              "text": "닮고",
+              "translation_ru": "похожий и"
+            },
+            {
+              "text": "삶는",
+              "translation_ru": "варящий"
+            },
+            {
+              "text": "젊지요",
+              "translation_ru": "молодой, не так ли"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-02.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 35,
+      "page_role": "content",
+      "source_photo": "IMG_0972",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "이름",
+              "무엇",
+              "어디"
+            ],
+            "rows": [
+              [
+                "로빈",
+                "도서관",
+                "운동장 앞"
+              ],
+              [
+                "제냐",
+                "서점",
+                "은행 아래"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "로빈",
+            "제냐"
+          ],
+          "lines": [
+            {
+              "speaker": "로빈",
+              "text": "제냐 씨, 안녕하세요?"
+            },
+            {
+              "speaker": "제냐",
+              "text": "로빈 씨, 안녕하세요?"
+            },
+            {
+              "speaker": "로빈",
+              "text": "학교에 도서관이 있습니까?",
+              "emphasized": [
+                "에 도서관이 있습니까"
+              ]
+            },
+            {
+              "speaker": "제냐",
+              "text": "네, 도서관이 있습니다.",
+              "emphasized": [
+                "도서관이 있습니다"
+              ]
+            },
+            {
+              "speaker": "로빈",
+              "text": "어디에 있습니까?"
+            },
+            {
+              "speaker": "제냐",
+              "text": "도서관은 운동장 앞에 있습니다.",
+              "emphasized": [
+                "앞에 있습니다"
+              ]
+            },
+            {
+              "speaker": "제냐",
+              "text": "로빈 씨, 학교에 서점이 있습니까?",
+              "emphasized": [
+                "에 서점이 있습니까"
+              ]
+            },
+            {
+              "speaker": "로빈",
+              "text": "네, 서점은 은행 아래에 있습니다.",
+              "emphasized": [
+                "아래에 있습니다"
+              ]
+            },
+            {
+              "speaker": "제냐",
+              "text": "감사합니다. 안녕히 가세요."
+            },
+            {
+              "speaker": "로빈",
+              "text": "네, 안녕히 가세요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "",
+              "",
+              "무엇",
+              "어디"
+            ],
+            "rows": [
+              [
+                "1)",
+                "나",
+                "운동장",
+                "도서관 뒤"
+              ],
+              [
+                "",
+                "친구",
+                "커피숍",
+                "우체국 옆"
+              ],
+              [
+                "2)",
+                "나",
+                "",
+                ""
+              ],
+              [
+                "",
+                "친구",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "서점",
+              "translation_ru": "книжный магазин"
+            },
+            {
+              "ko": "커피숍",
+              "translation_ru": "кофейня"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

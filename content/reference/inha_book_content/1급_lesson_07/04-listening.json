@@ -1,0 +1,105 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-07.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 116,
+      "page_role": "content",
+      "source_photo": "IMG_1049",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-weather-trip",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "날씨와 여행 이야기를 듣고 말하기",
+          "title_ru": "Послушать рассказ о погоде и поездке и обсудить",
+          "audio_id": "127",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "최수지",
+                "text": "오위노 씨는 한국에서 여행을 해 봤어요?"
+              },
+              {
+                "speaker": "오위노",
+                "text": "네, 저는 작년 여름에 친구들과 함께 부산으로 여행을 갔어요."
+              },
+              {
+                "speaker": "최수지",
+                "text": "부산이요? 부산 여행이 어땠어요?"
+              },
+              {
+                "speaker": "오위노",
+                "text": "오전에는 날씨가 아주 맑았어요. 그래서 수영을 하러 바다에 갔어요. 아주 재미있었어요."
+              },
+              {
+                "speaker": "최수지",
+                "text": "바다에만 갔어요?"
+              },
+              {
+                "speaker": "오위노",
+                "text": "아니요. 오후에는 날씨가 흐렸어요. 그래서 시장을 구경했어요. 그리고 회를 먹었어요. 아주 맛있었어요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇입니까? 이야기해 보십시오.",
+            "prompt_ru": "Что это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_7/illustration_3_busan_weather.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "여자는 부산에 가 봤습니다.",
+                "남자는 작년 봄에 부산에 갔습니다.",
+                "남자는 부산에서 시장을 구경했습니다.",
+                "남자는 회를 안 먹어 봤습니다."
+              ],
+              "correct": 2
+            }
+          ],
+          "followup": "반 친구들에게 여러분의 여행 이야기를 해 보십시오.",
+          "followup_ru": "Расскажите одноклассникам о своих путешествиях."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-weather-trip",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "흐리다",
+              "translation_ru": "быть пасмурным, облачным (о погоде)"
+            },
+            {
+              "ko": "시장",
+              "translation_ru": "рынок"
+            },
+            {
+              "ko": "회",
+              "translation_ru": "сырая рыба, сашими"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

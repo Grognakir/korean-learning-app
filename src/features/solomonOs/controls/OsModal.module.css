@@ -1,0 +1,20 @@
+.backdrop { position:fixed; z-index:2147482000; display:grid; place-items:center; padding:16px; background:color-mix(in srgb,var(--panel) 78%,transparent); box-sizing:border-box; font:14px/1.4 var(--sans); color:var(--text); }
+.backdrop[data-dimmed="false"] { background:transparent; }
+.dialog[data-draggable="true"] { resize:none; }
+.header[data-draggable="true"] { cursor:move; touch-action:none; user-select:none; }
+.header[data-dragging="true"] { cursor:grabbing; }
+.dialog { width:100%; max-width:500px; max-height:100%; min-height:0; display:flex; flex-direction:column; background:var(--win); border:1px solid var(--line); border-radius:9px; outline:none; overflow:hidden; box-sizing:border-box; }
+.dialog[data-wide="true"] { max-width:740px; }
+.header { display:flex; align-items:center; gap:12px; flex:none; min-height:44px; padding:4px 8px 4px 14px; background:var(--panel); border-bottom:1px solid var(--line); }
+.header h2 { flex:1; margin:0; color:var(--text); font-size:14px; font-weight:500; }
+.header button { display:grid; place-items:center; flex:none; appearance:none; width:34px; height:34px; padding:7px; border:0; border-radius:5px; background:transparent; color:var(--soft); cursor:pointer; }
+.header button:hover { color:var(--ink); background:var(--green); }
+.header button:focus-visible { outline:2px solid var(--mid); }
+.header svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; }
+.body { flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:var(--line) var(--win); }
+.dialog[data-compact="true"] { max-width:470px; border-radius:4px; }
+.dialog[data-compact="true"] .header { min-height:36px; padding:2px 6px 2px 12px; gap:8px; }
+.dialog[data-compact="true"] .header h2 { font-size:13px; }
+.dialog[data-compact="true"] .header button { width:30px; height:30px; }
+@media(max-width:600px),(pointer:coarse) { .backdrop { padding:8px; padding-top:max(8px,env(safe-area-inset-top)); padding-bottom:max(8px,env(safe-area-inset-bottom)); }.header { padding-left:10px; }.header button { width:40px; height:40px; }.dialog { border-radius:8px; } }
+@media(max-width:600px),(pointer:coarse) { .dialog[data-compact="true"] .header button { width:40px; height:40px; } }

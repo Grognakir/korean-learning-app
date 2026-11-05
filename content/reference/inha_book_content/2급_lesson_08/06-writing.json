@@ -1,0 +1,159 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 137,
+      "page_role": "content",
+      "source_photo": "IMG_0780",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "모집",
+              "title_ru": "Набор в клуб",
+              "items": [
+                {
+                  "ko": "회원 모집",
+                  "translation_ru": "набор участников"
+                },
+                {
+                  "ko": "가입하다",
+                  "translation_ru": "вступать"
+                },
+                {
+                  "ko": "신청하다",
+                  "translation_ru": "подавать заявку"
+                },
+                {
+                  "ko": "환영하다",
+                  "translation_ru": "приветствовать"
+                },
+                {
+                  "ko": "누구나",
+                  "translation_ru": "любой"
+                },
+                {
+                  "ko": "초보자",
+                  "translation_ru": "новичок"
+                },
+                {
+                  "ko": "신입생",
+                  "translation_ru": "новичок, первокурсник"
+                }
+              ]
+            },
+            {
+              "title": "시간",
+              "title_ru": "Время и место",
+              "items": [
+                {
+                  "ko": "매주",
+                  "translation_ru": "каждую неделю"
+                },
+                {
+                  "ko": "저녁",
+                  "translation_ru": "вечер"
+                },
+                {
+                  "ko": "학생회관",
+                  "translation_ru": "студенческий центр"
+                },
+                {
+                  "ko": "동아리방",
+                  "translation_ru": "комната клуба"
+                },
+                {
+                  "ko": "일주일",
+                  "translation_ru": "неделя"
+                }
+              ]
+            },
+            {
+              "title": "변화",
+              "title_ru": "Рост и падение",
+              "items": [
+                {
+                  "ko": "증가하다",
+                  "translation_ru": "увеличиваться"
+                },
+                {
+                  "ko": "감소하다",
+                  "translation_ru": "уменьшаться"
+                },
+                {
+                  "ko": "반면에",
+                  "translation_ru": "зато"
+                },
+                {
+                  "ko": "높아지다",
+                  "translation_ru": "становиться выше"
+                },
+                {
+                  "ko": "낮아지다",
+                  "translation_ru": "становиться ниже"
+                },
+                {
+                  "ko": "비율",
+                  "translation_ru": "доля"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-club",
+          "toc_section": "쓰기",
+          "title": "동아리 회원을 모집하는 글을 써 보십시오.",
+          "title_ru": "Напишите объявление о наборе в клуб.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: чем занимается клуб.",
+              "questions": [
+                {
+                  "kr": "무슨 활동을 하는 동아리입니까?",
+                  "ru": "Чем занимается клуб?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: когда и где проходят занятия клуба.",
+              "questions": [
+                {
+                  "kr": "동아리 활동은 언제, 어디에서 합니까?",
+                  "ru": "Когда и где проходят занятия клуба?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что хорошего даёт вступление в клуб.",
+              "questions": [
+                {
+                  "kr": "동아리에 가입하면 무엇이 좋습니까?",
+                  "ru": "Что хорошего даёт вступление в клуб?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 포스터를 만들고 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Сделайте постер на основе плана выше и напишите текст."
+        }
+      ]
+    }
+  ]
+}

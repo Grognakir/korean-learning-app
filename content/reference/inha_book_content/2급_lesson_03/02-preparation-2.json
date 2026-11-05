@@ -1,0 +1,434 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "준비하기 2",
+  "pages": [
+    {
+      "page_number": 46,
+      "page_role": "content",
+      "source_photo": "IMG_0619",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-junbihagi2-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "계획을 듣고 조언하기",
+          "title_ru": "Выслушать план и посоветовать",
+          "illustration": {
+            "storage_path": "lesson_3/illustration_2_university_counseling_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "210",
+          "speakers": [
+            "선생님",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "선생님",
+              "text": "파하드 씨, 대학원 입학 준비를 잘 하고 있어요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "다음 주에 교수님과 상담하기로 했어요. 그런데 고민이 있어요."
+            },
+            {
+              "speaker": "선생님",
+              "text": "무슨 고민이 있어요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 사회학을 공부하고 싶은데 부모님께서 반대하셔서 걱정이에요."
+            },
+            {
+              "speaker": "선생님",
+              "text": "그래요? 파하드 씨는 왜 사회학을 공부하고 싶어요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "한국에 오기 전에는 경영학을 전공하기로 했어요. 그런데 한국어를 공부하는 동안 한국 문화와 사회에 관심이 생겼어요."
+            },
+            {
+              "speaker": "선생님",
+              "text": "파하드 씨는 사회학을 공부한 다음에 무엇을 할 거예요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "고향에 돌아간 후에 대학교에서 학생들을 가르치고 싶어요."
+            },
+            {
+              "speaker": "선생님",
+              "text": "그럼 이번에 고향에 가서 부모님께 파하드 씨의 생각을 말씀드려 보세요."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-junbihagi2-dialogue",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "대학원",
+              "translation_ru": "аспирантура, магистратура",
+              "group": "진로"
+            },
+            {
+              "ko": "교수",
+              "translation_ru": "профессор",
+              "group": "진로"
+            },
+            {
+              "ko": "상담하다",
+              "translation_ru": "консультироваться",
+              "group": "진로"
+            },
+            {
+              "ko": "반대하다",
+              "translation_ru": "быть против",
+              "group": "결정"
+            },
+            {
+              "ko": "고민",
+              "translation_ru": "переживание, проблема",
+              "group": "결정"
+            },
+            {
+              "ko": "걱정",
+              "translation_ru": "беспокойство, тревога",
+              "group": "결정"
+            },
+            {
+              "ko": "전공하다",
+              "translation_ru": "изучать как основную специальность",
+              "group": "진로"
+            },
+            {
+              "ko": "사회",
+              "translation_ru": "общество",
+              "group": "진로"
+            },
+            {
+              "ko": "생기다",
+              "translation_ru": "появляться, возникать"
+            },
+            {
+              "ko": "말씀",
+              "translation_ru": "слова, речь (почтительная форма)",
+              "group": "결정"
+            },
+            {
+              "ko": "사회학",
+              "translation_ru": "социология",
+              "group": "진로"
+            },
+            {
+              "ko": "경영학",
+              "translation_ru": "менеджмент, управление бизнесом",
+              "group": "진로"
+            },
+            {
+              "ko": "문화",
+              "translation_ru": "культура"
+            },
+            {
+              "ko": "관심",
+              "translation_ru": "интерес"
+            },
+            {
+              "ko": "생각",
+              "translation_ru": "мысль, мнение",
+              "group": "결정"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "진로",
+              "title_ru": "Учёба и работа",
+              "items": [
+                {
+                  "ko": "면접",
+                  "translation_ru": "собеседование"
+                },
+                {
+                  "ko": "상담",
+                  "translation_ru": "консультация"
+                },
+                {
+                  "ko": "학기",
+                  "translation_ru": "семестр"
+                },
+                {
+                  "ko": "취직",
+                  "translation_ru": "трудоустройство"
+                },
+                {
+                  "ko": "새해",
+                  "translation_ru": "Новый год"
+                }
+              ]
+            },
+            {
+              "title": "결정",
+              "title_ru": "Решения",
+              "items": [
+                {
+                  "ko": "결정하다",
+                  "translation_ru": "решать"
+                },
+                {
+                  "ko": "결심하다",
+                  "translation_ru": "решать (твёрдо)"
+                },
+                {
+                  "ko": "약속하다",
+                  "translation_ru": "обещать"
+                },
+                {
+                  "ko": "정하다",
+                  "translation_ru": "определять"
+                },
+                {
+                  "ko": "세우다",
+                  "translation_ru": "строить (план)"
+                },
+                {
+                  "ko": "끊다",
+                  "translation_ru": "бросать (привычку)"
+                }
+              ]
+            },
+            {
+              "title": "일상",
+              "title_ru": "В течение дня",
+              "items": [
+                {
+                  "ko": "쉬다",
+                  "translation_ru": "отдыхать"
+                },
+                {
+                  "ko": "산책하다",
+                  "translation_ru": "гулять"
+                },
+                {
+                  "ko": "잡지",
+                  "translation_ru": "журнал"
+                },
+                {
+                  "ko": "사용하다",
+                  "translation_ru": "использовать"
+                },
+                {
+                  "ko": "경고하다",
+                  "translation_ru": "предупреждать"
+                },
+                {
+                  "ko": "카카오톡",
+                  "translation_ru": "KakaoTalk"
+                },
+                {
+                  "ko": "이틀",
+                  "translation_ru": "два дня"
+                },
+                {
+                  "ko": "며칠",
+                  "translation_ru": "несколько дней"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 47,
+      "page_role": "content",
+      "source_photo": "IMG_0620",
+      "blocks": [
+        {
+          "type": "grammar_point",
+          "id": "grammar-3",
+          "toc_section": "준비하기 2",
+          "pattern": "AV-는 동안(에)",
+          "section": "3",
+          "explanation": "**Смысл:** конструкция, которую используют, когда одно действие происходит на всём протяжении другого — «пока я AV, …».",
+          "examples": [
+            "가: 제가 씻는 동안 텔레비전을 봐도 돼요?\n나: 네, 그러세요.",
+            "저는 자는 동안에 전화가 왔어요."
+          ],
+          "rules": [
+            "받침 не важен → AV + 는 동안(에)\n**먹다 → 먹는 동안**",
+            "Работает со всеми временами (과거, 현재, 미래) и предположением"
+          ]
+        },
+        {
+          "type": "grammar_point",
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "pattern": "AV-기로 하다",
+          "section": "4",
+          "explanation": "**Смысл:** конструкция, которую используют, когда говорят о принятом решении или договорённости — «решил(а) AV», «договорились AV».",
+          "examples": [
+            "가: 내일 몇 시에 만나기로 했어요?\n나: 두 시에 만나기로 했어요.",
+            "저는 담배를 끊기로 했어요."
+          ],
+          "rules": [
+            "받침 не важен → AV + 기로 하다",
+            "Значение \"решил не делать\" → -지 않기로 하다\n**가다 → 가지 않기로 하다**",
+            "Работает со всеми временами (과거, 현재, 미래) и предположением",
+            "– Будущее",
+            "– – Часто: -기로 하겠습니다, -기로 할게요, -기로 할까요?",
+            "– – Редко: -기로 할 거예요"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 48,
+      "page_role": "content",
+      "source_photo": "IMG_0621",
+      "blocks": [
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-3a",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기3",
+          "grammar_ref": "grammar-3",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "청소를 하다 / 친구를 기다리다"
+            ],
+            "cues": [
+              "청소를 하다 / 친구를 기다리다"
+            ],
+            "dialogue": [
+              "가: 지금 뭐 해요?",
+              "나: 청소를 하는 동안 친구를 기다려요."
+            ],
+            "emphasis": [
+              [
+                "뭐 해요"
+              ],
+              [
+                "청소를 하는 동안",
+                "친구를 기다려요"
+              ]
+            ]
+          },
+          "template": [
+            "가: 지금 뭐 해요?",
+            "나: {0} 동안 {1}."
+          ],
+          "items": [
+            {
+              "given": [
+                "숙제를 하다 / 음악을 듣다"
+              ],
+              "answers": [
+                "숙제를 하는",
+                "음악을 들어요"
+              ]
+            },
+            {
+              "given": [
+                "버스를 기다리다 / 책을 읽다"
+              ],
+              "answers": [
+                "버스를 기다리는",
+                "책을 읽어요"
+              ]
+            },
+            {
+              "given": [
+                "밥을 먹다 / 텔레비전을 보다"
+              ],
+              "answers": [
+                "밥을 먹는",
+                "텔레비전을 봐요"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 49,
+      "page_role": "content",
+      "source_photo": "IMG_0622",
+      "blocks": [
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "날씨가 따뜻하다",
+              "저녁에 산책하다"
+            ],
+            "cues": [
+              "날씨가 따뜻하다 / 저녁에 산책하다"
+            ],
+            "dialogue": [
+              "가: 날씨가 따뜻하네요.",
+              "나: 그러네요. 저녁에 산책하기로 해요."
+            ],
+            "emphasis": [
+              [
+                "따뜻하네요"
+              ],
+              [
+                "산책하기로 해요"
+              ]
+            ]
+          },
+          "template": [
+            "가: {0}.",
+            "나: 그러네요. {1}."
+          ],
+          "items": [
+            {
+              "given": [
+                "오늘 시간이 있다",
+                "영화를 보다"
+              ],
+              "answers": [
+                "오늘 시간이 있네요",
+                "영화를 보기로 해요"
+              ]
+            },
+            {
+              "given": [
+                "날이 어둡다",
+                "이만 집에 가다"
+              ],
+              "answers": [
+                "날이 어둡네요",
+                "이만 집에 가기로 해요"
+              ]
+            },
+            {
+              "given": [
+                "배가 고프다",
+                "저녁을 먹다"
+              ],
+              "answers": [
+                "배가 고프네요",
+                "저녁을 먹기로 해요"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

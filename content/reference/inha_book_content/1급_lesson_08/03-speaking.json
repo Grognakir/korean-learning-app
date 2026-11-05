@@ -1,0 +1,188 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 131,
+      "page_role": "content",
+      "source_photo": "IMG_1063",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "대학교에 입학하다"
+            }
+          ],
+          "table": {
+            "columns": [
+              "이름",
+              "전",
+              "후"
+            ],
+            "rows": [
+              [
+                "왕루",
+                "한국어 시험을 보다",
+                "유학생 모임을 만들 거다"
+              ],
+              [
+                "자르갈",
+                "여행을 할 거다",
+                "6개월 동안 태권도를 배울 거다"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "자르갈",
+            "왕루"
+          ],
+          "lines": [
+            {
+              "speaker": "자르갈",
+              "text": "왕루 씨, 대학교에 입학하기 전에 뭐 할 거예요?",
+              "emphasized": [
+                "왕루",
+                "대학교에 입학하기 전에 뭐 할 거예요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 대학교에 입학하기 전에 한국어 시험을 볼 거예요. 자르갈 씨는요?",
+              "emphasized": [
+                "대학교에 입학하기 전에 한국어 시험을 볼 거예요"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "저는 대학교에 입학하기 전에 여행을 할 거예요. 그리고 대학교에 입학한 후에 6개월 동안 태권도를 배울 거예요. 왕루 씨는 대학교에 입학한 후에 뭐 할 거예요?",
+              "emphasized": [
+                "대학교에 입학하기 전에 여행을 할 거예요",
+                "대학교에 입학한 후에 6개월 동안 태권도를 배울 거예요",
+                "왕루",
+                "대학교에 입학한 후에 뭐 할 거예요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 대학교에 입학한 후에 유학생 모임을 만들 거예요. 그래서 친구들과 함께 한국어도 공부하고 중국어도 가르칠 거예요.",
+              "emphasized": [
+                "대학교에 입학한 후에 유학생 모임을 만들 거예요",
+                "친구들과 함께 한국어도 공부하고 중국어도 가르칠 거예요"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-1",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 고향에 가다"
+            }
+          ],
+          "table": {
+            "columns": [
+              "이름",
+              "전",
+              "후"
+            ],
+            "rows": [
+              [
+                "나",
+                "",
+                ""
+              ],
+              [
+                "친구",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-2",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2) (        )"
+            }
+          ],
+          "table": {
+            "columns": [
+              "이름",
+              "전",
+              "후"
+            ],
+            "rows": [
+              [
+                "나",
+                "",
+                ""
+              ],
+              [
+                "친구",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "유학생",
+              "translation_ru": "студент по обмену, иностранный студент"
+            },
+            {
+              "ko": "모임",
+              "translation_ru": "собрание, встреча, группа"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

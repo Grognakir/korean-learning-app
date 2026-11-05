@@ -1,0 +1,159 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-07.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 123,
+      "page_role": "content",
+      "source_photo": "IMG_0767",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-days",
+          "toc_section": "문화 이해하기",
+          "title": "재미있는 ‘데이(Day)’",
+          "title_ru": "Весёлые «дни» (Day)",
+          "illustration": {
+            "storage_path": "lesson_7/illustration_5_korean_days.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "2월 14일은 ‘밸런타인데이’인데 성 발렌티노를 기념하는 날이지만 요즘은 여자가 좋아하는 남자에게 초콜릿을 선물하는 날입니다. 3월 14일은 ‘화이트데이’인데 남자가 좋아하는 여자에게 사탕을 주는 날입니다. 그리고 3월 3일은 돼지고기를 먹는 ‘삼겹살데이’이고 5월 2일은 오이를 먹는 ‘오이데이’입니다. 또 9월 9일은 닭고기를 먹는 ‘구구데이’입니다. 11월 11일은 ‘빼빼로데이’인데 이 날은 숫자 1 모양의 막대 초콜릿 과자를 선물합니다."
+            },
+            {
+              "text": "1) 한국에는 어떤 ‘데이’가 있습니까?",
+              "translation_ru": "Какие «дни» (Day) есть в Корее?"
+            },
+            {
+              "text": "2) 여러분 나라에도 재미있는 ‘데이’가 있습니까? 친구들에게 소개해 보십시오.",
+              "translation_ru": "А в вашей стране есть весёлые «дни»? Расскажите друзьям."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-days",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "성",
+              "translation_ru": "святой (перед именем)",
+              "group": "데이"
+            },
+            {
+              "ko": "기념하다",
+              "translation_ru": "отмечать (событие), чтить память",
+              "group": "데이"
+            },
+            {
+              "ko": "초콜릿",
+              "translation_ru": "шоколад",
+              "group": "데이"
+            },
+            {
+              "ko": "사탕",
+              "translation_ru": "конфета, леденец",
+              "group": "데이"
+            },
+            {
+              "ko": "닭고기",
+              "translation_ru": "курица (мясо)",
+              "group": "데이"
+            },
+            {
+              "ko": "오이",
+              "translation_ru": "огурец",
+              "group": "데이"
+            },
+            {
+              "ko": "막대",
+              "translation_ru": "палочка, брусок",
+              "group": "데이"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "데이",
+              "title_ru": "Особые дни",
+              "items": [
+                {
+                  "ko": "밸런타인데이",
+                  "translation_ru": "День Валентина"
+                },
+                {
+                  "ko": "화이트데이",
+                  "translation_ru": "Белый день"
+                },
+                {
+                  "ko": "삼겹살데이",
+                  "translation_ru": "День самгепсаля"
+                },
+                {
+                  "ko": "빼빼로데이",
+                  "translation_ru": "День Пепперо"
+                },
+                {
+                  "ko": "돼지고기",
+                  "translation_ru": "свинина"
+                },
+                {
+                  "ko": "과자",
+                  "translation_ru": "печенье, снэки"
+                },
+                {
+                  "ko": "모양",
+                  "translation_ru": "форма"
+                },
+                {
+                  "ko": "숫자",
+                  "translation_ru": "цифра"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-7",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㅂ'+'ㄹ' (비음화)",
+          "audio_id": "228",
+          "examples": [
+            {
+              "text": "법률",
+              "translation_ru": "закон, право"
+            },
+            {
+              "text": "왕십리",
+              "translation_ru": "Ванъсимни (район Сеула)"
+            },
+            {
+              "text": "학습량",
+              "translation_ru": "объём обучения, учебная нагрузка"
+            },
+            {
+              "text": "압력",
+              "translation_ru": "давление"
+            },
+            {
+              "text": "컵라면",
+              "translation_ru": "лапша быстрого приготовления в стаканчике"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

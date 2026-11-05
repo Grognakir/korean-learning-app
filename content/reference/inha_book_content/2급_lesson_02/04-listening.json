@@ -1,0 +1,180 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-02.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 35,
+      "page_role": "content",
+      "source_photo": "photo_27",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "쇼핑",
+              "title_ru": "Покупки",
+              "items": [
+                {
+                  "ko": "광고",
+                  "translation_ru": "реклама"
+                },
+                {
+                  "ko": "행사",
+                  "translation_ru": "акция, мероприятие"
+                },
+                {
+                  "ko": "기간",
+                  "translation_ru": "срок, период"
+                },
+                {
+                  "ko": "끝나다",
+                  "translation_ru": "заканчиваться"
+                },
+                {
+                  "ko": "여름옷",
+                  "translation_ru": "летняя одежда"
+                },
+                {
+                  "ko": "가을옷",
+                  "translation_ru": "осенняя одежда"
+                },
+                {
+                  "ko": "벌",
+                  "translation_ru": "комплект (счётное слово для одежды)"
+                }
+              ]
+            },
+            {
+              "title": "집",
+              "title_ru": "Поиск жилья",
+              "items": [
+                {
+                  "ko": "공인중개사",
+                  "translation_ru": "риелтор"
+                },
+                {
+                  "ko": "침대",
+                  "translation_ru": "кровать"
+                },
+                {
+                  "ko": "옷장",
+                  "translation_ru": "шкаф для одежды"
+                },
+                {
+                  "ko": "냉장고",
+                  "translation_ru": "холодильник"
+                },
+                {
+                  "ko": "인터넷",
+                  "translation_ru": "интернет"
+                },
+                {
+                  "ko": "기본",
+                  "translation_ru": "базовое, стандарт"
+                },
+                {
+                  "ko": "유치원",
+                  "translation_ru": "детский сад"
+                },
+                {
+                  "ko": "뒤쪽",
+                  "translation_ru": "задняя сторона"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-housing-search",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "부동산 중개사 사무소에서 집을 구하기",
+          "audio_id": "207",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "공인중개사",
+                "text": "어떻게 오셨어요?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "집을 좀 보려고요."
+              },
+              {
+                "speaker": "공인중개사",
+                "text": "아, 그러세요? 몇 명이 살 겁니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "두 명이 살 거예요. 좋은 집이 있어요?"
+              },
+              {
+                "speaker": "공인중개사",
+                "text": "예, 있습니다. 공원 옆에 있는 집이 깨끗하고 보증금 2,000만 원의 전세입니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "월세는 없어요?"
+              },
+              {
+                "speaker": "공인중개사",
+                "text": "유치원 뒤쪽에 집이 하나 있는데 보증금 300만 원에 월세가 40만 원입니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "방은 어때요?"
+              },
+              {
+                "speaker": "공인중개사",
+                "text": "조용하고 침대, 옷장, 냉장고, 텔레비전, 인터넷은 기본으로 사용할 수 있습니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "지금 이 집을 볼 수 있어요?"
+              },
+              {
+                "speaker": "공인중개사",
+                "text": "예, 볼 수 있습니다. 같이 갑시다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오. (부동산 중개사 사무소에서 집을 소개하는 남자)",
+            "illustration": {
+              "storage_path": "lesson_2/illustration_2_house_search.png",
+              "original_kind": "illustration"
+            }
+          },
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "1) 무슨 이야기를 합니까?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "2) 들은 내용과 같은 것을 고르십시오.",
+              "choices": [
+                "여자는 혼자 살 집을 구하는 중입니다.",
+                "전세는 깨끗한데 보증금이 2,000만 원입니다.",
+                "월세는 가구와 인터넷을 모두 사용할 수 없습니다.",
+                "여자는 유치원 뒤쪽에 있는 월세로 이사를 했습니다."
+              ],
+              "correct": null
+            }
+          ],
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "followup": "집을 구해 본 경험을 이야기해 보십시오."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-06.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 104,
+      "page_role": "content",
+      "source_photo": "IMG_0717",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-samgyetang",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "삼계탕",
+              "title_ru": "Ингредиенты",
+              "items": [
+                {
+                  "ko": "찹쌀",
+                  "translation_ru": "клейкий рис"
+                },
+                {
+                  "ko": "인삼",
+                  "translation_ru": "женьшень"
+                },
+                {
+                  "ko": "대추",
+                  "translation_ru": "унаби, китайский финик"
+                },
+                {
+                  "ko": "마늘",
+                  "translation_ru": "чеснок"
+                },
+                {
+                  "ko": "닭",
+                  "translation_ru": "курица"
+                },
+                {
+                  "ko": "뱃속",
+                  "translation_ru": "нутро, живот"
+                },
+                {
+                  "ko": "재료",
+                  "translation_ru": "ингредиенты"
+                },
+                {
+                  "ko": "땀",
+                  "translation_ru": "пот"
+                },
+                {
+                  "ko": "여름",
+                  "translation_ru": "лето"
+                }
+              ]
+            },
+            {
+              "title": "방법",
+              "title_ru": "Способ",
+              "items": [
+                {
+                  "ko": "씻다",
+                  "translation_ru": "мыть"
+                },
+                {
+                  "ko": "붓다",
+                  "translation_ru": "вливать"
+                },
+                {
+                  "ko": "끓이다",
+                  "translation_ru": "варить"
+                },
+                {
+                  "ko": "냄비",
+                  "translation_ru": "кастрюля"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-reading-samgyetang",
+          "toc_section": "읽고 말하기",
+          "title": "삼계탕",
+          "title_ru": "Самгетан",
+          "illustration": {
+            "storage_path": "lesson_6/illustration_4_samgyetang.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "읽고 말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "'삼계탕'은 한국 사람들이 좋아하는 음식입니다. 한국 사람들은 여름에 삼계탕을 자주 먹습니다. 삼계탕은 닭, 찹쌀, 인삼, 마늘, 대추를 넣고 끓인 음식입니다. 여름에 땀이 많이 날 때 삼계탕을 먹으면 건강에 좋습니다."
+            },
+            {
+              "text": "다음은 삼계탕을 만드는 방법입니다."
+            },
+            {
+              "text": "〈삼계탕〉",
+              "line_kind": "heading"
+            },
+            {
+              "text": "재료: 닭, 찹쌀, 인삼, 마늘, 대추",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "만드는 방법",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "1. 닭을 깨끗하게 씻습니다.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "2. 닭의 뱃속( ㉠ ) 찹쌀을 넣습니다.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "3. 닭과 인삼, 마늘, 대추를 냄비에 넣고 물을 붓습니다.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "4. 1시간 정도 끓인 후에 먹습니다.",
+              "line_kind": "list-item"
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "찹쌀",
+              "translation_ru": "клейкий рис"
+            },
+            {
+              "ko": "대추",
+              "translation_ru": "ююба (китайский финик)"
+            },
+            {
+              "ko": "땀",
+              "translation_ru": "пот"
+            },
+            {
+              "ko": "뱃속",
+              "translation_ru": "нутро, внутренняя часть живота"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-samgyetang",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "음식을 소개하는 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о блюде и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "㉠에 들어갈 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее слово для ㉠.",
+              "choices": [
+                "이나",
+                "밖에",
+                "에 비해",
+                "에다가"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "삼계탕은 닭과 인삼을 넣고 끓인 음식입니다.",
+                "삼계탕은 겨울에 먹으면 건강에 아주 좋습니다.",
+                "삼계탕은 명절에 먹는 한국의 전통 음식입니다.",
+                "삼계탕을 먹으면 땀이 많이 나서 몸에 좋습니다."
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 고향 음식을 만들 수 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Вы умеете готовить еду с вашей родины? Расскажите."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

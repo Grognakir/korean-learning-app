@@ -1,0 +1,158 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 135,
+      "page_role": "content",
+      "source_photo": "IMG_1067",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-new-year",
+          "toc_section": "문화 이해하기",
+          "title": "새해 계획",
+          "title_ru": "Планы на Новый год",
+          "illustration": {
+            "storage_path": "lesson_8/illustration_5_new_year_goals.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "한국 사람들은 새해에 계획을 세웁니다.\n\n“매일 열심히 공부를 할 거예요.”\n“날마다 열심히 일을 할 거예요.”\n“날마다 운동을 할 거예요.”\n“돈을 많이 벌 거예요.”\n“꼭 담배를 끊을 거예요.”\n“꼭 결혼을 할 거예요.”\n\n한국 사람들은 날마다 새해 계획을 생각하고 열심히 노력합니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "세웁",
+              "translation_ru": "форма от 세우다 (ставить; составлять (план))"
+            },
+            {
+              "ko": "벌",
+              "translation_ru": "форма от 벌다 (зарабатывать)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-new-year",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "새해 계획",
+          "title_ru": "Планы на Новый год",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국 사람들은 새해에 무엇을 합니까?",
+              "prompt_ru": "Что корейцы делают в Новый год?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 사람들은 새해에 무엇을 계획합니까? 이야기해 보십시오.",
+              "prompt_ru": "Что планируют люди в вашей стране на Новый год? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-new-year",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "새해",
+              "translation_ru": "Новый год"
+            },
+            {
+              "ko": "계획",
+              "translation_ru": "план"
+            },
+            {
+              "ko": "세우다",
+              "translation_ru": "ставить; составлять (план)"
+            },
+            {
+              "ko": "담배",
+              "translation_ru": "сигарета"
+            },
+            {
+              "ko": "끊다",
+              "translation_ru": "бросать (привычку), прекращать"
+            },
+            {
+              "ko": "벌다",
+              "translation_ru": "зарабатывать (деньги)"
+            },
+            {
+              "ko": "결혼",
+              "translation_ru": "брак, свадьба"
+            },
+            {
+              "ko": "노력하다",
+              "translation_ru": "стараться, прилагать усилия"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-8",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㅇ’",
+          "audio_id": "132",
+          "examples": [
+            {
+              "text": "운동",
+              "translation_ru": "спорт"
+            },
+            {
+              "text": "가방",
+              "translation_ru": "сумка"
+            },
+            {
+              "text": "고향",
+              "translation_ru": "родина"
+            },
+            {
+              "text": "공항",
+              "translation_ru": "аэропорт"
+            },
+            {
+              "text": "여행",
+              "translation_ru": "путешествие"
+            },
+            {
+              "text": "운동은",
+              "translation_ru": "спорт (+ частица 은)"
+            },
+            {
+              "text": "가방이",
+              "translation_ru": "сумка (+ частица 이)"
+            },
+            {
+              "text": "고향에",
+              "translation_ru": "на родине"
+            },
+            {
+              "text": "공항으로",
+              "translation_ru": "в аэропорт"
+            },
+            {
+              "text": "여행을",
+              "translation_ru": "путешествие (+ частица 을)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-15.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 250,
+      "page_role": "content",
+      "source_photo": "IMG_1174",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-healthy-habits",
+          "toc_section": "쓰기",
+          "title": "건강에 좋은 생활 습관에 대한 글을 써 보십시오.",
+          "title_ru": "Напишите о привычках, полезных для здоровья.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: есть ли у вас полезные для здоровья привычки.",
+              "questions": [
+                {
+                  "kr": "건강에 좋은 습관이 있습니까?",
+                  "ru": "Есть ли у вас привычки, полезные для здоровья?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что это за привычка, когда, как и как долго.",
+              "questions": [
+                {
+                  "kr": "무슨 습관입니까?",
+                  "ru": "Что это за привычка?"
+                },
+                {
+                  "kr": "언제, 어떻게, 얼마나 합니까?",
+                  "ru": "Когда, как и сколько?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что хорошего в этой привычке.",
+              "questions": [
+                {
+                  "kr": "그것을 하면 무엇이 좋습니까?",
+                  "ru": "Что в этом хорошего?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-sseugi",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "추천하다",
+              "translation_ru": "рекомендовать"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

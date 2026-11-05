@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 134,
+      "page_role": "content",
+      "source_photo": "IMG_1066",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-vacation-plan",
+          "toc_section": "쓰기",
+          "title": "방학 계획을 써 보십시오.",
+          "title_ru": "Напишите о своих планах на каникулы.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: куда вы поедете на каникулах.",
+              "questions": [
+                {
+                  "kr": "방학 동안에 어디에 갈 겁니까?",
+                  "ru": "Куда вы поедете на каникулах?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что вы подготовите перед поездкой.",
+              "questions": [
+                {
+                  "kr": "거기에 가기 전에 무엇을 준비할 겁니까?",
+                  "ru": "Что вы подготовите перед поездкой туда?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что вы будете делать после поездки.",
+              "questions": [
+                {
+                  "kr": "거기에 간 후에 무엇을 할 겁니까?",
+                  "ru": "Что вы будете делать после поездки туда?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

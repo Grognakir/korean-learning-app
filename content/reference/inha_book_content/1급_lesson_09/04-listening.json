@@ -1,0 +1,150 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 148,
+      "page_role": "content",
+      "source_photo": "IMG_1079",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-shopping",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "물건을 사는 대화를 듣고 말하기",
+          "title_ru": "Послушать диалог о покупках и обсудить",
+          "audio_id": "135",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "남자",
+                "text": "어서 오세요. 오늘 과일을 세일하고 있습니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "사과가 1개에 얼마예요?"
+              },
+              {
+                "speaker": "남자",
+                "text": "1개에 1,000원짜리도 있고 1,500원짜리도 있습니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "뭐가 맛있어요?"
+              },
+              {
+                "speaker": "남자",
+                "text": "1,500원짜리가 크고 맛있어요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "수박은 얼마예요?"
+              },
+              {
+                "speaker": "남자",
+                "text": "수박은 1통에 12,000원입니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "그러면 사과 1,500원짜리 3개랑 수박 1통 주세요."
+              },
+              {
+                "speaker": "남자",
+                "text": "네, 알겠습니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "여기 16,500원 있습니다."
+              },
+              {
+                "speaker": "남자",
+                "text": "네, 고맙습니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "어디입니까? 이야기해 보십시오.",
+            "prompt_ru": "Где это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_9/illustration_3_fruit_shop.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "사과는 한 개에 2,000원입니다.",
+                "남자는 여자에게서 수박을 샀습니다.",
+                "여자는 사과 2개와 수박 1통을 샀습니다.",
+                "여자는 남자에게 16,500원을 주었습니다."
+              ],
+              "correct": 3
+            }
+          ],
+          "followup": "편의점입니다. 점원과 손님의 대화를 해 보십시오.",
+          "followup_ru": "Вы в магазине у дома. Разыграйте диалог продавца и покупателя."
+        },
+        {
+          "type": "text",
+          "id": "table-convenience-store",
+          "toc_section": "듣고 말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "듣고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "〈편의점〉"
+            }
+          ],
+          "table": {
+            "columns": [
+              "콜라",
+              "양말",
+              "잡지"
+            ],
+            "rows": [
+              [
+                "1500원 / 1병",
+                "3000원 / 1켤레",
+                "2500원 / 1권"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-shopping",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "세일하다",
+              "translation_ru": "устраивать распродажу"
+            },
+            {
+              "ko": "짜리",
+              "translation_ru": "стоимостью, номиналом (суффикс)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

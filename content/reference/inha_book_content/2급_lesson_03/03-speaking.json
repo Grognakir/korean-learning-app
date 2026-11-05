@@ -1,0 +1,167 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 50,
+      "page_role": "content",
+      "source_photo": "IMG_0623",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "여행",
+              "title_ru": "Путешествие",
+              "items": [
+                {
+                  "ko": "스페인",
+                  "translation_ru": "Испания"
+                },
+                {
+                  "ko": "전체",
+                  "translation_ru": "весь, целиком"
+                },
+                {
+                  "ko": "기억나다",
+                  "translation_ru": "вспоминаться"
+                },
+                {
+                  "ko": "사귀다",
+                  "translation_ru": "подружиться"
+                },
+                {
+                  "ko": "일본",
+                  "translation_ru": "Япония"
+                }
+              ]
+            },
+            {
+              "title": "계획",
+              "title_ru": "Планы",
+              "items": [
+                {
+                  "ko": "계획",
+                  "translation_ru": "план"
+                },
+                {
+                  "ko": "약속",
+                  "translation_ru": "обещание, договорённость"
+                },
+                {
+                  "ko": "내년",
+                  "translation_ru": "следующий год"
+                },
+                {
+                  "ko": "다음에",
+                  "translation_ru": "в следующий раз"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "아멜리는 고등학생 때 혼자 스페인으로 여행을 간 적이 있습니다. 여행 중에 친구를 사귀었습니다. 그 친구와 스페인 음식을 자주 먹었습니다. 스페인에서 좋아하는 사람이 생겼습니다. 자르갈은 다음에 그 친구와 같이 일본을 여행하기로 했습니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "자르갈",
+            "아멜리"
+          ],
+          "lines": [
+            {
+              "speaker": "자르갈",
+              "text": "아멜리 씨는 혼자 여행해 본 적이 있어요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 고등학생 때 스페인으로 여행을 갔어요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "어디를 여행했어요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "스페인 전체를 여행했어요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "그래요? 무슨 일이 기억나요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "여행 중에 친구를 사귄 게 기억나요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "그 친구와 무엇을 했어요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "그 친구와 스페인 음식을 자주 먹었어요. 아주 재미있는 사람이었어요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "다음에 또 여행할 계획은 없어요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "내년에 그 친구하고 같이 일본을 여행하기로 했어요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 여러분은 어떤 경험을 한 적이 있습니까?"
+            },
+            {
+              "text": "2) 무슨 일이 기억납니까?"
+            },
+            {
+              "text": "3) 다음에 무엇을 하기로 했습니까?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-07.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 117,
+      "page_role": "content",
+      "source_photo": "IMG_1050",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-favorite-season",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_7/illustration_4_autumn_hiking.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "한국의 가을은 날씨가 맑고 바람도 시원합니다. 그래서 가을에 등산도 하고 공원에도 자주 갑니다."
+            },
+            {
+              "text": "저는 작년에 처음 등산을 했습니다. 친구들과 함께 설악산에 갔습니다. 설악산 등산은 무척 힘들었습니다. 하지만 설악산은 공기가 맑고 단풍이 정말 아름다웠습니다. 그래서 지금은 등산을 아주 좋아합니다. 또 작년 가을에 친구들과 같이 공원에도 자주 갔습니다. 공원에 가서 산책도 하고 자전거도 탔습니다. 정말 재미있었습니다. 그래서 요즘도 가을에 자전거를 (㉠) 공원에 자주 갑니다."
+            },
+            {
+              "text": "저는 한국의 가을을 좋아합니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "아름다웠",
+              "translation_ru": "форма от 아름답다 (быть красивым)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-favorite-season",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "좋아하는 계절에 대한 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о любимом сезоне и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "한국의 산",
+                "한국의 가을",
+                "한국의 공원",
+                "한국의 단풍"
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "choice",
+              "prompt": "㉠에 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее для ㉠.",
+              "choices": [
+                "타러",
+                "타서",
+                "빌리러",
+                "빌려서"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 다른 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что НЕ соответствует содержанию текста.",
+              "choices": [
+                "가을은 날씨가 맑습니다.",
+                "작년에 설악산에 가 봤습니다.",
+                "가을 산의 단풍이 예뻤습니다.",
+                "공원에 가서 친구를 만납니다."
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분이 좋아하는 계절을 이야기해 보십시오.",
+              "prompt_ru": "Расскажите, какое время года вам нравится."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-favorite-season",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-favorite-season",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "무척",
+              "translation_ru": "очень, чрезвычайно"
+            },
+            {
+              "ko": "또",
+              "translation_ru": "снова, опять; ещё, также"
+            },
+            {
+              "ko": "요즘",
+              "translation_ru": "в последнее время, нынче"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

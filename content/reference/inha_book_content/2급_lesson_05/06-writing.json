@@ -1,0 +1,137 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-05.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 88,
+      "page_role": "content",
+      "source_photo": "IMG_0699",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "초대장 쓰기",
+              "title_ru": "Приглашение",
+              "items": [
+                {
+                  "ko": "말하기 대회",
+                  "translation_ru": "конкурс по говорению"
+                },
+                {
+                  "ko": "대강당",
+                  "translation_ru": "большой актовый зал"
+                },
+                {
+                  "ko": "본관",
+                  "translation_ru": "главный корпус"
+                },
+                {
+                  "ko": "준비되다",
+                  "translation_ru": "быть подготовленным"
+                },
+                {
+                  "ko": "개최하다",
+                  "translation_ru": "проводить (мероприятие)"
+                },
+                {
+                  "ko": "날짜",
+                  "translation_ru": "дата"
+                },
+                {
+                  "ko": "장소",
+                  "translation_ru": "место"
+                }
+              ]
+            },
+            {
+              "title": "문장",
+              "title_ru": "Формулы",
+              "items": [
+                {
+                  "ko": "초대하다",
+                  "translation_ru": "приглашать"
+                },
+                {
+                  "ko": "참석하다",
+                  "translation_ru": "присутствовать"
+                },
+                {
+                  "ko": "바쁘다",
+                  "translation_ru": "занятый"
+                },
+                {
+                  "ko": "빛내다",
+                  "translation_ru": "украшать собой"
+                },
+                {
+                  "ko": "감사드리다",
+                  "translation_ru": "выражать благодарность"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-invitation",
+          "toc_section": "쓰기",
+          "title": "초대장을 써 보십시오.",
+          "title_ru": "Напишите приглашение.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: расскажите, о каком приглашении идёт речь.",
+              "questions": [
+                {
+                  "kr": "무슨 초대장입니까?",
+                  "ru": "Какое это приглашение?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: расскажите, что вы будете делать, когда приглашаете и где встречаетесь.",
+              "questions": [
+                {
+                  "kr": "무엇을 할 겁니까?",
+                  "ru": "Что вы будете делать?"
+                },
+                {
+                  "kr": "언제 초대합니까?",
+                  "ru": "Когда приглашаете?"
+                },
+                {
+                  "kr": "어디에서 만납니까?",
+                  "ru": "Где встречаетесь?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: укажите, кто приглашает.",
+              "questions": [
+                {
+                  "kr": "누가 초대합니까?",
+                  "ru": "Кто приглашает?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

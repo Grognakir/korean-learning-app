@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-11.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 187,
+      "page_role": "content",
+      "source_photo": "IMG_1428",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-safety",
+          "toc_section": "쓰기",
+          "title": "안전 규칙에 대한 글을 써 보십시오.",
+          "title_ru": "Напишите текст о правилах безопасности.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Начало: чем вы едете или летите.",
+              "questions": [
+                {
+                  "kr": "무엇을 탑니까?",
+                  "ru": "На чём вы едете (летите)?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Середина: что нельзя делать.",
+              "questions": [
+                {
+                  "kr": "무엇을 하면 안 됩니까?",
+                  "ru": "Что делать нельзя?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Конец: что обязательно нужно соблюдать.",
+              "questions": [
+                {
+                  "kr": "꼭 지켜야 할 일은 무엇입니까?",
+                  "ru": "Что обязательно нужно соблюдать?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 149,
+      "page_role": "content",
+      "source_photo": "IMG_1080",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-special-day-gift",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_9/illustration_4_parents_carnations.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "내일은 5월 8일 어버이날입니다. 한국 사람들은 어버이날에 부모님에게 카네이션을 선물합니다."
+            },
+            {
+              "text": "저는 어제 카네이션을 사러 친구와 함께 학교 앞 꽃집에 갔습니다. 사람들이 꽃을 많이 사고 있었습니다. 저는 카네이션 두 (㉠)을/를 샀습니다. 또 카드도 두 (㉡)을/를 샀습니다. 저녁에 이 꽃을 포장했습니다. 그리고 카드에 감사의 편지를 썼습니다."
+            },
+            {
+              "text": "“어머니, 감사합니다. 그리고 사랑합니다.”"
+            },
+            {
+              "text": "“아버지, 고맙습니다. 그리고 사랑합니다.”"
+            },
+            {
+              "text": "내일 부모님에게 카네이션과 카드를 선물할 겁니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-special-day-gift",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "특별한 날에 주는 선물에 대한 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о подарках в особый день и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "어버이날",
+                "카네이션",
+                "부모님",
+                "카드"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "choice",
+              "prompt": "㉠과 ㉡에 들어갈 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящие слова для ㉠ и ㉡.",
+              "choices": [
+                "㉠ 대, ㉡ 켤레",
+                "㉠ 마리, ㉡ 명",
+                "㉠ 잔, ㉡ 병",
+                "㉠ 송이, ㉡ 장"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "친구가 꽃을 포장했습니다.",
+                "저는 카네이션을 좋아합니다.",
+                "저는 친구와 꽃집에 갔습니다.",
+                "부모님이 저에게 꽃을 선물할 겁니다."
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 나라에는 어떤 특별한 날이 있습니까? 그 날에 무엇을 선물을 합니까?",
+              "prompt_ru": "Какие особые дни есть в вашей стране? Что дарят в этот день?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-special-day-gift",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-special-day-gift",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "어버이날",
+              "translation_ru": "День родителей (8 мая)"
+            },
+            {
+              "ko": "카네이션",
+              "translation_ru": "гвоздика (цветок)"
+            },
+            {
+              "ko": "카드",
+              "translation_ru": "открытка, карточка"
+            },
+            {
+              "ko": "포장하다",
+              "translation_ru": "заворачивать, упаковывать (подарок)"
+            },
+            {
+              "ko": "사랑하다",
+              "translation_ru": "любить"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

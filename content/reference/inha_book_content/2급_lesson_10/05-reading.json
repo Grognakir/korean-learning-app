@@ -1,0 +1,223 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-10.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 169,
+      "page_role": "content",
+      "source_photo": "IMG_1300",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-ideal",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_10/illustration_4_shared_hobbies.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무슨 사이입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Какие между ними отношения? Расскажите.",
+          "lines": [
+            {
+              "text": "여러분은 어떤 사람을 좋아하십니까? 사람들은 모두 이상형이 다릅니다. 키가 큰 사람, 날씬한 사람, 친절한 사람, 똑똑한 사람, 직업이 좋은 사람 등 사람들은 이상형에 대한 생각이 다양합니다."
+            },
+            {
+              "text": "저는 이상형을 생각할 때 외모나 직업을 중요하게 생각하지 않는 편입니다. 왜냐하면 외모나 직업보다 더 중요한 것은 바로 성격이기 때문입니다. 어떤 사람과 오랫동안 사귀려면 성격이 잘 맞아야 합니다. 성격이 잘 맞으면 대화도 잘 할 수 있고 서로 잘 이해할 수 있습니다. 저는 성격이 밝고 잘 웃는 사람이 좋습니다. 그리고 저처럼 야외 활동을 좋아하는 사람이 좋습니다. 시간이 있을 때마다 등산이나 자전거 타기와 같은 취미 활동을 같이 하면 더 즐겁기 때문입니다."
+            },
+            {
+              "text": "이상형에 대한 생각은 누구나 다를 수 있지만 외모나 직업처럼 사람의 겉만 보고 판단하면 좋지 않습니다. 좋은 이상형을 만나고 싶으십니까? 그러면 여러분도 다른 사람에게 좋은 이상형이 되어 보십시오."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-reading-expr",
+          "toc_section": "읽고 말하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-reading-ideal",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "성격이 맞다",
+              "translation_ru": "подходить по характеру — «성격이 잘 맞으면 대화를 잘 할 수 있어요» («если характеры подходят друг другу, можно хорошо общаться»)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-ideal",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "이상형에 대한 글을 읽고 말하기",
+          "title_ru": "Прочитать текст об идеальном типе и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까?",
+              "prompt_ru": "О чём этот текст?",
+              "choices": [
+                "외모",
+                "성격",
+                "이상형",
+                "취미 활동"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 중심 생각으로 알맞은 것은 무엇입니까?",
+              "prompt_ru": "Какая основная мысль текста?",
+              "choices": [
+                "사람은 모두 이상형이 달라야 합니다.",
+                "이상형의 직업을 중요하게 생각해야 합니다.",
+                "성격이 잘 맞는 사람과 야외활동을 해야 합니다.",
+                "사람의 겉만 보고 판단하는 것은 좋지 않습니다."
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 이상형은 어떤 사람입니까? 친구들에게 이야기해 보십시오.",
+              "prompt_ru": "Какой человек ваш идеал? Расскажите друзьям."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-ideal",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-ideal",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "이상형",
+              "translation_ru": "идеальный тип (человека)",
+              "group": "사람"
+            },
+            {
+              "ko": "외모",
+              "translation_ru": "внешность",
+              "group": "사람"
+            },
+            {
+              "ko": "서로",
+              "translation_ru": "друг друга, взаимно",
+              "group": "사람"
+            },
+            {
+              "ko": "겉",
+              "translation_ru": "внешняя сторона",
+              "group": "사람"
+            },
+            {
+              "ko": "판단하다",
+              "translation_ru": "судить, оценивать",
+              "group": "사람"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "사람",
+              "title_ru": "Люди и характер",
+              "items": [
+                {
+                  "ko": "성격",
+                  "translation_ru": "характер"
+                },
+                {
+                  "ko": "직업",
+                  "translation_ru": "профессия, работа"
+                },
+                {
+                  "ko": "친절하다",
+                  "translation_ru": "добрый, вежливый"
+                },
+                {
+                  "ko": "똑똑하다",
+                  "translation_ru": "умный"
+                },
+                {
+                  "ko": "사귀다",
+                  "translation_ru": "дружить, встречаться"
+                },
+                {
+                  "ko": "이해하다",
+                  "translation_ru": "понимать"
+                },
+                {
+                  "ko": "중요하다",
+                  "translation_ru": "важный"
+                },
+                {
+                  "ko": "다양하다",
+                  "translation_ru": "разнообразный"
+                }
+              ]
+            },
+            {
+              "title": "존경",
+              "title_ru": "Уважение и пример",
+              "items": [
+                {
+                  "ko": "존경하다",
+                  "translation_ru": "уважать, почитать"
+                },
+                {
+                  "ko": "닮다",
+                  "translation_ru": "быть похожим (на кого-то)"
+                },
+                {
+                  "ko": "응원하다",
+                  "translation_ru": "поддерживать, болеть за"
+                },
+                {
+                  "ko": "격려하다",
+                  "translation_ru": "подбадривать, ободрять"
+                },
+                {
+                  "ko": "칭찬하다",
+                  "translation_ru": "хвалить"
+                },
+                {
+                  "ko": "포기하다",
+                  "translation_ru": "отказываться, сдаваться"
+                },
+                {
+                  "ko": "용기",
+                  "translation_ru": "смелость, мужество"
+                },
+                {
+                  "ko": "노력하다",
+                  "translation_ru": "стараться, прилагать усилия"
+                },
+                {
+                  "ko": "믿다",
+                  "translation_ru": "верить"
+                },
+                {
+                  "ko": "덕분",
+                  "translation_ru": "благодаря"
+                },
+                {
+                  "ko": "장점",
+                  "translation_ru": "достоинство, плюс"
+                },
+                {
+                  "ko": "단점",
+                  "translation_ru": "недостаток, минус"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

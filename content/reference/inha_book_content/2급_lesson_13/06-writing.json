@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-13.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 219,
+      "page_role": "content",
+      "source_photo": "IMG_1558",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-worry",
+          "toc_section": "쓰기",
+          "title": "인터넷 게시판에 자신의 고민에 대한 글을 써 보십시오.",
+          "title_ru": "Напишите на интернет-форуме текст о своей заботе.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Начало: в чём ваша забота.",
+              "questions": [
+                {
+                  "kr": "고민이 무엇입니까?",
+                  "ru": "В чём ваша забота?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Середина: почему она возникла.",
+              "questions": [
+                {
+                  "kr": "왜 그 고민이 생겼습니까?",
+                  "ru": "Почему возникла эта забота?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Конец: что вы хотите сделать.",
+              "questions": [
+                {
+                  "kr": "어떻게 하고 싶습니까?",
+                  "ru": "Что вы хотите сделать?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

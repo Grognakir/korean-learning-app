@@ -1,0 +1,163 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-16.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 268,
+      "page_role": "content",
+      "source_photo": "IMG_1602",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-official-mail",
+          "toc_section": "읽고 말하기",
+          "illustration": null,
+          "text_kind": "article",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что делает этот человек? Расскажите.",
+          "lines": [
+            {
+              "text": "보내는 사람: 파하드 <fahad@inha.ac.kr>",
+              "line_kind": "meta"
+            },
+            {
+              "text": "받는 사람: 최 선생님 <choi@inha.ac.kr>",
+              "line_kind": "meta"
+            },
+            {
+              "text": "제목: 결석 사유서",
+              "line_kind": "meta"
+            },
+            {
+              "text": "유학생 담당 선생님께"
+            },
+            {
+              "text": "안녕하십니까? 저는 파하드입니다."
+            },
+            {
+              "text": "제가 지난주에 다리를 다쳤습니다. 그래서 수술을 하고 나서 일주일 동안 병원에 입원을 했고 지금은 퇴원해서 집에서 쉬고 있습니다. 그런데 수술을 ( ㉠ ) 바로 걸을 수가 없습니다. 물리 치료를 며칠 더 받아야 할 것 같습니다."
+            },
+            {
+              "text": "그래서 아무리 빨리 한국에 가도 이번 주에는 갈 수가 없습니다. 물리 치료가 끝나자마자 한국에 가겠습니다. 개학날보다 1주일 늦게 한국에 입국할 것 같습니다. 한국에 갈 때 병원 진단서를 가지고 가겠습니다. 그리고 더 필요한 서류가 있으면 말씀해 주십시오."
+            },
+            {
+              "text": "안녕히 계십시오."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-official-mail",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "공식적인 편지를 읽고 말하기",
+          "title_ru": "Прочитать официальное письмо и обсудить",
+          "group_prompt": "다음과 같이 이야기해 보십시오.",
+          "group_prompt_ru": "Поговорите, как показано.",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "㉠에 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее выражение для ㉠.",
+              "choices": [
+                "하려고",
+                "하다가",
+                "하려고 해도",
+                "하고 나니까"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 맞는 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "파하드는 친구에게 이메일을 썼다.",
+                "파하드는 지금 병원에서 수술을 받고 있다.",
+                "파하드는 개학날이 지나서 한국에 올 것 같다.",
+                "파하드는 학교에 병원 진단서와 서류를 보냈다."
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 공식적인 편지 글을 쓸 수 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Умеете ли вы писать официальные письма? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-official-mail",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-official-mail",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "사유서",
+              "translation_ru": "объяснительная записка (причина отсутствия)"
+            },
+            {
+              "ko": "담당",
+              "translation_ru": "ответственность за участок, заведование"
+            },
+            {
+              "ko": "수술",
+              "translation_ru": "операция"
+            },
+            {
+              "ko": "입원",
+              "translation_ru": "госпитализация"
+            },
+            {
+              "ko": "퇴원하다",
+              "translation_ru": "выписываться из больницы"
+            },
+            {
+              "ko": "물리 치료",
+              "translation_ru": "физиотерапия"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "편지",
+              "title_ru": "Письмо",
+              "items": [
+                {
+                  "ko": "취직",
+                  "translation_ru": "трудоустройство"
+                },
+                {
+                  "ko": "휴가",
+                  "translation_ru": "отпуск"
+                },
+                {
+                  "ko": "발음",
+                  "translation_ru": "произношение"
+                },
+                {
+                  "ko": "병원",
+                  "translation_ru": "больница"
+                },
+                {
+                  "ko": "연락하다",
+                  "translation_ru": "связываться, выходить на связь"
+                },
+                {
+                  "ko": "실망하다",
+                  "translation_ru": "разочаровываться"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-06.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 100,
+      "page_role": "content",
+      "source_photo": "IMG_1034",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-diary",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_6/illustration_4_weekend_diary.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "어디입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите.",
+          "lines": [
+            {
+              "text": "7월 8일 토요일"
+            },
+            {
+              "text": "어제 친구가 고향에서 왔습니다. 그래서 오늘 오전 10시부터 친구와 함께 차이나타운에도 가고 공원에도 갔습니다."
+            },
+            {
+              "text": "1시에 점심을 먹었습니다. 그리고 바다에 갔습니다. 우리는 바다에서 사진도 찍고 배도 탔습니다. 바람이 시원하고 좋았습니다. 그리고 배에서 한국 사람들과 이야기도 해 봤습니다."
+            },
+            {
+              "text": "저녁에 한식당에서 한국 음식을 먹었습니다. 친구는 불고기를 먹고 저는 비빔밥을 먹었습니다. 음식이 정말 맛있었습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-diary",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "일기를 읽고 말하기",
+          "title_ru": "Прочитать дневник и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "하루 이야기",
+                "가족 이야기",
+                "음식 이야기",
+                "친구 이야기"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "오늘 친구가 한국에 왔습니다.",
+                "저와 친구는 차이나타운을 구경했습니다.",
+                "저와 친구는 식당에서 사진을 찍었습니다.",
+                "친구는 불고기와 비빔밥을 먹었습니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "친구들에게 여러분의 주말 이야기를 이야기해 보십시오.",
+              "prompt_ru": "Расскажите друзьям о своих выходных."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-diary",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-diary",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "바람",
+              "translation_ru": "ветер"
+            },
+            {
+              "ko": "한식당",
+              "translation_ru": "ресторан корейской кухни"
+            },
+            {
+              "ko": "불고기",
+              "translation_ru": "булгоги (маринованное жареное мясо)"
+            },
+            {
+              "ko": "정말",
+              "translation_ru": "правда, действительно, очень"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

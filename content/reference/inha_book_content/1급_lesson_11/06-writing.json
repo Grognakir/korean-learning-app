@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-11.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 184,
+      "page_role": "content",
+      "source_photo": "IMG_1112",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-text-message",
+          "toc_section": "쓰기",
+          "title": "문자 메시지를 써 보십시오.",
+          "title_ru": "Напишите SMS.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: кому вы пишете.",
+              "questions": [
+                {
+                  "kr": "누구에게 보냅니까?",
+                  "ru": "Кому вы пишете?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: зачем вы пишете.",
+              "questions": [
+                {
+                  "kr": "왜 문자 메시지를 보냅니까?",
+                  "ru": "Зачем вы пишете это SMS?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что вы хотите сделать.",
+              "questions": [
+                {
+                  "kr": "무엇을 하고 싶습니까?",
+                  "ru": "Что вы хотите сделать?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

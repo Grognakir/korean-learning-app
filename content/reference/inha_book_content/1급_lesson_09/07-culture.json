@@ -1,0 +1,168 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 151,
+      "page_role": "content",
+      "source_photo": "IMG_1082",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-markets",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 시장",
+          "title_ru": "Рынки Кореи",
+          "illustration": {
+            "storage_path": "lesson_9/illustration_5_korean_markets.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "여기가 어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "한국의 시장은 물건도 좋고 가격도 쌉니다."
+            },
+            {
+              "text": "서울은 남대문 시장, 동대문 시장이 유명합니다. 남대문 시장과 동대문 시장은 옷, 가방, 음식을 팝니다. 가격이 싸고 교통도 편리합니다. 그래서 외국인 관광객들도 물건을 사러 많이 갑니다."
+            },
+            {
+              "text": "인천과 부산은 수산 시장이 유명합니다. 인천의 소래 포구 시장과 부산의 자갈치 시장은 생선, 조개, 오징어가 싱싱하고 쌉니다. 그래서 사람들이 수산물을 사러 많이 갑니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "팝",
+              "translation_ru": "форма от 팔다 (продавать)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-markets",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 시장",
+          "title_ru": "Рынки Кореи",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "동대문 시장과 남대문 시장은 무엇이 유명합니까? 그리고 수산 시장은 어디가 유명합니까?",
+              "prompt_ru": "Чем известны рынки Тондэмун и Намдэмун? А где знамениты рыбные рынки?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 유명한 시장을 친구들에게 소개해 보십시오.",
+              "prompt_ru": "Расскажите друзьям о знаменитом рынке в вашей стране."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-markets",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "가격",
+              "translation_ru": "цена"
+            },
+            {
+              "ko": "교통",
+              "translation_ru": "транспорт, транспортное сообщение"
+            },
+            {
+              "ko": "편리하다",
+              "translation_ru": "быть удобным, практичным"
+            },
+            {
+              "ko": "외국인",
+              "translation_ru": "иностранец"
+            },
+            {
+              "ko": "관광객",
+              "translation_ru": "турист"
+            },
+            {
+              "ko": "수산",
+              "translation_ru": "рыбное хозяйство, морепродукты (в составе слов)"
+            },
+            {
+              "ko": "조개",
+              "translation_ru": "ракушка, моллюск"
+            },
+            {
+              "ko": "오징어",
+              "translation_ru": "кальмар"
+            },
+            {
+              "ko": "수산물",
+              "translation_ru": "морепродукты"
+            },
+            {
+              "ko": "팔다",
+              "translation_ru": "продавать"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-9",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㅂ’",
+          "audio_id": "136",
+          "examples": [
+            {
+              "text": "집",
+              "translation_ru": "дом"
+            },
+            {
+              "text": "밥",
+              "translation_ru": "варёный рис, еда"
+            },
+            {
+              "text": "지갑",
+              "translation_ru": "кошелёк"
+            },
+            {
+              "text": "종이컵",
+              "translation_ru": "бумажный стаканчик"
+            },
+            {
+              "text": "덮밥",
+              "translation_ru": "дот-бап (рис с добавками сверху)"
+            },
+            {
+              "text": "집에서",
+              "translation_ru": "дома (+ частица 에서)"
+            },
+            {
+              "text": "밥이",
+              "translation_ru": "рис (+ частица 이)"
+            },
+            {
+              "text": "지갑은",
+              "translation_ru": "кошелёк (+ частица 은)"
+            },
+            {
+              "text": "종이컵과",
+              "translation_ru": "бумажный стаканчик (+ частица 과)"
+            },
+            {
+              "text": "덮밥도",
+              "translation_ru": "дот-бап (+ частица 도)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-16.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 265,
+      "page_role": "content",
+      "source_photo": "IMG_1188",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-hometown",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "고향을 소개하는 대화를 듣고 말하기",
+          "title_ru": "Послушать разговор о родном крае и обсудить",
+          "audio_id": "163",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "왕루",
+                "text": "지성 씨, 이게 누구 사진이에요?"
+              },
+              {
+                "speaker": "박지성",
+                "text": "제 가족사진이에요."
+              },
+              {
+                "speaker": "왕루",
+                "text": "어디에서 찍은 사진이에요? 경치가 정말 아름다워요."
+              },
+              {
+                "speaker": "박지성",
+                "text": "제 고향인 제주도에서 찍은 사진이에요. 왕루 씨는 제주도에 가 봤어요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "아니요. 아직 가 보지 못했는데 꼭 가 보고 싶은 곳이에요."
+              },
+              {
+                "speaker": "박지성",
+                "text": "제주도는 관광 명소가 많은데 특히 한라산이 아주 아름다워요. 그리고 음식도 정말 맛있어요."
+              },
+              {
+                "speaker": "왕루",
+                "text": "제주도는 무슨 음식이 유명해요?"
+              },
+              {
+                "speaker": "박지성",
+                "text": "제주도는 섬이어서 해산물이 아주 맛있어요. 그리고 흑돼지도 유명해요."
+              },
+              {
+                "speaker": "왕루",
+                "text": "와, 저도 나중에 꼭 가 보고 싶어요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "어디입니까? 이야기해 보십시오.",
+            "prompt_ru": "Где это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_16/illustration_3_jeju_hometown.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "여자의 고향은 제주도입니다.",
+                "남자는 제주도에 가 보고 싶어 합니다.",
+                "제주도에는 관광 명소가 많이 있습니다.",
+                "제주도는 섬이어서 해산물 요리만 유명합니다."
+              ],
+              "correct": 2
+            }
+          ],
+          "followup": "반 친구들에게 여러분의 고향을 소개해 보십시오.",
+          "followup_ru": "Расскажите одноклассникам о своём родном крае."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-hometown",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "경치",
+              "translation_ru": "пейзаж, вид"
+            },
+            {
+              "ko": "관광",
+              "translation_ru": "туризм"
+            },
+            {
+              "ko": "명소",
+              "translation_ru": "достопримечательность"
+            },
+            {
+              "ko": "섬",
+              "translation_ru": "остров"
+            },
+            {
+              "ko": "해산물",
+              "translation_ru": "морепродукты"
+            },
+            {
+              "ko": "흑돼지",
+              "translation_ru": "чёрная свинья (чеджуская порода)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

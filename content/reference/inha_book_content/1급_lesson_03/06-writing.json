@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 54,
+      "page_role": "content",
+      "source_photo": "IMG_0990",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-school-life",
+          "toc_section": "쓰기",
+          "title": "학교생활을 설명하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст о школьной жизни.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: где вы учитесь.",
+              "questions": [
+                {
+                  "kr": "어디에 다닙니까?",
+                  "ru": "Куда вы ходите (где учитесь)?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что вы делаете.",
+              "questions": [
+                {
+                  "kr": "무엇을 합니까?",
+                  "ru": "Что вы делаете?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: какова ваша школьная жизнь.",
+              "questions": [
+                {
+                  "kr": "학교생활이 어떻습니까?",
+                  "ru": "Какова ваша школьная жизнь?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

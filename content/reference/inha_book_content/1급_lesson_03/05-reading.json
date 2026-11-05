@@ -1,0 +1,122 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 53,
+      "page_role": "content",
+      "source_photo": "IMG_0989",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-school-life",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_3/illustration_4_school_day_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 인하대학교에 다닙니다."
+            },
+            {
+              "text": "저는 한국어를 배웁니다. 우리 교실은 405호입니다. 파하드 씨, 아멜리 씨는 우리 반 학생입니다. 파하드 씨는 친절합니다. 아멜리 씨는 똑똑합니다. 한국어는 재미있습니다. 우리는 열심히 한국어를 배웁니다. 수업이 끝납니다. 우리는 도서관에 갑니다. 공부를 합니다. 그리고 운동장에 갑니다. 운동을 합니다."
+            },
+            {
+              "text": "학교생활이 매우 즐겁습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-school-life",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "학교생활을 설명하는 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о школьной жизни и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "학교생활",
+                "자기소개",
+                "수업",
+                "운동"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "우리 교실은 4층에 있습니다.",
+                "아멜리 씨는 친절합니다.",
+                "우리는 한국어를 가르칩니다.",
+                "우리는 학교생활이 재미없습니다."
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 학교생활을 말해 보십시오.",
+              "prompt_ru": "Расскажите о своей школьной жизни."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-school-life",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-school-life",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "친절하다",
+              "translation_ru": "быть любезным"
+            },
+            {
+              "ko": "똑똑하다",
+              "translation_ru": "быть умным"
+            },
+            {
+              "ko": "열심히",
+              "translation_ru": "усердно"
+            },
+            {
+              "ko": "수업",
+              "translation_ru": "урок, занятие"
+            },
+            {
+              "ko": "끝나다",
+              "translation_ru": "заканчиваться"
+            },
+            {
+              "ko": "그리고",
+              "translation_ru": "и, а также"
+            },
+            {
+              "ko": "매우",
+              "translation_ru": "очень"
+            },
+            {
+              "ko": "즐겁다",
+              "translation_ru": "быть весёлым, приятным"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 151,
+      "page_role": "content",
+      "source_photo": "IMG_0925",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 이야기해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "로빈은 여드름이 나서 피부과에 갔습니다. 의사 선생님께 진찰을 받고 있습니다. 의사 선생님은 로빈에게 처방전을 써 주었습니다. 여드름이 빨리 나으려면 로빈은 일을 하면서 물을 많이 마셔야 됩니다. 그리고 세수할 때 깨끗하게 해야 합니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "의사",
+            "로빈"
+          ],
+          "lines": [
+            {
+              "speaker": "의사",
+              "text": "어디가 불편하십니까?"
+            },
+            {
+              "speaker": "로빈",
+              "text": "일 때문에 스트레스를 받아서 그런지 얼굴에 여드름이 많이 났어요.",
+              "emphasized": [
+                "서 그런지"
+              ]
+            },
+            {
+              "speaker": "의사",
+              "text": "언제부터 많이 나기 시작했나요?",
+              "emphasized": [
+                "나요"
+              ]
+            },
+            {
+              "speaker": "로빈",
+              "text": "지난주부터 많이 나기 시작했어요."
+            },
+            {
+              "speaker": "의사",
+              "text": "좀 심해 보이는데 먹는 약이 있나요?",
+              "emphasized": [
+                "어 보이",
+                "나요"
+              ]
+            },
+            {
+              "speaker": "로빈",
+              "text": "아니요, 없어요."
+            },
+            {
+              "speaker": "의사",
+              "text": "그러면 처방전을 써 드리겠습니다. 약국에 가셔서 약을 사 드세요."
+            },
+            {
+              "speaker": "로빈",
+              "text": "연고는 필요 없나요?",
+              "emphasized": [
+                "나요"
+              ]
+            },
+            {
+              "speaker": "의사",
+              "text": "네, 연고는 필요 없습니다."
+            },
+            {
+              "speaker": "로빈",
+              "text": "그런데 빨리 나으려면 어떻게 하는 게 좋을까요?",
+              "emphasized": [
+                "려면"
+              ]
+            },
+            {
+              "speaker": "의사",
+              "text": "일하시면서 물을 많이 마시고 세수할 때 깨끗하게 여러 번 씻으세요.",
+              "emphasized": [
+                "면서"
+              ]
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "스트레스",
+              "translation_ru": "стресс"
+            },
+            {
+              "ko": "나으",
+              "translation_ru": "форма от 낫다 (выздоравливать, проходить)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 어디가 아픕니까?"
+            },
+            {
+              "text": "2) 어느 병원에 갔습니까?"
+            },
+            {
+              "text": "3) 친구와 대화해 봅시다."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "여드름",
+              "translation_ru": "прыщи, акне",
+              "group": "피부"
+            },
+            {
+              "ko": "피부과",
+              "translation_ru": "дерматология",
+              "group": "피부"
+            },
+            {
+              "ko": "연고",
+              "translation_ru": "мазь",
+              "group": "피부"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "피부",
+              "title_ru": "Кожа и лечение",
+              "items": [
+                {
+                  "ko": "피부",
+                  "translation_ru": "кожа"
+                },
+                {
+                  "ko": "세수하다",
+                  "translation_ru": "умываться"
+                },
+                {
+                  "ko": "세수",
+                  "translation_ru": "умывание"
+                },
+                {
+                  "ko": "처방전",
+                  "translation_ru": "рецепт"
+                },
+                {
+                  "ko": "진찰",
+                  "translation_ru": "осмотр"
+                },
+                {
+                  "ko": "스트레스",
+                  "translation_ru": "стресс"
+                },
+                {
+                  "ko": "약국",
+                  "translation_ru": "аптека"
+                },
+                {
+                  "ko": "약",
+                  "translation_ru": "лекарство"
+                },
+                {
+                  "ko": "낫다",
+                  "translation_ru": "выздоравливать"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

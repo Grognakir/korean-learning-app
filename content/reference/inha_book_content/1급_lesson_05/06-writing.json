@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-05.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 86,
+      "page_role": "content",
+      "source_photo": "IMG_1021",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-daily-schedule",
+          "toc_section": "쓰기",
+          "title": "하루 일과를 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст о своём распорядке дня.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: что вы делаете до полудня.",
+              "questions": [
+                {
+                  "kr": "오전에 무엇을 합니까?",
+                  "ru": "Что вы делаете до полудня?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что вы делаете после полудня.",
+              "questions": [
+                {
+                  "kr": "오후에 무엇을 합니까?",
+                  "ru": "Что вы делаете после полудня?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что вы делаете вечером.",
+              "questions": [
+                {
+                  "kr": "저녁에 무엇을 합니까?",
+                  "ru": "Что вы делаете вечером?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

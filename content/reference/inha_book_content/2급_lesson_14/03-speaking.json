@@ -1,0 +1,130 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-14.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 234,
+      "page_role": "content",
+      "source_photo": "IMG_1571",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 이야기해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "합창 대회에 나가려고 합니다. 파하드의 팀과 왕루의 팀이 연습실을 빌렸습니다. 그래서 연습실 사용 규칙을 정하고 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "파하드",
+            "왕루"
+          ],
+          "lines": [
+            {
+              "speaker": "파하드",
+              "text": "연습실 규칙에 따라서 오후 1시부터 저녁 7시까지만 사용할 수 있습니다. 여기에서 팀의 사용 시간을 정하면 좋겠습니다."
+            },
+            {
+              "speaker": "왕루",
+              "text": "각 팀이 3시간씩 사용합시다."
+            },
+            {
+              "speaker": "파하드",
+              "text": "좋습니다. 우리 팀은 1시부터 4시까지 연습하겠습니다."
+            },
+            {
+              "speaker": "왕루",
+              "text": "그럼 우리 팀은 4시부터 7시까지 사용하겠습니다."
+            },
+            {
+              "speaker": "파하드",
+              "text": "그리고 연습실에서 음식은 먹지 않기로 합시다."
+            },
+            {
+              "speaker": "왕루",
+              "text": "좋습니다. 지난번에 음식을 먹었다가 냄새가 계속 나서 안 좋았습니다. 저녁에 연습이 끝나면 불도 끄고 문을 잠그는 것도 잊지 맙시다."
+            },
+            {
+              "speaker": "파하드",
+              "text": "열쇠는 어떻게 해야 합니까?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "열쇠는 가지고 다녀도 되나 관리실에 반납하는 게 좋겠습니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 무엇을 하려고 합니까?"
+            },
+            {
+              "text": "2) 그것을 하기 위해서 필요한 규칙이 무엇입니까?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "합창",
+              "translation_ru": "хор, хоровое пение"
+            },
+            {
+              "ko": "연습실",
+              "translation_ru": "репетиционная, комната для занятий"
+            },
+            {
+              "ko": "잠그다",
+              "translation_ru": "запирать, закрывать на замок"
+            },
+            {
+              "ko": "열쇠",
+              "translation_ru": "ключ"
+            },
+            {
+              "ko": "관리실",
+              "translation_ru": "управляющий офис (в доме/на предприятии)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

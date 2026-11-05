@@ -1,0 +1,109 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-05.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 85,
+      "page_role": "content",
+      "source_photo": "IMG_1020",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-daily-schedule",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_5/illustration_4_student_routine.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 날마다 아침 7시에 일어나요. 세수를 해요. 그리고 아침을 먹어요. 8시 반에 학교에 가요. 한국어 수업은 9시에 시작해요. 10시 50분부터 11시 10분까지 쉬어요. 친구는 커피를 마셔요. 하지만 저는 커피를 마시지 않아요. 저는 우유를 마셔요. 1시에 수업이 끝나요. 학생 식당에서 점심을 먹어요. 5시까지 도서관에서 숙제를 해요. 5시부터 운동장에서 친구와 농구를 해요. 8시에 집에서 저녁을 먹어요. 그리고 한국어 수업을 복습해요. 11시 반에 잠을 자요."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-daily-schedule",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "하루 일과를 읽고 말하기",
+          "title_ru": "Прочитать о распорядке дня и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "하루 일과",
+                "일상생활",
+                "주말",
+                "시간"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "table",
+              "prompt": "이 사람의 하루 일과를 순서대로 번호를 쓰십시오.",
+              "prompt_ru": "Расставьте дела этого человека по порядку номерами (первое — «아침에 일어나요», ①).",
+              "table": {
+                "columns": [
+                  "순서"
+                ],
+                "rows": [
+                  "운동장에서 농구를 해요.",
+                  "도서관에서 숙제를 해요.",
+                  "한국어 수업을 들어요.",
+                  "집에서 한국어 수업을 복습해요.",
+                  "아침에 일어나요."
+                ]
+              }
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "이 사람은 오전 6시에 일어납니다.",
+                "이 사람은 오전 10시부터 커피를 마십니다.",
+                "이 사람은 운동장에서 운동을 합니다.",
+                "이 사람은 밤 11시에 잠을 잡니다."
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 하루 일과를 친구에게 말해 보십시오.",
+              "prompt_ru": "Расскажите другу о своём распорядке дня."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-daily-schedule",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-daily-schedule",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "세수",
+              "translation_ru": "умывание (세수를 하다 — умываться)"
+            },
+            {
+              "ko": "하지만",
+              "translation_ru": "но, однако"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

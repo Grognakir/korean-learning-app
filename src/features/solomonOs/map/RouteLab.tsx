@@ -11,6 +11,7 @@ import { routeNote, shoppingNote } from "../missions";
 import { MAP_STYLES, REGIONS, type RegionId } from "./catalog";
 import { MapApp } from "./MapApp";
 import { activeRun, createRun, freshWorkspace, SCENARIOS, scenarioById, VARIANTS, type MapWorkspace, type RouteMode } from "./missions";
+import { OsSelect } from "../controls/OsSelect";
 import styles from "./RouteLab.module.css";
 
 export function RouteLab({userId}:{userId:string}) {
@@ -52,8 +53,8 @@ function Lab() {
           <label>Вариант</label><div className={styles.numbers} role="group" aria-label="Варианты задания">{VARIANTS[mode].map((v,i)=><button type="button" key={v.name} title={v.name} aria-label={v.name} aria-pressed={workspace.variant[mode]===i} onClick={()=>setVariant(i)}>{i+1}</button>)}</div>
           <span className={styles.caption}>{VARIANTS[mode][workspace.variant[mode]].name}</span>
           <label>Карта</label><div className={styles.numbers} role="group" aria-label="Вид карты">{MAP_STYLES.map((s,i)=><button type="button" key={s.id} title={s.name} aria-label={s.name} aria-pressed={workspace.style===s.id} onClick={()=>setWorkspace({...workspace,style:s.id})}>{i+1}</button>)}</div>
-          <label>Район<select aria-label="Район карты" value={region} onChange={(e)=>setRegion(e.target.value as RegionId)}>{REGIONS.map((r)=><option key={r.id} value={r.id}>{r.ru}</option>)}</select></label>
-          <label>Маршрут<select aria-label="Маршрут задания" value={workspace.scenarioId} onChange={(e)=>{setWorkspace({...workspace,scenarioId:e.target.value});setRegion(scenarioById(e.target.value).region);}}>{SCENARIOS.map((s)=><option key={s.id} value={s.id}>{s.title}</option>)}</select></label>
+          <label>Район</label><OsSelect label="Район карты" value={region} onChange={(value)=>setRegion(value as RegionId)} options={REGIONS.map((r)=>({value:r.id,label:r.ru}))}/>
+          <label>Маршрут</label><OsSelect label="Маршрут задания" value={workspace.scenarioId} onChange={(value)=>{setWorkspace({...workspace,scenarioId:value});setRegion(scenarioById(value).region);}} options={SCENARIOS.map((s)=>({value:s.id,label:s.title}))}/>
         </>:tab==="notes"?<><label>Вариант</label><div className={styles.numbers} role="group" aria-label="Оформление заметок">{NOTE_STYLES.map((s,i)=><button type="button" key={s.id} title={s.name} aria-label={s.name} aria-pressed={noteStyle===s.id} onClick={()=>setNoteStyle(s.id)}>{i+1}</button>)}</div><span className={styles.caption}>{NOTE_STYLES.find((s)=>s.id===noteStyle)?.name}</span></>:<button type="button" onClick={()=>setTab("notes")}>← К заметкам</button>}
         <p className={styles.footnote}>Отдельные примеры. Учебный прогресс OS не меняется.</p>
       </aside>

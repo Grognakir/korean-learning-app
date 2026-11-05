@@ -1,0 +1,36 @@
+.chat { position: relative; overflow: hidden; }
+.replies { max-height: 48%; overflow: auto; padding: 8px 10px max(8px, env(safe-area-inset-bottom, 0px)); gap: 5px; }
+.answers { display: grid; gap: 5px; min-width: 0; }
+.reply { min-width: 0; padding: 7px 10px; font-size: 14px; flex-wrap: wrap; gap: 2px 8px; }
+.progress { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 5px 10px; border-bottom: 1px solid var(--line); background: var(--win2); color: var(--soft); font: 11px/1.4 var(--mono); }
+.progress button { border: 1px solid var(--line); border-radius: 5px; background: var(--win); color: var(--text); padding: 4px 8px; cursor: var(--cursor-pointer, pointer); }
+.bubble { overflow-wrap: anywhere; flex-shrink: 0; }
+.messageText { display: block; width: 100%; border: 0; padding: 0; text-align: left; background: none; color: inherit; font: inherit; cursor: var(--cursor-pointer, pointer); }
+.translation { display: block; }
+.correction { display: block; margin-top: 5px; font-size: 13px; }
+.attachment { display: flex; align-items: center; gap: 10px; padding: 0; max-width: 100%; border: 0; background: none; color: var(--text); text-align: left; cursor: var(--cursor-pointer, pointer); }
+.attachment svg { flex: none; width: 28px; height: 34px; fill: none; stroke: var(--mid); stroke-width: 1.5; }
+.attachment b { display: block; font-weight: 600; font-size: 14px; }
+.attachment small { display: block; color: var(--soft); margin-top: 3px; font-size: 11px; }
+.stub { align-self: center; text-align: center; padding: 8px 12px; color: var(--soft); border: 1px solid var(--line); border-radius: 6px; font-size: 12px; }
+.stub small { display: block; margin-top: 2px; font-size: 11px; }
+.choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+.inputForm { display: flex; align-items: flex-end; gap: 6px; min-width: 0; }
+.inputForm label { flex: 1; min-width: 0; color: var(--soft); font-size: 11px; }
+.inputForm input { width: 100%; display: block; box-sizing: border-box; margin-top: 4px; border: 1px solid var(--line); border-radius: 6px; padding: 8px; background: var(--panel); color: var(--text); font: 15px/1.4 var(--sans); }
+.primary { border: 1px solid var(--green); border-radius: 6px; padding: 8px 10px; background: var(--green); color: var(--ink); font: 13px/1.4 var(--sans); cursor: var(--cursor-pointer, pointer); }
+.primary:disabled { opacity: .5; cursor: var(--cursor-default, default); }
+.primary span { display: block; font-size: 11px; }
+.chat :is(button, input, [tabindex]):focus-visible { outline: 2px solid var(--bright); outline-offset: 2px; }
+@media (max-width: 760px) {
+  .reply, .progress button, .primary { min-height: 40px; }
+  .replies { max-height: 48%; }
+  .bubble { max-width: 88%; }
+  .inputForm { flex-wrap: wrap; }
+  .inputForm label { flex-basis: 65%; }
+  .inputForm input { font-size: 16px; min-height: 40px; }
+  .progress { padding: 3px 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chat * { animation: none !important; scroll-behavior: auto !important; }
+}

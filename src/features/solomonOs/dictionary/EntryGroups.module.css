@@ -1,0 +1,14 @@
+.control { position:relative; display:flex; align-items:center; flex:1 1 120px; max-width:170px; min-width:0; border-bottom:1px solid var(--line); }
+.control:focus-within { border-bottom-color:var(--bright); }
+.control .input { appearance:none; width:100%; min-width:0; min-height:30px; margin:0; padding:4px 0; border:0; border-radius:0; background:transparent; color:var(--text); font:12px/1.4 var(--sans); box-shadow:none; }
+.control .input:focus-visible { outline:none; }
+.control .add { flex:none; width:28px; min-height:28px; margin:0; padding:0; border:0; border-radius:3px; background:transparent; color:var(--bright); font-size:20px; }
+.control .add:hover { background:var(--line2); }
+.count { flex:none; font-size:10px; color:var(--soft); padding:0 3px; }
+.error { position:absolute; z-index:2; top:100%; left:0; width:220px; padding:5px; background:var(--panel); color:var(--red); font-size:11px; }
+.menu { z-index:2147483000; box-sizing:border-box; overflow-y:auto; padding:3px; border:1px solid var(--line); border-radius:4px; background:var(--panel); box-shadow:0 5px 16px #0005; scrollbar-width:thin; scrollbar-color:var(--line) var(--panel); }
+.menu .option { display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%; min-height:30px; padding:5px 8px; border:0; border-radius:2px; text-align:left; background:transparent; color:var(--text); font:12px/1.4 var(--sans); cursor:pointer; }
+.option > span:first-child { min-width:0; overflow-wrap:anywhere; }
+.menu .option[aria-selected="true"] { color:var(--bright); }
+.menu .option:hover,.menu .active { background:var(--line2); }
+@media(max-width:600px),(pointer:coarse) { .control .input { min-height:40px; font-size:16px; }.control .add { width:40px; min-height:40px; }.menu .option { min-height:40px; font-size:14px; } }

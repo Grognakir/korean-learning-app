@@ -1,0 +1,121 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-13.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 216,
+      "page_role": "content",
+      "source_photo": "IMG_1142",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-find-destination",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "지도에서 목적지를 찾기",
+          "title_ru": "Искать место назначения на карте",
+          "audio_id": "151",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "흐엉",
+                "text": "지성 씨, 지금 바빠요?"
+              },
+              {
+                "speaker": "박지성",
+                "text": "아니요, 괜찮아요. 무슨 일이에요?"
+              },
+              {
+                "speaker": "흐엉",
+                "text": "대학로에 갈 거예요. 그런데 지하철 노선도에서 대학로를 못 찾겠어요."
+              },
+              {
+                "speaker": "박지성",
+                "text": "대학로요? 대학로는 4호선 혜화역 근처에 있어요."
+              },
+              {
+                "speaker": "흐엉",
+                "text": "아, 혜화역이요? 주안역에서 혜화역까지 어떻게 가요?"
+              },
+              {
+                "speaker": "박지성",
+                "text": "주안역에서 지하철 1호선을 타고 가요. 서울역에서 4호선으로 갈아타고 혜화역에서 내리세요."
+              },
+              {
+                "speaker": "흐엉",
+                "text": "얼마나 걸릴까요?"
+              },
+              {
+                "speaker": "박지성",
+                "text": "주안역에서 급행을 타면 1시간쯤 걸릴 거예요."
+              },
+              {
+                "speaker": "흐엉",
+                "text": "네, 알겠어요. 고마워요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "여기가 어디입니까? 이야기해 보십시오.",
+            "prompt_ru": "Что это за место? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_13/illustration_3_subway_route.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "남자는 오늘 대학로에 갔습니다.",
+                "대학로는 4호선 서울역 근처에 있습니다.",
+                "주안역에서 급행을 타면 1시간 정도 걸립니다.",
+                "여자는 지하철 노선도에서 대학로를 찾았습니다."
+              ],
+              "correct": 2
+            }
+          ],
+          "followup": "여러분은 어디에 가고 싶습니까? 친구들에게 이야기해 보십시오.",
+          "followup_ru": "Куда вы хотите поехать? Расскажите друзьям."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-find-destination",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "대학로",
+              "translation_ru": "Тэхангно (район театров в Сеуле)"
+            },
+            {
+              "ko": "지하철",
+              "translation_ru": "метро"
+            },
+            {
+              "ko": "노선도",
+              "translation_ru": "схема линий (метро)"
+            },
+            {
+              "ko": "급행",
+              "translation_ru": "экспресс"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

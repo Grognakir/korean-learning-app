@@ -1,0 +1,99 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-04.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 68,
+      "page_role": "content",
+      "source_photo": "IMG_1004",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-daily-life",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_4/illustration_4_weekly_student_life_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 한국에서 한국어를 공부합니다. 평일에 학교에서 한국어를 배웁니다. 한국어가 아주 재미있습니다. 월요일 오후에는 태권도를 배웁니다. 수요일에는 집을 청소합니다. 그리고 목요일에는 마트에서 물건을 삽니다."
+            },
+            {
+              "text": "토요일에는 친구와 같이 도서관에 갑니다. 도서관에서 책을 봅니다. 그리고 숙제도 합니다. 일요일에는 운동장에 갑니다. 운동장에서 친구와 같이 야구와 농구를 합니다. 저는 운동을 아주 좋아합니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-daily-life",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "한국에서의 일상생활에 대한 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о повседневной жизни в Корее и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "평일",
+                "주말",
+                "날짜",
+                "일상생활"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "이 사람은 월요일에 청소합니다.",
+                "이 사람은 목요일에 마트에 갑니다.",
+                "이 사람은 수요일에 책을 빌립니다.",
+                "이 사람은 주말에 친구와 같이 태권도를 합니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 일상생활을 이야기해 보십시오.",
+              "prompt_ru": "Расскажите о своей повседневной жизни."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-daily-life",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-daily-life",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "물건",
+              "translation_ru": "вещь, товар"
+            },
+            {
+              "ko": "같이",
+              "translation_ru": "вместе"
+            },
+            {
+              "ko": "좋아하다",
+              "translation_ru": "любить, нравиться"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

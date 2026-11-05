@@ -1,0 +1,207 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-12.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 198,
+      "page_role": "content",
+      "source_photo": "IMG_1125",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "약속 시간을 바꿔요"
+            }
+          ],
+          "table": {
+            "columns": [
+              "이름",
+              "계획",
+              "약속 시간",
+              "이유",
+              "준비"
+            ],
+            "rows": [
+              [
+                "파하드",
+                "설악산에 갈 거예요",
+                "이번 주 토요일 (X)",
+                "고향 친구가 오다",
+                "버스표를 미리 예매하다"
+              ],
+              [
+                "왕루",
+                "",
+                "다음 주 토요일 (O)",
+                "",
+                "김밥과 음료수를 준비하다"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "여보세요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "왕루 씨, 저 파하드예요.",
+              "emphasized": [
+                "왕루",
+                "저 파하드예요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "네, 파하드 씨. 무슨 일이에요?",
+              "emphasized": [
+                "파하드"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "약속 시간을 바꿀 수 있어요? 이번 주 토요일에 고향 친구가 와서 만날 수가 없어요. 미안해요.",
+              "emphasized": [
+                "이번 주 토요일에 고향 친구가 와서 만날 수가 없어요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "아, 그래요? 괜찮아요. 그럼 다음 주 토요일은 어때요?",
+              "emphasized": [
+                "다음 주 토요일"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "좋아요. 왕루 씨, 정말 고마워요.",
+              "emphasized": [
+                "왕루"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "아니에요, 괜찮아요. 그런데 설악산에 사람이 많을까요?",
+              "emphasized": [
+                "설악산에 사람이 많을까요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 요즘 날씨가 좋으니까 설악산에 사람이 많을 거예요. 제가 버스표를 미리 예매할게요.",
+              "emphasized": [
+                "요즘 날씨가 좋으니까 설악산에 사람이 많을 거예요",
+                "버스표를 미리 예매할게요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "아, 정말요? 고마워요. 그럼 제가 김밥과 음료수를 준비할게요.",
+              "emphasized": [
+                "김밥과 음료수를 준비할게요"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-1",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2. 친구들과 함께 대화해 보십시오"
+            },
+            {
+              "text": "약속 시간을 바꿔요"
+            }
+          ],
+          "table": {
+            "columns": [
+              "이름",
+              "계획",
+              "약속 시간",
+              "이유",
+              "준비"
+            ],
+            "rows": [
+              [
+                "나",
+                "명동",
+                "내일 (X)",
+                "숙제가 너무 많다",
+                "명동역 앞에서 기다리다"
+              ],
+              [
+                "친구",
+                "",
+                "모레 (O)",
+                "",
+                "도착하면 전화하다"
+              ],
+              [
+                "나",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "친구",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "버스표",
+              "translation_ru": "автобусный билет"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

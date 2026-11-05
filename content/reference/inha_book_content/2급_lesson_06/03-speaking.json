@@ -1,0 +1,198 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-06.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 102,
+      "page_role": "content",
+      "source_photo": "IMG_0715",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "조리",
+              "title_ru": "Как готовить",
+              "items": [
+                {
+                  "ko": "김치찌개",
+                  "translation_ru": "суп с кимчи"
+                },
+                {
+                  "ko": "두부",
+                  "translation_ru": "тофу"
+                },
+                {
+                  "ko": "파",
+                  "translation_ru": "зелёный лук"
+                },
+                {
+                  "ko": "썰다",
+                  "translation_ru": "резать"
+                },
+                {
+                  "ko": "끓이다",
+                  "translation_ru": "кипятить"
+                },
+                {
+                  "ko": "볶다",
+                  "translation_ru": "жарить"
+                },
+                {
+                  "ko": "붓다",
+                  "translation_ru": "вливать"
+                },
+                {
+                  "ko": "프라이팬",
+                  "translation_ru": "сковорода"
+                },
+                {
+                  "ko": "냄비",
+                  "translation_ru": "кастрюля"
+                },
+                {
+                  "ko": "순서",
+                  "translation_ru": "порядок"
+                }
+              ]
+            },
+            {
+              "title": "발표",
+              "title_ru": "Презентация",
+              "items": [
+                {
+                  "ko": "발표",
+                  "translation_ru": "презентация"
+                },
+                {
+                  "ko": "이유",
+                  "translation_ru": "причина"
+                },
+                {
+                  "ko": "샤슬릭",
+                  "translation_ru": "шашлык"
+                },
+                {
+                  "ko": "모닥불",
+                  "translation_ru": "костёр"
+                },
+                {
+                  "ko": "재료",
+                  "translation_ru": "ингредиенты"
+                },
+                {
+                  "ko": "맛",
+                  "translation_ru": "вкус"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 설명해 보십시오",
+          "title_ru": "Используя выученную грамматику, объясните как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "재료: 김치, 고기, 두부, 파"
+            },
+            {
+              "text": "만드는 방법"
+            },
+            {
+              "text": "1. 김치, 고기, 두부, 파를 썰어 놓습니다."
+            },
+            {
+              "text": "2. 프라이팬에다가 고기를 볶습니다."
+            },
+            {
+              "text": "3. 냄비에 볶은 고기와 김치를 넣은 후에 물을 붓고 끓입니다."
+            },
+            {
+              "text": "4. 5분 후에 두부와 파를 넣고 3분 정도 끓입니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "두부",
+              "translation_ru": "тофу (соевый творог)"
+            },
+            {
+              "ko": "파",
+              "translation_ru": "зелёный лук"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-passage",
+          "toc_section": "말하기",
+          "title": "보기",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "여러분, 김치찌개를 만들 줄 아십니까? 오늘은 김치찌개를 만들어 봅시다."
+            },
+            {
+              "text": "자, 그럼 시작해 보겠습니다."
+            },
+            {
+              "text": "김치찌개는 김치와 고기 그리고 두부로 만들어요."
+            },
+            {
+              "text": "먼저 김치를 썰어 놓으세요. 그리고 프라이팬에다가 고기를 볶으세요."
+            },
+            {
+              "text": "냄비에 고기와 김치를 넣은 후에 물을 붓고 끓이세요."
+            },
+            {
+              "text": "5분쯤 끓인 후에 두부와 파를 넣고 3분 정도 끓이세요."
+            },
+            {
+              "text": "그러면 맛있는 김치찌개를 먹을 수 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 무슨 음식을 만들 겁니까?"
+            },
+            {
+              "text": "2) 어떤 재료가 필요합니까?"
+            },
+            {
+              "text": "3) 어떻게 만들 겁니까?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

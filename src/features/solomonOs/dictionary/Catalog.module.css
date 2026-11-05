@@ -1,0 +1,32 @@
+.catalog .workspace { display:grid; grid-template-columns:89px minmax(0,1fr); gap:10px; margin-top:8px; }
+.rail { display:flex; flex-direction:column; gap:3px; border-right:1px solid var(--line); padding-right:5px; min-height:0; overflow-y:auto; scrollbar-width:thin; scrollbar-color:var(--line) var(--win); }
+.railTitle { padding:3px 3px 7px; font-size:11px; color:var(--soft); }
+.catalog .group { display:flex; justify-content:space-between; align-items:center; gap:5px; width:100%; min-width:0; border:1px solid transparent; border-radius:3px; padding:5px 3px; min-height:30px; font-size:11px; background:transparent; }
+.groupName { flex:1; min-width:0; display:flex; align-items:center; gap:5px; }
+.groupName > span { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.group svg { width:13px; height:13px; flex:none; fill:none; }
+.catalog .group[aria-pressed="true"] { background:var(--line2); color:var(--bright); border-color:var(--line); }
+.catalog .group .groupCount { flex:none; font:10px var(--mono); color:var(--soft); }
+.catalog .group:hover .groupCount { color:inherit; }
+.heading { position:sticky; top:0; z-index:1; display:flex; justify-content:space-between; align-items:center; gap:8px; padding:3px 2px 7px; border-bottom:1px solid var(--line); background:var(--win); color:var(--soft); font-size:11px; }
+.catalog .row { padding:5px 1px; gap:6px; }
+.catalog .word { padding:0 3px; border-radius:3px; min-height:36px; }
+.catalog .word b { color:var(--bright); font-size:16px; }
+.catalog .word > span { font-size:12px; color:var(--soft); }
+.catalog .word:hover b { color:var(--ink); }
+.catalog .rowActions { gap:1px; }
+.catalog .rowActions small { font-size:11px; margin-right:5px; }
+.catalog .rowActions button { height:28px; width:28px; min-width:28px; padding:6px; border-color:transparent; border-radius:3px; background:transparent; }
+.catalog .rowActions svg { width:15px; height:15px; }
+.catalog .footer { margin:5px 2px 0; }
+@container dictionary (max-width:540px) {
+  .catalog .workspace { grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(0,1fr); gap:7px; }
+  .rail { display:flex; flex-direction:row; flex-wrap:wrap; overflow-y:auto; max-height:140px; border-right:0; border-bottom:1px solid var(--line); padding:0 0 5px; gap:3px; }
+  .railTitle { display:none; }
+  .catalog .group { width:auto; max-width:100%; min-height:40px; padding:5px 7px; gap:6px; }
+  .catalog .group .groupCount { font-size:11px; }
+  .catalog .row { padding:5px 1px; }
+  .catalog .rowActions button { width:40px; height:40px; min-width:40px; padding:10px; }
+  .catalog .rowActions svg { width:17px; height:17px; }
+}
+@media(pointer:coarse) { .catalog .group { min-height:40px; }.catalog .rowActions button { width:40px; height:40px; min-width:40px; padding:10px; } }

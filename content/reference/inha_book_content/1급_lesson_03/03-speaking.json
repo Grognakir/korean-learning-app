@@ -1,0 +1,194 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 51,
+      "page_role": "content",
+      "source_photo": "IMG_0987",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 사용하여 〈보기〉와 같이 이야기해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "인하빌딩"
+            },
+            {
+              "text": "파하드: 커피숍에 갑니다."
+            },
+            {
+              "text": "아멜리: 서점에 갑니다."
+            }
+          ],
+          "table": {
+            "columns": [
+              "층",
+              "호",
+              "가게"
+            ],
+            "rows": [
+              [
+                "3층",
+                "301호",
+                "서점"
+              ],
+              [
+                "2층",
+                "201호",
+                "약국"
+              ],
+              [
+                "2층",
+                "202호",
+                "꽃집"
+              ],
+              [
+                "1층",
+                "101호",
+                "커피숍"
+              ],
+              [
+                "1층",
+                "102호",
+                "우체국"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "파하드",
+            "아멜리"
+          ],
+          "lines": [
+            {
+              "speaker": "파하드",
+              "text": "아멜리 씨, 안녕하십니까?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨, 안녕하세요? 어디에 갑니까?",
+              "emphasized": [
+                "에 갑니까"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 커피숍에 갑니다. 아멜리 씨는 어디에 갑니까?",
+              "emphasized": [
+                "에 갑니다",
+                "에 갑니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "저는 서점에 갑니다.",
+              "emphasized": [
+                "에 갑니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "서점이 몇 호입니까?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "서점은 301호입니다. 커피숍이 몇 층에 있습니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "커피숍은 1층에 있습니다."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "1층에 커피숍만 있습니까?",
+              "emphasized": [
+                "만 있습니까"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "아니요, 우체국도 있습니다.",
+              "emphasized": [
+                "도 있습니다"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "",
+              "나",
+              "친구"
+            ],
+            "rows": [
+              [
+                "1)",
+                "우체국에 갑니다.",
+                "꽃집에 갑니다."
+              ],
+              [
+                "2)",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "빌딩",
+              "translation_ru": "здание, высотное здание"
+            },
+            {
+              "ko": "약국",
+              "translation_ru": "аптека"
+            },
+            {
+              "ko": "꽃집",
+              "translation_ru": "цветочный магазин"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

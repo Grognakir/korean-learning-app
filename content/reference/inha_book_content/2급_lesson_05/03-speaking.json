@@ -1,0 +1,162 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-05.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 84,
+      "page_role": "content",
+      "source_photo": "IMG_0695",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "왕루는 다음 주말에 반 친구들과 봉사활동을 하기로 했습니다. 왕루와 자르갈은 양로원에서 청소를 하고 노래도 부르려고 합니다. 양로원을 방문하기 전에 준비할 물건은 편한 옷과 전통 의상입니다. 두 사람은 다음 주 토요일 오전 9시에 만날 겁니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "자르갈"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "자르갈 씨, 다음 주말에 시간이 있어요? 반 친구들과 봉사활동을 하기로 했는데 자르갈 씨도 같이 갈래요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "저도 봉사활동을 해 보고 싶었어요. 저도 같이 갈래요. 그런데 어디로 가요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "양로원에 갈 거예요. 거기에서 청소를 한 후에 전통 의상을 입고 노래도 부르려고 해요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "한국 노래를 잘 못 부르는데 괜찮을까요? 조금 걱정되네요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "우리가 외국인이기 때문에 잘 못 부르기는 하겠지만 어른들이 기뻐하실 것 같아요. 그리고 어른들이 좋아하시는 모습을 보면 보람도 느낄 거예요. 걱정하지 마세요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "네, 알겠어요. 양로원에 방문하기 전에 미리 준비할 물건은 없어요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "편한 옷을 입고 오고 전통 의상도 가지고 오세요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "네, 그럼 다음 주 토요일 오전 9시에 만나요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 어디에 가기로 했습니까?"
+            },
+            {
+              "text": "2) 그곳에서 무엇을 하고 싶습니까?"
+            },
+            {
+              "text": "3) 친구에게 왜 권유합니까?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "양로원",
+              "translation_ru": "дом престарелых",
+              "group": "봉사"
+            },
+            {
+              "ko": "의상",
+              "translation_ru": "костюм, наряд (здесь — традиционный костюм)",
+              "group": "봉사"
+            },
+            {
+              "ko": "어른",
+              "translation_ru": "взрослый; здесь также — старшие, пожилые люди",
+              "group": "봉사"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "봉사",
+              "title_ru": "Волонтёрство",
+              "items": [
+                {
+                  "ko": "봉사활동",
+                  "translation_ru": "волонтёрство"
+                },
+                {
+                  "ko": "청소하다",
+                  "translation_ru": "убирать"
+                },
+                {
+                  "ko": "노래",
+                  "translation_ru": "песня"
+                },
+                {
+                  "ko": "부르다",
+                  "translation_ru": "петь"
+                },
+                {
+                  "ko": "기뻐하다",
+                  "translation_ru": "радоваться"
+                },
+                {
+                  "ko": "모습",
+                  "translation_ru": "вид, облик"
+                },
+                {
+                  "ko": "권유하다",
+                  "translation_ru": "предлагать, приглашать"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-13.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 218,
+      "page_role": "content",
+      "source_photo": "IMG_1144",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-writing-directions",
+          "toc_section": "쓰기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "쓰기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "공연장을 찾아 가는 방법에 대한 글을 써 보십시오.",
+          "intro_prompt_ru": "Напишите, как добраться до зала, где проходит выступление.",
+          "lines": [
+            {
+              "text": "■ 출발 장소: 주안역"
+            },
+            {
+              "text": "■ 도착 장소: 공연장"
+            },
+            {
+              "text": "■ 어떻게 가요?"
+            },
+            {
+              "text": "주안역에서 1호선을 탑니다."
+            },
+            {
+              "text": "→ 신길역에서 5호선으로 갈아탑니다."
+            },
+            {
+              "text": "→ 여의도역에서 내립니다."
+            },
+            {
+              "text": "→ 여의도 공원 방향으로 직진합니다."
+            },
+            {
+              "text": "→ 횡단보도를 건넙니다."
+            },
+            {
+              "text": "→ 에스빌딩 옆에 INHA방송국이 있습니다."
+            },
+            {
+              "text": "→ INHA 방송국 안에 공연장이 있습니다."
+            },
+            {
+              "text": "■ 얼마나 걸려요?"
+            },
+            {
+              "text": "지하철로 1시간 10분 + 걸어서 15분"
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-directions",
+          "toc_section": "쓰기",
+          "title": "공연장을 찾아 가는 방법에 대한 글을 써 보십시오.",
+          "title_ru": "Напишите, как добраться до концертного зала.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: куда вы едете.",
+              "questions": [
+                {
+                  "kr": "어디에 갑니까?",
+                  "ru": "Куда вы едете?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: как добраться.",
+              "questions": [
+                {
+                  "kr": "어떻게 갑니까?",
+                  "ru": "Как добраться?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: сколько времени это занимает.",
+              "questions": [
+                {
+                  "kr": "얼마나 걸립니까?",
+                  "ru": "Сколько времени это занимает?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

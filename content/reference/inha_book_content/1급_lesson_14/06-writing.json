@@ -1,0 +1,99 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-14.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 234,
+      "page_role": "content",
+      "source_photo": "IMG_1159",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "writing-classroom-form",
+          "toc_section": "쓰기",
+          "title": "2) 위 개요를 바탕으로 글을 써 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "쓰기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "교실 규칙"
+            },
+            {
+              "text": "1. 이용 시간: ______."
+            },
+            {
+              "text": "2. 교실은 ______이/가 사용할 수 있습니다."
+            },
+            {
+              "text": "3. 교실 주의 사항"
+            },
+            {
+              "text": "1) ______."
+            },
+            {
+              "text": "2) ______."
+            },
+            {
+              "text": "3) ______."
+            },
+            {
+              "text": "4) ______."
+            }
+          ],
+          "exercise_title": "쓰기"
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-classroom-rules",
+          "toc_section": "쓰기",
+          "title": "교실 규칙을 써 보십시오.",
+          "title_ru": "Напишите правила класса.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: время занятий и кто может пользоваться классом.",
+              "questions": [
+                {
+                  "kr": "수업 시간은 언제부터 언제까지입니까?",
+                  "ru": "С какого и до какого времени идут занятия?"
+                },
+                {
+                  "kr": "교실은 누가 사용합니까?",
+                  "ru": "Кто пользуется классом?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что нужно соблюдать в классе.",
+              "questions": [
+                {
+                  "kr": "교실에서 지켜야 할 주의사항은 무엇이 있습니까?",
+                  "ru": "Что нужно соблюдать в классе?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: почему нужно соблюдать эти правила.",
+              "questions": [
+                {
+                  "kr": "왜 그 주의사항을 지켜야 합니까?",
+                  "ru": "Почему эти правила нужно соблюдать?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

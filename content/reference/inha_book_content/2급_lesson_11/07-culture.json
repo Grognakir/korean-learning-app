@@ -1,0 +1,119 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-11.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 188,
+      "page_role": "content",
+      "source_photo": "IMG_1429",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-traffic",
+          "toc_section": "문화 이해하기",
+          "title": "교통약자석과 자전거 전용도로",
+          "title_ru": "Места для маломобильных пассажиров и велодорожки",
+          "illustration": null,
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 봅시다.",
+          "intro_prompt_ru": "Что это? Давайте обсудим.",
+          "lines": [
+            {
+              "text": "지하철에는 교통약자석이 있습니다. 교통약자석에는 장애가 있는 사람, 임신한 사람, 나이가 많은 사람들이 앉습니다. 젊은 사람이나 건강한 사람은 교통약자석에 앉지 않습니다."
+            },
+            {
+              "text": "길에는 자전거를 타는 사람들만 이용할 수 있는 자전거 전용도로가 있습니다. 차를 운전하는 사람은 자전거를 타는 사람을 조심해야 하고, 자전거를 타는 사람은 길을 걷는 사람을 조심해야 합니다."
+            },
+            {
+              "text": "이러한 규칙은 모두 함께 살면서 서로를 배려하는 우리들의 약속입니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 교통약자석에는 누가 앉습니까?",
+              "translation_ru": "Кто сидит на местах для маломобильных пассажиров?"
+            },
+            {
+              "text": "2) 여러분 나라에는 다른 사람을 배려하는 규칙이 무엇이 있습니까? 이야기해 보십시오.",
+              "translation_ru": "Какие правила заботы о других есть в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-traffic",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "교통약자석",
+              "translation_ru": "место для маломобильных пассажиров (льготное сиденье)"
+            },
+            {
+              "ko": "장애",
+              "translation_ru": "инвалидность; препятствие"
+            },
+            {
+              "ko": "임신하다",
+              "translation_ru": "быть беременной"
+            },
+            {
+              "ko": "전용도로",
+              "translation_ru": "выделенная дорога (для определённого вида транспорта)"
+            },
+            {
+              "ko": "배려하다",
+              "translation_ru": "проявлять заботу, быть внимательным к другим"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-11",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㄱ'+'ㅎ', 받침 'ㅎ'+'ㄱ'",
+          "audio_id": "244",
+          "examples": [
+            {
+              "text": "백화점",
+              "translation_ru": "универмаг"
+            },
+            {
+              "text": "익숙해졌어요",
+              "translation_ru": "привык(ла)"
+            },
+            {
+              "text": "취직하러",
+              "translation_ru": "чтобы устроиться на работу"
+            },
+            {
+              "text": "많고",
+              "translation_ru": "много, и"
+            },
+            {
+              "text": "좋기 때문에",
+              "translation_ru": "потому что хорошо"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

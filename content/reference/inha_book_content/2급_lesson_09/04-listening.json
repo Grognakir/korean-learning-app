@@ -1,0 +1,196 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 152,
+      "page_role": "content",
+      "source_photo": "IMG_0926",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-pharmacy",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "약사에게 증상을 말하기",
+          "title_ru": "Рассказывать фармацевту о симптомах",
+          "audio_id": "235",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "약사",
+                "text": "어서 오세요. 어떻게 오셨어요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "목이 가렵고 따가워요."
+              },
+              {
+                "speaker": "약사",
+                "text": "열도 나나요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 열이 나면서 어지러워요. 그리고 목이 부어서 그런지 음식을 먹으려고 하면 아파서 잘 못 먹겠어요."
+              },
+              {
+                "speaker": "약사",
+                "text": "콧물이나 기침은요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "콧물은 나는데 기침은 안 해요."
+              },
+              {
+                "speaker": "약사",
+                "text": "병원에는 가 봤어요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아니요, 시간이 없어서 못 갔어요."
+              },
+              {
+                "speaker": "약사",
+                "text": "그러면 이 종합 감기약을 드셔 보시고 낫지 않으면 병원에 가 보세요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "하루에 몇 번 먹어야 돼요?"
+              },
+              {
+                "speaker": "약사",
+                "text": "하루에 3번 식후 30분에 드시고 주무시기 전에 이 물약을 드세요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что делает этот человек? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_9/illustration_3_pharmacy.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "환자의 증상이 아닌 것은 무엇입니까?",
+              "prompt_ru": "Что НЕ является симптомом пациента?",
+              "choices": [
+                "콧물이 납니다.",
+                "어지럽습니다.",
+                "목이 부었습니다.",
+                "기침을 합니다."
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "여기는 병원이면서 약국입니다.",
+                "남자는 감기약과 물을 샀습니다.",
+                "남자는 식사를 한 다음에 약을 먹어야 합니다.",
+                "여자는 약을 먹은 후에 병원에 가려고 합니다."
+              ],
+              "correct": 2
+            }
+          ],
+          "followup": "여러분은 약국에서 약을 산 적이 있습니까? 친구들과 이야기해 보십시오.",
+          "followup_ru": "Вам приходилось покупать лекарства в аптеке? Расскажите друзьям."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-pharmacy",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "종합",
+              "translation_ru": "комплексный, сводный",
+              "group": "약"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "약",
+              "title_ru": "Лекарства",
+              "items": [
+                {
+                  "ko": "알약",
+                  "translation_ru": "таблетка"
+                },
+                {
+                  "ko": "가루약",
+                  "translation_ru": "порошок"
+                },
+                {
+                  "ko": "물약",
+                  "translation_ru": "жидкое лекарство"
+                },
+                {
+                  "ko": "파스",
+                  "translation_ru": "пластырь-компресс"
+                },
+                {
+                  "ko": "반창고",
+                  "translation_ru": "пластырь"
+                },
+                {
+                  "ko": "붕대",
+                  "translation_ru": "бинт"
+                },
+                {
+                  "ko": "연고",
+                  "translation_ru": "мазь"
+                }
+              ]
+            },
+            {
+              "title": "증상",
+              "title_ru": "Что болит",
+              "items": [
+                {
+                  "ko": "열",
+                  "translation_ru": "жар"
+                },
+                {
+                  "ko": "기침",
+                  "translation_ru": "кашель"
+                },
+                {
+                  "ko": "콧물",
+                  "translation_ru": "насморк"
+                },
+                {
+                  "ko": "두통",
+                  "translation_ru": "головная боль"
+                },
+                {
+                  "ko": "복통",
+                  "translation_ru": "боль в животе"
+                },
+                {
+                  "ko": "설사",
+                  "translation_ru": "диарея"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

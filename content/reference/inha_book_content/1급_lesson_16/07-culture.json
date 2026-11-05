@@ -1,0 +1,168 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-16.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 268,
+      "page_role": "content",
+      "source_photo": "IMG_1191",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-titles",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 호칭",
+          "title_ru": "Обращения в Корее",
+          "illustration": {
+            "storage_path": "lesson_16/illustration_5_friendly_titles.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "한국의 가족에는 할아버지, 할머니, 아버지, 어머니, 누나, 형, 언니, 오빠, 남동생, 여동생 등이 있습니다. 그러면 가족이 아닌 사람은 어떻게 부를까요? 들어 봤습니까?"
+            },
+            {
+              "text": "이 사람들은 대학교 선배와 후배입니다. 후배가 선배를 어떻게 부를까요? 여자 후배는 여자 선배를 ‘선배’라고 부릅니다. 하지만 ‘언니’라고 부르는 사람들도 많습니다. 그리고 남자 후배는 여자 선배를 ‘누나’라고 부릅니다. 학교에서 친하게 지내는 사람들은 가족이 아니지만 가족의 호칭을 사용해서 친근한 느낌을 표현합니다."
+            },
+            {
+              "text": "여기는 식당입니다. 이 사람은 음식을 주문하려고 합니다. 이 사람은 아주머니를 어떻게 부를까요? 보통 ‘여기요’나 ‘저기요’ 또는 ‘아주머니’라고 부릅니다. 하지만 ‘이모’라고 부르는 사람들도 있습니다. ‘이모’는 원래 친척이지만 모르는 사람에게 사용하면 더 친근한 느낌을 표현할 수 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-titles",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "후배",
+              "translation_ru": "младший по учёбе/работе"
+            },
+            {
+              "ko": "친하다",
+              "translation_ru": "быть близким, дружить"
+            },
+            {
+              "ko": "친근하다",
+              "translation_ru": "быть близким, дружественным"
+            },
+            {
+              "ko": "느낌",
+              "translation_ru": "чувство, ощущение"
+            },
+            {
+              "ko": "표현하다",
+              "translation_ru": "выражать"
+            },
+            {
+              "ko": "아주머니",
+              "translation_ru": "тётя, обращение к женщине среднего возраста"
+            },
+            {
+              "ko": "이모",
+              "translation_ru": "тётя (сестра матери)"
+            },
+            {
+              "ko": "원래",
+              "translation_ru": "изначально, первоначально"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 269,
+      "page_role": "content",
+      "source_photo": "IMG_1192",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-titles",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 호칭",
+          "title_ru": "Обращения в Корее",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국의 호칭을 들어 봤습니까?",
+              "prompt_ru": "Слышали ли вы корейские обращения?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라에서는 어떤 호칭을 사용합니까? 이야기해 보십시오.",
+              "prompt_ru": "Какие обращения используют в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-culture-expr",
+          "toc_section": "문화 이해하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-culture-titles",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "N(이)라고 부르다",
+              "translation_ru": "называть N — шаблон; «‘선배’라고 부릅니다.»"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-16a",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㅄ’",
+          "audio_id": "164",
+          "examples": [
+            {
+              "text": "없다",
+              "translation_ru": "не быть, нет"
+            },
+            {
+              "text": "없어서",
+              "translation_ru": "потому что нет"
+            },
+            {
+              "text": "없으면",
+              "translation_ru": "если нет"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-16b",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㄿ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "읊다",
+              "translation_ru": "декламировать"
+            },
+            {
+              "text": "읊어서",
+              "translation_ru": "продекламировав"
+            },
+            {
+              "text": "읊으니까",
+              "translation_ru": "так как декламирую"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

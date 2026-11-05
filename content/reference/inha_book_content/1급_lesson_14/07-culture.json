@@ -1,0 +1,204 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-14.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 235,
+      "page_role": "content",
+      "source_photo": "IMG_1160",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-museums",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 박물관과 민속촌",
+          "title_ru": "Музеи и этнографические деревни Кореи",
+          "illustration": {
+            "storage_path": "lesson_14/illustration_5_museum_folk_village.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "여러분은 한국에서 어떤 공공장소에 가 봤습니까? 한국에는 여러 공공장소가 있습니다. 한국의 역사와 전통을 알고 싶으면 박물관과 민속촌에 가 보십시오."
+            },
+            {
+              "text": "국립중앙박물관은 서울 용산에 있습니다. 이곳에서는 한국의 역사와 예술, 문화를 보고 배울 수 있습니다. 그리고 교육 프로그램이 있어서 한국 문화를 체험해 볼 수도 있습니다."
+            },
+            {
+              "text": "한국민속촌은 경기도 용인에 있습니다. 이곳에서 민속 마을과 전통 물건을 보면 한국의 과거 모습을 상상할 수 있을 겁니다. 그리고 다양한 전통 공연을 보고 전통 놀이를 직접 해 볼 수도 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-museums",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 박물관과 민속촌",
+          "title_ru": "Музеи и этнографические деревни Кореи",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국의 역사와 전통을 배우는 공공장소는 어디입니까?",
+              "prompt_ru": "Где в Корее можно узнать об истории и традициях страны?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라에는 어떤 공공장소가 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Какие общественные места есть в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-museums",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "공공장소",
+              "translation_ru": "общественное место"
+            },
+            {
+              "ko": "여러",
+              "translation_ru": "разные, несколько"
+            },
+            {
+              "ko": "역사",
+              "translation_ru": "история"
+            },
+            {
+              "ko": "민속촌",
+              "translation_ru": "этнографическая деревня"
+            },
+            {
+              "ko": "국립중앙박물관",
+              "translation_ru": "Национальный музей Кореи"
+            },
+            {
+              "ko": "예술",
+              "translation_ru": "искусство"
+            },
+            {
+              "ko": "문화",
+              "translation_ru": "культура"
+            },
+            {
+              "ko": "교육",
+              "translation_ru": "образование, обучение"
+            },
+            {
+              "ko": "프로그램",
+              "translation_ru": "программа"
+            },
+            {
+              "ko": "체험하다",
+              "translation_ru": "испытывать на собственном опыте"
+            },
+            {
+              "ko": "과거",
+              "translation_ru": "прошлое"
+            },
+            {
+              "ko": "모습",
+              "translation_ru": "облик, вид"
+            },
+            {
+              "ko": "상상하다",
+              "translation_ru": "воображать"
+            },
+            {
+              "ko": "다양하다",
+              "translation_ru": "быть разнообразным"
+            },
+            {
+              "ko": "놀이",
+              "translation_ru": "игра, забава"
+            },
+            {
+              "ko": "직접",
+              "translation_ru": "непосредственно, лично"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-14a",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㄼ’",
+          "audio_id": "156",
+          "examples": [
+            {
+              "text": "넓다",
+              "translation_ru": "быть широким"
+            },
+            {
+              "text": "짧다",
+              "translation_ru": "быть коротким"
+            },
+            {
+              "text": "밟다",
+              "translation_ru": "наступать"
+            },
+            {
+              "text": "넓으니까",
+              "translation_ru": "так как широко"
+            },
+            {
+              "text": "짧으면",
+              "translation_ru": "если коротко"
+            },
+            {
+              "text": "밟아서",
+              "translation_ru": "наступив"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-14b",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㄾ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "핥다",
+              "translation_ru": "лизать"
+            },
+            {
+              "text": "핥아서",
+              "translation_ru": "полизав"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-14c",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㅀ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "싫다",
+              "translation_ru": "не нравиться"
+            },
+            {
+              "text": "싫으니까",
+              "translation_ru": "так как не нравится"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

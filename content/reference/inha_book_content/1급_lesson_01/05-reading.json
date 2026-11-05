@@ -1,0 +1,106 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-01.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 21,
+      "page_role": "content",
+      "source_photo": "IMG_0959",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-friends",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_1/illustration_4_class_friends.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что делают эти люди? Расскажите.",
+          "lines": [
+            {
+              "text": "안녕하십니까? 만나서 반갑습니다. 제 이름은 왕루입니다. 저는 중국에서 왔습니다. 저는 학생입니다."
+            },
+            {
+              "text": "아멜리 씨는 제 친구입니다. 아멜리 씨는 중국 사람이 아닙니다. 프랑스에서 왔습니다. 자르갈 씨도 제 친구입니다. 자르갈 씨는 몽골 사람입니다. 자르갈 씨도 학생입니다."
+            },
+            {
+              "text": "모두 우리 반 친구입니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-friends",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "친구를 소개하는 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о друзьях и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "이름",
+                "나라",
+                "소개",
+                "공부"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "왕루 씨는 선생님입니다.",
+                "왕루 씨는 중국에서 왔습니다.",
+                "자르갈 씨는 프랑스 사람입니다.",
+                "아멜리 씨는 우리 반 친구가 아닙니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 친구를 소개해 보십시오.",
+              "prompt_ru": "Представьте своих друзей."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-friends",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-friends",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "친구",
+              "translation_ru": "друг, подруга"
+            },
+            {
+              "ko": "모두",
+              "translation_ru": "все, всё"
+            },
+            {
+              "ko": "우리",
+              "translation_ru": "мы; наш"
+            },
+            {
+              "ko": "반",
+              "translation_ru": "класс, группа"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

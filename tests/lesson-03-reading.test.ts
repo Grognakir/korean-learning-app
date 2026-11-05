@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { readFileSync } from "node:fs";
+import { readLessonSource } from "../scripts/lib/lesson-source";
 import { join } from "node:path";
 import { expect, it } from "vitest";
 
@@ -10,12 +10,7 @@ type LessonBlock = {
   followup?: string;
 };
 
-const lesson = JSON.parse(
-  readFileSync(
-    join(process.cwd(), "content/reference/inha_book_content/2급_lesson_03/lesson-03.json"),
-    "utf8",
-  ),
-) as { pages: { blocks: LessonBlock[] }[] };
+const lesson = readLessonSource(join(process.cwd(), "content/reference/inha_book_content/2급_lesson_03/lesson-03.json")) as { pages: { blocks: LessonBlock[] }[] };
 const blocks = lesson.pages.flatMap((page) => page.blocks);
 
 it("дословно хранит текст чтения со страницы 52", () => {

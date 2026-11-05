@@ -1,6 +1,9 @@
+import { readLessonSource } from "./lib/lesson-source";
 import { createClient } from "@supabase/supabase-js";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { importLessonJson } from "./lib/import-lesson";
+import { importAllLocalLessons } from "./lib/import-lessons";
 
 // Отдельный клиент, не lib/supabase/admin.ts — тот файл помечен
 // "server-only" и рассчитан на выполнение внутри Next.js (react-server
@@ -371,7 +374,7 @@ async function importLesson(
   lessonPath: string,
   startIndex: number,
 ): Promise<number> {
-  const lesson: LessonFile = JSON.parse(readFileSync(lessonPath, "utf-8"));
+  const lesson: LessonFile = readLessonSource(lessonPath);
 
   console.log(
     `Импорт "${lesson.title}" (урок ${lesson.lesson_number}): ${lesson.pages.length} страниц, page_index ${startIndex}..${startIndex + lesson.pages.length - 1}`,
@@ -430,6 +433,30 @@ async function uploadLevel1Audio(tracks: number[]) {
 }
 
 async function main() {
+  const args = process.argv.slice(2);
+  if (args.includes("--all-local")) {
+    const options = new Set(["--all-local", "--dry-run", "--backup-dir"]);
+    for (let index = 0; index < args.length; index++) {
+      if (!options.has(args[index])) throw new Error(`Неизвестный аргумент: ${args[index]}`);
+      if (args[index] === "--backup-dir") {
+        if (!args[index + 1] || args[index + 1].startsWith("--")) throw new Error("Укажите папку после --backup-dir.");
+        index++;
+      }
+    }
+    const backupIndex = args.indexOf("--backup-dir");
+    await importAllLocalLessons(supabase, process.env.NEXT_PUBLIC_SUPABASE_URL!, join(REFERENCE_DIR, "inha_book_content"), {
+      dryRun: args.includes("--dry-run"), backupDir: backupIndex < 0 ? undefined : args[backupIndex + 1],
+    });
+    return;
+  }
+  if (args[0] && !args[0].startsWith("--")) {
+    if (args.slice(1).some((arg) => arg !== "--dry-run")) {
+      throw new Error("Использование: tsx scripts/import-textbook.ts <lesson.json> [--dry-run]");
+    }
+    await importLessonJson(supabase, process.env.NEXT_PUBLIC_SUPABASE_URL!, args[0], args.includes("--dry-run"));
+    return;
+  }
+
   for (const lessonNumber of Object.keys(LEVEL1_LESSONS).map(Number)) {
     if (!process.argv.includes(`--k1-lesson-${lessonNumber}-only`)) continue;
 
@@ -443,7 +470,7 @@ async function main() {
     // page_index сквозной: считаем страницы всех предыдущих уроков 1급.
     let startIndex = 0;
     for (let n = 1; n < lessonNumber; n++) {
-      const previous: LessonFile = JSON.parse(readFileSync(LEVEL1_LESSONS[n].path, "utf-8"));
+      const previous: LessonFile = readLessonSource(LEVEL1_LESSONS[n].path);
       startIndex += previous.pages.length;
     }
     await importLesson(textbook1.id, LEVEL1_LESSONS[lessonNumber].path, startIndex);
@@ -475,7 +502,7 @@ async function main() {
 
     let startIndex = 0;
     for (let n = 1; n < lessonNumber; n++) {
-      const previous: LessonFile = JSON.parse(readFileSync(paths[n], "utf-8"));
+      const previous: LessonFile = readLessonSource(paths[n]);
       startIndex += previous.pages.length;
     }
     await importLesson(textbook2.id, paths[lessonNumber], startIndex);
@@ -498,10 +525,10 @@ async function main() {
       LESSON_DIR_2, LESSON_DIR_2_2, LESSON_DIR_2_3, LESSON_DIR_2_4,
       LESSON_DIR_2_5, LESSON_DIR_2_6,
     ].map((dir, index) =>
-      JSON.parse(readFileSync(join(dir, `lesson-0${index + 1}.json`), "utf-8")),
+      readLessonSource(join(dir, `lesson-0${index + 1}.json`)),
     );
     for (let n = 7; n < lessonNumber; n++) {
-      previous.push(JSON.parse(readFileSync(LATE_LESSONS_2[n].path, "utf-8")));
+      previous.push(readLessonSource(LATE_LESSONS_2[n].path));
     }
     const startIndex = previous.reduce((total, lesson) => total + lesson.pages.length, 0);
 
@@ -525,21 +552,11 @@ async function main() {
       .single();
     if (textbookError) throw textbookError;
 
-    const lesson1: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2, "lesson-01.json"), "utf-8"),
-    );
-    const lesson2: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_2, "lesson-02.json"), "utf-8"),
-    );
-    const lesson3: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_3, "lesson-03.json"), "utf-8"),
-    );
-    const lesson4: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_4, "lesson-04.json"), "utf-8"),
-    );
-    const lesson5: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_5, "lesson-05.json"), "utf-8"),
-    );
+    const lesson1: LessonFile = readLessonSource(join(LESSON_DIR_2, "lesson-01.json"));
+    const lesson2: LessonFile = readLessonSource(join(LESSON_DIR_2_2, "lesson-02.json"));
+    const lesson3: LessonFile = readLessonSource(join(LESSON_DIR_2_3, "lesson-03.json"));
+    const lesson4: LessonFile = readLessonSource(join(LESSON_DIR_2_4, "lesson-04.json"));
+    const lesson5: LessonFile = readLessonSource(join(LESSON_DIR_2_5, "lesson-05.json"));
     const lesson6StartIndex =
       lesson1.pages.length +
       lesson2.pages.length +
@@ -591,18 +608,10 @@ async function main() {
       .single();
     if (textbookError) throw textbookError;
 
-    const lesson1: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2, "lesson-01.json"), "utf-8"),
-    );
-    const lesson2: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_2, "lesson-02.json"), "utf-8"),
-    );
-    const lesson3: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_3, "lesson-03.json"), "utf-8"),
-    );
-    const lesson4: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_4, "lesson-04.json"), "utf-8"),
-    );
+    const lesson1: LessonFile = readLessonSource(join(LESSON_DIR_2, "lesson-01.json"));
+    const lesson2: LessonFile = readLessonSource(join(LESSON_DIR_2_2, "lesson-02.json"));
+    const lesson3: LessonFile = readLessonSource(join(LESSON_DIR_2_3, "lesson-03.json"));
+    const lesson4: LessonFile = readLessonSource(join(LESSON_DIR_2_4, "lesson-04.json"));
     const lesson5StartIndex =
       lesson1.pages.length +
       lesson2.pages.length +
@@ -653,15 +662,9 @@ async function main() {
       .single();
     if (textbookError) throw textbookError;
 
-    const lesson1: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2, "lesson-01.json"), "utf-8"),
-    );
-    const lesson2: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_2, "lesson-02.json"), "utf-8"),
-    );
-    const lesson3: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_3, "lesson-03.json"), "utf-8"),
-    );
+    const lesson1: LessonFile = readLessonSource(join(LESSON_DIR_2, "lesson-01.json"));
+    const lesson2: LessonFile = readLessonSource(join(LESSON_DIR_2_2, "lesson-02.json"));
+    const lesson3: LessonFile = readLessonSource(join(LESSON_DIR_2_3, "lesson-03.json"));
     const lesson4StartIndex =
       lesson1.pages.length + lesson2.pages.length + lesson3.pages.length;
 
@@ -689,12 +692,8 @@ async function main() {
       .single();
     if (textbookError) throw textbookError;
 
-    const lesson1: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2, "lesson-01.json"), "utf-8"),
-    );
-    const lesson2: LessonFile = JSON.parse(
-      readFileSync(join(LESSON_DIR_2_2, "lesson-02.json"), "utf-8"),
-    );
+    const lesson1: LessonFile = readLessonSource(join(LESSON_DIR_2, "lesson-01.json"));
+    const lesson2: LessonFile = readLessonSource(join(LESSON_DIR_2_2, "lesson-02.json"));
     const lesson3StartIndex = lesson1.pages.length + lesson2.pages.length;
 
     await importLesson(

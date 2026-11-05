@@ -1,0 +1,151 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-01.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 23,
+      "page_role": "content",
+      "source_photo": "photo_33",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-greeting",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 인사법",
+          "title_ru": "Приветствия в Корее",
+          "illustration": {
+            "storage_path": null,
+            "original_kind": "photo"
+          },
+          "text_kind": "passage",
+          "section": "문화 이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "여러분은 처음 만나는 사람들과 어떻게 인사를 합니까?"
+            },
+            {
+              "text": "한국에서는 머리를 숙이고 인사를 합니다. 그리고 악수도 합니다. 악수는 손으로 하는 인사입니다. 손을 잡으면 상대방에게 마음을 전할 수 있습니다."
+            },
+            {
+              "text": "하지만 한국에서의 악수는 다른 나라와 조금 다릅니다. 악수에도 예절이 있습니다. 친구와 악수를 하면 머리를 숙이지 않지만 어른과 인사를 하면 머리를 숙여야 합니다. 그리고 어른과 인사를 하면 두 손으로 악수를 하거나 한 손을 배 앞에 놓고 악수를 해야 합니다. 이것은 어른을 존경하는 의미입니다."
+            },
+            {
+              "text": "1) 한국에서의 악수 법은 다른 나라와 왜 다를까요?"
+            },
+            {
+              "text": "2) 여러분 나라에서는 어떻게 인사를 합니까? 친구들과 이야기해 보십시오."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi-1",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-greeting",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "악수",
+              "translation_ru": "рукопожатие",
+              "group": "인사"
+            },
+            {
+              "ko": "잡다",
+              "translation_ru": "брать, держать",
+              "group": "인사"
+            },
+            {
+              "ko": "상대방",
+              "translation_ru": "собеседник",
+              "group": "인사"
+            },
+            {
+              "ko": "배",
+              "translation_ru": "живот",
+              "group": "몸"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "인사",
+              "title_ru": "Приветствие и этикет",
+              "items": [
+                {
+                  "ko": "인사",
+                  "translation_ru": "приветствие"
+                },
+                {
+                  "ko": "숙이다",
+                  "translation_ru": "наклонять (голову)"
+                },
+                {
+                  "ko": "예절",
+                  "translation_ru": "этикет"
+                },
+                {
+                  "ko": "어른",
+                  "translation_ru": "взрослый, старший"
+                },
+                {
+                  "ko": "존경하다",
+                  "translation_ru": "уважать"
+                },
+                {
+                  "ko": "의미",
+                  "translation_ru": "значение, смысл"
+                },
+                {
+                  "ko": "마음",
+                  "translation_ru": "душа, сердце"
+                }
+              ]
+            },
+            {
+              "title": "몸",
+              "title_ru": "Части тела",
+              "items": [
+                {
+                  "ko": "머리",
+                  "translation_ru": "голова"
+                },
+                {
+                  "ko": "손",
+                  "translation_ru": "рука, кисть"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-1",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㄷ'+'ㅣ' (구개음화①)",
+          "audio_id": "204",
+          "examples": [
+            {
+              "text": "굳이"
+            },
+            {
+              "text": "맏이"
+            },
+            {
+              "text": "미닫이"
+            },
+            {
+              "text": "해돋이"
+            },
+            {
+              "text": "가을걷이"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 138,
+      "page_role": "content",
+      "source_photo": "IMG_0781",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-leisure-graph",
+          "toc_section": "문화 이해하기",
+          "title": "한국인이 좋아하는 여가 활동",
+          "title_ru": "Любимые виды досуга корейцев",
+          "illustration": {
+            "storage_path": "lesson_8/illustration_5_weekend_hiking.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇에 대한 그래프입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "О чём этот график? Расскажите.",
+          "lines": [
+            {
+              "text": "등산 · 독서 · 음악감상 · 컴퓨터게임 · 운동/헬스"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-leisure-life",
+          "toc_section": "문화 이해하기",
+          "title": "한국인의 여가 생활",
+          "title_ru": "Досуг корейцев",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "요즘 여가 생활을 즐기는 사람이 늘었습니다. 한국의 직장인들은 일주일에 5일 동안 근무를 하고 학생들은 5일 동안 학교에 가기 때문에 주로 주말에 여가 생활을 즐깁니다.\n한국인이 가장 좋아하는 여가 활동은 등산입니다. 한국은 산이 많고 높지 않기 때문에 누구나 쉽게 산에 올라 갈 수 있습니다. 혼자 등산을 하는 것을 즐기는 사람도 있고 사람들과 함께 산에 가는 것을 좋아하는 사람도 있습니다. 등산은 어렵지 않고 준비할 것도 많지 않아서 누구나 즐길 수 있는 여가 활동입니다. 그리고 맑은 공기를 마시고 걷기 때문에 건강에도 좋습니다."
+            },
+            {
+              "text": "1) 한국인이 가장 좋아하는 여가 활동은 무엇입니까?",
+              "translation_ru": "Какой вид досуга корейцы любят больше всего?"
+            },
+            {
+              "text": "2) 여러분 나라 사람들이 가장 좋아하는 여가 활동은 무엇입니까? 이야기해 보십시오.",
+              "translation_ru": "Какой вид досуга больше всего любят в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-leisure-life",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "늘다",
+              "translation_ru": "увеличиваться, расти",
+              "group": "여가"
+            },
+            {
+              "ko": "직장인",
+              "translation_ru": "работающий человек, служащий",
+              "group": "여가"
+            },
+            {
+              "ko": "즐기다",
+              "translation_ru": "наслаждаться, увлекаться",
+              "group": "여가"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "여가",
+              "title_ru": "Свободное время",
+              "items": [
+                {
+                  "ko": "독서",
+                  "translation_ru": "чтение"
+                },
+                {
+                  "ko": "음악 감상",
+                  "translation_ru": "музыка"
+                },
+                {
+                  "ko": "컴퓨터 게임",
+                  "translation_ru": "компьютерные игры"
+                },
+                {
+                  "ko": "헬스",
+                  "translation_ru": "фитнес"
+                },
+                {
+                  "ko": "운동",
+                  "translation_ru": "спорт"
+                },
+                {
+                  "ko": "등산",
+                  "translation_ru": "альпинизм"
+                },
+                {
+                  "ko": "주말",
+                  "translation_ru": "выходные"
+                },
+                {
+                  "ko": "산책",
+                  "translation_ru": "прогулка"
+                },
+                {
+                  "ko": "그래프",
+                  "translation_ru": "график"
+                },
+                {
+                  "ko": "응답",
+                  "translation_ru": "ответ"
+                }
+              ]
+            },
+            {
+              "title": "스포츠",
+              "title_ru": "Спорт и хобби",
+              "items": [
+                {
+                  "ko": "공을 차다",
+                  "translation_ru": "бить по мячу"
+                },
+                {
+                  "ko": "축구",
+                  "translation_ru": "футбол"
+                },
+                {
+                  "ko": "야구",
+                  "translation_ru": "бейсбол"
+                },
+                {
+                  "ko": "농구",
+                  "translation_ru": "баскетбол"
+                },
+                {
+                  "ko": "배구",
+                  "translation_ru": "волейбол"
+                },
+                {
+                  "ko": "수영",
+                  "translation_ru": "плавание"
+                },
+                {
+                  "ko": "캠핑",
+                  "translation_ru": "кемпинг"
+                },
+                {
+                  "ko": "낚시",
+                  "translation_ru": "рыбалка"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-8",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㅁ'+'ㄹ' (비음화)",
+          "audio_id": "232",
+          "examples": [
+            {
+              "text": "범람",
+              "translation_ru": "разлив, наводнение"
+            },
+            {
+              "text": "삼랑진",
+              "translation_ru": "Самнанджин (местность в провинции Кённам)"
+            },
+            {
+              "text": "탐라도",
+              "translation_ru": "Тамнадо (остров Тамна — древнее название Чеджу)"
+            },
+            {
+              "text": "비빔 라면",
+              "translation_ru": "лапша рамён с острым соусом бибим"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

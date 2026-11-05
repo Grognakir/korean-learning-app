@@ -1,0 +1,96 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-12.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 202,
+      "page_role": "content",
+      "source_photo": "IMG_1129",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-writing-email",
+          "toc_section": "쓰기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "쓰기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "이메일을 읽고 답장을 써 보십시오.",
+          "intro_prompt_ru": "Прочитайте письмо и напишите ответ.",
+          "lines": [
+            {
+              "text": "보내는 사람: 박지성 <jisung@inha.ac.kr>"
+            },
+            {
+              "text": "받는 사람: 아멜리 <ameli@inha.ac.kr>"
+            },
+            {
+              "text": "제목: 아멜리 씨, 잘 지내요?"
+            },
+            {
+              "text": "아멜리 씨, 잘 지내요? 한국 생활이 어때요?"
+            },
+            {
+              "text": "저는 아주 잘 지내고 있어요. 요즘 많이 바빠서 연락을 할 수 없었어요. 미안해요. 하지만 어제 시험이 끝나서 지금은 시간이 많이 있어요."
+            },
+            {
+              "text": "다음 주 토요일 오후에 시간이 있어요? 저는 아멜리 씨와 같이 영화를 보러 가고 싶어요. 영화가 아주 재미있을 거예요."
+            },
+            {
+              "text": "아멜리 씨가 같이 갈 수 있으면 제가 미리 영화표를 예매할게요. 영화는 5시와 7시에 해요. 언제가 좋아요? 답장 기다릴게요."
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-email",
+          "toc_section": "쓰기",
+          "title": "이메일을 읽고 답장을 써 보십시오.",
+          "title_ru": "Прочитайте письмо и напишите ответ.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: как у вас дела.",
+              "questions": [
+                {
+                  "kr": "한국 생활이 어떻습니까?",
+                  "ru": "Как вам жизнь в Корее?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: время и сеанс.",
+              "questions": [
+                {
+                  "kr": "다음 주 토요일에 시간이 있습니까?",
+                  "ru": "Есть ли у вас время в следующую субботу?"
+                },
+                {
+                  "kr": "몇 시에 영화를 보고 싶습니까?",
+                  "ru": "В котором часу вы хотите смотреть фильм?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что вы хотите сделать до или после кино.",
+              "questions": [
+                {
+                  "kr": "영화를 보기 전 / 본 후에 무엇을 하고 싶습니까?",
+                  "ru": "Что вы хотите делать до или после фильма?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오. 보내는 사람: 아멜리 <ameli@inha.ac.kr>, 받는 사람: 박지성 <jisung@inha.ac.kr>.",
+          "manuscript_prompt_ru": "Напишите письмо на основе плана выше. Отправитель: Амели <ameli@inha.ac.kr>, получатель: Пак Чисон <jisung@inha.ac.kr>."
+        }
+      ]
+    }
+  ]
+}

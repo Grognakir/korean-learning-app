@@ -1,0 +1,304 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-05.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 86,
+      "page_role": "content",
+      "source_photo": "IMG_0697",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-invitation",
+          "toc_section": "읽고 말하기",
+          "title": "동문회 초대장",
+          "title_ru": "Приглашение на встречу выпускников",
+          "illustration": {
+            "storage_path": "lesson_5/illustration_4_alumni_invitation.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "invitation",
+          "section": "읽고 말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "따뜻하고 아름다운 봄입니다. 항상 경영학과에 관심을 가져 주셔서 감사드립니다."
+            },
+            {
+              "text": "인하대학교 경영학과 동문회가 생긴 지 20년이 되었습니다. 그래서 졸업생 여러분들을 모시고 동문회를 하려고 합니다. 이번 동문회에는 더 특별하고 재미있는 행사가 준비되어 있습니다."
+            },
+            {
+              "text": "( ㉠ ) 참석하셔서 자리를 빛내 주시면 고맙겠습니다."
+            },
+            {
+              "text": "1. 날짜 : 03월 25일 (토요일)",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "2. 시간 : 오후 2시",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "3. 장소 : 인하대 대강당",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "인하대학교 경영학과 학생회",
+              "line_kind": "signature"
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "동문회",
+              "translation_ru": "ассоциация выпускников, встреча выпускников"
+            },
+            {
+              "ko": "졸업생",
+              "translation_ru": "выпускник"
+            },
+            {
+              "ko": "여러분",
+              "translation_ru": "вы все (уважительное обращение к группе)"
+            },
+            {
+              "ko": "특별하다",
+              "translation_ru": "быть особенным"
+            },
+            {
+              "ko": "행사",
+              "translation_ru": "мероприятие"
+            },
+            {
+              "ko": "참석하다",
+              "translation_ru": "присутствовать, участвовать"
+            },
+            {
+              "ko": "학생회",
+              "translation_ru": "студенческий совет"
+            },
+            {
+              "ko": "따뜻하",
+              "translation_ru": "форма от 따뜻하다 (тёплый)"
+            },
+            {
+              "ko": "항상",
+              "translation_ru": "всегда"
+            },
+            {
+              "ko": "관심",
+              "translation_ru": "интерес, внимание"
+            },
+            {
+              "ko": "경영학과",
+              "translation_ru": "факультет бизнес-администрирования, менеджмента"
+            },
+            {
+              "ko": "생긴",
+              "translation_ru": "форма от 생기다 (появляться, образовываться; здесь — «возникла», об организации)"
+            },
+            {
+              "ko": "모시",
+              "translation_ru": "форма от 모시다 (почтительно приглашать, сопровождать старшего/уважаемого человека)"
+            },
+            {
+              "ko": "자리",
+              "translation_ru": "место; присутствие (자리를 빛내다 — почтить своим присутствием)"
+            },
+            {
+              "ko": "빛내",
+              "translation_ru": "форма от 빛내다 (букв. освещать; 자리를 빛내다 — почтить своим присутствием)"
+            },
+            {
+              "ko": "대강당",
+              "translation_ru": "актовый зал, большой лекционный зал"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-invitation",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-invitation",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "동문회",
+              "translation_ru": "ассоциация выпускников, встреча выпускников",
+              "group": "대학"
+            },
+            {
+              "ko": "졸업생",
+              "translation_ru": "выпускник",
+              "group": "대학"
+            },
+            {
+              "ko": "여러분",
+              "translation_ru": "вы все (уважительное обращение к группе)",
+              "group": "초대장"
+            },
+            {
+              "ko": "특별하다",
+              "translation_ru": "быть особенным",
+              "group": "초대장"
+            },
+            {
+              "ko": "행사",
+              "translation_ru": "мероприятие",
+              "group": "초대장"
+            },
+            {
+              "ko": "참석하다",
+              "translation_ru": "присутствовать, участвовать",
+              "group": "초대장"
+            },
+            {
+              "ko": "학생회",
+              "translation_ru": "студенческий совет",
+              "group": "대학"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "초대장",
+              "title_ru": "Пригласительное письмо",
+              "items": [
+                {
+                  "ko": "초대장",
+                  "translation_ru": "пригласительное"
+                },
+                {
+                  "ko": "날짜",
+                  "translation_ru": "дата"
+                },
+                {
+                  "ko": "장소",
+                  "translation_ru": "место"
+                },
+                {
+                  "ko": "시간",
+                  "translation_ru": "время"
+                },
+                {
+                  "ko": "감사드리다",
+                  "translation_ru": "выражать благодарность"
+                },
+                {
+                  "ko": "모시다",
+                  "translation_ru": "приглашать (почтительно)"
+                },
+                {
+                  "ko": "빛내다",
+                  "translation_ru": "украшать собой"
+                },
+                {
+                  "ko": "바쁘다",
+                  "translation_ru": "занятый"
+                }
+              ]
+            },
+            {
+              "title": "대학",
+              "title_ru": "Университет",
+              "items": [
+                {
+                  "ko": "대강당",
+                  "translation_ru": "большой актовый зал"
+                },
+                {
+                  "ko": "소강당",
+                  "translation_ru": "малый актовый зал"
+                },
+                {
+                  "ko": "입학생",
+                  "translation_ru": "поступивший"
+                },
+                {
+                  "ko": "본관",
+                  "translation_ru": "главный корпус"
+                },
+                {
+                  "ko": "축제",
+                  "translation_ru": "фестиваль"
+                },
+                {
+                  "ko": "공연",
+                  "translation_ru": "выступление"
+                },
+                {
+                  "ko": "올해",
+                  "translation_ru": "в этом году"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 87,
+      "page_role": "content",
+      "source_photo": "IMG_0698",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-alumni-invitation",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "초대장을 읽고 말하기",
+          "title_ru": "Прочитать приглашение и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "㉠에 들어갈 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее слово для ㉠.",
+              "choices": [
+                "바쁘게",
+                "바빴으면",
+                "바쁘시겠고",
+                "바쁘시겠지만"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 다른 것은 무엇입니까?",
+              "prompt_ru": "Выберите то, что НЕ соответствует содержанию текста.",
+              "choices": [
+                "이 동창회는 인하대 대강당에서 합니다.",
+                "이 동창회는 20년 전에 처음 만들었습니다.",
+                "이 초대장은 인하대 경영학과 졸업생에게 보냅니다.",
+                "인하대학교 경영학과 학생회는 동문회에 초대받았습니다."
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 초대장을 쓴 적이 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Вы когда-нибудь писали приглашение? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-reading-expr",
+          "toc_section": "읽고 말하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-reading-invitation",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "자리를 빛내다",
+              "translation_ru": "почтить своим присутствием — «자리를 빛내주셔서 감사합니다» («спасибо, что почтили нас своим присутствием»)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

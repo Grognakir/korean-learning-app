@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-10.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 170,
+      "page_role": "content",
+      "source_photo": "IMG_1301",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-ideal",
+          "toc_section": "쓰기",
+          "title": "이상형에 대한 글을 써 보십시오.",
+          "title_ru": "Напишите текст об идеальном типе человека.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Начало: какой человек для вас идеальный.",
+              "questions": [
+                {
+                  "kr": "어떤 사람이 이상형입니까?",
+                  "ru": "Какой человек ваш идеал?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Середина: что самое важное в идеальном типе.",
+              "questions": [
+                {
+                  "kr": "이상형을 생각할 때 무엇이 가장 중요합니까?",
+                  "ru": "Что самое важное, когда вы думаете об идеальном типе?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Конец: причина.",
+              "questions": [
+                {
+                  "kr": "그 이유가 무엇입니까?",
+                  "ru": "Какова причина?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

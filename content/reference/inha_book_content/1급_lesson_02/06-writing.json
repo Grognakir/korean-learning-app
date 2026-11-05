@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-02.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 38,
+      "page_role": "content",
+      "source_photo": "IMG_0975",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-hometown-house",
+          "toc_section": "쓰기",
+          "title": "고향집을 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст о доме на родине.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: где находится дом.",
+              "questions": [
+                {
+                  "kr": "고향집이 어디에 있습니까?",
+                  "ru": "Где находится ваш дом на родине?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что есть в доме.",
+              "questions": [
+                {
+                  "kr": "고향집에 무엇이 있습니까?",
+                  "ru": "Что есть в вашем доме на родине?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: что есть в вашей комнате.",
+              "questions": [
+                {
+                  "kr": "내 방에 무엇이 있습니까?",
+                  "ru": "Что есть в вашей комнате?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

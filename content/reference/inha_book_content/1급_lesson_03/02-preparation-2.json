@@ -1,0 +1,522 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "준비하기 2",
+  "pages": [
+    {
+      "page_number": 47,
+      "page_role": "content",
+      "source_photo": "IMG_0983",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-greeting-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "친구와 인사하기",
+          "title_ru": "Здороваться с другом",
+          "illustration": {
+            "storage_path": "lesson_3/illustration_2_campus_hallway.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "110",
+          "speakers": [
+            "아멜리",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨, 안녕하십니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "안녕하세요? 아멜리 씨. 어디에 갑니까?",
+              "emphasized": [
+                "에 갑니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "도서관에 갑니다. 파하드 씨는 어디에 갑니까?",
+              "emphasized": [
+                "에 갑니다",
+                "에 갑니까"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 교실에 갑니다.",
+              "emphasized": [
+                "에 갑니다"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨의 교실이 어디에 있습니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "우리 교실은 5층에 있습니다."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "교실이 몇 호입니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "501호입니다."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-junbihagi2-expr",
+          "toc_section": "준비하기 2",
+          "hint_kind": "expression",
+          "related_text_ref": "text-greeting-dialogue",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "몇 N",
+              "translation_ru": "сколько / какой по счёту N — шаблон; пример «몇 호입니까?» = «Какой номер (комнаты)?»"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-greeting-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "가다",
+              "translation_ru": "идти, ехать"
+            },
+            {
+              "ko": "층",
+              "translation_ru": "этаж"
+            },
+            {
+              "ko": "호",
+              "translation_ru": "номер (комнаты)"
+            },
+            {
+              "ko": "다니다",
+              "translation_ru": "ходить регулярно (на учёбу, работу)"
+            },
+            {
+              "ko": "가게",
+              "translation_ru": "магазин, лавка"
+            },
+            {
+              "ko": "편의점",
+              "translation_ru": "магазин у дома"
+            },
+            {
+              "ko": "회사",
+              "translation_ru": "компания, фирма"
+            },
+            {
+              "ko": "대학교",
+              "translation_ru": "университет"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 48,
+      "page_role": "content",
+      "source_photo": "IMG_0984",
+      "blocks": [
+        {
+          "type": "grammar_point",
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "pattern": "N에 가다/오다/다니다",
+          "section": "4",
+          "explanation": "Показывает направление движения; 다니다 — ходить регулярно (на работу, в школу).",
+          "examples": [
+            "1) 가: 어디에 갑니까?\n나: 학교에 갑니다.",
+            "2) 가: 어디에 다닙니까?\n나: 저는 인하대학교에 다닙니다."
+          ],
+          "rules": [
+            "N에 가다 — идти/ехать куда-то",
+            "N에 오다 — приходить/приезжать куда-то",
+            "N에 다니다 — регулярно ходить (на учёбу, на работу)"
+          ]
+        },
+        {
+          "type": "grammar_point",
+          "id": "grammar-5",
+          "toc_section": "준비하기 2",
+          "pattern": "수①",
+          "section": "5",
+          "examples": [
+            "234 이백삼십사",
+            "4,578 사천오백칠십팔",
+            "27,604 이만 칠천육백사"
+          ],
+          "explanation": "Китайско-корейские числительные (한자어 수) — для номеров, цен, этажей, комнат, телефонов.",
+          "rules": [
+            "0 영, 1 일, 2 이, 3 삼, 4 사, 5 오, 6 육, 7 칠, 8 팔, 9 구, 10 십",
+            "11–19: 십 + цифра (십일, 십이 … 십구)",
+            "20–90: цифра + 십 (이십, 삼십 … 구십)",
+            "100 백, 1,000 천, 10,000 만"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 49,
+      "page_role": "content",
+      "source_photo": "IMG_0985",
+      "blocks": [
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "은행"
+            ],
+            "cues": [
+              "은행"
+            ],
+            "dialogue": [
+              "가: 어디에 갑니까?",
+              "나: 은행에 갑니다."
+            ],
+            "emphasis": [
+              [
+                "어디에",
+                "갑니까"
+              ],
+              [
+                "에 갑니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "가게"
+              ],
+              "answers": [
+                "가게"
+              ]
+            },
+            {
+              "given": [
+                "공원"
+              ],
+              "answers": [
+                "공원"
+              ]
+            },
+            {
+              "given": [
+                "편의점"
+              ],
+              "answers": [
+                "편의점"
+              ]
+            }
+          ],
+          "template": [
+            "가: 어디에 갑니까?",
+            "나: {0}에 갑니다."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4b",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "자르갈 씨 / 학교",
+              "학교"
+            ],
+            "cues": [
+              "자르갈 씨 / 학교",
+              "학교"
+            ],
+            "dialogue": [
+              "가: 자르갈 씨, 학교에 옵니까?",
+              "나: 네, 저는 학교에 갑니다."
+            ],
+            "emphasis": [
+              [
+                "씨,",
+                "에 옵니까"
+              ],
+              [
+                "네,",
+                "에 갑니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "파하드 씨 / 도서관",
+                "도서관"
+              ],
+              "answers": [
+                "파하드",
+                "도서관"
+              ]
+            },
+            {
+              "given": [
+                "아멜리 씨 / 교실",
+                "교실"
+              ],
+              "answers": [
+                "아멜리",
+                "교실"
+              ]
+            },
+            {
+              "given": [
+                "왕루 씨 / 학생 식당",
+                "학생 식당"
+              ],
+              "answers": [
+                "왕루",
+                "학생 식당"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 씨, {1}에 옵니까?",
+            "나: 네, 저는 {1}에 갑니다."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4c",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "회사"
+            ],
+            "cues": [
+              "회사"
+            ],
+            "dialogue": [
+              "가: 어디에 다닙니까?",
+              "나: 회사에 다닙니다."
+            ],
+            "emphasis": [
+              [
+                "어디에",
+                "다닙니까"
+              ],
+              [
+                "에 다닙니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "은행"
+              ],
+              "answers": [
+                "은행"
+              ]
+            },
+            {
+              "given": [
+                "대학교"
+              ],
+              "answers": [
+                "대학교"
+              ]
+            }
+          ],
+          "template": [
+            "가: 어디에 다닙니까?",
+            "나: {0}에 다닙니다."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 50,
+      "page_role": "content",
+      "source_photo": "IMG_0986",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "practice-5a",
+          "toc_section": "준비하기 2",
+          "title": "1. 다음 숫자를 말해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "6",
+              "8",
+              "13",
+              "45",
+              "93"
+            ],
+            "rows": [
+              [
+                "872",
+                "3,215",
+                "12,321",
+                "48,265",
+                "39,802"
+              ]
+            ]
+          },
+          "exercise_title": "연습하기5"
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-5b",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "저 버스 / 몇 번",
+              "저 버스 / 511번"
+            ],
+            "cues": [
+              "저 버스 / 몇 번",
+              "저 버스 / 511번"
+            ],
+            "dialogue": [
+              "가: 저 버스가 몇 번입니까?",
+              "나: 저 버스는 511번입니다."
+            ],
+            "emphasis": [
+              [
+                "가",
+                "몇 번",
+                "입니까"
+              ],
+              [
+                "는",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "여기 / 몇 층",
+                "여기 / 7층"
+              ],
+              "answers": [
+                "여기가",
+                "몇 층",
+                "여기는",
+                "7층"
+              ]
+            },
+            {
+              "given": [
+                "이 교실 / 몇 호",
+                "이 교실 / 316호"
+              ],
+              "answers": [
+                "이 교실이",
+                "몇 호",
+                "이 교실은",
+                "316호"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} {1}입니까?",
+            "나: {2} {3}입니다."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-5c",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "왕루 씨",
+              "010-4321-5678"
+            ],
+            "cues": [
+              "왕루 씨",
+              "010-4321-5678"
+            ],
+            "dialogue": [
+              "가: 왕루 씨, 전화번호가 몇 번입니까?",
+              "나: 제 번호는 010-4321-5678입니다."
+            ],
+            "emphasis": [
+              [
+                "씨,",
+                "몇 번",
+                "입니까"
+              ],
+              [
+                "제 번호는",
+                "입니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "아멜리 씨",
+                "019-2345-2204"
+              ],
+              "answers": [
+                "아멜리",
+                "019-2345-2204"
+              ]
+            },
+            {
+              "given": [
+                "자르갈 씨",
+                "070-3344-7890"
+              ],
+              "answers": [
+                "자르갈",
+                "070-3344-7890"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0} 씨, 전화번호가 몇 번입니까?",
+            "나: 제 번호는 {1}입니다."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-02.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 36,
+      "page_role": "content",
+      "source_photo": "IMG_0973",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-house-location",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "집 위치를 설명하는 대화를 듣고 말하기",
+          "title_ru": "Послушать и обсудить разговор о расположении дома",
+          "audio_id": "107",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "파하드",
+                "text": "아멜리 씨, 안녕하세요?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "네, 파하드 씨, 안녕하세요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아멜리 씨의 집은 어디에 있습니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "저의 집은 학교 후문 근처에 있습니다. 후문 건너편에 서점이 있습니다. 그 서점 뒤에 저의 집이 있습니다."
+              },
+              {
+                "speaker": "파하드",
+                "text": "제 집도 학교 후문 근처에 있습니다. 서점 오른쪽에 은행이 있습니다. 그 은행 뒤에 제 집이 있습니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что делают эти люди? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_2/illustration_3_neighborhood_conversation.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "은행이 어디에 있습니까? (схема ниже)",
+              "prompt_ru": "Где находится банк? (схема ниже)",
+              "choices": [
+                "①",
+                "②",
+                "③",
+                "④"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "아멜리 씨의 집이 어디입니까? (схема ниже)",
+              "prompt_ru": "Где дом Амели? (схема ниже)",
+              "choices": [
+                "①",
+                "②",
+                "③",
+                "④"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "choice",
+              "prompt": "파하드 씨의 집이 어디입니까? (схема ниже)",
+              "prompt_ru": "Где дом Фахада? (схема ниже)",
+              "choices": [
+                "①",
+                "②",
+                "③",
+                "④"
+              ],
+              "correct": 1
+            }
+          ],
+          "followup": "반 친구들에게 여러분의 집 위치를 이야기해 보십시오.",
+          "followup_ru": "Расскажите одноклассникам, где находится ваш дом."
+        },
+        {
+          "type": "illustration",
+          "id": "illustration-house-map",
+          "toc_section": "듣고 말하기",
+          "storage_path": "lesson_2/illustration_1_house_map.png",
+          "caption": "Схема к заданию 2: дома ①–④, книжный магазин 서점 и задние ворота 후문 (рисунок из учебника)",
+          "original_kind": "illustration",
+          "pair_id": null
+        }
+      ]
+    }
+  ]
+}

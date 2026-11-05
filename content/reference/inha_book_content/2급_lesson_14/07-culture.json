@@ -1,0 +1,140 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-14.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 238,
+      "page_role": "content",
+      "source_photo": "IMG_1575",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-safety",
+          "toc_section": "문화 이해하기",
+          "title": "공연장 및 행사장의 안전",
+          "title_ru": "Безопасность на площадках и мероприятиях",
+          "illustration": null,
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "어디입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите.",
+          "lines": [
+            {
+              "text": "공공장소에서 일어나는 사고를 막기 위해서 다음과 같은 노력이 필요하다."
+            },
+            {
+              "text": "첫째, 행사장에 들어오고 나갈 때 앞사람을 밀지 않는다."
+            },
+            {
+              "text": "둘째, 관객은 관람 시간을 지킨다."
+            },
+            {
+              "text": "셋째, 관람석이 아닌 곳에서 관람하지 않는다."
+            },
+            {
+              "text": "넷째, 어린이와 함께 왔을 때는 어린이의 안전을 먼저 생각한다."
+            },
+            {
+              "text": "다섯째, 위험한 물건이 있으면 관리인에게 말한다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 공연장에서 사고가 났을 때 어떻게 해야 합니까?",
+              "translation_ru": "Что нужно делать, если на представлении произошёл несчастный случай?"
+            },
+            {
+              "text": "2) 공공장소에서 안전을 위해 어떻게 해야 합니까? 이야기해 보십시오.",
+              "translation_ru": "Что нужно делать в общественных местах ради безопасности? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-safety",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "막다",
+              "translation_ru": "предотвращать, преграждать"
+            },
+            {
+              "ko": "노력",
+              "translation_ru": "усилие, старание"
+            },
+            {
+              "ko": "행사장",
+              "translation_ru": "место проведения мероприятия"
+            },
+            {
+              "ko": "밀다",
+              "translation_ru": "толкать, подталкивать"
+            },
+            {
+              "ko": "관객",
+              "translation_ru": "зритель"
+            },
+            {
+              "ko": "관람석",
+              "translation_ru": "места для зрителей"
+            },
+            {
+              "ko": "관람하다",
+              "translation_ru": "смотреть, осматривать (выставку, представление)"
+            },
+            {
+              "ko": "관리인",
+              "translation_ru": "управляющий, смотритель"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-14",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㄱ'",
+          "audio_id": "256",
+          "examples": [
+            {
+              "text": "각도기",
+              "translation_ru": "транспортир"
+            },
+            {
+              "text": "국자",
+              "translation_ru": "половник"
+            },
+            {
+              "text": "책상",
+              "translation_ru": "письменный стол"
+            },
+            {
+              "text": "착각",
+              "translation_ru": "заблуждение, ошибка восприятия"
+            },
+            {
+              "text": "거울을 닦고",
+              "translation_ru": "протираю зеркало и"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 154,
+      "page_role": "content",
+      "source_photo": "IMG_0928",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "사고",
+              "title_ru": "Травма",
+              "items": [
+                {
+                  "ko": "다치다",
+                  "translation_ru": "получить травму"
+                },
+                {
+                  "ko": "부러지다",
+                  "translation_ru": "ломаться"
+                },
+                {
+                  "ko": "수술",
+                  "translation_ru": "операция"
+                },
+                {
+                  "ko": "입원하다",
+                  "translation_ru": "ложиться в больницу"
+                },
+                {
+                  "ko": "퇴원하다",
+                  "translation_ru": "выписываться"
+                },
+                {
+                  "ko": "치료",
+                  "translation_ru": "лечение"
+                },
+                {
+                  "ko": "조심하다",
+                  "translation_ru": "быть осторожным"
+                },
+                {
+                  "ko": "예방",
+                  "translation_ru": "профилактика"
+                }
+              ]
+            },
+            {
+              "title": "원인",
+              "title_ru": "Причины",
+              "items": [
+                {
+                  "ko": "넘어지다",
+                  "translation_ru": "упасть"
+                },
+                {
+                  "ko": "미끄러지다",
+                  "translation_ru": "поскользнуться"
+                },
+                {
+                  "ko": "부주의",
+                  "translation_ru": "неосторожность"
+                },
+                {
+                  "ko": "스키",
+                  "translation_ru": "лыжи"
+                },
+                {
+                  "ko": "운동",
+                  "translation_ru": "спорт"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-health",
+          "toc_section": "쓰기",
+          "title": "자신만의 건강 관리법을 써 보십시오.",
+          "title_ru": "Напишите о своём способе заботы о здоровье.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: что вы делаете для здоровья.",
+              "questions": [
+                {
+                  "kr": "건강을 위해서 무엇을 합니까?",
+                  "ru": "Что вы делаете для здоровья?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: как именно вы это делаете.",
+              "questions": [
+                {
+                  "kr": "그것은 어떻게 합니까?",
+                  "ru": "Как вы это делаете?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: на что нужно обращать внимание и какой эффект.",
+              "questions": [
+                {
+                  "kr": "그것을 할 때 주의할 점은 무엇이고 효과는 어떻습니까?",
+                  "ru": "На что нужно обращать внимание при этом и каков эффект?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

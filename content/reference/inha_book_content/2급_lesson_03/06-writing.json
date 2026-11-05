@@ -1,0 +1,122 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 53,
+      "page_role": "content",
+      "source_photo": "IMG_0626",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "연극",
+              "title_ru": "Фестиваль",
+              "items": [
+                {
+                  "ko": "연극",
+                  "translation_ru": "спектакль"
+                },
+                {
+                  "ko": "축제",
+                  "translation_ru": "фестиваль"
+                },
+                {
+                  "ko": "감독",
+                  "translation_ru": "режиссёр"
+                },
+                {
+                  "ko": "감동",
+                  "translation_ru": "глубокое впечатление"
+                },
+                {
+                  "ko": "기쁘다",
+                  "translation_ru": "радостный"
+                },
+                {
+                  "ko": "다양하다",
+                  "translation_ru": "разнообразный"
+                }
+              ]
+            },
+            {
+              "title": "꿈",
+              "title_ru": "Мечта",
+              "items": [
+                {
+                  "ko": "꿈",
+                  "translation_ru": "мечта"
+                },
+                {
+                  "ko": "이루다",
+                  "translation_ru": "осуществлять"
+                },
+                {
+                  "ko": "준비하다",
+                  "translation_ru": "готовиться"
+                },
+                {
+                  "ko": "가지다",
+                  "translation_ru": "иметь"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-dream",
+          "toc_section": "쓰기",
+          "title": "꿈에 대한 글 쓰기",
+          "outline_prompt": "1) 개요를 써 보십시오.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: расскажите, какая у вас мечта.",
+              "questions": [
+                {
+                  "kr": "여러분의 꿈은 무엇입니까?",
+                  "ru": "Какая у вас мечта?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: с каких пор у вас эта мечта и что вы для неё делаете.",
+              "questions": [
+                {
+                  "kr": "언제부터 그 꿈을 가졌습니까?",
+                  "ru": "С каких пор у вас эта мечта?"
+                },
+                {
+                  "kr": "그 꿈을 위해 무엇을 준비하고 있습니까?",
+                  "ru": "Что вы делаете для этой мечты?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: расскажите, что вы хотите сделать, когда мечта сбудется.",
+              "questions": [
+                {
+                  "kr": "그 꿈을 이루면 무엇을 하고 싶습니까?",
+                  "ru": "Что вы хотите сделать, когда мечта сбудется?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "2) 위 개요를 바탕으로 글을 써 보십시오."
+        }
+      ]
+    }
+  ]
+}

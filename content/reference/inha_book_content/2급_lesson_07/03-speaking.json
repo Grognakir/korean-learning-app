@@ -1,0 +1,215 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-07.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 119,
+      "page_role": "content",
+      "source_photo": "IMG_0763",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 이야기해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "자르갈은 운동화를 사려고 합니다. 하지만 종류가 많아서 결정할 수가 없습니다. 그래서 아멜리에게 추천을 부탁했습니다. 자르갈은 등산을 할 때 신을 수 있는 신발을 찾고 있습니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "종류",
+              "translation_ru": "вид, тип"
+            },
+            {
+              "ko": "결정",
+              "translation_ru": "решение"
+            },
+            {
+              "ko": "추천",
+              "translation_ru": "рекомендация"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "자르갈",
+            "아멜리"
+          ],
+          "lines": [
+            {
+              "speaker": "자르갈",
+              "text": "운동화를 사고 싶은데요. 괜찮은 운동화를 알면 추천 좀 해 주세요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "무슨 운동을 할 때 신을 거예요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "산에 갈 때 신으려고 해요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "그러면 가볍고 튼튼한 등산화가 좋겠어요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "등산화요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 산에 갈 때는 운동화 대신 등산화가 좋아요.",
+              "emphasized": [
+                "대신"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "운동화는 안 좋아요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 운동화는 무거워 가지고 산에 갈 때 신어 보니까 발이 좀 아팠어요. 학교 후문에 있는 신발 가게에서 세일하고 있으니까 가 보세요.",
+              "emphasized": [
+                "아 가지고",
+                "보니까"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "그래요? 좋은 정보 고마워요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "고맙기는요. 등산화를 잘 고르세요.",
+              "emphasized": [
+                "기는요"
+              ]
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "대신",
+              "translation_ru": "вместо, взамен"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 무엇을 사려고 합니까?"
+            },
+            {
+              "text": "2) 필요한 조건은 무엇입니까?"
+            },
+            {
+              "text": "3) 친구에게 추천을 부탁해 보십시오."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "종류",
+              "translation_ru": "вид, тип",
+              "group": "선택"
+            },
+            {
+              "ko": "결정",
+              "translation_ru": "решение",
+              "group": "선택"
+            },
+            {
+              "ko": "추천",
+              "translation_ru": "рекомендация",
+              "group": "선택"
+            },
+            {
+              "ko": "발",
+              "translation_ru": "ступня, нога",
+              "group": "선택"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "선택",
+              "title_ru": "Выбор",
+              "items": [
+                {
+                  "ko": "신발 가게",
+                  "translation_ru": "магазин обуви"
+                },
+                {
+                  "ko": "세일",
+                  "translation_ru": "распродажа"
+                },
+                {
+                  "ko": "마트",
+                  "translation_ru": "супермаркет"
+                },
+                {
+                  "ko": "운동화",
+                  "translation_ru": "кроссовки"
+                },
+                {
+                  "ko": "등산화",
+                  "translation_ru": "горные ботинки"
+                },
+                {
+                  "ko": "무겁다",
+                  "translation_ru": "тяжёлый"
+                },
+                {
+                  "ko": "가볍다",
+                  "translation_ru": "лёгкий"
+                },
+                {
+                  "ko": "튼튼하다",
+                  "translation_ru": "прочный"
+                },
+                {
+                  "ko": "조건",
+                  "translation_ru": "условие"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

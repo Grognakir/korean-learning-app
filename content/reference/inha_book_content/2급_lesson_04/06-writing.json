@@ -1,0 +1,147 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-04.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 70,
+      "page_role": "content",
+      "source_photo": "IMG_0660",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "마케팅",
+              "title_ru": "Погодный маркетинг",
+              "items": [
+                {
+                  "ko": "마케팅",
+                  "translation_ru": "маркетинг"
+                },
+                {
+                  "ko": "날씨 정보",
+                  "translation_ru": "информация о погоде"
+                },
+                {
+                  "ko": "사고팔다",
+                  "translation_ru": "покупать и продавать"
+                },
+                {
+                  "ko": "팔다",
+                  "translation_ru": "продавать"
+                },
+                {
+                  "ko": "물건",
+                  "translation_ru": "вещь, товар"
+                },
+                {
+                  "ko": "슈퍼컴퓨터",
+                  "translation_ru": "суперкомпьютер"
+                },
+                {
+                  "ko": "회사",
+                  "translation_ru": "компания"
+                }
+              ]
+            },
+            {
+              "title": "생활",
+              "title_ru": "Жизнь",
+              "items": [
+                {
+                  "ko": "편리하다",
+                  "translation_ru": "удобный"
+                },
+                {
+                  "ko": "미리",
+                  "translation_ru": "заранее"
+                },
+                {
+                  "ko": "직접",
+                  "translation_ru": "лично"
+                },
+                {
+                  "ko": "과학",
+                  "translation_ru": "наука"
+                }
+              ]
+            },
+            {
+              "title": "고향",
+              "title_ru": "Погода на родине",
+              "items": [
+                {
+                  "ko": "기후",
+                  "translation_ru": "климат"
+                },
+                {
+                  "ko": "장마",
+                  "translation_ru": "сезон дождей"
+                },
+                {
+                  "ko": "눈",
+                  "translation_ru": "снег"
+                },
+                {
+                  "ko": "우산",
+                  "translation_ru": "зонт"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-hometown-weather",
+          "toc_section": "쓰기",
+          "title": "고향의 날씨를 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст о погоде на вашей родине.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: расскажите, какие сезоны есть на вашей родине.",
+              "questions": [
+                {
+                  "kr": "여러분 나라에는 무슨 계절이 있습니까?",
+                  "ru": "Какие сезоны есть в вашей стране?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: опишите погоду в каждом из сезонов.",
+              "questions": [
+                {
+                  "kr": "각 계절의 날씨는 어떻습니까?",
+                  "ru": "Какая погода в каждом сезоне?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: расскажите, как меняется погода в последнее время.",
+              "questions": [
+                {
+                  "kr": "요즘 날씨는 어떻게 변하고 있습니까?",
+                  "ru": "Как сейчас меняется погода?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

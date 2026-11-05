@@ -1,0 +1,120 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 133,
+      "page_role": "content",
+      "source_photo": "IMG_1065",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-vacation-plan",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_8/illustration_4_homecoming.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 이번 방학에 고향에 갈 겁니다. 고향에 가기 전에 비행기 표를 예매하고 백화점에 갈 겁니다. 백화점에서 부모님과 친구의 선물을 살 겁니다."
+            },
+            {
+              "text": "고향에 가서 부모님과 함께 바다로 여행을 갈 겁니다. 우리는 사흘 동안 바다에서 수영도 하고 고향 음식도 먹을 겁니다. 그리고 친척들을 만나고 집으로 돌아올 겁니다. 집으로 돌아온 후에 친구의 생일 파티에 갈 겁니다. 생일 파티에 가서 한국의 전통 물건을 선물할 겁니다."
+            },
+            {
+              "text": "그래서 저는 방학을 기다립니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "돌아올",
+              "translation_ru": "форма от 돌아오다 (возвращаться)"
+            },
+            {
+              "ko": "돌아온",
+              "translation_ru": "форма от 돌아오다 (возвращаться)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-vacation-plan",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "방학 계획에 대한 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о планах на каникулы и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "계획",
+                "경험",
+                "가족",
+                "선물"
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "이 사람은 선물을 사고 비행기 표를 예매할 겁니다.",
+                "이 사람은 고향에서 3일 동안 바다를 여행할 겁니다.",
+                "이 사람은 친척들을 만나고 바다에 갈 겁니다.",
+                "이 사람은 방학이 끝난 후에 생일파티에 갈 겁니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 방학 계획을 이야기해 보십시오.",
+              "prompt_ru": "Расскажите о своих планах на каникулы."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-vacation-plan",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-vacation-plan",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "비행기",
+              "translation_ru": "самолёт"
+            },
+            {
+              "ko": "표",
+              "translation_ru": "билет"
+            },
+            {
+              "ko": "예매하다",
+              "translation_ru": "бронировать, покупать заранее (билет)"
+            },
+            {
+              "ko": "친척",
+              "translation_ru": "родственники, родня"
+            },
+            {
+              "ko": "돌아오다",
+              "translation_ru": "возвращаться (сюда)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

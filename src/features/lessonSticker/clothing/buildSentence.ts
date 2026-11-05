@@ -4,7 +4,7 @@ import { TARGETS, type OutfitPiece, type Situation } from "./situations";
 
 export const VERB_ORDER: VerbId[] = ["입다", "매다", "하다", "두르다", "쓰다", "끼다", "차다", "메다", "신다"];
 
-const FORMS: Record<VerbId, { go: string; yo: string; seyo: string }> = {
+export const FORMS: Record<VerbId, { go: string; yo: string; seyo: string }> = {
   입다: { go: "입고", yo: "입어요", seyo: "입으세요" },
   신다: { go: "신고", yo: "신어요", seyo: "신으세요" },
   쓰다: { go: "쓰고", yo: "써요", seyo: "쓰세요" },

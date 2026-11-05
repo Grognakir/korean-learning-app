@@ -1,0 +1,211 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 147,
+      "page_role": "content",
+      "source_photo": "IMG_1078",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "생일 선물"
+            }
+          ],
+          "table": {
+            "columns": [
+              "누구에게 줍니까?",
+              "무엇을 삽니까?",
+              "얼마입니까?"
+            ],
+            "rows": [
+              [
+                "남자 친구",
+                "넥타이 / 손수건",
+                "넥타이: 2만 원, 손수건: 5천 원"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "직원",
+            "왕루"
+          ],
+          "lines": [
+            {
+              "speaker": "직원",
+              "text": "무슨 물건을 찾아요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "생일 선물을 보고 있어요.",
+              "emphasized": [
+                "보고 있어요"
+              ]
+            },
+            {
+              "speaker": "직원",
+              "text": "누구에게 선물할 거예요?",
+              "emphasized": [
+                "누구에게"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "남자 친구한테 선물할 거예요.",
+              "emphasized": [
+                "남자 친구한테"
+              ]
+            },
+            {
+              "speaker": "직원",
+              "text": "그러면 넥타이가 어때요? 넥타이를 선물해 보세요. 1개에 2만 원입니다.",
+              "emphasized": [
+                "넥타이가 어때요",
+                "선물해 보세요",
+                "1개에 2만 원입니다"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "저 손수건은 얼마예요?",
+              "emphasized": [
+                "손수건"
+              ]
+            },
+            {
+              "speaker": "직원",
+              "text": "손수건은 1장에 5천 원이에요.",
+              "emphasized": [
+                "손수건",
+                "1장에 5천 원"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "그럼 넥타이 1개랑 손수건 2장을 주세요.",
+              "emphasized": [
+                "넥타이 1개랑 손수건 2장을 주세요"
+              ]
+            },
+            {
+              "speaker": "직원",
+              "text": "모두 3만 원입니다.",
+              "emphasized": [
+                "3만 원"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "여기 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-1",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 입학 선물"
+            }
+          ],
+          "table": {
+            "columns": [
+              "누구에게 줍니까?",
+              "무엇을 삽니까?",
+              "얼마입니까?"
+            ],
+            "rows": [
+              [
+                "동생",
+                "가방 / 운동화",
+                "가방: 3만 5천 원, 운동화: 6만 원"
+              ]
+            ]
+          },
+          "exercise_title": "2. 친구들과 함께 대화해 보십시오"
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-2",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2) (        ) 선물"
+            }
+          ],
+          "table": {
+            "columns": [
+              "누구에게 줍니까?",
+              "무엇을 삽니까?",
+              "얼마입니까?"
+            ],
+            "rows": [
+              [
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "넥타이",
+              "translation_ru": "галстук"
+            },
+            {
+              "ko": "손수건",
+              "translation_ru": "носовой платок"
+            },
+            {
+              "ko": "운동화",
+              "translation_ru": "кроссовки, спортивная обувь"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

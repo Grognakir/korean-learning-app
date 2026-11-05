@@ -5,6 +5,10 @@ import { JIA_AVATAR } from "../apps";
 import { createOsStore, type OsStore } from "../store";
 import { useOsStore } from "../OsStorage";
 import styles from "../SolomonOs.module.css";
+import { useWordTrainer } from "../wordTrainer/useWordTrainer";
+import { TrainerMessages, TrainerProgress, TrainerReplies, TrainerStart } from "../wordTrainer/WordTrainer";
+import type { ReadableDocument } from "../documents/types";
+import trainerStyles from "../wordTrainer/WordTrainer.module.css";
 
 /** Тестовый диалог из макета desktop.html (заглушка до пролога). */
 type Node = { jia: [string, string][]; replies: [string, string, string][] };
@@ -73,11 +77,14 @@ export function readChat(store: OsStore = createOsStore()): ChatState {
 export function Messenger({
   phone,
   onRead,
+  onOpenDocument,
 }: {
   phone: boolean;
   onRead: () => void;
+  onOpenDocument?: (document: ReadableDocument) => void;
 }) {
   const store = useOsStore();
+  const trainer = useWordTrainer(onOpenDocument);
   const [chat, setChat] = useState<ChatState>(() => ({ ...readChat(store), shown: true }));
   const [inChat, setInChat] = useState(phone);
   const [showRu, setShowRu] = useState(false);
@@ -88,7 +95,7 @@ export function Messenger({
   useEffect(() => store.save(CHAT_KEY, chat), [chat, store]);
   useEffect(() => {
     msgsRef.current?.scrollTo?.({ top: msgsRef.current.scrollHeight });
-  }, [chat.log.length, typing]);
+  }, [chat.log.length, typing, trainer.thread?.log.length, trainer.typing, trainer.stub]);
   useEffect(() => { onReadRef.current(); }, []);
   useEffect(() => {
     if (!chat.pending.length) return;
@@ -145,7 +152,7 @@ export function Messenger({
           </div>
         ))}
       </aside>
-      <div className={styles.chat}>
+      <div className={`${styles.chat} ${trainerStyles.chat}`}>
         <div className={styles.chatHead}>
           <button
             type="button"
@@ -172,6 +179,7 @@ export function Messenger({
             RU
           </button>
         </div>
+        <div><TrainerProgress trainer={trainer}/></div>
         <div className={`${styles.msgs} kr`} ref={msgsRef}>
           {chat.log.map(([who, ko, ru], i) => (
             <div
@@ -185,7 +193,8 @@ export function Messenger({
               </span>
             </div>
           ))}
-          {typing && (
+          <TrainerMessages trainer={trainer} showRu={showRu}/>
+          {typing && !trainer.active && (
             <div className={styles.typing}>
               지아 입력 중<i />
               <i />
@@ -193,8 +202,8 @@ export function Messenger({
             </div>
           )}
         </div>
-        <div className={`${styles.replies} kr`}>
-          {typing ? null : node.replies.length ? (
+        <div className={`${styles.replies} ${trainerStyles.replies} kr`}>
+          {trainer.active ? <TrainerReplies trainer={trainer}/> : typing ? null : node.replies.length ? (
             <>
               <span className={styles.lbl}>답장 선택</span>
               {node.replies.map(([k, r], i) => (
@@ -222,6 +231,7 @@ export function Messenger({
               </button>
             </span>
           )}
+          {!trainer.active && !typing && <TrainerStart onStart={trainer.start}/>}
         </div>
       </div>
     </div>

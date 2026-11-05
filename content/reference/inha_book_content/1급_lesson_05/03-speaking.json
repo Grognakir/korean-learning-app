@@ -1,0 +1,185 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-05.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 82,
+      "page_role": "content",
+      "source_photo": "IMG_1017",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "파하드 씨의 하루"
+            }
+          ],
+          "table": {
+            "columns": [
+              "시간",
+              "무엇을 합니까?"
+            ],
+            "rows": [
+              [
+                "7:00",
+                "일어나요"
+              ],
+              [
+                "7:30 ~ 8:30",
+                "아침을 먹어요"
+              ],
+              [
+                "9:00 ~ 1:00",
+                "학교에서 한국어를 배워요"
+              ],
+              [
+                "1:00 ~ 2:00",
+                "점심을 먹어요"
+              ],
+              [
+                "2:00 ~ 4:00",
+                "운동장에서 운동을 해요"
+              ],
+              [
+                "4:00 ~ 7:00",
+                "도서관에서 공부해요"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "흐엉",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "흐엉",
+              "text": "파하드 씨, 몇 시에 일어나요?",
+              "emphasized": [
+                "시에"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 7시에 일어나요.",
+              "emphasized": [
+                "시에"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "아침에 무엇을 해요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 7시 반에 아침을 먹어요. 그리고 학교에 가요.",
+              "emphasized": [
+                "시 반에"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "한국어 수업이 몇 시부터 몇 시까지 해요?",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "한국어 수업은 9시부터 1시까지 해요.",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "언제 점심을 먹어요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "1시부터 2시까지 점심을 먹어요.",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "그리고 무엇을 해요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "2시부터 4시까지 운동장에서 운동을 해요. 그리고 4시부터 7시까지 도서관에서 공부해요.",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "나의 하루"
+            }
+          ],
+          "table": {
+            "columns": [
+              "시간",
+              "무엇을 합니까?"
+            ],
+            "rows": [
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

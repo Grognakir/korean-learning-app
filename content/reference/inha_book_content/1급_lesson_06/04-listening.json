@@ -1,0 +1,113 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-06.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 99,
+      "page_role": "content",
+      "source_photo": "IMG_1033",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-trip-experience",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "한국에서의 경험을 듣고 말하기",
+          "title_ru": "Послушать и рассказать об опыте в Корее",
+          "audio_id": "123",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "왕루",
+                "text": "파하드 씨는 한국에서 여행해 봤어요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 여행해 봤어요. 저는 주말에 춘천에 갔어요. 춘천에서 배를 타고 자전거도 타 봤어요. 왕루 씨는 한국에서 여행을 해 봤어요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "네, 저는 주말에 경주에 갔어요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "경주에 누구와 같이 갔어요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "저는 친구와 함께 갔어요. 경주에서 시내를 구경하고 박물관도 가 봤어요. 파하드 씨도 친구와 같이 갔어요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아니요, 저는 동생과 같이 갔어요. 춘천은 공기가 맑고 사람들도 친절했어요."
+              },
+              {
+                "speaker": "왕루",
+                "text": "네, 경주도 깨끗하고 참 좋았어요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_6/illustration_3_korean_trip.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "왕루 씨는 주말에 춘천에 가 봤습니다.",
+                "파하드 씨는 경주에서 자전거를 타 봤습니다.",
+                "파하드 씨는 동생하고 같이 춘천에 갔습니다.",
+                "왕루 씨와 파하드 씨는 같이 여행을 했습니다."
+              ],
+              "correct": 2
+            }
+          ],
+          "followup": "친구들에게 한국에서의 경험을 이야기해 보십시오.",
+          "followup_ru": "Расскажите друзьям о своём опыте в Корее."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-trip",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "시내",
+              "translation_ru": "центр города"
+            },
+            {
+              "ko": "동생",
+              "translation_ru": "младший брат или сестра"
+            },
+            {
+              "ko": "맑다",
+              "translation_ru": "быть ясным, чистым (о воздухе, погоде)"
+            },
+            {
+              "ko": "참",
+              "translation_ru": "очень, действительно (разг.)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-10.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 171,
+      "page_role": "content",
+      "source_photo": "IMG_1302",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-clothing",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 의복",
+          "title_ru": "Одежда в Корее",
+          "illustration": {
+            "storage_path": "lesson_10/illustration_5_korean_clothing.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무슨 옷을 입고 있습니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Какую одежду носят эти люди? Расскажите.",
+          "lines": [
+            {
+              "text": "한국의 전통 옷은 한복입니다. 한복은 명절이나 결혼식, 돌잔치, 환갑잔치 등 중요한 일이 있을 때 입습니다. 과거에는 평소에도 한복을 입고 다니는 사람들이 많았지만 요즘은 보기 힘듭니다. 그러면 요즘 한국인들은 어떤 옷을 입을까요?"
+            },
+            {
+              "text": "현대인들은 디자인이 예쁘면서 활동하기 편한 옷을 좋아합니다. 그렇지만 때와 장소에 맞게 옷을 입습니다. 한국의 중학생, 고등학생들은 학교에 갈 때 교복을 입습니다. 학생들이 교복을 입으면 단정해 보이기 때문에 대부분의 학교에서 교복을 입습니다. 회사에 다니는 직장인들은 정장을 많이 입습니다. 하지만 요즘은 일하기 편한 옷을 입는 회사가 늘고 있습니다. 한국 사람들은 정장을 입는 것을 다른 사람들에게 예의를 지키는 것이라고 생각합니다. 그래서 결혼식이나 장례식과 같은 중요한 행사가 있으면 주로 정장을 입습니다."
+            },
+            {
+              "text": "이처럼 의복은 직업, 시간, 장소에 맞게 선택해서 입어야 합니다. 옷은 자신의 개성을 보여주면서 다른 사람들에게는 배려의 마음을 표현하기 때문입니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 한국에서는 어떤 옷을 입습니까?",
+              "translation_ru": "Какую одежду носят в Корее?"
+            },
+            {
+              "text": "2) 여러분 나라에서는 때와 장소에 맞게 어떤 옷을 입습니까? 이야기해 보십시오.",
+              "translation_ru": "Какую одежду носят в вашей стране в зависимости от времени и места? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-culture-expr",
+          "toc_section": "문화 이해하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-culture-clothing",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "예의를 지키다",
+              "translation_ru": "соблюдать этикет, быть вежливым — «사람들에게 예의를 지키는 것이 중요합니다» («важно соблюдать этикет по отношению к людям»)"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-clothing",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "평소",
+              "translation_ru": "обычно, в обычное время",
+              "group": "예절"
+            },
+            {
+              "ko": "교복",
+              "translation_ru": "школьная форма"
+            },
+            {
+              "ko": "장례식",
+              "translation_ru": "похороны",
+              "group": "한복"
+            },
+            {
+              "ko": "의복",
+              "translation_ru": "одежда"
+            },
+            {
+              "ko": "선택하다",
+              "translation_ru": "выбирать",
+              "group": "예절"
+            },
+            {
+              "ko": "개성",
+              "translation_ru": "индивидуальность",
+              "group": "예절"
+            },
+            {
+              "ko": "배려",
+              "translation_ru": "забота, чуткость",
+              "group": "예절"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "한복",
+              "title_ru": "Традиционная одежда и праздники",
+              "items": [
+                {
+                  "ko": "한복",
+                  "translation_ru": "ханбок, корейский национальный костюм"
+                },
+                {
+                  "ko": "명절",
+                  "translation_ru": "традиционный праздник"
+                },
+                {
+                  "ko": "돌잔치",
+                  "translation_ru": "праздник первого дня рождения"
+                },
+                {
+                  "ko": "환갑잔치",
+                  "translation_ru": "празднование 60-летия"
+                }
+              ]
+            },
+            {
+              "title": "예절",
+              "title_ru": "Одежда и этикет",
+              "items": [
+                {
+                  "ko": "예의",
+                  "translation_ru": "этикет, вежливость"
+                },
+                {
+                  "ko": "지키다",
+                  "translation_ru": "соблюдать"
+                },
+                {
+                  "ko": "행사",
+                  "translation_ru": "мероприятие"
+                },
+                {
+                  "ko": "현대인",
+                  "translation_ru": "современный человек"
+                },
+                {
+                  "ko": "직장인",
+                  "translation_ru": "работающий человек, служащий"
+                },
+                {
+                  "ko": "표현하다",
+                  "translation_ru": "выражать"
+                },
+                {
+                  "ko": "때",
+                  "translation_ru": "время, момент"
+                },
+                {
+                  "ko": "장소",
+                  "translation_ru": "место"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-10",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㄴ'+'ㄹ'",
+          "audio_id": "240",
+          "examples": [
+            {
+              "text": "생산량",
+              "translation_ru": "объём производства"
+            },
+            {
+              "text": "입원료",
+              "translation_ru": "плата за госпитализацию"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

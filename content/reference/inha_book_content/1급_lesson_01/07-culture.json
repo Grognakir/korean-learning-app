@@ -1,0 +1,133 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-01.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 23,
+      "page_role": "content",
+      "source_photo": "IMG_0961",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-bow",
+          "toc_section": "문화 이해하기",
+          "title": "머리를 숙이고 인사하기",
+          "title_ru": "Здороваться, наклонив голову",
+          "illustration": {
+            "storage_path": "lesson_1/illustration_5_polite_greetings.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что делают эти люди? Расскажите.",
+          "lines": [
+            {
+              "text": "친구를 만납니다.\n“안녕하세요?”\n눈을 보고 인사합니다.\n\n선생님을 만납니다.\n“안녕하십니까?”\n머리를 숙이고 인사합니다."
+            },
+            {
+              "text": "1) 친구를 만납니다. 어떻게 인사합니까?",
+              "translation_ru": "Вы встречаете друга. Как вы здороваетесь?"
+            },
+            {
+              "text": "2) 선생님을 만납니다. 어떻게 인사합니까?",
+              "translation_ru": "Вы встречаете учителя. Как вы здороваетесь?"
+            },
+            {
+              "text": "3) 여러분 나라에서는 어떻게 인사합니까? 이야기해 보십시오.",
+              "translation_ru": "Как здороваются в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-bow",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "눈",
+              "translation_ru": "глаз"
+            },
+            {
+              "ko": "보다",
+              "translation_ru": "смотреть, видеть"
+            },
+            {
+              "ko": "인사하다",
+              "translation_ru": "здороваться, приветствовать"
+            },
+            {
+              "ko": "머리",
+              "translation_ru": "голова"
+            },
+            {
+              "ko": "숙이다",
+              "translation_ru": "наклонять (голову)"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-1a",
+          "toc_section": "문화 이해하기",
+          "rule": "‘ㅔ’",
+          "audio_id": "104",
+          "examples": [
+            {
+              "text": "제",
+              "translation_ru": "я (скромная форма); мой"
+            },
+            {
+              "text": "게",
+              "translation_ru": "краб"
+            },
+            {
+              "text": "가게",
+              "translation_ru": "магазин"
+            },
+            {
+              "text": "체하다",
+              "translation_ru": "расстроить желудок (от еды)"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-1b",
+          "toc_section": "문화 이해하기",
+          "rule": "‘ㅐ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "새",
+              "translation_ru": "птица"
+            },
+            {
+              "text": "학생",
+              "translation_ru": "ученик, студент"
+            },
+            {
+              "text": "노래",
+              "translation_ru": "песня"
+            },
+            {
+              "text": "배우다",
+              "translation_ru": "учиться"
+            },
+            {
+              "text": "채소",
+              "translation_ru": "овощи"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

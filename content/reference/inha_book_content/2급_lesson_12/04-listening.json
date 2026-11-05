@@ -1,0 +1,167 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-12.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 202,
+      "page_role": "content",
+      "source_photo": "IMG_1441",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-reconcile",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "화해하는 대화를 듣고 말하기",
+          "title_ru": "Слушать диалог о примирении и говорить",
+          "audio_id": "247",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "아멜리",
+                "text": "저기…… 우리 얘기 좀 할 수 있을까요?"
+              },
+              {
+                "speaker": "친구",
+                "text": "아, 그래요. 왜요?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "많이 생각을 해 봤는데…… 화부터 낸 거 사과할게요. 미안해요. 제가 그때 좋게 이야기했으면 싸우지는 않았을 거예요."
+              },
+              {
+                "speaker": "친구",
+                "text": "아니에요. 제 잘못이 커요. 그때 아멜리 씨의 말을 듣고 나서 얼마나 후회했는지 몰라요. 정말 미안해요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "작은 실수 때문에 우리 사이가 멀어지는 게 싫었어요."
+              },
+              {
+                "speaker": "친구",
+                "text": "저도 먼저 사과할까 했는데 용기가 나지 않았어요. 이렇게 먼저 사과를 해 줘서 고마워요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "고맙기는요. 누구나 실수는 하는 거잖아요. 앞으로는 더 사이좋게 지내요."
+              },
+              {
+                "speaker": "친구",
+                "text": "네, 앞으로는 말조심해야겠어요. 사소하게 생각했는데 다른 사람에게는 상처가 되는 것을 몰랐어요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "이번 일이 서로를 더 잘 이해할 수 있는 좋은 경험이 된 것 같네요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "두 사람의 사이가 어때 보입니까? 이야기해 보십시오.",
+            "prompt_ru": "Как выглядят отношения этих двух людей? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_12/illustration_3_friends_reconcile_v2.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "친구가 아멜리에게 먼저 사과를 했습니다.",
+                "친구는 아멜리와 싸우고 나서 후회했습니다.",
+                "아멜리는 사과할까 했는데 용기가 나지 않았습니다.",
+                "두 사람은 이번 일 때문에 사이가 안 좋아질 것 같습니다."
+              ],
+              "correct": 1
+            }
+          ],
+          "followup": "여러분은 다투고 나서 화해한 적이 있습니까? 친구들과 함께 이야기해 보십시오.",
+          "followup_ru": "Бывало ли, что вы мирились после ссоры? Обсудите с друзьями."
+        },
+        {
+          "type": "hint",
+          "id": "hint-listening-expr",
+          "toc_section": "듣고 말하기",
+          "hint_kind": "expression",
+          "related_text_ref": "listening-reconcile",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "상처가 되다",
+              "translation_ru": "ранить, стать душевной раной — «사소한 말이 다른 사람에게 상처가 될 수 있어요» (пустяковые слова могут ранить других)"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-reconcile",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "listening-reconcile",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "사과하다",
+              "translation_ru": "извиняться"
+            },
+            {
+              "ko": "사이",
+              "translation_ru": "между"
+            },
+            {
+              "ko": "멀어지다",
+              "translation_ru": "отдаляться"
+            },
+            {
+              "ko": "사이좋다",
+              "translation_ru": "быть в хороших отношениях, дружить"
+            },
+            {
+              "ko": "말조심하다",
+              "translation_ru": "следить за словами"
+            },
+            {
+              "ko": "사소하다",
+              "translation_ru": "пустяковый, незначительный"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "실수",
+              "title_ru": "Ошибки и обиды",
+              "items": [
+                {
+                  "ko": "실수",
+                  "translation_ru": "ошибка, промах"
+                },
+                {
+                  "ko": "말실수",
+                  "translation_ru": "оговорка, неосторожно сказанное слово"
+                },
+                {
+                  "ko": "농담",
+                  "translation_ru": "шутка"
+                },
+                {
+                  "ko": "상처",
+                  "translation_ru": "рана; душевная рана"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

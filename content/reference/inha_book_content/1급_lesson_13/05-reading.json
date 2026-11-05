@@ -1,0 +1,154 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-13.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 217,
+      "page_role": "content",
+      "source_photo": "IMG_1143",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-directions",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_13/illustration_4_arts_center_trip.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "한국에서 지하철을 타 봤습니까? 어땠습니까?",
+          "intro_prompt_ru": "Ездили ли вы в Корее на метро? Как вам?",
+          "lines": [
+            {
+              "text": "■ 출발 장소: 주안역"
+            },
+            {
+              "text": "■ 도착 장소: 세종문화회관"
+            },
+            {
+              "text": "■ 어떻게 가요?"
+            },
+            {
+              "text": "주안역에서 1호선을 탑니다."
+            },
+            {
+              "text": "→ 신길역에서 5호선으로 갈아탑니다."
+            },
+            {
+              "text": "→ 광화문역에서 내립니다."
+            },
+            {
+              "text": "→ 종로 방향으로 직진합니다."
+            },
+            {
+              "text": "→ 횡단보도를 건넙니다."
+            },
+            {
+              "text": "→ 인하빌딩 옆에 세종문화회관이 있습니다."
+            },
+            {
+              "text": "■ 얼마나 걸려요?"
+            },
+            {
+              "text": "지하철로 1시간 + 걸어서 10분"
+            },
+            {
+              "text": "오늘 난타 공연을 보러 세종문화회관에 갑니다. 주안역에서 지하철 1호선을 타고 신길역에서 내립니다. 그리고 신길역에서 지하철 5호선으로 갈아타고 광화문역에서 내립니다. 주안역에서 광화문역까지 지하철로 1시간쯤 걸립니다."
+            },
+            {
+              "text": "광화문역에서 종로 방향으로 직진합니다. 걸어서 간 후에 첫 번째 사거리에서 횡단보도를 건넙니다. 거기에 인하빌딩이 있습니다. 인하빌딩 옆에 세종문화회관이 있습니다. 광화문역에서 세종문화회관까지 걸어서 10분쯤 걸립니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "내립",
+              "translation_ru": "форма от 내리다 (выходить из транспорта)"
+            },
+            {
+              "ko": "갈아탑",
+              "translation_ru": "форма от 갈아타다 (пересаживаться)"
+            },
+            {
+              "ko": "건넙",
+              "translation_ru": "форма от 건너다 (переходить)"
+            },
+            {
+              "ko": "걸립",
+              "translation_ru": "форма от 걸리다 (занимать — о времени)"
+            },
+            {
+              "ko": "걸어",
+              "translation_ru": "форма от 걷다 (идти пешком)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-directions",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "목적지에 가는 글을 읽고 말하기",
+          "title_ru": "Прочитать описание маршрута и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "공연 시간",
+                "공연 장소",
+                "가는 방법",
+                "가는 방향"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "인하빌딩에서 공연을 봅니다.",
+                "신길역에서 세종문화회관까지 걸어갑니다.",
+                "인하빌딩은 세종문화회관 건너편에 있습니다.",
+                "주안역에서 광화문역까지 1시간쯤 걸립니다."
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 한국에서 어디에 가 봤습니까? 어떻게 갔습니까?",
+              "prompt_ru": "Где вы побывали в Корее? Как туда добирались?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-directions",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-directions",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "방향",
+              "translation_ru": "направление"
+            },
+            {
+              "ko": "직진하다",
+              "translation_ru": "идти/ехать прямо"
+            },
+            {
+              "ko": "사거리",
+              "translation_ru": "перекрёсток"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

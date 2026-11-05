@@ -1,0 +1,107 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-11.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 183,
+      "page_role": "content",
+      "source_photo": "IMG_1111",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-text-message",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_11/illustration_4_concert_message.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "자르갈 씨, 저 흐엉이에요."
+            },
+            {
+              "text": "이번 주 토요일에 뭐 해요?^^"
+            },
+            {
+              "text": "예술회관에서 음악회를 해요."
+            },
+            {
+              "text": "시간이 있으면 음악회에 갑시다. 재미있겠지요?"
+            },
+            {
+              "text": "음악회는 3시에 시작하니까 2시에 학교 정문에서 만날까요?"
+            },
+            {
+              "text": "문자 메시지를 보면 답장해 주세요."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-text-message",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "문자 메시지를 읽고 말하기",
+          "title_ru": "Прочитать SMS и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "이 글은 어디에서 볼 수 있습니까?",
+              "prompt_ru": "Где можно увидеть этот текст?",
+              "choices": [
+                "편지",
+                "컴퓨터",
+                "텔레비전",
+                "휴대전화"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "자르갈 씨가 문자 메시지를 보냈습니다.",
+                "흐엉 씨는 음악회에 가고 싶어 합니다.",
+                "학교 정문에서 음악회를 볼 겁니다.",
+                "음악회는 이번 주 토요일 2시에 합니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 누구에게 어떤 문자 메시지를 보내고 싶습니까? 이야기해 보십시오.",
+              "prompt_ru": "Кому и какое SMS вы хотели бы отправить? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-text-message",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-text-message",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "음악회",
+              "translation_ru": "концерт (классической музыки)"
+            },
+            {
+              "ko": "문자 메시지",
+              "translation_ru": "SMS, текстовое сообщение"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

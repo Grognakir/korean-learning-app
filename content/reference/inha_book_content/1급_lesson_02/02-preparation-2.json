@@ -1,0 +1,441 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-02.json",
+  "section": "준비하기 2",
+  "pages": [
+    {
+      "page_number": 30,
+      "page_role": "content",
+      "source_photo": "IMG_0967",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-facilities-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "학교 시설물의 위치를 설명하기",
+          "title_ru": "Объяснять расположение мест в университете",
+          "illustration": {
+            "storage_path": "lesson_2/illustration_2_campus_directions_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "106",
+          "speakers": [
+            "아멜리",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨, 안녕하세요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 아멜리 씨, 안녕하세요? 학교에 은행이 있습니까?",
+              "emphasized": [
+                "에 은행이 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "예, 학교에 은행이 있습니다.",
+              "emphasized": [
+                "에 은행이 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "은행이 어디에 있습니까?",
+              "emphasized": [
+                "어디에 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "이 건물 옆에 있습니다.",
+              "emphasized": [
+                "옆에 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "도서관은 어디에 있습니까?",
+              "emphasized": [
+                "어디에 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "도서관은 운동장 앞에 있습니다.",
+              "emphasized": [
+                "앞에 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "아멜리 씨, 고맙습니다."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-facilities-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "학교",
+              "translation_ru": "школа"
+            },
+            {
+              "ko": "은행",
+              "translation_ru": "банк"
+            },
+            {
+              "ko": "있다",
+              "translation_ru": "быть, находиться; иметься"
+            },
+            {
+              "ko": "건물",
+              "translation_ru": "здание"
+            },
+            {
+              "ko": "옆",
+              "translation_ru": "сбоку, рядом"
+            },
+            {
+              "ko": "도서관",
+              "translation_ru": "библиотека"
+            },
+            {
+              "ko": "운동장",
+              "translation_ru": "спортплощадка, стадион"
+            },
+            {
+              "ko": "앞",
+              "translation_ru": "перед, впереди"
+            },
+            {
+              "ko": "없다",
+              "translation_ru": "не быть; отсутствовать"
+            },
+            {
+              "ko": "방",
+              "translation_ru": "комната"
+            },
+            {
+              "ko": "침대",
+              "translation_ru": "кровать"
+            },
+            {
+              "ko": "식당",
+              "translation_ru": "столовая, ресторан"
+            },
+            {
+              "ko": "우체국",
+              "translation_ru": "почта"
+            },
+            {
+              "ko": "매점",
+              "translation_ru": "киоск, буфет"
+            },
+            {
+              "ko": "본관",
+              "translation_ru": "главный корпус"
+            },
+            {
+              "ko": "정문",
+              "translation_ru": "главные ворота"
+            },
+            {
+              "ko": "후문",
+              "translation_ru": "задние ворота"
+            },
+            {
+              "ko": "컴퓨터",
+              "translation_ru": "компьютер"
+            },
+            {
+              "ko": "냉장고",
+              "translation_ru": "холодильник"
+            },
+            {
+              "ko": "고향",
+              "translation_ru": "родина, родной край"
+            },
+            {
+              "ko": "집",
+              "translation_ru": "дом"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 31,
+      "page_role": "content",
+      "source_photo": "IMG_0968",
+      "blocks": [
+        {
+          "type": "grammar_point",
+          "id": "grammar-3",
+          "toc_section": "준비하기 2",
+          "pattern": "N에①",
+          "section": "3",
+          "explanation": "**Смысл:** частица, которую используют, когда называют место, где что-то находится, — «в, на N». Обычно с глаголами 있다/없다.",
+          "examples": [
+            "1) 가: 교실에 무엇이 있습니까?\n나: 교실에 책상이 있습니다.",
+            "2) 가: 교실에 칠판이 있습니까?\n나: 네, 교실에 칠판이 있습니다."
+          ],
+          "rules": [
+            "받침 не важен → N에\n**교실 → 교실에**",
+            "N1이/가 N2에 있다/없다\n**교실에 책상이 있어요**",
+            "Работает со всеми временами (과거, 현재, 미래) и предположением"
+          ]
+        },
+        {
+          "type": "grammar_point",
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "pattern": "N이/가 있다/없다",
+          "section": "4",
+          "explanation": "Есть / нет чего-либо; 있다 — «быть, находиться», 없다 — «не быть, отсутствовать».",
+          "examples": [
+            "1) 가: 방에 뭐가 있습니까?\n나: 방에 침대가 있습니다.",
+            "2) 가: 방에 책상이 있습니까?\n나: 아니요, 방에 책상이 없습니다."
+          ],
+          "rules": [
+            "N 받침 есть → N이 있다/없다",
+            "N 받침 нет → N가 있다/없다",
+            "무엇이 = 뭐가"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 32,
+      "page_role": "content",
+      "source_photo": "IMG_0969",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "practice-3a",
+          "toc_section": "준비하기 2",
+          "title": "1. 친구와 같이 이야기해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 가: 책상에 무엇이 있습니까?  나: ______."
+            },
+            {
+              "text": "2) 가: 가방에 무엇이 있습니까?  나: ______."
+            },
+            {
+              "text": "3) 가: 교실에 칠판이 있습니까?  나: ______."
+            },
+            {
+              "text": "4) 가: 친구의 책상 위에 책이 있습니까?  나: ______."
+            }
+          ],
+          "exercise_title": "연습하기3"
+        },
+        {
+          "type": "text",
+          "id": "practice-3b",
+          "toc_section": "준비하기 2",
+          "title": "2. 친구와 같이 이야기해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 가: 교실에 무엇이 없습니까?  나: ______."
+            },
+            {
+              "text": "2) 가: 방에 무엇이 없습니까?  나: ______."
+            },
+            {
+              "text": "3) 가: 가방에 신발이 있습니까?  나: ______."
+            },
+            {
+              "text": "4) 가: 친구의 책상 위에 가방이 있습니까?  나: ______."
+            }
+          ],
+          "exercise_title": "연습하기3"
+        }
+      ]
+    },
+    {
+      "page_number": 33,
+      "page_role": "content",
+      "source_photo": "IMG_0970",
+      "blocks": [
+        {
+          "type": "reference_table",
+          "id": "table-positions",
+          "toc_section": "준비하기 2",
+          "title": "위치",
+          "title_ru": "Положение",
+          "columns": [
+            "위",
+            "아래(밑)",
+            "옆",
+            "왼쪽",
+            "오른쪽",
+            "앞",
+            "뒤",
+            "안",
+            "밖",
+            "건너편/맞은편",
+            "근처"
+          ],
+          "translations": [
+            "верх, над",
+            "низ, под",
+            "бок, рядом",
+            "левая сторона",
+            "правая сторона",
+            "перёд, впереди",
+            "зад, позади",
+            "внутри",
+            "снаружи",
+            "противоположная сторона",
+            "окрестности, поблизости"
+          ],
+          "note": "в оригинале у каждого слова — схема-стрелка"
+        }
+      ]
+    },
+    {
+      "page_number": 34,
+      "page_role": "content",
+      "source_photo": "IMG_0971",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "practice-4a",
+          "toc_section": "준비하기 2",
+          "title": "1. 다음과 같이 이야기해 보십시오. (도서관 / 운동장 오른쪽)",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "가: 도서관이 어디에 있습니까?  나: 도서관은 운동장 오른쪽에 있습니다."
+            },
+            {
+              "text": "1) 9호관 / ______"
+            },
+            {
+              "text": "2) 드림센터 / ______"
+            },
+            {
+              "text": "3) 본관 / ______"
+            },
+            {
+              "text": "4) 도서관 / ______"
+            },
+            {
+              "text": "5) 운동장 / ______"
+            }
+          ],
+          "exercise_title": "연습하기4"
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "방",
+              "방 / 책상, 침대, 컴퓨터, 냉장고"
+            ],
+            "cues": [
+              "방",
+              "방 / 책상, 침대, 컴퓨터, 냉장고"
+            ],
+            "dialogue": [
+              "가: 방에 무엇이 있습니까?",
+              "나: 제 방에 책상, 침대, 컴퓨터, 냉장고가 있습니다."
+            ],
+            "emphasis": [
+              [
+                "방에",
+                "무엇이",
+                "있습니까"
+              ],
+              [
+                "제 방에",
+                "가 있습니다"
+              ]
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "교실",
+                "교실 / 책상, 의자, 칠판, 시계"
+              ],
+              "answers": [
+                "교실",
+                "교실에",
+                "책상, 의자, 칠판, 시계가"
+              ]
+            },
+            {
+              "given": [
+                "책상 위",
+                "책상 위 / 책, 공책, 연필, 볼펜, 지우개"
+              ],
+              "answers": [
+                "책상 위",
+                "책상 위에",
+                "책, 공책, 연필, 볼펜, 지우개가"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}에 무엇이 있습니까?",
+            "나: {1} {2} 있습니다."
+          ]
+        },
+        {
+          "type": "text",
+          "id": "practice-4b",
+          "toc_section": "준비하기 2",
+          "title": "2. 다음과 같이 이야기해 보십시오. (3, 4)",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "3) 가방 안 / ______"
+            },
+            {
+              "text": "4) 고향의 집 / ______"
+            }
+          ],
+          "exercise_title": "연습하기4"
+        }
+      ]
+    }
+  ]
+}

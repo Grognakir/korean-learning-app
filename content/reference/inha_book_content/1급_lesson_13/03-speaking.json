@@ -1,0 +1,197 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-13.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 215,
+      "page_role": "content",
+      "source_photo": "IMG_1141",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "왕루 씨와 파하드 씨가 이번 주말에 박물관에 갈 겁니다."
+            }
+          ],
+          "table": {
+            "columns": [
+              "교통수단",
+              "시간 / 특징"
+            ],
+            "rows": [
+              [
+                "버스",
+                "1시간 30분"
+              ],
+              [
+                "지하철",
+                "50분"
+              ],
+              [
+                "택시",
+                "비싸다"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "파하드 씨, 이번 주말에 박물관에 같이 가요.",
+              "emphasized": [
+                "이번 주말에 박물관에 같이 가요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "좋아요. 같이 갑시다. 박물관에 어떻게 가요?",
+              "emphasized": [
+                "박물관"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "박물관에 버스나 지하철을 타고 가요.",
+              "emphasized": [
+                "박물관",
+                "버스나 지하철을 타고 가요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "시간이 얼마나 걸려요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "버스로 가면 1시간 30분쯤 걸려요. 그리고 지하철로 가면 50분쯤 걸릴 거예요.",
+              "emphasized": [
+                "버스로 가면 1시간 30분쯤 걸려요",
+                "지하철로 가면 50분쯤 걸릴 거예요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "그럼 택시로 갈까요?",
+              "emphasized": [
+                "택시"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "택시는 비싸서 못 타요. 지하철이 편하니까 지하철을 탑시다.",
+              "emphasized": [
+                "택시는 비싸서 못 타요",
+                "지하철이 편하니까 지하철을 탑시다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "알겠어요. 그럼 지하철을 타고 갑시다.",
+              "emphasized": [
+                "지하철을 타고 갑시다"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-1",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2. 친구들과 함께 대화해 보십시오"
+            },
+            {
+              "text": "1) 다음 달에 부산에 여행을 갈 겁니다."
+            }
+          ],
+          "table": {
+            "columns": [
+              "교통수단",
+              "시간 / 특징"
+            ],
+            "rows": [
+              [
+                "버스",
+                "5시간"
+              ],
+              [
+                "KTX",
+                "3시간"
+              ],
+              [
+                "비행기",
+                "비싸다"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-2",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2) (        )"
+            }
+          ],
+          "table": {
+            "columns": [
+              "교통수단",
+              "시간 / 특징"
+            ],
+            "rows": [
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ],
+              [
+                "",
+                ""
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

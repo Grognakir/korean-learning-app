@@ -1,0 +1,219 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-09.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 155,
+      "page_role": "content",
+      "source_photo": "IMG_0929",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-donguibogam",
+          "toc_section": "문화 이해하기",
+          "title": "동의보감",
+          "title_ru": "«Тонъи погам» (книга о восточной медицине)",
+          "illustration": {
+            "storage_path": "lesson_9/illustration_5_donguibogam.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "한국 사람들은 옛날부터 자연에서 약을 찾았습니다. 16세기에 허준(1546~1615)은 ‘동의보감’이라는 책을 썼습니다. 이 책에서는 주변에서 쉽게 찾을 수 있는 재료로 약을 만드는 방법을 소개하고 있습니다. 그중에서 여러분도 쉽게 할 수 있는 방법을 소개하겠습니다."
+            },
+            {
+              "text": "감기에 걸렸을 때",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "생강과 파 뿌리를 끓여서 자기 전에 마시면 좋습니다. 이 때 냄새가 싫으면 꿀이나 설탕을 넣어서 마셔 보십시오.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "소화가 잘 안 되고 체했을 때",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "무즙을 마시거나 매실차를 따뜻하게 마시면 좋습니다.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "눈이 피로할 때",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "따뜻한 손으로 눈을 마사지하면 눈의 피로가 풀립니다.",
+              "line_kind": "list-item"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 옛날 한국 사람은 감기에 걸렸거나 체했을 때 어떻게 했습니까?",
+              "translation_ru": "Что делали корейцы в старину, когда простужались или у них был несварение?"
+            },
+            {
+              "text": "2) 여러분 나라의 전통적인 치료법은 무엇입니까? 친구들과 이야기해 보십시오.",
+              "translation_ru": "Какие традиционные способы лечения есть в вашей стране? Обсудите с друзьями."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-donguibogam",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "자연",
+              "translation_ru": "природа",
+              "group": "한방"
+            },
+            {
+              "ko": "치료법",
+              "translation_ru": "способ лечения",
+              "group": "한방"
+            },
+            {
+              "ko": "세기",
+              "translation_ru": "век, столетие",
+              "group": "한방"
+            },
+            {
+              "ko": "생강",
+              "translation_ru": "имбирь",
+              "group": "한방"
+            },
+            {
+              "ko": "뿌리",
+              "translation_ru": "корень",
+              "group": "한방"
+            },
+            {
+              "ko": "꿀",
+              "translation_ru": "мёд",
+              "group": "한방"
+            },
+            {
+              "ko": "무즙",
+              "translation_ru": "сок редьки",
+              "group": "한방"
+            },
+            {
+              "ko": "매실차",
+              "translation_ru": "чай из японской сливы (мэсиль)",
+              "group": "한방"
+            },
+            {
+              "ko": "마사지하다",
+              "translation_ru": "делать массаж",
+              "group": "한방"
+            },
+            {
+              "ko": "피로",
+              "translation_ru": "усталость",
+              "group": "한방"
+            },
+            {
+              "ko": "풀리다",
+              "translation_ru": "рассасываться; проходить (об усталости)",
+              "group": "한방"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "한방",
+              "title_ru": "Народная медицина",
+              "items": [
+                {
+                  "ko": "한의원",
+                  "translation_ru": "клиника восточной медицины"
+                },
+                {
+                  "ko": "약",
+                  "translation_ru": "лекарство"
+                },
+                {
+                  "ko": "마사지",
+                  "translation_ru": "массаж"
+                },
+                {
+                  "ko": "소화",
+                  "translation_ru": "пищеварение"
+                },
+                {
+                  "ko": "체하다",
+                  "translation_ru": "несварение"
+                },
+                {
+                  "ko": "감기에 걸리다",
+                  "translation_ru": "простудиться"
+                },
+                {
+                  "ko": "차",
+                  "translation_ru": "чай"
+                },
+                {
+                  "ko": "열",
+                  "translation_ru": "жар"
+                },
+                {
+                  "ko": "기침",
+                  "translation_ru": "кашель"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-9",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㅇ'+'ㄹ' (비음화)",
+          "audio_id": "236",
+          "examples": [
+            {
+              "text": "강릉",
+              "translation_ru": "Каннын (город на востоке Кореи)"
+            },
+            {
+              "text": "을왕리",
+              "translation_ru": "Ыльванни (пляж в Инчхоне)"
+            },
+            {
+              "text": "종로",
+              "translation_ru": "Чонно (район Сеула)"
+            },
+            {
+              "text": "경로당",
+              "translation_ru": "клуб для пожилых людей"
+            },
+            {
+              "text": "정리하다",
+              "translation_ru": "приводить в порядок"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,8 @@
 
 export type IconName =
   | "notes"
+  | "viewer"
+  | "dict"
   | "msg"
   | "call"
   | "map"
@@ -24,6 +26,8 @@ export type IconName =
 const S = { stroke: "currentColor", strokeLinejoin: "round" as const };
 
 const PATHS: Record<IconName, { box: number; body: React.ReactNode }> = {
+  dict: { box: 24, body: <><rect x="3" y="2" width="18" height="20" rx="2" fill="var(--green)" stroke="var(--ink)"/><path d="M7 2v20M11 2v9l3-2 3 2V2" fill="var(--mid)" stroke="var(--ink)" strokeWidth="1.2"/><path d="M11 15h6M11 18h4" stroke="var(--ink)" strokeWidth="1.3"/></> },
+  viewer: { box: 24, body: <><path d="M4 2h10l6 6v14H4z" fill="var(--green)" stroke="var(--ink)"/><path d="M14 2v6h6M8 12h8M8 16h8M8 19h5" fill="none" stroke="var(--ink)" strokeWidth="1.3"/></> },
   notes: {
     box: 24,
     body: <><rect x="3" y="2" width="18" height="20" rx="2" fill="#22a354"/><path d="M3 7h18" stroke="#0a632c" strokeWidth="1.5"/><path d="M7 11h10M7 15h10M7 19h7" stroke="#04150a" strokeWidth="1.3"/></>,
@@ -272,6 +276,8 @@ export function OsIcon({
 /** Иконка приложения ОС — картинка (public/images/solomon-os/apps, рисовал
  * Codex), @2x для чётких экранов. */
 export function AppIcon({ id, className }: { id: string; className?: string }) {
+  if (id === "dict") return <OsIcon name="dict" className={className} />;
+  if (id === "viewer") return <OsIcon name="viewer" className={className} />;
   if (id === "notes") return <OsIcon name="notes" className={className} />;
   const base = `/images/solomon-os/apps/${id}`;
   return (

@@ -1,0 +1,208 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-16.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 270,
+      "page_role": "content",
+      "source_photo": "IMG_1604",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-gestures",
+          "toc_section": "문화 이해하기",
+          "title": "몸짓언어",
+          "title_ru": "Язык жестов",
+          "illustration": null,
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 하고 있습니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите.",
+          "lines": [
+            {
+              "text": "사람들은 대화를 할 때 음성언어와 몸짓언어를 사용합니다. 음성언어가 나라마다 다른 것처럼 몸짓언어도 나라마다 다릅니다. 여러분은 어떤 몸짓언어를 자주 사용합니까? 그 몸짓언어의 의미는 무엇입니까? 다음을 보고 서로 관계있는 것끼리 연결해 보십시오."
+            },
+            {
+              "text": "몸짓언어",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "1. 머리를 위 아래로 끄덕입니다."
+            },
+            {
+              "text": "2. 손바닥을 펴서 흔듭니다."
+            },
+            {
+              "text": "3. 손바닥을 아래로 하여 손짓합니다."
+            },
+            {
+              "text": "4. 손가락으로 동그라미를 만듭니다."
+            },
+            {
+              "text": "5. 둘째 손가락과 셋째 손가락으로 V를 만듭니다."
+            },
+            {
+              "text": "6. 둘째 손가락을 입술에 댑니다."
+            },
+            {
+              "text": "7. 주먹을 쥐고 엄지손가락만 위로 올립니다."
+            },
+            {
+              "text": "8. 손이나 팔로 하트 모양을 만듭니다."
+            },
+            {
+              "text": "한국에서의 의미",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "‘오세요’"
+            },
+            {
+              "text": "‘예’, ‘맞아요’"
+            },
+            {
+              "text": "‘승리하세요’"
+            },
+            {
+              "text": "‘안녕’"
+            },
+            {
+              "text": "돈"
+            },
+            {
+              "text": "‘사랑합니다’"
+            },
+            {
+              "text": "‘쉿, 조용히 하세요’"
+            },
+            {
+              "text": "‘매우 좋아요’"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-gestures",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "음성언어",
+              "translation_ru": "устная речь, звуковой язык"
+            },
+            {
+              "ko": "몸짓언어",
+              "translation_ru": "язык жестов, язык тела"
+            },
+            {
+              "ko": "연결하다",
+              "translation_ru": "соединять, связывать"
+            },
+            {
+              "ko": "끄덕이다",
+              "translation_ru": "кивать"
+            },
+            {
+              "ko": "펴다",
+              "translation_ru": "раскрывать, разворачивать (зонт, книгу)"
+            },
+            {
+              "ko": "손짓하다",
+              "translation_ru": "подавать знак рукой, махать рукой"
+            },
+            {
+              "ko": "동그라미",
+              "translation_ru": "кружок, круг"
+            },
+            {
+              "ko": "쥐다",
+              "translation_ru": "сжимать (в руке), хватать"
+            },
+            {
+              "ko": "엄지손가락",
+              "translation_ru": "большой палец (руки)"
+            },
+            {
+              "ko": "팔",
+              "translation_ru": "восемь"
+            },
+            {
+              "ko": "하트",
+              "translation_ru": "сердечко (знак)"
+            },
+            {
+              "ko": "승리하다",
+              "translation_ru": "побеждать"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 271,
+      "page_role": "content",
+      "source_photo": "IMG_1605",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 한국 사람들이 자주 사용하는 몸짓언어는 어떤 것이 있습니까?",
+              "translation_ru": "Какие жесты часто используют корейцы?"
+            },
+            {
+              "text": "2) 여러분 나라에서는 어떤 몸짓언어를 사용합니까? 이야기해 보십시오.",
+              "translation_ru": "Какие жесты используют в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-16",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㅂ'",
+          "audio_id": "264",
+          "examples": [
+            {
+              "text": "집값",
+              "translation_ru": "цена на жильё"
+            },
+            {
+              "text": "집들이",
+              "translation_ru": "новоселье"
+            },
+            {
+              "text": "집 밖",
+              "translation_ru": "за пределами дома"
+            },
+            {
+              "text": "집사람",
+              "translation_ru": "жена (букв. «домашний человек»)"
+            },
+            {
+              "text": "집주인",
+              "translation_ru": "хозяин дома"
+            },
+            {
+              "text": "앞 산",
+              "translation_ru": "гора впереди"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

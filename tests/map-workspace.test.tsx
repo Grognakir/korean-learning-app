@@ -12,7 +12,8 @@ function Harness({initial}:{initial:MapWorkspace}) {
 describe("Переключение маршрутов",()=>{
   it("показывает выбранный новый маршрут до начала попытки",()=>{
     render(<Harness initial={createRun(freshWorkspace(),1)}/>);
-    fireEvent.change(screen.getByRole("combobox",{name:"Маршрут задания"}),{target:{value:"clinic"}});
+    fireEvent.click(screen.getByRole("combobox",{name:"Маршрут задания"}));
+    fireEvent.click(screen.getByRole("option",{name:"Дорога к ветклинике"}));
     expect(screen.getByRole("heading",{name:"Дорога к ветклинике"})).toBeTruthy();
     expect(screen.getByLabelText("Карта: Район учебника")).toBeTruthy();
     expect(screen.getByRole("button",{name:"Начать задание →"})).toBeTruthy();
@@ -22,10 +23,12 @@ describe("Переключение маршрутов",()=>{
     const self=createRun(freshWorkspace(),1);
     const both=createRun({...self,mode:"guide",scenarioId:"clinic"},2);
     render(<Harness initial={{...both,mode:"self",scenarioId:"songdo-walk"}}/>);
-    fireEvent.change(screen.getByRole("combobox",{name:"Тип задания"}),{target:{value:"guide"}});
+    fireEvent.click(screen.getByRole("combobox",{name:"Тип задания"}));
+    fireEvent.click(screen.getByRole("option",{name:"Помочь брату 지아"}));
     expect(screen.getByLabelText("Карта: Район учебника")).toBeTruthy();
     expect(screen.getByRole("heading",{name:"Дорога к ветклинике"})).toBeTruthy();
-    fireEvent.change(screen.getByRole("combobox",{name:"Тип задания"}),{target:{value:"self"}});
+    fireEvent.click(screen.getByRole("combobox",{name:"Тип задания"}));
+    fireEvent.click(screen.getByRole("option",{name:"Мой маршрут"}));
     expect(screen.getByLabelText("Карта: Сонгдо")).toBeTruthy();
     expect(screen.getByRole("heading",{name:"Из аутлета к Central Park"})).toBeTruthy();
   });

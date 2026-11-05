@@ -1,0 +1,159 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 52,
+      "page_role": "content",
+      "source_photo": "IMG_0625",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "경주",
+              "title_ru": "Автогонки",
+              "items": [
+                {
+                  "ko": "레이서",
+                  "translation_ru": "гонщик"
+                },
+                {
+                  "ko": "자동차 경주",
+                  "translation_ru": "автогонки"
+                },
+                {
+                  "ko": "장난감",
+                  "translation_ru": "игрушка"
+                },
+                {
+                  "ko": "운전",
+                  "translation_ru": "вождение"
+                },
+                {
+                  "ko": "연습하다",
+                  "translation_ru": "тренироваться"
+                },
+                {
+                  "ko": "목소리",
+                  "translation_ru": "голос"
+                },
+                {
+                  "ko": "응원하다",
+                  "translation_ru": "поддерживать"
+                },
+                {
+                  "ko": "이루다",
+                  "translation_ru": "осуществлять (мечту)"
+                }
+              ]
+            },
+            {
+              "title": "영화제",
+              "title_ru": "Кинофестиваль",
+              "items": [
+                {
+                  "ko": "영화제",
+                  "translation_ru": "кинофестиваль"
+                },
+                {
+                  "ko": "바닷가",
+                  "translation_ru": "морской берег"
+                },
+                {
+                  "ko": "인도",
+                  "translation_ru": "Индия"
+                },
+                {
+                  "ko": "극장",
+                  "translation_ru": "кинотеатр"
+                },
+                {
+                  "ko": "영화감독",
+                  "translation_ru": "кинорежиссёр"
+                },
+                {
+                  "ko": "질문",
+                  "translation_ru": "вопрос"
+                },
+                {
+                  "ko": "아쉽다",
+                  "translation_ru": "жаль"
+                },
+                {
+                  "ko": "이메일",
+                  "translation_ru": "электронная почта"
+                },
+                {
+                  "ko": "보내다",
+                  "translation_ru": "отправлять"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-reading-racer",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_3/illustration_4_racing_dream.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고 말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "저는 어렸을 때부터 자동차를 좋아했습니다. 그래서 늘 장난감 자동차를 가지고 놀았습니다. 고등학생 때 저는 자동차 경주를 처음 봤습니다. 자동차 소리와 사람들이 응원하는 목소리를 들었을 때 저는 아주 기분이 좋았습니다. 그때부터 저는 자동차 레이서가 (ㄱ). 저는 집에 돌아가서 어머니께 제 꿈에 대해서 말씀드렸습니다. 어머니께서는 저를 응원해 주셨습니다."
+            },
+            {
+              "text": "저는 제 꿈을 이루려고 노력하고 있습니다. 그래서 요즘 9시간 동안 자동차 운전을 연습을 하고 있습니다. 저는 자동차 경주에서 꼭 우승을 할 겁니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-racer-questions",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "꿈에 대한 글을 읽고 말하기",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "1) ㉠에 들어갈 알맞은 말을 고르십시오.",
+              "choices": [
+                "될 겁니다",
+                "되었습니다",
+                "되기로 합니다",
+                "되기로 했습니다"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "2) 이 글의 내용과 같은 것을 고르십시오.",
+              "choices": [
+                "이 사람은 자동차 경주 선수가 되었습니다.",
+                "이 사람은 고등학생 때 자동차를 샀습니다.",
+                "이 사람은 자동차를 탈 때 기분이 좋았습니다.",
+                "이 사람은 자동차 경주에서 우승하고 싶어 합니다."
+              ],
+              "correct": 3
+            }
+          ],
+          "followup": "여러분의 꿈이 무엇입니까? 이야기해 보십시오."
+        }
+      ]
+    }
+  ]
+}

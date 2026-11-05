@@ -1,0 +1,250 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-04.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 67,
+      "page_role": "content",
+      "source_photo": "IMG_0657",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 이야기해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "오늘은 금요일입니다. 이번 주 일요일에 친구와 같이 가까운 산으로 소풍을 갈 겁니다. 날씨가 궁금해서 일기예보를 봤습니다."
+            }
+          ],
+          "table": {
+            "columns": [
+              "10월 12일 토요일",
+              "10월 13일 일요일"
+            ],
+            "rows": [
+              [
+                "오전 맑음",
+                "오전 맑음"
+              ],
+              [
+                "오후 맑음",
+                "오후 구름 조금"
+              ],
+              [
+                "최저 23℃ / 최고 24℃",
+                "최저 21℃ / 최고 23℃"
+              ]
+            ]
+          },
+          "vocab": [
+            {
+              "ko": "가까운",
+              "translation_ru": "близкий (форма от 가깝다)"
+            },
+            {
+              "ko": "궁금하다",
+              "translation_ru": "быть любопытным, интересно"
+            },
+            {
+              "ko": "일기예보",
+              "translation_ru": "прогноз погоды"
+            },
+            {
+              "ko": "맑음",
+              "translation_ru": "ясно (форма от 맑다)"
+            },
+            {
+              "ko": "구름",
+              "translation_ru": "облако"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "아멜리",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "일요일에 친구들과 소풍을 가기로 했어요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "좋겠네요. 일요일 일기예보를 봤어요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 오전에는 맑을 것 같은데 오후에는 날씨가 안 좋아질 것 같아요. 하지만 비는 안 올 것 같아요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "오후에 구름이 끼면 기온이 낮아질 거예요. 최고 기온은 몇 도였어요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "최고 기온이 23도니까 기온은 괜찮아요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "소풍은 어디에 가기로 했어요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "소풍은 가까운 산으로 가기로 했어요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "산속은 기온이 갑자기 낮아지니까 감기를 조심해야 해요. 그런데 요즘 나뭇잎의 색이 변하기 시작해서 경치가 좋을 거예요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "약속이 없으면 같이 가요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "미안해요. 다른 약속이 있어서 못 갈 것 같아요."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "끼다",
+              "translation_ru": "затягиваться, появляться (об облаках, тумане)"
+            },
+            {
+              "ko": "낮다",
+              "translation_ru": "быть низким"
+            },
+            {
+              "ko": "조심하다",
+              "translation_ru": "быть осторожным, беречься"
+            },
+            {
+              "ko": "그런데",
+              "translation_ru": "но, кстати, между тем"
+            },
+            {
+              "ko": "요즘",
+              "translation_ru": "в последнее время"
+            },
+            {
+              "ko": "나뭇잎",
+              "translation_ru": "лист (дерева)"
+            },
+            {
+              "ko": "변하다",
+              "translation_ru": "меняться"
+            },
+            {
+              "ko": "경치",
+              "translation_ru": "пейзаж, вид"
+            },
+            {
+              "ko": "약속",
+              "translation_ru": "договорённость, встреча"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 어디에 갈 것입니까?"
+            },
+            {
+              "text": "2) 그 날 날씨는 어떻습니까?"
+            },
+            {
+              "text": "3) 거기에서 무엇을 하기로 했습니까?"
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "그 날",
+              "translation_ru": "тот день"
+            },
+            {
+              "ko": "거기",
+              "translation_ru": "там"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "산속",
+              "translation_ru": "в горах, в глубине гор",
+              "group": "소풍"
+            },
+            {
+              "ko": "색",
+              "translation_ru": "цвет"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "소풍",
+              "title_ru": "Поход на природу",
+              "items": [
+                {
+                  "ko": "소풍",
+                  "translation_ru": "пикник"
+                },
+                {
+                  "ko": "경치",
+                  "translation_ru": "пейзаж"
+                },
+                {
+                  "ko": "갑자기",
+                  "translation_ru": "вдруг"
+                },
+                {
+                  "ko": "조심하다",
+                  "translation_ru": "быть осторожным"
+                },
+                {
+                  "ko": "낮아지다",
+                  "translation_ru": "падать (о температуре)"
+                },
+                {
+                  "ko": "하루 종일",
+                  "translation_ru": "целый день"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

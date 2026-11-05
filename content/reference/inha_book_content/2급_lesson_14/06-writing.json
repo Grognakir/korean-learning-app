@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-14.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 237,
+      "page_role": "content",
+      "source_photo": "IMG_1574",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-dorm",
+          "toc_section": "쓰기",
+          "title": "기숙사의 생활 규칙에 대해 글을 써 보십시오.",
+          "title_ru": "Напишите текст о правилах жизни в общежитии.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Начало: что такое общежитие.",
+              "questions": [
+                {
+                  "kr": "기숙사는 어떤 곳입니까?",
+                  "ru": "Что такое общежитие?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Середина: правила общежития.",
+              "questions": [
+                {
+                  "kr": "기숙사의 규칙은 무엇입니까?",
+                  "ru": "Какие правила в общежитии?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Конец: что будет при нарушении правил.",
+              "questions": [
+                {
+                  "kr": "규칙을 안 지키면 어떻게 됩니까?",
+                  "ru": "Что будет, если не соблюдать правила?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

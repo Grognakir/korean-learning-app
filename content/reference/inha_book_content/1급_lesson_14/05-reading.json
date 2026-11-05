@@ -1,0 +1,143 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-14.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 233,
+      "page_role": "content",
+      "source_photo": "IMG_1158",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-library-guide",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_14/illustration_4_library_rules.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "어디입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите.",
+          "lines": [
+            {
+              "text": "도서관 이용 안내",
+              "line_kind": "heading"
+            },
+            {
+              "text": "1. 이용 시간",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "평 일: 오전 9:00 ~ 오후 9:00 (방학: 오전 9:00 ~ 오후 5:00)"
+            },
+            {
+              "text": "토요일: 오전 9:00 ~ 오후 5:00 (방학: 오전 9:00 ~ 오후 1:00)"
+            },
+            {
+              "text": "2. 도서관은 우리 학교 학생이면 사용할 수 있습니다.",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "(단, 휴학생은 도서관 안의 열람실만 이용할 수 있습니다.)"
+            },
+            {
+              "text": "3. 도서관 유의 사항",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "1) 도서관 안에서 떠들지 마십시오.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "2) 도서관 안에서 음식을 먹지 마십시오.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "3) 도서관 안에서 전화를 하지 마십시오.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "4) 도서관 안에서 담배를 피우지 마십시오.",
+              "line_kind": "list-item"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-library-guide",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "도서관 이용 안내문을 읽고 말하기",
+          "title_ru": "Прочитать правила пользования библиотекой и обсудить",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "이 글은 어디에서 볼 수 있습니까?",
+              "prompt_ru": "Где можно увидеть этот текст?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것은 무엇입니까?",
+              "prompt_ru": "Что соответствует содержанию текста?",
+              "choices": [
+                "휴학생은 도서관을 이용할 수 없습니다.",
+                "도서관 안에서 조용히 전화를 해야 합니다.",
+                "도서관 안에서 음료수를 마실 수 있습니다.",
+                "도서관은 평일에 12시간 이용할 수 있습니다."
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 도서관을 이용해 봤습니까? 무슨 규칙을 지켜야 합니까?",
+              "prompt_ru": "Пользовались ли вы библиотекой? Какие правила нужно соблюдать?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-library-guide",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-library-guide",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "안내",
+              "translation_ru": "информация, инструкция, объявление"
+            },
+            {
+              "ko": "단",
+              "translation_ru": "но, однако, при этом (оговорка)"
+            },
+            {
+              "ko": "휴학생",
+              "translation_ru": "студент в академическом отпуске"
+            },
+            {
+              "ko": "열람실",
+              "translation_ru": "читальный зал"
+            },
+            {
+              "ko": "유의 사항",
+              "translation_ru": "примечания, на что обратить внимание"
+            },
+            {
+              "ko": "떠들다",
+              "translation_ru": "шуметь, громко разговаривать"
+            },
+            {
+              "ko": "규칙",
+              "translation_ru": "правило"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

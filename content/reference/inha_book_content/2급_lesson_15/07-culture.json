@@ -1,0 +1,151 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-15.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 254,
+      "page_role": "content",
+      "source_photo": "IMG_1589",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-seoul",
+          "toc_section": "문화 이해하기",
+          "title": "서울의 명소",
+          "title_ru": "Достопримечательности Сеула",
+          "illustration": null,
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "어디입니까? 이야기해 봅시다.",
+          "intro_prompt_ru": "Где это? Давайте обсудим.",
+          "lines": [
+            {
+              "text": "서울에는 명동, 경복궁, 인사동, 이태원, 강남 등 많은 명소가 있습니다. 여러분이 알고 있는 서울의 명소가 아닌 다른 명소에 대해서 소개드리겠습니다."
+            },
+            {
+              "text": "먼저 북촌한옥마을이 있습니다. 이곳은 한국의 전통 가옥을 보호하고 있는 곳입니다. 그래서 한옥의 아름다움을 느낄 수 있고 서울의 옛 모습도 추측해 볼 수 있습니다. 현재에도 이곳에 사람들이 살고 있기 때문에 조용히 관광을 해야 합니다."
+            },
+            {
+              "text": "다음은 남산에 있는 N서울타워입니다. N서울타워의 전망대는 서울을 내려다볼 수 있는 가장 높은 곳입니다. 특히 밤에는 아름다운 서울의 야경을 볼 수 있습니다. 서울을 한눈에 보고 싶으십니까? 그럼 N서울타워에 가 보십시오."
+            },
+            {
+              "text": "마지막으로는 대학로가 있습니다. 대학로는 문화와 예술의 거리입니다. 그래서 연극과 뮤지컬 등 공연을 많이 합니다. 특히 마로니에 공원에서는 화가나 음악인들이 다양한 공연과 행사를 합니다. 이곳은 예술가들의 열정을 체험할 수 있는 좋은 장소입니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 255,
+      "page_role": "content",
+      "source_photo": "IMG_1590",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 서울에는 어떤 명소가 있습니까?",
+              "translation_ru": "Какие достопримечательности есть в Сеуле?"
+            },
+            {
+              "text": "2) 여러분 나라의 명소는 어디입니까? 이야기해 보십시오.",
+              "translation_ru": "Какие достопримечательности есть в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-culture-expr",
+          "toc_section": "문화 이해하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-culture-seoul",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "한눈에 보다",
+              "translation_ru": "окинуть взглядом — «산 위에 올라가면 인천 시내를 한눈에 볼 수 있어요» (с вершины горы весь Инчхон виден как на ладони)"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-seoul",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "가옥",
+              "translation_ru": "жилой дом, строение"
+            },
+            {
+              "ko": "보호하다",
+              "translation_ru": "охранять, защищать"
+            },
+            {
+              "ko": "추측하다",
+              "translation_ru": "предполагать, догадываться"
+            },
+            {
+              "ko": "전망대",
+              "translation_ru": "смотровая площадка"
+            },
+            {
+              "ko": "내려다보다",
+              "translation_ru": "смотреть сверху вниз, обозревать"
+            },
+            {
+              "ko": "화가",
+              "translation_ru": "художник"
+            },
+            {
+              "ko": "음악인",
+              "translation_ru": "музыкант, деятель музыки"
+            },
+            {
+              "ko": "예술가",
+              "translation_ru": "артист, деятель искусства"
+            },
+            {
+              "ko": "열정",
+              "translation_ru": "страсть, энтузиазм"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-15",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㄷ'",
+          "audio_id": "260",
+          "examples": [
+            {
+              "text": "옷장",
+              "translation_ru": "шкаф для одежды"
+            },
+            {
+              "text": "꽃밭",
+              "translation_ru": "цветочная клумба"
+            },
+            {
+              "text": "닫고",
+              "translation_ru": "закрываю и"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

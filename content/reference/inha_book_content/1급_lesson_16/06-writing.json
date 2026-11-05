@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-16.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 267,
+      "page_role": "content",
+      "source_photo": "IMG_1190",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-letter",
+          "toc_section": "쓰기",
+          "title": "가족에게 편지를 써 보십시오.",
+          "title_ru": "Напишите письмо семье.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: первое приветствие.",
+              "questions": [
+                {
+                  "kr": "첫인사",
+                  "ru": "Первое приветствие"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: то, что вы хотите сказать.",
+              "questions": [
+                {
+                  "kr": "하고 싶은 말",
+                  "ru": "Что вы хотите сказать"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: прощальное приветствие.",
+              "questions": [
+                {
+                  "kr": "끝인사",
+                  "ru": "Прощальное приветствие"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 편지를 써 보십시오. (부모님께)",
+          "manuscript_prompt_ru": "Напишите письмо на основе плана выше (начните: «부모님께»)."
+        }
+      ]
+    }
+  ]
+}

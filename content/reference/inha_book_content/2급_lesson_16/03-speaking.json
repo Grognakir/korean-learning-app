@@ -1,0 +1,139 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-16.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 266,
+      "page_role": "content",
+      "source_photo": "IMG_1600",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "처음 한국에 왔을 때 저를 많이 도와준 고향 선배가 있습니다. 팅팅은 한국에 살다가 고향으로 돌아갔습니다. 왕루는 지금 팅팅에게 감사 전화를 하고 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "팅팅"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "팅팅 씨, 안녕하세요? 저 왕루예요."
+            },
+            {
+              "speaker": "팅팅",
+              "text": "아, 왕루 씨, 반가워요. 그동안 잘 지냈어요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "네, 잘 지내고 있어요. 회사일은 어때요?"
+            },
+            {
+              "speaker": "팅팅",
+              "text": "바쁘지만 괜찮아요. 왕루 씨는 어때요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "네, 저도 바쁘게 지내고 있어요."
+            },
+            {
+              "speaker": "팅팅",
+              "text": "한국어 실력이 많이 좋아졌네요. 한국어를 열심히 배우고 있나 봐요. 그런데 무슨 일이에요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "제가 이번 학기에 성적 우수상을 받았어요. 상을 받자마자 팅팅 씨가 생각났어요. 한국어 공부를 포기하려고 할 때 저를 도와줘서 고마워요."
+            },
+            {
+              "speaker": "팅팅",
+              "text": "고맙기는요. 왕루 씨도 열심히 노력했잖아요. 앞으로도 아무리 힘든 일이 있어도 최선을 다하세요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "네, 팅팅 씨 얘기를 듣고 나니까 더 힘이 나네요. 고향에 가면 연락할게요."
+            },
+            {
+              "speaker": "팅팅",
+              "text": "네, 왕루 씨도 잘 지내요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2. 고마운 사람에게 감사 전화를 해 보십시오."
+            },
+            {
+              "text": "1) 고마운 사람이 누구입니까?"
+            },
+            {
+              "text": "2) 그 사람은 지금 어디에 있습니까?"
+            },
+            {
+              "text": "3) 그 사람은 무엇을 도와 주었습니까?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "실력",
+              "translation_ru": "уровень знаний, умение"
+            },
+            {
+              "ko": "성적",
+              "translation_ru": "оценки, успеваемость"
+            },
+            {
+              "ko": "우수상",
+              "translation_ru": "поощрительный приз, награда за отличие"
+            },
+            {
+              "ko": "포기하다",
+              "translation_ru": "отказываться, сдаваться"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

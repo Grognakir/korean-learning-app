@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { readFileSync } from "node:fs";
+import { readLessonSource } from "../scripts/lib/lesson-source";
 import { join } from "node:path";
 import { expect, it } from "vitest";
 
@@ -18,12 +18,7 @@ type Block = {
   };
 };
 
-const lesson = JSON.parse(
-  readFileSync(
-    join(process.cwd(), "content/reference/inha_book_content/2급_lesson_01/lesson-01.json"),
-    "utf8",
-  ),
-) as { pages: { blocks: Block[] }[] };
+const lesson = readLessonSource(join(process.cwd(), "content/reference/inha_book_content/2급_lesson_01/lesson-01.json")) as { pages: { blocks: Block[] }[] };
 const blocks = lesson.pages.flatMap((page) => page.blocks);
 const byId = (id: string) => blocks.find((block) => block.id === id)!;
 

@@ -1,0 +1,117 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-15.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 248,
+      "page_role": "content",
+      "source_photo": "IMG_1172",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-symptoms",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "아픈 증상을 설명하는 대화를 듣고 말하기",
+          "title_ru": "Послушать разговор о симптомах и обсудить",
+          "audio_id": "159",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "파하드",
+                "text": "왕루 씨, 몸은 좀 어때요? 괜찮아요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "약을 먹었지만 어제보다 더 아파요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "요즘 감기가 유행이에요. 밥은 잘 먹어요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "아니요, 목이 아파서 잘 못 먹어요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "그러면 죽을 좀 드셔 보세요. 그리고 따뜻한 물도 자주 마셔야 해요."
+              },
+              {
+                "speaker": "왕루",
+                "text": "네, 걱정해 줘서 고마워요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "목이 정말 아프겠어요."
+              },
+              {
+                "speaker": "왕루",
+                "text": "네, 기침을 하면 정말 목이 아파요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "병원에 가 봤어요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "네, 어제 갔다 왔지만 계속 아파서 오후에 또 가려고요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "약을 먹고 푹 쉬세요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_15/illustration_3_caring_friend.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "남자는 어제 약을 먹고 쉬었습니다.",
+                "여자는 오늘이 어제보다 더 아픕니다.",
+                "여자는 목이 아팠지만 음식을 먹었습니다.",
+                "남자는 따뜻한 물을 마시고 죽도 먹을 겁니다."
+              ],
+              "correct": 1
+            }
+          ],
+          "followup": "여러분은 어디가 어떻게 아팠습니까? 친구와 이야기해 보십시오.",
+          "followup_ru": "Что и как у вас болело? Расскажите другу."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-symptoms",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "유행",
+              "translation_ru": "поветрие (в т.ч. о болезнях)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

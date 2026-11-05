@@ -1,0 +1,180 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-10.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 168,
+      "page_role": "content",
+      "source_photo": "IMG_1098",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-gimbap",
+          "toc_section": "문화 이해하기",
+          "title": "김밥을 만드는 방법",
+          "title_ru": "Как делают кимбап",
+          "illustration": {
+            "storage_path": "lesson_10/illustration_5_gimbap_making.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "김밥 만들기",
+              "line_kind": "heading"
+            },
+            {
+              "text": "■ 준비물",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "김, 밥, 야채, 고기, 단무지, 칼, 접시"
+            },
+            {
+              "text": "■ 만드는 방법",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "① 김 위에 밥을 놓아요.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "② 밥 위에 야채, 고기, 단무지를 놓아요.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "③ 김을 말아요.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "④ 칼로 썰어요.",
+              "line_kind": "list-item"
+            },
+            {
+              "text": "⑤ 접시에 담아요.",
+              "line_kind": "list-item"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-gimbap",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "김밥을 만드는 방법",
+          "title_ru": "Как делают кимбап",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "김밥은 어떻게 만듭니까?",
+              "prompt_ru": "Как делают кимбап?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 음식은 어떻게 만듭니까? 이야기해 보십시오.",
+              "prompt_ru": "Как готовят еду в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-gimbap",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "김",
+              "translation_ru": "сушёные листы водорослей (нори)"
+            },
+            {
+              "ko": "야채",
+              "translation_ru": "овощи"
+            },
+            {
+              "ko": "단무지",
+              "translation_ru": "маринованная жёлтая редька (для кимбапа)"
+            },
+            {
+              "ko": "칼",
+              "translation_ru": "нож"
+            },
+            {
+              "ko": "접시",
+              "translation_ru": "тарелка"
+            },
+            {
+              "ko": "말다",
+              "translation_ru": "сворачивать, заворачивать (в рулет)"
+            },
+            {
+              "ko": "썰다",
+              "translation_ru": "резать, нарезать (ломтиками)"
+            },
+            {
+              "ko": "담다",
+              "translation_ru": "класть, укладывать (в посуду)"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-10",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㄱ’",
+          "audio_id": "140",
+          "examples": [
+            {
+              "text": "지각",
+              "translation_ru": "опоздание"
+            },
+            {
+              "text": "한국",
+              "translation_ru": "Корея"
+            },
+            {
+              "text": "연극",
+              "translation_ru": "спектакль, театральная постановка"
+            },
+            {
+              "text": "밖",
+              "translation_ru": "снаружи, за пределами"
+            },
+            {
+              "text": "부엌",
+              "translation_ru": "кухня"
+            },
+            {
+              "text": "지각은",
+              "translation_ru": "опоздание (+ частица 은)"
+            },
+            {
+              "text": "한국과",
+              "translation_ru": "Корея (+ частица 과)"
+            },
+            {
+              "text": "연극도",
+              "translation_ru": "спектакль (+ частица 도)"
+            },
+            {
+              "text": "밖으로",
+              "translation_ru": "наружу"
+            },
+            {
+              "text": "부엌이",
+              "translation_ru": "кухня (+ частица 이)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-04.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 69,
+      "page_role": "content",
+      "source_photo": "IMG_1005",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-daily-life",
+          "toc_section": "쓰기",
+          "title": "한국에서의 일상생활에 대한 글을 써 보십시오.",
+          "title_ru": "Напишите текст о повседневной жизни в Корее.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: что вы делаете в будни.",
+              "questions": [
+                {
+                  "kr": "평일에 무엇을 합니까?",
+                  "ru": "Что вы делаете в будни?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: что вы делаете на выходных.",
+              "questions": [
+                {
+                  "kr": "주말에 무엇을 합니까?",
+                  "ru": "Что вы делаете на выходных?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: какое у вас настроение.",
+              "questions": [
+                {
+                  "kr": "기분이 어떻습니까?",
+                  "ru": "Какое у вас настроение?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

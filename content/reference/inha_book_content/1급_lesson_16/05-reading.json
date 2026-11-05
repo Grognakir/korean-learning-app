@@ -1,0 +1,117 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-16.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 266,
+      "page_role": "content",
+      "source_photo": "IMG_1189",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-letter",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_16/illustration_4_letter_home.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "invitation",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "부모님께"
+            },
+            {
+              "text": "아버지, 어머니 잘 지내고 계시지요?"
+            },
+            {
+              "text": "저는 한국에서 잘 지내고 있어요. 처음에는 한국 생활이 조금 힘들었는데 지금은 친구들이 많이 도와줘서 힘들지 않아요. 한국어 공부도 열심히 하고 있어요. 수업 시간에 배운 문법을 친구들과 사용해서 말하는 시간이 가장 재미있어요."
+            },
+            {
+              "text": "지난주에는 학교에서 세계음식축제를 했어요. 저도 친구들과 함께 중국 음식을 만들었어요. 많은 사람들에게 중국의 음식을 소개할 수 있었고 다른 나라의 음식도 맛볼 수 있어서 정말 즐거웠어요."
+            },
+            {
+              "text": "아버지, 어머니! 저는 한국에서 잘 생활하고 있으니까 걱정하지 마세요. 이번 방학에는 고향에 못 가지만 다음 방학에는 꼭 갈게요."
+            },
+            {
+              "text": "그럼 안녕히 계세요."
+            },
+            {
+              "text": "왕루 드림",
+              "line_kind": "signature"
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "맛볼",
+              "translation_ru": "форма от 맛보다 (пробовать на вкус)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-letter",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "부모님께 쓴 편지를 읽고 말하기",
+          "title_ru": "Прочитать письмо родителям и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "한국어",
+                "한국 생활",
+                "한국 친구",
+                "한국 학교"
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 다른 것은 무엇입니까?",
+              "prompt_ru": "Что НЕ соответствует содержанию текста?",
+              "choices": [
+                "이 글은 왕루 씨의 부모님께서 쓰셨습니다.",
+                "왕루 씨는 한국 생활이 힘들지 않습니다.",
+                "왕루 씨는 세계음식축제에서 음식을 만들었습니다.",
+                "왕루 씨는 이번 방학에 고향에 가지 못합니다."
+              ],
+              "correct": 0
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 부모님께 편지를 써 봤습니까? 편지로 무슨 이야기를 전하고 싶습니까?",
+              "prompt_ru": "Писали ли вы родителям письмо? О чём вы хотели бы рассказать в письме?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-letter",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-letter",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "가장",
+              "translation_ru": "самый, наиболее"
+            },
+            {
+              "ko": "맛보다",
+              "translation_ru": "пробовать на вкус"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

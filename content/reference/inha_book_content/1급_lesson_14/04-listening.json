@@ -1,0 +1,110 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-14.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 232,
+      "page_role": "content",
+      "source_photo": "IMG_1157",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-museum-guide",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "박물관 안내 방송을 듣고 말하기",
+          "title_ru": "Послушать объявление в музее и обсудить",
+          "audio_id": "155",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "안내원",
+                "text": "안녕하십니까? 저희 박물관에 오셔서 감사합니다."
+              },
+              {
+                "text": "박물관 이용 시간을 말씀드리겠습니다."
+              },
+              {
+                "text": "평일은 오전 9시부터 오후 6시까지이고 주말은 오전 9시부터 오후 7시까지입니다."
+              },
+              {
+                "text": "입장권은 무료입니다. 하지만 어린이 박물관은 입장권을 사셔야 합니다."
+              },
+              {
+                "text": "다음은 박물관 주의 사항을 말씀드리겠습니다."
+              },
+              {
+                "text": "박물관에서 담배를 피우지 마십시오. 그리고 조용히 해야 합니다."
+              },
+              {
+                "text": "박물관 안에서는 음식을 드시지 마시고 지하 1층 식당에서 음식을 드셔야 합니다."
+              },
+              {
+                "text": "주의 사항을 잘 지켜 주십시오. 감사합니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "어디입니까? 이야기해 보십시오.",
+            "prompt_ru": "Где это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_14/illustration_3_museum_visit.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём это объявление?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "박물관 이용 시간은 평일과 주말이 같습니다.",
+                "박물관에서 어린이 입장권만 무료입니다.",
+                "박물관에서 담배를 피우지 않아야 합니다.",
+                "박물관에서 음식을 가져가서 먹을 수 있습니다."
+              ],
+              "correct": 2
+            }
+          ],
+          "followup": "반 친구들과 다음 공공장소의 이용 규칙을 이야기해 보십시오. 1) 도서관 2) 영화관 3) 지하철",
+          "followup_ru": "Обсудите с одноклассниками правила пользования этими общественными местами: 1) библиотека 2) кинотеатр 3) метро."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-museum-guide",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "무료",
+              "translation_ru": "бесплатно"
+            },
+            {
+              "ko": "어린이",
+              "translation_ru": "ребёнок"
+            },
+            {
+              "ko": "주의 사항",
+              "translation_ru": "меры предосторожности, на что обратить внимание"
+            },
+            {
+              "ko": "지하",
+              "translation_ru": "подвал, под землёй"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

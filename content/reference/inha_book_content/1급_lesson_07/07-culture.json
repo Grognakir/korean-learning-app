@@ -1,0 +1,175 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-07.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 119,
+      "page_role": "content",
+      "source_photo": "IMG_1052",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-seasons",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 계절과 여행",
+          "title_ru": "Времена года и путешествия в Корее",
+          "illustration": {
+            "storage_path": "lesson_7/illustration_5_four_season_travel.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "여기가 어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "한국은 사계절이 있습니다. 사람들은 봄에 꽃구경을 하러 야외로 갑니다. 봄에는 꽃이 많이 핍니다. 특히 벚꽃이 아름답습니다. 서울 여의도에서는 봄마다 벚꽃 축제를 합니다."
+            },
+            {
+              "text": "여름에는 사람들이 수영을 하러 바다로 갑니다. 한국에는 해수욕장이 많이 있습니다. 인천에는 ‘을왕리 해수욕장’, 강원도에는 ‘속초 해수욕장’, 부산에는 ‘해운대 해수욕장’이 있습니다."
+            },
+            {
+              "text": "가을은 날씨가 맑고 시원합니다. 그래서 사람들은 산에 갑니다. 가을 산은 단풍이 정말 아름답습니다. 사람들은 가을에 설악산과 지리산, 한라산에 많이 갑니다."
+            },
+            {
+              "text": "겨울에는 눈이 옵니다. 그래서 사람들은 스키장에 갑니다. 스키장에서 스키와 스노보드를 탑니다. 그리고 눈썰매도 탑니다. 스키장은 강원도에 많이 있습니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "핍",
+              "translation_ru": "форма от 피다 (цвести)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-seasons",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 계절과 여행",
+          "title_ru": "Времена года и путешествия в Корее",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국 사람들은 계절마다 무엇을 합니까?",
+              "prompt_ru": "Что корейцы делают в каждое время года?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 사람들은 계절마다 무엇을 합니까?",
+              "prompt_ru": "Что делают люди в вашей стране в каждое время года?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-seasons",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "꽃구경",
+              "translation_ru": "любование цветами"
+            },
+            {
+              "ko": "야외",
+              "translation_ru": "на открытом воздухе"
+            },
+            {
+              "ko": "피다",
+              "translation_ru": "цвести, распускаться"
+            },
+            {
+              "ko": "특히",
+              "translation_ru": "особенно"
+            },
+            {
+              "ko": "벚꽃",
+              "translation_ru": "цветение вишни, сакура"
+            },
+            {
+              "ko": "축제",
+              "translation_ru": "фестиваль, праздник"
+            },
+            {
+              "ko": "해수욕장",
+              "translation_ru": "пляж (для купания)"
+            },
+            {
+              "ko": "눈",
+              "translation_ru": "снег"
+            },
+            {
+              "ko": "스노보드",
+              "translation_ru": "сноуборд"
+            },
+            {
+              "ko": "눈썰매",
+              "translation_ru": "санки"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-7",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㅁ’",
+          "audio_id": "128",
+          "examples": [
+            {
+              "text": "봄",
+              "translation_ru": "весна"
+            },
+            {
+              "text": "감",
+              "translation_ru": "хурма"
+            },
+            {
+              "text": "힘",
+              "translation_ru": "сила"
+            },
+            {
+              "text": "여름",
+              "translation_ru": "лето"
+            },
+            {
+              "text": "사람",
+              "translation_ru": "человек"
+            },
+            {
+              "text": "봄에",
+              "translation_ru": "весной"
+            },
+            {
+              "text": "감을",
+              "translation_ru": "хурму (+ частица 을)"
+            },
+            {
+              "text": "잠이",
+              "translation_ru": "сон (+ частица 이)"
+            },
+            {
+              "text": "힘을",
+              "translation_ru": "силу (+ частица 을)"
+            },
+            {
+              "text": "여름에",
+              "translation_ru": "летом"
+            },
+            {
+              "text": "사람이",
+              "translation_ru": "человек (+ частица 이)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

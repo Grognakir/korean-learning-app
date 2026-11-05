@@ -16,6 +16,9 @@ import { Phone, type ActiveCall } from "./apps/Phone";
 import { Locked, Settings } from "./apps/Settings";
 import { Shop } from "./apps/Shop";
 import { Notes } from "./apps/Notes";
+import { DocumentViewer } from "./documents/DocumentViewer";
+import { Dictionary } from "./dictionary/Dictionary";
+import type { ReadableDocument } from "./documents/types";
 import { Calendar } from "./apps/Calendar";
 import { calendarEvents } from "./calendar";
 import { MapApp } from "./map/MapApp";
@@ -97,19 +100,8 @@ function OsDesktop() {
   const rootRef = useRef<HTMLDivElement>(null);
   useKeyboardViewport(rootRef);
   const [desk, setDesk] = useState({ w: 0, h: 0 });
-  const [wins, setWins] = useState<Wins>(() =>
-    call
-      ? {
-          call: {
-            g: { x: 20, y: 20, w: 860, h: 680 },
-            max: false,
-            min: false,
-            z: 11,
-          },
-        }
-      : {},
-  );
-  const [focus, setFocus] = useState<AppId | null>(call ? "call" : null);
+  const [wins, setWins] = useState<Wins>({});
+  const [focus, setFocus] = useState<AppId | null>(null);
   const zTop = useRef(10);
   const savedGeo = useRef<Partial<Record<AppId, Geo & { max: boolean }>>>({});
 
@@ -123,6 +115,7 @@ function OsDesktop() {
     });
     return { schedule, log: r.log, ring: null };
   });
+  const [viewedDocument, setViewedDocument] = useState<ReadableDocument | null>(() => load("documentViewer", null));
   const [workspace, setWorkspace] = useState<MapWorkspace>(() =>
     load("routeWorkspace", freshWorkspace()),
   );
@@ -476,10 +469,20 @@ function OsDesktop() {
     openApp(note.app);
   };
 
+  const openDocument = (document: ReadableDocument) => {
+    setViewedDocument(document);
+    save("documentViewer", document);
+    openApp("viewer");
+  };
+
   const content = (id: AppId) => {
     switch (id) {
       case "msg":
-        return <Messenger phone={phone} onRead={() => setMsgUnread(0)} />;
+        return <Messenger phone={phone} onRead={() => setMsgUnread(0)} onOpenDocument={openDocument} />;
+      case "viewer":
+        return <DocumentViewer document={viewedDocument} />;
+      case "dict":
+        return <Dictionary />;
       case "notes":
         return (
           <Notes

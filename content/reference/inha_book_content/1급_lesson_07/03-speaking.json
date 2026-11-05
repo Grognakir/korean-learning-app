@@ -1,0 +1,113 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-07.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 115,
+      "page_role": "content",
+      "source_photo": "IMG_1048",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "최수지"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "한국의 봄은 어때요?",
+              "emphasized": [
+                "봄"
+              ]
+            },
+            {
+              "speaker": "최수지",
+              "text": "한국의 봄은 따뜻해요. 그리고 꽃도 많이 있어요.",
+              "emphasized": [
+                "봄",
+                "따뜻해요",
+                "꽃도 많이 있어요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "한국 사람들은 봄에 어디에 많이 가요?",
+              "emphasized": [
+                "봄"
+              ]
+            },
+            {
+              "speaker": "최수지",
+              "text": "한국 사람들은 봄에 공원으로 많이 가요.",
+              "emphasized": [
+                "봄",
+                "공원으로 많이 가요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "공원에 왜 가요?",
+              "emphasized": [
+                "공원"
+              ]
+            },
+            {
+              "speaker": "최수지",
+              "text": "공원에 꽃이 많이 있어요. 그래서 꽃을 보러 공원으로 가요. 공원에 가서 꽃도 구경하고 사진도 찍어요.",
+              "emphasized": [
+                "공원에 꽃이 많이 있어요",
+                "꽃을 보러 공원으로 가요",
+                "공원에 가",
+                "꽃도 구경하고 사진도 찍어요"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "",
+              "무슨 계절입니까?",
+              "그 계절이 어떻습니까?",
+              "그 계절에 무엇을 합니까?"
+            ],
+            "rows": [
+              [
+                "나",
+                "",
+                "",
+                ""
+              ],
+              [
+                "친구",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-12.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 205,
+      "page_role": "content",
+      "source_photo": "IMG_1444",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-proverbs",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 속담",
+          "title_ru": "Корейские пословицы",
+          "illustration": {
+            "storage_path": "lesson_12/illustration_5_kind_words_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "가는 말이 고와야 오는 말이 곱다",
+              "translation_ru": "Добрым словом отвечают на доброе слово (букв. «если уходящее слово красиво, возвращающееся — нежное»)"
+            },
+            {
+              "text": "지는 게 이기는 거다",
+              "translation_ru": "Проиграть — значит выиграть"
+            },
+            {
+              "text": "낮말은 새가 듣고 밤말은 쥐가 듣는다",
+              "translation_ru": "У стен есть уши (букв. «дневной разговор слышат птицы, ночной — мыши»)"
+            },
+            {
+              "text": "옷은 새 옷이 좋고 사람은 옛 사람이 좋다",
+              "translation_ru": "Одежда хороша новая, а люди — старые (давние друзья)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-reading",
+          "toc_section": "문화 이해하기",
+          "title": "2. 다음을 읽고 이야기해 보십시오",
+          "title_ru": "Прочитайте и обсудите",
+          "illustration": null,
+          "text_kind": "article",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "속담은 사람들에게 교훈을 주기 위해 옛날부터 사용한 말입니다. 한국에는 다툼과 화해에 대해 어떤 속담이 있을까요?"
+            },
+            {
+              "text": "사람들과 잘 어울리려면 말조심해야 합니다. 말을 잘못하면 사람들과의 관계가 나빠질 수 있기 때문입니다. 그래서 한국 속담에 '가는 말이 고와야 오는 말이 곱다.'와 '낮말은 새가 듣고 밤말은 쥐가 듣는다.'라고 하는 말이 있습니다. 이 속담은 '내가 말을 잘 하면 상대방도 나에게 좋은 말을 합니다.'라는 뜻과 '항상 말조심해야 합니다.'라는 뜻입니다."
+            },
+            {
+              "text": "친구와 싸웠을 때에는 어떻게 하는 게 좋을까요? 한국 속담의 '지는 게 이기는 것이다.'는 '넓은 마음을 가지고 양보하는 것이 결국 이기는 것입니다.'라는 뜻입니다. 자존심을 세우는 것보다 먼저 사과하면 마음도 편하고 후회도 안 하겠지요?"
+            },
+            {
+              "text": "여러분은 어떤 친구가 좋습니까? 한국 속담에는 '옷은 새 옷이 좋고 사람은 옛 사람이 좋다.'가 있습니다. '물건은 새것이 좋지만 사람은 오랫동안 만나서 서로를 잘 이해할 수 있는 친구가 좋다.'라는 뜻입니다. 오랫동안 사귄 좋은 친구가 인생에서 가장 큰 선물이 아닐까요?"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 한국에는 어떤 속담들이 있습니까?",
+              "translation_ru": "Какие пословицы есть в Корее?"
+            },
+            {
+              "text": "2) 여러분 나라에도 비슷한 속담이 있습니까? 친구들과 이야기해 보십시오.",
+              "translation_ru": "Есть ли похожие пословицы в вашей стране? Обсудите с друзьями."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-culture-expr",
+          "toc_section": "문화 이해하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-culture-reading",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "자존심을 세우다",
+              "translation_ru": "упорствовать из самолюбия — «필요 없는 자존심을 세우고 있어요» (упрямлюсь из ненужной гордости)"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-reading",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "속담",
+              "translation_ru": "пословица"
+            },
+            {
+              "ko": "교훈",
+              "translation_ru": "урок, назидание"
+            },
+            {
+              "ko": "다툼",
+              "translation_ru": "ссора, спор"
+            },
+            {
+              "ko": "화해",
+              "translation_ru": "примирение"
+            },
+            {
+              "ko": "어울리다",
+              "translation_ru": "подходить, сочетаться; общаться"
+            },
+            {
+              "ko": "관계",
+              "translation_ru": "отношения"
+            },
+            {
+              "ko": "지다",
+              "translation_ru": "проигрывать"
+            },
+            {
+              "ko": "이기다",
+              "translation_ru": "побеждать"
+            },
+            {
+              "ko": "양보하다",
+              "translation_ru": "уступать"
+            },
+            {
+              "ko": "결국",
+              "translation_ru": "в конце концов, в итоге"
+            },
+            {
+              "ko": "자존심",
+              "translation_ru": "самолюбие, гордость"
+            },
+            {
+              "ko": "인생",
+              "translation_ru": "жизнь (человеческая), судьба"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-12",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㄷ'+'ㅎ', 받침 'ㅎ'+'ㄷ'",
+          "audio_id": "248",
+          "examples": [
+            {
+              "text": "꽃향기",
+              "translation_ru": "аромат цветов"
+            },
+            {
+              "text": "몇 학년",
+              "translation_ru": "какой курс (класс)"
+            },
+            {
+              "text": "꽃 한 송이",
+              "translation_ru": "один цветок"
+            },
+            {
+              "text": "옷 한 벌",
+              "translation_ru": "один комплект одежды"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 135,
+      "page_role": "content",
+      "source_photo": "IMG_0778",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-club-broadcast",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "동아리를 소개하는 방송을 듣고 말하기",
+          "title_ru": "Послушать и обсудить передачу о клубе",
+          "audio_id": "231",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "사회자",
+                "text": "안녕하세요? 여러분, 우리 학교 동아리를 소개하는 시간입니다. 저기 사물놀이 동아리 회장님이 계시는군요. 회장님, 사물놀이 동아리에 대한 소개를 부탁드리겠습니다."
+              },
+              {
+                "speaker": "회장",
+                "text": "네, 사물놀이 동아리는 전통 악기인 북, 장구, 징, 꽹과리로 연주하는 모임입니다. 악기를 연주하는 것에 관심이 있는 사람은 누구나 가입할 수 있습니다. 우리 동아리에 가입을 하면 한국의 전통 문화를 체험하고 공연도 할 수 있습니다."
+              },
+              {
+                "speaker": "사회자",
+                "text": "다음 달에는 축제가 있잖아요. 사물놀이 동아리도 축제에 참가하실 거예요?"
+              },
+              {
+                "speaker": "회장",
+                "text": "네, 우리도 참가할 겁니다. 그동안 연습을 많이 했어요."
+              },
+              {
+                "speaker": "사회자",
+                "text": "사물놀이는 배우기가 어렵지 않아요?"
+              },
+              {
+                "speaker": "회장",
+                "text": "아니요, 사물놀이는 배우기가 쉽고 재미있습니다."
+              },
+              {
+                "speaker": "사회자",
+                "text": "끝으로 동아리에 가입하는 방법을 설명해 주시겠습니까?"
+              },
+              {
+                "speaker": "회장",
+                "text": "동아리에 가입하고 싶으면 신청서에 이름과 전화번호를 써 주십시오."
+              },
+              {
+                "speaker": "사회자",
+                "text": "오늘 말씀 감사합니다."
+              },
+              {
+                "speaker": "회장",
+                "text": "네, 감사합니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_8/illustration_3_samulnori_club.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "여자는 악기에 관심이 많습니다.",
+                "남자는 사물놀이를 가르쳐 줄 겁니다.",
+                "이 동아리는 학교 축제에 참가할 겁니다.",
+                "이 동아리에 전화를 하면 가입할 수 있습니다."
+              ],
+              "correct": 2
+            }
+          ],
+          "followup": "여러분은 어떤 동아리를 알고 있습니까? 이야기해 보십시오.",
+          "followup_ru": "О каких клубах знаете вы? Расскажите."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-club",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "사물놀이",
+              "translation_ru": "самульнори (традиционная музыка на ударных)",
+              "group": "연주"
+            },
+            {
+              "ko": "회장",
+              "translation_ru": "председатель (клуба)",
+              "group": "연주"
+            },
+            {
+              "ko": "악기",
+              "translation_ru": "музыкальный инструмент",
+              "group": "연주"
+            },
+            {
+              "ko": "북",
+              "translation_ru": "барабан (пук)",
+              "group": "연주"
+            },
+            {
+              "ko": "장구",
+              "translation_ru": "чангу (барабан-«песочные часы»)",
+              "group": "연주"
+            },
+            {
+              "ko": "징",
+              "translation_ru": "чин (большой гонг)",
+              "group": "연주"
+            },
+            {
+              "ko": "꽹과리",
+              "translation_ru": "кввэнгвари (малый гонг)",
+              "group": "연주"
+            },
+            {
+              "ko": "연주하다",
+              "translation_ru": "исполнять (на инструменте)",
+              "group": "연주"
+            },
+            {
+              "ko": "참가하다",
+              "translation_ru": "участвовать",
+              "group": "연주"
+            },
+            {
+              "ko": "끝",
+              "translation_ru": "конец",
+              "group": "연주"
+            },
+            {
+              "ko": "방법",
+              "translation_ru": "способ, метод",
+              "group": "연주"
+            },
+            {
+              "ko": "신청서",
+              "translation_ru": "заявление, анкета",
+              "group": "연주"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "연주",
+              "title_ru": "Игра на инструментах",
+              "items": [
+                {
+                  "ko": "전통 악기",
+                  "translation_ru": "традиционные инструменты"
+                },
+                {
+                  "ko": "체험하다",
+                  "translation_ru": "испытывать на себе"
+                },
+                {
+                  "ko": "끝으로",
+                  "translation_ru": "в заключение"
+                },
+                {
+                  "ko": "참석하다",
+                  "translation_ru": "присутствовать"
+                },
+                {
+                  "ko": "축제",
+                  "translation_ru": "фестиваль"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-01.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 22,
+      "page_role": "content",
+      "source_photo": "IMG_0960",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-friends",
+          "toc_section": "쓰기",
+          "title": "친구를 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст, представляющий друзей.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "이름",
+              "explanation": "Имя каждого из друзей.",
+              "questions": []
+            },
+            {
+              "stage": "나라",
+              "explanation": "Из какой страны каждый друг.",
+              "questions": []
+            },
+            {
+              "stage": "직업",
+              "explanation": "Кем каждый друг работает или учится.",
+              "questions": []
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

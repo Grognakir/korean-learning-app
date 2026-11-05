@@ -1,0 +1,122 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-01.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 22,
+      "page_role": "content",
+      "source_photo": "photo_32",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "구조",
+              "title_ru": "Структура текста",
+              "items": [
+                {
+                  "ko": "자기소개서",
+                  "translation_ru": "самопредставление"
+                },
+                {
+                  "ko": "개요",
+                  "translation_ru": "план, краткое содержание"
+                },
+                {
+                  "ko": "처음",
+                  "translation_ru": "начало"
+                },
+                {
+                  "ko": "가운데",
+                  "translation_ru": "середина"
+                },
+                {
+                  "ko": "끝",
+                  "translation_ru": "конец"
+                }
+              ]
+            },
+            {
+              "title": "내용",
+              "title_ru": "Что написать",
+              "items": [
+                {
+                  "ko": "소개하다",
+                  "translation_ru": "представлять"
+                },
+                {
+                  "ko": "고향",
+                  "translation_ru": "родина, родные места"
+                },
+                {
+                  "ko": "돌아가다",
+                  "translation_ru": "возвращаться"
+                },
+                {
+                  "ko": "계획",
+                  "translation_ru": "план"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-self-intro",
+          "toc_section": "쓰기",
+          "title": "자기소개를 하는 글 쓰기",
+          "outline_prompt": "1) 개요를 써 보십시오.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: расскажите, откуда вы и сколько уже в Корее.",
+              "questions": [
+                {
+                  "kr": "어디에서 왔습니까?",
+                  "ru": "Откуда вы приехали?"
+                },
+                {
+                  "kr": "한국에 온 지 얼마나 됐습니까?",
+                  "ru": "Сколько времени вы уже в Корее?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: расскажите о своих интересах и планах в Корее.",
+              "questions": [
+                {
+                  "kr": "무엇에 관심이 있습니까?",
+                  "ru": "Чем вы интересуетесь?"
+                },
+                {
+                  "kr": "한국에서 무엇을 할 겁니까?",
+                  "ru": "Что вы будете делать в Корее?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: расскажите о своей мечте.",
+              "questions": [
+                {
+                  "kr": "꿈이 무엇입니까?",
+                  "ru": "Какая у вас мечта?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "2) 위 개요를 바탕으로 글을 써 보십시오."
+        }
+      ]
+    }
+  ]
+}

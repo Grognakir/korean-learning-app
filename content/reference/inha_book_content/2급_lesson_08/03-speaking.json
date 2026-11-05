@@ -1,0 +1,183 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 134,
+      "page_role": "content",
+      "source_photo": "IMG_0777",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "오위노와 파하드가 한국어 스터디 모임 포스터를 보고 이야기를 합니다. 오위노는 그 모임에 가입하려고 합니다. 그리고 파하드에게 한국어 스터디 모임의 가입을 제안하고 있습니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "제안하다",
+              "translation_ru": "предлагать"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "오위노",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "오위노",
+              "text": "여기 한국어 스터디 모임 포스터가 있네요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "아, 한국어 스터디 모임 포스터군요. 오위노 씨는 가입할 거예요?",
+              "emphasized": [
+                "군요"
+              ]
+            },
+            {
+              "speaker": "오위노",
+              "text": "네, 혼자 공부할 때 모르는 문제가 있으면 답답하잖아요. 그래서 가입하려고요.",
+              "emphasized": [
+                "잖아요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "스터디에 가입하면 공부하기가 쉬울까요?"
+            },
+            {
+              "speaker": "오위노",
+              "text": "쉬울 것 같아요. 우리 같이 이 스터디에 가입해 볼래요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 아직 한국어에 자신이 없어서 혼자 공부하는 게 나을 것 같아요."
+            },
+            {
+              "speaker": "오위노",
+              "text": "혼자 하는 것보다 같이 공부하는 게 더 도움이 될 수도 있어요.",
+              "emphasized": [
+                "수도 있어요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "그래요? 그럼, 저도 가입할래요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 두 사람은 무슨 모임에 대해 이야기하고 있습니까?"
+            },
+            {
+              "text": "2) 그 모임은 무엇이 좋습니까?"
+            },
+            {
+              "text": "3) 친구에게 권유해 보십시오."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "제안하다",
+              "translation_ru": "предлагать",
+              "group": "스터디"
+            },
+            {
+              "ko": "답답하다",
+              "translation_ru": "быть томительно, тяжело на душе; душно",
+              "group": "스터디"
+            },
+            {
+              "ko": "자신",
+              "translation_ru": "уверенность (в себе); сам",
+              "group": "스터디"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "스터디",
+              "title_ru": "Учебные встречи",
+              "items": [
+                {
+                  "ko": "스터디",
+                  "translation_ru": "учебная группа"
+                },
+                {
+                  "ko": "모임",
+                  "translation_ru": "встреча, клуб"
+                },
+                {
+                  "ko": "포스터",
+                  "translation_ru": "плакат"
+                },
+                {
+                  "ko": "요리하다",
+                  "translation_ru": "готовить"
+                },
+                {
+                  "ko": "도움이 되다",
+                  "translation_ru": "быть полезным"
+                },
+                {
+                  "ko": "게다가",
+                  "translation_ru": "к тому же"
+                },
+                {
+                  "ko": "누구나",
+                  "translation_ru": "любой"
+                },
+                {
+                  "ko": "권유하다",
+                  "translation_ru": "предлагать"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

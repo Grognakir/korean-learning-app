@@ -1,0 +1,35 @@
+.viewer { height: 100%; display: flex; flex-direction: column; min-width: 0; min-height: 0; background: var(--win); color: var(--text); user-select: text; container: document-viewer / inline-size; }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex: none; border-bottom: 1px solid var(--line); padding: 8px 12px; }
+.header b { display: block; font: 600 14px/1.4 var(--sans); }
+.header small { display: block; font: 11px/1.4 var(--sans); color: var(--soft); margin-top: 2px; }
+.header>span { color: var(--soft); font: 10px/1.4 var(--mono); white-space: nowrap; }
+.body { flex: 1; min-height: 0; overflow: auto; padding: 10px 12px max(10px, env(safe-area-inset-bottom, 0px)); }
+.body:focus-visible { outline: 2px solid var(--bright); outline-offset: -2px; }
+.body section { margin: 0 0 18px; }
+.body h3 { margin: 0 0 7px; color: var(--bright); font: 600 14px/1.4 var(--sans); }
+.body h4 { margin: 9px 0 4px; color: var(--soft); font: 12px/1.4 var(--sans); }
+.body table { width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid var(--line); font: 13px/1.4 var(--sans); }
+.body th, .body td { padding: 6px 8px; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; text-align: left; vertical-align: middle; }
+.body th { color: var(--text); font-weight: 500; }
+.body td { color: var(--soft); }
+.body td:has(> .swatch), .body td:has(> .itemIcon) { width: 40px; }
+.swatch { display: block; width: 19px; height: 19px; border: 1px solid var(--line); border-radius: 50%; }
+.itemIcon { display: block; width: 36px; height: 36px; object-fit: contain; }
+.detail { display: block; margin-top: 3px; font-size: 11px; color: var(--soft); }
+.empty { height: 100%; display: grid; align-content: center; justify-items: center; padding: 16px; text-align: center; background: var(--win); color: var(--soft); font: 13px/1.4 var(--sans); }
+.empty b { color: var(--text); }
+.colors, .catalog { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin: 0; padding: 0; list-style: none; }
+.card { display: flex; align-items: center; gap: 7px; min-width: 0; padding: 5px 7px; border: 1px solid var(--line); border-radius: 3px; background: var(--win2); }
+.cardText { min-width: 0; overflow-wrap: anywhere; line-height: 1.3; }
+.cardText b { display: block; color: var(--text); font-size: 13px; font-weight: 500; }
+.cardText>span { display: block; margin-top: 1px; color: var(--soft); font-size: 11px; }
+.cardText small { display: block; margin-top: 2px; color: var(--mid); font-size: 10px; }
+.card .swatch { flex: none; width: 15px; height: 15px; }
+.card .itemIcon { flex: none; width: 32px; height: 32px; }
+.body section { margin-bottom: 12px; }
+.body th:has(> .detail) { width: 105px; }
+@container document-viewer (max-width: 480px) {
+  .catalog .card { flex-direction: column; align-items: center; gap: 4px; padding: 6px 4px; text-align: center; }
+  .colors .card { flex-direction: column; gap: 3px; padding: 5px 4px; text-align: center; }
+  .colors .cardText b { font-size: 12px; }
+}

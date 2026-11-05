@@ -1,0 +1,192 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-02.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 38,
+      "page_role": "content",
+      "source_photo": "photo_32",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-housing",
+          "toc_section": "문화 이해하기",
+          "title": "대학생이 사는 집",
+          "title_ru": "Где живут студенты",
+          "illustration": {
+            "storage_path": "lesson_2/illustration_4_student_housing.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화 이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "한국의 대학생들은 집에서 학교가 가까우면 대부분 부모님과 함께 생활을 합니다. 하지만 학교가 멀면 다른 곳에서 생활합니다."
+            },
+            {
+              "text": "대학생들이 사는 집은 기숙사, 하숙집, 자취방 등이 있습니다. 기숙사는 혼자 살거나 친구와 같이 생활합니다. 층마다 같이 사용하는 식당과 화장실이 있습니다. 하숙집은 집주인이 직접 요리해 줍니다. 학생들은 자신의 방에서 생활하지만 밥을 먹을 때는 모여서 같이 먹습니다. 자취방은 학생이 요리와 빨래 등 모든 것을 스스로 합니다. 대부분의 대학생들은 학교 근처에 있는 자취방에서 생활합니다. 그래서 한국의 대학교 근처에는 다른 곳에 비해서 싸고 깨끗한 자취방이 많습니다."
+            },
+            {
+              "text": "1) 한국의 대학생들은 어떤 집에서 삽니까?"
+            },
+            {
+              "text": "2) 여러분 나라의 대학생들은 주로 어디에서 삽니까? 이야기해 보십시오."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-housing",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "대부분",
+              "translation_ru": "большинство"
+            },
+            {
+              "ko": "다르다",
+              "translation_ru": "отличаться"
+            },
+            {
+              "ko": "하숙집",
+              "translation_ru": "пансион (комната с питанием от хозяина)",
+              "group": "집"
+            },
+            {
+              "ko": "자취방",
+              "translation_ru": "съёмная комната для самостоятельного проживания",
+              "group": "집"
+            },
+            {
+              "ko": "등",
+              "translation_ru": "и т. д."
+            },
+            {
+              "ko": "집주인",
+              "translation_ru": "хозяин дома",
+              "group": "집"
+            },
+            {
+              "ko": "모이다",
+              "translation_ru": "собираться"
+            },
+            {
+              "ko": "모든",
+              "translation_ru": "все, каждый"
+            },
+            {
+              "ko": "스스로",
+              "translation_ru": "самостоятельно",
+              "group": "생활"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "집",
+              "title_ru": "Жильё студентов",
+              "items": [
+                {
+                  "ko": "기숙사",
+                  "translation_ru": "общежитие"
+                },
+                {
+                  "ko": "층",
+                  "translation_ru": "этаж"
+                },
+                {
+                  "ko": "화장실",
+                  "translation_ru": "туалет"
+                },
+                {
+                  "ko": "근처",
+                  "translation_ru": "поблизости"
+                }
+              ]
+            },
+            {
+              "title": "생활",
+              "title_ru": "Быт",
+              "items": [
+                {
+                  "ko": "생활",
+                  "translation_ru": "жизнь, быт"
+                },
+                {
+                  "ko": "요리",
+                  "translation_ru": "готовка"
+                },
+                {
+                  "ko": "빨래",
+                  "translation_ru": "стирка"
+                },
+                {
+                  "ko": "혼자",
+                  "translation_ru": "один, самостоятельно"
+                },
+                {
+                  "ko": "직접",
+                  "translation_ru": "лично"
+                },
+                {
+                  "ko": "함께",
+                  "translation_ru": "вместе"
+                },
+                {
+                  "ko": "부모님",
+                  "translation_ru": "родители"
+                }
+              ]
+            },
+            {
+              "title": "특징",
+              "title_ru": "Расстояние и цена",
+              "items": [
+                {
+                  "ko": "가깝다",
+                  "translation_ru": "близкий"
+                },
+                {
+                  "ko": "멀다",
+                  "translation_ru": "далёкий"
+                },
+                {
+                  "ko": "깨끗하다",
+                  "translation_ru": "чистый"
+                },
+                {
+                  "ko": "싸다",
+                  "translation_ru": "дешёвый"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-2",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㅌ'+'ㅣ' (구개음화②)",
+          "audio_id": "208",
+          "examples": [
+            {
+              "text": "같이"
+            },
+            {
+              "text": "붙이다"
+            },
+            {
+              "text": "살살이"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

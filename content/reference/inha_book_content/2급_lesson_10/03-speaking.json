@@ -1,0 +1,214 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-10.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 167,
+      "page_role": "content",
+      "source_photo": "IMG_1298",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "흐엉과 박지성은 이번 주 토요일에 대학교 선배의 결혼식에 갈 겁니다. 그런데 흐엉은 한국의 결혼식 문화에 대해 잘 모릅니다. 그래서 지성에게 질문합니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "흐엉",
+            "박지성"
+          ],
+          "lines": [
+            {
+              "speaker": "흐엉",
+              "text": "지성 씨, 이번 주 토요일에 선배 결혼식에 갈 거지요? 한국에서는 결혼식에 갈 때 옷을 어떻게 입어야 해요?"
+            },
+            {
+              "speaker": "박지성",
+              "text": "보통 결혼식에 갈 때는 단정하게 정장을 많이 입어요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "정장이요? 그럼 지성 씨는 양복을 입고 갈 거예요?"
+            },
+            {
+              "speaker": "박지성",
+              "text": "네, 저는 회색 양복에 하얀 셔츠를 입고 까만 구두를 신으려고요. 흐엉 씨는요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "저는 잘 모르겠어요. 어떤 옷이 괜찮을까요?"
+            },
+            {
+              "speaker": "박지성",
+              "text": "음, 여자들은 보통 원피스를 입거나 블라우스에 스커트를 입어요. 흐엉 씨는 얼굴이 귀여운 편이니까 원피스를 입는 게 어때요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "아, 그럴까요? 그럼 저도 지성 씨처럼 단정하게 입고 가야겠어요. 우리 학교 후문 앞에서 만나서 같이 가요."
+            },
+            {
+              "speaker": "박지성",
+              "text": "네, 그럼 토요일에 만나요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 어디에 갈 겁니까?"
+            },
+            {
+              "text": "2) 무슨 옷을 입고 갈 겁니까?"
+            },
+            {
+              "text": "3) 왜 그 옷을 입고 갑니까?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "단정하다",
+              "translation_ru": "опрятный, аккуратный",
+              "group": "대화"
+            },
+            {
+              "ko": "회색",
+              "translation_ru": "серый цвет",
+              "group": "옷차림"
+            },
+            {
+              "ko": "원피스",
+              "translation_ru": "платье",
+              "group": "옷차림"
+            },
+            {
+              "ko": "블라우스",
+              "translation_ru": "блузка",
+              "group": "옷차림"
+            },
+            {
+              "ko": "스커트",
+              "translation_ru": "юбка",
+              "group": "옷차림"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "결혼식",
+              "title_ru": "Свадьба",
+              "items": [
+                {
+                  "ko": "결혼식",
+                  "translation_ru": "свадьба"
+                },
+                {
+                  "ko": "하객",
+                  "translation_ru": "гость на церемонии"
+                },
+                {
+                  "ko": "축의금",
+                  "translation_ru": "денежный подарок на свадьбу"
+                },
+                {
+                  "ko": "청첩장",
+                  "translation_ru": "свадебное приглашение"
+                },
+                {
+                  "ko": "예식장",
+                  "translation_ru": "зал для свадебных церемоний"
+                }
+              ]
+            },
+            {
+              "title": "옷차림",
+              "title_ru": "Одежда по случаю",
+              "items": [
+                {
+                  "ko": "예복",
+                  "translation_ru": "парадная одежда"
+                },
+                {
+                  "ko": "운동복",
+                  "translation_ru": "спортивная одежда"
+                },
+                {
+                  "ko": "반바지",
+                  "translation_ru": "шорты"
+                },
+                {
+                  "ko": "슬리퍼",
+                  "translation_ru": "тапочки, шлёпанцы"
+                },
+                {
+                  "ko": "캐주얼",
+                  "translation_ru": "повседневный стиль"
+                }
+              ]
+            },
+            {
+              "title": "대화",
+              "title_ru": "Из диалога",
+              "items": [
+                {
+                  "ko": "보통",
+                  "translation_ru": "обычно"
+                },
+                {
+                  "ko": "후문",
+                  "translation_ru": "задние ворота, задний вход"
+                },
+                {
+                  "ko": "질문하다",
+                  "translation_ru": "задавать вопрос"
+                },
+                {
+                  "ko": "문화",
+                  "translation_ru": "культура"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

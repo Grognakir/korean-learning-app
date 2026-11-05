@@ -1,0 +1,125 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-03.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 52,
+      "page_role": "content",
+      "source_photo": "IMG_0988",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-phone-number",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "전화번호를 듣고 말하기",
+          "title_ru": "Послушать и обсудить телефонный номер",
+          "audio_id": "111",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "자르갈",
+                "text": "아멜리 씨, 안녕하세요? 어디에 갑니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "안녕하세요? 자르갈 씨. 저는 은행에 갑니다. 자르갈 씨는 무엇을 합니까?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "저는 파하드 씨를 기다립니다."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "파하드 씨는 지금 김 선생님의 사무실에 있습니다."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "김 선생님의 사무실은 어디에 있습니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "드림센터에 있습니다."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "드림센터 6층에 있습니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "아니요, 4층에 있습니다."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "김 선생님 사무실의 전화번호는 몇 번입니까?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "987-3456입니다."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "고맙습니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "이것이 무엇입니까? 번호를 읽어 보십시오.",
+            "prompt_ru": "Что это? Прочитайте номера.",
+            "illustration": {
+              "storage_path": "lesson_3/illustration_3_office_phone.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "자르갈 씨, 아멜리 씨는 은행에 있습니다.",
+                "자르갈 씨는 김 선생님의 사무실에 있습니다.",
+                "김 선생님의 사무실은 6층에 있습니다.",
+                "김 선생님 사무실의 전화번호는 987-3456번입니다."
+              ],
+              "correct": 3
+            }
+          ],
+          "followup": "반 친구들에게 전화번호를 물어 보십시오.",
+          "followup_ru": "Спросите у одноклассников номера телефонов."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-phone-number",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "기다리다",
+              "translation_ru": "ждать"
+            },
+            {
+              "ko": "지금",
+              "translation_ru": "сейчас"
+            },
+            {
+              "ko": "사무실",
+              "translation_ru": "офис, кабинет"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

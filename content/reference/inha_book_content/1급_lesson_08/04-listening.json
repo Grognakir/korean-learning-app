@@ -1,0 +1,90 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 132,
+      "page_role": "content",
+      "source_photo": "IMG_1064",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-birthday-gift",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "생일 선물을 준비하는 대화를 듣고 말하기",
+          "title_ru": "Послушать разговор о подарке на день рождения и обсудить",
+          "audio_id": "131",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "흐엉",
+                "text": "지성 씨, 아멜리 씨의 생일 선물을 준비했어요?"
+              },
+              {
+                "speaker": "박지성",
+                "text": "아니요, 흐엉 씨는요?"
+              },
+              {
+                "speaker": "흐엉",
+                "text": "저도 안 샀어요. 내일 선물을 사러 서점에 갈 거예요."
+              },
+              {
+                "speaker": "박지성",
+                "text": "아멜리 씨가 책을 좋아해요?"
+              },
+              {
+                "speaker": "흐엉",
+                "text": "네, 아멜리 씨는 한국 소설책을 좋아해요. 그래서 소설책을 살 거예요. 우리 내일 같이 선물을 사러 가요."
+              },
+              {
+                "speaker": "박지성",
+                "text": "네, 좋아요. 우리 어디에서 만나요?"
+              },
+              {
+                "speaker": "흐엉",
+                "text": "내일 수업이 끝난 후에 학교 후문에서 만나요."
+              },
+              {
+                "speaker": "박지성",
+                "text": "네, 내일 만나요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_8/illustration_3_book_gift.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "여자는 생일 선물을 준비했습니다.",
+                "여자는 한국 소설책을 좋아합니다.",
+                "남자는 어제 선물을 사러 서점에 갔습니다.",
+                "남자는 여자와 함께 선물을 사러 갈 겁니다."
+              ],
+              "correct": 3
+            }
+          ],
+          "followup": "친구들에게 생일 파티 계획을 이야기해 보십시오.",
+          "followup_ru": "Расскажите друзьям о своих планах на вечеринку по случаю дня рождения."
+        }
+      ]
+    }
+  ]
+}

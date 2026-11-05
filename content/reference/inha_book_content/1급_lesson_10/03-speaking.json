@@ -1,0 +1,160 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-10.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 164,
+      "page_role": "content",
+      "source_photo": "IMG_1094",
+      "blocks": [
+        {
+          "type": "reference_table",
+          "id": "table-menu",
+          "toc_section": "말하기",
+          "title": "인하식당 Menu",
+          "title_ru": "Меню столовой «Инха»",
+          "columns": [
+            "김밥",
+            "떡볶이",
+            "라면",
+            "우동",
+            "만두",
+            "떡국",
+            "냉면",
+            "비빔밥",
+            "김치찌개",
+            "된장찌개"
+          ],
+          "translations": [
+            "кимбап",
+            "токпокки",
+            "рамён",
+            "удон",
+            "манду",
+            "ттоккук",
+            "нэнмён",
+            "бибимбап",
+            "кимчи-тиге",
+            "твендян-тиге"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "파하드",
+            "왕루"
+          ],
+          "lines": [
+            {
+              "speaker": "파하드",
+              "text": "왕루 씨, 우리 뭐 먹을까요?",
+              "emphasized": [
+                "왕루",
+                "먹을까요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 떡볶이를 먹고 싶어요. 파하드 씨는요?",
+              "emphasized": [
+                "떡볶이를 먹고 싶어요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 떡볶이가 매우니까 김밥을 먹고 싶어요.",
+              "emphasized": [
+                "떡볶이가 매우니까 김밥을 먹고 싶어요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "또 무엇을 먹고 싶어요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "우리 만두도 먹을까요?",
+              "emphasized": [
+                "만두도 먹을까요"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "네, 좋아요. 만두도 먹읍시다.",
+              "emphasized": [
+                "네, 좋아요. 만두도 먹읍시다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "여기요! 떡볶이 1인분하고 김밥 1인분, 만두 1인분을 주세요.",
+              "emphasized": [
+                "떡볶이 1인분하고 김밥 1인분, 만두 1인분을 주세요"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 위 메뉴를 보고 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": []
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "김밥",
+              "translation_ru": "кимбап (рис с начинкой в водорослях)"
+            },
+            {
+              "ko": "떡볶이",
+              "translation_ru": "токпокки (острые рисовые лепёшки)"
+            },
+            {
+              "ko": "우동",
+              "translation_ru": "удон (лапша)"
+            },
+            {
+              "ko": "만두",
+              "translation_ru": "манду, пельмени"
+            },
+            {
+              "ko": "김치찌개",
+              "translation_ru": "кимчи-тиге (острое рагу с кимчи)"
+            },
+            {
+              "ko": "된장찌개",
+              "translation_ru": "твендян-тиге (рагу с соевой пастой)"
+            },
+            {
+              "ko": "떡국",
+              "translation_ru": "ттоккук (суп с рисовыми лепёшками)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

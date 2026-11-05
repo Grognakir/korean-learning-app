@@ -1,0 +1,239 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-08.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 136,
+      "page_role": "content",
+      "source_photo": "IMG_0779",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-poster",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_8/illustration_4_kpop_dance_club_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "제3기 K-Pop 댄스 동아리 회원 모집",
+              "line_kind": "heading"
+            },
+            {
+              "text": "인하대학교 K-Pop 댄스 동아리에서 신입생 여러분을 기다립니다."
+            },
+            {
+              "text": "누구를: 인하대학교 학생",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "언제: 3월 2일 ~ 3월 31일",
+              "line_kind": "subheading"
+            },
+            {
+              "text": "어디서: 학생회관 2층 202호 동아리 방",
+              "line_kind": "subheading"
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "댄스",
+              "translation_ru": "танцы"
+            },
+            {
+              "ko": "모집",
+              "translation_ru": "набор (участников)"
+            },
+            {
+              "ko": "신입생",
+              "translation_ru": "первокурсник; новичок"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-reading-club",
+          "toc_section": "읽고 말하기",
+          "illustration": null,
+          "text_kind": "article",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "인하대학교 K-Pop 댄스 동아리를 소개합니다."
+            },
+            {
+              "text": "우리 동아리는 매주 수요일 저녁 6시부터 2시간씩 K-Pop 댄스를 연습합니다."
+            },
+            {
+              "text": "우리 동아리는 재작년에 만들었습니다. 작년 학교 축제에 참가해서 최고의 동아리 상을 받았습니다. 우리 동아리는 한 학기에 한 번 다른 학교 댄스 동아리와 같이 공연을 합니다. 그리고 일 년에 한 번 댄스 대회에 참가합니다."
+            },
+            {
+              "text": "K-Pop 댄스는 재미있고 ( ㉠ ). 초보자도 환영합니다. K-Pop에 관심이 있고 댄스를 좋아하는 사람은 누구나 가입할 수 있습니다. 가입하고 싶은 사람은 동아리 방에 와서 신청서에 이름과 전화번호를 써 주십시오."
+            },
+            {
+              "text": "우리 동아리 방은 학생회관 2층 202호입니다."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "환영",
+              "translation_ru": "форма от 환영하다 (приветствовать)"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-club",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "동아리 회원을 모집하는 글을 읽고 말하기",
+          "title_ru": "Прочитать объявление о наборе в клуб и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "㉠에 들어갈 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее слово для ㉠.",
+              "choices": [
+                "배울 줄 압니다",
+                "배우기로 합니다",
+                "배우기가 쉽습니다",
+                "배운 적이 있습니다"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "이 동아리는 매주 수요일 6시부터 2번 연습을 합니다.",
+                "이 동아리는 작년 학교 축제에서 상을 받았습니다.",
+                "이 동아리는 올해도 학교 축제에 참가할 겁니다.",
+                "이 동아리는 초보자만 가입할 수 있습니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분은 동아리 활동을 해 본 경험이 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Был ли у вас опыт участия в клубах? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-club",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-club",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "댄스",
+              "translation_ru": "танцы",
+              "group": "동아리"
+            },
+            {
+              "ko": "모집",
+              "translation_ru": "набор (участников)",
+              "group": "동아리"
+            },
+            {
+              "ko": "신입생",
+              "translation_ru": "первокурсник; новичок",
+              "group": "동아리"
+            },
+            {
+              "ko": "재작년",
+              "translation_ru": "позапрошлый год",
+              "group": "시기"
+            },
+            {
+              "ko": "대회",
+              "translation_ru": "соревнование, конкурс",
+              "group": "동아리"
+            },
+            {
+              "ko": "환영하다",
+              "translation_ru": "приветствовать",
+              "group": "동아리"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "시기",
+              "title_ru": "Время",
+              "items": [
+                {
+                  "ko": "작년",
+                  "translation_ru": "прошлый год"
+                },
+                {
+                  "ko": "올해",
+                  "translation_ru": "этот год"
+                },
+                {
+                  "ko": "내년",
+                  "translation_ru": "следующий год"
+                },
+                {
+                  "ko": "학기",
+                  "translation_ru": "семестр"
+                },
+                {
+                  "ko": "매주",
+                  "translation_ru": "каждую неделю"
+                },
+                {
+                  "ko": "저녁",
+                  "translation_ru": "вечер"
+                }
+              ]
+            },
+            {
+              "title": "동아리",
+              "title_ru": "Клуб",
+              "items": [
+                {
+                  "ko": "학생회관",
+                  "translation_ru": "студенческий центр"
+                },
+                {
+                  "ko": "동아리방",
+                  "translation_ru": "комната клуба"
+                },
+                {
+                  "ko": "초보자",
+                  "translation_ru": "новичок"
+                },
+                {
+                  "ko": "회원",
+                  "translation_ru": "член клуба"
+                },
+                {
+                  "ko": "상",
+                  "translation_ru": "награда"
+                },
+                {
+                  "ko": "받다",
+                  "translation_ru": "получать"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

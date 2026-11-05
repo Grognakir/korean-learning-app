@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-06.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 101,
+      "page_role": "content",
+      "source_photo": "IMG_1035",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-diary",
+          "toc_section": "쓰기",
+          "title": "일기를 써 보십시오.",
+          "title_ru": "Напишите дневник.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: куда вы ходили на прошлых выходных.",
+              "questions": [
+                {
+                  "kr": "지난 주말에 어디에 갔습니까?",
+                  "ru": "Куда вы ходили на прошлых выходных?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: с кем вы были и что делали.",
+              "questions": [
+                {
+                  "kr": "거기에서 누구와, 무엇을 했습니까?",
+                  "ru": "С кем и что вы там делали?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: ваше настроение.",
+              "questions": [
+                {
+                  "kr": "기분이 어땠습니까?",
+                  "ru": "Какое у вас было настроение?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-06.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 102,
+      "page_role": "content",
+      "source_photo": "IMG_1036",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-prompt",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "이것이 무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": []
+        }
+      ]
+    },
+    {
+      "page_number": 103,
+      "page_role": "content",
+      "source_photo": "IMG_1037",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-holidays",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 명절",
+          "title_ru": "Традиционные праздники Кореи",
+          "illustration": {
+            "storage_path": "lesson_6/illustration_5_korean_holidays.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "다음을 읽고 물음에 답하십시오.",
+          "intro_prompt_ru": "Прочитайте и ответьте на вопросы.",
+          "lines": [
+            {
+              "text": "설과 추석은 한국의 명절입니다."
+            },
+            {
+              "text": "설과 추석에 가족과 함께 시간을 보냅니다. 설은 음력 1월 1일이고 추석은 음력 8월 15일입니다. 설에는 떡국을 먹고 윷놀이를 합니다. 추석에는 송편을 먹고 성묘를 합니다."
+            },
+            {
+              "text": "한국 사람들은 명절을 좋아합니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-holidays",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 명절",
+          "title_ru": "Традиционные праздники Кореи",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국 사람들은 명절에 무엇을 합니까?",
+              "prompt_ru": "Что корейцы делают на традиционные праздники?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 사람들은 명절에 무엇을 합니까? 이야기해 보십시오.",
+              "prompt_ru": "Что делают люди в вашей стране на праздники? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-culture-expr",
+          "toc_section": "문화 이해하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-culture-holidays",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "N(시간)을/를 보내다",
+              "translation_ru": "проводить время — шаблон; «가족과 함께 시간을 보냅니다» = «Проводят время вместе с семьёй»"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-holidays",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "설",
+              "translation_ru": "Соллаль (Новый год по лунному календарю)"
+            },
+            {
+              "ko": "추석",
+              "translation_ru": "Чхусок (праздник осеннего урожая)"
+            },
+            {
+              "ko": "명절",
+              "translation_ru": "традиционный праздник"
+            },
+            {
+              "ko": "시간",
+              "translation_ru": "время"
+            },
+            {
+              "ko": "음력",
+              "translation_ru": "лунный календарь"
+            },
+            {
+              "ko": "떡국",
+              "translation_ru": "ттоккук (суп с рисовыми лепёшками)"
+            },
+            {
+              "ko": "윷놀이",
+              "translation_ru": "юннори (традиционная настольная игра с палочками)"
+            },
+            {
+              "ko": "송편",
+              "translation_ru": "сонпхён (рисовые пирожки на Чхусок)"
+            },
+            {
+              "ko": "성묘",
+              "translation_ru": "посещение могил предков"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-6",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㄹ’",
+          "audio_id": "124",
+          "examples": [
+            {
+              "text": "말",
+              "translation_ru": "слово, речь; лошадь"
+            },
+            {
+              "text": "글",
+              "translation_ru": "текст, письмо"
+            },
+            {
+              "text": "길",
+              "translation_ru": "дорога"
+            },
+            {
+              "text": "쌀",
+              "translation_ru": "рис (сырой)"
+            },
+            {
+              "text": "가을",
+              "translation_ru": "осень"
+            },
+            {
+              "text": "말이",
+              "translation_ru": "слово (+ частица 이)"
+            },
+            {
+              "text": "글은",
+              "translation_ru": "текст (+ частица 은)"
+            },
+            {
+              "text": "길에",
+              "translation_ru": "на дороге"
+            },
+            {
+              "text": "쌀은",
+              "translation_ru": "рис (+ частица 은)"
+            },
+            {
+              "text": "가을에",
+              "translation_ru": "осенью"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

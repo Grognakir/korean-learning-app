@@ -1,0 +1,124 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-15.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 250,
+      "page_role": "content",
+      "source_photo": "IMG_1585",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "흐엉과 오위노는 이번 방학에 전주로 여행을 가기로 했습니다. 흐엉은 전주에 버스로 갈까 기차로 갈까 고민하고 있습니다. 두 사람은 전주에서 한옥 마을과 경기전을 구경할 겁니다. 그리고 전주비빔밥과 한정식을 먹으려고 합니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "흐엉",
+            "오위노"
+          ],
+          "lines": [
+            {
+              "speaker": "흐엉",
+              "text": "오위노 씨, 우리 이번 방학에 전주로 여행을 가기로 했잖아요. 전주까지 무엇을 타고 갈까요? 버스를 탈까 기차를 탈까 고민돼요."
+            },
+            {
+              "speaker": "오위노",
+              "text": "고속버스가 어때요? 인천터미널에서 고속버스를 타면 3시간 정도밖에 안 걸려요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "좋아요! 전주는 관광 명소가 많이 있으니까 1박 2일로 가는 게 좋겠지요?"
+            },
+            {
+              "speaker": "오위노",
+              "text": "네, 저도 1박 2일이면 좋겠어요. 여행을 가기 전에 여행 계획을 세워 봅시다. 우선 제일 가 보고 싶은 곳이 어디예요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "한옥 마을에 제일 먼저 가 보고 싶어요. 그곳에서 한국의 전통 집을 자세히 보고 싶어요."
+            },
+            {
+              "speaker": "오위노",
+              "text": "그럼 한옥 마을에 가는 길에 경기전에 들러서 구경하고 가요. 그리고 한옥 마을 근처에서 전주비빔밥을 먹어요. 전주에는 맛있는 음식이 정말 많아요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "아, 맞아요! 저는 전주에서 한정식을 먹었으면 좋겠어요. 사진으로만 봤었는데 음식이 얼마나 많이 나오는지 꼭 보고 싶어요."
+            },
+            {
+              "speaker": "오위노",
+              "text": "좋아요. 그럼 전주 여행에 대한 자세한 정보는 인터넷으로 찾아 보기로 해요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 언제 여행을 할 겁니까?"
+            },
+            {
+              "text": "2) 어디로 갈 겁니까?"
+            },
+            {
+              "text": "3) 어떻게 갈 겁니까?"
+            },
+            {
+              "text": "4) 그곳에서 무엇을 할 겁니까?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "한정식",
+              "translation_ru": "ханджонсик (традиционный корейский комплексный обед)"
+            },
+            {
+              "ko": "자세히",
+              "translation_ru": "подробно"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

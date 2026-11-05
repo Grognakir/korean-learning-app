@@ -1,0 +1,208 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-11.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 181,
+      "page_role": "content",
+      "source_photo": "IMG_1109",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "흐엉 씨: 파하드 씨와 오늘 오후에 영화를 보고 싶어 합니다."
+            },
+            {
+              "text": "파하드 씨"
+            }
+          ],
+          "table": {
+            "columns": [
+              "지금 무엇을 합니까?",
+              "오후에 무엇을 할 겁니까?",
+              "왜 공부를 합니까?",
+              "언제 약속을 합니까?"
+            ],
+            "rows": [
+              [
+                "식당에서 밥을 먹고 있습니다.",
+                "도서관에서 공부를 할 겁니다.",
+                "이번 주에 시험이 있습니다. 그래서 바쁩니다.",
+                "금요일에 시험이 끝나면 영화를 볼 겁니다."
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "파하드",
+            "흐엉"
+          ],
+          "lines": [
+            {
+              "speaker": "파하드",
+              "text": "여보세요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "파하드 씨, 지금 뭐 해요?",
+              "emphasized": [
+                "파하드 씨"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "아, 흐엉 씨. 지금 식당에서 밥을 먹고 있어요.",
+              "emphasized": [
+                "흐엉 씨",
+                "식당에서 밥을 먹고 있어요"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "오후에 시간이 있어요? 시간이 있으면 영화를 보러 갑시다.",
+              "emphasized": [
+                "오후",
+                "시간이 있으면 영화를 보러 갑시다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "미안해요. 오후에 도서관에서 공부를 할 거예요.",
+              "emphasized": [
+                "오후에 도서관에서 공부를 할 거예요"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "아, 이번 주에 시험이 있지요? 바쁘겠어요.",
+              "emphasized": [
+                "이번 주에 시험이 있지요",
+                "바쁘겠어요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 금요일에 시험이 끝나요.",
+              "emphasized": [
+                "금요일에 시험이 끝나요"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "시험이 끝나면 영화를 볼까요?",
+              "emphasized": [
+                "시험이 끝나면 영화를 볼까요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "좋아요. 그럼 금요일에 다시 전화해 주세요.",
+              "emphasized": [
+                "금요일에 다시 전화해 주세요"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 알겠어요.",
+              "emphasized": [
+                "알겠어요"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-1",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2. 친구들과 함께 대화해 보십시오"
+            },
+            {
+              "text": "나: 아멜리 씨와 저녁에 한국 식당에 가고 싶어 합니다."
+            },
+            {
+              "text": "친구"
+            }
+          ],
+          "table": {
+            "columns": [
+              "지금 무엇을 합니까?",
+              "저녁에 무엇을 할 겁니까?",
+              "왜 저녁을 먹습니까?",
+              "언제 약속을 합니까?"
+            ],
+            "rows": [
+              [
+                "마트에서 물건을 삽니다.",
+                "친구와 저녁을 먹을 겁니다.",
+                "내일 친구가 고향에 갑니다. 그래서 기분이 안 좋습니다.",
+                "내일 친구가 가면 한국 식당에 갈 겁니다."
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-2",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "나: (          )"
+            },
+            {
+              "text": "친구"
+            }
+          ],
+          "table": {
+            "columns": [
+              "지금 무엇을 합니까?",
+              "무엇을 할 겁니까?",
+              "왜 합니까?",
+              "언제 약속을 합니까?"
+            ],
+            "rows": [
+              [
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

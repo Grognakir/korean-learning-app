@@ -1,0 +1,121 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-11.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 182,
+      "page_role": "content",
+      "source_photo": "IMG_1110",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-invitation-call",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "전화로 초대하기",
+          "title_ru": "Приглашать по телефону",
+          "audio_id": "143",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "왕루",
+                "text": "여보세요? 파하드 씨지요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 왕루 씨, 잘 지냈어요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "네, 잘 지내고 있어요. 파하드 씨, 이번 주말에 시간이 있어요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 시간이 있어요. 무슨 일이에요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "예술회관에서 한국 전통 공연을 해요. 우리 공연을 보러 갈까요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "그래요? 좋아요. 저도 한국의 전통 공연을 보고 싶었어요."
+              },
+              {
+                "speaker": "왕루",
+                "text": "그럼 전통 공연이 끝나면 불꽃놀이도 구경합시다. 어때요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "재미있겠어요. 어디에서 만날까요?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "오후 2시에 예술회관 앞에서 만납시다."
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 좋아요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_11/illustration_3_performance_invitation.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "여자는 이번 주말에 시간이 없습니다.",
+                "여자는 남자를 공연에 초대했습니다.",
+                "두 사람은 오후 2시에 공원 앞에서 만날 겁니다.",
+                "두 사람은 불꽃놀이를 구경한 후에 공연을 볼 겁니다."
+              ],
+              "correct": 1
+            }
+          ],
+          "followup": "전화로 초대해 봤습니까? 이야기해 보십시오.",
+          "followup_ru": "Приглашали ли вы кого-нибудь по телефону? Расскажите."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-invitation-call",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "예술회관",
+              "translation_ru": "дом искусств, концертный зал"
+            },
+            {
+              "ko": "공연",
+              "translation_ru": "представление, выступление"
+            },
+            {
+              "ko": "불꽃놀이",
+              "translation_ru": "фейерверк"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

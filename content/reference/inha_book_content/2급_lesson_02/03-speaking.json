@@ -1,0 +1,179 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-02.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 34,
+      "page_role": "content",
+      "source_photo": "photo_25",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-plan-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "파하드와 아멜리가 한국 생활의 계획을 이야기합니다. 파하드는 한국어를 공부한 후에 대학원에 입학할 겁니다. 아멜리는 한국에서 디자인을 공부한 다음에 한국 회사에 취직을 할 겁니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-plan",
+          "toc_section": "말하기",
+          "title": "보기",
+          "title_ru": "Рассказать о планах жизни в Корее",
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "아멜리",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨는 어떻게 한국에 오게 되었어요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "사우디에서 한국 문화를 공부하는 중에 교수님께서 추천해 주셔서 한국에 오게 됐어요. 아멜리 씨는요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "언니가 한국에서 공부하고 있어서 한국을 알게 되었어요. 파하드 씨는 한국어를 배운 다음에 뭐 할 거예요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "대학원에 입학할 거예요. 아멜리 씨는요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "저는 대학교에서 디자인을 공부할 거예요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "대학교를 졸업하면 뭐 할 거예요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "한국 회사에서 일하고 싶어요. 파하드 씨는 대학원을 졸업한 후에 뭐 할 거예요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "한국에서 공부를 더 하거나 고향에 돌아가려고 해요. 아멜리 씨는 계속 한국에 있을 거예요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "3년쯤 한국에서 일한 다음에 고향에 돌아갈 거예요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-plan-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 어떻게 한국에 오게 되었습니까?"
+            },
+            {
+              "text": "2) 한국에서 무엇을 할 겁니까?"
+            },
+            {
+              "text": "3) 그것을 한 다음에 무엇을 할 겁니까?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-plan",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "취직",
+              "translation_ru": "трудоустройство",
+              "group": "진로"
+            },
+            {
+              "ko": "추천하다",
+              "translation_ru": "рекомендовать",
+              "group": "학교"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "진로",
+              "title_ru": "Планы на будущее",
+              "items": [
+                {
+                  "ko": "계획",
+                  "translation_ru": "план"
+                },
+                {
+                  "ko": "계속",
+                  "translation_ru": "продолжать, всё время"
+                },
+                {
+                  "ko": "돌아가다",
+                  "translation_ru": "возвращаться"
+                },
+                {
+                  "ko": "디자인",
+                  "translation_ru": "дизайн"
+                }
+              ]
+            },
+            {
+              "title": "학교",
+              "title_ru": "Учёба",
+              "items": [
+                {
+                  "ko": "고등학교",
+                  "translation_ru": "старшая школа"
+                },
+                {
+                  "ko": "교수님",
+                  "translation_ru": "профессор"
+                },
+                {
+                  "ko": "시험",
+                  "translation_ru": "экзамен"
+                },
+                {
+                  "ko": "대학원",
+                  "translation_ru": "магистратура"
+                },
+                {
+                  "ko": "입학하다",
+                  "translation_ru": "поступать"
+                },
+                {
+                  "ko": "졸업하다",
+                  "translation_ru": "оканчивать"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

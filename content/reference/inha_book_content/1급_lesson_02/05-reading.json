@@ -1,0 +1,146 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-02.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 37,
+      "page_role": "content",
+      "source_photo": "IMG_0974",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-hometown-house",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_2/illustration_4_two_story_home_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "저는 로빈입니다. 제 고향집은 미국의 시카고에 있습니다. 우리 집은 이층집입니다."
+            },
+            {
+              "text": "( ㉠ )에는 거실, 부엌, 아래층 화장실, 부모님 방이 있습니다. 거실에 텔레비전, 소파가 있습니다. 부엌에 냉장고, 식탁이 있습니다. 부모님 방에 침대, 옷장이 있습니다."
+            },
+            {
+              "text": "위층에는 제 방, 위층 화장실이 있습니다. 제 방에 침대, 책상, 옷장이 있습니다. 책상 위에 책, 공책, 컴퓨터가 있습니다. 화장실은 제 방의 오른쪽에 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-hometown-house",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "고향집을 소개하는 글을 읽고 말하기",
+          "title_ru": "Прочитать текст о доме на родине и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "무엇에 대한 이야기입니까? 알맞은 것을 고르십시오.",
+              "prompt_ru": "О чём этот текст? Выберите подходящее.",
+              "choices": [
+                "로빈 씨의 방",
+                "로빈 씨의 집",
+                "로빈 씨의 고향",
+                "로빈 씨의 부모님"
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "choice",
+              "prompt": "㉠에 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее слово для ㉠.",
+              "choices": [
+                "이것",
+                "어디",
+                "아래층",
+                "옆 방"
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "부엌에 텔레비전이 있습니다.",
+                "부모님 방에 컴퓨터가 없습니다.",
+                "위층에 방, 화장실, 거실이 있습니다.",
+                "로빈 씨의 방 오른쪽에 옷장이 있습니다."
+              ],
+              "correct": 1
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분의 고향집을 소개해 보십시오.",
+              "prompt_ru": "Расскажите о своём доме на родине."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-hometown-house",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-hometown-house",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "이층집",
+              "translation_ru": "двухэтажный дом"
+            },
+            {
+              "ko": "거실",
+              "translation_ru": "гостиная"
+            },
+            {
+              "ko": "부엌",
+              "translation_ru": "кухня"
+            },
+            {
+              "ko": "아래층",
+              "translation_ru": "нижний этаж"
+            },
+            {
+              "ko": "화장실",
+              "translation_ru": "туалет, ванная"
+            },
+            {
+              "ko": "부모님",
+              "translation_ru": "родители"
+            },
+            {
+              "ko": "텔레비전",
+              "translation_ru": "телевизор"
+            },
+            {
+              "ko": "소파",
+              "translation_ru": "диван"
+            },
+            {
+              "ko": "식탁",
+              "translation_ru": "обеденный стол"
+            },
+            {
+              "ko": "옷장",
+              "translation_ru": "шкаф для одежды"
+            },
+            {
+              "ko": "위층",
+              "translation_ru": "верхний этаж"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-04.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 66,
+      "page_role": "content",
+      "source_photo": "IMG_1002",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "이름",
+              "언제",
+              "어디에서",
+              "무엇을",
+              "합니까?"
+            ],
+            "rows": [
+              [
+                "왕루",
+                "토요일",
+                "수영장",
+                "수영",
+                "배우다"
+              ],
+              [
+                "파하드",
+                "",
+                "마트",
+                "빵과 우유",
+                "사다"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "안녕하세요? 파하드 씨. 어디에 갑니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 왕루 씨. 안녕하세요? 저는 지금 마트에 갑니다."
+            },
+            {
+              "speaker": "왕루",
+              "text": "마트에서 무엇을 합니까?",
+              "emphasized": [
+                "에서"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "마트에서 빵과 우유를 삽니다. 왕루 씨는 어디에 갑니까?",
+              "emphasized": [
+                "에서",
+                "과"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 수영장에 갑니다. 수영장에서 수영을 배웁니다.",
+              "emphasized": [
+                "에서"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "수영장에 매일 갑니까?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "아니요, 토요일에만 갑니다.",
+              "emphasized": [
+                "에만"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "",
+              "",
+              "언제",
+              "어디에서",
+              "무엇을",
+              "합니까?"
+            ],
+            "rows": [
+              [
+                "1)",
+                "나",
+                "주말",
+                "커피숍",
+                "커피",
+                "마시다"
+              ],
+              [
+                "",
+                "친구",
+                "",
+                "공원",
+                "산책",
+                "하다"
+              ],
+              [
+                "2)",
+                "나",
+                "",
+                "",
+                "",
+                ""
+              ],
+              [
+                "",
+                "친구",
+                "",
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "산책",
+              "translation_ru": "прогулка"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

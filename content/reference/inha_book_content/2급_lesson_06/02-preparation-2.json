@@ -1,0 +1,969 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-06.json",
+  "section": "준비하기 2",
+  "pages": [
+    {
+      "page_number": 98,
+      "page_role": "content",
+      "source_photo": "IMG_0711",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-delivery-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "배달 음식을 주문하기",
+          "title_ru": "Заказывать еду с доставкой",
+          "illustration": {
+            "storage_path": "lesson_6/illustration_2_food_delivery.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "222",
+          "speakers": [
+            "아저씨",
+            "흐엉"
+          ],
+          "lines": [
+            {
+              "speaker": "아저씨",
+              "text": "네, 인하중국집입니다."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "인하빌라 109동 503호인데요. 지금 짜장면 배달됩니까?"
+            },
+            {
+              "speaker": "아저씨",
+              "text": "네, 배달됩니다. 몇 그릇을 배달해 드릴까요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "짜장면 일 인분하고 짬뽕 일 인분을 배달해 주세요."
+            },
+            {
+              "speaker": "아저씨",
+              "text": "네, 알겠습니다."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "참, 탕수육도 하나 배달해 주세요. 몇 분 후에 도착해요?"
+            },
+            {
+              "speaker": "아저씨",
+              "text": "15분 후에 배달될 겁니다."
+            },
+            {
+              "speaker": "",
+              "text": "〈잠시 후〉"
+            },
+            {
+              "speaker": "아저씨",
+              "text": "식사 배달 왔습니다. 식사하시고 그릇은 문 앞에 놓아 두세요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 알겠어요."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "인하중국집",
+              "translation_ru": "название китайского ресторана: «Инха» + 중국집 (форма от 중국집 — китайский ресторан)"
+            },
+            {
+              "ko": "배달됩",
+              "translation_ru": "форма от 배달되다 (доставляться)"
+            },
+            {
+              "ko": "드릴",
+              "translation_ru": "форма от 드리다 (давать, уважительно вместо 주다)"
+            },
+            {
+              "ko": "도착해",
+              "translation_ru": "форма от 도착하다 (прибыть, приехать)"
+            },
+            {
+              "ko": "식사",
+              "translation_ru": "приём пищи, трапеза"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-delivery-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "빌라",
+              "translation_ru": "вилла (малоэтажный жилой дом)",
+              "group": "중국집"
+            },
+            {
+              "ko": "짜장면",
+              "translation_ru": "чачжанмён (лапша с чёрным соевым соусом)",
+              "group": "중국집"
+            },
+            {
+              "ko": "배달되다",
+              "translation_ru": "доставляться",
+              "group": "중국집"
+            },
+            {
+              "ko": "짬뽕",
+              "translation_ru": "чамппон (острый суп с лапшой и морепродуктами)",
+              "group": "중국집"
+            },
+            {
+              "ko": "탕수육",
+              "translation_ru": "тансуюк (кисло-сладкое мясо)",
+              "group": "중국집"
+            },
+            {
+              "ko": "짓다",
+              "translation_ru": "строить (дом); составлять (предложение) — неправильный ㅅ",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "붓다",
+              "translation_ru": "наливать; опухать — неправильный ㅅ",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "젓다",
+              "translation_ru": "мешать, помешивать — неправильный ㅅ",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "스푼",
+              "translation_ru": "ложка",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "자",
+              "translation_ru": "линейка",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "줄",
+              "translation_ru": "линия, черта",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "똑바로",
+              "translation_ru": "прямо, ровно",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "긋다",
+              "translation_ru": "проводить (линию) — неправильный ㅅ",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "미소",
+              "translation_ru": "улыбка",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "컵라면",
+              "translation_ru": "лапша быстрого приготовления в стакане",
+              "group": "중국집"
+            },
+            {
+              "ko": "감다",
+              "translation_ru": "мыть (голову), закрывать (глаза)",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "빨다",
+              "translation_ru": "стирать",
+              "group": "ㅅ"
+            },
+            {
+              "ko": "포장",
+              "translation_ru": "упаковка"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "중국집",
+              "title_ru": "Заказ еды",
+              "items": [
+                {
+                  "ko": "배달하다",
+                  "translation_ru": "доставлять"
+                },
+                {
+                  "ko": "그릇",
+                  "translation_ru": "миска, порция"
+                },
+                {
+                  "ko": "인분",
+                  "translation_ru": "порция"
+                },
+                {
+                  "ko": "영수증",
+                  "translation_ru": "чек"
+                },
+                {
+                  "ko": "택배",
+                  "translation_ru": "курьерская доставка"
+                },
+                {
+                  "ko": "주문하다",
+                  "translation_ru": "заказывать"
+                }
+              ]
+            },
+            {
+              "title": "ㅅ",
+              "title_ru": "Глаголы на ㅅ",
+              "items": [
+                {
+                  "ko": "낫다",
+                  "translation_ru": "выздоравливать"
+                },
+                {
+                  "ko": "잇다",
+                  "translation_ru": "соединять"
+                },
+                {
+                  "ko": "빗다",
+                  "translation_ru": "причёсывать"
+                },
+                {
+                  "ko": "벗다",
+                  "translation_ru": "снимать"
+                },
+                {
+                  "ko": "씻다",
+                  "translation_ru": "мыть"
+                },
+                {
+                  "ko": "웃다",
+                  "translation_ru": "смеяться"
+                }
+              ]
+            },
+            {
+              "title": "놓다",
+              "title_ru": "Положить и оставить",
+              "items": [
+                {
+                  "ko": "넣다",
+                  "translation_ru": "класть внутрь"
+                },
+                {
+                  "ko": "두다",
+                  "translation_ru": "оставлять"
+                },
+                {
+                  "ko": "저장하다",
+                  "translation_ru": "сохранять"
+                },
+                {
+                  "ko": "켜다",
+                  "translation_ru": "включать"
+                },
+                {
+                  "ko": "끄다",
+                  "translation_ru": "выключать"
+                },
+                {
+                  "ko": "열다",
+                  "translation_ru": "открывать"
+                },
+                {
+                  "ko": "닫다",
+                  "translation_ru": "закрывать"
+                },
+                {
+                  "ko": "밑줄",
+                  "translation_ru": "подчёркивание"
+                },
+                {
+                  "ko": "외우다",
+                  "translation_ru": "заучивать"
+                }
+              ]
+            },
+            {
+              "title": "일상",
+              "title_ru": "Быт и здоровье",
+              "items": [
+                {
+                  "ko": "몸살",
+                  "translation_ru": "ломота в теле"
+                },
+                {
+                  "ko": "감기",
+                  "translation_ru": "простуда"
+                },
+                {
+                  "ko": "칼국수",
+                  "translation_ru": "калгуксу"
+                },
+                {
+                  "ko": "세탁기",
+                  "translation_ru": "стиральная машина"
+                },
+                {
+                  "ko": "가스레인지",
+                  "translation_ru": "газовая плита"
+                },
+                {
+                  "ko": "청소",
+                  "translation_ru": "уборка"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 99,
+      "page_role": "content",
+      "source_photo": "IMG_0712",
+      "blocks": [
+        {
+          "type": "grammar_point",
+          "id": "grammar-4",
+          "toc_section": "준비하기 2",
+          "pattern": "ㅅ 동사",
+          "section": "4",
+          "explanation": "**Смысл:** правило спряжения глаголов, у которых основа кончается на ㅅ. Перед гласным окончанием ㅅ выпадает.",
+          "examples": [
+            "두 문장을 이어서 한 문장으로 만들어요.",
+            "이 약을 먹고 빨리 나으세요.",
+            "집에 오면 손을 먼저 씻으세요."
+          ],
+          "vocab": [
+            {
+              "ko": "잇다",
+              "translation_ru": "соединять, связывать (неправильный, ㅅ выпадает)"
+            },
+            {
+              "ko": "낫다",
+              "translation_ru": "выздоравливать; быть лучше (неправильный, ㅅ выпадает)"
+            },
+            {
+              "ko": "문장",
+              "translation_ru": "предложение (грамматическая единица)"
+            },
+            {
+              "ko": "나으",
+              "translation_ru": "форма от 낫다 (выздоравливать)"
+            },
+            {
+              "ko": "이어",
+              "translation_ru": "форма от 잇다 (соединять, связывать)"
+            },
+            {
+              "ko": "손",
+              "translation_ru": "кисть, рука"
+            },
+            {
+              "ko": "씻",
+              "translation_ru": "форма от 씻다 (мыть)"
+            },
+            {
+              "ko": "먼저",
+              "translation_ru": "сначала, первым делом"
+            }
+          ],
+          "rules": [
+            "ㅅ받침 + гласное окончание → ㅅ выпадает\n**짓다 → 지어요**",
+            "После того как ㅅ выпала, гласные не сливаются\n**낫다 → 나아요** (не ~~나요~~)"
+          ],
+          "rules_table": {
+            "head": [
+              "Слово",
+              "Форма",
+              "Значение"
+            ],
+            "rows": [
+              [
+                "짓다",
+                "지어요",
+                "строить; готовить (밥); давать имя"
+              ],
+              [
+                "낫다",
+                "나아요",
+                "выздоравливать; быть лучше"
+              ],
+              [
+                "붓다",
+                "부어요",
+                "наливать; опухать"
+              ],
+              [
+                "젓다",
+                "저어요",
+                "размешивать"
+              ],
+              [
+                "긋다",
+                "그어요",
+                "проводить (линию)"
+              ],
+              [
+                "잇다",
+                "이어요",
+                "соединять"
+              ]
+            ],
+            "caption": "**Неправильные глаголы и прилагательные:**"
+          },
+          "rules_first": true
+        },
+        {
+          "type": "grammar_point",
+          "id": "grammar-5",
+          "toc_section": "준비하기 2",
+          "pattern": "AV-아/어/여 놓다/두다",
+          "section": "5",
+          "explanation": "**Смысл:** конструкция, которую используют, когда действие сделано и его результат сохраняется — «сделал заранее, и так и лежит/стоит».",
+          "examples": [
+            "가: 책과 공책이 어디에 있어요?\n나: 책과 공책은 가방 안에 넣어 놓았어요.",
+            "내일은 바쁘니까 오늘 여행 준비를 다 해 놓으세요."
+          ],
+          "rules": [
+            "в зависимости от последней гласной:",
+            "– ㅏ/ㅗ → -아 놓다/두다\n**닫다 → 닫아 놓다**",
+            "– остальные гласные → -어 놓다/두다\n**열다 → 열어 놓다**",
+            "– 하다 → 해 놓다/두다\n**준비하다 → 준비해 놓다**",
+            "놓다 и 두다 почти взаимозаменяемы",
+            "Работает со всеми временами (과거, 현재, 미래) и предположением"
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 100,
+      "page_role": "content",
+      "source_photo": "IMG_0713",
+      "blocks": [
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a-1",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "붓다 [아/어요]"
+              ],
+              "answers": [
+                "부어요"
+              ]
+            }
+          ],
+          "template": [
+            "저는 라면을 먹고 자면 얼굴이 {0}."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a-2",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "젓다 [아/어/여서]"
+              ],
+              "answers": [
+                "저어서"
+              ]
+            }
+          ],
+          "template": [
+            "커피 스푼이 없으면 나무젓가락으로 {0} 드세요."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a-3",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "긋다 [(으)세요]"
+              ],
+              "answers": [
+                "그으세요"
+              ]
+            }
+          ],
+          "template": [
+            "자를 사용해서 줄을 똑바로 {0}."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a-4",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "짓다 [(으)면]"
+              ],
+              "answers": [
+                "지으면"
+              ]
+            }
+          ],
+          "template": [
+            "흐엉 씨가 미소를 {0} 정말 예뻐요."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a-5",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "낫다 [았/었어요]"
+              ],
+              "answers": [
+                "나았어요"
+              ]
+            }
+          ],
+          "template": [
+            "감기에 걸려서 약을 먹고 지금은 다 {0}."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a-6",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "긋다 [습니다]"
+              ],
+              "answers": [
+                "긋습니다"
+              ]
+            }
+          ],
+          "template": [
+            "새 단어에 줄을 {0}."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a-7",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "짓다 [-고]"
+              ],
+              "answers": [
+                "짓고"
+              ]
+            }
+          ],
+          "template": [
+            "고향에 집을 {0} 부모님과 함께 살고 싶어요."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4a-8",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "짓다 [았/었어요]"
+            ],
+            "dialogue": [
+              "가: 고향에 가서 집을 지었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "붓다 [-고]"
+              ],
+              "answers": [
+                "붓고"
+              ]
+            }
+          ],
+          "template": [
+            "컵라면에 뜨거운 물을 {0} 3분쯤 기다리세요."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4b-1",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "씻다 [(으)면]"
+              ],
+              "answers": [
+                "씻으면"
+              ]
+            }
+          ],
+          "template": [
+            "운동을 하고 바로 {0} 기분이 좋아요."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4b-2",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "빗다 [아/어요]"
+              ],
+              "answers": [
+                "빗어요"
+              ]
+            }
+          ],
+          "template": [
+            "샤워할 때 머리를 감고 예쁘게 {0}."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4b-3",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "웃다 [아/어요]"
+              ],
+              "answers": [
+                "웃어요"
+              ]
+            }
+          ],
+          "template": [
+            "아기는 배부르면 잘 {0}."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4b-4",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "벗다 [-고]"
+              ],
+              "answers": [
+                "벗고"
+              ]
+            }
+          ],
+          "template": [
+            "방에 들어갈 때 신발을 {0} 들어가세요."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-4b-5",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기4",
+          "grammar_ref": "grammar-4",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "웃다 [아/어요]"
+            ],
+            "dialogue": [
+              "가: 아기는 엄마 얼굴을 보면 웃어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "빗다 [-고]"
+              ],
+              "answers": [
+                "빗고"
+              ]
+            }
+          ],
+          "template": [
+            "사진을 찍기 전에 머리를 {0} 거울을 보세요."
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 101,
+      "page_role": "content",
+      "source_photo": "IMG_0714",
+      "blocks": [
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-5a",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "채소",
+              "채소를 깨끗하게 씻다"
+            ],
+            "dialogue": [
+              "가: 채소를 어떻게 했어요?",
+              "나: 채소를 깨끗하게 씻어 놓았어요. / 채소를 깨끗하게 씻어 두었어요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "우유",
+                "우유를 사서 냉장고에 넣다"
+              ],
+              "answers": [
+                "우유",
+                "우유를 사서 냉장고에 넣어"
+              ]
+            },
+            {
+              "given": [
+                "옷",
+                "옷을 빨아서 옷장에 걸다"
+              ],
+              "answers": [
+                "옷",
+                "옷을 빨아서 옷장에 걸어"
+              ]
+            },
+            {
+              "given": [
+                "택배",
+                "택배를 받아서 정리하다"
+              ],
+              "answers": [
+                "택배",
+                "택배를 받아서 정리해"
+              ]
+            },
+            {
+              "given": [
+                "사과",
+                "사과를 씻어서 깎다"
+              ],
+              "answers": [
+                "사과",
+                "사과를 씻어서 깎아"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}를 어떻게 했어요?",
+            "나: {1} 놓았어요. / {1} 두었어요."
+          ]
+        },
+        {
+          "type": "grammar_exercise",
+          "id": "exercise-5b",
+          "toc_section": "준비하기 2",
+          "exercise_title": "연습하기5",
+          "grammar_ref": "grammar-5",
+          "prompt": "다음과 같이 이야기해 보십시오.",
+          "example": {
+            "given": [
+              "새 학기가 시작되다",
+              "미리 책을 읽다"
+            ],
+            "dialogue": [
+              "가: 새 학기가 시작되기 전에 무엇을 해야 해요?",
+              "나: 미리 책을 읽어 놓으세요. / 미리 책을 읽어 두세요."
+            ]
+          },
+          "items": [
+            {
+              "given": [
+                "고향에 가다",
+                "부모님께 드릴 선물을 사다"
+              ],
+              "answers": [
+                "고향에 가",
+                "부모님께 드릴 선물을 사"
+              ]
+            },
+            {
+              "given": [
+                "여행을 가다",
+                "여권을 준비하다"
+              ],
+              "answers": [
+                "여행을 가",
+                "여권을 준비해"
+              ]
+            },
+            {
+              "given": [
+                "택배를 보내다",
+                "포장을 하고 주소를 쓰다"
+              ],
+              "answers": [
+                "택배를 보내",
+                "포장을 하고 주소를 써"
+              ]
+            },
+            {
+              "given": [
+                "이사하다",
+                "집주인에게 이사 날짜를 말하다"
+              ],
+              "answers": [
+                "이사하",
+                "집주인에게 이사 날짜를 말해"
+              ]
+            }
+          ],
+          "template": [
+            "가: {0}기 전에 무엇을 해야 해요?",
+            "나: 미리 {1} 놓으세요. / 미리 {1} 두세요."
+          ]
+        }
+      ]
+    }
+  ]
+}

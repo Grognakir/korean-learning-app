@@ -1,0 +1,174 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-10.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 168,
+      "page_role": "content",
+      "source_photo": "IMG_1299",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-style",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "어울리는 스타일에 대한 대화를 듣고 말하기",
+          "title_ru": "Слушать диалог о подходящем стиле и говорить",
+          "audio_id": "239",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "파하드",
+                "text": "아멜리 씨, 헤어스타일을 바꿨네요? 앞머리를 자르니까 더 귀여워 보여요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "아, 파하드 씨, 고마워요. 앞머리를 잘라 봤는데 괜찮은가요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 아주 잘 어울려요. 그리고 하얀색 원피스를 입고 있으니까 더 화사해 보여요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "날씨가 따뜻해지니까 밝은 색 옷이 예뻐 보여서 샀어요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "저도 티셔츠를 사려고 하는데 어떤 옷이 좋을까요?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "제 생각에 파하드 씨는 티셔츠보다 셔츠가 더 잘 어울릴 것 같아요. 그리고 어두운 색의 옷보다 저처럼 이렇게 밝은 옷을 입는 게 어때요?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "평소에 밝은 색 옷은 잘 안 입는 편인데 저한테 어울릴까요?"
+              },
+              {
+                "speaker": "아멜리",
+                "text": "네, 파하드 씨는 밝은 색 옷을 입으면 인상이 더 밝아 보일 것 같아요. 그리고 줄무늬나 체크무늬 셔츠도 잘 어울릴 것 같아요."
+              },
+              {
+                "speaker": "파하드",
+                "text": "그래요? 아멜리 씨의 말을 들으니까 스타일을 한번 바꿔 보고 싶네요."
+              },
+              {
+                "speaker": "아멜리",
+                "text": "우리 같이 쇼핑하러 가요. 제가 파하드 씨에게 어울리는 옷을 추천해 줄게요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇입니까? 이야기해 보십시오.",
+            "prompt_ru": "Что это? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_10/illustration_3_style_advice.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "open",
+              "prompt": "아멜리에게 무엇이 잘 어울립니까?",
+              "prompt_ru": "Что идёт Амели?"
+            },
+            {
+              "kind": "open",
+              "prompt": "파하드에게 무엇이 잘 어울립니까?",
+              "prompt_ru": "Что идёт Фахаду?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "아멜리는 헤어스타일을 바꾸고 싶어 합니다.",
+                "아멜리는 어두운 색 원피스를 입고 있습니다.",
+                "파하드는 평소에 어두운 색 옷을 잘 안 입습니다.",
+                "파하드는 밝은 색 옷을 입으면 얼굴이 밝아 보일 겁니다."
+              ],
+              "correct": 3
+            }
+          ],
+          "followup": "여러분에게 어떤 스타일이 잘 어울립니까? 친구들과 이야기해 보십시오.",
+          "followup_ru": "Какой стиль вам идёт? Расскажите друзьям."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-style",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "화사하다",
+              "translation_ru": "яркий, нарядный, сияющий",
+              "group": "스타일"
+            },
+            {
+              "ko": "티셔츠",
+              "translation_ru": "футболка"
+            },
+            {
+              "ko": "체크무늬",
+              "translation_ru": "клетчатый узор"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "스타일",
+              "title_ru": "Мода и стиль",
+              "items": [
+                {
+                  "ko": "패션",
+                  "translation_ru": "мода"
+                },
+                {
+                  "ko": "디자인",
+                  "translation_ru": "дизайн"
+                },
+                {
+                  "ko": "인기",
+                  "translation_ru": "популярность"
+                },
+                {
+                  "ko": "유행하다",
+                  "translation_ru": "быть модным"
+                }
+              ]
+            },
+            {
+              "title": "선택",
+              "title_ru": "Выбор и совет",
+              "items": [
+                {
+                  "ko": "추천하다",
+                  "translation_ru": "рекомендовать"
+                },
+                {
+                  "ko": "고르다",
+                  "translation_ru": "выбирать"
+                },
+                {
+                  "ko": "발표",
+                  "translation_ru": "доклад, презентация"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-12.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 203,
+      "page_role": "content",
+      "source_photo": "IMG_1130",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-next-time",
+          "toc_section": "문화 이해하기",
+          "title": "‘다음에 밥 한번 먹읍시다!’",
+          "title_ru": "«Давайте как-нибудь пообедаем!»",
+          "illustration": {
+            "storage_path": "lesson_12/illustration_5_casual_invitation.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Что он делает? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "제 이름은 비사이입니다. 저는 캄보디아에서 왔습니다. 작년에 한국에 와서 1년 6개월 동안 살았습니다. 아직 한국 생활에 익숙하지 않습니다. 하지만 대학교에서 한국 친구들도 많이 사귀어서 한국 생활에 적응했습니다. 그런데 가끔 친구들의 말을 이해할 수 없습니다."
+            },
+            {
+              "text": "지난주에 도서관 앞에서 우연히 친구를 만났습니다. 그 친구와 자주 만날 수 없어서 정말 반가웠습니다. 인사도 하고 안부도 물어봤습니다. 이야기를 한 후에 친구가 말했습니다."
+            },
+            {
+              "text": "“비사이 씨, 다음에 밥 한번 먹읍시다.”"
+            },
+            {
+              "text": "친구의 말을 듣고 기분이 좋아서 대답했습니다."
+            },
+            {
+              "text": "“네, 좋아요. 언제 먹을까요? 저는 오늘 5시에 수업이 끝나요.”"
+            },
+            {
+              "text": "친구는 잠시 말이 없었습니다. 그리고 웃으면서 다시 말했습니다."
+            },
+            {
+              "text": "“음… 다음에 시간이 있으면 밥을 먹읍시다. 제가 연락할게요.”"
+            },
+            {
+              "text": "저는 계속 기다렸습니다. 하지만 전화가 오지 않았습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-next-time",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "‘다음에 밥 한번 먹읍시다!’",
+          "title_ru": "«Давайте как-нибудь пообедаем!»",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "비사이 씨는 왜 당황했습니까?",
+              "prompt_ru": "Почему Бисаи растерялся?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라에는 어떤 인사가 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Какие приветствия есть в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-next-time",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "익숙하다",
+              "translation_ru": "быть привычным, знакомым"
+            },
+            {
+              "ko": "사귀다",
+              "translation_ru": "дружить, заводить знакомство"
+            },
+            {
+              "ko": "적응하다",
+              "translation_ru": "адаптироваться, привыкать"
+            },
+            {
+              "ko": "가끔",
+              "translation_ru": "иногда"
+            },
+            {
+              "ko": "우연히",
+              "translation_ru": "случайно"
+            },
+            {
+              "ko": "안부",
+              "translation_ru": "весть о благополучии, «как дела»"
+            },
+            {
+              "ko": "한번",
+              "translation_ru": "как-нибудь, разок"
+            },
+            {
+              "ko": "대답하다",
+              "translation_ru": "отвечать"
+            },
+            {
+              "ko": "잠시",
+              "translation_ru": "ненадолго"
+            },
+            {
+              "ko": "말",
+              "translation_ru": "слово, речь"
+            },
+            {
+              "ko": "계속",
+              "translation_ru": "постоянно, продолжая"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-12a",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㄳ’",
+          "audio_id": "148",
+          "examples": [
+            {
+              "text": "삯",
+              "translation_ru": "плата"
+            },
+            {
+              "text": "삯이",
+              "translation_ru": "плата (+ частица 이)"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-12b",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 ‘ㄺ’",
+          "audio_id": null,
+          "examples": [
+            {
+              "text": "닭",
+              "translation_ru": "курица"
+            },
+            {
+              "text": "읽다",
+              "translation_ru": "читать"
+            },
+            {
+              "text": "닭이",
+              "translation_ru": "курица (+ частица 이)"
+            },
+            {
+              "text": "읽어서",
+              "translation_ru": "прочитав"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

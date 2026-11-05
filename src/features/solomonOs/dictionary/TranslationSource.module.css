@@ -1,0 +1,10 @@
+.source { position:relative; flex:none; display:flex; align-items:center; }
+.source .trigger { display:grid; place-items:center; width:28px; height:28px; min-height:28px; padding:0; border:0; border-radius:3px; background:transparent; color:var(--soft); }
+.trigger > span { display:grid; place-items:center; width:15px; height:15px; border:1px solid currentColor; border-radius:50%; font:11px/1 var(--mono); }
+.source .trigger:hover:not(:disabled), .source .trigger[aria-expanded="true"] { background:transparent; color:var(--bright); }
+.source .trigger:focus-visible { outline:none; }
+.trigger:focus-visible > span { outline:2px solid var(--mid); outline-offset:3px; }
+.tooltip { position:absolute; z-index:4; top:calc(100% + 6px); right:0; width:min(290px,calc(100cqw - 32px)); max-height:160px; overflow-y:auto; overscroll-behavior:contain; padding:9px 10px; border:1px solid var(--line); border-radius:4px; background:var(--panel); color:var(--text); font:12px/1.45 var(--sans); overflow-wrap:anywhere; scrollbar-width:thin; scrollbar-color:var(--line) var(--panel); }
+.tooltip > span { color:var(--bright); }
+.tooltip small { display:block; margin-top:5px; color:var(--soft); font-size:11px; }
+@media(max-width:600px),(pointer:coarse) { .source .trigger { width:40px; height:40px; min-height:40px; } }

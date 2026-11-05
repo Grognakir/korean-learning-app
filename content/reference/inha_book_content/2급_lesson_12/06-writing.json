@@ -1,0 +1,57 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-12.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 204,
+      "page_role": "content",
+      "source_photo": "IMG_1443",
+      "blocks": [
+        {
+          "type": "writing_exercise",
+          "id": "writing-letter",
+          "toc_section": "쓰기",
+          "title": "사과 편지를 써 보십시오.",
+          "title_ru": "Напишите письмо с извинениями.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Начало: кому адресовано письмо.",
+              "questions": [
+                {
+                  "kr": "누구에게 쓰는 사과 편지입니까?",
+                  "ru": "Кому вы пишете письмо с извинениями?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Середина: причина письма.",
+              "questions": [
+                {
+                  "kr": "왜 씁니까?",
+                  "ru": "Почему вы пишете?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Конец: за что вы извиняетесь.",
+              "questions": [
+                {
+                  "kr": "무엇을 사과합니까?",
+                  "ru": "За что вы извиняетесь?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

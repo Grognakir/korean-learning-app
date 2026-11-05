@@ -1,0 +1,169 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-06.json",
+  "section": "쓰기",
+  "pages": [
+    {
+      "page_number": 105,
+      "page_role": "content",
+      "source_photo": "IMG_0718",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-writing",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "음식",
+              "title_ru": "Блюда и вкус",
+              "items": [
+                {
+                  "ko": "반찬",
+                  "translation_ru": "закуска к рису"
+                },
+                {
+                  "ko": "국",
+                  "translation_ru": "суп"
+                },
+                {
+                  "ko": "찌개",
+                  "translation_ru": "густой суп"
+                },
+                {
+                  "ko": "면",
+                  "translation_ru": "лапша"
+                },
+                {
+                  "ko": "한식",
+                  "translation_ru": "корейская кухня"
+                },
+                {
+                  "ko": "양식",
+                  "translation_ru": "европейская кухня"
+                },
+                {
+                  "ko": "중식",
+                  "translation_ru": "китайская кухня"
+                },
+                {
+                  "ko": "일식",
+                  "translation_ru": "японская кухня"
+                },
+                {
+                  "ko": "비빔밥",
+                  "translation_ru": "бибимбап"
+                },
+                {
+                  "ko": "김밥",
+                  "translation_ru": "кимбап"
+                },
+                {
+                  "ko": "불고기",
+                  "translation_ru": "пулькоги"
+                },
+                {
+                  "ko": "잡채",
+                  "translation_ru": "чапчхэ"
+                },
+                {
+                  "ko": "냉면",
+                  "translation_ru": "холодная лапша"
+                }
+              ]
+            },
+            {
+              "title": "방법",
+              "title_ru": "Как приготовить",
+              "items": [
+                {
+                  "ko": "재료",
+                  "translation_ru": "ингредиенты"
+                },
+                {
+                  "ko": "썰다",
+                  "translation_ru": "резать"
+                },
+                {
+                  "ko": "섞다",
+                  "translation_ru": "перемешивать"
+                },
+                {
+                  "ko": "끓이다",
+                  "translation_ru": "варить"
+                },
+                {
+                  "ko": "굽다",
+                  "translation_ru": "жарить"
+                },
+                {
+                  "ko": "순서",
+                  "translation_ru": "порядок"
+                },
+                {
+                  "ko": "맛있다",
+                  "translation_ru": "вкусный"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "writing_exercise",
+          "id": "writing-hometown-food",
+          "toc_section": "쓰기",
+          "title": "고향 음식을 소개하는 글을 써 보십시오.",
+          "title_ru": "Напишите текст, представляющий еду вашей родины.",
+          "outline_prompt": "개요를 써 보십시오.",
+          "outline_prompt_ru": "Напишите план.",
+          "outline": [
+            {
+              "stage": "처음",
+              "explanation": "Введение: что это за еда и когда её едят.",
+              "questions": [
+                {
+                  "kr": "그 음식은 무엇입니까?",
+                  "ru": "Что это за еда?"
+                },
+                {
+                  "kr": "그 음식은 언제 먹습니까?",
+                  "ru": "Когда её едят?"
+                }
+              ]
+            },
+            {
+              "stage": "가운데",
+              "explanation": "Основная часть: какие ингредиенты нужны и как готовится блюдо.",
+              "questions": [
+                {
+                  "kr": "그 음식에는 어떤 재료가 필요합니까?",
+                  "ru": "Какие ингредиенты нужны?"
+                },
+                {
+                  "kr": "그 음식은 어떻게 만듭니까?",
+                  "ru": "Как она готовится?"
+                }
+              ]
+            },
+            {
+              "stage": "끝",
+              "explanation": "Заключение: какой у блюда вкус.",
+              "questions": [
+                {
+                  "kr": "그 음식의 맛은 어떻습니까?",
+                  "ru": "Какой у неё вкус?"
+                }
+              ]
+            }
+          ],
+          "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
+          "manuscript_prompt_ru": "Напишите текст на основе плана выше."
+        }
+      ]
+    }
+  ]
+}

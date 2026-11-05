@@ -1,3 +1,4 @@
+import { readLessonSource } from "../scripts/lib/lesson-source";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -61,7 +62,7 @@ describe("словарное покрытие уроков", () => {
     for (const file of lessonFiles(
       join(process.cwd(), "content/reference/inha_book_content"),
     )) {
-      collectLocalVocab(JSON.parse(readFileSync(file, "utf8")), localVocab);
+      collectLocalVocab(readLessonSource(file), localVocab);
     }
 
     const missing = localVocab.filter(({ ko, translation_ru }) => {

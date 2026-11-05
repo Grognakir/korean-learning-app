@@ -1,0 +1,133 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-12.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 201,
+      "page_role": "content",
+      "source_photo": "IMG_1440",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "흐엉은 어제 룸메이트와 말다툼을 했습니다. 그 친구가 흐엉의 물건을 함부로 사용했기 때문입니다. 그래서 로빈은 흐엉에게 화해하는 방법을 조언하고 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "로빈",
+            "흐엉"
+          ],
+          "lines": [
+            {
+              "speaker": "로빈",
+              "text": "흐엉 씨, 기분이 안 좋아 보여요. 무슨 일 있어요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "아, 어제 룸메이트와 말다툼을 했어요. 그 친구가 제 물건을 함부로 사용해서요."
+            },
+            {
+              "speaker": "로빈",
+              "text": "아, 그 친구가 흐엉 씨를 너무 편하게 생각했군요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 왜 저에게 물어보지 않고 제 물건을 사용하는지 모르겠어요. 그리고 제 물건을 사용하고 나서 제자리에 놓아 두지도 않아서 정말 화가 났어요. 다른 곳으로 이사를 가서 혼자 살까 봐요."
+            },
+            {
+              "speaker": "로빈",
+              "text": "그 친구가 일부러 그런 건 아닐 거예요. 아마도 그 친구의 안 좋은 습관일 수도 있어요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 그런 것 같아요. 그 친구는 제가 말을 안 했으면 뭘 잘못했는지 몰랐을 거예요."
+            },
+            {
+              "speaker": "로빈",
+              "text": "사람은 누구나 단점이 있어요. 그 친구에게 화가 난 이유를 이야기를 하고 나서 화해하면 사이가 더욱 좋아질 거예요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "음. 그렇게 하는 게 좋은 방법이겠군요."
+            },
+            {
+              "speaker": "로빈",
+              "text": "그럼요. 넓은 마음으로 먼저 화해의 말을 전해 보세요."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "로빈 씨 덕분에 화해를 위한 좋은 방법을 알게 되었어요. 고마워요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 누구와 싸웠습니까?"
+            },
+            {
+              "text": "2) 왜 싸웠습니까?"
+            },
+            {
+              "text": "3) 싸웠을 때 어떻게 하면 좋습니까?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "룸메이트",
+              "translation_ru": "сосед по комнате"
+            },
+            {
+              "ko": "함부로",
+              "translation_ru": "как попало, без спроса, бесцеремонно"
+            },
+            {
+              "ko": "제자리",
+              "translation_ru": "своё место"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-01.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 20,
+      "page_role": "content",
+      "source_photo": "IMG_0958",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-introduction",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "자기소개를 듣고 말하기",
+          "title_ru": "Послушать и обсудить знакомство",
+          "audio_id": "103",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "왕루",
+                "text": "안녕하십니까? 처음 뵙겠습니다. 저는 왕루입니다."
+              },
+              {
+                "speaker": "파하드",
+                "text": "네, 안녕하세요? 처음 뵙겠습니다. 제 이름은 파하드입니다. 왕루 씨는 어디에서 왔습니까?"
+              },
+              {
+                "speaker": "왕루",
+                "text": "저는 중국에서 왔습니다. 파하드 씨도 중국 사람입니까?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아니요, 저는 중국 사람이 아닙니다. 사우디 사람입니다."
+              },
+              {
+                "speaker": "왕루",
+                "text": "파하드 씨는 회사원입니까?"
+              },
+              {
+                "speaker": "파하드",
+                "text": "아니요, 저는 회사원이 아닙니다. 학생입니다."
+              },
+              {
+                "speaker": "왕루",
+                "text": "저도 학생입니다. 만나서 반갑습니다."
+              },
+              {
+                "speaker": "파하드",
+                "text": "만나서 반갑습니다."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что делают эти люди? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_1/illustration_3_student_introductions.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "table",
+              "prompt": "나라와 직업을 쓰십시오.",
+              "prompt_ru": "Запишите страну и профессию.",
+              "table": {
+                "columns": [
+                  "나라",
+                  "직업"
+                ],
+                "rows": [
+                  "왕루",
+                  "파하드"
+                ]
+              }
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "왕루 씨, 파하드 씨는 처음 만납니다.",
+                "왕루 씨는 중국 사람이 아닙니다.",
+                "파하드 씨는 사우디 사람이 아닙니다.",
+                "왕루 씨, 파하드 씨는 회사원입니다."
+              ],
+              "correct": 0
+            }
+          ],
+          "followup": "친구들에게 자기소개를 해 보십시오.",
+          "followup_ru": "Представьтесь своим друзьям."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-11.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 184,
+      "page_role": "content",
+      "source_photo": "IMG_1425",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "파하드와 박지성은 춘천에 가려고 합니다. 그래서 두 사람은 청량리역에서 만나기로 했습니다. 그런데 파하드는 청량리역에 가는 방법을 잘 모릅니다. 파하드가 청량리역으로 가다가 박지성과 전화로 이야기합니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-route",
+          "toc_section": "말하기",
+          "title": "청량리역으로 가는 방법",
+          "title_ru": "Как добраться до станции Чхонняннни",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "서울빌딩 → 버스 정류장 → 우체국 → 횡단보도 → 편의점 → 행복예식장을 끼고 왼쪽으로 돌다 → 30m → 청량리역 → 춘천행 열차 타는 곳"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "파하드",
+            "박지성"
+          ],
+          "lines": [
+            {
+              "speaker": "파하드",
+              "text": "여보세요? 지성 씨. 지금 버스를 타고 서울빌딩 앞을 지나가고 있는데 어디에서 내리는지 모르겠어요."
+            },
+            {
+              "speaker": "박지성",
+              "text": "네, 파하드 씨. 서울빌딩을 지나서 다음 정류장에서 바로 내리세요. 거기에서 내리면 우체국이 있을 거예요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 지금 내리고 있어요. 우체국이 보이네요."
+            },
+            {
+              "speaker": "박지성",
+              "text": "우체국 앞에 횡단보도가 있지요? 횡단보도를 건너세요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 횡단보도를 건너고 있어요."
+            },
+            {
+              "speaker": "박지성",
+              "text": "횡단보도를 건너면 편의점이 있어요. 편의점에서 오른쪽으로 쭉 오다가 행복예식장을 찾으세요. 행복예식장을 끼고 왼쪽으로 돌아서 30m쯤 오면 청량리역이 있어요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "여기 있네요. 그런데 지성 씨는 어디에 있어요?"
+            },
+            {
+              "speaker": "박지성",
+              "text": "역에 들어오면 춘천행 열차 타는 곳에 서 있어요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 어디에 가고 싶습니까?"
+            },
+            {
+              "text": "2) 무엇을 타고 갈 겁니까?"
+            },
+            {
+              "text": "3) 어디에서 만날 겁니까?"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-summary",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "예식장",
+              "translation_ru": "зал для свадебных церемоний"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

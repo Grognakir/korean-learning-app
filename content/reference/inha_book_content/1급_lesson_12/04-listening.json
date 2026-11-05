@@ -1,0 +1,121 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-12.json",
+  "section": "듣고 말하기",
+  "pages": [
+    {
+      "page_number": 199,
+      "page_role": "content",
+      "source_photo": "IMG_1126",
+      "blocks": [
+        {
+          "type": "comprehension_exercise",
+          "id": "listening-decline",
+          "toc_section": "듣고 말하기",
+          "exercise_kind": "listening",
+          "title": "제안을 거절하기",
+          "title_ru": "Отказываться от предложения",
+          "audio_id": "147",
+          "transcript": {
+            "lines": [
+              {
+                "speaker": "흐엉",
+                "text": "여보세요?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "흐엉 씨, 저 자르갈이에요. 우리 내일 만나지요?"
+              },
+              {
+                "speaker": "흐엉",
+                "text": "네, 제가 영화표를 예매했어요. 7시 영화니까 5시에 만나서 밥을 먹을까요?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "저…… 그런데 흐엉 씨, 미안해서 어떡하지요?"
+              },
+              {
+                "speaker": "흐엉",
+                "text": "네? 무슨 일이 있어요?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "네…… 갑자기 일이 생겨서 내일 만날 수가 없어요. 정말 미안해요."
+              },
+              {
+                "speaker": "흐엉",
+                "text": "아…… 그래요?"
+              },
+              {
+                "speaker": "자르갈",
+                "text": "자주 약속을 바꿔서 미안해요. 우리 다음 주말에 만날까요?"
+              },
+              {
+                "speaker": "흐엉",
+                "text": "글쎄요…… 나중에 제가 연락할게요."
+              },
+              {
+                "speaker": "자르갈",
+                "text": "아, 흐엉 씨, 정말 미안해요."
+              },
+              {
+                "speaker": "흐엉",
+                "text": "아니에요, 괜찮아요. 먼저 전화 끊을게요."
+              }
+            ]
+          },
+          "warmup": {
+            "prompt": "무엇을 합니까? 이야기해 보십시오.",
+            "prompt_ru": "Что они делают? Расскажите.",
+            "illustration": {
+              "storage_path": "lesson_12/illustration_3_cancel_appointment.png",
+              "original_kind": "illustration"
+            }
+          },
+          "group_prompt": "다음을 듣고 물음에 답하십시오.",
+          "group_prompt_ru": "Послушайте и ответьте на вопросы.",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "무슨 이야기를 합니까?",
+              "prompt_ru": "О чём этот разговор?"
+            },
+            {
+              "kind": "choice",
+              "prompt": "들은 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует услышанному.",
+              "choices": [
+                "두 사람은 내일 만나지 않을 겁니다.",
+                "남자는 영화표를 미리 예매했습니다.",
+                "여자는 일이 생겨서 약속을 취소했습니다.",
+                "두 사람은 다음 주말에 다시 만날 겁니다."
+              ],
+              "correct": 0
+            }
+          ],
+          "followup": "약속을 거절하고 싶으면 어떻게 말합니까? 이야기를 해 보십시오.",
+          "followup_ru": "Как вы отказываетесь от договорённости? Расскажите."
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-listening-decline",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "글쎄",
+              "translation_ru": "ну, как сказать… (неуверенный ответ)"
+            },
+            {
+              "ko": "나중",
+              "translation_ru": "позже, потом"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

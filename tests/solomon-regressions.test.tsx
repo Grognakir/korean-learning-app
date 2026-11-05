@@ -52,13 +52,15 @@ describe("активное окно",()=>{
     expect(screen.getByRole("group",{name:"Ваш ответ"})).toBeTruthy();
     result.rerender(view(true));fireEvent.keyDown(document.body,{key:"2"});expect(screen.queryByRole("group",{name:"Ваш ответ"})).toBeNull();
   });
-  it("восстанавливает реплику звонка после перезагрузки OS",()=>{
+  it("после перезагрузки OS восстанавливает реплику по явному открытию телефона",()=>{
     render(<SolomonOs/>);
     fireEvent.keyDown(screen.getByRole("button",{name:/^전화 — Телефон/}),{key:"Enter"});
     fireEvent.click(screen.getByRole("button",{name:/지아: 부재중/}));
     for(let i=0;i<5&&!screen.queryByRole("group",{name:"Ваш ответ"});i++)fireEvent.click(screen.getByRole("button",{name:"▶ 다음"}));
     const before=within(screen.getByRole("group",{name:"Ваш ответ"})).getAllByRole("button").map((b)=>b.textContent);
     cleanup();render(<SolomonOs/>);
+    expect(screen.queryByRole("dialog",{name:"전화 — 지아"})).toBeNull();
+    fireEvent.keyDown(screen.getByRole("button",{name:/^전화 — Телефон/}),{key:"Enter"});
     expect(within(screen.getByRole("group",{name:"Ваш ответ"})).getAllByRole("button").map((b)=>b.textContent)).toEqual(before);
   });
 });

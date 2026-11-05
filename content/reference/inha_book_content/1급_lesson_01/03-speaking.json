@@ -1,0 +1,170 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-01.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 19,
+      "page_role": "content",
+      "source_photo": "IMG_0957",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "이름",
+              "나라",
+              "직업"
+            ],
+            "rows": [
+              [
+                "왕루",
+                "몽골 / 중국 (×)/(○)",
+                "선생님 / 학생 (×)/(○)"
+              ],
+              [
+                "흐엉",
+                "베트남",
+                "학생"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "흐엉"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "안녕하십니까?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 안녕하세요? 제 이름은 흐엉입니다. 이름이 무엇입니까?",
+              "emphasized": [
+                "흐엉입니다",
+                "무엇입니까"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 왕루입니다. 흐엉 씨는 어느 나라 사람입니까?",
+              "emphasized": [
+                "왕루입니다",
+                "사람입니까"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "저는 베트남 사람입니다. 왕루 씨는 몽골 사람입니까?",
+              "emphasized": [
+                "사람입니다",
+                "사람입니까"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "아니요, 저는 몽골 사람이 아닙니다. 중국에서 왔습니다.",
+              "emphasized": [
+                "이 아닙니다"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "왕루 씨는 선생님입니까?",
+              "emphasized": [
+                "선생님입니까"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "아니요, 저는 선생님이 아닙니다. 학생입니다. 흐엉 씨도 학생입니까?",
+              "emphasized": [
+                "학생입니다",
+                "학생입니까"
+              ]
+            },
+            {
+              "speaker": "흐엉",
+              "text": "네, 저도 학생입니다. 만나서 반갑습니다.",
+              "emphasized": [
+                "학생입니다"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "만나서 반갑습니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "",
+              "이름",
+              "나라",
+              "직업"
+            ],
+            "rows": [
+              [
+                "1)",
+                "자르갈",
+                "중국 / 몽골 (×)/(○)",
+                "기자 / 학생 (×)/(○)"
+              ],
+              [
+                "",
+                "아멜리",
+                "프랑스",
+                "학생"
+              ],
+              [
+                "2)",
+                "나",
+                "",
+                ""
+              ],
+              [
+                "",
+                "친구",
+                "",
+                ""
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

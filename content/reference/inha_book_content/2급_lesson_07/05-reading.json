@@ -1,0 +1,238 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-07.json",
+  "section": "읽고 말하기",
+  "pages": [
+    {
+      "page_number": 121,
+      "page_role": "content",
+      "source_photo": "IMG_0765",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-reading-review",
+          "toc_section": "읽고 말하기",
+          "illustration": {
+            "storage_path": "lesson_7/illustration_4_dining_table_review.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "article",
+          "section": "읽고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что делает этот человек? Расскажите.",
+          "lines": [
+            {
+              "text": "상품 번호: 2433 · 작성자: ID Wangru · 점수: ★★★★☆",
+              "line_kind": "meta"
+            },
+            {
+              "text": "지난주에 이 식탁을 샀습니다. 인터넷으로 봤을 때보다 색깔이 더 ( ㉠ ) 마음에 들었습니다."
+            },
+            {
+              "text": "가구점에서 사는 대신에 인터넷으로 사니까 택배비가 공짜에다가 10%나 더 싸게 살 수 있어서 좋았습니다. 그리고 튼튼해서 오래 쓸 수 있을 것 같았습니다. 하지만 높이가 조금 낮아서 처음에 앉았을 때 불편했습니다. 그래서 식탁 다리만 교환했습니다."
+            },
+            {
+              "text": "어제 저녁에 친구들을 초대해서 파티를 했습니다. 이 사진은 제가 산 식탁 사진입니다."
+            },
+            {
+              "text": "여러분께 이 식탁을 추천합니다. ^^"
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "식탁",
+              "translation_ru": "обеденный стол"
+            },
+            {
+              "ko": "색깔",
+              "translation_ru": "цвет"
+            },
+            {
+              "ko": "공짜",
+              "translation_ru": "бесплатно, даром"
+            },
+            {
+              "ko": "튼튼해",
+              "translation_ru": "форма от 튼튼하다 (быть крепким, прочным)"
+            },
+            {
+              "ko": "앉았",
+              "translation_ru": "форма от 앉다 (сидеть, садиться)"
+            },
+            {
+              "ko": "불편했",
+              "translation_ru": "форма от 불편하다 (быть неудобным)"
+            },
+            {
+              "ko": "교환",
+              "translation_ru": "форма от 교환하다 (обменивать)"
+            },
+            {
+              "ko": "초대해",
+              "translation_ru": "форма от 초대하다 (приглашать)"
+            },
+            {
+              "ko": "추천",
+              "translation_ru": "рекомендация"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-review",
+          "toc_section": "읽고 말하기",
+          "exercise_kind": "reading",
+          "title": "상품 구매 후기를 읽고 말하기",
+          "title_ru": "Прочитать отзыв о покупке и обсудить",
+          "questions": [
+            {
+              "kind": "choice",
+              "prompt": "㉠에 들어갈 알맞은 것을 고르십시오.",
+              "prompt_ru": "Выберите подходящее слово для ㉠.",
+              "choices": [
+                "밝게",
+                "밝기는요",
+                "밝았을 때",
+                "밝아 가지고"
+              ],
+              "correct": 3
+            },
+            {
+              "kind": "choice",
+              "prompt": "이 글의 내용과 같은 것을 고르십시오.",
+              "prompt_ru": "Выберите то, что соответствует содержанию текста.",
+              "choices": [
+                "친구들이 식탁 사진을 찍었습니다.",
+                "식탁이 낮고 불편해서 식탁을 바꿨습니다.",
+                "지난주에 인터넷으로 식탁을 싸게 샀습니다.",
+                "인터넷으로 봤을 때보다 식탁 색깔이 어두웠습니다."
+              ],
+              "correct": 2
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분이 산 물건 중에서 다른 사람에게 추천하고 싶은 물건이 있으면 소개해 보십시오.",
+              "prompt_ru": "Если среди купленных вами вещей есть та, которую хотите порекомендовать другим, расскажите о ней."
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-review",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-review",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "작성자",
+              "translation_ru": "автор (записи, отзыва)",
+              "group": "후기"
+            },
+            {
+              "ko": "점수",
+              "translation_ru": "балл, оценка",
+              "group": "후기"
+            },
+            {
+              "ko": "가구점",
+              "translation_ru": "мебельный магазин",
+              "group": "후기"
+            },
+            {
+              "ko": "택배비",
+              "translation_ru": "стоимость доставки",
+              "group": "후기"
+            },
+            {
+              "ko": "높이",
+              "translation_ru": "высота",
+              "group": "후기"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "후기",
+              "title_ru": "Отзывы",
+              "items": [
+                {
+                  "ko": "구매하다",
+                  "translation_ru": "покупать"
+                },
+                {
+                  "ko": "후회하다",
+                  "translation_ru": "сожалеть"
+                },
+                {
+                  "ko": "식탁",
+                  "translation_ru": "обеденный стол"
+                },
+                {
+                  "ko": "색깔",
+                  "translation_ru": "цвет"
+                },
+                {
+                  "ko": "다리",
+                  "translation_ru": "ножка, нога"
+                },
+                {
+                  "ko": "사진",
+                  "translation_ru": "фотография"
+                },
+                {
+                  "ko": "추천하다",
+                  "translation_ru": "рекомендовать"
+                },
+                {
+                  "ko": "이용하다",
+                  "translation_ru": "пользоваться"
+                }
+              ]
+            },
+            {
+              "title": "충동구매",
+              "title_ru": "Импульсивные покупки",
+              "items": [
+                {
+                  "ko": "충동구매",
+                  "translation_ru": "импульсивная покупка"
+                },
+                {
+                  "ko": "신중하다",
+                  "translation_ru": "осторожный"
+                },
+                {
+                  "ko": "목록",
+                  "translation_ru": "список"
+                },
+                {
+                  "ko": "예산",
+                  "translation_ru": "бюджет"
+                },
+                {
+                  "ko": "지출",
+                  "translation_ru": "расход"
+                },
+                {
+                  "ko": "절약하다",
+                  "translation_ru": "экономить"
+                },
+                {
+                  "ko": "낭비하다",
+                  "translation_ru": "тратить зря"
+                },
+                {
+                  "ko": "쉽게",
+                  "translation_ru": "легко"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

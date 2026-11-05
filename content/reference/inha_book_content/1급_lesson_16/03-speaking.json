@@ -1,0 +1,206 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-16.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 264,
+      "page_role": "content",
+      "source_photo": "IMG_1187",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "1. 배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [],
+          "table": {
+            "columns": [
+              "파하드 씨의 가족",
+              "동생들",
+              "부모님 선물"
+            ],
+            "rows": [
+              [
+                "아버지, 어머니, 파하드, 남동생, 여동생",
+                "남동생: 대학생 / 여동생: 회사원",
+                "유명한 한국 전통 과자 / 한국 음식을 드셔 보시면 좋아하다"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-dialogue",
+          "toc_section": "말하기",
+          "title": "보기",
+          "illustration": null,
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "자르갈",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "자르갈",
+              "text": "파하드 씨, 이게 누구의 사진이에요?",
+              "emphasized": [
+                "파하드"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "제 가족사진이에요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "파하드 씨의 가족이 모두 5명이에요?",
+              "emphasized": [
+                "파하드",
+                "5"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 아버지, 어머니, 남동생, 여동생 그리고 저예요.",
+              "emphasized": [
+                "아버지, 어머니, 남동생, 여동생"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "동생들은 모두 대학생이에요?",
+              "emphasized": [
+                "동생들",
+                "대학생이에요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "아니요, 남동생은 대학생인데 여동생은 회사원이에요.",
+              "emphasized": [
+                "남동생은 대학생인데 여동생은 회사원이에요"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "가족들이 많이 그립겠어요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 그래서 방학에 고향에 다녀오려고 해요. 그런데 부모님께 무슨 선물을 드리면 좋아하실까요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "음……. 유명한 한국 전통 과자를 드리는 게 어때요? 부모님도 한국 음식을 드셔 보시면 좋아하실 거예요.",
+              "emphasized": [
+                "유명한 한국 전통 과자를 드리는 게 어때요",
+                "한국 음식을 드셔 보시면 좋아하실 거예요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "와, 정말 좋은 생각이에요. 자르갈 씨, 고마워요.",
+              "emphasized": [
+                "자르갈"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-1",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2. 친구들과 함께 대화해 보십시오"
+            },
+            {
+              "text": "1)"
+            }
+          ],
+          "table": {
+            "columns": [
+              "왕루 씨의 가족",
+              "가족",
+              "부모님 선물"
+            ],
+            "rows": [
+              [
+                "아버지, 어머니, 오빠, 왕루",
+                "부모님: 중국에 있다 / 오빠: 미국에 있다",
+                "감사의 마음을 전하는 편지 / 편지를 받아 보시면 기뻐하다"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-questions-2",
+          "toc_section": "말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "2)"
+            }
+          ],
+          "table": {
+            "columns": [
+              "(   )의 가족",
+              "가족",
+              "부모님 선물"
+            ],
+            "rows": [
+              [
+                "",
+                "",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "유명하다",
+              "translation_ru": "быть известным, знаменитым"
+            },
+            {
+              "ko": "과자",
+              "translation_ru": "печенье, сладости"
+            },
+            {
+              "ko": "기뻐하다",
+              "translation_ru": "радоваться"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

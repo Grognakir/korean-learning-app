@@ -1,0 +1,167 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-01.json",
+  "section": "말하기",
+  "pages": [
+    {
+      "page_number": 19,
+      "page_role": "content",
+      "source_photo": "photo_28",
+      "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "дополнительные слова по теме раздела",
+          "items": [],
+          "extra_groups": [
+            {
+              "title": "대학",
+              "title_ru": "Университет",
+              "items": [
+                {
+                  "ko": "언어교육원",
+                  "translation_ru": "языковой институт"
+                },
+                {
+                  "ko": "대학생",
+                  "translation_ru": "студент"
+                },
+                {
+                  "ko": "대학원",
+                  "translation_ru": "магистратура, аспирантура"
+                },
+                {
+                  "ko": "입학",
+                  "translation_ru": "поступление"
+                },
+                {
+                  "ko": "졸업하다",
+                  "translation_ru": "оканчивать (учёбу)"
+                },
+                {
+                  "ko": "전공하다",
+                  "translation_ru": "специализироваться"
+                },
+                {
+                  "ko": "준비하다",
+                  "translation_ru": "готовиться"
+                }
+              ]
+            },
+            {
+              "title": "대화",
+              "title_ru": "О чём говорят",
+              "items": [
+                {
+                  "ko": "문학",
+                  "translation_ru": "литература"
+                },
+                {
+                  "ko": "국제무역",
+                  "translation_ru": "международная торговля"
+                },
+                {
+                  "ko": "소개하다",
+                  "translation_ru": "представлять"
+                },
+                {
+                  "ko": "고향",
+                  "translation_ru": "родина, родные места"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-summary",
+          "toc_section": "말하기",
+          "title": "배운 문법을 활용하여 〈보기〉와 같이 대화해 보십시오",
+          "title_ru": "Используя выученную грамматику, поговорите как в образце",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "왕루와 자르갈은 모두 언어교육원의 학생들입니다. 왕루는 6개월 전에 중국에서 왔고 자르갈은 1년 전에 몽골에서 왔습니다. 왕루는 국제무역에 관심이 많습니다. 그래서 대학교에 가면 무역학을 전공하려고 준비하고 있습니다. 자르갈은 문학에 관심이 많습니다. 그래서 대학교에 가면 문학을 전공하려고 합니다."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-intro-dialogue",
+          "toc_section": "말하기",
+          "text_kind": "dialogue",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "speakers": [
+            "왕루",
+            "자르갈"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "안녕하십니까? 저는 왕루라고 합니다. 중국에서 왔습니다."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "안녕하십니까? 전 몽골에서 온 자르갈이라고 합니다."
+            },
+            {
+              "speaker": "왕루",
+              "text": "자르갈 씨는 한국에 온 지 얼마나 됐어요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "저는 한국에 온 지 1년이 됐어요. 왕루 씨는 얼마나 됐어요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 한국에 온 지 6개월이 됐어요. 그런데 자르갈 씨는 지금 대학생이에요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "아니요, 언어교육원 학생이에요. 저는 문학에 대해 배우고 싶어요. 그래서 대학교에 가면 문학을 전공하려고 해요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "저는 국제무역에 대한 공부를 하고 싶어요. 그래서 대학교에 가면 무역학을 전공하려고 준비하고 있어요. 자르갈 씨, 만나서 반가워요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "네, 저도 만나서 반가워요."
+            }
+          ],
+          "title": "보기"
+        },
+        {
+          "type": "text",
+          "id": "text-speaking-practice-questions",
+          "toc_section": "말하기",
+          "title": "2. 친구들과 함께 대화해 보십시오",
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 한국에 언제 왔습니까?"
+            },
+            {
+              "text": "2) 무엇에 관심이 많습니까?"
+            },
+            {
+              "text": "3) 학교를 졸업하면 무엇이 되려고 합니까?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

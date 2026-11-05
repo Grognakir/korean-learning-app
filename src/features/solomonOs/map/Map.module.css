@@ -998,7 +998,7 @@
 .field textarea {
   min-height: 66px;
   padding: 8px 10px;
-  resize: vertical;
+  resize: none;
   font-family: var(--font-noto-sans-kr, var(--sans));
   caret-color: var(--bright);
 }
@@ -1295,3 +1295,6 @@
     animation: none;
   }
 }
+
+.header > div { flex:1; min-width:0; max-width:210px; }
+@container route-map (max-width:760px) { .header > div { flex:1 1 130px; max-width:none; } }

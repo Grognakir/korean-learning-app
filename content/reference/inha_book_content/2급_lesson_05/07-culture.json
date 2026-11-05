@@ -1,0 +1,236 @@
+{
+  "format": "lesson-section-v1",
+  "lesson_file": "lesson-05.json",
+  "section": "문화 이해하기",
+  "pages": [
+    {
+      "page_number": 89,
+      "page_role": "content",
+      "source_photo": "IMG_0700",
+      "blocks": [
+        {
+          "type": "text",
+          "id": "text-culture-korean-invitations",
+          "toc_section": "문화 이해하기",
+          "title": "한국인의 초대",
+          "title_ru": "Приглашения у корейцев",
+          "illustration": {
+            "storage_path": "lesson_5/illustration_5_korean_celebrations.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화 이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что здесь происходит? Расскажите.",
+          "lines": [
+            {
+              "text": "한국 사람들은 좋은 일이 있을 때마다 친척이나 친구들을 초대합니다. 그리고 그 기쁨을 함께 나누려고 맛있는 음식을 준비합니다. 이렇게 잔치를 할 때 축하해 주는 사람과 축하를 받는 사람들은 모두 행복한 시간을 보냅니다.\n결혼은 두 가족의 큰 잔치입니다. 그렇기 때문에 많은 사람들이 축하하러 옵니다. 신랑과 신부는 결혼식이 끝나면 한복을 입고 손님들에게 감사의 인사를 합니다.\n돌잔치는 아이의 첫 번째 생일을 축하하는 잔치입니다. 아이가 태어난 지 1년이 되면 큰 잔치를 하고 아이의 건강과 미래를 기원합니다.\n환갑잔치는 60번째 생일에 하는 잔치입니다. 옛날에는 지금에 비해 수명이 짧았습니다. 그래서 장수를 축하하려고 환갑잔치를 하기 시작했습니다."
+            },
+            {
+              "text": "1) 한국 사람들은 언제 초대를 합니까?",
+              "translation_ru": "Когда корейцы приглашают гостей?"
+            },
+            {
+              "text": "2) 여러분 나라에서는 언제 초대를 합니까? 친구들과 이야기해 보십시오.",
+              "translation_ru": "А в вашей стране когда приглашают гостей? Обсудите с друзьями."
+            }
+          ],
+          "vocab": [
+            {
+              "ko": "기쁨",
+              "translation_ru": "радость"
+            },
+            {
+              "ko": "잔치",
+              "translation_ru": "празднество, торжество, пир"
+            },
+            {
+              "ko": "신랑",
+              "translation_ru": "жених"
+            },
+            {
+              "ko": "신부",
+              "translation_ru": "невеста"
+            },
+            {
+              "ko": "결혼식",
+              "translation_ru": "свадьба, церемония бракосочетания"
+            },
+            {
+              "ko": "돌잔치",
+              "translation_ru": "празднование первого дня рождения ребёнка"
+            },
+            {
+              "ko": "태어나다",
+              "translation_ru": "родиться"
+            },
+            {
+              "ko": "미래",
+              "translation_ru": "будущее"
+            },
+            {
+              "ko": "기원하다",
+              "translation_ru": "желать, молиться о (пожелании)"
+            },
+            {
+              "ko": "환갑",
+              "translation_ru": "60-летний юбилей (традиционное празднование)"
+            },
+            {
+              "ko": "수명",
+              "translation_ru": "продолжительность жизни"
+            },
+            {
+              "ko": "장수",
+              "translation_ru": "долголетие"
+            }
+          ]
+        },
+        {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-korean-invitations",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "기쁨",
+              "translation_ru": "радость",
+              "group": "소망"
+            },
+            {
+              "ko": "잔치",
+              "translation_ru": "празднество, торжество, пир",
+              "group": "잔치"
+            },
+            {
+              "ko": "신랑",
+              "translation_ru": "жених",
+              "group": "잔치"
+            },
+            {
+              "ko": "신부",
+              "translation_ru": "невеста",
+              "group": "잔치"
+            },
+            {
+              "ko": "결혼식",
+              "translation_ru": "свадьба, церемония бракосочетания",
+              "group": "잔치"
+            },
+            {
+              "ko": "돌잔치",
+              "translation_ru": "празднование первого дня рождения ребёнка",
+              "group": "잔치"
+            },
+            {
+              "ko": "태어나다",
+              "translation_ru": "родиться",
+              "group": "소망"
+            },
+            {
+              "ko": "미래",
+              "translation_ru": "будущее",
+              "group": "소망"
+            },
+            {
+              "ko": "기원하다",
+              "translation_ru": "желать, молиться о (пожелании)",
+              "group": "소망"
+            },
+            {
+              "ko": "환갑",
+              "translation_ru": "60-летний юбилей (традиционное празднование)",
+              "group": "잔치"
+            },
+            {
+              "ko": "수명",
+              "translation_ru": "продолжительность жизни",
+              "group": "소망"
+            },
+            {
+              "ko": "장수",
+              "translation_ru": "долголетие",
+              "group": "소망"
+            }
+          ],
+          "extra_groups": [
+            {
+              "title": "잔치",
+              "title_ru": "Праздники",
+              "items": [
+                {
+                  "ko": "친척",
+                  "translation_ru": "родственник"
+                },
+                {
+                  "ko": "결혼",
+                  "translation_ru": "свадьба"
+                },
+                {
+                  "ko": "축하하다",
+                  "translation_ru": "поздравлять"
+                },
+                {
+                  "ko": "손님",
+                  "translation_ru": "гость"
+                },
+                {
+                  "ko": "한복",
+                  "translation_ru": "ханбок"
+                },
+                {
+                  "ko": "신혼여행",
+                  "translation_ru": "свадебное путешествие"
+                }
+              ]
+            },
+            {
+              "title": "소망",
+              "title_ru": "Пожелания",
+              "items": [
+                {
+                  "ko": "건강",
+                  "translation_ru": "здоровье"
+                },
+                {
+                  "ko": "감사",
+                  "translation_ru": "благодарность"
+                },
+                {
+                  "ko": "옛날",
+                  "translation_ru": "старые времена"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "id": "pronunciation-5",
+          "toc_section": "문화 이해하기",
+          "rule": "받침 'ㄱ'+'ㄹ' (비음화)",
+          "audio_id": "220",
+          "examples": [
+            {
+              "text": "격려",
+              "translation_ru": "ободрение, поддержка"
+            },
+            {
+              "text": "국립",
+              "translation_ru": "государственный, национальный (об учреждении)"
+            },
+            {
+              "text": "대학로",
+              "translation_ru": "Тэхаллоно (\"университетская улица\" — район театров в Сеуле)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
