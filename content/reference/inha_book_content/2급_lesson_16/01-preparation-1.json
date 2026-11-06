@@ -14,7 +14,10 @@
           "toc_section": "준비하기 1",
           "title": "감사 인사를 하기",
           "title_ru": "Выражать благодарность",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_16/illustration_1_thank_teacher.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,

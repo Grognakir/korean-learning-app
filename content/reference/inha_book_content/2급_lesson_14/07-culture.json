@@ -14,7 +14,10 @@
           "toc_section": "문화 이해하기",
           "title": "공연장 및 행사장의 안전",
           "title_ru": "Безопасность на площадках и мероприятиях",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_14/illustration_5_event_safety.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "문화이해하기",
           "exercise_ref": null,

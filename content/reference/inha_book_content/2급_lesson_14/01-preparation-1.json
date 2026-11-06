@@ -14,7 +14,10 @@
           "toc_section": "준비하기 1",
           "title": "주의 사항을 설명하기",
           "title_ru": "Объяснять меры предосторожности",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_14/illustration_1_museum_rules.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,

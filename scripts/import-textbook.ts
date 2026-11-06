@@ -106,29 +106,53 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
       "illustration_1_friend_argument_v3.png",
       "illustration_2_reconciliation_advice_v2.png",
       "illustration_3_friends_reconcile_v2.png",
-      "illustration_4_apology_letter_v3.png",
+      "illustration_4_apology_letter_v4.png",
       "illustration_5_kind_words_v2.png",
     ],
   },
   13: {
     path: join(LESSON_DIR_2_13, "lesson-13.json"),
     audio: [249, 250, 251, 252],
-    images: [],
+    images: [
+      "illustration_1_exam_anxiety.png",
+      "illustration_2_speech_encouragement.png",
+      "illustration_3_asking_back_clothes.png",
+      "illustration_4_choosing_major.png",
+      "illustration_5_family_conversation.png",
+    ],
   },
   14: {
     path: join(LESSON_DIR_2_14, "lesson-14.json"),
     audio: [253, 254, 255, 256],
-    images: [],
+    images: [
+      "illustration_1_museum_rules.png",
+      "illustration_2_classroom_rules.png",
+      "illustration_3_theater_booking.png",
+      "illustration_4_library_rules.png",
+      "illustration_5_event_safety.png",
+    ],
   },
   15: {
     path: join(LESSON_DIR_2_15, "lesson-15.json"),
     audio: [257, 258, 259, 260],
-    images: [],
+    images: [
+      "illustration_1_plan_gyeongju.png",
+      "illustration_2_travel_agency.png",
+      "illustration_3_gyeongju_guide.png",
+      "illustration_4_gyeongju_travelogue.png",
+      "illustration_5_seoul_landmarks.png",
+    ],
   },
   16: {
     path: join(LESSON_DIR_2_16, "lesson-16.json"),
     audio: [261, 262, 263, 264],
-    images: [],
+    images: [
+      "illustration_1_thank_teacher.png",
+      "illustration_2_injury_phone_call.png",
+      "illustration_3_mailbox_favor.png",
+      "illustration_4_formal_email.png",
+      "illustration_5_korean_gestures.png",
+    ],
   },
 };
 

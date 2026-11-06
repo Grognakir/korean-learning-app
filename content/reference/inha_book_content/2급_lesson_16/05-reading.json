@@ -12,7 +12,10 @@
           "type": "text",
           "id": "text-reading-official-mail",
           "toc_section": "읽고 말하기",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_16/illustration_4_formal_email.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "읽고말하기",
           "exercise_ref": null,

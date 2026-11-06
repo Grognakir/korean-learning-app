@@ -63,7 +63,10 @@
           "warmup": {
             "prompt": "무엇을 합니까? 이야기해 보십시오.",
             "prompt_ru": "Что они делают? Расскажите.",
-            "illustration": null
+            "illustration": {
+              "storage_path": "lesson_13/illustration_3_asking_back_clothes.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",

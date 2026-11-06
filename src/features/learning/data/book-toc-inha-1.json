@@ -1,0 +1,476 @@
+{
+  "title": "새인하한국어1 교재 구성표",
+  "lessons": [
+    {
+      "lesson": 1,
+      "unit": "인사와 소개",
+      "grammar": [
+        {
+          "label": "N입니다 / N입니까?",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "N이/가",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "N은/는①",
+          "section": "준비하기 1",
+          "block": "grammar-3"
+        },
+        {
+          "label": "N이/가 아니다",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "N도",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "unit": "학교와 집",
+      "grammar": [
+        {
+          "label": "이 / 그 / 저",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "N의",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "N에①",
+          "section": "준비하기 2",
+          "block": "grammar-3"
+        },
+        {
+          "label": "N이/가 있다/없다",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "unit": "학교생활",
+      "grammar": [
+        {
+          "label": "V-(스)ㅂ니다 / (스)ㅂ니까?",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "N을/를",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "N만",
+          "section": "준비하기 1",
+          "block": "grammar-3"
+        },
+        {
+          "label": "N에 가다/오다/다니다",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "수①",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "unit": "일상생활",
+      "grammar": [
+        {
+          "label": "N과/와 N, N하고 N",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "N에서",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "수②",
+          "section": "준비하기 2",
+          "block": "grammar-3"
+        },
+        {
+          "label": "N에②",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "unit": "하루 일과",
+      "grammar": [
+        {
+          "label": "V-아/어/여요①, N이에/예요",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "수③",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "N부터 N까지",
+          "section": "준비하기 2",
+          "block": "grammar-3"
+        },
+        {
+          "label": "안 V / V-지 않다",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        }
+      ]
+    },
+    {
+      "lesson": 6,
+      "unit": "주말",
+      "grammar": [
+        {
+          "label": "V-았/었/였-, N이었/였-",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "V-고①, N(이)고",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "AV-아/어/여 보다",
+          "section": "준비하기 2",
+          "block": "grammar-3"
+        },
+        {
+          "label": "으 동사",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        }
+      ]
+    },
+    {
+      "lesson": 7,
+      "unit": "날씨와 계절",
+      "grammar": [
+        {
+          "label": "N은/는②",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "ㅂ 동사",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "AV-아/어/여서①",
+          "section": "준비하기 1",
+          "block": "grammar-3"
+        },
+        {
+          "label": "N(으)로①",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "AV-(으)러 가다/오다",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "unit": "계획",
+      "grammar": [
+        {
+          "label": "AV-(으)ㄹ 거예요①",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "AV-고②",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "AV-기 전에, N 전에",
+          "section": "준비하기 2",
+          "block": "grammar-3"
+        },
+        {
+          "label": "AV-(으)ㄴ 후에, N 후에",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "N 동안",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 9,
+      "unit": "물건 사기",
+      "grammar": [
+        {
+          "label": "수④",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "AV-(으)세요 / -(으)십시오",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "N(이)랑",
+          "section": "준비하기 2",
+          "block": "grammar-3"
+        },
+        {
+          "label": "AV-고 있다①",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "N에게/한테, N에게(서)/한테(서)",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 10,
+      "unit": "음식",
+      "grammar": [
+        {
+          "label": "AV-(으)ㄹ까요?①",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "AV-(으)ㅂ시다",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "V-(으)니까①, N(이)니까",
+          "section": "준비하기 1",
+          "block": "grammar-3"
+        },
+        {
+          "label": "AV-고 싶다",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "AV-겠-①",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 11,
+      "unit": "전화",
+      "grammar": [
+        {
+          "label": "V-지요?, N(이)지요?",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "V-겠-②, N(이)겠-",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "AV-아/어/여 주다",
+          "section": "준비하기 1",
+          "block": "grammar-3"
+        },
+        {
+          "label": "V-(으)면, N(이)면",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "ㄷ 동사",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 12,
+      "unit": "약속",
+      "grammar": [
+        {
+          "label": "V-아/어/여서②, N이어/여서",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "AV-(으)ㄹ 수 있다/없다",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "V-(으)ㄹ까요?②, N일까요?",
+          "section": "준비하기 2",
+          "block": "grammar-3"
+        },
+        {
+          "label": "V-(으)ㄹ 거예요②, N일 거예요",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "AV-(으)ㄹ게요",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 13,
+      "unit": "교통",
+      "grammar": [
+        {
+          "label": "AV-아/어/여요②",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "N(으)로②",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "ㄹ 동사",
+          "section": "준비하기 1",
+          "block": "grammar-3"
+        },
+        {
+          "label": "V-거나, N(이)나",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "못 AV / AV-지 못하다",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 14,
+      "unit": "공공장소",
+      "grammar": [
+        {
+          "label": "AV-(으)려고 하다",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "N께서, N께서는",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "V-(으)시-, N(이)시-",
+          "section": "준비하기 1",
+          "block": "grammar-3"
+        },
+        {
+          "label": "V-아/어/여야 되다/하다",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "AV-지 말다",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 15,
+      "unit": "건강",
+      "grammar": [
+        {
+          "label": "N보다",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "V-지만, N(이)지만",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "DV-(으)ㄴ N",
+          "section": "준비하기 1",
+          "block": "grammar-3"
+        },
+        {
+          "label": "AV-아/어/여도 되다(좋다, 괜찮다)",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        },
+        {
+          "label": "AV-(으)면 안 되다",
+          "section": "준비하기 2",
+          "block": "grammar-5"
+        }
+      ]
+    },
+    {
+      "lesson": 16,
+      "unit": "가족",
+      "grammar": [
+        {
+          "label": "AV-(으)ㄴ/는/(으)ㄹ N, N인 N",
+          "section": "준비하기 1",
+          "block": "grammar-1"
+        },
+        {
+          "label": "V-(으)ㄴ/는데, N인데",
+          "section": "준비하기 1",
+          "block": "grammar-2"
+        },
+        {
+          "label": "N께",
+          "section": "준비하기 2",
+          "block": "grammar-3"
+        },
+        {
+          "label": "AV-아/어/여 드리다/주시다",
+          "section": "준비하기 2",
+          "block": "grammar-4"
+        }
+      ]
+    }
+  ]
+}

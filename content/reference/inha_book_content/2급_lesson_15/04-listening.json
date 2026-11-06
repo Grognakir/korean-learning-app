@@ -67,7 +67,10 @@
           "warmup": {
             "prompt": "어디입니까? 이야기해 보십시오.",
             "prompt_ru": "Где это? Расскажите.",
-            "illustration": null
+            "illustration": {
+              "storage_path": "lesson_15/illustration_3_gyeongju_guide.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",

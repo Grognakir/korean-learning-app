@@ -14,7 +14,10 @@
           "toc_section": "준비하기 2",
           "title": "안부를 전하기",
           "title_ru": "Передавать новости о себе",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_16/illustration_2_injury_phone_call.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기2",
           "exercise_ref": null,

@@ -14,7 +14,10 @@
           "toc_section": "준비하기 1",
           "title": "여행을 계획하기",
           "title_ru": "Планировать поездку",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_15/illustration_1_plan_gyeongju.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,

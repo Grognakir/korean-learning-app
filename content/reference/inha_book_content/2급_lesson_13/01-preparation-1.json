@@ -14,7 +14,10 @@
           "toc_section": "준비하기 1",
           "title": "고민을 상담하기",
           "title_ru": "Советоваться о заботе",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_13/illustration_1_exam_anxiety.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "dialogue",
           "section": "준비하기1",
           "exercise_ref": null,

@@ -14,7 +14,10 @@
           "toc_section": "문화 이해하기",
           "title": "몸짓언어",
           "title_ru": "Язык жестов",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_16/illustration_5_korean_gestures.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "문화이해하기",
           "exercise_ref": null,
