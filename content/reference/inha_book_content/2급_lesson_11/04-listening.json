@@ -9,6 +9,73 @@
       "source_photo": "IMG_1426",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-traffic",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "listening-traffic",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "휴게소",
+              "translation_ru": "зона отдыха (на трассе), придорожная станция"
+            },
+            {
+              "ko": "간식",
+              "translation_ru": "перекус, лёгкая закуска"
+            },
+            {
+              "ko": "재미",
+              "translation_ru": "интерес, веселье"
+            },
+            {
+              "ko": "요금",
+              "translation_ru": "плата, тариф"
+            },
+            {
+              "ko": "도착",
+              "translation_ru": "прибытие"
+            },
+            {
+              "ko": "벌써",
+              "translation_ru": "уже"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "강릉",
+                "translation_ru": "Каннын (город на восточном побережье Кореи)"
+              },
+              {
+                "ko": "정동진",
+                "translation_ru": "Чондонджин (приморский район на восточном побережье)"
+              },
+              {
+                "ko": "제주도",
+                "translation_ru": "остров Чеджудо"
+              },
+              {
+                "ko": "기차",
+                "translation_ru": "поезд"
+              },
+              {
+                "ko": "바다",
+                "translation_ru": "море"
+              },
+              {
+                "ko": "추천하다",
+                "translation_ru": "рекомендовать"
+              },
+              {
+                "ko": "걸리다",
+                "translation_ru": "занимать (о времени), требоваться (о времени)"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-traffic",
           "toc_section": "듣고 말하기",
@@ -71,7 +138,10 @@
           "warmup": {
             "prompt": "어디입니까? 이야기해 보십시오.",
             "prompt_ru": "Где это? Расскажите.",
-            "illustration": null
+            "illustration": {
+              "storage_path": "lesson_11/illustration_3_busan_views_v2.png",
+              "original_kind": "illustration"
+            }
           },
           "group_prompt": "다음을 듣고 물음에 답하십시오.",
           "group_prompt_ru": "Послушайте и ответьте на вопросы.",
@@ -96,77 +166,6 @@
           ],
           "followup": "여러분 나라의 교통편에 대해 이야기해 보십시오.",
           "followup_ru": "Расскажите о транспорте в вашей стране."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-traffic",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "listening-traffic",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "휴게소",
-              "translation_ru": "зона отдыха (на трассе), придорожная станция"
-            },
-            {
-              "ko": "간식",
-              "translation_ru": "перекус, лёгкая закуска"
-            },
-            {
-              "ko": "재미",
-              "translation_ru": "интерес, веселье"
-            },
-            {
-              "ko": "요금",
-              "translation_ru": "плата, тариф"
-            },
-            {
-              "ko": "도착",
-              "translation_ru": "прибытие"
-            },
-            {
-              "ko": "벌써",
-              "translation_ru": "уже"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "여행",
-              "title_ru": "Поездка",
-              "items": [
-                {
-                  "ko": "강릉",
-                  "translation_ru": "Каннын (город на восточном побережье Кореи)"
-                },
-                {
-                  "ko": "정동진",
-                  "translation_ru": "Чондонджин (приморский район на восточном побережье)"
-                },
-                {
-                  "ko": "제주도",
-                  "translation_ru": "остров Чеджудо"
-                },
-                {
-                  "ko": "기차",
-                  "translation_ru": "поезд"
-                },
-                {
-                  "ko": "바다",
-                  "translation_ru": "море"
-                },
-                {
-                  "ko": "추천하다",
-                  "translation_ru": "рекомендовать"
-                },
-                {
-                  "ko": "걸리다",
-                  "translation_ru": "занимать (о времени), требоваться (о времени)"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

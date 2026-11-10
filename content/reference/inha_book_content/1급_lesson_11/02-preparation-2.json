@@ -9,120 +9,6 @@
       "source_photo": "IMG_1105",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-transfer-dialogue",
-          "toc_section": "준비하기 2",
-          "title": "전화를 바꿔 주기",
-          "title_ru": "Передавать трубку",
-          "illustration": {
-            "storage_path": "lesson_11/illustration_2_passing_phone.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기2",
-          "exercise_ref": null,
-          "audio_id": "142",
-          "speakers": [
-            "흐엉",
-            "친구",
-            "파하드"
-          ],
-          "lines": [
-            {
-              "speaker": "흐엉",
-              "text": "여보세요? 거기가 파하드 씨의 집이지요? 파하드 씨 있어요?",
-              "emphasized": [
-                "이지요"
-              ]
-            },
-            {
-              "speaker": "친구",
-              "text": "네, 잠깐만 기다려 주세요. 파하드 씨, 전화 받으세요.",
-              "emphasized": [
-                "기다려 주세요",
-                "받으세요"
-              ]
-            },
-            {
-              "text": "(잠시 후)"
-            },
-            {
-              "speaker": "파하드",
-              "text": "여보세요? 전화 바꿨습니다."
-            },
-            {
-              "speaker": "흐엉",
-              "text": "파하드 씨, 저 흐엉이에요."
-            },
-            {
-              "speaker": "파하드",
-              "text": "아, 흐엉 씨. 무슨 일이에요?"
-            },
-            {
-              "speaker": "흐엉",
-              "text": "지성 씨 얘기 들었어요?"
-            },
-            {
-              "speaker": "파하드",
-              "text": "네? 무슨 얘기요?"
-            },
-            {
-              "speaker": "흐엉",
-              "text": "지성 씨가 다리를 다쳤어요. 그래서 지금 병원에 있어요. 파하드 씨, 시간이 있으면 같이 병원에 가 볼까요?",
-              "emphasized": [
-                "있으면"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "네, 좋아요. 내일 수업이 끝나면 같이 병원에 갑시다.",
-              "emphasized": [
-                "끝나면"
-              ]
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "다쳤",
-              "translation_ru": "форма от 다치다 (получить травму)"
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-junbihagi2-expr",
-          "toc_section": "준비하기 2",
-          "hint_kind": "expression",
-          "related_text_ref": "text-transfer-dialogue",
-          "items": [
-            {
-              "kind": "phrase",
-              "text": "○○ 씨 좀 바꿔 주세요.",
-              "translation_ru": "Передайте, пожалуйста, трубку ○○."
-            },
-            {
-              "kind": "phrase",
-              "text": "잠깐만 기다려 주세요.",
-              "translation_ru": "Подождите, пожалуйста, минуточку."
-            },
-            {
-              "kind": "phrase",
-              "text": "○○ 씨, 전화 받으세요.",
-              "translation_ru": "○○, вас к телефону."
-            },
-            {
-              "kind": "phrase",
-              "text": "전화 바꿨습니다.",
-              "translation_ru": "Теперь я у телефона. (трубку передали)"
-            },
-            {
-              "kind": "phrase",
-              "text": "전화 잘못 거셨습니다.",
-              "translation_ru": "Вы ошиблись номером."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi2",
           "toc_section": "준비하기 2",
@@ -202,6 +88,122 @@
             {
               "ko": "땅",
               "translation_ru": "земля, почва"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "다쳤",
+                "translation_ru": "форма от 다치다 (получить травму)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-transfer-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "전화를 바꿔 주기",
+          "title_ru": "Передавать трубку",
+          "illustration": {
+            "storage_path": "lesson_11/illustration_2_passing_phone.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "142",
+          "speakers": [
+            "흐엉",
+            "친구",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "흐엉",
+              "text": "여보세요? 거기가 파하드 씨의 집이지요? 파하드 씨 있어요?",
+              "emphasized": [
+                "이지요"
+              ]
+            },
+            {
+              "speaker": "친구",
+              "text": "네, 잠깐만 기다려 주세요. 파하드 씨, 전화 받으세요.",
+              "emphasized": [
+                "기다려 주세요",
+                "받으세요"
+              ]
+            },
+            {
+              "text": "(잠시 후)"
+            },
+            {
+              "speaker": "파하드",
+              "text": "여보세요? 전화 바꿨습니다."
+            },
+            {
+              "speaker": "흐엉",
+              "text": "파하드 씨, 저 흐엉이에요."
+            },
+            {
+              "speaker": "파하드",
+              "text": "아, 흐엉 씨. 무슨 일이에요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "지성 씨 얘기 들었어요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "네? 무슨 얘기요?"
+            },
+            {
+              "speaker": "흐엉",
+              "text": "지성 씨가 다리를 다쳤어요. 그래서 지금 병원에 있어요. 파하드 씨, 시간이 있으면 같이 병원에 가 볼까요?",
+              "emphasized": [
+                "있으면"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 좋아요. 내일 수업이 끝나면 같이 병원에 갑시다.",
+              "emphasized": [
+                "끝나면"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-junbihagi2-expr",
+          "toc_section": "준비하기 2",
+          "hint_kind": "expression",
+          "related_text_ref": "text-transfer-dialogue",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "○○ 씨 좀 바꿔 주세요.",
+              "translation_ru": "Передайте, пожалуйста, трубку ○○."
+            },
+            {
+              "kind": "phrase",
+              "text": "잠깐만 기다려 주세요.",
+              "translation_ru": "Подождите, пожалуйста, минуточку."
+            },
+            {
+              "kind": "phrase",
+              "text": "○○ 씨, 전화 받으세요.",
+              "translation_ru": "○○, вас к телефону."
+            },
+            {
+              "kind": "phrase",
+              "text": "전화 바꿨습니다.",
+              "translation_ru": "Теперь я у телефона. (трубку передали)"
+            },
+            {
+              "kind": "phrase",
+              "text": "전화 잘못 거셨습니다.",
+              "translation_ru": "Вы ошиблись номером."
             }
           ]
         }

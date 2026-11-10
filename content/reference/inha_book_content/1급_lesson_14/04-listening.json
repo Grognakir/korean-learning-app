@@ -9,6 +9,33 @@
       "source_photo": "IMG_1157",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-museum-guide",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "무료",
+              "translation_ru": "бесплатно"
+            },
+            {
+              "ko": "어린이",
+              "translation_ru": "ребёнок"
+            },
+            {
+              "ko": "주의 사항",
+              "translation_ru": "меры предосторожности, на что обратить внимание"
+            },
+            {
+              "ko": "지하",
+              "translation_ru": "подвал, под землёй"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-museum-guide",
           "toc_section": "듣고 말하기",
@@ -76,33 +103,6 @@
           ],
           "followup": "반 친구들과 다음 공공장소의 이용 규칙을 이야기해 보십시오. 1) 도서관 2) 영화관 3) 지하철",
           "followup_ru": "Обсудите с одноклассниками правила пользования этими общественными местами: 1) библиотека 2) кинотеатр 3) метро."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-museum-guide",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "무료",
-              "translation_ru": "бесплатно"
-            },
-            {
-              "ko": "어린이",
-              "translation_ru": "ребёнок"
-            },
-            {
-              "ko": "주의 사항",
-              "translation_ru": "меры предосторожности, на что обратить внимание"
-            },
-            {
-              "ko": "지하",
-              "translation_ru": "подвал, под землёй"
-            }
-          ]
         }
       ]
     }

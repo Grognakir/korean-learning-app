@@ -9,6 +9,111 @@
       "source_photo": "IMG_0657",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "산속",
+              "translation_ru": "в горах, в глубине гор"
+            },
+            {
+              "ko": "색",
+              "translation_ru": "цвет"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "소풍",
+                "translation_ru": "пикник"
+              },
+              {
+                "ko": "경치",
+                "translation_ru": "пейзаж"
+              },
+              {
+                "ko": "갑자기",
+                "translation_ru": "вдруг"
+              },
+              {
+                "ko": "조심하다",
+                "translation_ru": "быть осторожным"
+              },
+              {
+                "ko": "낮아지다",
+                "translation_ru": "падать (о температуре)"
+              },
+              {
+                "ko": "하루 종일",
+                "translation_ru": "целый день"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "가까운",
+                "translation_ru": "близкий (форма от 가깝다)"
+              },
+              {
+                "ko": "궁금하다",
+                "translation_ru": "быть любопытным, интересно"
+              },
+              {
+                "ko": "일기예보",
+                "translation_ru": "прогноз погоды"
+              },
+              {
+                "ko": "맑음",
+                "translation_ru": "ясно (форма от 맑다)"
+              },
+              {
+                "ko": "구름",
+                "translation_ru": "облако"
+              },
+              {
+                "ko": "끼다",
+                "translation_ru": "затягиваться, появляться (об облаках, тумане)"
+              },
+              {
+                "ko": "낮다",
+                "translation_ru": "быть низким"
+              },
+              {
+                "ko": "그런데",
+                "translation_ru": "но, кстати, между тем"
+              },
+              {
+                "ko": "요즘",
+                "translation_ru": "в последнее время"
+              },
+              {
+                "ko": "나뭇잎",
+                "translation_ru": "лист (дерева)"
+              },
+              {
+                "ko": "변하다",
+                "translation_ru": "меняться"
+              },
+              {
+                "ko": "약속",
+                "translation_ru": "договорённость, встреча"
+              },
+              {
+                "ko": "그 날",
+                "translation_ru": "тот день"
+              },
+              {
+                "ko": "거기",
+                "translation_ru": "там"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -43,29 +148,7 @@
                 "최저 21℃ / 최고 23℃"
               ]
             ]
-          },
-          "vocab": [
-            {
-              "ko": "가까운",
-              "translation_ru": "близкий (форма от 가깝다)"
-            },
-            {
-              "ko": "궁금하다",
-              "translation_ru": "быть любопытным, интересно"
-            },
-            {
-              "ko": "일기예보",
-              "translation_ru": "прогноз погоды"
-            },
-            {
-              "ko": "맑음",
-              "translation_ru": "ясно (форма от 맑다)"
-            },
-            {
-              "ko": "구름",
-              "translation_ru": "облако"
-            }
-          ]
+          }
         },
         {
           "type": "text",
@@ -121,44 +204,6 @@
               "speaker": "파하드",
               "text": "미안해요. 다른 약속이 있어서 못 갈 것 같아요."
             }
-          ],
-          "vocab": [
-            {
-              "ko": "끼다",
-              "translation_ru": "затягиваться, появляться (об облаках, тумане)"
-            },
-            {
-              "ko": "낮다",
-              "translation_ru": "быть низким"
-            },
-            {
-              "ko": "조심하다",
-              "translation_ru": "быть осторожным, беречься"
-            },
-            {
-              "ko": "그런데",
-              "translation_ru": "но, кстати, между тем"
-            },
-            {
-              "ko": "요즘",
-              "translation_ru": "в последнее время"
-            },
-            {
-              "ko": "나뭇잎",
-              "translation_ru": "лист (дерева)"
-            },
-            {
-              "ko": "변하다",
-              "translation_ru": "меняться"
-            },
-            {
-              "ko": "경치",
-              "translation_ru": "пейзаж, вид"
-            },
-            {
-              "ko": "약속",
-              "translation_ru": "договорённость, встреча"
-            }
           ]
         },
         {
@@ -179,68 +224,6 @@
             },
             {
               "text": "3) 거기에서 무엇을 하기로 했습니까?"
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "그 날",
-              "translation_ru": "тот день"
-            },
-            {
-              "ko": "거기",
-              "translation_ru": "там"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "산속",
-              "translation_ru": "в горах, в глубине гор",
-              "group": "소풍"
-            },
-            {
-              "ko": "색",
-              "translation_ru": "цвет"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "소풍",
-              "title_ru": "Поход на природу",
-              "items": [
-                {
-                  "ko": "소풍",
-                  "translation_ru": "пикник"
-                },
-                {
-                  "ko": "경치",
-                  "translation_ru": "пейзаж"
-                },
-                {
-                  "ko": "갑자기",
-                  "translation_ru": "вдруг"
-                },
-                {
-                  "ko": "조심하다",
-                  "translation_ru": "быть осторожным"
-                },
-                {
-                  "ko": "낮아지다",
-                  "translation_ru": "падать (о температуре)"
-                },
-                {
-                  "ko": "하루 종일",
-                  "translation_ru": "целый день"
-                }
-              ]
             }
           ]
         }

@@ -47,40 +47,6 @@
       "source_photo": "IMG_1590",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-questions",
-          "toc_section": "문화 이해하기",
-          "illustration": null,
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "lines": [
-            {
-              "text": "1) 서울에는 어떤 명소가 있습니까?",
-              "translation_ru": "Какие достопримечательности есть в Сеуле?"
-            },
-            {
-              "text": "2) 여러분 나라의 명소는 어디입니까? 이야기해 보십시오.",
-              "translation_ru": "Какие достопримечательности есть в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-culture-expr",
-          "toc_section": "문화 이해하기",
-          "hint_kind": "expression",
-          "related_text_ref": "text-culture-seoul",
-          "items": [
-            {
-              "kind": "phrase",
-              "text": "한눈에 보다",
-              "translation_ru": "окинуть взглядом — «산 위에 올라가면 인천 시내를 한눈에 볼 수 있어요» (с вершины горы весь Инчхон виден как на ладони)"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -124,6 +90,40 @@
             {
               "ko": "열정",
               "translation_ru": "страсть, энтузиазм"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-questions",
+          "toc_section": "문화 이해하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "1) 서울에는 어떤 명소가 있습니까?",
+              "translation_ru": "Какие достопримечательности есть в Сеуле?"
+            },
+            {
+              "text": "2) 여러분 나라의 명소는 어디입니까? 이야기해 보십시오.",
+              "translation_ru": "Какие достопримечательности есть в вашей стране? Расскажите."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-culture-expr",
+          "toc_section": "문화 이해하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-culture-seoul",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "한눈에 보다",
+              "translation_ru": "окинуть взглядом — «산 위에 올라가면 인천 시내를 한눈에 볼 수 있어요» (с вершины горы весь Инчхон виден как на ладони)"
             }
           ]
         },

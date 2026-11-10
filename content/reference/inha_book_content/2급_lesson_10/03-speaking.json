@@ -9,6 +9,97 @@
       "source_photo": "IMG_1298",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "단정하다",
+              "translation_ru": "опрятный, аккуратный"
+            },
+            {
+              "ko": "회색",
+              "translation_ru": "серый цвет"
+            },
+            {
+              "ko": "원피스",
+              "translation_ru": "платье"
+            },
+            {
+              "ko": "블라우스",
+              "translation_ru": "блузка"
+            },
+            {
+              "ko": "스커트",
+              "translation_ru": "юбка"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "결혼식",
+                "translation_ru": "свадьба"
+              },
+              {
+                "ko": "하객",
+                "translation_ru": "гость на церемонии"
+              },
+              {
+                "ko": "축의금",
+                "translation_ru": "денежный подарок на свадьбу"
+              },
+              {
+                "ko": "청첩장",
+                "translation_ru": "свадебное приглашение"
+              },
+              {
+                "ko": "예식장",
+                "translation_ru": "зал для свадебных церемоний"
+              },
+              {
+                "ko": "예복",
+                "translation_ru": "парадная одежда"
+              },
+              {
+                "ko": "운동복",
+                "translation_ru": "спортивная одежда"
+              },
+              {
+                "ko": "반바지",
+                "translation_ru": "шорты"
+              },
+              {
+                "ko": "슬리퍼",
+                "translation_ru": "тапочки, шлёпанцы"
+              },
+              {
+                "ko": "캐주얼",
+                "translation_ru": "повседневный стиль"
+              },
+              {
+                "ko": "보통",
+                "translation_ru": "обычно"
+              },
+              {
+                "ko": "후문",
+                "translation_ru": "задние ворота, задний вход"
+              },
+              {
+                "ko": "질문하다",
+                "translation_ru": "задавать вопрос"
+              },
+              {
+                "ko": "문화",
+                "translation_ru": "культура"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -93,118 +184,6 @@
             },
             {
               "text": "3) 왜 그 옷을 입고 갑니까?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "단정하다",
-              "translation_ru": "опрятный, аккуратный",
-              "group": "대화"
-            },
-            {
-              "ko": "회색",
-              "translation_ru": "серый цвет",
-              "group": "옷차림"
-            },
-            {
-              "ko": "원피스",
-              "translation_ru": "платье",
-              "group": "옷차림"
-            },
-            {
-              "ko": "블라우스",
-              "translation_ru": "блузка",
-              "group": "옷차림"
-            },
-            {
-              "ko": "스커트",
-              "translation_ru": "юбка",
-              "group": "옷차림"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "결혼식",
-              "title_ru": "Свадьба",
-              "items": [
-                {
-                  "ko": "결혼식",
-                  "translation_ru": "свадьба"
-                },
-                {
-                  "ko": "하객",
-                  "translation_ru": "гость на церемонии"
-                },
-                {
-                  "ko": "축의금",
-                  "translation_ru": "денежный подарок на свадьбу"
-                },
-                {
-                  "ko": "청첩장",
-                  "translation_ru": "свадебное приглашение"
-                },
-                {
-                  "ko": "예식장",
-                  "translation_ru": "зал для свадебных церемоний"
-                }
-              ]
-            },
-            {
-              "title": "옷차림",
-              "title_ru": "Одежда по случаю",
-              "items": [
-                {
-                  "ko": "예복",
-                  "translation_ru": "парадная одежда"
-                },
-                {
-                  "ko": "운동복",
-                  "translation_ru": "спортивная одежда"
-                },
-                {
-                  "ko": "반바지",
-                  "translation_ru": "шорты"
-                },
-                {
-                  "ko": "슬리퍼",
-                  "translation_ru": "тапочки, шлёпанцы"
-                },
-                {
-                  "ko": "캐주얼",
-                  "translation_ru": "повседневный стиль"
-                }
-              ]
-            },
-            {
-              "title": "대화",
-              "title_ru": "Из диалога",
-              "items": [
-                {
-                  "ko": "보통",
-                  "translation_ru": "обычно"
-                },
-                {
-                  "ko": "후문",
-                  "translation_ru": "задние ворота, задний вход"
-                },
-                {
-                  "ko": "질문하다",
-                  "translation_ru": "задавать вопрос"
-                },
-                {
-                  "ko": "문화",
-                  "translation_ru": "культура"
-                }
-              ]
             }
           ]
         }

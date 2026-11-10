@@ -9,6 +9,45 @@
       "source_photo": "IMG_1044",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-season-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "자주",
+              "translation_ru": "часто"
+            },
+            {
+              "ko": "지난겨울",
+              "translation_ru": "прошлая зима"
+            },
+            {
+              "ko": "스키장",
+              "translation_ru": "лыжный курорт, горнолыжная база"
+            },
+            {
+              "ko": "지하철역",
+              "translation_ru": "станция метро"
+            },
+            {
+              "ko": "바다",
+              "translation_ru": "море"
+            },
+            {
+              "ko": "단풍",
+              "translation_ru": "осенняя листва, багрянец"
+            },
+            {
+              "ko": "모자",
+              "translation_ru": "шапка, кепка, шляпа"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-season-dialogue",
           "toc_section": "준비하기 2",
@@ -70,45 +109,6 @@
                 "으로",
                 "타러 가요"
               ]
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-season-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "자주",
-              "translation_ru": "часто"
-            },
-            {
-              "ko": "지난겨울",
-              "translation_ru": "прошлая зима"
-            },
-            {
-              "ko": "스키장",
-              "translation_ru": "лыжный курорт, горнолыжная база"
-            },
-            {
-              "ko": "지하철역",
-              "translation_ru": "станция метро"
-            },
-            {
-              "ko": "바다",
-              "translation_ru": "море"
-            },
-            {
-              "ko": "단풍",
-              "translation_ru": "осенняя листва, багрянец"
-            },
-            {
-              "ko": "모자",
-              "translation_ru": "шапка, кепка, шляпа"
             }
           ]
         }

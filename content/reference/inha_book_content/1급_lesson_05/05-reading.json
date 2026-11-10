@@ -9,6 +9,25 @@
       "source_photo": "IMG_1020",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-daily-schedule",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-daily-schedule",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "세수",
+              "translation_ru": "умывание (세수를 하다 — умываться)"
+            },
+            {
+              "ko": "하지만",
+              "translation_ru": "но, однако"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-daily-schedule",
           "toc_section": "읽고 말하기",
@@ -81,25 +100,6 @@
               "kind": "open",
               "prompt": "여러분의 하루 일과를 친구에게 말해 보십시오.",
               "prompt_ru": "Расскажите другу о своём распорядке дня."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-daily-schedule",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-daily-schedule",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "세수",
-              "translation_ru": "умывание (세수를 하다 — умываться)"
-            },
-            {
-              "ko": "하지만",
-              "translation_ru": "но, однако"
             }
           ]
         }

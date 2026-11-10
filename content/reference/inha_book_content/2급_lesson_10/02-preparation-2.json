@@ -9,6 +9,385 @@
       "source_photo": "IMG_1293",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-fashion-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "취업",
+              "translation_ru": "трудоустройство"
+            },
+            {
+              "ko": "면접",
+              "translation_ru": "собеседование"
+            },
+            {
+              "ko": "정장",
+              "translation_ru": "строгий костюм"
+            },
+            {
+              "ko": "양복",
+              "translation_ru": "мужской костюм"
+            },
+            {
+              "ko": "매다",
+              "translation_ru": "завязывать, повязывать (галстук)"
+            },
+            {
+              "ko": "까만색",
+              "translation_ru": "чёрный цвет"
+            },
+            {
+              "ko": "하얗다",
+              "translation_ru": "белый"
+            },
+            {
+              "ko": "와이셔츠",
+              "translation_ru": "рубашка под костюм"
+            },
+            {
+              "ko": "깔끔하다",
+              "translation_ru": "аккуратный, опрятный"
+            },
+            {
+              "ko": "모델",
+              "translation_ru": "модель"
+            },
+            {
+              "ko": "화려하다",
+              "translation_ru": "яркий, роскошный"
+            },
+            {
+              "ko": "줄무늬",
+              "translation_ru": "полоски, полосатый узор"
+            },
+            {
+              "ko": "면접관",
+              "translation_ru": "интервьюер, экзаменатор"
+            },
+            {
+              "ko": "노랗다",
+              "translation_ru": "жёлтый"
+            },
+            {
+              "ko": "재킷",
+              "translation_ru": "пиджак, жакет"
+            },
+            {
+              "ko": "늙다",
+              "translation_ru": "стареть, быть пожилым"
+            },
+            {
+              "ko": "월급",
+              "translation_ru": "месячная зарплата"
+            },
+            {
+              "ko": "쥐꼬리",
+              "translation_ru": "мышиный хвост (перен. «копейки»)"
+            },
+            {
+              "ko": "파랗다",
+              "translation_ru": "синий, голубой"
+            },
+            {
+              "ko": "셔츠",
+              "translation_ru": "рубашка"
+            },
+            {
+              "ko": "까맣다",
+              "translation_ru": "чёрный"
+            },
+            {
+              "ko": "메다",
+              "translation_ru": "нести на плече, надевать через плечо"
+            },
+            {
+              "ko": "어떻다",
+              "translation_ru": "какой, как"
+            },
+            {
+              "ko": "그렇다",
+              "translation_ru": "такой, так"
+            },
+            {
+              "ko": "새끼",
+              "translation_ru": "детёныш"
+            },
+            {
+              "ko": "돌탑",
+              "translation_ru": "башня из камней"
+            },
+            {
+              "ko": "소원",
+              "translation_ru": "желание, заветная мечта"
+            },
+            {
+              "ko": "빌다",
+              "translation_ru": "просить, загадывать (желание)"
+            },
+            {
+              "ko": "쌓다",
+              "translation_ru": "складывать, возводить"
+            },
+            {
+              "ko": "송아지",
+              "translation_ru": "телёнок"
+            },
+            {
+              "ko": "손바닥",
+              "translation_ru": "ладонь"
+            },
+            {
+              "ko": "주먹",
+              "translation_ru": "кулак"
+            },
+            {
+              "ko": "단추",
+              "translation_ru": "пуговица"
+            },
+            {
+              "ko": "구멍",
+              "translation_ru": "отверстие, дырка"
+            },
+            {
+              "ko": "모기",
+              "translation_ru": "комар"
+            },
+            {
+              "ko": "차다",
+              "translation_ru": "носить на себе (часы, пояс)"
+            },
+            {
+              "ko": "목도리",
+              "translation_ru": "шарф"
+            },
+            {
+              "ko": "귀걸이",
+              "translation_ru": "серьги"
+            },
+            {
+              "ko": "반지",
+              "translation_ru": "кольцо"
+            },
+            {
+              "ko": "끼다",
+              "translation_ru": "надевать (кольцо, очки, перчатки)"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "체크무늬",
+                "translation_ru": "в клетку, клетчатый узор"
+              },
+              {
+                "ko": "물방울무늬",
+                "translation_ru": "в горошек"
+              },
+              {
+                "ko": "꽃무늬",
+                "translation_ru": "цветочный узор"
+              },
+              {
+                "ko": "민무늬",
+                "translation_ru": "однотонный, без узора"
+              },
+              {
+                "ko": "동그라미",
+                "translation_ru": "кружок, круг"
+              },
+              {
+                "ko": "평상복",
+                "translation_ru": "повседневная одежда"
+              },
+              {
+                "ko": "티셔츠",
+                "translation_ru": "футболка"
+              },
+              {
+                "ko": "원피스",
+                "translation_ru": "платье"
+              },
+              {
+                "ko": "등산복",
+                "translation_ru": "одежда для горных походов"
+              },
+              {
+                "ko": "비옷",
+                "translation_ru": "дождевик"
+              },
+              {
+                "ko": "코트",
+                "translation_ru": "пальто"
+              },
+              {
+                "ko": "점퍼",
+                "translation_ru": "куртка"
+              },
+              {
+                "ko": "조끼",
+                "translation_ru": "жилет"
+              },
+              {
+                "ko": "등산화",
+                "translation_ru": "горные ботинки"
+              },
+              {
+                "ko": "부츠",
+                "translation_ru": "сапоги, ботинки"
+              },
+              {
+                "ko": "양말",
+                "translation_ru": "носки"
+              },
+              {
+                "ko": "모자",
+                "translation_ru": "шапка, кепка, шляпа"
+              },
+              {
+                "ko": "스카프",
+                "translation_ru": "шарф, платок"
+              },
+              {
+                "ko": "장갑",
+                "translation_ru": "перчатки"
+              },
+              {
+                "ko": "입다",
+                "translation_ru": "надевать, носить (одежду)"
+              },
+              {
+                "ko": "신다",
+                "translation_ru": "обувать, носить (обувь)"
+              },
+              {
+                "ko": "쓰다",
+                "translation_ru": "надевать на голову, носить очки"
+              },
+              {
+                "ko": "벗다",
+                "translation_ru": "снимать (одежду)"
+              },
+              {
+                "ko": "두르다",
+                "translation_ru": "повязывать, обматывать (шарф, платок)"
+              },
+              {
+                "ko": "빨간색",
+                "translation_ru": "красный цвет"
+              },
+              {
+                "ko": "주황색",
+                "translation_ru": "оранжевый цвет"
+              },
+              {
+                "ko": "노란색",
+                "translation_ru": "жёлтый цвет"
+              },
+              {
+                "ko": "초록색",
+                "translation_ru": "зелёный цвет"
+              },
+              {
+                "ko": "파란색",
+                "translation_ru": "синий, голубой цвет"
+              },
+              {
+                "ko": "남색",
+                "translation_ru": "тёмно-синий цвет"
+              },
+              {
+                "ko": "보라색",
+                "translation_ru": "фиолетовый цвет"
+              },
+              {
+                "ko": "분홍색",
+                "translation_ru": "розовый цвет"
+              },
+              {
+                "ko": "갈색",
+                "translation_ru": "коричневый цвет"
+              },
+              {
+                "ko": "검은색",
+                "translation_ru": "чёрный цвет"
+              },
+              {
+                "ko": "흰색",
+                "translation_ru": "белый цвет"
+              },
+              {
+                "ko": "회색",
+                "translation_ru": "серый цвет"
+              },
+              {
+                "ko": "어두운 색",
+                "translation_ru": "тёмный цвет"
+              },
+              {
+                "ko": "밝은 색",
+                "translation_ru": "светлый цвет"
+              },
+              {
+                "ko": "화사하다",
+                "translation_ru": "яркий, нарядный, сияющий"
+              },
+              {
+                "ko": "단정하다",
+                "translation_ru": "опрятный, аккуратный"
+              },
+              {
+                "ko": "수수하다",
+                "translation_ru": "скромный, неброский"
+              },
+              {
+                "ko": "멋있다",
+                "translation_ru": "классный, стильный"
+              },
+              {
+                "ko": "유행",
+                "translation_ru": "мода, тренд"
+              },
+              {
+                "ko": "어울리다",
+                "translation_ru": "подходить, сочетаться"
+              },
+              {
+                "ko": "뚱뚱하다",
+                "translation_ru": "полный, толстый"
+              },
+              {
+                "ko": "날씬하다",
+                "translation_ru": "стройный"
+              },
+              {
+                "ko": "헐렁하다",
+                "translation_ru": "свободный, мешковатый"
+              },
+              {
+                "ko": "가로",
+                "translation_ru": "горизонталь, поперёк"
+              },
+              {
+                "ko": "세로",
+                "translation_ru": "вертикаль, вдоль"
+              },
+              {
+                "ko": "취직",
+                "translation_ru": "трудоустройство (то же, что 취업)"
+              },
+              {
+                "ko": "결혼식",
+                "translation_ru": "свадьба"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-fashion-dialogue",
           "toc_section": "준비하기 2",
@@ -76,457 +455,6 @@
               "kind": "phrase",
               "text": "인상을 주다",
               "translation_ru": "производить впечатление — «면접관에게 좋은 인상을 줄 것 같아요» («произведу на интервьюера хорошее впечатление»)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-fashion-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "취업",
-              "translation_ru": "трудоустройство",
-              "group": "직장과 행사"
-            },
-            {
-              "ko": "면접",
-              "translation_ru": "собеседование",
-              "group": "직장과 행사"
-            },
-            {
-              "ko": "정장",
-              "translation_ru": "строгий костюм",
-              "group": "옷"
-            },
-            {
-              "ko": "양복",
-              "translation_ru": "мужской костюм",
-              "group": "옷"
-            },
-            {
-              "ko": "매다",
-              "translation_ru": "завязывать, повязывать (галстук)",
-              "group": "착용 동사"
-            },
-            {
-              "ko": "까만색",
-              "translation_ru": "чёрный цвет",
-              "group": "색"
-            },
-            {
-              "ko": "하얗다",
-              "translation_ru": "белый",
-              "group": "색"
-            },
-            {
-              "ko": "와이셔츠",
-              "translation_ru": "рубашка под костюм",
-              "group": "옷"
-            },
-            {
-              "ko": "깔끔하다",
-              "translation_ru": "аккуратный, опрятный",
-              "group": "스타일"
-            },
-            {
-              "ko": "모델",
-              "translation_ru": "модель",
-              "group": "스타일"
-            },
-            {
-              "ko": "화려하다",
-              "translation_ru": "яркий, роскошный",
-              "group": "스타일"
-            },
-            {
-              "ko": "줄무늬",
-              "translation_ru": "полоски, полосатый узор",
-              "group": "무늬"
-            },
-            {
-              "ko": "면접관",
-              "translation_ru": "интервьюер, экзаменатор",
-              "group": "직장과 행사"
-            },
-            {
-              "ko": "노랗다",
-              "translation_ru": "жёлтый",
-              "group": "색"
-            },
-            {
-              "ko": "재킷",
-              "translation_ru": "пиджак, жакет",
-              "group": "옷"
-            },
-            {
-              "ko": "늙다",
-              "translation_ru": "стареть, быть пожилым",
-              "group": "스타일"
-            },
-            {
-              "ko": "월급",
-              "translation_ru": "месячная зарплата",
-              "group": "직장과 행사"
-            },
-            {
-              "ko": "쥐꼬리",
-              "translation_ru": "мышиный хвост (перен. «копейки»)"
-            },
-            {
-              "ko": "파랗다",
-              "translation_ru": "синий, голубой",
-              "group": "색"
-            },
-            {
-              "ko": "셔츠",
-              "translation_ru": "рубашка",
-              "group": "옷"
-            },
-            {
-              "ko": "까맣다",
-              "translation_ru": "чёрный",
-              "group": "색"
-            },
-            {
-              "ko": "메다",
-              "translation_ru": "нести на плече, надевать через плечо",
-              "group": "착용 동사"
-            },
-            {
-              "ko": "어떻다",
-              "translation_ru": "какой, как"
-            },
-            {
-              "ko": "그렇다",
-              "translation_ru": "такой, так"
-            },
-            {
-              "ko": "새끼",
-              "translation_ru": "детёныш"
-            },
-            {
-              "ko": "돌탑",
-              "translation_ru": "башня из камней"
-            },
-            {
-              "ko": "소원",
-              "translation_ru": "желание, заветная мечта"
-            },
-            {
-              "ko": "빌다",
-              "translation_ru": "просить, загадывать (желание)"
-            },
-            {
-              "ko": "쌓다",
-              "translation_ru": "складывать, возводить"
-            },
-            {
-              "ko": "송아지",
-              "translation_ru": "телёнок"
-            },
-            {
-              "ko": "손바닥",
-              "translation_ru": "ладонь"
-            },
-            {
-              "ko": "주먹",
-              "translation_ru": "кулак"
-            },
-            {
-              "ko": "단추",
-              "translation_ru": "пуговица"
-            },
-            {
-              "ko": "구멍",
-              "translation_ru": "отверстие, дырка"
-            },
-            {
-              "ko": "모기",
-              "translation_ru": "комар"
-            },
-            {
-              "ko": "차다",
-              "translation_ru": "носить на себе (часы, пояс)",
-              "group": "착용 동사"
-            },
-            {
-              "ko": "목도리",
-              "translation_ru": "шарф",
-              "group": "신발과 소품"
-            },
-            {
-              "ko": "귀걸이",
-              "translation_ru": "серьги",
-              "group": "신발과 소품"
-            },
-            {
-              "ko": "반지",
-              "translation_ru": "кольцо",
-              "group": "신발과 소품"
-            },
-            {
-              "ko": "끼다",
-              "translation_ru": "надевать (кольцо, очки, перчатки)",
-              "group": "착용 동사"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "무늬",
-              "title_ru": "Узоры",
-              "items": [
-                {
-                  "ko": "체크무늬",
-                  "translation_ru": "в клетку, клетчатый узор"
-                },
-                {
-                  "ko": "물방울무늬",
-                  "translation_ru": "в горошек"
-                },
-                {
-                  "ko": "꽃무늬",
-                  "translation_ru": "цветочный узор"
-                },
-                {
-                  "ko": "민무늬",
-                  "translation_ru": "однотонный, без узора"
-                },
-                {
-                  "ko": "동그라미",
-                  "translation_ru": "кружок, круг"
-                }
-              ]
-            },
-            {
-              "title": "옷",
-              "title_ru": "Одежда",
-              "items": [
-                {
-                  "ko": "평상복",
-                  "translation_ru": "повседневная одежда"
-                },
-                {
-                  "ko": "티셔츠",
-                  "translation_ru": "футболка"
-                },
-                {
-                  "ko": "원피스",
-                  "translation_ru": "платье"
-                },
-                {
-                  "ko": "등산복",
-                  "translation_ru": "одежда для горных походов"
-                },
-                {
-                  "ko": "비옷",
-                  "translation_ru": "дождевик"
-                },
-                {
-                  "ko": "코트",
-                  "translation_ru": "пальто"
-                },
-                {
-                  "ko": "점퍼",
-                  "translation_ru": "куртка"
-                },
-                {
-                  "ko": "조끼",
-                  "translation_ru": "жилет"
-                }
-              ]
-            },
-            {
-              "title": "신발과 소품",
-              "title_ru": "Обувь и аксессуары",
-              "items": [
-                {
-                  "ko": "등산화",
-                  "translation_ru": "горные ботинки"
-                },
-                {
-                  "ko": "부츠",
-                  "translation_ru": "сапоги, ботинки"
-                },
-                {
-                  "ko": "양말",
-                  "translation_ru": "носки"
-                },
-                {
-                  "ko": "모자",
-                  "translation_ru": "шапка, кепка, шляпа"
-                },
-                {
-                  "ko": "스카프",
-                  "translation_ru": "шарф, платок"
-                },
-                {
-                  "ko": "장갑",
-                  "translation_ru": "перчатки"
-                }
-              ]
-            },
-            {
-              "title": "착용 동사",
-              "title_ru": "Глаголы ношения",
-              "items": [
-                {
-                  "ko": "입다",
-                  "translation_ru": "надевать, носить (одежду)"
-                },
-                {
-                  "ko": "신다",
-                  "translation_ru": "обувать, носить (обувь)"
-                },
-                {
-                  "ko": "쓰다",
-                  "translation_ru": "надевать на голову, носить очки"
-                },
-                {
-                  "ko": "벗다",
-                  "translation_ru": "снимать (одежду)"
-                },
-                {
-                  "ko": "두르다",
-                  "translation_ru": "повязывать, обматывать (шарф, платок)"
-                }
-              ]
-            },
-            {
-              "title": "색",
-              "title_ru": "Цвета",
-              "items": [
-                {
-                  "ko": "빨간색",
-                  "translation_ru": "красный цвет"
-                },
-                {
-                  "ko": "주황색",
-                  "translation_ru": "оранжевый цвет"
-                },
-                {
-                  "ko": "노란색",
-                  "translation_ru": "жёлтый цвет"
-                },
-                {
-                  "ko": "초록색",
-                  "translation_ru": "зелёный цвет"
-                },
-                {
-                  "ko": "파란색",
-                  "translation_ru": "синий, голубой цвет"
-                },
-                {
-                  "ko": "남색",
-                  "translation_ru": "тёмно-синий цвет"
-                },
-                {
-                  "ko": "보라색",
-                  "translation_ru": "фиолетовый цвет"
-                },
-                {
-                  "ko": "분홍색",
-                  "translation_ru": "розовый цвет"
-                },
-                {
-                  "ko": "갈색",
-                  "translation_ru": "коричневый цвет"
-                },
-                {
-                  "ko": "검은색",
-                  "translation_ru": "чёрный цвет"
-                },
-                {
-                  "ko": "흰색",
-                  "translation_ru": "белый цвет"
-                },
-                {
-                  "ko": "회색",
-                  "translation_ru": "серый цвет"
-                },
-                {
-                  "ko": "어두운 색",
-                  "translation_ru": "тёмный цвет"
-                },
-                {
-                  "ko": "밝은 색",
-                  "translation_ru": "светлый цвет"
-                }
-              ]
-            },
-            {
-              "title": "스타일",
-              "title_ru": "Стиль и впечатление",
-              "items": [
-                {
-                  "ko": "화사하다",
-                  "translation_ru": "яркий, нарядный, сияющий"
-                },
-                {
-                  "ko": "단정하다",
-                  "translation_ru": "опрятный, аккуратный"
-                },
-                {
-                  "ko": "수수하다",
-                  "translation_ru": "скромный, неброский"
-                },
-                {
-                  "ko": "멋있다",
-                  "translation_ru": "классный, стильный"
-                },
-                {
-                  "ko": "유행",
-                  "translation_ru": "мода, тренд"
-                },
-                {
-                  "ko": "어울리다",
-                  "translation_ru": "подходить, сочетаться"
-                }
-              ]
-            },
-            {
-              "title": "체형과 핏",
-              "title_ru": "Фигура и посадка",
-              "items": [
-                {
-                  "ko": "뚱뚱하다",
-                  "translation_ru": "полный, толстый"
-                },
-                {
-                  "ko": "날씬하다",
-                  "translation_ru": "стройный"
-                },
-                {
-                  "ko": "헐렁하다",
-                  "translation_ru": "свободный, мешковатый"
-                },
-                {
-                  "ko": "가로",
-                  "translation_ru": "горизонталь, поперёк"
-                },
-                {
-                  "ko": "세로",
-                  "translation_ru": "вертикаль, вдоль"
-                }
-              ]
-            },
-            {
-              "title": "직장과 행사",
-              "title_ru": "Работа и события",
-              "items": [
-                {
-                  "ko": "취직",
-                  "translation_ru": "трудоустройство (то же, что 취업)"
-                },
-                {
-                  "ko": "결혼식",
-                  "translation_ru": "свадьба"
-                }
-              ]
             }
           ]
         }

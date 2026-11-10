@@ -9,6 +9,33 @@
       "source_photo": "IMG_1175",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-leisure",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "여가",
+              "translation_ru": "досуг"
+            },
+            {
+              "ko": "활동",
+              "translation_ru": "деятельность, активность"
+            },
+            {
+              "ko": "최근",
+              "translation_ru": "недавно, в последнее время"
+            },
+            {
+              "ko": "봉사",
+              "translation_ru": "волонтёрство, служение"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-leisure",
           "toc_section": "문화 이해하기",
@@ -50,33 +77,6 @@
               "kind": "open",
               "prompt": "여러분 나라 사람들은 어떤 여가 활동을 좋아합니까? 이야기해 보십시오.",
               "prompt_ru": "Какой досуг любят в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-leisure",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "여가",
-              "translation_ru": "досуг"
-            },
-            {
-              "ko": "활동",
-              "translation_ru": "деятельность, активность"
-            },
-            {
-              "ko": "최근",
-              "translation_ru": "недавно, в последнее время"
-            },
-            {
-              "ko": "봉사",
-              "translation_ru": "волонтёрство, служение"
             }
           ]
         },

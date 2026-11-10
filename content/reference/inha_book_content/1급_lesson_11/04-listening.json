@@ -9,6 +9,29 @@
       "source_photo": "IMG_1110",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-invitation-call",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "예술회관",
+              "translation_ru": "дом искусств, концертный зал"
+            },
+            {
+              "ko": "공연",
+              "translation_ru": "представление, выступление"
+            },
+            {
+              "ko": "불꽃놀이",
+              "translation_ru": "фейерверк"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-invitation-call",
           "toc_section": "듣고 말하기",
@@ -91,29 +114,6 @@
           ],
           "followup": "전화로 초대해 봤습니까? 이야기해 보십시오.",
           "followup_ru": "Приглашали ли вы кого-нибудь по телефону? Расскажите."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-invitation-call",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "예술회관",
-              "translation_ru": "дом искусств, концертный зал"
-            },
-            {
-              "ko": "공연",
-              "translation_ru": "представление, выступление"
-            },
-            {
-              "ko": "불꽃놀이",
-              "translation_ru": "фейерверк"
-            }
-          ]
         }
       ]
     }

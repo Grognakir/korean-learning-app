@@ -9,6 +9,89 @@
       "source_photo": "IMG_0719",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-holiday-food",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "설날",
+              "translation_ru": "Соллаль (корейский Новый год по лунному календарю)"
+            },
+            {
+              "ko": "소망",
+              "translation_ru": "желание, надежда"
+            },
+            {
+              "ko": "뜻",
+              "translation_ru": "смысл, значение"
+            },
+            {
+              "ko": "쌀가루",
+              "translation_ru": "рисовая мука"
+            },
+            {
+              "ko": "달",
+              "translation_ru": "луна"
+            },
+            {
+              "ko": "추수",
+              "translation_ru": "сбор урожая"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "추석",
+                "translation_ru": "Чхусок"
+              },
+              {
+                "ko": "떡국",
+                "translation_ru": "ттоккук (суп с рисовыми клёцками)"
+              },
+              {
+                "ko": "송편",
+                "translation_ru": "сонпхён"
+              },
+              {
+                "ko": "음력",
+                "translation_ru": "лунный календарь"
+              },
+              {
+                "ko": "새해",
+                "translation_ru": "Новый год"
+              },
+              {
+                "ko": "첫날",
+                "translation_ru": "первый день"
+              },
+              {
+                "ko": "한과",
+                "translation_ru": "корейские сладости"
+              },
+              {
+                "ko": "식혜",
+                "translation_ru": "сикхе"
+              },
+              {
+                "ko": "감사",
+                "translation_ru": "благодарность"
+              },
+              {
+                "ko": "건강",
+                "translation_ru": "здоровье"
+              },
+              {
+                "ko": "가족",
+                "translation_ru": "семья"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-holiday-food",
           "toc_section": "문화 이해하기",
@@ -35,131 +118,6 @@
             {
               "text": "2) 여러분 나라의 명절 음식에는 무엇이 있습니까? 이야기해 보십시오.",
               "translation_ru": "А в вашей стране какая праздничная еда? Расскажите."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "설날",
-              "translation_ru": "Соллаль (корейский Новый год по лунному календарю)"
-            },
-            {
-              "ko": "소망",
-              "translation_ru": "желание, надежда"
-            },
-            {
-              "ko": "뜻",
-              "translation_ru": "смысл, значение"
-            },
-            {
-              "ko": "쌀가루",
-              "translation_ru": "рисовая мука"
-            },
-            {
-              "ko": "달",
-              "translation_ru": "луна"
-            },
-            {
-              "ko": "추수",
-              "translation_ru": "сбор урожая"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-holiday-food",
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "설날",
-              "translation_ru": "Соллаль (корейский Новый год по лунному календарю)",
-              "group": "명절"
-            },
-            {
-              "ko": "소망",
-              "translation_ru": "желание, надежда",
-              "group": "의미"
-            },
-            {
-              "ko": "뜻",
-              "translation_ru": "смысл, значение",
-              "group": "의미"
-            },
-            {
-              "ko": "쌀가루",
-              "translation_ru": "рисовая мука",
-              "group": "명절"
-            },
-            {
-              "ko": "달",
-              "translation_ru": "луна",
-              "group": "명절"
-            },
-            {
-              "ko": "추수",
-              "translation_ru": "сбор урожая",
-              "group": "명절"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "명절",
-              "title_ru": "Праздники",
-              "items": [
-                {
-                  "ko": "추석",
-                  "translation_ru": "Чхусок"
-                },
-                {
-                  "ko": "떡국",
-                  "translation_ru": "ттоккук (суп с рисовыми клёцками)"
-                },
-                {
-                  "ko": "송편",
-                  "translation_ru": "сонпхён"
-                },
-                {
-                  "ko": "음력",
-                  "translation_ru": "лунный календарь"
-                },
-                {
-                  "ko": "새해",
-                  "translation_ru": "Новый год"
-                },
-                {
-                  "ko": "첫날",
-                  "translation_ru": "первый день"
-                },
-                {
-                  "ko": "한과",
-                  "translation_ru": "корейские сладости"
-                },
-                {
-                  "ko": "식혜",
-                  "translation_ru": "сикхе"
-                }
-              ]
-            },
-            {
-              "title": "의미",
-              "title_ru": "Смысл праздника",
-              "items": [
-                {
-                  "ko": "감사",
-                  "translation_ru": "благодарность"
-                },
-                {
-                  "ko": "건강",
-                  "translation_ru": "здоровье"
-                },
-                {
-                  "ko": "가족",
-                  "translation_ru": "семья"
-                }
-              ]
             }
           ]
         },

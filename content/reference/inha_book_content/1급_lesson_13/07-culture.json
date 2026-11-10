@@ -9,54 +9,6 @@
       "source_photo": "IMG_1145",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-transport",
-          "toc_section": "문화 이해하기",
-          "title": "한국의 대중교통",
-          "title_ru": "Общественный транспорт Кореи",
-          "illustration": {
-            "storage_path": "lesson_13/illustration_5_transport_card.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "무엇입니까? 이야기해 보십시오. 다음을 읽고 물음에 답하십시오.",
-          "intro_prompt_ru": "Что это? Расскажите. Прочитайте и ответьте на вопросы.",
-          "lines": [
-            {
-              "text": "한국의 대중교통에는 지하철, 버스, 택시가 있습니다. 한국 사람들은 대중교통을 이용해서 회사나 학교에 갑니다. 대중교통은 현금이나 교통 카드를 사용합니다. 그러나 요즘은 교통 카드를 많이 사용합니다. 버스를 타면 교통 카드를 카드 단말기에 댑니다. 그리고 내리기 전에 다시 교통 카드를 카드 단말기에 댑니다. 교통 카드는 전국에서 사용할 수 있습니다. 한국에서는 교통 카드를 이용하면 아주 편리합니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "댑",
-              "translation_ru": "форма от 대다 (прикладывать)"
-            }
-          ]
-        },
-        {
-          "type": "comprehension_exercise",
-          "id": "reading-culture-transport",
-          "toc_section": "문화 이해하기",
-          "exercise_kind": "reading",
-          "title": "한국의 대중교통",
-          "title_ru": "Общественный транспорт Кореи",
-          "questions": [
-            {
-              "kind": "open",
-              "prompt": "한국 사람들은 어떤 대중교통을 사용합니까?",
-              "prompt_ru": "Каким общественным транспортом пользуются корейцы?"
-            },
-            {
-              "kind": "open",
-              "prompt": "여러분 나라의 대중교통에는 무엇이 있습니까? 이야기해 보십시오.",
-              "prompt_ru": "Какой общественный транспорт есть в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -92,6 +44,56 @@
             {
               "ko": "전국",
               "translation_ru": "вся страна"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "댑",
+                "translation_ru": "форма от 대다 (прикладывать)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-culture-transport",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 대중교통",
+          "title_ru": "Общественный транспорт Кореи",
+          "illustration": {
+            "storage_path": "lesson_13/illustration_5_transport_card.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오. 다음을 읽고 물음에 답하십시오.",
+          "intro_prompt_ru": "Что это? Расскажите. Прочитайте и ответьте на вопросы.",
+          "lines": [
+            {
+              "text": "한국의 대중교통에는 지하철, 버스, 택시가 있습니다. 한국 사람들은 대중교통을 이용해서 회사나 학교에 갑니다. 대중교통은 현금이나 교통 카드를 사용합니다. 그러나 요즘은 교통 카드를 많이 사용합니다. 버스를 타면 교통 카드를 카드 단말기에 댑니다. 그리고 내리기 전에 다시 교통 카드를 카드 단말기에 댑니다. 교통 카드는 전국에서 사용할 수 있습니다. 한국에서는 교통 카드를 이용하면 아주 편리합니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-transport",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 대중교통",
+          "title_ru": "Общественный транспорт Кореи",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국 사람들은 어떤 대중교통을 사용합니까?",
+              "prompt_ru": "Каким общественным транспортом пользуются корейцы?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 대중교통에는 무엇이 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Какой общественный транспорт есть в вашей стране? Расскажите."
             }
           ]
         },

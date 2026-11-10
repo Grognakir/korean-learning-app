@@ -9,6 +9,73 @@
       "source_photo": "photo_33",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi-1",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-greeting",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "악수",
+              "translation_ru": "рукопожатие"
+            },
+            {
+              "ko": "잡다",
+              "translation_ru": "брать, держать"
+            },
+            {
+              "ko": "상대방",
+              "translation_ru": "собеседник"
+            },
+            {
+              "ko": "배",
+              "translation_ru": "живот"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "인사",
+                "translation_ru": "приветствие"
+              },
+              {
+                "ko": "숙이다",
+                "translation_ru": "наклонять (голову)"
+              },
+              {
+                "ko": "예절",
+                "translation_ru": "этикет"
+              },
+              {
+                "ko": "어른",
+                "translation_ru": "взрослый, старший"
+              },
+              {
+                "ko": "존경하다",
+                "translation_ru": "уважать"
+              },
+              {
+                "ko": "의미",
+                "translation_ru": "значение, смысл"
+              },
+              {
+                "ko": "마음",
+                "translation_ru": "душа, сердце"
+              },
+              {
+                "ko": "머리",
+                "translation_ru": "голова"
+              },
+              {
+                "ko": "손",
+                "translation_ru": "рука, кисть"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-greeting",
           "toc_section": "문화 이해하기",
@@ -37,87 +104,6 @@
             },
             {
               "text": "2) 여러분 나라에서는 어떻게 인사를 합니까? 친구들과 이야기해 보십시오."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi-1",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-greeting",
-          "source_note": "рукописный список на полях страницы",
-          "items": [
-            {
-              "ko": "악수",
-              "translation_ru": "рукопожатие",
-              "group": "인사"
-            },
-            {
-              "ko": "잡다",
-              "translation_ru": "брать, держать",
-              "group": "인사"
-            },
-            {
-              "ko": "상대방",
-              "translation_ru": "собеседник",
-              "group": "인사"
-            },
-            {
-              "ko": "배",
-              "translation_ru": "живот",
-              "group": "몸"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "인사",
-              "title_ru": "Приветствие и этикет",
-              "items": [
-                {
-                  "ko": "인사",
-                  "translation_ru": "приветствие"
-                },
-                {
-                  "ko": "숙이다",
-                  "translation_ru": "наклонять (голову)"
-                },
-                {
-                  "ko": "예절",
-                  "translation_ru": "этикет"
-                },
-                {
-                  "ko": "어른",
-                  "translation_ru": "взрослый, старший"
-                },
-                {
-                  "ko": "존경하다",
-                  "translation_ru": "уважать"
-                },
-                {
-                  "ko": "의미",
-                  "translation_ru": "значение, смысл"
-                },
-                {
-                  "ko": "마음",
-                  "translation_ru": "душа, сердце"
-                }
-              ]
-            },
-            {
-              "title": "몸",
-              "title_ru": "Части тела",
-              "items": [
-                {
-                  "ko": "머리",
-                  "translation_ru": "голова"
-                },
-                {
-                  "ko": "손",
-                  "translation_ru": "рука, кисть"
-                }
-              ]
             }
           ]
         },

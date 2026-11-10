@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-ART = ROOT/'content/reference/art-sources/lesson-sticker/jia-call'
+ART = ROOT/'content/reference/art-sources/solomon-os/lesson-sticker/jia-call'
 REV = ART/'revisions/neon-phone'
 OUT = ROOT/'public/images/lesson-sticker/jia-call'
 NAMES = ['idle','blink','hover','ringing']

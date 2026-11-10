@@ -9,6 +9,73 @@
       "source_photo": "IMG_1058",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-vacation-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "얼마",
+              "translation_ru": "сколько"
+            },
+            {
+              "ko": "열흘",
+              "translation_ru": "десять дней"
+            },
+            {
+              "ko": "돌아가다",
+              "translation_ru": "возвращаться (туда)"
+            },
+            {
+              "ko": "손",
+              "translation_ru": "кисть, рука"
+            },
+            {
+              "ko": "씻다",
+              "translation_ru": "мыть(ся)"
+            },
+            {
+              "ko": "이",
+              "translation_ru": "зуб"
+            },
+            {
+              "ko": "닦다",
+              "translation_ru": "чистить, вытирать"
+            },
+            {
+              "ko": "샤워",
+              "translation_ru": "душ"
+            },
+            {
+              "ko": "보통",
+              "translation_ru": "обычно"
+            },
+            {
+              "ko": "들어가다",
+              "translation_ru": "входить"
+            },
+            {
+              "ko": "벗다",
+              "translation_ru": "снимать (одежду)"
+            },
+            {
+              "ko": "빗다",
+              "translation_ru": "расчёсывать, причёсывать (волосы)"
+            },
+            {
+              "ko": "식사",
+              "translation_ru": "приём пищи, трапеза"
+            },
+            {
+              "ko": "학기",
+              "translation_ru": "семестр"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-vacation-dialogue",
           "toc_section": "준비하기 2",
@@ -98,73 +165,6 @@
               "kind": "pattern",
               "text": "N 동안",
               "translation_ru": "в течение N — шаблон; «얼마 동안 한국에 있을 거예요?», «몇 시간 동안 공부해요?», «며칠 동안 여행을 했어요?»"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-vacation-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "얼마",
-              "translation_ru": "сколько"
-            },
-            {
-              "ko": "열흘",
-              "translation_ru": "десять дней"
-            },
-            {
-              "ko": "돌아가다",
-              "translation_ru": "возвращаться (туда)"
-            },
-            {
-              "ko": "손",
-              "translation_ru": "кисть, рука"
-            },
-            {
-              "ko": "씻다",
-              "translation_ru": "мыть(ся)"
-            },
-            {
-              "ko": "이",
-              "translation_ru": "зуб"
-            },
-            {
-              "ko": "닦다",
-              "translation_ru": "чистить, вытирать"
-            },
-            {
-              "ko": "샤워",
-              "translation_ru": "душ"
-            },
-            {
-              "ko": "보통",
-              "translation_ru": "обычно"
-            },
-            {
-              "ko": "들어가다",
-              "translation_ru": "входить"
-            },
-            {
-              "ko": "벗다",
-              "translation_ru": "снимать (одежду)"
-            },
-            {
-              "ko": "빗다",
-              "translation_ru": "расчёсывать, причёсывать (волосы)"
-            },
-            {
-              "ko": "식사",
-              "translation_ru": "приём пищи, трапеза"
-            },
-            {
-              "ko": "학기",
-              "translation_ru": "семестр"
             }
           ]
         }

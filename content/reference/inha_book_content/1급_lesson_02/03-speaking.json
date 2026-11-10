@@ -9,6 +9,25 @@
       "source_photo": "IMG_0972",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "서점",
+              "translation_ru": "книжный магазин"
+            },
+            {
+              "ko": "커피숍",
+              "translation_ru": "кофейня"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -157,25 +176,6 @@
               ]
             ]
           }
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "서점",
-              "translation_ru": "книжный магазин"
-            },
-            {
-              "ko": "커피숍",
-              "translation_ru": "кофейня"
-            }
-          ]
         }
       ]
     }

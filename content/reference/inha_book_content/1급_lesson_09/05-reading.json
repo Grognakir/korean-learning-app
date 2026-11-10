@@ -9,6 +9,37 @@
       "source_photo": "IMG_1080",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-special-day-gift",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-special-day-gift",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "어버이날",
+              "translation_ru": "День родителей (8 мая)"
+            },
+            {
+              "ko": "카네이션",
+              "translation_ru": "гвоздика (цветок)"
+            },
+            {
+              "ko": "카드",
+              "translation_ru": "открытка, карточка"
+            },
+            {
+              "ko": "포장하다",
+              "translation_ru": "заворачивать, упаковывать (подарок)"
+            },
+            {
+              "ko": "사랑하다",
+              "translation_ru": "любить"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-special-day-gift",
           "toc_section": "읽고 말하기",
@@ -88,37 +119,6 @@
               "kind": "open",
               "prompt": "여러분의 나라에는 어떤 특별한 날이 있습니까? 그 날에 무엇을 선물을 합니까?",
               "prompt_ru": "Какие особые дни есть в вашей стране? Что дарят в этот день?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-special-day-gift",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-special-day-gift",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "어버이날",
-              "translation_ru": "День родителей (8 мая)"
-            },
-            {
-              "ko": "카네이션",
-              "translation_ru": "гвоздика (цветок)"
-            },
-            {
-              "ko": "카드",
-              "translation_ru": "открытка, карточка"
-            },
-            {
-              "ko": "포장하다",
-              "translation_ru": "заворачивать, упаковывать (подарок)"
-            },
-            {
-              "ko": "사랑하다",
-              "translation_ru": "любить"
             }
           ]
         }

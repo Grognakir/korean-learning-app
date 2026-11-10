@@ -9,100 +9,6 @@
       "source_photo": "IMG_0963",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-classroom-dialogue",
-          "toc_section": "준비하기 1",
-          "title": "교실 물건을 말하기",
-          "title_ru": "Называть предметы в классе",
-          "illustration": {
-            "storage_path": "lesson_2/illustration_1_classroom_objects_v2.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기1",
-          "exercise_ref": null,
-          "audio_id": "105",
-          "speakers": [
-            "왕루",
-            "자르갈"
-          ],
-          "lines": [
-            {
-              "speaker": "왕루",
-              "text": "자르갈 씨, 이것이 무엇입니까?",
-              "emphasized": [
-                "이것이"
-              ]
-            },
-            {
-              "speaker": "자르갈",
-              "text": "그것은 책상입니다.",
-              "emphasized": [
-                "그것은"
-              ]
-            },
-            {
-              "speaker": "왕루",
-              "text": "저것이 무엇입니까?",
-              "emphasized": [
-                "저것이"
-              ]
-            },
-            {
-              "speaker": "자르갈",
-              "text": "저것은 시계입니다.",
-              "emphasized": [
-                "저것은"
-              ]
-            },
-            {
-              "speaker": "왕루",
-              "text": "그 가방이 자르갈 씨의 가방입니까?",
-              "emphasized": [
-                "그 가방이",
-                "씨의 가방"
-              ]
-            },
-            {
-              "speaker": "자르갈",
-              "text": "아니요, 이 가방은 제 것이 아닙니다. 아멜리 씨의 가방입니다.",
-              "emphasized": [
-                "이 가방은",
-                "제 것",
-                "씨의 가방"
-              ]
-            },
-            {
-              "speaker": "왕루",
-              "text": "여기가 누구의 교실입니까?",
-              "emphasized": [
-                "누구의"
-              ]
-            },
-            {
-              "speaker": "자르갈",
-              "text": "여기는 우리의 교실입니다.",
-              "emphasized": [
-                "우리의"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-junbihagi1-expr",
-          "toc_section": "준비하기 1",
-          "hint_kind": "expression",
-          "related_text_ref": "text-classroom-dialogue",
-          "items": [
-            {
-              "kind": "phrase",
-              "text": "누구",
-              "translation_ru": "кто — «1) 누구입니까? 2) 누구의 교실입니까?» («Кто это?», «Чей это класс?»)"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi1",
           "toc_section": "준비하기 1",
@@ -210,6 +116,100 @@
             {
               "ko": "신발",
               "translation_ru": "обувь"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-classroom-dialogue",
+          "toc_section": "준비하기 1",
+          "title": "교실 물건을 말하기",
+          "title_ru": "Называть предметы в классе",
+          "illustration": {
+            "storage_path": "lesson_2/illustration_1_classroom_objects_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "105",
+          "speakers": [
+            "왕루",
+            "자르갈"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "자르갈 씨, 이것이 무엇입니까?",
+              "emphasized": [
+                "이것이"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "그것은 책상입니다.",
+              "emphasized": [
+                "그것은"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "저것이 무엇입니까?",
+              "emphasized": [
+                "저것이"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "저것은 시계입니다.",
+              "emphasized": [
+                "저것은"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "그 가방이 자르갈 씨의 가방입니까?",
+              "emphasized": [
+                "그 가방이",
+                "씨의 가방"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "아니요, 이 가방은 제 것이 아닙니다. 아멜리 씨의 가방입니다.",
+              "emphasized": [
+                "이 가방은",
+                "제 것",
+                "씨의 가방"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "여기가 누구의 교실입니까?",
+              "emphasized": [
+                "누구의"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "여기는 우리의 교실입니다.",
+              "emphasized": [
+                "우리의"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-junbihagi1-expr",
+          "toc_section": "준비하기 1",
+          "hint_kind": "expression",
+          "related_text_ref": "text-classroom-dialogue",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "누구",
+              "translation_ru": "кто — «1) 누구입니까? 2) 누구의 교실입니까?» («Кто это?», «Чей это класс?»)"
             }
           ]
         }

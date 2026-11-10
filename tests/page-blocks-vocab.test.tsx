@@ -1,3 +1,4 @@
+import { StrictMode } from "react";
 import { cleanup, fireEvent, render } from "@testing-library/react";
 import { expect, it } from "vitest";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
@@ -63,6 +64,239 @@ it("подключает локальный словарь к примеру к�
 
   const { container } = render(<PageBlocks blocks={blocks} />);
   expect(container.querySelector('[class*="inlineVocab"]')?.textContent).toBe("목소리голос");
+});
+
+it("добавляет словарик упражнения к словам страницы, не перебивая их", () => {
+  const blocks: Block[] = [
+    {
+      id: "vocab",
+      type: "vocab_list",
+      title: "단어",
+      items: [{ ko: "목소리", translation_ru: "голос (страница)" }],
+    },
+    {
+      id: "exercise",
+      type: "grammar_exercise",
+      exercise_title: "연습하기",
+      grammar_ref: "grammar",
+      prompt: "말해 보세요.",
+      vocab: [
+        { ko: "목소리", translation_ru: "голос (упражнение)" },
+        { ko: "작다", translation_ru: "быть тихим" },
+      ],
+      example: { given: ["목소리"], dialogue: ["목소리가 작아요."] },
+      template: ["{0}가 작아요."],
+      items: [{ given: ["소리"], answers: ["소리"] }],
+    },
+  ];
+
+  const { container } = render(<PageBlocks blocks={blocks} />);
+  const text = container.textContent ?? "";
+  expect(text).toContain("голос (страница)");
+  expect(text).not.toContain("голос (упражнение)");
+  expect(text).toContain("быть тихим");
+});
+
+it("подсвечивает слова страницы и словарик в задании на аудирование", () => {
+  const blocks: Block[] = [
+    {
+      id: "vocab",
+      type: "vocab_list",
+      title: "단어",
+      related_text_ref: "listening",
+      items: [
+        { ko: "거절하다", translation_ru: "отказывать(ся)" },
+        { ko: "참다", translation_ru: "терпеть" },
+      ],
+    },
+    {
+      id: "listening",
+      type: "comprehension_exercise",
+      exercise_kind: "listening",
+      title: "듣기",
+      transcript: {
+        lines: [{ speaker: "흐엉", text: "제 성격이 싫어요." }],
+        vocab: [{ ko: "성격", translation_ru: "характер" }],
+      },
+      questions: [
+        {
+          kind: "choice",
+          prompt: "같은 것을 고르십시오.",
+          choices: ["거절을 못하고 참고 기다립니다."],
+          correct: 0,
+        },
+      ],
+    },
+  ];
+
+  const { container } = render(
+    <StrictMode>
+      <PageBlocks blocks={blocks} />
+    </StrictMode>,
+  );
+  const tips = Array.from(container.querySelectorAll('[role="tooltip"]')).map((el) => el.textContent);
+  expect(tips).toContain("характер");
+  expect(tips).toContain("терпеть");
+  expect(tips).toContain("отказывать(ся)");
+  expect(container.querySelectorAll("button button")).toHaveLength(0);
+});
+
+it("показывает hint с фразами внутри задания на аудирование", () => {
+  const blocks: Block[] = [
+    {
+      id: "hint-listening",
+      type: "hint",
+      hint_kind: "expression",
+      related_text_ref: "listening",
+      label_ko: "내 표현",
+      label_ru: "Мои выражения",
+      items: [{ kind: "phrase", text: "말을 잘 못해요", translation_ru: "не могу сказать" }],
+    },
+    {
+      id: "listening",
+      type: "comprehension_exercise",
+      exercise_kind: "listening",
+      title: "듣기",
+      transcript: { lines: [{ speaker: "흐엉", text: "고민이 있어요." }] },
+      questions: [{ kind: "open", prompt: "무슨 이야기를 합니까?" }],
+    },
+  ];
+
+  const { container } = render(<PageBlocks blocks={blocks} />);
+  expect(container.querySelector("details")?.textContent).toContain("말을 잘 못해요");
+  expect(container.textContent).toContain("내 표현");
+  expect(container.textContent).toContain("말을 잘 못해요");
+  expect(container.textContent?.match(/말을 잘 못해요/g)).toHaveLength(1);
+});
+
+it("даёт поле ввода под открытым вопросом и держит значок перевода рядом с итоговым заданием", () => {
+  const blocks: Block[] = [
+    {
+      id: "listening",
+      type: "comprehension_exercise",
+      exercise_kind: "listening",
+      title: "듣기",
+      group_prompt: "다음을 듣고 물음에 답하십시오.",
+      questions: [
+        { kind: "open", prompt: "무슨 이야기를 합니까?" },
+        { kind: "choice", prompt: "같은 것을 고르십시오.", choices: ["가", "나"], correct: 0 },
+      ],
+      followup: "이야기해 보십시오.",
+      followup_ru: "Расскажите.",
+    },
+  ];
+
+  const { container, getByLabelText } = render(<PageBlocks blocks={blocks} />);
+  const input = getByLabelText("무슨 이야기를 합니까?") as HTMLInputElement;
+  fireEvent.change(input, { target: { value: "고민" } });
+  expect(input.value).toBe("고민");
+  const followup = container.querySelector('[class*="comprehensionFollowup"]');
+  expect(followup?.children).toHaveLength(1);
+  expect(followup?.firstElementChild?.textContent).toContain("이야기해 보십시오.");
+  expect(container.querySelector('[class*="comprehensionSubItems"]')).not.toBeNull();
+});
+
+it("ставит заголовок статьи и строку-справку в одну строку", () => {
+  const blocks: Block[] = [
+    {
+      id: "article",
+      type: "text",
+      text_kind: "article",
+      lines: [
+        { text: "제 고민을 들어 주세요.", line_kind: "heading" },
+        { text: "ID : inha 0817", line_kind: "meta" },
+        { text: "본문입니다." },
+      ],
+    },
+  ];
+
+  const { container } = render(<PageBlocks blocks={blocks} />);
+  const row = container.querySelector('[class*="articleTitleRow"]');
+  expect(row?.children).toHaveLength(2);
+  expect(row?.textContent).toContain("ID : inha 0817");
+  expect(container.querySelectorAll('[class*="articleParagraph"]')).toHaveLength(1);
+});
+
+it("подсвечивает основные и дополнительные слова раздела в любом тексте, один раз", () => {
+  const blocks: Block[] = [
+    {
+      id: "vocab",
+      type: "vocab_list",
+      title: "단어",
+      items: [{ ko: "회사", translation_ru: "компания" }],
+      extra_words: { topic_vocab: [{ ko: "직업", translation_ru: "профессия" }] },
+    },
+    {
+      id: "text",
+      type: "text",
+      text_kind: "passage",
+      lines: [{ text: "저는 직업이 회사원입니다." }, { text: "회사에 갑니다. 직업은 좋습니다." }],
+    },
+  ];
+
+  const { container } = render(<PageBlocks blocks={blocks} />);
+  const tips = Array.from(container.querySelectorAll('[class*="inlineVocab"] [role="tooltip"]')).map(
+    (el) => el.textContent,
+  );
+  expect(tips).toEqual(["профессия", "компания"]);
+});
+
+it("подсвечивает слова из extra_words в тексте раздела", () => {
+  const blocks: Block[] = [
+    {
+      id: "vocab",
+      type: "vocab_list",
+      title: "단어",
+      items: [{ ko: "회사", translation_ru: "компания" }],
+      extra_words: {
+        text_vocab: [{ ko: "직업", translation_ru: "профессия" }],
+        grammar_vocab: [{ ko: "행복하다", translation_ru: "быть счастливым" }],
+      },
+    },
+    {
+      id: "text",
+      type: "text",
+      text_kind: "passage",
+      lines: [{ text: "직업이 행복합니다." }],
+    },
+  ];
+
+  const { container } = render(<PageBlocks blocks={blocks} />);
+  const tips = Array.from(container.querySelectorAll('[class*="inlineVocab"] [role="tooltip"]')).map(
+    (el) => el.textContent,
+  );
+  expect(tips).toEqual(["профессия", "быть счастливым"]);
+});
+
+it("переводит слово в задании на аудирование один раз: в тексте, а не в ответах", () => {
+  const blocks: Block[] = [
+    {
+      id: "vocab",
+      type: "vocab_list",
+      title: "단어",
+      items: [{ ko: "자신", translation_ru: "сам, собственный" }],
+    },
+    {
+      id: "listening",
+      type: "comprehension_exercise",
+      exercise_kind: "listening",
+      title: "듣기",
+      transcript: { lines: [{ speaker: "흐엉", text: "제 자신이 싫어요." }] },
+      questions: [
+        {
+          kind: "choice",
+          prompt: "같은 것을 고르십시오.",
+          choices: ["자신의 성격 때문에 고민합니다."],
+          correct: 0,
+        },
+      ],
+    },
+  ];
+
+  const { container } = render(<PageBlocks blocks={blocks} />);
+  const chips = container.querySelectorAll('[class*="inlineVocab"]');
+  expect(chips).toHaveLength(1);
+  expect(container.querySelector("details")?.contains(chips[0])).toBe(true);
 });
 
 it("находит словарные формы в реальных примерах упражнений", () => {

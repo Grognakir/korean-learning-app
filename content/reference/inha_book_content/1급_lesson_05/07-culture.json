@@ -9,76 +9,6 @@
       "source_photo": "IMG_1022",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-day-list",
-          "toc_section": "문화 이해하기",
-          "title": "〈오늘 하루〉",
-          "title_ru": "Мои дела на сегодня",
-          "illustration": null,
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "이것이 무엇입니까? 이야기해 보십시오.",
-          "intro_prompt_ru": "Что это? Расскажите.",
-          "lines": [
-            {
-              "text": "10월 5일"
-            },
-            {
-              "text": "☐ 1. 은행에 가요."
-            },
-            {
-              "text": "☑ 2. 운동을 해요."
-            },
-            {
-              "text": "☑ 3. 단어를 외워요."
-            },
-            {
-              "text": "☐ 4. 2시에 병원에 가요."
-            },
-            {
-              "text": "☐ 5. 3시에 도서관에서 친구를 만나요."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "외워",
-              "translation_ru": "форма от 외우다 (запоминать наизусть)"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "text-culture-day-plan",
-          "toc_section": "문화 이해하기",
-          "title": "하루를 정리하기",
-          "title_ru": "Подводить итоги дня",
-          "illustration": {
-            "storage_path": "lesson_5/illustration_5_daily_planner.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "다음을 읽고 이야기해 보십시오.",
-          "intro_prompt_ru": "Прочитайте и обсудите.",
-          "lines": [
-            {
-              "text": "저는 아침에 일어납니다. 오늘 하루를 계획합니다.\n\n“은행에 가요.”\n“운동을 해요.”\n“단어를 외워요.”\n“2시에 병원에 가요.”\n“3시에 도서관에서 친구를 만나요.”\n\n밤에 오늘 하루를 생각합니다. 그리고 내일을 생각합니다."
-            },
-            {
-              "text": "1) 이 사람은 무엇을 씁니까?",
-              "translation_ru": "Что пишет этот человек?"
-            },
-            {
-              "text": "2) 오늘 여러분의 계획은 무엇입니까? 이야기해 보십시오.",
-              "translation_ru": "Каков ваш план на сегодня? Расскажите."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -110,6 +40,78 @@
             {
               "ko": "생각하다",
               "translation_ru": "думать; размышлять"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "외워",
+                "translation_ru": "форма от 외우다 (запоминать наизусть)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-culture-day-list",
+          "toc_section": "문화 이해하기",
+          "title": "〈오늘 하루〉",
+          "title_ru": "Мои дела на сегодня",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "이것이 무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "10월 5일"
+            },
+            {
+              "text": "☐ 1. 은행에 가요."
+            },
+            {
+              "text": "☑ 2. 운동을 해요."
+            },
+            {
+              "text": "☑ 3. 단어를 외워요."
+            },
+            {
+              "text": "☐ 4. 2시에 병원에 가요."
+            },
+            {
+              "text": "☐ 5. 3시에 도서관에서 친구를 만나요."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-day-plan",
+          "toc_section": "문화 이해하기",
+          "title": "하루를 정리하기",
+          "title_ru": "Подводить итоги дня",
+          "illustration": {
+            "storage_path": "lesson_5/illustration_5_daily_planner.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "저는 아침에 일어납니다. 오늘 하루를 계획합니다.\n\n“은행에 가요.”\n“운동을 해요.”\n“단어를 외워요.”\n“2시에 병원에 가요.”\n“3시에 도서관에서 친구를 만나요.”\n\n밤에 오늘 하루를 생각합니다. 그리고 내일을 생각합니다."
+            },
+            {
+              "text": "1) 이 사람은 무엇을 씁니까?",
+              "translation_ru": "Что пишет этот человек?"
+            },
+            {
+              "text": "2) 오늘 여러분의 계획은 무엇입니까? 이야기해 보십시오.",
+              "translation_ru": "Каков ваш план на сегодня? Расскажите."
             }
           ]
         },

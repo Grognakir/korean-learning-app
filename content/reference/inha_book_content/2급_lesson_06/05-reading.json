@@ -17,72 +17,62 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "삼계탕",
-              "title_ru": "Ингредиенты",
-              "items": [
-                {
-                  "ko": "찹쌀",
-                  "translation_ru": "клейкий рис"
-                },
-                {
-                  "ko": "인삼",
-                  "translation_ru": "женьшень"
-                },
-                {
-                  "ko": "대추",
-                  "translation_ru": "унаби, китайский финик"
-                },
-                {
-                  "ko": "마늘",
-                  "translation_ru": "чеснок"
-                },
-                {
-                  "ko": "닭",
-                  "translation_ru": "курица"
-                },
-                {
-                  "ko": "뱃속",
-                  "translation_ru": "нутро, живот"
-                },
-                {
-                  "ko": "재료",
-                  "translation_ru": "ингредиенты"
-                },
-                {
-                  "ko": "땀",
-                  "translation_ru": "пот"
-                },
-                {
-                  "ko": "여름",
-                  "translation_ru": "лето"
-                }
-              ]
-            },
-            {
-              "title": "방법",
-              "title_ru": "Способ",
-              "items": [
-                {
-                  "ko": "씻다",
-                  "translation_ru": "мыть"
-                },
-                {
-                  "ko": "붓다",
-                  "translation_ru": "вливать"
-                },
-                {
-                  "ko": "끓이다",
-                  "translation_ru": "варить"
-                },
-                {
-                  "ko": "냄비",
-                  "translation_ru": "кастрюля"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "찹쌀",
+                "translation_ru": "клейкий рис"
+              },
+              {
+                "ko": "인삼",
+                "translation_ru": "женьшень"
+              },
+              {
+                "ko": "대추",
+                "translation_ru": "унаби, китайский финик"
+              },
+              {
+                "ko": "마늘",
+                "translation_ru": "чеснок"
+              },
+              {
+                "ko": "닭",
+                "translation_ru": "курица"
+              },
+              {
+                "ko": "뱃속",
+                "translation_ru": "нутро, живот"
+              },
+              {
+                "ko": "재료",
+                "translation_ru": "ингредиенты"
+              },
+              {
+                "ko": "땀",
+                "translation_ru": "пот"
+              },
+              {
+                "ko": "여름",
+                "translation_ru": "лето"
+              },
+              {
+                "ko": "씻다",
+                "translation_ru": "мыть"
+              },
+              {
+                "ko": "붓다",
+                "translation_ru": "вливать"
+              },
+              {
+                "ko": "끓이다",
+                "translation_ru": "варить"
+              },
+              {
+                "ko": "냄비",
+                "translation_ru": "кастрюля"
+              }
+            ]
+          }
         },
         {
           "type": "text",
@@ -134,24 +124,6 @@
             {
               "text": "4. 1시간 정도 끓인 후에 먹습니다.",
               "line_kind": "list-item"
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "찹쌀",
-              "translation_ru": "клейкий рис"
-            },
-            {
-              "ko": "대추",
-              "translation_ru": "ююба (китайский финик)"
-            },
-            {
-              "ko": "땀",
-              "translation_ru": "пот"
-            },
-            {
-              "ko": "뱃속",
-              "translation_ru": "нутро, внутренняя часть живота"
             }
           ]
         },

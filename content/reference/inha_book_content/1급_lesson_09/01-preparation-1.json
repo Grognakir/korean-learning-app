@@ -9,6 +9,89 @@
       "source_photo": "IMG_1069",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-market-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "당근",
+              "translation_ru": "морковь"
+            },
+            {
+              "ko": "개",
+              "translation_ru": "штука (счётное слово для предметов)"
+            },
+            {
+              "ko": "점원",
+              "translation_ru": "продавец, продавец-консультант"
+            },
+            {
+              "ko": "싱싱하다",
+              "translation_ru": "быть свежим (об овощах, рыбе)"
+            },
+            {
+              "ko": "감자",
+              "translation_ru": "картофель"
+            },
+            {
+              "ko": "손님",
+              "translation_ru": "гость, клиент"
+            },
+            {
+              "ko": "장갑",
+              "translation_ru": "перчатки"
+            },
+            {
+              "ko": "장미",
+              "translation_ru": "роза"
+            },
+            {
+              "ko": "앉다",
+              "translation_ru": "сидеть, садиться"
+            },
+            {
+              "ko": "고양이",
+              "translation_ru": "кошка"
+            },
+            {
+              "ko": "자동차",
+              "translation_ru": "автомобиль, машина"
+            },
+            {
+              "ko": "콜라",
+              "translation_ru": "кола"
+            },
+            {
+              "ko": "종이",
+              "translation_ru": "бумага"
+            },
+            {
+              "ko": "비누",
+              "translation_ru": "мыло"
+            },
+            {
+              "ko": "번째",
+              "translation_ru": "порядковый суффикс («-й по счёту»)"
+            },
+            {
+              "ko": "자리",
+              "translation_ru": "место (сиденье, позиция)"
+            },
+            {
+              "ko": "닫다",
+              "translation_ru": "закрывать"
+            },
+            {
+              "ko": "웃다",
+              "translation_ru": "смеяться, улыбаться"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-market-dialogue",
           "toc_section": "준비하기 1",
@@ -109,89 +192,6 @@
               "kind": "pattern",
               "text": "N에 N입니다.",
               "translation_ru": "N стоит N — шаблон; «한 개에 500원입니다.» = «500 вон за штуку»"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-market-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "당근",
-              "translation_ru": "морковь"
-            },
-            {
-              "ko": "개",
-              "translation_ru": "штука (счётное слово для предметов)"
-            },
-            {
-              "ko": "점원",
-              "translation_ru": "продавец, продавец-консультант"
-            },
-            {
-              "ko": "싱싱하다",
-              "translation_ru": "быть свежим (об овощах, рыбе)"
-            },
-            {
-              "ko": "감자",
-              "translation_ru": "картофель"
-            },
-            {
-              "ko": "손님",
-              "translation_ru": "гость, клиент"
-            },
-            {
-              "ko": "장갑",
-              "translation_ru": "перчатки"
-            },
-            {
-              "ko": "장미",
-              "translation_ru": "роза"
-            },
-            {
-              "ko": "앉다",
-              "translation_ru": "сидеть, садиться"
-            },
-            {
-              "ko": "고양이",
-              "translation_ru": "кошка"
-            },
-            {
-              "ko": "자동차",
-              "translation_ru": "автомобиль, машина"
-            },
-            {
-              "ko": "콜라",
-              "translation_ru": "кола"
-            },
-            {
-              "ko": "종이",
-              "translation_ru": "бумага"
-            },
-            {
-              "ko": "비누",
-              "translation_ru": "мыло"
-            },
-            {
-              "ko": "번째",
-              "translation_ru": "порядковый суффикс («-й по счёту»)"
-            },
-            {
-              "ko": "자리",
-              "translation_ru": "место (сиденье, позиция)"
-            },
-            {
-              "ko": "닫다",
-              "translation_ru": "закрывать"
-            },
-            {
-              "ko": "웃다",
-              "translation_ru": "смеяться, улыбаться"
             }
           ]
         }

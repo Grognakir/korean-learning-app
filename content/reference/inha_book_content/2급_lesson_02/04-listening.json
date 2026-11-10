@@ -17,80 +17,70 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "쇼핑",
-              "title_ru": "Покупки",
-              "items": [
-                {
-                  "ko": "광고",
-                  "translation_ru": "реклама"
-                },
-                {
-                  "ko": "행사",
-                  "translation_ru": "акция, мероприятие"
-                },
-                {
-                  "ko": "기간",
-                  "translation_ru": "срок, период"
-                },
-                {
-                  "ko": "끝나다",
-                  "translation_ru": "заканчиваться"
-                },
-                {
-                  "ko": "여름옷",
-                  "translation_ru": "летняя одежда"
-                },
-                {
-                  "ko": "가을옷",
-                  "translation_ru": "осенняя одежда"
-                },
-                {
-                  "ko": "벌",
-                  "translation_ru": "комплект (счётное слово для одежды)"
-                }
-              ]
-            },
-            {
-              "title": "집",
-              "title_ru": "Поиск жилья",
-              "items": [
-                {
-                  "ko": "공인중개사",
-                  "translation_ru": "риелтор"
-                },
-                {
-                  "ko": "침대",
-                  "translation_ru": "кровать"
-                },
-                {
-                  "ko": "옷장",
-                  "translation_ru": "шкаф для одежды"
-                },
-                {
-                  "ko": "냉장고",
-                  "translation_ru": "холодильник"
-                },
-                {
-                  "ko": "인터넷",
-                  "translation_ru": "интернет"
-                },
-                {
-                  "ko": "기본",
-                  "translation_ru": "базовое, стандарт"
-                },
-                {
-                  "ko": "유치원",
-                  "translation_ru": "детский сад"
-                },
-                {
-                  "ko": "뒤쪽",
-                  "translation_ru": "задняя сторона"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "광고",
+                "translation_ru": "реклама"
+              },
+              {
+                "ko": "행사",
+                "translation_ru": "акция, мероприятие"
+              },
+              {
+                "ko": "기간",
+                "translation_ru": "срок, период"
+              },
+              {
+                "ko": "끝나다",
+                "translation_ru": "заканчиваться"
+              },
+              {
+                "ko": "여름옷",
+                "translation_ru": "летняя одежда"
+              },
+              {
+                "ko": "가을옷",
+                "translation_ru": "осенняя одежда"
+              },
+              {
+                "ko": "벌",
+                "translation_ru": "комплект (счётное слово для одежды)"
+              },
+              {
+                "ko": "공인중개사",
+                "translation_ru": "риелтор"
+              },
+              {
+                "ko": "침대",
+                "translation_ru": "кровать"
+              },
+              {
+                "ko": "옷장",
+                "translation_ru": "шкаф для одежды"
+              },
+              {
+                "ko": "냉장고",
+                "translation_ru": "холодильник"
+              },
+              {
+                "ko": "인터넷",
+                "translation_ru": "интернет"
+              },
+              {
+                "ko": "기본",
+                "translation_ru": "базовое, стандарт"
+              },
+              {
+                "ko": "유치원",
+                "translation_ru": "детский сад"
+              },
+              {
+                "ko": "뒤쪽",
+                "translation_ru": "задняя сторона"
+              }
+            ]
+          }
         },
         {
           "type": "comprehension_exercise",

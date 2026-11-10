@@ -17,72 +17,62 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "변화",
-              "title_ru": "Рост и падение",
-              "items": [
-                {
-                  "ko": "증가하다",
-                  "translation_ru": "увеличиваться"
-                },
-                {
-                  "ko": "감소하다",
-                  "translation_ru": "уменьшаться"
-                },
-                {
-                  "ko": "높아지다",
-                  "translation_ru": "становиться выше"
-                },
-                {
-                  "ko": "낮아지다",
-                  "translation_ru": "становиться ниже"
-                },
-                {
-                  "ko": "이용률",
-                  "translation_ru": "доля пользователей"
-                },
-                {
-                  "ko": "비율",
-                  "translation_ru": "доля"
-                },
-                {
-                  "ko": "반면에",
-                  "translation_ru": "зато, а вот"
-                },
-                {
-                  "ko": "변화",
-                  "translation_ru": "изменение"
-                }
-              ]
-            },
-            {
-              "title": "장소",
-              "title_ru": "Где покупают",
-              "items": [
-                {
-                  "ko": "편의점",
-                  "translation_ru": "магазин у дома"
-                },
-                {
-                  "ko": "전통시장",
-                  "translation_ru": "традиционный рынок"
-                },
-                {
-                  "ko": "백화점",
-                  "translation_ru": "универмаг"
-                },
-                {
-                  "ko": "시장",
-                  "translation_ru": "рынок"
-                },
-                {
-                  "ko": "인터넷 쇼핑몰",
-                  "translation_ru": "интернет-магазин"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "증가하다",
+                "translation_ru": "увеличиваться"
+              },
+              {
+                "ko": "감소하다",
+                "translation_ru": "уменьшаться"
+              },
+              {
+                "ko": "높아지다",
+                "translation_ru": "становиться выше"
+              },
+              {
+                "ko": "낮아지다",
+                "translation_ru": "становиться ниже"
+              },
+              {
+                "ko": "이용률",
+                "translation_ru": "доля пользователей"
+              },
+              {
+                "ko": "비율",
+                "translation_ru": "доля"
+              },
+              {
+                "ko": "반면에",
+                "translation_ru": "зато, а вот"
+              },
+              {
+                "ko": "변화",
+                "translation_ru": "изменение"
+              },
+              {
+                "ko": "편의점",
+                "translation_ru": "магазин у дома"
+              },
+              {
+                "ko": "전통시장",
+                "translation_ru": "традиционный рынок"
+              },
+              {
+                "ko": "백화점",
+                "translation_ru": "универмаг"
+              },
+              {
+                "ko": "시장",
+                "translation_ru": "рынок"
+              },
+              {
+                "ko": "인터넷 쇼핑몰",
+                "translation_ru": "интернет-магазин"
+              }
+            ]
+          }
         },
         {
           "type": "writing_exercise",

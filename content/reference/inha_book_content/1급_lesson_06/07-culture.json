@@ -29,68 +29,6 @@
       "source_photo": "IMG_1037",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-holidays",
-          "toc_section": "문화 이해하기",
-          "title": "한국의 명절",
-          "title_ru": "Традиционные праздники Кореи",
-          "illustration": {
-            "storage_path": "lesson_6/illustration_5_korean_holidays.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "다음을 읽고 물음에 답하십시오.",
-          "intro_prompt_ru": "Прочитайте и ответьте на вопросы.",
-          "lines": [
-            {
-              "text": "설과 추석은 한국의 명절입니다."
-            },
-            {
-              "text": "설과 추석에 가족과 함께 시간을 보냅니다. 설은 음력 1월 1일이고 추석은 음력 8월 15일입니다. 설에는 떡국을 먹고 윷놀이를 합니다. 추석에는 송편을 먹고 성묘를 합니다."
-            },
-            {
-              "text": "한국 사람들은 명절을 좋아합니다."
-            }
-          ]
-        },
-        {
-          "type": "comprehension_exercise",
-          "id": "reading-culture-holidays",
-          "toc_section": "문화 이해하기",
-          "exercise_kind": "reading",
-          "title": "한국의 명절",
-          "title_ru": "Традиционные праздники Кореи",
-          "questions": [
-            {
-              "kind": "open",
-              "prompt": "한국 사람들은 명절에 무엇을 합니까?",
-              "prompt_ru": "Что корейцы делают на традиционные праздники?"
-            },
-            {
-              "kind": "open",
-              "prompt": "여러분 나라의 사람들은 명절에 무엇을 합니까? 이야기해 보십시오.",
-              "prompt_ru": "Что делают люди в вашей стране на праздники? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-culture-expr",
-          "toc_section": "문화 이해하기",
-          "hint_kind": "expression",
-          "related_text_ref": "text-culture-holidays",
-          "items": [
-            {
-              "kind": "pattern",
-              "text": "N(시간)을/를 보내다",
-              "translation_ru": "проводить время — шаблон; «가족과 함께 시간을 보냅니다» = «Проводят время вместе с семьёй»"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -134,6 +72,68 @@
             {
               "ko": "성묘",
               "translation_ru": "посещение могил предков"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-holidays",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 명절",
+          "title_ru": "Традиционные праздники Кореи",
+          "illustration": {
+            "storage_path": "lesson_6/illustration_5_korean_holidays.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "다음을 읽고 물음에 답하십시오.",
+          "intro_prompt_ru": "Прочитайте и ответьте на вопросы.",
+          "lines": [
+            {
+              "text": "설과 추석은 한국의 명절입니다."
+            },
+            {
+              "text": "설과 추석에 가족과 함께 시간을 보냅니다. 설은 음력 1월 1일이고 추석은 음력 8월 15일입니다. 설에는 떡국을 먹고 윷놀이를 합니다. 추석에는 송편을 먹고 성묘를 합니다."
+            },
+            {
+              "text": "한국 사람들은 명절을 좋아합니다."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-culture-expr",
+          "toc_section": "문화 이해하기",
+          "hint_kind": "expression",
+          "related_text_ref": "text-culture-holidays",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "N(시간)을/를 보내다",
+              "translation_ru": "проводить время — шаблон; «가족과 함께 시간을 보냅니다» = «Проводят время вместе с семьёй»"
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-holidays",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 명절",
+          "title_ru": "Традиционные праздники Кореи",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국 사람들은 명절에 무엇을 합니까?",
+              "prompt_ru": "Что корейцы делают на традиционные праздники?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 사람들은 명절에 무엇을 합니까? 이야기해 보십시오.",
+              "prompt_ru": "Что делают люди в вашей стране на праздники? Расскажите."
             }
           ]
         },

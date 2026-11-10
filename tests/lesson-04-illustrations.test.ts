@@ -17,6 +17,7 @@ type LessonBlock = {
   warmup?: { illustration?: Illustration | null };
   rules?: string[];
   vocab?: { ko: string; translation_ru: string }[];
+  extra_words?: Record<string, { ko: string; translation_ru: string }[]>;
 };
 
 const lessonDir = join(
@@ -25,6 +26,11 @@ const lessonDir = join(
 );
 const lesson = readLessonSource(join(lessonDir, "lesson-04.json")) as { pages: { blocks: LessonBlock[] }[] };
 const blocks = lesson.pages.flatMap((page) => page.blocks);
+const extraWords = () =>
+  blocks.flatMap((block) => [
+    ...(block.items ?? []),
+    ...Object.values(block.extra_words ?? {}).flat(),
+  ]) as { ko: string; translation_ru: string }[];
 
 const expected = new Map([
   ["text-weather-forecast-dialogue", "lesson_4/illustration_1_dusty_weather.png"],
@@ -48,18 +54,14 @@ it("подключает пять иллюстраций к нужным раз�
 });
 
 it("показывает перевод 되 в тексте прогноза погоды", () => {
-  const block = blocks.find((item) => item.id === "text-forecast-broadcast");
-
-  expect(block?.vocab).toContainEqual({
+  expect(extraWords()).toContainEqual({
     ko: "되",
     translation_ru: "составит, станет (форма от 되다)",
   });
 });
 
 it("показывает перевод 이제 в примере грамматики AV-기 시작하다", () => {
-  const block = blocks.find((item) => item.id === "grammar-4");
-
-  expect(block?.vocab).toContainEqual({
+  expect(extraWords()).toContainEqual({
     ko: "이제",
     translation_ru: "теперь, уже",
   });

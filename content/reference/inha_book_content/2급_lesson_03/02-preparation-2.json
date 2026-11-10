@@ -9,6 +9,157 @@
       "source_photo": "IMG_0619",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-junbihagi2-dialogue",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "대학원",
+              "translation_ru": "аспирантура, магистратура"
+            },
+            {
+              "ko": "교수",
+              "translation_ru": "профессор"
+            },
+            {
+              "ko": "상담하다",
+              "translation_ru": "консультироваться"
+            },
+            {
+              "ko": "반대하다",
+              "translation_ru": "быть против"
+            },
+            {
+              "ko": "고민",
+              "translation_ru": "переживание, проблема"
+            },
+            {
+              "ko": "걱정",
+              "translation_ru": "беспокойство, тревога"
+            },
+            {
+              "ko": "전공하다",
+              "translation_ru": "изучать как основную специальность"
+            },
+            {
+              "ko": "사회",
+              "translation_ru": "общество"
+            },
+            {
+              "ko": "생기다",
+              "translation_ru": "появляться, возникать"
+            },
+            {
+              "ko": "말씀",
+              "translation_ru": "слова, речь (почтительная форма)"
+            },
+            {
+              "ko": "사회학",
+              "translation_ru": "социология"
+            },
+            {
+              "ko": "경영학",
+              "translation_ru": "менеджмент, управление бизнесом"
+            },
+            {
+              "ko": "문화",
+              "translation_ru": "культура"
+            },
+            {
+              "ko": "관심",
+              "translation_ru": "интерес"
+            },
+            {
+              "ko": "생각",
+              "translation_ru": "мысль, мнение"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "면접",
+                "translation_ru": "собеседование"
+              },
+              {
+                "ko": "상담",
+                "translation_ru": "консультация"
+              },
+              {
+                "ko": "학기",
+                "translation_ru": "семестр"
+              },
+              {
+                "ko": "취직",
+                "translation_ru": "трудоустройство"
+              },
+              {
+                "ko": "새해",
+                "translation_ru": "Новый год"
+              },
+              {
+                "ko": "결정하다",
+                "translation_ru": "решать"
+              },
+              {
+                "ko": "결심하다",
+                "translation_ru": "решать (твёрдо)"
+              },
+              {
+                "ko": "약속하다",
+                "translation_ru": "обещать"
+              },
+              {
+                "ko": "정하다",
+                "translation_ru": "определять"
+              },
+              {
+                "ko": "세우다",
+                "translation_ru": "строить (план)"
+              },
+              {
+                "ko": "끊다",
+                "translation_ru": "бросать (привычку)"
+              },
+              {
+                "ko": "쉬다",
+                "translation_ru": "отдыхать"
+              },
+              {
+                "ko": "산책하다",
+                "translation_ru": "гулять"
+              },
+              {
+                "ko": "잡지",
+                "translation_ru": "журнал"
+              },
+              {
+                "ko": "사용하다",
+                "translation_ru": "использовать"
+              },
+              {
+                "ko": "경고하다",
+                "translation_ru": "предупреждать"
+              },
+              {
+                "ko": "카카오톡",
+                "translation_ru": "KakaoTalk"
+              },
+              {
+                "ko": "이틀",
+                "translation_ru": "два дня"
+              },
+              {
+                "ko": "며칠",
+                "translation_ru": "несколько дней"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-junbihagi2-dialogue",
           "toc_section": "준비하기 2",
@@ -62,185 +213,6 @@
             {
               "speaker": "선생님",
               "text": "그럼 이번에 고향에 가서 부모님께 파하드 씨의 생각을 말씀드려 보세요."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-junbihagi2-dialogue",
-          "source_note": "рукописный список на полях страницы",
-          "items": [
-            {
-              "ko": "대학원",
-              "translation_ru": "аспирантура, магистратура",
-              "group": "진로"
-            },
-            {
-              "ko": "교수",
-              "translation_ru": "профессор",
-              "group": "진로"
-            },
-            {
-              "ko": "상담하다",
-              "translation_ru": "консультироваться",
-              "group": "진로"
-            },
-            {
-              "ko": "반대하다",
-              "translation_ru": "быть против",
-              "group": "결정"
-            },
-            {
-              "ko": "고민",
-              "translation_ru": "переживание, проблема",
-              "group": "결정"
-            },
-            {
-              "ko": "걱정",
-              "translation_ru": "беспокойство, тревога",
-              "group": "결정"
-            },
-            {
-              "ko": "전공하다",
-              "translation_ru": "изучать как основную специальность",
-              "group": "진로"
-            },
-            {
-              "ko": "사회",
-              "translation_ru": "общество",
-              "group": "진로"
-            },
-            {
-              "ko": "생기다",
-              "translation_ru": "появляться, возникать"
-            },
-            {
-              "ko": "말씀",
-              "translation_ru": "слова, речь (почтительная форма)",
-              "group": "결정"
-            },
-            {
-              "ko": "사회학",
-              "translation_ru": "социология",
-              "group": "진로"
-            },
-            {
-              "ko": "경영학",
-              "translation_ru": "менеджмент, управление бизнесом",
-              "group": "진로"
-            },
-            {
-              "ko": "문화",
-              "translation_ru": "культура"
-            },
-            {
-              "ko": "관심",
-              "translation_ru": "интерес"
-            },
-            {
-              "ko": "생각",
-              "translation_ru": "мысль, мнение",
-              "group": "결정"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "진로",
-              "title_ru": "Учёба и работа",
-              "items": [
-                {
-                  "ko": "면접",
-                  "translation_ru": "собеседование"
-                },
-                {
-                  "ko": "상담",
-                  "translation_ru": "консультация"
-                },
-                {
-                  "ko": "학기",
-                  "translation_ru": "семестр"
-                },
-                {
-                  "ko": "취직",
-                  "translation_ru": "трудоустройство"
-                },
-                {
-                  "ko": "새해",
-                  "translation_ru": "Новый год"
-                }
-              ]
-            },
-            {
-              "title": "결정",
-              "title_ru": "Решения",
-              "items": [
-                {
-                  "ko": "결정하다",
-                  "translation_ru": "решать"
-                },
-                {
-                  "ko": "결심하다",
-                  "translation_ru": "решать (твёрдо)"
-                },
-                {
-                  "ko": "약속하다",
-                  "translation_ru": "обещать"
-                },
-                {
-                  "ko": "정하다",
-                  "translation_ru": "определять"
-                },
-                {
-                  "ko": "세우다",
-                  "translation_ru": "строить (план)"
-                },
-                {
-                  "ko": "끊다",
-                  "translation_ru": "бросать (привычку)"
-                }
-              ]
-            },
-            {
-              "title": "일상",
-              "title_ru": "В течение дня",
-              "items": [
-                {
-                  "ko": "쉬다",
-                  "translation_ru": "отдыхать"
-                },
-                {
-                  "ko": "산책하다",
-                  "translation_ru": "гулять"
-                },
-                {
-                  "ko": "잡지",
-                  "translation_ru": "журнал"
-                },
-                {
-                  "ko": "사용하다",
-                  "translation_ru": "использовать"
-                },
-                {
-                  "ko": "경고하다",
-                  "translation_ru": "предупреждать"
-                },
-                {
-                  "ko": "카카오톡",
-                  "translation_ru": "KakaoTalk"
-                },
-                {
-                  "ko": "이틀",
-                  "translation_ru": "два дня"
-                },
-                {
-                  "ko": "며칠",
-                  "translation_ru": "несколько дней"
-                }
-              ]
             }
           ]
         }

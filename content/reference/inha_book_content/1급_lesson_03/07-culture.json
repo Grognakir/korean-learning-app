@@ -9,6 +9,33 @@
       "source_photo": "IMG_0991",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-schools",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "초등학교",
+              "translation_ru": "начальная школа"
+            },
+            {
+              "ko": "중학교",
+              "translation_ru": "средняя школа (7–9 классы)"
+            },
+            {
+              "ko": "고등학교",
+              "translation_ru": "старшая школа (10–12 классы)"
+            },
+            {
+              "ko": "년",
+              "translation_ru": "год"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-schools",
           "toc_section": "문화 이해하기",
@@ -35,33 +62,6 @@
             {
               "text": "2) 여러분 나라의 학교는 어떻습니까?",
               "translation_ru": "А как устроены школы в вашей стране?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-schools",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "초등학교",
-              "translation_ru": "начальная школа"
-            },
-            {
-              "ko": "중학교",
-              "translation_ru": "средняя школа (7–9 классы)"
-            },
-            {
-              "ko": "고등학교",
-              "translation_ru": "старшая школа (10–12 классы)"
-            },
-            {
-              "ko": "년",
-              "translation_ru": "год"
             }
           ]
         },

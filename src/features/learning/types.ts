@@ -33,6 +33,8 @@ export type TextLine = {
   speaker?: string;
   text: string;
   emphasized?: string[];
+  /** Рамка с буквой после слога, в который слилась 받침-буква окончания (질 + ㄹ). */
+  jamo_marks?: { text: string; jamo: string }[];
   /** Перевод именно этой строки (например пронумерованный вопрос "1)
    * ...") через значок "i" — отдельно от TextBlock.vocab (переводы
    * отдельных слов) и TextBlock.title_ru (перевод заголовка). */
@@ -124,17 +126,13 @@ export type VocabListBlock = ContentBlockBase & {
   title_ru?: string;
   related_text_ref?: string | null;
   source_note?: string;
-  /** group — title одной из extra_groups: в режиме «Все» слово показывается
-   * в этой тематической группе вместе с дополнительными. Слова без group
-   * попадают в группу «Другие». */
-  items: { ko: string; translation_ru: string; group?: string }[];
-  /** Дополнительные слова по теме раздела, сгруппированные (узоры, одежда…).
-   * Показываются через свитч «Основные / Дополнительные / Все». */
-  extra_groups?: {
-    title: string;
-    title_ru?: string;
-    items: { ko: string; translation_ru: string }[];
-  }[];
+  items: { ko: string; translation_ru: string }[];
+  /** Дополнительные слова раздела: `topic_vocab` (по теме из учебника),
+   * `text_vocab`, `grammar_vocab`, `exercise_vocab`, `transcript_vocab`
+   * (по источнику); ключи можно добавлять свои. Показываются на вкладке
+   * «Дополнительные» одним списком без повторов, входят в тренировку и
+   * подсвечиваются (первое вхождение) во всём разделе. */
+  extra_words?: Record<string, { ko: string; translation_ru: string }[]>;
 };
 
 export type HintItem = {
@@ -153,6 +151,9 @@ export type HintBlock = ContentBlockBase & {
   hint_kind: string;
   related_text_ref?: string | null;
   pair_id?: string | null;
+  /** Свой заголовок группы выражений (личная подсказка вместо книжной). */
+  label_ko?: string | null;
+  label_ru?: string | null;
   items: HintItem[];
 };
 
@@ -225,7 +226,10 @@ export type ComprehensionExerciseBlock = ContentBlockBase & {
   audioUrl?: string | null;
   /** Текст аудиозаписи из раздела «듣기 지문» в конце учебника — показывается
    * свёрнутым блоком над заданиями, чтобы можно было свериться после прослушивания. */
-  transcript?: { lines: TextLine[] };
+  transcript?: { lines: TextLine[]; vocab?: { ko: string; translation_ru: string }[] };
+  /** Словарик задания: слова из текста аудио, вопросов и заданий, которых нет
+   * в vocab_list страницы (слова страницы приоритетнее). */
+  vocab?: { ko: string; translation_ru: string }[];
   /** "1." — иллюстрация-затравка с вопросом перед самим упражнением. */
   warmup?: {
     prompt: string;
@@ -299,6 +303,10 @@ export type GrammarExerciseBlock = ContentBlockBase & {
   exercise_title: string;
   grammar_ref: string;
   prompt: string;
+  /** Дополнительный словарик упражнения: слова, которых нет в vocab_list
+   * страницы (слова страницы приоритетнее). Работает на всё упражнение,
+   * включая задания; example.vocab остаётся тем же и для примера. */
+  vocab?: { ko: string; translation_ru: string }[];
   // Пример — уже готовая фраза без пропусков, для чтения.
   example: {
     given: string[];

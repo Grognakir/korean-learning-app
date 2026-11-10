@@ -9,6 +9,29 @@
       "source_photo": "IMG_1049",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-weather-trip",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "흐리다",
+              "translation_ru": "быть пасмурным, облачным (о погоде)"
+            },
+            {
+              "ko": "시장",
+              "translation_ru": "рынок"
+            },
+            {
+              "ko": "회",
+              "translation_ru": "сырая рыба, сашими"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-weather-trip",
           "toc_section": "듣고 말하기",
@@ -75,29 +98,6 @@
           ],
           "followup": "반 친구들에게 여러분의 여행 이야기를 해 보십시오.",
           "followup_ru": "Расскажите одноклассникам о своих путешествиях."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-weather-trip",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "흐리다",
-              "translation_ru": "быть пасмурным, облачным (о погоде)"
-            },
-            {
-              "ko": "시장",
-              "translation_ru": "рынок"
-            },
-            {
-              "ko": "회",
-              "translation_ru": "сырая рыба, сашими"
-            }
-          ]
         }
       ]
     }

@@ -9,6 +9,101 @@
       "source_photo": "photo_11",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-junbihagi1-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "부족하다",
+              "translation_ru": "не хватать"
+            },
+            {
+              "ko": "잃어버리다",
+              "translation_ru": "потерять"
+            },
+            {
+              "ko": "출입국관리사무소",
+              "translation_ru": "миграционная служба"
+            },
+            {
+              "ko": "신청하다",
+              "translation_ru": "подавать заявление"
+            },
+            {
+              "ko": "물어보다",
+              "translation_ru": "спрашивать"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "여권",
+                "translation_ru": "загранпаспорт"
+              },
+              {
+                "ko": "비자",
+                "translation_ru": "виза"
+              },
+              {
+                "ko": "학생증",
+                "translation_ru": "студенческий билет"
+              },
+              {
+                "ko": "외국인 등록증",
+                "translation_ru": "карта иностранца"
+              },
+              {
+                "ko": "통장",
+                "translation_ru": "банковская книжка"
+              },
+              {
+                "ko": "교통 카드",
+                "translation_ru": "транспортная карта"
+              },
+              {
+                "ko": "할인",
+                "translation_ru": "скидка"
+              },
+              {
+                "ko": "충분하다",
+                "translation_ru": "достаточный"
+              },
+              {
+                "ko": "모자라다",
+                "translation_ru": "не хватать"
+              },
+              {
+                "ko": "적응하다",
+                "translation_ru": "привыкать, адаптироваться"
+              },
+              {
+                "ko": "잊어버리다",
+                "translation_ru": "забыть"
+              },
+              {
+                "ko": "묻다",
+                "translation_ru": "спрашивать"
+              },
+              {
+                "ko": "질문하다",
+                "translation_ru": "задавать вопрос"
+              },
+              {
+                "ko": "정류장",
+                "translation_ru": "остановка"
+              },
+              {
+                "ko": "편의점",
+                "translation_ru": "магазин у дома"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-junbihagi1-dialogue",
           "toc_section": "준비하기 1",
@@ -68,122 +163,6 @@
             {
               "speaker": "아멜리",
               "text": "고마워요. 또 필요한 정보가 있으면 물어볼게요."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-junbihagi1-dialogue",
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "부족하다",
-              "translation_ru": "не хватать",
-              "group": "부족"
-            },
-            {
-              "ko": "잃어버리다",
-              "translation_ru": "потерять",
-              "group": "질문"
-            },
-            {
-              "ko": "출입국관리사무소",
-              "translation_ru": "миграционная служба",
-              "group": "서류"
-            },
-            {
-              "ko": "신청하다",
-              "translation_ru": "подавать заявление",
-              "group": "서류"
-            },
-            {
-              "ko": "물어보다",
-              "translation_ru": "спрашивать",
-              "group": "질문"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "서류",
-              "title_ru": "Документы и учреждения",
-              "items": [
-                {
-                  "ko": "여권",
-                  "translation_ru": "загранпаспорт"
-                },
-                {
-                  "ko": "비자",
-                  "translation_ru": "виза"
-                },
-                {
-                  "ko": "학생증",
-                  "translation_ru": "студенческий билет"
-                },
-                {
-                  "ko": "외국인 등록증",
-                  "translation_ru": "карта иностранца"
-                },
-                {
-                  "ko": "통장",
-                  "translation_ru": "банковская книжка"
-                },
-                {
-                  "ko": "교통 카드",
-                  "translation_ru": "транспортная карта"
-                },
-                {
-                  "ko": "할인",
-                  "translation_ru": "скидка"
-                }
-              ]
-            },
-            {
-              "title": "부족",
-              "title_ru": "Хватает или нет",
-              "items": [
-                {
-                  "ko": "충분하다",
-                  "translation_ru": "достаточный"
-                },
-                {
-                  "ko": "모자라다",
-                  "translation_ru": "не хватать"
-                },
-                {
-                  "ko": "적응하다",
-                  "translation_ru": "привыкать, адаптироваться"
-                }
-              ]
-            },
-            {
-              "title": "질문",
-              "title_ru": "Потерять и спросить",
-              "items": [
-                {
-                  "ko": "잊어버리다",
-                  "translation_ru": "забыть"
-                },
-                {
-                  "ko": "묻다",
-                  "translation_ru": "спрашивать"
-                },
-                {
-                  "ko": "질문하다",
-                  "translation_ru": "задавать вопрос"
-                },
-                {
-                  "ko": "정류장",
-                  "translation_ru": "остановка"
-                },
-                {
-                  "ko": "편의점",
-                  "translation_ru": "магазин у дома"
-                }
-              ]
             }
           ]
         }

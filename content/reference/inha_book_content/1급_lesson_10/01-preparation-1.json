@@ -9,78 +9,6 @@
       "source_photo": "IMG_1084",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-recommend-dialogue",
-          "toc_section": "준비하기 1",
-          "title": "음식을 추천하기",
-          "title_ru": "Рекомендовать еду",
-          "illustration": {
-            "storage_path": "lesson_10/illustration_1_samgyetang.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기1",
-          "exercise_ref": null,
-          "audio_id": "137",
-          "speakers": [
-            "자르갈",
-            "아멜리"
-          ],
-          "lines": [
-            {
-              "speaker": "자르갈",
-              "text": "요즘 날씨가 너무 더워요.",
-              "emphasized": [
-                "더워요"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "네, 오늘도 기온이 33℃예요."
-            },
-            {
-              "speaker": "자르갈",
-              "text": "한국 사람들은 여름에 삼계탕을 많이 먹어요."
-            },
-            {
-              "speaker": "아멜리",
-              "text": "삼계탕이 뭐예요?"
-            },
-            {
-              "speaker": "자르갈",
-              "text": "삼계탕은 한국의 전통 음식이에요. 인삼과 닭을 넣어서 만들어요.",
-              "emphasized": [
-                "넣어서"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "맛있어요?"
-            },
-            {
-              "speaker": "자르갈",
-              "text": "네, 아주 맛있어요. 우리 삼계탕을 먹을까요?",
-              "emphasized": [
-                "먹을까요"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "좋아요. 배고프니까 빨리 가서 먹어 봅시다.",
-              "emphasized": [
-                "배고프니까",
-                "봅시다"
-              ]
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "더워",
-              "translation_ru": "форма от 덥다 (быть жарким)"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi1",
           "toc_section": "준비하기 1",
@@ -176,6 +104,80 @@
             {
               "ko": "출발하다",
               "translation_ru": "отправляться, отбывать"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "더워",
+                "translation_ru": "форма от 덥다 (быть жарким)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-recommend-dialogue",
+          "toc_section": "준비하기 1",
+          "title": "음식을 추천하기",
+          "title_ru": "Рекомендовать еду",
+          "illustration": {
+            "storage_path": "lesson_10/illustration_1_samgyetang.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "137",
+          "speakers": [
+            "자르갈",
+            "아멜리"
+          ],
+          "lines": [
+            {
+              "speaker": "자르갈",
+              "text": "요즘 날씨가 너무 더워요.",
+              "emphasized": [
+                "더워요"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 오늘도 기온이 33℃예요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "한국 사람들은 여름에 삼계탕을 많이 먹어요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "삼계탕이 뭐예요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "삼계탕은 한국의 전통 음식이에요. 인삼과 닭을 넣어서 만들어요.",
+              "emphasized": [
+                "넣어서"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "맛있어요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "네, 아주 맛있어요. 우리 삼계탕을 먹을까요?",
+              "emphasized": [
+                "먹을까요"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "좋아요. 배고프니까 빨리 가서 먹어 봅시다.",
+              "emphasized": [
+                "배고프니까",
+                "봅시다"
+              ]
             }
           ]
         }

@@ -9,6 +9,77 @@
       "source_photo": "IMG_1556",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-empathy",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "listening-empathy",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "거절하다",
+              "translation_ru": "отказывать(ся)"
+            },
+            {
+              "ko": "참다",
+              "translation_ru": "терпеть, сдерживаться"
+            }
+          ],
+          "extra_words": {
+            "transcript_vocab": [
+              {
+                "ko": "요즘",
+                "translation_ru": "в последнее время, сейчас, нынче"
+              },
+              {
+                "ko": "성격",
+                "translation_ru": "характер, личность"
+              },
+              {
+                "ko": "사실",
+                "translation_ru": "правда, на самом деле, по правде говоря"
+              },
+              {
+                "ko": "빌려주다",
+                "translation_ru": "одалживать, давать в долг (кому-то)"
+              },
+              {
+                "ko": "계속",
+                "translation_ru": "продолжение (чего-то), непрерывно, постоянно"
+              },
+              {
+                "ko": "섭섭해하다",
+                "translation_ru": "обижаться, расстроиться, чувствовать досаду"
+              },
+              {
+                "ko": "아직",
+                "translation_ru": "еще, до сих пор"
+              },
+              {
+                "ko": "자기",
+                "translation_ru": "сам, себя, свой (собственный)"
+              },
+              {
+                "ko": "후회하다",
+                "translation_ru": "сожалеть, раскаиваться"
+              },
+              {
+                "ko": "자신",
+                "translation_ru": "сам, себя, свой (собственный), уверенность в себе"
+              },
+              {
+                "ko": "싫다",
+                "translation_ru": "не нравится, не хочу, терпеть не могу"
+              },
+              {
+                "ko": "거절",
+                "translation_ru": "отказ, отклонение"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-empathy",
           "toc_section": "듣고 말하기",
@@ -93,49 +164,27 @@
           "followup_ru": "Есть ли у вас забота о своём характере? Расскажите."
         },
         {
-          "type": "vocab_list",
-          "id": "vocab-listening-empathy",
+          "id": "hint-lesson-13-listening",
+          "type": "hint",
           "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
           "related_text_ref": "listening-empathy",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "label_ko": "표현",
+          "label_ru": "Выражения",
           "items": [
             {
-              "ko": "거절하다",
-              "translation_ru": "отказывать(ся)"
+              "kind": "phrase",
+              "text": "고민이 많겠네요",
+              "translation_ru": "наверное, у вас много забот"
             },
             {
-              "ko": "참다",
-              "translation_ru": "терпеть, сдерживаться"
-            }
-          ],
-          "extra_groups": [
+              "kind": "phrase",
+              "text": "계속 입고 다녀요",
+              "translation_ru": "постоянно в чем-то ходит"
+            },
             {
-              "title": "고민",
-              "title_ru": "Темы забот",
-              "items": [
-                {
-                  "ko": "구매",
-                  "translation_ru": "покупка, приобретение"
-                },
-                {
-                  "ko": "아르바이트",
-                  "translation_ru": "подработка, работа на полставки"
-                },
-                {
-                  "ko": "성적",
-                  "translation_ru": "оценки, успеваемость"
-                },
-                {
-                  "ko": "직업",
-                  "translation_ru": "профессия, работа"
-                },
-                {
-                  "ko": "절약하다",
-                  "translation_ru": "экономить"
-                }
-              ]
+              "kind": "phrase",
+              "text": "제 자신의 성격이 너무 싫어요",
+              "translation_ru": "мне очень не нравится мой собственный характер"
             }
           ]
         }

@@ -9,6 +9,69 @@
       "source_photo": "photo_25",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-plan",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "취직",
+              "translation_ru": "трудоустройство"
+            },
+            {
+              "ko": "추천하다",
+              "translation_ru": "рекомендовать"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "계획",
+                "translation_ru": "план"
+              },
+              {
+                "ko": "계속",
+                "translation_ru": "продолжать, всё время"
+              },
+              {
+                "ko": "돌아가다",
+                "translation_ru": "возвращаться"
+              },
+              {
+                "ko": "디자인",
+                "translation_ru": "дизайн"
+              },
+              {
+                "ko": "고등학교",
+                "translation_ru": "старшая школа"
+              },
+              {
+                "ko": "교수님",
+                "translation_ru": "профессор"
+              },
+              {
+                "ko": "시험",
+                "translation_ru": "экзамен"
+              },
+              {
+                "ko": "대학원",
+                "translation_ru": "магистратура"
+              },
+              {
+                "ko": "입학하다",
+                "translation_ru": "поступать"
+              },
+              {
+                "ko": "졸업하다",
+                "translation_ru": "оканчивать"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-plan-summary",
           "toc_section": "말하기",
@@ -95,81 +158,6 @@
             },
             {
               "text": "3) 그것을 한 다음에 무엇을 할 겁니까?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-plan",
-          "source_note": "рукописный список на полях страницы",
-          "items": [
-            {
-              "ko": "취직",
-              "translation_ru": "трудоустройство",
-              "group": "진로"
-            },
-            {
-              "ko": "추천하다",
-              "translation_ru": "рекомендовать",
-              "group": "학교"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "진로",
-              "title_ru": "Планы на будущее",
-              "items": [
-                {
-                  "ko": "계획",
-                  "translation_ru": "план"
-                },
-                {
-                  "ko": "계속",
-                  "translation_ru": "продолжать, всё время"
-                },
-                {
-                  "ko": "돌아가다",
-                  "translation_ru": "возвращаться"
-                },
-                {
-                  "ko": "디자인",
-                  "translation_ru": "дизайн"
-                }
-              ]
-            },
-            {
-              "title": "학교",
-              "title_ru": "Учёба",
-              "items": [
-                {
-                  "ko": "고등학교",
-                  "translation_ru": "старшая школа"
-                },
-                {
-                  "ko": "교수님",
-                  "translation_ru": "профессор"
-                },
-                {
-                  "ko": "시험",
-                  "translation_ru": "экзамен"
-                },
-                {
-                  "ko": "대학원",
-                  "translation_ru": "магистратура"
-                },
-                {
-                  "ko": "입학하다",
-                  "translation_ru": "поступать"
-                },
-                {
-                  "ko": "졸업하다",
-                  "translation_ru": "оканчивать"
-                }
-              ]
             }
           ]
         }

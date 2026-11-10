@@ -9,6 +9,65 @@
       "source_photo": "IMG_1444",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-reading",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "속담",
+              "translation_ru": "пословица"
+            },
+            {
+              "ko": "교훈",
+              "translation_ru": "урок, назидание"
+            },
+            {
+              "ko": "다툼",
+              "translation_ru": "ссора, спор"
+            },
+            {
+              "ko": "화해",
+              "translation_ru": "примирение"
+            },
+            {
+              "ko": "어울리다",
+              "translation_ru": "подходить, сочетаться; общаться"
+            },
+            {
+              "ko": "관계",
+              "translation_ru": "отношения"
+            },
+            {
+              "ko": "지다",
+              "translation_ru": "проигрывать"
+            },
+            {
+              "ko": "이기다",
+              "translation_ru": "побеждать"
+            },
+            {
+              "ko": "양보하다",
+              "translation_ru": "уступать"
+            },
+            {
+              "ko": "결국",
+              "translation_ru": "в конце концов, в итоге"
+            },
+            {
+              "ko": "자존심",
+              "translation_ru": "самолюбие, гордость"
+            },
+            {
+              "ko": "인생",
+              "translation_ru": "жизнь (человеческая), судьба"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-proverbs",
           "toc_section": "문화 이해하기",
@@ -100,65 +159,6 @@
               "kind": "phrase",
               "text": "자존심을 세우다",
               "translation_ru": "упорствовать из самолюбия — «필요 없는 자존심을 세우고 있어요» (упрямлюсь из ненужной гордости)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-reading",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "속담",
-              "translation_ru": "пословица"
-            },
-            {
-              "ko": "교훈",
-              "translation_ru": "урок, назидание"
-            },
-            {
-              "ko": "다툼",
-              "translation_ru": "ссора, спор"
-            },
-            {
-              "ko": "화해",
-              "translation_ru": "примирение"
-            },
-            {
-              "ko": "어울리다",
-              "translation_ru": "подходить, сочетаться; общаться"
-            },
-            {
-              "ko": "관계",
-              "translation_ru": "отношения"
-            },
-            {
-              "ko": "지다",
-              "translation_ru": "проигрывать"
-            },
-            {
-              "ko": "이기다",
-              "translation_ru": "побеждать"
-            },
-            {
-              "ko": "양보하다",
-              "translation_ru": "уступать"
-            },
-            {
-              "ko": "결국",
-              "translation_ru": "в конце концов, в итоге"
-            },
-            {
-              "ko": "자존심",
-              "translation_ru": "самолюбие, гордость"
-            },
-            {
-              "ko": "인생",
-              "translation_ru": "жизнь (человеческая), судьба"
             }
           ]
         },

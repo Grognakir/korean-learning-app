@@ -9,6 +9,21 @@
       "source_photo": "IMG_1172",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-symptoms",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "유행",
+              "translation_ru": "поветрие (в т.ч. о болезнях)"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-symptoms",
           "toc_section": "듣고 말하기",
@@ -95,21 +110,6 @@
           ],
           "followup": "여러분은 어디가 어떻게 아팠습니까? 친구와 이야기해 보십시오.",
           "followup_ru": "Что и как у вас болело? Расскажите другу."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-symptoms",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "유행",
-              "translation_ru": "поветрие (в т.ч. о болезнях)"
-            }
-          ]
         }
       ]
     }

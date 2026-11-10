@@ -9,6 +9,25 @@
       "source_photo": "IMG_1111",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-text-message",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-text-message",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "음악회",
+              "translation_ru": "концерт (классической музыки)"
+            },
+            {
+              "ko": "문자 메시지",
+              "translation_ru": "SMS, текстовое сообщение"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-text-message",
           "toc_section": "읽고 말하기",
@@ -79,25 +98,6 @@
               "kind": "open",
               "prompt": "여러분은 누구에게 어떤 문자 메시지를 보내고 싶습니까? 이야기해 보십시오.",
               "prompt_ru": "Кому и какое SMS вы хотели бы отправить? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-text-message",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-text-message",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "음악회",
-              "translation_ru": "концерт (классической музыки)"
-            },
-            {
-              "ko": "문자 메시지",
-              "translation_ru": "SMS, текстовое сообщение"
             }
           ]
         }

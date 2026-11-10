@@ -17,84 +17,74 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "조리",
-              "title_ru": "Как готовить",
-              "items": [
-                {
-                  "ko": "김치찌개",
-                  "translation_ru": "суп с кимчи"
-                },
-                {
-                  "ko": "두부",
-                  "translation_ru": "тофу"
-                },
-                {
-                  "ko": "파",
-                  "translation_ru": "зелёный лук"
-                },
-                {
-                  "ko": "썰다",
-                  "translation_ru": "резать"
-                },
-                {
-                  "ko": "끓이다",
-                  "translation_ru": "кипятить"
-                },
-                {
-                  "ko": "볶다",
-                  "translation_ru": "жарить"
-                },
-                {
-                  "ko": "붓다",
-                  "translation_ru": "вливать"
-                },
-                {
-                  "ko": "프라이팬",
-                  "translation_ru": "сковорода"
-                },
-                {
-                  "ko": "냄비",
-                  "translation_ru": "кастрюля"
-                },
-                {
-                  "ko": "순서",
-                  "translation_ru": "порядок"
-                }
-              ]
-            },
-            {
-              "title": "발표",
-              "title_ru": "Презентация",
-              "items": [
-                {
-                  "ko": "발표",
-                  "translation_ru": "презентация"
-                },
-                {
-                  "ko": "이유",
-                  "translation_ru": "причина"
-                },
-                {
-                  "ko": "샤슬릭",
-                  "translation_ru": "шашлык"
-                },
-                {
-                  "ko": "모닥불",
-                  "translation_ru": "костёр"
-                },
-                {
-                  "ko": "재료",
-                  "translation_ru": "ингредиенты"
-                },
-                {
-                  "ko": "맛",
-                  "translation_ru": "вкус"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "김치찌개",
+                "translation_ru": "суп с кимчи"
+              },
+              {
+                "ko": "두부",
+                "translation_ru": "тофу"
+              },
+              {
+                "ko": "파",
+                "translation_ru": "зелёный лук"
+              },
+              {
+                "ko": "썰다",
+                "translation_ru": "резать"
+              },
+              {
+                "ko": "끓이다",
+                "translation_ru": "кипятить"
+              },
+              {
+                "ko": "볶다",
+                "translation_ru": "жарить"
+              },
+              {
+                "ko": "붓다",
+                "translation_ru": "вливать"
+              },
+              {
+                "ko": "프라이팬",
+                "translation_ru": "сковорода"
+              },
+              {
+                "ko": "냄비",
+                "translation_ru": "кастрюля"
+              },
+              {
+                "ko": "순서",
+                "translation_ru": "порядок"
+              },
+              {
+                "ko": "발표",
+                "translation_ru": "презентация"
+              },
+              {
+                "ko": "이유",
+                "translation_ru": "причина"
+              },
+              {
+                "ko": "샤슬릭",
+                "translation_ru": "шашлык"
+              },
+              {
+                "ko": "모닥불",
+                "translation_ru": "костёр"
+              },
+              {
+                "ko": "재료",
+                "translation_ru": "ингредиенты"
+              },
+              {
+                "ko": "맛",
+                "translation_ru": "вкус"
+              }
+            ]
+          }
         },
         {
           "type": "text",
@@ -125,16 +115,6 @@
             },
             {
               "text": "4. 5분 후에 두부와 파를 넣고 3분 정도 끓입니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "두부",
-              "translation_ru": "тофу (соевый творог)"
-            },
-            {
-              "ko": "파",
-              "translation_ru": "зелёный лук"
             }
           ]
         },

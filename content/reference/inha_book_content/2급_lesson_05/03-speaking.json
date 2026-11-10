@@ -9,6 +9,61 @@
       "source_photo": "IMG_0695",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "양로원",
+              "translation_ru": "дом престарелых"
+            },
+            {
+              "ko": "의상",
+              "translation_ru": "костюм, наряд (здесь — традиционный костюм)"
+            },
+            {
+              "ko": "어른",
+              "translation_ru": "взрослый; здесь также — старшие, пожилые люди"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "봉사활동",
+                "translation_ru": "волонтёрство"
+              },
+              {
+                "ko": "청소하다",
+                "translation_ru": "убирать"
+              },
+              {
+                "ko": "노래",
+                "translation_ru": "песня"
+              },
+              {
+                "ko": "부르다",
+                "translation_ru": "петь"
+              },
+              {
+                "ko": "기뻐하다",
+                "translation_ru": "радоваться"
+              },
+              {
+                "ko": "모습",
+                "translation_ru": "вид, облик"
+              },
+              {
+                "ko": "권유하다",
+                "translation_ru": "предлагать, приглашать"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -91,68 +146,6 @@
             },
             {
               "text": "3) 친구에게 왜 권유합니까?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "양로원",
-              "translation_ru": "дом престарелых",
-              "group": "봉사"
-            },
-            {
-              "ko": "의상",
-              "translation_ru": "костюм, наряд (здесь — традиционный костюм)",
-              "group": "봉사"
-            },
-            {
-              "ko": "어른",
-              "translation_ru": "взрослый; здесь также — старшие, пожилые люди",
-              "group": "봉사"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "봉사",
-              "title_ru": "Волонтёрство",
-              "items": [
-                {
-                  "ko": "봉사활동",
-                  "translation_ru": "волонтёрство"
-                },
-                {
-                  "ko": "청소하다",
-                  "translation_ru": "убирать"
-                },
-                {
-                  "ko": "노래",
-                  "translation_ru": "песня"
-                },
-                {
-                  "ko": "부르다",
-                  "translation_ru": "петь"
-                },
-                {
-                  "ko": "기뻐하다",
-                  "translation_ru": "радоваться"
-                },
-                {
-                  "ko": "모습",
-                  "translation_ru": "вид, облик"
-                },
-                {
-                  "ko": "권유하다",
-                  "translation_ru": "предлагать, приглашать"
-                }
-              ]
             }
           ]
         }

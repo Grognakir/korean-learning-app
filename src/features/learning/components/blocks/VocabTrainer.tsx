@@ -2,6 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { VocabListBlock } from "@/features/learning/types";
+import {
+  loadProgress,
+  priorityOrder,
+  recordRating,
+  useVocabProgress,
+  type Rating,
+} from "@/features/learning/vocabProgress";
 import styles from "./blocks.module.css";
 
 type Mode = "kr-ru" | "ru-kr" | "type";
@@ -12,13 +19,48 @@ const MODES: { id: Mode; label: string }[] = [
   { id: "type", label: "Корейское написание" },
 ];
 
-function shuffled(count: number): number[] {
-  const order = Array.from({ length: count }, (_, i) => i);
-  for (let i = order.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [order[i], order[j]] = [order[j], order[i]];
-  }
-  return order;
+// Как запомнилось: «Не знаю» и «Не помню» возвращают карточку в очередь
+// (через 2 и 4 слова), «Вспомнил» и «Знаю» убирают её из очереди.
+const RATINGS: { rating: Rating; label: string; reinsertAfter: number }[] = [
+  { rating: "again", label: "Не знаю", reinsertAfter: 2 },
+  { rating: "hard", label: "Не помню", reinsertAfter: 4 },
+  { rating: "good", label: "Вспомнил", reinsertAfter: 0 },
+  { rating: "easy", label: "Знаю", reinsertAfter: 0 },
+];
+
+const RATING_CLASS: Record<Rating, string> = {
+  again: styles.rateAgain,
+  hard: styles.rateHard,
+  good: styles.rateGood,
+  easy: styles.rateEasy,
+};
+
+const STATUS_CLASS: Record<Rating, string> = {
+  again: styles.statusAgain,
+  hard: styles.statusHard,
+  good: styles.statusGood,
+  easy: styles.statusEasy,
+};
+
+/** Очередь после оценки карточки на позиции `index`. */
+export function queueAfterRating(
+  order: number[],
+  index: number,
+  reinsertAfter: number,
+): number[] {
+  const rest = order.filter((_, i) => i !== index);
+  if (reinsertAfter === 0) return rest;
+  const insertAt = Math.min(index + reinsertAfter, rest.length);
+  return [...rest.slice(0, insertAt), order[index], ...rest.slice(insertAt)];
+}
+
+// Новая тренировка начинается с тех слов, которые раньше не знал или не
+// помнил, затем новые, затем выученные (когда подошёл срок повторения).
+function startOrder(items: { ko: string }[]): number[] {
+  return priorityOrder(
+    items.map((item) => item.ko),
+    loadProgress(),
+  );
 }
 
 function normalize(value: string): string {
@@ -168,11 +210,14 @@ function backSize(text: string): string | undefined {
 export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
   const total = items.length;
   const [mode, setMode] = useState<Mode>("kr-ru");
-  const [order, setOrder] = useState(() => shuffled(total));
+  const [order, setOrder] = useState(() => startOrder(items));
   const [index, setIndex] = useState(0);
+  const [learned, setLearned] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [answer, setAnswer] = useState("");
   const [correct, setCorrect] = useState<boolean | null>(null);
+  const progress = useVocabProgress();
+  const queueLength = order.length;
   const item = items[order[index]];
 
   function clearAttempt() {
@@ -182,13 +227,25 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
   }
 
   function restart() {
-    setOrder(shuffled(total));
+    setOrder(startOrder(items));
     setIndex(0);
+    setLearned(0);
     clearAttempt();
   }
 
   function go(step: number) {
-    setIndex((value) => (value + step + total) % total);
+    if (queueLength === 0) return;
+    setIndex((value) => (value + step + queueLength) % queueLength);
+    clearAttempt();
+  }
+
+  function rate(rating: Rating) {
+    const { reinsertAfter } = RATINGS.find((r) => r.rating === rating)!;
+    const next = queueAfterRating(order, index, reinsertAfter);
+    recordRating(item.ko, rating);
+    if (reinsertAfter === 0) setLearned((value) => value + 1);
+    setOrder(next);
+    setIndex(next.length === 0 ? 0 : Math.min(index, next.length - 1));
     clearAttempt();
   }
 
@@ -198,6 +255,7 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
   }
 
   function check() {
+    if (!item) return;
     setCorrect(normalize(answer) === normalize(item.ko));
   }
 
@@ -213,6 +271,8 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
   );
 
   const showKorean = mode === "kr-ru" ? !flipped : flipped;
+  const done = queueLength === 0;
+  const previous = item ? progress[item.ko] : undefined;
 
   return (
     <div className={styles.trainer}>
@@ -235,7 +295,13 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
       <div className={styles.trainerMain}>
         <div className={styles.trainerStage}>
           <div className={styles.vocabCardWrap}>
-            {mode === "type" ? (
+            {done ? (
+              <div className={styles.vocabCard} aria-live="polite">
+                <span className={styles.vocabCardBack}>
+                  ✓ Все слова пройдены: {learned} из {total}
+                </span>
+              </div>
+            ) : mode === "type" ? (
               <div className={styles.vocabCard} aria-live="polite">
                 <span
                   className={`${styles.vocabCardBack} ${backSize(item.translation_ru) ?? ""}`}
@@ -278,6 +344,11 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
                 )}
               </button>
             )}
+            {previous && !done && (
+              <span className={`${styles.vocabCardStatus} ${STATUS_CLASS[previous.rating]}`}>
+                Раньше: {RATINGS.find((r) => r.rating === previous.rating)?.label}
+              </span>
+            )}
             {resetButton}
             <div className={styles.vocabCardNav}>
               <button
@@ -288,7 +359,7 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
                 <Arrow direction="left" />
               </button>
               <span>
-                {index + 1} / {total}
+                {done ? 0 : index + 1} / {queueLength}
               </span>
               <button
                 type="button"
@@ -299,51 +370,62 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
               </button>
             </div>
           </div>
-        </div>
-        <div
-          className={
-            mode === "type"
-              ? styles.trainerAnswerWrapOpen
-              : styles.trainerAnswerWrap
-          }
-          aria-hidden={mode !== "type"}
-        >
-          <div className={styles.trainerAnswerClip}>
-            <div className={styles.trainerAnswer}>
-              <input
-                className={
-                  correct === null
-                    ? styles.trainerInput
-                    : correct
-                      ? styles.trainerInputCorrect
-                      : styles.trainerInputIncorrect
-                }
-                value={answer}
-                onChange={(e) => {
-                  setAnswer(e.target.value);
-                  setCorrect(null);
-                }}
-                onKeyDown={(e) => {
-                  if (e.key !== "Enter") return;
-                  if (correct === null) check();
-                  else go(1);
-                }}
-                placeholder="Слово на корейском"
-                aria-label="Ответ по-корейски"
-                autoComplete="off"
-                spellCheck={false}
-                tabIndex={mode === "type" ? 0 : -1}
-              />
-              <button
-                type="button"
-                className={styles.trainerCheck}
-                onClick={check}
-                tabIndex={mode === "type" ? 0 : -1}
-                aria-label="Проверить"
+          <div className={styles.trainerControls}>
+            {mode === "type" ? (
+              <div className={styles.trainerAnswer}>
+                <input
+                  className={
+                    correct === null
+                      ? styles.trainerInput
+                      : correct
+                        ? styles.trainerInputCorrect
+                        : styles.trainerInputIncorrect
+                  }
+                  value={answer}
+                  disabled={done}
+                  onChange={(e) => {
+                    setAnswer(e.target.value);
+                    setCorrect(null);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key !== "Enter") return;
+                    if (correct === null) check();
+                    else go(1);
+                  }}
+                  placeholder="Слово на корейском"
+                  aria-label="Ответ по-корейски"
+                  autoComplete="off"
+                  spellCheck={false}
+                />
+                <button
+                  type="button"
+                  className={styles.trainerCheck}
+                  onClick={check}
+                  disabled={done}
+                  aria-label="Проверить"
+                >
+                  <CheckIcon />
+                </button>
+              </div>
+            ) : (
+              <div
+                className={styles.trainerRatings}
+                role="group"
+                aria-label="Как запомнилось"
               >
-                <CheckIcon />
-              </button>
-            </div>
+                {RATINGS.map((r) => (
+                  <button
+                    key={r.rating}
+                    type="button"
+                    className={RATING_CLASS[r.rating]}
+                    disabled={!flipped || done}
+                    onClick={() => rate(r.rating)}
+                  >
+                    {r.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

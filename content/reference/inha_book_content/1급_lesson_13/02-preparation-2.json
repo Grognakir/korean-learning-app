@@ -9,6 +9,61 @@
       "source_photo": "IMG_1137",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-directions-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "쪽",
+              "translation_ru": "сторона, направление"
+            },
+            {
+              "ko": "횡단보도",
+              "translation_ru": "пешеходный переход"
+            },
+            {
+              "ko": "건너다",
+              "translation_ru": "переходить (улицу)"
+            },
+            {
+              "ko": "액션",
+              "translation_ru": "боевик (жанр)"
+            },
+            {
+              "ko": "코미디",
+              "translation_ru": "комедия (жанр)"
+            },
+            {
+              "ko": "녹차",
+              "translation_ru": "зелёный чай"
+            },
+            {
+              "ko": "게임",
+              "translation_ru": "игра"
+            },
+            {
+              "ko": "드라마",
+              "translation_ru": "драма, сериал"
+            },
+            {
+              "ko": "피아노",
+              "translation_ru": "пианино"
+            },
+            {
+              "ko": "고장",
+              "translation_ru": "поломка (고장이 나다 — сломаться)"
+            },
+            {
+              "ko": "나다",
+              "translation_ru": "происходить, возникать"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-directions-dialogue",
           "toc_section": "준비하기 2",
@@ -93,61 +148,6 @@
               "kind": "phrase",
               "text": "길이 복잡해서 못 찾겠어요.",
               "translation_ru": "Дорога запутанная, не могу найти."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-directions-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "쪽",
-              "translation_ru": "сторона, направление"
-            },
-            {
-              "ko": "횡단보도",
-              "translation_ru": "пешеходный переход"
-            },
-            {
-              "ko": "건너다",
-              "translation_ru": "переходить (улицу)"
-            },
-            {
-              "ko": "액션",
-              "translation_ru": "боевик (жанр)"
-            },
-            {
-              "ko": "코미디",
-              "translation_ru": "комедия (жанр)"
-            },
-            {
-              "ko": "녹차",
-              "translation_ru": "зелёный чай"
-            },
-            {
-              "ko": "게임",
-              "translation_ru": "игра"
-            },
-            {
-              "ko": "드라마",
-              "translation_ru": "драма, сериал"
-            },
-            {
-              "ko": "피아노",
-              "translation_ru": "пианино"
-            },
-            {
-              "ko": "고장",
-              "translation_ru": "поломка (고장이 나다 — сломаться)"
-            },
-            {
-              "ko": "나다",
-              "translation_ru": "происходить, возникать"
             }
           ]
         }

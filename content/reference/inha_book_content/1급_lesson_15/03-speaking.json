@@ -9,6 +9,37 @@
       "source_photo": "IMG_1171",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "차다",
+              "translation_ru": "быть холодным (о еде, воде)"
+            },
+            {
+              "ko": "설사",
+              "translation_ru": "понос"
+            },
+            {
+              "ko": "죽",
+              "translation_ru": "каша (рисовая)"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "찬",
+                "translation_ru": "форма от 차다 (быть холодным — о еде, воде)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -112,12 +143,6 @@
                 "따뜻한 음식을 드세요"
               ]
             }
-          ],
-          "vocab": [
-            {
-              "ko": "찬",
-              "translation_ru": "форма от 차다 (быть холодным — о еде, воде)"
-            }
           ]
         },
         {
@@ -184,29 +209,6 @@
               ]
             ]
           }
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "차다",
-              "translation_ru": "быть холодным (о еде, воде)"
-            },
-            {
-              "ko": "설사",
-              "translation_ru": "понос"
-            },
-            {
-              "ko": "죽",
-              "translation_ru": "каша (рисовая)"
-            }
-          ]
         }
       ]
     }

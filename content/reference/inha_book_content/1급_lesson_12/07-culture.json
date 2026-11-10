@@ -9,6 +9,61 @@
       "source_photo": "IMG_1130",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-next-time",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "익숙하다",
+              "translation_ru": "быть привычным, знакомым"
+            },
+            {
+              "ko": "사귀다",
+              "translation_ru": "дружить, заводить знакомство"
+            },
+            {
+              "ko": "적응하다",
+              "translation_ru": "адаптироваться, привыкать"
+            },
+            {
+              "ko": "가끔",
+              "translation_ru": "иногда"
+            },
+            {
+              "ko": "우연히",
+              "translation_ru": "случайно"
+            },
+            {
+              "ko": "안부",
+              "translation_ru": "весть о благополучии, «как дела»"
+            },
+            {
+              "ko": "한번",
+              "translation_ru": "как-нибудь, разок"
+            },
+            {
+              "ko": "대답하다",
+              "translation_ru": "отвечать"
+            },
+            {
+              "ko": "잠시",
+              "translation_ru": "ненадолго"
+            },
+            {
+              "ko": "말",
+              "translation_ru": "слово, речь"
+            },
+            {
+              "ko": "계속",
+              "translation_ru": "постоянно, продолжая"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-next-time",
           "toc_section": "문화 이해하기",
@@ -68,61 +123,6 @@
               "kind": "open",
               "prompt": "여러분 나라에는 어떤 인사가 있습니까? 이야기해 보십시오.",
               "prompt_ru": "Какие приветствия есть в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-next-time",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "익숙하다",
-              "translation_ru": "быть привычным, знакомым"
-            },
-            {
-              "ko": "사귀다",
-              "translation_ru": "дружить, заводить знакомство"
-            },
-            {
-              "ko": "적응하다",
-              "translation_ru": "адаптироваться, привыкать"
-            },
-            {
-              "ko": "가끔",
-              "translation_ru": "иногда"
-            },
-            {
-              "ko": "우연히",
-              "translation_ru": "случайно"
-            },
-            {
-              "ko": "안부",
-              "translation_ru": "весть о благополучии, «как дела»"
-            },
-            {
-              "ko": "한번",
-              "translation_ru": "как-нибудь, разок"
-            },
-            {
-              "ko": "대답하다",
-              "translation_ru": "отвечать"
-            },
-            {
-              "ko": "잠시",
-              "translation_ru": "ненадолго"
-            },
-            {
-              "ko": "말",
-              "translation_ru": "слово, речь"
-            },
-            {
-              "ko": "계속",
-              "translation_ru": "постоянно, продолжая"
             }
           ]
         },

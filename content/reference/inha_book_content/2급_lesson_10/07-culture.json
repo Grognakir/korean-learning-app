@@ -9,6 +9,97 @@
       "source_photo": "IMG_1302",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-clothing",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "평소",
+              "translation_ru": "обычно, в обычное время"
+            },
+            {
+              "ko": "교복",
+              "translation_ru": "школьная форма"
+            },
+            {
+              "ko": "장례식",
+              "translation_ru": "похороны"
+            },
+            {
+              "ko": "의복",
+              "translation_ru": "одежда"
+            },
+            {
+              "ko": "선택하다",
+              "translation_ru": "выбирать"
+            },
+            {
+              "ko": "개성",
+              "translation_ru": "индивидуальность"
+            },
+            {
+              "ko": "배려",
+              "translation_ru": "забота, чуткость"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "한복",
+                "translation_ru": "ханбок, корейский национальный костюм"
+              },
+              {
+                "ko": "명절",
+                "translation_ru": "традиционный праздник"
+              },
+              {
+                "ko": "돌잔치",
+                "translation_ru": "праздник первого дня рождения"
+              },
+              {
+                "ko": "환갑잔치",
+                "translation_ru": "празднование 60-летия"
+              },
+              {
+                "ko": "예의",
+                "translation_ru": "этикет, вежливость"
+              },
+              {
+                "ko": "지키다",
+                "translation_ru": "соблюдать"
+              },
+              {
+                "ko": "행사",
+                "translation_ru": "мероприятие"
+              },
+              {
+                "ko": "현대인",
+                "translation_ru": "современный человек"
+              },
+              {
+                "ko": "직장인",
+                "translation_ru": "работающий человек, служащий"
+              },
+              {
+                "ko": "표현하다",
+                "translation_ru": "выражать"
+              },
+              {
+                "ko": "때",
+                "translation_ru": "время, момент"
+              },
+              {
+                "ko": "장소",
+                "translation_ru": "место"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-clothing",
           "toc_section": "문화 이해하기",
@@ -67,112 +158,6 @@
               "kind": "phrase",
               "text": "예의를 지키다",
               "translation_ru": "соблюдать этикет, быть вежливым — «사람들에게 예의를 지키는 것이 중요합니다» («важно соблюдать этикет по отношению к людям»)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-clothing",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "평소",
-              "translation_ru": "обычно, в обычное время",
-              "group": "예절"
-            },
-            {
-              "ko": "교복",
-              "translation_ru": "школьная форма"
-            },
-            {
-              "ko": "장례식",
-              "translation_ru": "похороны",
-              "group": "한복"
-            },
-            {
-              "ko": "의복",
-              "translation_ru": "одежда"
-            },
-            {
-              "ko": "선택하다",
-              "translation_ru": "выбирать",
-              "group": "예절"
-            },
-            {
-              "ko": "개성",
-              "translation_ru": "индивидуальность",
-              "group": "예절"
-            },
-            {
-              "ko": "배려",
-              "translation_ru": "забота, чуткость",
-              "group": "예절"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "한복",
-              "title_ru": "Традиционная одежда и праздники",
-              "items": [
-                {
-                  "ko": "한복",
-                  "translation_ru": "ханбок, корейский национальный костюм"
-                },
-                {
-                  "ko": "명절",
-                  "translation_ru": "традиционный праздник"
-                },
-                {
-                  "ko": "돌잔치",
-                  "translation_ru": "праздник первого дня рождения"
-                },
-                {
-                  "ko": "환갑잔치",
-                  "translation_ru": "празднование 60-летия"
-                }
-              ]
-            },
-            {
-              "title": "예절",
-              "title_ru": "Одежда и этикет",
-              "items": [
-                {
-                  "ko": "예의",
-                  "translation_ru": "этикет, вежливость"
-                },
-                {
-                  "ko": "지키다",
-                  "translation_ru": "соблюдать"
-                },
-                {
-                  "ko": "행사",
-                  "translation_ru": "мероприятие"
-                },
-                {
-                  "ko": "현대인",
-                  "translation_ru": "современный человек"
-                },
-                {
-                  "ko": "직장인",
-                  "translation_ru": "работающий человек, служащий"
-                },
-                {
-                  "ko": "표현하다",
-                  "translation_ru": "выражать"
-                },
-                {
-                  "ko": "때",
-                  "translation_ru": "время, момент"
-                },
-                {
-                  "ko": "장소",
-                  "translation_ru": "место"
-                }
-              ]
             }
           ]
         },

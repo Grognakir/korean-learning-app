@@ -9,6 +9,41 @@
       "source_photo": "IMG_1089",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-order-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "갈비탕",
+              "translation_ru": "кальбитан (суп с говяжьими рёбрами)"
+            },
+            {
+              "ko": "주문하다",
+              "translation_ru": "заказывать"
+            },
+            {
+              "ko": "라면",
+              "translation_ru": "рамён, лапша быстрого приготовления"
+            },
+            {
+              "ko": "세계",
+              "translation_ru": "мир (весь свет)"
+            },
+            {
+              "ko": "차",
+              "translation_ru": "чай"
+            },
+            {
+              "ko": "방송",
+              "translation_ru": "трансляция, передача"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-order-dialogue",
           "toc_section": "준비하기 2",
@@ -125,41 +160,6 @@
               "kind": "pattern",
               "text": "N인분",
               "translation_ru": "N порций — шаблон; «여기 갈비탕 2인분 주세요.» = «Две порции кальбитана, пожалуйста»"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-order-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "갈비탕",
-              "translation_ru": "кальбитан (суп с говяжьими рёбрами)"
-            },
-            {
-              "ko": "주문하다",
-              "translation_ru": "заказывать"
-            },
-            {
-              "ko": "라면",
-              "translation_ru": "рамён, лапша быстрого приготовления"
-            },
-            {
-              "ko": "세계",
-              "translation_ru": "мир (весь свет)"
-            },
-            {
-              "ko": "차",
-              "translation_ru": "чай"
-            },
-            {
-              "ko": "방송",
-              "translation_ru": "трансляция, передача"
             }
           ]
         }

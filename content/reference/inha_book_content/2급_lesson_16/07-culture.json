@@ -9,6 +9,65 @@
       "source_photo": "IMG_1604",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-gestures",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "음성언어",
+              "translation_ru": "устная речь, звуковой язык"
+            },
+            {
+              "ko": "몸짓언어",
+              "translation_ru": "язык жестов, язык тела"
+            },
+            {
+              "ko": "연결하다",
+              "translation_ru": "соединять, связывать"
+            },
+            {
+              "ko": "끄덕이다",
+              "translation_ru": "кивать"
+            },
+            {
+              "ko": "펴다",
+              "translation_ru": "раскрывать, разворачивать (зонт, книгу)"
+            },
+            {
+              "ko": "손짓하다",
+              "translation_ru": "подавать знак рукой, махать рукой"
+            },
+            {
+              "ko": "동그라미",
+              "translation_ru": "кружок, круг"
+            },
+            {
+              "ko": "쥐다",
+              "translation_ru": "сжимать (в руке), хватать"
+            },
+            {
+              "ko": "엄지손가락",
+              "translation_ru": "большой палец (руки)"
+            },
+            {
+              "ko": "팔",
+              "translation_ru": "восемь"
+            },
+            {
+              "ko": "하트",
+              "translation_ru": "сердечко (знак)"
+            },
+            {
+              "ko": "승리하다",
+              "translation_ru": "побеждать"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-gestures",
           "toc_section": "문화 이해하기",
@@ -83,65 +142,6 @@
             },
             {
               "text": "‘매우 좋아요’"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-gestures",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "음성언어",
-              "translation_ru": "устная речь, звуковой язык"
-            },
-            {
-              "ko": "몸짓언어",
-              "translation_ru": "язык жестов, язык тела"
-            },
-            {
-              "ko": "연결하다",
-              "translation_ru": "соединять, связывать"
-            },
-            {
-              "ko": "끄덕이다",
-              "translation_ru": "кивать"
-            },
-            {
-              "ko": "펴다",
-              "translation_ru": "раскрывать, разворачивать (зонт, книгу)"
-            },
-            {
-              "ko": "손짓하다",
-              "translation_ru": "подавать знак рукой, махать рукой"
-            },
-            {
-              "ko": "동그라미",
-              "translation_ru": "кружок, круг"
-            },
-            {
-              "ko": "쥐다",
-              "translation_ru": "сжимать (в руке), хватать"
-            },
-            {
-              "ko": "엄지손가락",
-              "translation_ru": "большой палец (руки)"
-            },
-            {
-              "ko": "팔",
-              "translation_ru": "восемь"
-            },
-            {
-              "ko": "하트",
-              "translation_ru": "сердечко (знак)"
-            },
-            {
-              "ko": "승리하다",
-              "translation_ru": "побеждать"
             }
           ]
         }

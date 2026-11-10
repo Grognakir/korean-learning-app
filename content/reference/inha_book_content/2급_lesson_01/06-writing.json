@@ -17,56 +17,46 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "구조",
-              "title_ru": "Структура текста",
-              "items": [
-                {
-                  "ko": "자기소개서",
-                  "translation_ru": "самопредставление"
-                },
-                {
-                  "ko": "개요",
-                  "translation_ru": "план, краткое содержание"
-                },
-                {
-                  "ko": "처음",
-                  "translation_ru": "начало"
-                },
-                {
-                  "ko": "가운데",
-                  "translation_ru": "середина"
-                },
-                {
-                  "ko": "끝",
-                  "translation_ru": "конец"
-                }
-              ]
-            },
-            {
-              "title": "내용",
-              "title_ru": "Что написать",
-              "items": [
-                {
-                  "ko": "소개하다",
-                  "translation_ru": "представлять"
-                },
-                {
-                  "ko": "고향",
-                  "translation_ru": "родина, родные места"
-                },
-                {
-                  "ko": "돌아가다",
-                  "translation_ru": "возвращаться"
-                },
-                {
-                  "ko": "계획",
-                  "translation_ru": "план"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "자기소개서",
+                "translation_ru": "самопредставление"
+              },
+              {
+                "ko": "개요",
+                "translation_ru": "план, краткое содержание"
+              },
+              {
+                "ko": "처음",
+                "translation_ru": "начало"
+              },
+              {
+                "ko": "가운데",
+                "translation_ru": "середина"
+              },
+              {
+                "ko": "끝",
+                "translation_ru": "конец"
+              },
+              {
+                "ko": "소개하다",
+                "translation_ru": "представлять"
+              },
+              {
+                "ko": "고향",
+                "translation_ru": "родина, родные места"
+              },
+              {
+                "ko": "돌아가다",
+                "translation_ru": "возвращаться"
+              },
+              {
+                "ko": "계획",
+                "translation_ru": "план"
+              }
+            ]
+          }
         },
         {
           "type": "writing_exercise",

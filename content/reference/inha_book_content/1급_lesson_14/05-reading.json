@@ -9,6 +9,45 @@
       "source_photo": "IMG_1158",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-library-guide",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-library-guide",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "안내",
+              "translation_ru": "информация, инструкция, объявление"
+            },
+            {
+              "ko": "단",
+              "translation_ru": "но, однако, при этом (оговорка)"
+            },
+            {
+              "ko": "휴학생",
+              "translation_ru": "студент в академическом отпуске"
+            },
+            {
+              "ko": "열람실",
+              "translation_ru": "читальный зал"
+            },
+            {
+              "ko": "유의 사항",
+              "translation_ru": "примечания, на что обратить внимание"
+            },
+            {
+              "ko": "떠들다",
+              "translation_ru": "шуметь, громко разговаривать"
+            },
+            {
+              "ko": "규칙",
+              "translation_ru": "правило"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-library-guide",
           "toc_section": "읽고 말하기",
@@ -95,45 +134,6 @@
               "kind": "open",
               "prompt": "여러분은 도서관을 이용해 봤습니까? 무슨 규칙을 지켜야 합니까?",
               "prompt_ru": "Пользовались ли вы библиотекой? Какие правила нужно соблюдать?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-library-guide",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-library-guide",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "안내",
-              "translation_ru": "информация, инструкция, объявление"
-            },
-            {
-              "ko": "단",
-              "translation_ru": "но, однако, при этом (оговорка)"
-            },
-            {
-              "ko": "휴학생",
-              "translation_ru": "студент в академическом отпуске"
-            },
-            {
-              "ko": "열람실",
-              "translation_ru": "читальный зал"
-            },
-            {
-              "ko": "유의 사항",
-              "translation_ru": "примечания, на что обратить внимание"
-            },
-            {
-              "ko": "떠들다",
-              "translation_ru": "шуметь, громко разговаривать"
-            },
-            {
-              "ko": "규칙",
-              "translation_ru": "правило"
             }
           ]
         }

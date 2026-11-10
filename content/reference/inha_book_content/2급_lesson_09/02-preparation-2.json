@@ -9,6 +9,205 @@
       "source_photo": "IMG_0920",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-clinic-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "진찰실",
+              "translation_ru": "кабинет врача"
+            },
+            {
+              "ko": "꽃가루",
+              "translation_ru": "пыльца"
+            },
+            {
+              "ko": "알레르기",
+              "translation_ru": "аллергия"
+            },
+            {
+              "ko": "가렵다",
+              "translation_ru": "чесаться, зудеть"
+            },
+            {
+              "ko": "따갑다",
+              "translation_ru": "щипать, колоть"
+            },
+            {
+              "ko": "치료하다",
+              "translation_ru": "лечить"
+            },
+            {
+              "ko": "환자",
+              "translation_ru": "пациент"
+            },
+            {
+              "ko": "치료실",
+              "translation_ru": "процедурный кабинет"
+            },
+            {
+              "ko": "힘",
+              "translation_ru": "сила"
+            },
+            {
+              "ko": "소설가",
+              "translation_ru": "писатель-прозаик"
+            },
+            {
+              "ko": "소화",
+              "translation_ru": "пищеварение"
+            },
+            {
+              "ko": "소화제",
+              "translation_ru": "средство для пищеварения"
+            },
+            {
+              "ko": "나른하다",
+              "translation_ru": "быть вялым, расслабленным"
+            },
+            {
+              "ko": "스트레칭",
+              "translation_ru": "растяжка"
+            },
+            {
+              "ko": "어지럽다",
+              "translation_ru": "кружиться (о голове)"
+            },
+            {
+              "ko": "장학금",
+              "translation_ru": "стипендия"
+            },
+            {
+              "ko": "시인",
+              "translation_ru": "поэт"
+            },
+            {
+              "ko": "사장",
+              "translation_ru": "директор, владелец компании"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "열",
+                "translation_ru": "температура, жар"
+              },
+              {
+                "ko": "기침",
+                "translation_ru": "кашель"
+              },
+              {
+                "ko": "콧물",
+                "translation_ru": "насморк"
+              },
+              {
+                "ko": "재채기",
+                "translation_ru": "чихание"
+              },
+              {
+                "ko": "두통",
+                "translation_ru": "головная боль"
+              },
+              {
+                "ko": "복통",
+                "translation_ru": "боль в животе"
+              },
+              {
+                "ko": "설사",
+                "translation_ru": "диарея"
+              },
+              {
+                "ko": "배탈",
+                "translation_ru": "расстройство желудка"
+              },
+              {
+                "ko": "소화불량",
+                "translation_ru": "расстройство желудка"
+              },
+              {
+                "ko": "토하다",
+                "translation_ru": "тошнить"
+              },
+              {
+                "ko": "쑤시다",
+                "translation_ru": "ныть (о боли)"
+              },
+              {
+                "ko": "의사",
+                "translation_ru": "врач"
+              },
+              {
+                "ko": "간호사",
+                "translation_ru": "медсестра"
+              },
+              {
+                "ko": "약사",
+                "translation_ru": "фармацевт"
+              },
+              {
+                "ko": "처방전",
+                "translation_ru": "рецепт"
+              },
+              {
+                "ko": "진찰",
+                "translation_ru": "осмотр"
+              },
+              {
+                "ko": "치료",
+                "translation_ru": "лечение"
+              },
+              {
+                "ko": "수술",
+                "translation_ru": "операция"
+              },
+              {
+                "ko": "입원하다",
+                "translation_ru": "ложиться в больницу"
+              },
+              {
+                "ko": "부러지다",
+                "translation_ru": "ломаться"
+              },
+              {
+                "ko": "다치다",
+                "translation_ru": "получить травму"
+              },
+              {
+                "ko": "뼈",
+                "translation_ru": "кость"
+              },
+              {
+                "ko": "근육",
+                "translation_ru": "мышца"
+              },
+              {
+                "ko": "심장",
+                "translation_ru": "сердце"
+              },
+              {
+                "ko": "피부",
+                "translation_ru": "кожа"
+              },
+              {
+                "ko": "심해지다",
+                "translation_ru": "усугубляться"
+              },
+              {
+                "ko": "담임선생님",
+                "translation_ru": "классный руководитель"
+              },
+              {
+                "ko": "종합",
+                "translation_ru": "комплекс, общий"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-clinic-dialogue",
           "toc_section": "준비하기 2",
@@ -107,245 +306,6 @@
               "kind": "phrase",
               "text": "모시고 가다",
               "translation_ru": "сопровождать (старшего, уважаемого человека) — «할아버지를 모시고 치과에 갈 거예요» («поведу дедушку в стоматологию»)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-clinic-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "진찰실",
-              "translation_ru": "кабинет врача",
-              "group": "병원"
-            },
-            {
-              "ko": "꽃가루",
-              "translation_ru": "пыльца",
-              "group": "증상"
-            },
-            {
-              "ko": "알레르기",
-              "translation_ru": "аллергия",
-              "group": "증상"
-            },
-            {
-              "ko": "가렵다",
-              "translation_ru": "чесаться, зудеть",
-              "group": "증상"
-            },
-            {
-              "ko": "따갑다",
-              "translation_ru": "щипать, колоть",
-              "group": "증상"
-            },
-            {
-              "ko": "치료하다",
-              "translation_ru": "лечить",
-              "group": "병원"
-            },
-            {
-              "ko": "환자",
-              "translation_ru": "пациент",
-              "group": "병원"
-            },
-            {
-              "ko": "치료실",
-              "translation_ru": "процедурный кабинет",
-              "group": "병원"
-            },
-            {
-              "ko": "힘",
-              "translation_ru": "сила",
-              "group": "몸"
-            },
-            {
-              "ko": "소설가",
-              "translation_ru": "писатель-прозаик",
-              "group": "직업"
-            },
-            {
-              "ko": "소화",
-              "translation_ru": "пищеварение",
-              "group": "증상"
-            },
-            {
-              "ko": "소화제",
-              "translation_ru": "средство для пищеварения",
-              "group": "증상"
-            },
-            {
-              "ko": "나른하다",
-              "translation_ru": "быть вялым, расслабленным",
-              "group": "증상"
-            },
-            {
-              "ko": "스트레칭",
-              "translation_ru": "растяжка",
-              "group": "몸"
-            },
-            {
-              "ko": "어지럽다",
-              "translation_ru": "кружиться (о голове)",
-              "group": "증상"
-            },
-            {
-              "ko": "장학금",
-              "translation_ru": "стипендия",
-              "group": "직업"
-            },
-            {
-              "ko": "시인",
-              "translation_ru": "поэт",
-              "group": "직업"
-            },
-            {
-              "ko": "사장",
-              "translation_ru": "директор, владелец компании",
-              "group": "직업"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "증상",
-              "title_ru": "Симптомы",
-              "items": [
-                {
-                  "ko": "열",
-                  "translation_ru": "температура, жар"
-                },
-                {
-                  "ko": "기침",
-                  "translation_ru": "кашель"
-                },
-                {
-                  "ko": "콧물",
-                  "translation_ru": "насморк"
-                },
-                {
-                  "ko": "재채기",
-                  "translation_ru": "чихание"
-                },
-                {
-                  "ko": "두통",
-                  "translation_ru": "головная боль"
-                },
-                {
-                  "ko": "복통",
-                  "translation_ru": "боль в животе"
-                },
-                {
-                  "ko": "설사",
-                  "translation_ru": "диарея"
-                },
-                {
-                  "ko": "배탈",
-                  "translation_ru": "расстройство желудка"
-                },
-                {
-                  "ko": "소화불량",
-                  "translation_ru": "расстройство желудка"
-                },
-                {
-                  "ko": "토하다",
-                  "translation_ru": "тошнить"
-                },
-                {
-                  "ko": "쑤시다",
-                  "translation_ru": "ныть (о боли)"
-                }
-              ]
-            },
-            {
-              "title": "병원",
-              "title_ru": "Врач и пациент",
-              "items": [
-                {
-                  "ko": "의사",
-                  "translation_ru": "врач"
-                },
-                {
-                  "ko": "간호사",
-                  "translation_ru": "медсестра"
-                },
-                {
-                  "ko": "약사",
-                  "translation_ru": "фармацевт"
-                },
-                {
-                  "ko": "처방전",
-                  "translation_ru": "рецепт"
-                },
-                {
-                  "ko": "진찰",
-                  "translation_ru": "осмотр"
-                },
-                {
-                  "ko": "치료",
-                  "translation_ru": "лечение"
-                },
-                {
-                  "ko": "수술",
-                  "translation_ru": "операция"
-                },
-                {
-                  "ko": "입원하다",
-                  "translation_ru": "ложиться в больницу"
-                }
-              ]
-            },
-            {
-              "title": "몸",
-              "title_ru": "Тело",
-              "items": [
-                {
-                  "ko": "부러지다",
-                  "translation_ru": "ломаться"
-                },
-                {
-                  "ko": "다치다",
-                  "translation_ru": "получить травму"
-                },
-                {
-                  "ko": "뼈",
-                  "translation_ru": "кость"
-                },
-                {
-                  "ko": "근육",
-                  "translation_ru": "мышца"
-                },
-                {
-                  "ko": "심장",
-                  "translation_ru": "сердце"
-                },
-                {
-                  "ko": "피부",
-                  "translation_ru": "кожа"
-                },
-                {
-                  "ko": "심해지다",
-                  "translation_ru": "усугубляться"
-                }
-              ]
-            },
-            {
-              "title": "직업",
-              "title_ru": "Люди и профессии",
-              "items": [
-                {
-                  "ko": "담임선생님",
-                  "translation_ru": "классный руководитель"
-                },
-                {
-                  "ko": "종합",
-                  "translation_ru": "комплекс, общий"
-                }
-              ]
             }
           ]
         }

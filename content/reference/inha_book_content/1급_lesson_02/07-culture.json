@@ -9,36 +9,6 @@
       "source_photo": "IMG_0976",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-address",
-          "toc_section": "문화 이해하기",
-          "title": "한국의 주소",
-          "title_ru": "Адреса в Корее",
-          "illustration": {
-            "storage_path": "lesson_2/illustration_5_korean_address_v2.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
-          "intro_prompt_ru": "Что это? Расскажите.",
-          "lines": [
-            {
-              "text": "인하대학교 주소: 인천시 남구 인하로 100\n(인천시 — 도시, 남구 — 구, 인하로 — 도로, 100 — 건물 번호)"
-            },
-            {
-              "text": "1) 한국의 주소는 어떻습니까?",
-              "translation_ru": "Как выглядят адреса в Корее?"
-            },
-            {
-              "text": "2) 여러분 나라의 주소는 어떻습니까? 이야기해 보십시오.",
-              "translation_ru": "Как выглядят адреса в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -66,6 +36,36 @@
             {
               "ko": "주소",
               "translation_ru": "адрес"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-address",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 주소",
+          "title_ru": "Адреса в Корее",
+          "illustration": {
+            "storage_path": "lesson_2/illustration_5_korean_address_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите.",
+          "lines": [
+            {
+              "text": "인하대학교 주소: 인천시 남구 인하로 100\n(인천시 — 도시, 남구 — 구, 인하로 — 도로, 100 — 건물 번호)"
+            },
+            {
+              "text": "1) 한국의 주소는 어떻습니까?",
+              "translation_ru": "Как выглядят адреса в Корее?"
+            },
+            {
+              "text": "2) 여러분 나라의 주소는 어떻습니까? 이야기해 보십시오.",
+              "translation_ru": "Как выглядят адреса в вашей стране? Расскажите."
             }
           ]
         },

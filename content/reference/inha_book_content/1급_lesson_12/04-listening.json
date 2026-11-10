@@ -9,6 +9,25 @@
       "source_photo": "IMG_1126",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-decline",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "글쎄",
+              "translation_ru": "ну, как сказать… (неуверенный ответ)"
+            },
+            {
+              "ko": "나중",
+              "translation_ru": "позже, потом"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-decline",
           "toc_section": "듣고 말하기",
@@ -95,25 +114,6 @@
           ],
           "followup": "약속을 거절하고 싶으면 어떻게 말합니까? 이야기를 해 보십시오.",
           "followup_ru": "Как вы отказываетесь от договорённости? Расскажите."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-decline",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "글쎄",
-              "translation_ru": "ну, как сказать… (неуверенный ответ)"
-            },
-            {
-              "ko": "나중",
-              "translation_ru": "позже, потом"
-            }
-          ]
         }
       ]
     }

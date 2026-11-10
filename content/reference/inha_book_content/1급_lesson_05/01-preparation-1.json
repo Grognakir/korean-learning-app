@@ -9,6 +9,73 @@
       "source_photo": "IMG_1009",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-daily-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "시",
+              "translation_ru": "час"
+            },
+            {
+              "ko": "분",
+              "translation_ru": "минута"
+            },
+            {
+              "ko": "하루",
+              "translation_ru": "один день, сутки"
+            },
+            {
+              "ko": "일과",
+              "translation_ru": "распорядок дня, дела на день"
+            },
+            {
+              "ko": "정각",
+              "translation_ru": "ровно (о времени)"
+            },
+            {
+              "ko": "반",
+              "translation_ru": "половина (N시 반 — полвторого и т.п.)"
+            },
+            {
+              "ko": "전",
+              "translation_ru": "до, перед; раньше"
+            },
+            {
+              "ko": "받다",
+              "translation_ru": "получать; принимать (звонок)"
+            },
+            {
+              "ko": "자전거",
+              "translation_ru": "велосипед"
+            },
+            {
+              "ko": "날씨",
+              "translation_ru": "погода"
+            },
+            {
+              "ko": "수박",
+              "translation_ru": "арбуз"
+            },
+            {
+              "ko": "소설책",
+              "translation_ru": "роман, художественная книга"
+            },
+            {
+              "ko": "자정",
+              "translation_ru": "полночь"
+            },
+            {
+              "ko": "정오",
+              "translation_ru": "полдень"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-daily-dialogue",
           "toc_section": "준비하기 1",
@@ -84,73 +151,6 @@
               "emphasized": [
                 "가요"
               ]
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-daily-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "시",
-              "translation_ru": "час"
-            },
-            {
-              "ko": "분",
-              "translation_ru": "минута"
-            },
-            {
-              "ko": "하루",
-              "translation_ru": "один день, сутки"
-            },
-            {
-              "ko": "일과",
-              "translation_ru": "распорядок дня, дела на день"
-            },
-            {
-              "ko": "정각",
-              "translation_ru": "ровно (о времени)"
-            },
-            {
-              "ko": "반",
-              "translation_ru": "половина (N시 반 — полвторого и т.п.)"
-            },
-            {
-              "ko": "전",
-              "translation_ru": "до, перед; раньше"
-            },
-            {
-              "ko": "받다",
-              "translation_ru": "получать; принимать (звонок)"
-            },
-            {
-              "ko": "자전거",
-              "translation_ru": "велосипед"
-            },
-            {
-              "ko": "날씨",
-              "translation_ru": "погода"
-            },
-            {
-              "ko": "수박",
-              "translation_ru": "арбуз"
-            },
-            {
-              "ko": "소설책",
-              "translation_ru": "роман, художественная книга"
-            },
-            {
-              "ko": "자정",
-              "translation_ru": "полночь"
-            },
-            {
-              "ko": "정오",
-              "translation_ru": "полдень"
             }
           ]
         }

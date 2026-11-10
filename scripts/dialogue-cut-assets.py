@@ -6,8 +6,8 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-ART = ROOT / 'content/reference/art-sources/dialogue'
-STICKER = ROOT / 'content/reference/art-sources/lesson-sticker/jia-call'
+ART = ROOT / 'content/reference/art-sources/solomon-os/dialogue'
+STICKER = ROOT / 'content/reference/art-sources/solomon-os/lesson-sticker/jia-call'
 PUBLIC = ROOT / 'public/images'
 LANCZOS = Image.Resampling.LANCZOS
 JIA = ['idle', 'call-annoyed', 'call-talk', 'call-aside', 'call-smirk', 'happy', 'angry', 'facepalm']

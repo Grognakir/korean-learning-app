@@ -9,6 +9,21 @@
       "source_photo": "IMG_1425",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-summary",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "예식장",
+              "translation_ru": "зал для свадебных церемоний"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -31,7 +46,10 @@
           "toc_section": "말하기",
           "title": "청량리역으로 가는 방법",
           "title_ru": "Как добраться до станции Чхонняннни",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_11/illustration_6_speaking_route.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "passage",
           "section": "말하기",
           "exercise_ref": null,
@@ -110,21 +128,6 @@
             },
             {
               "text": "3) 어디에서 만날 겁니까?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-summary",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "예식장",
-              "translation_ru": "зал для свадебных церемоний"
             }
           ]
         }

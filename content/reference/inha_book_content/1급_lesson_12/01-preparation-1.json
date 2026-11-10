@@ -9,6 +9,53 @@
       "source_photo": "IMG_1115",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-appointment-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "스터디",
+              "translation_ru": "группа для совместной учёбы"
+            },
+            {
+              "ko": "감기",
+              "translation_ru": "простуда"
+            },
+            {
+              "ko": "걸리다",
+              "translation_ru": "заболеть (감기에 걸리다); занимать (о времени)"
+            },
+            {
+              "ko": "늦잠",
+              "translation_ru": "поздний подъём, сон допоздна"
+            },
+            {
+              "ko": "약속",
+              "translation_ru": "договорённость, встреча по договорённости"
+            },
+            {
+              "ko": "휴일",
+              "translation_ru": "выходной, нерабочий день"
+            },
+            {
+              "ko": "복잡하다",
+              "translation_ru": "быть сложным, многолюдным"
+            },
+            {
+              "ko": "운전하다",
+              "translation_ru": "водить (машину)"
+            },
+            {
+              "ko": "운전면허",
+              "translation_ru": "водительские права"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-appointment-dialogue",
           "toc_section": "준비하기 1",
@@ -69,53 +116,6 @@
               "emphasized": [
                 "만납시다"
               ]
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-appointment-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "스터디",
-              "translation_ru": "группа для совместной учёбы"
-            },
-            {
-              "ko": "감기",
-              "translation_ru": "простуда"
-            },
-            {
-              "ko": "걸리다",
-              "translation_ru": "заболеть (감기에 걸리다); занимать (о времени)"
-            },
-            {
-              "ko": "늦잠",
-              "translation_ru": "поздний подъём, сон допоздна"
-            },
-            {
-              "ko": "약속",
-              "translation_ru": "договорённость, встреча по договорённости"
-            },
-            {
-              "ko": "휴일",
-              "translation_ru": "выходной, нерабочий день"
-            },
-            {
-              "ko": "복잡하다",
-              "translation_ru": "быть сложным, многолюдным"
-            },
-            {
-              "ko": "운전하다",
-              "translation_ru": "водить (машину)"
-            },
-            {
-              "ko": "운전면허",
-              "translation_ru": "водительские права"
             }
           ]
         }

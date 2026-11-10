@@ -9,6 +9,53 @@
       "source_photo": "IMG_1095",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-hometown-food",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "샐러드",
+              "translation_ru": "салат"
+            },
+            {
+              "ko": "재료",
+              "translation_ru": "ингредиент, материал"
+            },
+            {
+              "ko": "치즈",
+              "translation_ru": "сыр"
+            },
+            {
+              "ko": "계란",
+              "translation_ru": "яйцо (куриное)"
+            },
+            {
+              "ko": "필요하다",
+              "translation_ru": "быть нужным, необходимым"
+            },
+            {
+              "ko": "고기",
+              "translation_ru": "мясо"
+            },
+            {
+              "ko": "밀가루",
+              "translation_ru": "мука"
+            },
+            {
+              "ko": "맛",
+              "translation_ru": "вкус"
+            },
+            {
+              "ko": "달다",
+              "translation_ru": "быть сладким"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-hometown-food",
           "toc_section": "듣고 말하기",
@@ -95,53 +142,6 @@
           ],
           "followup": "여러분은 음식 축제에서 무슨 음식을 만들고 싶습니까?",
           "followup_ru": "Какое блюдо вы хотели бы приготовить на фестивале еды?"
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-hometown-food",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "샐러드",
-              "translation_ru": "салат"
-            },
-            {
-              "ko": "재료",
-              "translation_ru": "ингредиент, материал"
-            },
-            {
-              "ko": "치즈",
-              "translation_ru": "сыр"
-            },
-            {
-              "ko": "계란",
-              "translation_ru": "яйцо (куриное)"
-            },
-            {
-              "ko": "필요하다",
-              "translation_ru": "быть нужным, необходимым"
-            },
-            {
-              "ko": "고기",
-              "translation_ru": "мясо"
-            },
-            {
-              "ko": "밀가루",
-              "translation_ru": "мука"
-            },
-            {
-              "ko": "맛",
-              "translation_ru": "вкус"
-            },
-            {
-              "ko": "달다",
-              "translation_ru": "быть сладким"
-            }
-          ]
         }
       ]
     }

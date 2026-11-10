@@ -9,6 +9,79 @@
       "source_photo": "IMG_0763",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "종류",
+              "translation_ru": "вид, тип"
+            },
+            {
+              "ko": "결정",
+              "translation_ru": "решение"
+            },
+            {
+              "ko": "추천",
+              "translation_ru": "рекомендация"
+            },
+            {
+              "ko": "발",
+              "translation_ru": "ступня, нога"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "신발 가게",
+                "translation_ru": "магазин обуви"
+              },
+              {
+                "ko": "세일",
+                "translation_ru": "распродажа"
+              },
+              {
+                "ko": "마트",
+                "translation_ru": "супермаркет"
+              },
+              {
+                "ko": "운동화",
+                "translation_ru": "кроссовки"
+              },
+              {
+                "ko": "등산화",
+                "translation_ru": "горные ботинки"
+              },
+              {
+                "ko": "무겁다",
+                "translation_ru": "тяжёлый"
+              },
+              {
+                "ko": "가볍다",
+                "translation_ru": "лёгкий"
+              },
+              {
+                "ko": "튼튼하다",
+                "translation_ru": "прочный"
+              },
+              {
+                "ko": "조건",
+                "translation_ru": "условие"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "대신",
+                "translation_ru": "вместо, взамен"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -22,20 +95,6 @@
           "lines": [
             {
               "text": "자르갈은 운동화를 사려고 합니다. 하지만 종류가 많아서 결정할 수가 없습니다. 그래서 아멜리에게 추천을 부탁했습니다. 자르갈은 등산을 할 때 신을 수 있는 신발을 찾고 있습니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "종류",
-              "translation_ru": "вид, тип"
-            },
-            {
-              "ko": "결정",
-              "translation_ru": "решение"
-            },
-            {
-              "ko": "추천",
-              "translation_ru": "рекомендация"
             }
           ]
         },
@@ -104,12 +163,6 @@
                 "기는요"
               ]
             }
-          ],
-          "vocab": [
-            {
-              "ko": "대신",
-              "translation_ru": "вместо, взамен"
-            }
           ]
         },
         {
@@ -131,81 +184,6 @@
             },
             {
               "text": "3) 친구에게 추천을 부탁해 보십시오."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "종류",
-              "translation_ru": "вид, тип",
-              "group": "선택"
-            },
-            {
-              "ko": "결정",
-              "translation_ru": "решение",
-              "group": "선택"
-            },
-            {
-              "ko": "추천",
-              "translation_ru": "рекомендация",
-              "group": "선택"
-            },
-            {
-              "ko": "발",
-              "translation_ru": "ступня, нога",
-              "group": "선택"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "선택",
-              "title_ru": "Выбор",
-              "items": [
-                {
-                  "ko": "신발 가게",
-                  "translation_ru": "магазин обуви"
-                },
-                {
-                  "ko": "세일",
-                  "translation_ru": "распродажа"
-                },
-                {
-                  "ko": "마트",
-                  "translation_ru": "супермаркет"
-                },
-                {
-                  "ko": "운동화",
-                  "translation_ru": "кроссовки"
-                },
-                {
-                  "ko": "등산화",
-                  "translation_ru": "горные ботинки"
-                },
-                {
-                  "ko": "무겁다",
-                  "translation_ru": "тяжёлый"
-                },
-                {
-                  "ko": "가볍다",
-                  "translation_ru": "лёгкий"
-                },
-                {
-                  "ko": "튼튼하다",
-                  "translation_ru": "прочный"
-                },
-                {
-                  "ko": "조건",
-                  "translation_ru": "условие"
-                }
-              ]
             }
           ]
         }

@@ -43,24 +43,47 @@ function vocabByRelatedText(
   return map;
 }
 
+/** Блоки, внутри которых показываются привязанные подсказки (hint). */
+function hintHostIds(blocks: Block[]): Set<string> {
+  const ids = new Set<string>();
+  for (const block of blocks) {
+    if (
+      (block.type === "text" || block.type === "comprehension_exercise") &&
+      block.id
+    )
+      ids.add(block.id);
+  }
+  return ids;
+}
+
+/** Все слова раздела: основные и дополнительные (extra_words)
+ * из каждого vocab_list.
+ * Основные идут первыми, поэтому при совпадении `ko` побеждает основной перевод. */
 function allPageVocab(blocks: Block[]): VocabItem[] {
-  return blocks
-    .filter((block): block is VocabListBlock => block.type === "vocab_list")
-    .flatMap((block) => block.items);
+  const lists = blocks.filter(
+    (block): block is VocabListBlock => block.type === "vocab_list",
+  );
+  return uniqueVocab([
+    ...lists.flatMap((block) => block.items),
+    ...lists.flatMap((block) => Object.values(block.extra_words ?? {}).flat()),
+  ]);
 }
 
 function hintsByRelatedText(
   blocks: Block[],
   textIds: Set<string>,
-): Map<string, HintBlock> {
-  const map = new Map<string, HintBlock>();
+): Map<string, HintBlock[]> {
+  const map = new Map<string, HintBlock[]>();
   for (const block of blocks) {
     if (
       block.type === "hint" &&
       block.related_text_ref &&
       textIds.has(block.related_text_ref)
     ) {
-      map.set(block.related_text_ref, block);
+      map.set(block.related_text_ref, [
+        ...(map.get(block.related_text_ref) ?? []),
+        block,
+      ]);
     }
   }
   return map;
@@ -76,6 +99,18 @@ function blockTexts(block: Block): string[] {
       ...block.items.flatMap((item) => item.template ?? []),
       ...block.items.flatMap((item) => item.given),
     ];
+  }
+  if (block.type === "comprehension_exercise") {
+    return [
+      block.warmup?.prompt,
+      ...(block.transcript?.lines.map((line) => line.text) ?? []),
+      block.group_prompt,
+      ...block.questions.flatMap((question) => [
+        question.prompt,
+        ...(question.choices ?? []),
+      ]),
+      block.followup,
+    ].filter((text): text is string => Boolean(text));
   }
   return [];
 }
@@ -100,12 +135,23 @@ function vocabForEachBlock(
         ? [
             ...(block.id ? (vocabMap.get(block.id) ?? []) : []),
             ...(block.vocab ?? []),
+            ...pageVocab,
           ]
         : block.type === "grammar_exercise"
-          ? [...pageVocab, ...(block.example.vocab ?? [])]
+          ? [
+              ...pageVocab,
+              ...(block.example.vocab ?? []),
+              ...(block.vocab ?? []),
+            ]
           : block.type === "grammar_point"
             ? [...pageVocab, ...(block.vocab ?? [])]
-            : [],
+            : block.type === "comprehension_exercise"
+              ? [
+                  ...pageVocab,
+                  ...(block.transcript?.vocab ?? []),
+                  ...(block.vocab ?? []),
+                ]
+              : [],
     );
     const claimed = new Set<string>();
 
@@ -171,7 +217,8 @@ export function PageBlocks({
 }) {
   const textIds = textIdsOnPage(blocks);
   const vocabMap = vocabByRelatedText(blocks, textIds);
-  const hintMap = hintsByRelatedText(blocks, textIds);
+  const hintHosts = hintHostIds(blocks);
+  const hintMap = hintsByRelatedText(blocks, hintHosts);
   const pageVocab = allPageVocab(blocks);
   const blockVocab = vocabForEachBlock(blocks, pageVocab, vocabMap);
   const exerciseTitleIndex = exerciseTitleOccurrence(blocks);
@@ -199,14 +246,14 @@ export function PageBlocks({
                 id={block.id}
                 block={block}
                 vocabItems={blockVocab[i]}
-                relatedHint={block.id ? hintMap.get(block.id) : undefined}
+                relatedHints={block.id ? hintMap.get(block.id) : undefined}
                 titleSuffix={exerciseTitleIndex[i]}
               />
             );
           case "vocab_list":
             return <VocabList key={i} id={block.id} block={block} />;
           case "hint":
-            if (block.related_text_ref && textIds.has(block.related_text_ref)) {
+            if (block.related_text_ref && hintHosts.has(block.related_text_ref)) {
               return null;
             }
             return <Hint key={i} id={block.id} block={block} />;
@@ -244,7 +291,15 @@ export function PageBlocks({
             );
           case "comprehension_exercise":
             return (
-              <ComprehensionExercise key={i} id={block.id} block={block} />
+              <ComprehensionExercise
+                key={i}
+                id={block.id}
+                block={block}
+                vocabItems={blockVocab[i]}
+                relatedHints={block.id ? hintMap.get(block.id) : undefined}
+                textbookSlug={textbookSlug}
+                lessonNumber={lessonNumber}
+              />
             );
           case "writing_exercise":
             return <WritingExercise key={i} id={block.id} block={block} textbookSlug={textbookSlug} lessonNumber={lessonNumber} />;

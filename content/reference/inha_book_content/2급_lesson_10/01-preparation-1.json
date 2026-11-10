@@ -9,6 +9,195 @@
       "source_photo": "IMG_1289",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-hair-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "헤어스타일",
+              "translation_ru": "прическа"
+            },
+            {
+              "ko": "미용실",
+              "translation_ru": "парикмахерская, салон красоты"
+            },
+            {
+              "ko": "스타일",
+              "translation_ru": "стиль"
+            },
+            {
+              "ko": "단발머리",
+              "translation_ru": "короткая стрижка (каре)"
+            },
+            {
+              "ko": "여배우",
+              "translation_ru": "актриса"
+            },
+            {
+              "ko": "갸름하다",
+              "translation_ru": "вытянутый, продолговатый (о лице)"
+            },
+            {
+              "ko": "앞머리",
+              "translation_ru": "чёлка"
+            },
+            {
+              "ko": "달리기",
+              "translation_ru": "бег"
+            },
+            {
+              "ko": "천사",
+              "translation_ru": "ангел"
+            },
+            {
+              "ko": "날씬하다",
+              "translation_ru": "стройный"
+            },
+            {
+              "ko": "통통하다",
+              "translation_ru": "пухлый, полноватый"
+            },
+            {
+              "ko": "잘생기다",
+              "translation_ru": "быть красивым, симпатичным (о внешности)"
+            },
+            {
+              "ko": "입술",
+              "translation_ru": "губы"
+            },
+            {
+              "ko": "빨갛다",
+              "translation_ru": "красный"
+            },
+            {
+              "ko": "앵두",
+              "translation_ru": "вишня-ындо (корейская вишня)"
+            },
+            {
+              "ko": "머리카락",
+              "translation_ru": "волосы"
+            },
+            {
+              "ko": "부드럽다",
+              "translation_ru": "мягкий, нежный"
+            },
+            {
+              "ko": "비단",
+              "translation_ru": "шёлк"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "생머리",
+                "translation_ru": "прямые волосы (без завивки)"
+              },
+              {
+                "ko": "파마머리",
+                "translation_ru": "завитые волосы"
+              },
+              {
+                "ko": "파마",
+                "translation_ru": "перманент, химзавивка"
+              },
+              {
+                "ko": "자르다",
+                "translation_ru": "стричь, резать"
+              },
+              {
+                "ko": "기르다",
+                "translation_ru": "отращивать, растить"
+              },
+              {
+                "ko": "달걀형 얼굴",
+                "translation_ru": "овальное лицо"
+              },
+              {
+                "ko": "동그랗다",
+                "translation_ru": "круглый"
+              },
+              {
+                "ko": "눈",
+                "translation_ru": "глаз"
+              },
+              {
+                "ko": "눈썹",
+                "translation_ru": "брови"
+              },
+              {
+                "ko": "짙다",
+                "translation_ru": "густой, тёмный, насыщенный"
+              },
+              {
+                "ko": "코",
+                "translation_ru": "нос"
+              },
+              {
+                "ko": "높다",
+                "translation_ru": "высокий"
+              },
+              {
+                "ko": "귀엽다",
+                "translation_ru": "милый, симпатичный"
+              },
+              {
+                "ko": "강하다",
+                "translation_ru": "сильный, резкий, жёсткий"
+              },
+              {
+                "ko": "마르다",
+                "translation_ru": "худой"
+              },
+              {
+                "ko": "서양인",
+                "translation_ru": "европеец, человек с Запада"
+              },
+              {
+                "ko": "비슷하다",
+                "translation_ru": "быть похожим"
+              },
+              {
+                "ko": "생기다",
+                "translation_ru": "иметь внешность, выглядеть"
+              }
+            ],
+            "grammar_vocab": [
+              {
+                "ko": "치마",
+                "translation_ru": "юбка"
+              },
+              {
+                "ko": "디자인",
+                "translation_ru": "дизайн"
+              },
+              {
+                "ko": "어렸",
+                "translation_ru": "форма от 어리다 (быть молодым)"
+              },
+              {
+                "ko": "잘하",
+                "translation_ru": "форма от 잘하다 (хорошо делать, уметь)"
+              },
+              {
+                "ko": "선수",
+                "translation_ru": "спортсмен, игрок"
+              },
+              {
+                "ko": "미소",
+                "translation_ru": "улыбка"
+              },
+              {
+                "ko": "짓",
+                "translation_ru": "форма от 짓다 (делать улыбку, выражение лица)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-hair-dialogue",
           "toc_section": "준비하기 1",
@@ -69,194 +258,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-hair-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "헤어스타일",
-              "translation_ru": "прическа",
-              "group": "머리"
-            },
-            {
-              "ko": "미용실",
-              "translation_ru": "парикмахерская, салон красоты",
-              "group": "머리"
-            },
-            {
-              "ko": "스타일",
-              "translation_ru": "стиль",
-              "group": "머리"
-            },
-            {
-              "ko": "단발머리",
-              "translation_ru": "короткая стрижка (каре)",
-              "group": "머리"
-            },
-            {
-              "ko": "여배우",
-              "translation_ru": "актриса",
-              "group": "인상"
-            },
-            {
-              "ko": "갸름하다",
-              "translation_ru": "вытянутый, продолговатый (о лице)",
-              "group": "얼굴"
-            },
-            {
-              "ko": "앞머리",
-              "translation_ru": "чёлка",
-              "group": "머리"
-            },
-            {
-              "ko": "달리기",
-              "translation_ru": "бег"
-            },
-            {
-              "ko": "천사",
-              "translation_ru": "ангел"
-            },
-            {
-              "ko": "날씬하다",
-              "translation_ru": "стройный",
-              "group": "인상"
-            },
-            {
-              "ko": "통통하다",
-              "translation_ru": "пухлый, полноватый",
-              "group": "인상"
-            },
-            {
-              "ko": "잘생기다",
-              "translation_ru": "быть красивым, симпатичным (о внешности)",
-              "group": "인상"
-            },
-            {
-              "ko": "입술",
-              "translation_ru": "губы",
-              "group": "얼굴"
-            },
-            {
-              "ko": "빨갛다",
-              "translation_ru": "красный",
-              "group": "얼굴"
-            },
-            {
-              "ko": "앵두",
-              "translation_ru": "вишня-ындо (корейская вишня)"
-            },
-            {
-              "ko": "머리카락",
-              "translation_ru": "волосы",
-              "group": "머리"
-            },
-            {
-              "ko": "부드럽다",
-              "translation_ru": "мягкий, нежный"
-            },
-            {
-              "ko": "비단",
-              "translation_ru": "шёлк"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "머리",
-              "title_ru": "Причёски",
-              "items": [
-                {
-                  "ko": "생머리",
-                  "translation_ru": "прямые волосы (без завивки)"
-                },
-                {
-                  "ko": "파마머리",
-                  "translation_ru": "завитые волосы"
-                },
-                {
-                  "ko": "파마",
-                  "translation_ru": "перманент, химзавивка"
-                },
-                {
-                  "ko": "자르다",
-                  "translation_ru": "стричь, резать"
-                },
-                {
-                  "ko": "기르다",
-                  "translation_ru": "отращивать, растить"
-                }
-              ]
-            },
-            {
-              "title": "얼굴",
-              "title_ru": "Лицо",
-              "items": [
-                {
-                  "ko": "달걀형 얼굴",
-                  "translation_ru": "овальное лицо"
-                },
-                {
-                  "ko": "동그랗다",
-                  "translation_ru": "круглый"
-                },
-                {
-                  "ko": "눈",
-                  "translation_ru": "глаз"
-                },
-                {
-                  "ko": "눈썹",
-                  "translation_ru": "брови"
-                },
-                {
-                  "ko": "짙다",
-                  "translation_ru": "густой, тёмный, насыщенный"
-                },
-                {
-                  "ko": "코",
-                  "translation_ru": "нос"
-                },
-                {
-                  "ko": "높다",
-                  "translation_ru": "высокий"
-                }
-              ]
-            },
-            {
-              "title": "인상",
-              "title_ru": "Внешность и впечатление",
-              "items": [
-                {
-                  "ko": "귀엽다",
-                  "translation_ru": "милый, симпатичный"
-                },
-                {
-                  "ko": "강하다",
-                  "translation_ru": "сильный, резкий, жёсткий"
-                },
-                {
-                  "ko": "마르다",
-                  "translation_ru": "худой"
-                },
-                {
-                  "ko": "서양인",
-                  "translation_ru": "европеец, человек с Запада"
-                },
-                {
-                  "ko": "비슷하다",
-                  "translation_ru": "быть похожим"
-                },
-                {
-                  "ko": "생기다",
-                  "translation_ru": "иметь внешность, выглядеть"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -277,24 +278,6 @@
             "이 컴퓨터는 디자인이 예쁜 편이에요.",
             "어제 본 영화는 재미있는 편이었어요.",
             "어렸을 때는 달리기를 잘하는 편이었어요."
-          ],
-          "vocab": [
-            {
-              "ko": "치마",
-              "translation_ru": "юбка"
-            },
-            {
-              "ko": "디자인",
-              "translation_ru": "дизайн"
-            },
-            {
-              "ko": "어렸",
-              "translation_ru": "форма от 어리다 (быть молодым)"
-            },
-            {
-              "ko": "잘하",
-              "translation_ru": "форма от 잘하다 (хорошо делать, уметь)"
-            }
           ],
           "rules_table": {
             "head": [
@@ -359,20 +342,6 @@
             "9월인데 아직도 여름같이 덥네요.",
             "이 아이는 천사 같은 미소를 짓고 있네요.",
             "농구나 축구와 같은 운동을 좋아해요."
-          ],
-          "vocab": [
-            {
-              "ko": "선수",
-              "translation_ru": "спортсмен, игрок"
-            },
-            {
-              "ko": "미소",
-              "translation_ru": "улыбка"
-            },
-            {
-              "ko": "짓",
-              "translation_ru": "форма от 짓다 (делать улыбку, выражение лица)"
-            }
           ],
           "rules": [
             "받침 не важен → N처럼 / N같이\n**모델 → 모델처럼**",

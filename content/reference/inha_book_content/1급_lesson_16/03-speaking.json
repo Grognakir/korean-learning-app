@@ -9,6 +9,29 @@
       "source_photo": "IMG_1187",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "유명하다",
+              "translation_ru": "быть известным, знаменитым"
+            },
+            {
+              "ko": "과자",
+              "translation_ru": "печенье, сладости"
+            },
+            {
+              "ko": "기뻐하다",
+              "translation_ru": "радоваться"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -176,29 +199,6 @@
               ]
             ]
           }
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "유명하다",
-              "translation_ru": "быть известным, знаменитым"
-            },
-            {
-              "ko": "과자",
-              "translation_ru": "печенье, сладости"
-            },
-            {
-              "ko": "기뻐하다",
-              "translation_ru": "радоваться"
-            }
-          ]
         }
       ]
     }

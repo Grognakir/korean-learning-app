@@ -9,6 +9,45 @@
       "source_photo": "IMG_1094",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "김밥",
+              "translation_ru": "кимбап (рис с начинкой в водорослях)"
+            },
+            {
+              "ko": "떡볶이",
+              "translation_ru": "токпокки (острые рисовые лепёшки)"
+            },
+            {
+              "ko": "우동",
+              "translation_ru": "удон (лапша)"
+            },
+            {
+              "ko": "만두",
+              "translation_ru": "манду, пельмени"
+            },
+            {
+              "ko": "김치찌개",
+              "translation_ru": "кимчи-тиге (острое рагу с кимчи)"
+            },
+            {
+              "ko": "된장찌개",
+              "translation_ru": "твендян-тиге (рагу с соевой пастой)"
+            },
+            {
+              "ko": "떡국",
+              "translation_ru": "ттоккук (суп с рисовыми лепёшками)"
+            }
+          ]
+        },
+        {
           "type": "reference_table",
           "id": "table-menu",
           "toc_section": "말하기",
@@ -114,45 +153,6 @@
           "exercise_ref": null,
           "audio_id": null,
           "lines": []
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "김밥",
-              "translation_ru": "кимбап (рис с начинкой в водорослях)"
-            },
-            {
-              "ko": "떡볶이",
-              "translation_ru": "токпокки (острые рисовые лепёшки)"
-            },
-            {
-              "ko": "우동",
-              "translation_ru": "удон (лапша)"
-            },
-            {
-              "ko": "만두",
-              "translation_ru": "манду, пельмени"
-            },
-            {
-              "ko": "김치찌개",
-              "translation_ru": "кимчи-тиге (острое рагу с кимчи)"
-            },
-            {
-              "ko": "된장찌개",
-              "translation_ru": "твендян-тиге (рагу с соевой пастой)"
-            },
-            {
-              "ko": "떡국",
-              "translation_ru": "ттоккук (суп с рисовыми лепёшками)"
-            }
-          ]
         }
       ]
     }

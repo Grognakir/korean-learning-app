@@ -9,6 +9,41 @@
       "source_photo": "IMG_1127",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-email-1",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-email-1",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "보내는 사람",
+              "translation_ru": "отправитель"
+            },
+            {
+              "ko": "받는 사람",
+              "translation_ru": "получатель"
+            },
+            {
+              "ko": "제목",
+              "translation_ru": "заголовок, тема (письма)"
+            },
+            {
+              "ko": "난타",
+              "translation_ru": "нанта (шоу с ударными, «Nanta»)"
+            },
+            {
+              "ko": "입장권",
+              "translation_ru": "входной билет"
+            },
+            {
+              "ko": "공연장",
+              "translation_ru": "концертный зал, площадка для выступлений"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-email-1",
           "toc_section": "읽고 말하기",
@@ -45,41 +80,6 @@
               "text": "왕루 씨가 같이 갈 수 있으면 제가 미리 입장권을 예매할게요. 답장 기다릴게요."
             }
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-email-1",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-email-1",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "보내는 사람",
-              "translation_ru": "отправитель"
-            },
-            {
-              "ko": "받는 사람",
-              "translation_ru": "получатель"
-            },
-            {
-              "ko": "제목",
-              "translation_ru": "заголовок, тема (письма)"
-            },
-            {
-              "ko": "난타",
-              "translation_ru": "нанта (шоу с ударными, «Nanta»)"
-            },
-            {
-              "ko": "입장권",
-              "translation_ru": "входной билет"
-            },
-            {
-              "ko": "공연장",
-              "translation_ru": "концертный зал, площадка для выступлений"
-            }
-          ]
         }
       ]
     },
@@ -88,6 +88,21 @@
       "page_role": "content",
       "source_photo": "IMG_1128",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-reading-email-2",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-email-2",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "그러니까",
+              "translation_ru": "поэтому, так что"
+            }
+          ]
+        },
         {
           "type": "text",
           "id": "text-reading-email-2",
@@ -154,21 +169,6 @@
               "kind": "open",
               "prompt": "여러분은 이메일로 친구와 약속을 해 봤습니까?",
               "prompt_ru": "Договаривались ли вы с друзьями о встрече по электронной почте?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-email-2",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-email-2",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "그러니까",
-              "translation_ru": "поэтому, так что"
             }
           ]
         }

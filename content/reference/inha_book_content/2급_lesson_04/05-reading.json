@@ -9,6 +9,151 @@
       "source_photo": "IMG_0659",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-korea-weather",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-korea-weather",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "무덥다",
+              "translation_ru": "быть душным, знойным"
+            },
+            {
+              "ko": "선선하다",
+              "translation_ru": "быть прохладным (приятно)"
+            },
+            {
+              "ko": "건조하다",
+              "translation_ru": "быть сухим"
+            },
+            {
+              "ko": "산불",
+              "translation_ru": "лесной пожар"
+            },
+            {
+              "ko": "특징",
+              "translation_ru": "особенность, черта"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "사계절",
+                "translation_ru": "четыре времени года"
+              },
+              {
+                "ko": "봄",
+                "translation_ru": "весна"
+              },
+              {
+                "ko": "여름",
+                "translation_ru": "лето"
+              },
+              {
+                "ko": "가을",
+                "translation_ru": "осень"
+              },
+              {
+                "ko": "겨울",
+                "translation_ru": "зима"
+              },
+              {
+                "ko": "옛날",
+                "translation_ru": "старые времена"
+              },
+              {
+                "ko": "변화",
+                "translation_ru": "изменение"
+              },
+              {
+                "ko": "높아지다",
+                "translation_ru": "повышаться"
+              },
+              {
+                "ko": "낮아지다",
+                "translation_ru": "понижаться"
+              },
+              {
+                "ko": "길어지다",
+                "translation_ru": "удлиняться"
+              },
+              {
+                "ko": "짧아지다",
+                "translation_ru": "укорачиваться"
+              },
+              {
+                "ko": "계속",
+                "translation_ru": "продолжать"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "황사",
+                "translation_ru": "жёлтая пыль"
+              },
+              {
+                "ko": "꽃샘추위",
+                "translation_ru": "весенние холода (перед потеплением)"
+              },
+              {
+                "ko": "때문",
+                "translation_ru": "из-за, по причине"
+              },
+              {
+                "ko": "심합",
+                "translation_ru": "сильный, серьёзный (форма от 심하다)"
+              },
+              {
+                "ko": "태풍",
+                "translation_ru": "тайфун"
+              },
+              {
+                "ko": "붑",
+                "translation_ru": "дует (форма от 불다)"
+              },
+              {
+                "ko": "야외",
+                "translation_ru": "на улице, вне помещения"
+              },
+              {
+                "ko": "활동할",
+                "translation_ru": "заниматься активностью (форма от 활동하다)"
+              },
+              {
+                "ko": "자주",
+                "translation_ru": "часто"
+              },
+              {
+                "ko": "요즘",
+                "translation_ru": "в последнее время"
+              },
+              {
+                "ko": "변하다",
+                "translation_ru": "меняться"
+              },
+              {
+                "ko": "짧다",
+                "translation_ru": "быть коротким"
+              },
+              {
+                "ko": "길다",
+                "translation_ru": "быть длинным"
+              },
+              {
+                "ko": "높다",
+                "translation_ru": "быть высоким"
+              },
+              {
+                "ko": "낮다",
+                "translation_ru": "быть низким"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-reading-korea-weather",
           "toc_section": "읽고 말하기",
@@ -25,80 +170,6 @@
           "lines": [
             {
               "text": "한국은 봄, 여름, 가을, 겨울의 사계절이 있습니다. 봄은 따뜻하지만 황사와 꽃샘추위 때문에 날씨의 변화가 심합니다. 여름은 비가 많이 오고 무덥습니다. 그리고 태풍도 붑니다. 하지만 가을은 선선해서 야외에서 활동할 때 기분이 좋습니다. 그리고 겨울은 눈이 많이 오고 춥습니다. 또 건조해서 산불도 자주 납니다.\n하지만 요즘 한국의 계절이 변하고 있습니다. 봄과 가을은 짧아지고 여름과 겨울은 길어지고 있습니다. 그리고 봄은 옛날보다 기온이 높아지고 가을은 기온이 낮아지고 있습니다. 그래서 여름은 더 더워지고 겨울은 더 추워졌습니다. 날씨는 앞으로 계속 변할 것 같습니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "황사",
-              "translation_ru": "жёлтая пыль"
-            },
-            {
-              "ko": "꽃샘추위",
-              "translation_ru": "весенние холода (перед потеплением)"
-            },
-            {
-              "ko": "때문",
-              "translation_ru": "из-за, по причине"
-            },
-            {
-              "ko": "심합",
-              "translation_ru": "сильный, серьёзный (форма от 심하다)"
-            },
-            {
-              "ko": "변화",
-              "translation_ru": "изменение"
-            },
-            {
-              "ko": "태풍",
-              "translation_ru": "тайфун"
-            },
-            {
-              "ko": "붑",
-              "translation_ru": "дует (форма от 불다)"
-            },
-            {
-              "ko": "야외",
-              "translation_ru": "на улице, вне помещения"
-            },
-            {
-              "ko": "활동할",
-              "translation_ru": "заниматься активностью (форма от 활동하다)"
-            },
-            {
-              "ko": "자주",
-              "translation_ru": "часто"
-            },
-            {
-              "ko": "요즘",
-              "translation_ru": "в последнее время"
-            },
-            {
-              "ko": "변하다",
-              "translation_ru": "меняться"
-            },
-            {
-              "ko": "짧다",
-              "translation_ru": "быть коротким"
-            },
-            {
-              "ko": "길다",
-              "translation_ru": "быть длинным"
-            },
-            {
-              "ko": "옛날",
-              "translation_ru": "прошлое, старые времена"
-            },
-            {
-              "ko": "높다",
-              "translation_ru": "быть высоким"
-            },
-            {
-              "ko": "낮다",
-              "translation_ru": "быть низким"
-            },
-            {
-              "ko": "계속",
-              "translation_ru": "продолжать, постоянно"
             }
           ]
         },
@@ -156,104 +227,6 @@
             }
           ],
           "followup": "여러분 나라의 날씨의 변화를 이야기해 보십시오."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-korea-weather",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-korea-weather",
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "무덥다",
-              "translation_ru": "быть душным, знойным",
-              "group": "계절"
-            },
-            {
-              "ko": "선선하다",
-              "translation_ru": "быть прохладным (приятно)",
-              "group": "계절"
-            },
-            {
-              "ko": "건조하다",
-              "translation_ru": "быть сухим",
-              "group": "계절"
-            },
-            {
-              "ko": "산불",
-              "translation_ru": "лесной пожар",
-              "group": "계절"
-            },
-            {
-              "ko": "특징",
-              "translation_ru": "особенность, черта",
-              "group": "변화"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "계절",
-              "title_ru": "Времена года",
-              "items": [
-                {
-                  "ko": "사계절",
-                  "translation_ru": "четыре времени года"
-                },
-                {
-                  "ko": "봄",
-                  "translation_ru": "весна"
-                },
-                {
-                  "ko": "여름",
-                  "translation_ru": "лето"
-                },
-                {
-                  "ko": "가을",
-                  "translation_ru": "осень"
-                },
-                {
-                  "ko": "겨울",
-                  "translation_ru": "зима"
-                },
-                {
-                  "ko": "옛날",
-                  "translation_ru": "старые времена"
-                }
-              ]
-            },
-            {
-              "title": "변화",
-              "title_ru": "Изменения",
-              "items": [
-                {
-                  "ko": "변화",
-                  "translation_ru": "изменение"
-                },
-                {
-                  "ko": "높아지다",
-                  "translation_ru": "повышаться"
-                },
-                {
-                  "ko": "낮아지다",
-                  "translation_ru": "понижаться"
-                },
-                {
-                  "ko": "길어지다",
-                  "translation_ru": "удлиняться"
-                },
-                {
-                  "ko": "짧아지다",
-                  "translation_ru": "укорачиваться"
-                },
-                {
-                  "ko": "계속",
-                  "translation_ru": "продолжать"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

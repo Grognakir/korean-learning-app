@@ -9,6 +9,89 @@
       "source_photo": "IMG_0658",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-weather",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "태풍",
+              "translation_ru": "тайфун"
+            },
+            {
+              "ko": "생각나다",
+              "translation_ru": "вспоминаться, приходить на ум"
+            },
+            {
+              "ko": "점점",
+              "translation_ru": "постепенно"
+            },
+            {
+              "ko": "세다",
+              "translation_ru": "быть сильным (о ветре и т.п.)"
+            },
+            {
+              "ko": "다행",
+              "translation_ru": "к счастью"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "새벽",
+                "translation_ru": "рассвет"
+              },
+              {
+                "ko": "그치다",
+                "translation_ru": "прекращаться"
+              },
+              {
+                "ko": "우산",
+                "translation_ru": "зонт"
+              },
+              {
+                "ko": "창문",
+                "translation_ru": "окно"
+              },
+              {
+                "ko": "닫다",
+                "translation_ru": "закрывать"
+              },
+              {
+                "ko": "약해지다",
+                "translation_ru": "ослабевать"
+              },
+              {
+                "ko": "걱정하다",
+                "translation_ru": "беспокоиться"
+              },
+              {
+                "ko": "안심하다",
+                "translation_ru": "успокаиваться"
+              },
+              {
+                "ko": "아쉽다",
+                "translation_ru": "жаль"
+              },
+              {
+                "ko": "열대야",
+                "translation_ru": "тропическая ночь"
+              },
+              {
+                "ko": "방학",
+                "translation_ru": "каникулы"
+              },
+              {
+                "ko": "시원하다",
+                "translation_ru": "прохладный"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-weather-experience",
           "toc_section": "듣고 말하기",
@@ -57,110 +140,6 @@
           ],
           "followup": "날씨에 대한 여러분의 경험을 이야기해 보십시오.",
           "followup_ru": "Расскажите о своём опыте, связанном с погодой."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-weather",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "태풍",
-              "translation_ru": "тайфун",
-              "group": "태풍"
-            },
-            {
-              "ko": "생각나다",
-              "translation_ru": "вспоминаться, приходить на ум",
-              "group": "기분"
-            },
-            {
-              "ko": "점점",
-              "translation_ru": "постепенно",
-              "group": "태풍"
-            },
-            {
-              "ko": "세다",
-              "translation_ru": "быть сильным (о ветре и т.п.)",
-              "group": "태풍"
-            },
-            {
-              "ko": "다행",
-              "translation_ru": "к счастью",
-              "group": "기분"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "태풍",
-              "title_ru": "Тайфун и ливень",
-              "items": [
-                {
-                  "ko": "새벽",
-                  "translation_ru": "рассвет"
-                },
-                {
-                  "ko": "그치다",
-                  "translation_ru": "прекращаться"
-                },
-                {
-                  "ko": "우산",
-                  "translation_ru": "зонт"
-                },
-                {
-                  "ko": "창문",
-                  "translation_ru": "окно"
-                },
-                {
-                  "ko": "닫다",
-                  "translation_ru": "закрывать"
-                },
-                {
-                  "ko": "약해지다",
-                  "translation_ru": "ослабевать"
-                }
-              ]
-            },
-            {
-              "title": "기분",
-              "title_ru": "Чувства",
-              "items": [
-                {
-                  "ko": "걱정하다",
-                  "translation_ru": "беспокоиться"
-                },
-                {
-                  "ko": "안심하다",
-                  "translation_ru": "успокаиваться"
-                },
-                {
-                  "ko": "아쉽다",
-                  "translation_ru": "жаль"
-                }
-              ]
-            },
-            {
-              "title": "더위",
-              "title_ru": "Лето",
-              "items": [
-                {
-                  "ko": "열대야",
-                  "translation_ru": "тропическая ночь"
-                },
-                {
-                  "ko": "방학",
-                  "translation_ru": "каникулы"
-                },
-                {
-                  "ko": "시원하다",
-                  "translation_ru": "прохладный"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

@@ -1,27 +1,52 @@
 "use client";
 
-import { useState } from "react";
-import type { ComprehensionExerciseBlock, ComprehensionQuestion } from "@/features/learning/types";
+import type { ReactNode } from "react";
+import type { ComprehensionExerciseBlock, ComprehensionQuestion, HintBlock } from "@/features/learning/types";
+import { useDraft } from "@/lib/useDraft";
+import { HintSection } from "./HintSection";
+import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import { LabelInfo } from "./LabelInfo";
 import { speakerClassName } from "./speakerClassName";
 import styles from "./blocks.module.css";
 
-function QuestionPrompt({ question }: { question: ComprehensionQuestion }) {
+function QuestionPrompt({
+  question,
+  promptNode,
+}: {
+  question: ComprehensionQuestion;
+  promptNode: ReactNode;
+}) {
   return (
     <p className={`${styles.prompt} kr`}>
-      {question.prompt}
+      {promptNode}
       {question.prompt_ru && <LabelInfo translation={question.prompt_ru} />}
     </p>
   );
 }
 
-function ChoiceQuestion({ question }: { question: ComprehensionQuestion }) {
-  const [selected, setSelected] = useState<number | null>(null);
+function ChoiceQuestion({
+  question,
+  promptNode,
+  choiceNodes,
+  draftKey,
+}: {
+  question: ComprehensionQuestion;
+  promptNode: ReactNode;
+  choiceNodes: ReactNode[];
+  draftKey: string;
+}) {
+  const [stored, setStored] = useDraft(`${draftKey}:choice`);
+  const picked = stored === "" ? NaN : Number(stored);
+  const selected =
+    Number.isInteger(picked) && picked >= 0 && picked < (question.choices?.length ?? 0)
+      ? picked
+      : null;
+  const setSelected = (index: number) => setStored(String(index));
   const checkable = question.correct != null;
 
   return (
     <div className={styles.comprehensionQuestion}>
-      <QuestionPrompt question={question} />
+      <QuestionPrompt question={question} promptNode={promptNode} />
       <div className={styles.exerciseItems}>
         {question.choices?.map((choice, i) => {
           const isSelected = selected === i;
@@ -43,7 +68,7 @@ function ChoiceQuestion({ question }: { question: ComprehensionQuestion }) {
               <span className={styles.exerciseItemNumber} aria-hidden="true">
                 {i + 1}
               </span>
-              <span>{choice}</span>
+              <span>{choiceNodes[i] ?? choice}</span>
             </button>
           );
         })}
@@ -57,11 +82,31 @@ function ChoiceQuestion({ question }: { question: ComprehensionQuestion }) {
   );
 }
 
-function TableQuestion({ question }: { question: ComprehensionQuestion }) {
+function TableCell({ draftKey }: { draftKey: string }) {
+  const [value, setValue] = useDraft(draftKey);
+  return (
+    <input
+      type="text"
+      className={`${styles.comprehensionTableInput} kr`}
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  );
+}
+
+function TableQuestion({
+  question,
+  promptNode,
+  draftKey,
+}: {
+  question: ComprehensionQuestion;
+  promptNode: ReactNode;
+  draftKey: string;
+}) {
   if (!question.table) return null;
   return (
     <div className={styles.comprehensionQuestion}>
-      <QuestionPrompt question={question} />
+      <QuestionPrompt question={question} promptNode={promptNode} />
       <div className={styles.comprehensionTableWrap}>
         <table className={styles.comprehensionTable}>
           <thead>
@@ -80,7 +125,7 @@ function TableQuestion({ question }: { question: ComprehensionQuestion }) {
                 <th className="kr">{row}</th>
                 {question.table!.columns.map((_, j) => (
                   <td key={j}>
-                    <input type="text" className={`${styles.comprehensionTableInput} kr`} />
+                    <TableCell draftKey={`${draftKey}:r${i}c${j}`} />
                   </td>
                 ))}
               </tr>
@@ -92,10 +137,27 @@ function TableQuestion({ question }: { question: ComprehensionQuestion }) {
   );
 }
 
-function OpenQuestion({ question }: { question: ComprehensionQuestion }) {
+function OpenQuestion({
+  question,
+  promptNode,
+  draftKey,
+}: {
+  question: ComprehensionQuestion;
+  promptNode: ReactNode;
+  draftKey: string;
+}) {
+  const [value, setValue] = useDraft(draftKey);
   return (
     <div className={styles.comprehensionQuestion}>
-      <QuestionPrompt question={question} />
+      <QuestionPrompt question={question} promptNode={promptNode} />
+      <input
+        type="text"
+        aria-label={question.prompt}
+        placeholder="답을 입력하세요"
+        className={`${styles.comprehensionAnswerInput} kr`}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
     </div>
   );
 }
@@ -103,10 +165,25 @@ function OpenQuestion({ question }: { question: ComprehensionQuestion }) {
 export function ComprehensionExercise({
   block,
   id,
+  vocabItems,
+  relatedHints,
+  textbookSlug,
+  lessonNumber,
 }: {
   block: ComprehensionExerciseBlock;
   id?: string;
+  textbookSlug?: string;
+  lessonNumber?: number;
+  vocabItems?: VocabItem[];
+  relatedHints?: HintBlock[];
 }) {
+  // Одно слово переводится один раз на всё задание: сначала в тексте аудио,
+  // дальше (вопросы, ответы) — обычным текстом.
+  const seen = new Set<string>();
+  const draftBase = `comprehension:${textbookSlug ?? "book"}:${lessonNumber ?? "lesson"}:${block.id ?? id ?? "exercise"}`;
+  const taskText = (text: string, keyPrefix: string) =>
+    highlightDialogueSpeakers(text, vocabItems, keyPrefix, seen);
+
   return (
     <div id={id} className={styles.block}>
       <span className={styles.labelRow}>
@@ -126,7 +203,7 @@ export function ComprehensionExercise({
             <div className={styles.illustrationPlaceholder}>Иллюстрация появится позже</div>
           ) : null}
           <p className={`${styles.prompt} kr`}>
-            1. {block.warmup.prompt}
+            1. {taskText(block.warmup.prompt, "warmup-")}
             {block.warmup.prompt_ru && <LabelInfo translation={block.warmup.prompt_ru} />}
           </p>
         </div>
@@ -153,27 +230,58 @@ export function ComprehensionExercise({
                 {line.speaker && (
                   <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
                 )}
-                <span className={`${styles.lineText} kr`}>{line.text}</span>
+                <span className={`${styles.lineText} kr`}>
+                  {highlightDialogueSpeakers(line.text, vocabItems, `tr-${i}-`, seen)}
+                </span>
               </p>
             ))}
+            {relatedHints?.map((hint, i) => <HintSection key={hint.id ?? i} hint={hint} />)}
           </div>
         </details>
       )}
+      {!block.transcript && relatedHints?.map((hint, i) => <HintSection key={hint.id ?? i} hint={hint} />)}
       {block.group_prompt && (
         <p className={`${styles.prompt} kr`}>
-          2. {block.group_prompt}
+          2. {taskText(block.group_prompt, "group-")}
           {block.group_prompt_ru && <LabelInfo translation={block.group_prompt_ru} />}
         </p>
       )}
+      <div className={block.group_prompt ? styles.comprehensionSubItems : styles.comprehensionQuestions}>
       {block.questions.map((question, i) => {
-        if (question.kind === "choice") return <ChoiceQuestion key={i} question={question} />;
-        if (question.kind === "table") return <TableQuestion key={i} question={question} />;
-        return <OpenQuestion key={i} question={question} />;
+        const promptNode = taskText(question.prompt, `q${i}-`);
+        if (question.kind === "choice") {
+          const choiceNodes = (question.choices ?? []).map((choice, j) =>
+            highlightDialogueSpeakers(choice, vocabItems, `q${i}c${j}-`, seen, [], undefined, true),
+          );
+          return (
+            <ChoiceQuestion
+              key={i}
+              question={question}
+              promptNode={promptNode}
+              choiceNodes={choiceNodes}
+              draftKey={`${draftBase}:q${i}`}
+            />
+          );
+        }
+        if (question.kind === "table") {
+          return <TableQuestion key={i} question={question} promptNode={promptNode} draftKey={`${draftBase}:q${i}`} />;
+        }
+        return (
+          <OpenQuestion
+            key={i}
+            question={question}
+            promptNode={promptNode}
+            draftKey={`${draftBase}:q${i}`}
+          />
+        );
       })}
+      </div>
       {block.followup && (
         <p className={`${styles.comprehensionFollowup} ${styles.prompt} kr`}>
-          3. {block.followup}
-          {block.followup_ru && <LabelInfo translation={block.followup_ru} />}
+          <span>
+            3. {taskText(block.followup, "followup-")}
+            {block.followup_ru && <LabelInfo translation={block.followup_ru} />}
+          </span>
         </p>
       )}
     </div>

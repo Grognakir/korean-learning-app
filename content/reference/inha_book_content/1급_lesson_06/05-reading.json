@@ -9,6 +9,33 @@
       "source_photo": "IMG_1034",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-diary",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-diary",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "바람",
+              "translation_ru": "ветер"
+            },
+            {
+              "ko": "한식당",
+              "translation_ru": "ресторан корейской кухни"
+            },
+            {
+              "ko": "불고기",
+              "translation_ru": "булгоги (маринованное жареное мясо)"
+            },
+            {
+              "ko": "정말",
+              "translation_ru": "правда, действительно, очень"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-diary",
           "toc_section": "읽고 말하기",
@@ -73,33 +100,6 @@
               "kind": "open",
               "prompt": "친구들에게 여러분의 주말 이야기를 이야기해 보십시오.",
               "prompt_ru": "Расскажите друзьям о своих выходных."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-diary",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-diary",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "바람",
-              "translation_ru": "ветер"
-            },
-            {
-              "ko": "한식당",
-              "translation_ru": "ресторан корейской кухни"
-            },
-            {
-              "ko": "불고기",
-              "translation_ru": "булгоги (маринованное жареное мясо)"
-            },
-            {
-              "ko": "정말",
-              "translation_ru": "правда, действительно, очень"
             }
           ]
         }

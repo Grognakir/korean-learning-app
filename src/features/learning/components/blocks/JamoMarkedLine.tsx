@@ -1,33 +1,51 @@
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
-export function JamoMarkedLine({
+export type JamoMark = { text: string; jamo: string };
+
+export function renderJamoMarkedLine({
   line,
-  text,
-  jamo,
+  marks,
   vocabItems,
   keyPrefix,
   seen,
   emphasized,
+  emphasisClassName,
 }: {
   line: string;
-  text: string;
-  jamo: string;
+  marks: JamoMark[];
   vocabItems?: VocabItem[];
   keyPrefix: string;
   seen?: Set<string>;
   emphasized?: string[];
+  emphasisClassName?: string;
 }) {
-  const at = line.indexOf(text);
-  if (at === -1) {
-    return <>{highlightDialogueSpeakers(line, vocabItems, keyPrefix, seen, emphasized)}</>;
+  const parts: { text: string; jamo?: string }[] = [];
+  let from = 0;
+  for (const mark of marks) {
+    const at = line.indexOf(mark.text, from);
+    if (at === -1) continue;
+    const end = at + mark.text.length;
+    parts.push({ text: line.slice(from, end), jamo: mark.jamo });
+    from = end;
   }
-  const end = at + text.length;
+  parts.push({ text: line.slice(from) });
   return (
     <>
-      {highlightDialogueSpeakers(line.slice(0, end), vocabItems, `${keyPrefix}b-`, seen, emphasized)}
-      <span className={styles.jamoChip}>{jamo}</span>
-      {highlightDialogueSpeakers(line.slice(end), vocabItems, `${keyPrefix}a-`, seen, emphasized)}
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part.text &&
+            highlightDialogueSpeakers(
+              part.text,
+              vocabItems,
+              `${keyPrefix}${i}-`,
+              seen,
+              emphasized,
+              emphasisClassName,
+            )}
+          {part.jamo && <span className={styles.jamoChip}>{part.jamo}</span>}
+        </span>
+      ))}
     </>
   );
 }

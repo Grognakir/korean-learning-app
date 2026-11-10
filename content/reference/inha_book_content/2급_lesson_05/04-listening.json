@@ -9,6 +9,69 @@
       "source_photo": "IMG_0696",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-housewarming",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "집들이",
+              "translation_ru": "новоселье"
+            },
+            {
+              "ko": "휴지",
+              "translation_ru": "туалетная бумага, салфетки"
+            },
+            {
+              "ko": "세제",
+              "translation_ru": "моющее средство"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "이사",
+                "translation_ru": "переезд"
+              },
+              {
+                "ko": "손님",
+                "translation_ru": "гость"
+              },
+              {
+                "ko": "축하하다",
+                "translation_ru": "поздравлять"
+              },
+              {
+                "ko": "건물",
+                "translation_ru": "здание"
+              },
+              {
+                "ko": "구경",
+                "translation_ru": "осмотр"
+              },
+              {
+                "ko": "선물",
+                "translation_ru": "подарок"
+              },
+              {
+                "ko": "비누",
+                "translation_ru": "мыло"
+              },
+              {
+                "ko": "수건",
+                "translation_ru": "полотенце"
+              },
+              {
+                "ko": "생기다",
+                "translation_ru": "появляться, случаться"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-housewarming-invite",
           "toc_section": "듣고 말하기",
@@ -96,82 +159,6 @@
           ],
           "followup": "여러분 나라의 집들이 문화는 어떻습니까? 이야기해 보십시오.",
           "followup_ru": "А как обстоит дело с традицией новоселья в вашей стране? Расскажите."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-housewarming",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "집들이",
-              "translation_ru": "новоселье",
-              "group": "집들이"
-            },
-            {
-              "ko": "휴지",
-              "translation_ru": "туалетная бумага, салфетки",
-              "group": "선물"
-            },
-            {
-              "ko": "세제",
-              "translation_ru": "моющее средство",
-              "group": "선물"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "집들이",
-              "title_ru": "Новоселье",
-              "items": [
-                {
-                  "ko": "이사",
-                  "translation_ru": "переезд"
-                },
-                {
-                  "ko": "손님",
-                  "translation_ru": "гость"
-                },
-                {
-                  "ko": "축하하다",
-                  "translation_ru": "поздравлять"
-                },
-                {
-                  "ko": "건물",
-                  "translation_ru": "здание"
-                },
-                {
-                  "ko": "구경",
-                  "translation_ru": "осмотр"
-                }
-              ]
-            },
-            {
-              "title": "선물",
-              "title_ru": "Подарки",
-              "items": [
-                {
-                  "ko": "선물",
-                  "translation_ru": "подарок"
-                },
-                {
-                  "ko": "비누",
-                  "translation_ru": "мыло"
-                },
-                {
-                  "ko": "수건",
-                  "translation_ru": "полотенце"
-                },
-                {
-                  "ko": "생기다",
-                  "translation_ru": "появляться, случаться"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

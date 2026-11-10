@@ -9,98 +9,6 @@
       "source_photo": "IMG_0997",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-calendar-dialogue",
-          "toc_section": "준비하기 2",
-          "title": "달력을 보고 말하기",
-          "title_ru": "Говорить, глядя на календарь",
-          "illustration": {
-            "storage_path": "lesson_4/illustration_2_weekend_calendar_v2.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기2",
-          "exercise_ref": null,
-          "audio_id": "114",
-          "speakers": [
-            "파하드",
-            "아멜리"
-          ],
-          "lines": [
-            {
-              "speaker": "파하드",
-              "text": "아멜리 씨, 토요일에 무엇을 합니까?",
-              "emphasized": [
-                "에"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "저는 토요일에 수영을 배웁니다.",
-              "emphasized": [
-                "에"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "일요일에도 수영을 배웁니까?",
-              "emphasized": [
-                "에도"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "아니요, 일요일에는 집에서 쉽니다. 파하드 씨는 토요일에 무엇을 합니까?",
-              "emphasized": [
-                "에는",
-                "에"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "저는 토요일마다 공원에 갑니다. 공원에서 운동을 합니다.",
-              "emphasized": [
-                "마다"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "무슨 운동을 합니까?"
-            },
-            {
-              "speaker": "파하드",
-              "text": "저는 공원에서 친구와 같이 야구를 합니다.",
-              "emphasized": [
-                "와 같이"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-junbihagi2-expr",
-          "toc_section": "준비하기 2",
-          "hint_kind": "expression",
-          "related_text_ref": "text-calendar-dialogue",
-          "items": [
-            {
-              "kind": "pattern",
-              "text": "N마다",
-              "translation_ru": "каждый N — шаблон; «토요일마다» = «каждую субботу»"
-            },
-            {
-              "kind": "pattern",
-              "text": "N와/과 같이(함께), N하고 같이(함께)",
-              "translation_ru": "вместе с N — шаблон; «친구와 같이» = «вместе с другом»"
-            },
-            {
-              "kind": "pattern",
-              "text": "무슨 N",
-              "translation_ru": "какой/что за N — шаблон; пример «무슨 운동을 합니까?» = «каким спортом занимаетесь?»"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi2",
           "toc_section": "준비하기 2",
@@ -228,6 +136,98 @@
             {
               "ko": "수료식",
               "translation_ru": "церемония окончания курса"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-calendar-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "달력을 보고 말하기",
+          "title_ru": "Говорить, глядя на календарь",
+          "illustration": {
+            "storage_path": "lesson_4/illustration_2_weekend_calendar_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "114",
+          "speakers": [
+            "파하드",
+            "아멜리"
+          ],
+          "lines": [
+            {
+              "speaker": "파하드",
+              "text": "아멜리 씨, 토요일에 무엇을 합니까?",
+              "emphasized": [
+                "에"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "저는 토요일에 수영을 배웁니다.",
+              "emphasized": [
+                "에"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "일요일에도 수영을 배웁니까?",
+              "emphasized": [
+                "에도"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "아니요, 일요일에는 집에서 쉽니다. 파하드 씨는 토요일에 무엇을 합니까?",
+              "emphasized": [
+                "에는",
+                "에"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 토요일마다 공원에 갑니다. 공원에서 운동을 합니다.",
+              "emphasized": [
+                "마다"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "무슨 운동을 합니까?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "저는 공원에서 친구와 같이 야구를 합니다.",
+              "emphasized": [
+                "와 같이"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-junbihagi2-expr",
+          "toc_section": "준비하기 2",
+          "hint_kind": "expression",
+          "related_text_ref": "text-calendar-dialogue",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "N마다",
+              "translation_ru": "каждый N — шаблон; «토요일마다» = «каждую субботу»"
+            },
+            {
+              "kind": "pattern",
+              "text": "N와/과 같이(함께), N하고 같이(함께)",
+              "translation_ru": "вместе с N — шаблон; «친구와 같이» = «вместе с другом»"
+            },
+            {
+              "kind": "pattern",
+              "text": "무슨 N",
+              "translation_ru": "какой/что за N — шаблон; пример «무슨 운동을 합니까?» = «каким спортом занимаетесь?»"
             }
           ]
         }
@@ -481,6 +481,57 @@
       "source_photo": "IMG_1001",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup4",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "오전",
+              "translation_ru": "до полудня; утро"
+            },
+            {
+              "ko": "마트",
+              "translation_ru": "супермаркет"
+            },
+            {
+              "ko": "과일",
+              "translation_ru": "фрукты"
+            },
+            {
+              "ko": "채소",
+              "translation_ru": "овощи"
+            },
+            {
+              "ko": "오후",
+              "translation_ru": "после полудня"
+            },
+            {
+              "ko": "기숙사",
+              "translation_ru": "общежитие"
+            },
+            {
+              "ko": "모레",
+              "translation_ru": "послезавтра"
+            },
+            {
+              "ko": "수영장",
+              "translation_ru": "бассейн"
+            },
+            {
+              "ko": "매일",
+              "translation_ru": "каждый день"
+            },
+            {
+              "ko": "쇼핑",
+              "translation_ru": "шопинг, покупки"
+            }
+          ]
+        },
+        {
           "type": "grammar_exercise",
           "id": "exercise-4a",
           "toc_section": "준비하기 2",
@@ -701,57 +752,6 @@
               "kind": "pattern",
               "text": "매일 = 날마다, 매주 = 주마다, 매달 = 달마다",
               "translation_ru": "каждый день = каждый день (날마다), каждую неделю (주마다), каждый месяц (달마다)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup4",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "오전",
-              "translation_ru": "до полудня; утро"
-            },
-            {
-              "ko": "마트",
-              "translation_ru": "супермаркет"
-            },
-            {
-              "ko": "과일",
-              "translation_ru": "фрукты"
-            },
-            {
-              "ko": "채소",
-              "translation_ru": "овощи"
-            },
-            {
-              "ko": "오후",
-              "translation_ru": "после полудня"
-            },
-            {
-              "ko": "기숙사",
-              "translation_ru": "общежитие"
-            },
-            {
-              "ko": "모레",
-              "translation_ru": "послезавтра"
-            },
-            {
-              "ko": "수영장",
-              "translation_ru": "бассейн"
-            },
-            {
-              "ko": "매일",
-              "translation_ru": "каждый день"
-            },
-            {
-              "ko": "쇼핑",
-              "translation_ru": "шопинг, покупки"
             }
           ]
         }

@@ -9,6 +9,101 @@
       "source_photo": "IMG_0929",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-donguibogam",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "자연",
+              "translation_ru": "природа"
+            },
+            {
+              "ko": "치료법",
+              "translation_ru": "способ лечения"
+            },
+            {
+              "ko": "세기",
+              "translation_ru": "век, столетие"
+            },
+            {
+              "ko": "생강",
+              "translation_ru": "имбирь"
+            },
+            {
+              "ko": "뿌리",
+              "translation_ru": "корень"
+            },
+            {
+              "ko": "꿀",
+              "translation_ru": "мёд"
+            },
+            {
+              "ko": "무즙",
+              "translation_ru": "сок редьки"
+            },
+            {
+              "ko": "매실차",
+              "translation_ru": "чай из японской сливы (мэсиль)"
+            },
+            {
+              "ko": "마사지하다",
+              "translation_ru": "делать массаж"
+            },
+            {
+              "ko": "피로",
+              "translation_ru": "усталость"
+            },
+            {
+              "ko": "풀리다",
+              "translation_ru": "рассасываться; проходить (об усталости)"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "한의원",
+                "translation_ru": "клиника восточной медицины"
+              },
+              {
+                "ko": "약",
+                "translation_ru": "лекарство"
+              },
+              {
+                "ko": "마사지",
+                "translation_ru": "массаж"
+              },
+              {
+                "ko": "소화",
+                "translation_ru": "пищеварение"
+              },
+              {
+                "ko": "체하다",
+                "translation_ru": "несварение"
+              },
+              {
+                "ko": "감기에 걸리다",
+                "translation_ru": "простудиться"
+              },
+              {
+                "ko": "차",
+                "translation_ru": "чай"
+              },
+              {
+                "ko": "열",
+                "translation_ru": "жар"
+              },
+              {
+                "ko": "기침",
+                "translation_ru": "кашель"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-donguibogam",
           "toc_section": "문화 이해하기",
@@ -71,116 +166,6 @@
             {
               "text": "2) 여러분 나라의 전통적인 치료법은 무엇입니까? 친구들과 이야기해 보십시오.",
               "translation_ru": "Какие традиционные способы лечения есть в вашей стране? Обсудите с друзьями."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-donguibogam",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "자연",
-              "translation_ru": "природа",
-              "group": "한방"
-            },
-            {
-              "ko": "치료법",
-              "translation_ru": "способ лечения",
-              "group": "한방"
-            },
-            {
-              "ko": "세기",
-              "translation_ru": "век, столетие",
-              "group": "한방"
-            },
-            {
-              "ko": "생강",
-              "translation_ru": "имбирь",
-              "group": "한방"
-            },
-            {
-              "ko": "뿌리",
-              "translation_ru": "корень",
-              "group": "한방"
-            },
-            {
-              "ko": "꿀",
-              "translation_ru": "мёд",
-              "group": "한방"
-            },
-            {
-              "ko": "무즙",
-              "translation_ru": "сок редьки",
-              "group": "한방"
-            },
-            {
-              "ko": "매실차",
-              "translation_ru": "чай из японской сливы (мэсиль)",
-              "group": "한방"
-            },
-            {
-              "ko": "마사지하다",
-              "translation_ru": "делать массаж",
-              "group": "한방"
-            },
-            {
-              "ko": "피로",
-              "translation_ru": "усталость",
-              "group": "한방"
-            },
-            {
-              "ko": "풀리다",
-              "translation_ru": "рассасываться; проходить (об усталости)",
-              "group": "한방"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "한방",
-              "title_ru": "Народная медицина",
-              "items": [
-                {
-                  "ko": "한의원",
-                  "translation_ru": "клиника восточной медицины"
-                },
-                {
-                  "ko": "약",
-                  "translation_ru": "лекарство"
-                },
-                {
-                  "ko": "마사지",
-                  "translation_ru": "массаж"
-                },
-                {
-                  "ko": "소화",
-                  "translation_ru": "пищеварение"
-                },
-                {
-                  "ko": "체하다",
-                  "translation_ru": "несварение"
-                },
-                {
-                  "ko": "감기에 걸리다",
-                  "translation_ru": "простудиться"
-                },
-                {
-                  "ko": "차",
-                  "translation_ru": "чай"
-                },
-                {
-                  "ko": "열",
-                  "translation_ru": "жар"
-                },
-                {
-                  "ko": "기침",
-                  "translation_ru": "кашель"
-                }
-              ]
             }
           ]
         },

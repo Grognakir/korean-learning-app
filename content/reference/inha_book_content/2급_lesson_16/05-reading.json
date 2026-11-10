@@ -9,6 +9,69 @@
       "source_photo": "IMG_1602",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-official-mail",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-official-mail",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "사유서",
+              "translation_ru": "объяснительная записка (причина отсутствия)"
+            },
+            {
+              "ko": "담당",
+              "translation_ru": "ответственность за участок, заведование"
+            },
+            {
+              "ko": "수술",
+              "translation_ru": "операция"
+            },
+            {
+              "ko": "입원",
+              "translation_ru": "госпитализация"
+            },
+            {
+              "ko": "퇴원하다",
+              "translation_ru": "выписываться из больницы"
+            },
+            {
+              "ko": "물리 치료",
+              "translation_ru": "физиотерапия"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "취직",
+                "translation_ru": "трудоустройство"
+              },
+              {
+                "ko": "휴가",
+                "translation_ru": "отпуск"
+              },
+              {
+                "ko": "발음",
+                "translation_ru": "произношение"
+              },
+              {
+                "ko": "병원",
+                "translation_ru": "больница"
+              },
+              {
+                "ko": "연락하다",
+                "translation_ru": "связываться, выходить на связь"
+              },
+              {
+                "ko": "실망하다",
+                "translation_ru": "разочаровываться"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-reading-official-mail",
           "toc_section": "읽고 말하기",
@@ -90,73 +153,6 @@
               "kind": "open",
               "prompt": "여러분은 공식적인 편지 글을 쓸 수 있습니까? 이야기해 보십시오.",
               "prompt_ru": "Умеете ли вы писать официальные письма? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-official-mail",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-official-mail",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "사유서",
-              "translation_ru": "объяснительная записка (причина отсутствия)"
-            },
-            {
-              "ko": "담당",
-              "translation_ru": "ответственность за участок, заведование"
-            },
-            {
-              "ko": "수술",
-              "translation_ru": "операция"
-            },
-            {
-              "ko": "입원",
-              "translation_ru": "госпитализация"
-            },
-            {
-              "ko": "퇴원하다",
-              "translation_ru": "выписываться из больницы"
-            },
-            {
-              "ko": "물리 치료",
-              "translation_ru": "физиотерапия"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "편지",
-              "title_ru": "Письмо",
-              "items": [
-                {
-                  "ko": "취직",
-                  "translation_ru": "трудоустройство"
-                },
-                {
-                  "ko": "휴가",
-                  "translation_ru": "отпуск"
-                },
-                {
-                  "ko": "발음",
-                  "translation_ru": "произношение"
-                },
-                {
-                  "ko": "병원",
-                  "translation_ru": "больница"
-                },
-                {
-                  "ko": "연락하다",
-                  "translation_ru": "связываться, выходить на связь"
-                },
-                {
-                  "ko": "실망하다",
-                  "translation_ru": "разочаровываться"
-                }
-              ]
             }
           ]
         }

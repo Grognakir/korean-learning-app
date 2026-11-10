@@ -9,6 +9,99 @@
       "source_photo": "IMG_0779",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-club",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-club",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "댄스",
+              "translation_ru": "танцы"
+            },
+            {
+              "ko": "모집",
+              "translation_ru": "набор (участников)"
+            },
+            {
+              "ko": "신입생",
+              "translation_ru": "первокурсник; новичок"
+            },
+            {
+              "ko": "재작년",
+              "translation_ru": "позапрошлый год"
+            },
+            {
+              "ko": "대회",
+              "translation_ru": "соревнование, конкурс"
+            },
+            {
+              "ko": "환영하다",
+              "translation_ru": "приветствовать"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "작년",
+                "translation_ru": "прошлый год"
+              },
+              {
+                "ko": "올해",
+                "translation_ru": "этот год"
+              },
+              {
+                "ko": "내년",
+                "translation_ru": "следующий год"
+              },
+              {
+                "ko": "학기",
+                "translation_ru": "семестр"
+              },
+              {
+                "ko": "매주",
+                "translation_ru": "каждую неделю"
+              },
+              {
+                "ko": "저녁",
+                "translation_ru": "вечер"
+              },
+              {
+                "ko": "학생회관",
+                "translation_ru": "студенческий центр"
+              },
+              {
+                "ko": "동아리방",
+                "translation_ru": "комната клуба"
+              },
+              {
+                "ko": "초보자",
+                "translation_ru": "новичок"
+              },
+              {
+                "ko": "회원",
+                "translation_ru": "член клуба"
+              },
+              {
+                "ko": "상",
+                "translation_ru": "награда"
+              },
+              {
+                "ko": "받다",
+                "translation_ru": "получать"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "환영",
+                "translation_ru": "форма от 환영하다 (приветствовать)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-reading-poster",
           "toc_section": "읽고 말하기",
@@ -42,20 +135,6 @@
               "text": "어디서: 학생회관 2층 202호 동아리 방",
               "line_kind": "subheading"
             }
-          ],
-          "vocab": [
-            {
-              "ko": "댄스",
-              "translation_ru": "танцы"
-            },
-            {
-              "ko": "모집",
-              "translation_ru": "набор (участников)"
-            },
-            {
-              "ko": "신입생",
-              "translation_ru": "первокурсник; новичок"
-            }
           ]
         },
         {
@@ -82,12 +161,6 @@
             },
             {
               "text": "우리 동아리 방은 학생회관 2층 202호입니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "환영",
-              "translation_ru": "форма от 환영하다 (приветствовать)"
             }
           ]
         },
@@ -127,109 +200,6 @@
               "kind": "open",
               "prompt": "여러분은 동아리 활동을 해 본 경험이 있습니까? 이야기해 보십시오.",
               "prompt_ru": "Был ли у вас опыт участия в клубах? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-club",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-club",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "댄스",
-              "translation_ru": "танцы",
-              "group": "동아리"
-            },
-            {
-              "ko": "모집",
-              "translation_ru": "набор (участников)",
-              "group": "동아리"
-            },
-            {
-              "ko": "신입생",
-              "translation_ru": "первокурсник; новичок",
-              "group": "동아리"
-            },
-            {
-              "ko": "재작년",
-              "translation_ru": "позапрошлый год",
-              "group": "시기"
-            },
-            {
-              "ko": "대회",
-              "translation_ru": "соревнование, конкурс",
-              "group": "동아리"
-            },
-            {
-              "ko": "환영하다",
-              "translation_ru": "приветствовать",
-              "group": "동아리"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "시기",
-              "title_ru": "Время",
-              "items": [
-                {
-                  "ko": "작년",
-                  "translation_ru": "прошлый год"
-                },
-                {
-                  "ko": "올해",
-                  "translation_ru": "этот год"
-                },
-                {
-                  "ko": "내년",
-                  "translation_ru": "следующий год"
-                },
-                {
-                  "ko": "학기",
-                  "translation_ru": "семестр"
-                },
-                {
-                  "ko": "매주",
-                  "translation_ru": "каждую неделю"
-                },
-                {
-                  "ko": "저녁",
-                  "translation_ru": "вечер"
-                }
-              ]
-            },
-            {
-              "title": "동아리",
-              "title_ru": "Клуб",
-              "items": [
-                {
-                  "ko": "학생회관",
-                  "translation_ru": "студенческий центр"
-                },
-                {
-                  "ko": "동아리방",
-                  "translation_ru": "комната клуба"
-                },
-                {
-                  "ko": "초보자",
-                  "translation_ru": "новичок"
-                },
-                {
-                  "ko": "회원",
-                  "translation_ru": "член клуба"
-                },
-                {
-                  "ko": "상",
-                  "translation_ru": "награда"
-                },
-                {
-                  "ko": "받다",
-                  "translation_ru": "получать"
-                }
-              ]
             }
           ]
         }

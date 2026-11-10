@@ -9,6 +9,211 @@
       "source_photo": "IMG_0773",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-club-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "신입",
+              "translation_ru": "новичок, новый (о члене, сотруднике)"
+            },
+            {
+              "ko": "회원",
+              "translation_ru": "член (клуба, организации)"
+            },
+            {
+              "ko": "모집하다",
+              "translation_ru": "набирать (участников)"
+            },
+            {
+              "ko": "회비",
+              "translation_ru": "членский взнос"
+            },
+            {
+              "ko": "초보자",
+              "translation_ru": "новичок, начинающий"
+            },
+            {
+              "ko": "사범",
+              "translation_ru": "наставник, мастер-инструктор (в единоборствах)"
+            },
+            {
+              "ko": "교육비",
+              "translation_ru": "плата за обучение"
+            },
+            {
+              "ko": "개인",
+              "translation_ru": "личный, индивидуальный; частное лицо"
+            },
+            {
+              "ko": "중급",
+              "translation_ru": "средний уровень"
+            },
+            {
+              "ko": "중요하다",
+              "translation_ru": "быть важным"
+            },
+            {
+              "ko": "노트북",
+              "translation_ru": "ноутбук"
+            },
+            {
+              "ko": "행복",
+              "translation_ru": "счастье"
+            },
+            {
+              "ko": "어휘",
+              "translation_ru": "лексика, словарный запас"
+            },
+            {
+              "ko": "간편하다",
+              "translation_ru": "быть простым и удобным"
+            },
+            {
+              "ko": "환승하다",
+              "translation_ru": "делать пересадку"
+            },
+            {
+              "ko": "취미",
+              "translation_ru": "хобби"
+            },
+            {
+              "ko": "우정",
+              "translation_ru": "дружба"
+            },
+            {
+              "ko": "성공",
+              "translation_ru": "успех"
+            },
+            {
+              "ko": "행복하다",
+              "translation_ru": "быть счастливым"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "가입하다",
+                "translation_ru": "вступать"
+              },
+              {
+                "ko": "탈퇴하다",
+                "translation_ru": "выходить"
+              },
+              {
+                "ko": "동아리방",
+                "translation_ru": "комната клуба"
+              },
+              {
+                "ko": "포스터",
+                "translation_ru": "плакат"
+              },
+              {
+                "ko": "게다가",
+                "translation_ru": "к тому же"
+              },
+              {
+                "ko": "누구나",
+                "translation_ru": "любой"
+              },
+              {
+                "ko": "권유하다",
+                "translation_ru": "предлагать"
+              },
+              {
+                "ko": "신청하다",
+                "translation_ru": "подавать заявку"
+              },
+              {
+                "ko": "사범님",
+                "translation_ru": "тренер"
+              },
+              {
+                "ko": "검은 띠",
+                "translation_ru": "чёрный пояс"
+              },
+              {
+                "ko": "띠",
+                "translation_ru": "пояс"
+              },
+              {
+                "ko": "도복",
+                "translation_ru": "форма"
+              },
+              {
+                "ko": "도장",
+                "translation_ru": "додзё, зал"
+              },
+              {
+                "ko": "검도",
+                "translation_ru": "кендо"
+              },
+              {
+                "ko": "바둑",
+                "translation_ru": "го"
+              },
+              {
+                "ko": "무술",
+                "translation_ru": "боевое искусство"
+              },
+              {
+                "ko": "도전하다",
+                "translation_ru": "бросать вызов"
+              },
+              {
+                "ko": "시합",
+                "translation_ru": "соревнование"
+              },
+              {
+                "ko": "발음하다",
+                "translation_ru": "произносить"
+              },
+              {
+                "ko": "따라 하다",
+                "translation_ru": "повторять"
+              },
+              {
+                "ko": "외우다",
+                "translation_ru": "заучивать"
+              },
+              {
+                "ko": "평소",
+                "translation_ru": "обычно"
+              },
+              {
+                "ko": "반복하다",
+                "translation_ru": "повторять"
+              },
+              {
+                "ko": "보관하다",
+                "translation_ru": "хранить"
+              },
+              {
+                "ko": "기억하다",
+                "translation_ru": "запоминать"
+              },
+              {
+                "ko": "취업하다",
+                "translation_ru": "устроиться на работу"
+              },
+              {
+                "ko": "지도",
+                "translation_ru": "карта"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "중요",
+                "translation_ru": "форма от 중요하다 (быть важным)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-club-dialogue",
           "toc_section": "준비하기 2",
@@ -69,12 +274,6 @@
                 "는 것이"
               ]
             }
-          ],
-          "vocab": [
-            {
-              "ko": "중요",
-              "translation_ru": "форма от 중요하다 (быть важным)"
-            }
           ]
         },
         {
@@ -93,240 +292,6 @@
               "kind": "phrase",
               "text": "제일",
               "translation_ru": "самый, больше всего — «흐엉은 김치를 제일 잘 먹습니다» («Хыонг лучше всего ест кимчи»)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-club-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "신입",
-              "translation_ru": "новичок, новый (о члене, сотруднике)",
-              "group": "동아리"
-            },
-            {
-              "ko": "회원",
-              "translation_ru": "член (клуба, организации)",
-              "group": "동아리"
-            },
-            {
-              "ko": "모집하다",
-              "translation_ru": "набирать (участников)",
-              "group": "동아리"
-            },
-            {
-              "ko": "회비",
-              "translation_ru": "членский взнос",
-              "group": "동아리"
-            },
-            {
-              "ko": "초보자",
-              "translation_ru": "новичок, начинающий",
-              "group": "동아리"
-            },
-            {
-              "ko": "사범",
-              "translation_ru": "наставник, мастер-инструктор (в единоборствах)",
-              "group": "동아리"
-            },
-            {
-              "ko": "교육비",
-              "translation_ru": "плата за обучение",
-              "group": "동아리"
-            },
-            {
-              "ko": "개인",
-              "translation_ru": "личный, индивидуальный; частное лицо",
-              "group": "동아리"
-            },
-            {
-              "ko": "중급",
-              "translation_ru": "средний уровень",
-              "group": "동아리"
-            },
-            {
-              "ko": "중요하다",
-              "translation_ru": "быть важным",
-              "group": "연습"
-            },
-            {
-              "ko": "노트북",
-              "translation_ru": "ноутбук",
-              "group": "연습"
-            },
-            {
-              "ko": "행복",
-              "translation_ru": "счастье",
-              "group": "연습"
-            },
-            {
-              "ko": "어휘",
-              "translation_ru": "лексика, словарный запас",
-              "group": "연습"
-            },
-            {
-              "ko": "간편하다",
-              "translation_ru": "быть простым и удобным",
-              "group": "연습"
-            },
-            {
-              "ko": "환승하다",
-              "translation_ru": "делать пересадку",
-              "group": "연습"
-            },
-            {
-              "ko": "취미",
-              "translation_ru": "хобби",
-              "group": "연습"
-            },
-            {
-              "ko": "우정",
-              "translation_ru": "дружба",
-              "group": "연습"
-            },
-            {
-              "ko": "성공",
-              "translation_ru": "успех",
-              "group": "연습"
-            },
-            {
-              "ko": "행복하다",
-              "translation_ru": "быть счастливым",
-              "group": "연습"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "동아리",
-              "title_ru": "Клуб",
-              "items": [
-                {
-                  "ko": "가입하다",
-                  "translation_ru": "вступать"
-                },
-                {
-                  "ko": "탈퇴하다",
-                  "translation_ru": "выходить"
-                },
-                {
-                  "ko": "동아리방",
-                  "translation_ru": "комната клуба"
-                },
-                {
-                  "ko": "포스터",
-                  "translation_ru": "плакат"
-                },
-                {
-                  "ko": "게다가",
-                  "translation_ru": "к тому же"
-                },
-                {
-                  "ko": "누구나",
-                  "translation_ru": "любой"
-                },
-                {
-                  "ko": "권유하다",
-                  "translation_ru": "предлагать"
-                },
-                {
-                  "ko": "신청하다",
-                  "translation_ru": "подавать заявку"
-                }
-              ]
-            },
-            {
-              "title": "태권도",
-              "title_ru": "Боевые искусства",
-              "items": [
-                {
-                  "ko": "사범님",
-                  "translation_ru": "тренер"
-                },
-                {
-                  "ko": "검은 띠",
-                  "translation_ru": "чёрный пояс"
-                },
-                {
-                  "ko": "띠",
-                  "translation_ru": "пояс"
-                },
-                {
-                  "ko": "도복",
-                  "translation_ru": "форма"
-                },
-                {
-                  "ko": "도장",
-                  "translation_ru": "додзё, зал"
-                },
-                {
-                  "ko": "검도",
-                  "translation_ru": "кендо"
-                },
-                {
-                  "ko": "바둑",
-                  "translation_ru": "го"
-                },
-                {
-                  "ko": "무술",
-                  "translation_ru": "боевое искусство"
-                },
-                {
-                  "ko": "도전하다",
-                  "translation_ru": "бросать вызов"
-                },
-                {
-                  "ko": "시합",
-                  "translation_ru": "соревнование"
-                }
-              ]
-            },
-            {
-              "title": "연습",
-              "title_ru": "Слова из упражнений",
-              "items": [
-                {
-                  "ko": "발음하다",
-                  "translation_ru": "произносить"
-                },
-                {
-                  "ko": "따라 하다",
-                  "translation_ru": "повторять"
-                },
-                {
-                  "ko": "외우다",
-                  "translation_ru": "заучивать"
-                },
-                {
-                  "ko": "평소",
-                  "translation_ru": "обычно"
-                },
-                {
-                  "ko": "반복하다",
-                  "translation_ru": "повторять"
-                },
-                {
-                  "ko": "보관하다",
-                  "translation_ru": "хранить"
-                },
-                {
-                  "ko": "기억하다",
-                  "translation_ru": "запоминать"
-                },
-                {
-                  "ko": "취업하다",
-                  "translation_ru": "устроиться на работу"
-                },
-                {
-                  "ko": "지도",
-                  "translation_ru": "карта"
-                }
-              ]
             }
           ]
         }

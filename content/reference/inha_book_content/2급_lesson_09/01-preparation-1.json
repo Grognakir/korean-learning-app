@@ -9,6 +9,195 @@
       "source_photo": "IMG_0916",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-appointment-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "예약하다",
+              "translation_ru": "бронировать, записываться заранее"
+            },
+            {
+              "ko": "성함",
+              "translation_ru": "имя (уважительно)"
+            },
+            {
+              "ko": "치과",
+              "translation_ru": "стоматология"
+            },
+            {
+              "ko": "가능하다",
+              "translation_ru": "быть возможным"
+            },
+            {
+              "ko": "변경하다",
+              "translation_ru": "изменять, менять"
+            },
+            {
+              "ko": "메시지",
+              "translation_ru": "сообщение"
+            },
+            {
+              "ko": "변경",
+              "translation_ru": "изменение"
+            },
+            {
+              "ko": "반드시",
+              "translation_ru": "обязательно, непременно"
+            },
+            {
+              "ko": "학생증",
+              "translation_ru": "студенческий билет"
+            },
+            {
+              "ko": "테니스장",
+              "translation_ru": "теннисный корт"
+            },
+            {
+              "ko": "주차장",
+              "translation_ru": "парковка"
+            },
+            {
+              "ko": "세탁하다",
+              "translation_ru": "стирать"
+            },
+            {
+              "ko": "한의원",
+              "translation_ru": "клиника корейской традиционной медицины"
+            },
+            {
+              "ko": "산부인과",
+              "translation_ru": "акушерство и гинекология"
+            },
+            {
+              "ko": "외과",
+              "translation_ru": "хирургия"
+            },
+            {
+              "ko": "안과",
+              "translation_ru": "офтальмология"
+            },
+            {
+              "ko": "내과",
+              "translation_ru": "терапия (внутренние болезни)"
+            },
+            {
+              "ko": "이비인후과",
+              "translation_ru": "отоларингология (ухо, горло, нос)"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "성형외과",
+                "translation_ru": "пластическая хирургия"
+              },
+              {
+                "ko": "정형외과",
+                "translation_ru": "травматология"
+              },
+              {
+                "ko": "피부과",
+                "translation_ru": "дерматология"
+              },
+              {
+                "ko": "소아청소년과",
+                "translation_ru": "педиатрия"
+              },
+              {
+                "ko": "비뇨기과",
+                "translation_ru": "урология"
+              },
+              {
+                "ko": "신경과",
+                "translation_ru": "неврология"
+              },
+              {
+                "ko": "정신과",
+                "translation_ru": "психиатрия"
+              },
+              {
+                "ko": "종합병원",
+                "translation_ru": "многопрофильная больница"
+              },
+              {
+                "ko": "병원",
+                "translation_ru": "больница"
+              },
+              {
+                "ko": "약국",
+                "translation_ru": "аптека"
+              },
+              {
+                "ko": "진찰받다",
+                "translation_ru": "проходить осмотр"
+              },
+              {
+                "ko": "입원하다",
+                "translation_ru": "ложиться в больницу"
+              },
+              {
+                "ko": "퇴원하다",
+                "translation_ru": "выписываться"
+              },
+              {
+                "ko": "수술",
+                "translation_ru": "операция"
+              },
+              {
+                "ko": "주사",
+                "translation_ru": "укол"
+              },
+              {
+                "ko": "여권",
+                "translation_ru": "загранпаспорт"
+              },
+              {
+                "ko": "비행기 표",
+                "translation_ru": "авиабилет"
+              },
+              {
+                "ko": "휴가",
+                "translation_ru": "отпуск"
+              },
+              {
+                "ko": "예매하다",
+                "translation_ru": "покупать заранее"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "예약한",
+                "translation_ru": "форма от 예약하다 (резервировать, бронировать)"
+              },
+              {
+                "ko": "예약",
+                "translation_ru": "бронь, предварительная запись"
+              },
+              {
+                "ko": "잠시만",
+                "translation_ru": "форма от 잠시 (ненадолго, на мгновение) + 만 «только»"
+              },
+              {
+                "ko": "이후",
+                "translation_ru": "после, впоследствии"
+              },
+              {
+                "ko": "휴대전화",
+                "translation_ru": "мобильный телефон"
+              },
+              {
+                "ko": "확인해",
+                "translation_ru": "форма от 확인하다 (проверять, подтверждать)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-appointment-dialogue",
           "toc_section": "준비하기 1",
@@ -75,229 +264,6 @@
             {
               "speaker": "자르갈",
               "text": "고맙습니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "예약한",
-              "translation_ru": "форма от 예약하다 (резервировать, бронировать)"
-            },
-            {
-              "ko": "예약",
-              "translation_ru": "бронь, предварительная запись"
-            },
-            {
-              "ko": "잠시만",
-              "translation_ru": "форма от 잠시 (ненадолго, на мгновение) + 만 «только»"
-            },
-            {
-              "ko": "이후",
-              "translation_ru": "после, впоследствии"
-            },
-            {
-              "ko": "휴대전화",
-              "translation_ru": "мобильный телефон"
-            },
-            {
-              "ko": "확인해",
-              "translation_ru": "форма от 확인하다 (проверять, подтверждать)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-appointment-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "예약하다",
-              "translation_ru": "бронировать, записываться заранее",
-              "group": "병원"
-            },
-            {
-              "ko": "성함",
-              "translation_ru": "имя (уважительно)",
-              "group": "병원"
-            },
-            {
-              "ko": "치과",
-              "translation_ru": "стоматология",
-              "group": "과"
-            },
-            {
-              "ko": "가능하다",
-              "translation_ru": "быть возможным",
-              "group": "병원"
-            },
-            {
-              "ko": "변경하다",
-              "translation_ru": "изменять, менять",
-              "group": "병원"
-            },
-            {
-              "ko": "메시지",
-              "translation_ru": "сообщение",
-              "group": "병원"
-            },
-            {
-              "ko": "변경",
-              "translation_ru": "изменение",
-              "group": "병원"
-            },
-            {
-              "ko": "반드시",
-              "translation_ru": "обязательно, непременно",
-              "group": "병원"
-            },
-            {
-              "ko": "학생증",
-              "translation_ru": "студенческий билет",
-              "group": "준비"
-            },
-            {
-              "ko": "테니스장",
-              "translation_ru": "теннисный корт",
-              "group": "준비"
-            },
-            {
-              "ko": "주차장",
-              "translation_ru": "парковка",
-              "group": "준비"
-            },
-            {
-              "ko": "세탁하다",
-              "translation_ru": "стирать",
-              "group": "준비"
-            },
-            {
-              "ko": "한의원",
-              "translation_ru": "клиника корейской традиционной медицины",
-              "group": "과"
-            },
-            {
-              "ko": "산부인과",
-              "translation_ru": "акушерство и гинекология",
-              "group": "과"
-            },
-            {
-              "ko": "외과",
-              "translation_ru": "хирургия",
-              "group": "과"
-            },
-            {
-              "ko": "안과",
-              "translation_ru": "офтальмология",
-              "group": "과"
-            },
-            {
-              "ko": "내과",
-              "translation_ru": "терапия (внутренние болезни)",
-              "group": "과"
-            },
-            {
-              "ko": "이비인후과",
-              "translation_ru": "отоларингология (ухо, горло, нос)",
-              "group": "과"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "과",
-              "title_ru": "Отделения",
-              "items": [
-                {
-                  "ko": "성형외과",
-                  "translation_ru": "пластическая хирургия"
-                },
-                {
-                  "ko": "정형외과",
-                  "translation_ru": "травматология"
-                },
-                {
-                  "ko": "피부과",
-                  "translation_ru": "дерматология"
-                },
-                {
-                  "ko": "소아청소년과",
-                  "translation_ru": "педиатрия"
-                },
-                {
-                  "ko": "비뇨기과",
-                  "translation_ru": "урология"
-                },
-                {
-                  "ko": "신경과",
-                  "translation_ru": "неврология"
-                },
-                {
-                  "ko": "정신과",
-                  "translation_ru": "психиатрия"
-                },
-                {
-                  "ko": "종합병원",
-                  "translation_ru": "многопрофильная больница"
-                }
-              ]
-            },
-            {
-              "title": "병원",
-              "title_ru": "В больнице",
-              "items": [
-                {
-                  "ko": "병원",
-                  "translation_ru": "больница"
-                },
-                {
-                  "ko": "약국",
-                  "translation_ru": "аптека"
-                },
-                {
-                  "ko": "진찰받다",
-                  "translation_ru": "проходить осмотр"
-                },
-                {
-                  "ko": "입원하다",
-                  "translation_ru": "ложиться в больницу"
-                },
-                {
-                  "ko": "퇴원하다",
-                  "translation_ru": "выписываться"
-                },
-                {
-                  "ko": "수술",
-                  "translation_ru": "операция"
-                },
-                {
-                  "ko": "주사",
-                  "translation_ru": "укол"
-                }
-              ]
-            },
-            {
-              "title": "준비",
-              "title_ru": "Что нужно взять",
-              "items": [
-                {
-                  "ko": "여권",
-                  "translation_ru": "загранпаспорт"
-                },
-                {
-                  "ko": "비행기 표",
-                  "translation_ru": "авиабилет"
-                },
-                {
-                  "ko": "휴가",
-                  "translation_ru": "отпуск"
-                },
-                {
-                  "ko": "예매하다",
-                  "translation_ru": "покупать заранее"
-                }
-              ]
             }
           ]
         }

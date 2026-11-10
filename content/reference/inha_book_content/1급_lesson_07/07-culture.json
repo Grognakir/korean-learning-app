@@ -9,63 +9,6 @@
       "source_photo": "IMG_1052",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-seasons",
-          "toc_section": "문화 이해하기",
-          "title": "한국의 계절과 여행",
-          "title_ru": "Времена года и путешествия в Корее",
-          "illustration": {
-            "storage_path": "lesson_7/illustration_5_four_season_travel.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "여기가 어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
-          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
-          "lines": [
-            {
-              "text": "한국은 사계절이 있습니다. 사람들은 봄에 꽃구경을 하러 야외로 갑니다. 봄에는 꽃이 많이 핍니다. 특히 벚꽃이 아름답습니다. 서울 여의도에서는 봄마다 벚꽃 축제를 합니다."
-            },
-            {
-              "text": "여름에는 사람들이 수영을 하러 바다로 갑니다. 한국에는 해수욕장이 많이 있습니다. 인천에는 ‘을왕리 해수욕장’, 강원도에는 ‘속초 해수욕장’, 부산에는 ‘해운대 해수욕장’이 있습니다."
-            },
-            {
-              "text": "가을은 날씨가 맑고 시원합니다. 그래서 사람들은 산에 갑니다. 가을 산은 단풍이 정말 아름답습니다. 사람들은 가을에 설악산과 지리산, 한라산에 많이 갑니다."
-            },
-            {
-              "text": "겨울에는 눈이 옵니다. 그래서 사람들은 스키장에 갑니다. 스키장에서 스키와 스노보드를 탑니다. 그리고 눈썰매도 탑니다. 스키장은 강원도에 많이 있습니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "핍",
-              "translation_ru": "форма от 피다 (цвести)"
-            }
-          ]
-        },
-        {
-          "type": "comprehension_exercise",
-          "id": "reading-culture-seasons",
-          "toc_section": "문화 이해하기",
-          "exercise_kind": "reading",
-          "title": "한국의 계절과 여행",
-          "title_ru": "Времена года и путешествия в Корее",
-          "questions": [
-            {
-              "kind": "open",
-              "prompt": "한국 사람들은 계절마다 무엇을 합니까?",
-              "prompt_ru": "Что корейцы делают в каждое время года?"
-            },
-            {
-              "kind": "open",
-              "prompt": "여러분 나라의 사람들은 계절마다 무엇을 합니까?",
-              "prompt_ru": "Что делают люди в вашей стране в каждое время года?"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -113,6 +56,65 @@
             {
               "ko": "눈썰매",
               "translation_ru": "санки"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "핍",
+                "translation_ru": "форма от 피다 (цвести)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-culture-seasons",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 계절과 여행",
+          "title_ru": "Времена года и путешествия в Корее",
+          "illustration": {
+            "storage_path": "lesson_7/illustration_5_four_season_travel.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "여기가 어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "한국은 사계절이 있습니다. 사람들은 봄에 꽃구경을 하러 야외로 갑니다. 봄에는 꽃이 많이 핍니다. 특히 벚꽃이 아름답습니다. 서울 여의도에서는 봄마다 벚꽃 축제를 합니다."
+            },
+            {
+              "text": "여름에는 사람들이 수영을 하러 바다로 갑니다. 한국에는 해수욕장이 많이 있습니다. 인천에는 ‘을왕리 해수욕장’, 강원도에는 ‘속초 해수욕장’, 부산에는 ‘해운대 해수욕장’이 있습니다."
+            },
+            {
+              "text": "가을은 날씨가 맑고 시원합니다. 그래서 사람들은 산에 갑니다. 가을 산은 단풍이 정말 아름답습니다. 사람들은 가을에 설악산과 지리산, 한라산에 많이 갑니다."
+            },
+            {
+              "text": "겨울에는 눈이 옵니다. 그래서 사람들은 스키장에 갑니다. 스키장에서 스키와 스노보드를 탑니다. 그리고 눈썰매도 탑니다. 스키장은 강원도에 많이 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-seasons",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 계절과 여행",
+          "title_ru": "Времена года и путешествия в Корее",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국 사람들은 계절마다 무엇을 합니까?",
+              "prompt_ru": "Что корейцы делают в каждое время года?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 사람들은 계절마다 무엇을 합니까?",
+              "prompt_ru": "Что делают люди в вашей стране в каждое время года?"
             }
           ]
         },

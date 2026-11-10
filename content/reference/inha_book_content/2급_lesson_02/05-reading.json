@@ -9,6 +9,101 @@
       "source_photo": "photo_29",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-ikgo-malhagi",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-smell",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "독특하다",
+              "translation_ru": "своеобразный, уникальный"
+            },
+            {
+              "ko": "냄새",
+              "translation_ru": "запах"
+            },
+            {
+              "ko": "마늘",
+              "translation_ru": "чеснок"
+            },
+            {
+              "ko": "옆집",
+              "translation_ru": "соседний дом, соседи"
+            },
+            {
+              "ko": "놀라다",
+              "translation_ru": "удивляться"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "맵다",
+                "translation_ru": "острый"
+              },
+              {
+                "ko": "짜다",
+                "translation_ru": "солёный"
+              },
+              {
+                "ko": "달다",
+                "translation_ru": "сладкий"
+              },
+              {
+                "ko": "싱겁다",
+                "translation_ru": "пресный"
+              },
+              {
+                "ko": "시다",
+                "translation_ru": "кислый"
+              },
+              {
+                "ko": "김치찌개",
+                "translation_ru": "суп с кимчи"
+              },
+              {
+                "ko": "불고기",
+                "translation_ru": "пулькоги"
+              },
+              {
+                "ko": "된장찌개",
+                "translation_ru": "суп с пастой твенджан"
+              },
+              {
+                "ko": "식당",
+                "translation_ru": "ресторан, столовая"
+              },
+              {
+                "ko": "주문하다",
+                "translation_ru": "заказывать"
+              },
+              {
+                "ko": "음식",
+                "translation_ru": "еда"
+              },
+              {
+                "ko": "맛",
+                "translation_ru": "вкус"
+              },
+              {
+                "ko": "땀",
+                "translation_ru": "пот"
+              },
+              {
+                "ko": "이마",
+                "translation_ru": "лоб"
+              },
+              {
+                "ko": "싫어하다",
+                "translation_ru": "не любить"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-reading-smell",
           "toc_section": "읽고 말하기",
@@ -43,122 +138,6 @@
             },
             {
               "text": "3) 여러분의 한국 생활의 경험을 이야기해 보십시오."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-ikgo-malhagi",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-smell",
-          "source_note": "рукописный список на полях страницы",
-          "items": [
-            {
-              "ko": "독특하다",
-              "translation_ru": "своеобразный, уникальный",
-              "group": "맛"
-            },
-            {
-              "ko": "냄새",
-              "translation_ru": "запах",
-              "group": "음식"
-            },
-            {
-              "ko": "마늘",
-              "translation_ru": "чеснок",
-              "group": "음식"
-            },
-            {
-              "ko": "옆집",
-              "translation_ru": "соседний дом, соседи",
-              "group": "몸"
-            },
-            {
-              "ko": "놀라다",
-              "translation_ru": "удивляться",
-              "group": "몸"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "맛",
-              "title_ru": "Вкус",
-              "items": [
-                {
-                  "ko": "맵다",
-                  "translation_ru": "острый"
-                },
-                {
-                  "ko": "짜다",
-                  "translation_ru": "солёный"
-                },
-                {
-                  "ko": "달다",
-                  "translation_ru": "сладкий"
-                },
-                {
-                  "ko": "싱겁다",
-                  "translation_ru": "пресный"
-                },
-                {
-                  "ko": "시다",
-                  "translation_ru": "кислый"
-                }
-              ]
-            },
-            {
-              "title": "음식",
-              "title_ru": "Еда",
-              "items": [
-                {
-                  "ko": "김치찌개",
-                  "translation_ru": "суп с кимчи"
-                },
-                {
-                  "ko": "불고기",
-                  "translation_ru": "пулькоги"
-                },
-                {
-                  "ko": "된장찌개",
-                  "translation_ru": "суп с пастой твенджан"
-                },
-                {
-                  "ko": "식당",
-                  "translation_ru": "ресторан, столовая"
-                },
-                {
-                  "ko": "주문하다",
-                  "translation_ru": "заказывать"
-                },
-                {
-                  "ko": "음식",
-                  "translation_ru": "еда"
-                },
-                {
-                  "ko": "맛",
-                  "translation_ru": "вкус"
-                }
-              ]
-            },
-            {
-              "title": "몸",
-              "title_ru": "Реакция",
-              "items": [
-                {
-                  "ko": "땀",
-                  "translation_ru": "пот"
-                },
-                {
-                  "ko": "이마",
-                  "translation_ru": "лоб"
-                },
-                {
-                  "ko": "싫어하다",
-                  "translation_ru": "не любить"
-                }
-              ]
             }
           ]
         }

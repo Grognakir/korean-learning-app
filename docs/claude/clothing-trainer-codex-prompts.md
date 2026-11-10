@@ -49,7 +49,7 @@ STEP 5 — SELF-CHECK
 - Put all 8 emotions side by side in a preview image and confirm face, hair colors, outfit, piercings and border match; regenerate any frame that drifted, using idle.png as reference.
 - Put the girl and the 5 avatars side by side and confirm the line and shading style matches base_happy.png and the clothing icons.
 - Confirm no green fringe remains on edges.
-- Save the exact prompts used to content/reference/art-sources/lesson-sticker/lesson10-girl/generation-prompts.json and content/reference/art-sources/clothing-game/avatars/generation-prompts.json.
+- Save the exact prompts used to content/reference/art-sources/solomon-os/lesson-sticker/lesson10-girl/generation-prompts.json and content/reference/art-sources/solomon-os/clothing-game/avatars/generation-prompts.json.
 Do not modify any app code.
 ```
 
@@ -61,7 +61,7 @@ Do not modify any app code.
 Task: generate the clothing icon catalog (35 items) and 4 pattern tiles for the lesson-10 clothing trainer of a Korean-learning app. Use the built-in image generation tool. Do not modify any app code.
 
 STYLE (match exactly)
-- Style reference: the sticker girl public/images/lesson-sticker/lesson10-girl/idle.png (1024px source: content/reference/art-sources/lesson-sticker/lesson10-girl/sources/idle.png). Copy ONLY her drawing style, so the icons look like part of the same sticker pack: the same bold black ink outline with the same varied line weight, the same sharp cel-shadow shapes and glossy highlight strokes, the same thick white die-cut sticker border (~24px at 1024) around the silhouette. Do NOT use the older test2 icons as style reference.
+- Style reference: the sticker girl public/images/lesson-sticker/lesson10-girl/idle.png (1024px source: content/reference/art-sources/solomon-os/lesson-sticker/lesson10-girl/sources/idle.png). Copy ONLY her drawing style, so the icons look like part of the same sticker pack: the same bold black ink outline with the same varied line weight, the same sharp cel-shadow shapes and glossy highlight strokes, the same thick white die-cut sticker border (~24px at 1024) around the silhouette. Do NOT use the older test2 icons as style reference.
 - Only the style, line and shading follow the sticker, not its colors. Every recolorable part is drawn WHITE with neutral-gray cel shadows (the app tints it by multiply). Non-recolorable parts (soles, buckles, zippers, metal, lenses, watch face, jewelry stones) are drawn in mid/dark neutral gray or as noted.
 - One item per image, catalog flat-lay or clean three-quarter view, newly composed. No person, body, skin, mannequin, hanger, hands, text, logos, brand marks, props or other clothing.
 - Square 1024x1024, solid flat #00FF00 background (same as the sticker), no floor shadow, no noise, fully inside the canvas, crisp closed silhouette for exact mask extraction. No green anywhere on the item.
@@ -130,7 +130,7 @@ For each item:
    - public/images/clothing-game/prod/icons/<id>_fabric.png — 256x256 single-channel alpha mask (L mode), aligned pixel-perfect with the icon. Skip for non-recolorable items (jeans, ring, earrings, glasses).
    - public/images/clothing-game/prod/patterns/<id>.png — RGBA 256x256 tiles: marks white-opaque, background transparent (the app tints the marks).
    - public/images/clothing-game/prod/icons/manifest.json — array of {id, ko, slot, recolorable, patternable}. slot ∈ top, bottom, full, outer, shoes, head, neck, hands, other. patternable=true for fabric garments, socks, tie, muffler, scarf, hat, bag; true also for swimsuit; false for shoes, jeans, ring, earrings, watch, glasses.
-4. Keep 1024px sources, intermediate masks, contact sheets and generation-prompts.json in content/reference/art-sources/clothing-game/icons/ and .../patterns/ — NOT in public/.
+4. Keep 1024px sources, intermediate masks, contact sheets and generation-prompts.json in content/reference/art-sources/solomon-os/clothing-game/icons/ and .../patterns/ — NOT in public/.
 
 SELF-CHECK
 - Contact sheet of all 35 icons at 72px on a light-gray background next to the sticker girl idle.png at the same size: same line weight, shading and sticker border, readable silhouettes, consistent scale tiers.
@@ -150,7 +150,7 @@ SETTING
 A modal window that looks like a hacker computer terminal: near-black background (#050a06), phosphor-green UI (#00ff66 bright, #0fbf4f mid, #0a5c2a dim), monospace pixel-ish font, faint CRT scanlines, subtle glow, thin 1px green frames with corner brackets, blinking block cursor. Matrix / retro-terminal vibe, clean and readable, not noisy.
 Characters are shown half-body (head, neck, shoulders, arms, torso down to the hips), large, on the left or center, like a visual-novel / game dialogue. Below them a dialogue box with the speaker name tag and the line of text; Korean text must be crisp Hangul.
 
-MAIN CHARACTER (the girl): use public/images/lesson-sticker/lesson10-girl/idle.png (1024px source: content/reference/art-sources/lesson-sticker/lesson10-girl/sources/idle.png) as the identity reference — same face, chin-length choppy bob with blunt bangs, hot magenta-pink fading to violet hair with electric-blue streaks, eyeliner, silver ear piercings. Now half-body: black cropped bomber jacket with magenta trim over a white top, holding a smartphone.
+MAIN CHARACTER (the girl): use public/images/lesson-sticker/lesson10-girl/idle.png (1024px source: content/reference/art-sources/solomon-os/lesson-sticker/lesson10-girl/sources/idle.png) as the identity reference — same face, chin-length choppy bob with blunt bangs, hot magenta-pink fading to violet hair with electric-blue streaks, eyeliner, silver ear piercings. Now half-body: black cropped bomber jacket with magenta trim over a white top, holding a smartphone.
 
 MAKE TWO STYLE VARIANTS of every screen so the user can choose:
 - Variant A "hologram": characters rendered monochrome phosphor green with scanlines, like a hologram on the terminal.
@@ -163,7 +163,7 @@ SCREENS (16:10, 1600x1000 each, both variants = 8 images)
 4. interview-fail — in front of an office building entrance (simple line-art background), the girl half-body, angry, arms crossed; dialogue: "뭘 산 거야?! 내가 정장 사라고 했잖아!"; buttons "↺ 가게로 돌아가기".
 
 OUTPUT
-- Save to content/reference/art-sources/clothing-game/dialogue-mockups/{A,B}-{incoming,call,shop,interview-fail}.png plus a side-by-side contact sheet compare.png and generation-prompts.json.
+- Save to content/reference/art-sources/solomon-os/clothing-game/dialogue-mockups/{A,B}-{incoming,call,shop,interview-fail}.png plus a side-by-side contact sheet compare.png and generation-prompts.json.
 - Nothing goes into public/.
 
 SELF-CHECK
@@ -180,12 +180,12 @@ SELF-CHECK
 Task: generate the final character art, one background and a new sticker for the dialogue mini-game (Korean-learning web app, lesson 10, "job interview" episode). Use the built-in image generation tool. Do not modify any app code.
 
 STYLE (all characters)
-- Match the FULL-COLOR characters of the approved mockups content/reference/art-sources/clothing-game/dialogue-mockups/B-call.png, B-shop.png, B-interview-fail.png: bold black ink outline with varied line weight, sharp cel shading, anime-comic proportions, same quality.
+- Match the FULL-COLOR characters of the approved mockups content/reference/art-sources/solomon-os/clothing-game/dialogue-mockups/B-call.png, B-shop.png, B-interview-fail.png: bold black ink outline with varied line weight, sharp cel shading, anime-comic proportions, same quality.
 - Characters are drawn ONLY in full color. The app turns them into a green hologram with a filter for phone/online scenes, so: clear readable values (light skin and white shirt vs dark jacket), strong outline, no green anywhere on the characters, no glow, no scanlines, no UI, no text.
 - Half-body: head, neck, shoulders, both arms, torso down to the hips, cut cleanly at the hips. Facing slightly toward the viewer's right (they stand at the left of a dialogue screen). Same scale, same crop height and same head position in every frame of one character, so frames can be swapped without jumping.
 - Canvas 1024x1280 (portrait), solid flat #00FF00 background, no shadow, character centered horizontally, top of hair ~60px from the top, hips touching the bottom edge.
 
-CHARACTER 1 — 지아 (the girl). Identity: content/reference/art-sources/lesson-sticker/lesson10-girl/sources/idle.png and the mockups — chin-length choppy bob with blunt bangs, hot magenta-pink fading to violet with electric-blue streaks, winged eyeliner, two silver ear studs. Outfit (changed from the mockups): black bomber jacket with magenta trim, open, over a plain white crew-neck T-shirt that covers the whole torso (not cropped, modest neckline), dark pants at the hips. A black smartphone where noted.
+CHARACTER 1 — 지아 (the girl). Identity: content/reference/art-sources/solomon-os/lesson-sticker/lesson10-girl/sources/idle.png and the mockups — chin-length choppy bob with blunt bangs, hot magenta-pink fading to violet with electric-blue streaks, winged eyeliner, two silver ear studs. Outfit (changed from the mockups): black bomber jacket with magenta trim, open, over a plain white crew-neck T-shirt that covers the whole torso (not cropped, modest neckline), dark pants at the hips. A black smartphone where noted.
 Generate idle first, then every other frame from it as identity reference (same face, hair, outfit, crop):
 - call-annoyed — phone to her ear (right hand), eyebrows down, pouting: "finally you picked up".
 - call-talk — phone to her ear, neutral talking, mouth slightly open.
@@ -194,14 +194,14 @@ Generate idle first, then every other frame from it as identity reference (same 
 - happy — no phone, big proud grin, thumbs-up, sparkles not needed.
 - angry — no phone, arms crossed, furious frown, mouth open scolding (like mockup B-interview-fail).
 - facepalm — no phone, palm on her forehead, eyes closed, exasperated.
-Save: content/reference/art-sources/dialogue/jia/sources/<name>.png and public/images/dialogue/jia/<name>.png.
+Save: content/reference/art-sources/solomon-os/dialogue/jia/sources/<name>.png and public/images/dialogue/jia/<name>.png.
 
 CHARACTER 2 — 점원 (shop assistant, online clothing store, appears as a hologram). Identity from mockup B-shop.png: Korean man, late twenties, tousled dark hair, friendly face, grey button-up shirt with sleeves rolled, black apron.
 - welcome — open palm gesture toward the viewer's right, warm smile (like the mockup).
 - smile — hands together, polite smile.
 - thinking — hand on chin, looking at something to the side, slight frown.
 - bow — polite slight bow, eyes closed, smiling: "thank you".
-Save: content/reference/art-sources/dialogue/clerk/sources/<name>.png and public/images/dialogue/clerk/<name>.png.
+Save: content/reference/art-sources/solomon-os/dialogue/clerk/sources/<name>.png and public/images/dialogue/clerk/<name>.png.
 
 BACKGROUND
 - office-entrance — the office building entrance from mockup B-interview-fail.png, WITHOUT any character: green line-art on near-black (#050a06), lines #0fbf4f / #0a5c2a, glass doors, plants, calm, low detail at the left third (character stands there), 1600x1000. Save public/images/dialogue/bg/office-entrance.webp (quality ~82) and the PNG source in content/.
@@ -209,7 +209,7 @@ BACKGROUND
 NEW STICKER (button on the lesson page, white background page)
 - 지아's head and shoulders in the old sticker style (thick white die-cut border ~24px, transparent background via #00FF00), wearing small black headphones with a mic, smartphone screen glowing green beside her face; a small green "incoming call" ring icon near the phone.
 - Frames: idle, blink (identical, only eyes closed), hover (excited "oh?"), ringing (phone vibrating — motion lines, mouth open "hey!").
-Save content/reference/art-sources/lesson-sticker/jia-call/sources/<name>.png and public/images/lesson-sticker/jia-call/<name>.png.
+Save content/reference/art-sources/solomon-os/lesson-sticker/jia-call/sources/<name>.png and public/images/lesson-sticker/jia-call/<name>.png.
 
 POST-PROCESS (Python, Pillow + numpy; may extend existing scripts)
 - Remove #00FF00 to RGBA with despill, RGB=0 where alpha=0.
@@ -217,7 +217,7 @@ POST-PROCESS (Python, Pillow + numpy; may extend existing scripts)
 - Sticker: export 256x256 like the old sticker set.
 - Keep every frame of a character pixel-aligned (same crop box).
 
-SELF-CHECK (save sheets in content/reference/art-sources/dialogue/)
+SELF-CHECK (save sheets in content/reference/art-sources/solomon-os/dialogue/)
 - frames-jia.png / frames-clerk.png: all frames side by side — same face, hair, outfit, scale, crop; no frame jumps.
 - holo-test.png: every character frame next to a hologram version (luminance → green ramp #05100a → #0fbf4f → #c0ffd0, 1-in-4 scanlines darkened 20%) on #050a06, to confirm faces and gestures stay readable in green.
 - No green fringe on edges; the T-shirt covers the torso.
@@ -232,9 +232,9 @@ SELF-CHECK (save sheets in content/reference/art-sources/dialogue/)
 Task: fix ONLY the smartphone in the 4 sticker frames of 지아 (lesson sticker "jia-call"). Use the built-in image generation tool in edit mode. Do not modify any app code.
 
 FILES
-- Sources: content/reference/art-sources/lesson-sticker/jia-call/sources/{idle,blink,hover,ringing}.png (1024x1024 on #00FF00).
+- Sources: content/reference/art-sources/solomon-os/lesson-sticker/jia-call/sources/{idle,blink,hover,ringing}.png (1024x1024 on #00FF00).
 - Exports: public/images/lesson-sticker/jia-call/{idle,blink,hover,ringing}.png (256x256 RGBA).
-- Before editing, copy the current sources and exports to content/reference/art-sources/lesson-sticker/jia-call/revisions/neon-phone/{sources,exports}/.
+- Before editing, copy the current sources and exports to content/reference/art-sources/solomon-os/lesson-sticker/jia-call/revisions/neon-phone/{sources,exports}/.
 
 WHAT TO CHANGE (phone area only)
 1. Phone screen: replace the flat neon #00FF00 fill with a dark terminal screen — near-black green #06140b, thin bright green (#00ff66) elements: a small call waveform (3–5 vertical bars) in the middle and a tiny "• • •" or "CALL" label in monospace; subtle glow on the screen edge only. Absolutely no pure #00FF00 anywhere (it is the chroma-key colour).
@@ -263,7 +263,7 @@ Task: generate two 3D store mannequins (male and female) for the online-store sc
 
 CONTEXT
 - The scene is a dark green "hacker terminal" UI. In the store the clerk and the mannequins are shown as a green hologram: the app converts colours to a green ramp with a filter (luminance → #05100a … #0fbf4f … #c0ffd0) and adds scanlines. So draw the mannequins in NEUTRAL colours with strong value contrast; no green, no glow, no scanlines, no UI, no text.
-- Style reference for line/shading consistency: public/images/dialogue/clerk/welcome.webp (the clerk who stands next to them) and content/reference/art-sources/dialogue/shop-mannequins.html (layout idea: two mannequins to the right of the clerk).
+- Style reference for line/shading consistency: public/images/dialogue/clerk/welcome.webp (the clerk who stands next to them) and content/reference/art-sources/solomon-os/dialogue/shop-mannequins.html (layout idea: two mannequins to the right of the clerk).
 
 THE MANNEQUINS
 - NOT realistic people: smooth faceless 3D display mannequins (glossy light-grey / white plastic, subtle cel shading, bold dark outline like the clerk), visibly SEGMENTED into parts with thin seams/joints (neck ring, shoulder joints, elbow/wrist joints, waist seam, knee joints), standing on a thin metal stand with a round base.
@@ -281,7 +281,7 @@ For each mannequin produce one mask PNG per zone, same size and pixel-aligned wi
 Derive them by editing a copy of the image where each zone is painted a distinct flat colour, then threshold; refine by hand where needed so thin parts (tie, strap, earrings, glasses) stay clickable — dilate thin zones by ~6px at 1024 so they are not too small to hit.
 
 OUTPUT
-- Sources (1024x1536, chroma background) + zone-colour edit + masks: content/reference/art-sources/dialogue/mannequins/{male,female}/...
+- Sources (1024x1536, chroma background) + zone-colour edit + masks: content/reference/art-sources/solomon-os/dialogue/mannequins/{male,female}/...
 - App files:
   public/images/dialogue/mannequins/male.webp, female.webp — RGBA (background cut with despill), 512x768, WebP quality ~85.
   public/images/dialogue/mannequins/male-zones.png, female-zones.png — ONE combined zone map per mannequin, 512x768, NO antialiasing, every zone filled with its exact index colour, transparent elsewhere:
@@ -290,7 +290,7 @@ OUTPUT
   public/images/dialogue/mannequins/zones.json — { "male": { "head": [x,y,w,h], ... }, "female": {...} } bounding boxes in 512x768 coordinates (for placing popups/labels).
 - generation-prompts.json with the exact prompts.
 
-SELF-CHECK (save sheets in content/reference/art-sources/dialogue/mannequins/)
+SELF-CHECK (save sheets in content/reference/art-sources/solomon-os/dialogue/mannequins/)
 - preview.png: both mannequins side by side next to clerk/welcome.webp at the same scale, in colour AND through the hologram ramp above on #050a06 — segmentation, clothes and zones must read clearly in green.
 - zones-overlay.png: each mannequin with every zone outlined in a different colour + label; confirm no overlaps, no gaps on clothing, thin zones dilated.
 - Confirm zone map pixels are exact index colours (no blended values), sizes 512x768, no green fringe on the mannequin edges.
@@ -304,7 +304,7 @@ SELF-CHECK (save sheets in content/reference/art-sources/dialogue/mannequins/)
 Task: produce ready-made coloured versions of every recolourable clothing icon of the Korean-learning app, so the app no longer recolours them in code. Use the built-in image generation tool in EDIT mode on the existing icons (no redesign). Do not modify any app code.
 
 INPUT
-- Icons: public/images/clothing-game/prod/icons/<id>.png (256x256 RGBA, white/grey fabric, black ink outline, white sticker border) and their 1024px sources in content/reference/art-sources/clothing-game/icons/sources/.
+- Icons: public/images/clothing-game/prod/icons/<id>.png (256x256 RGBA, white/grey fabric, black ink outline, white sticker border) and their 1024px sources in content/reference/art-sources/solomon-os/clothing-game/icons/sources/.
 - Fabric masks: public/images/clothing-game/prod/icons/<id>_fabric.png (white + alpha = recolourable fabric).
 - Items: every entry of public/images/clothing-game/prod/icons/manifest.json with "recolorable": true (31 items: dress_shirt, tshirt, blouse, pants, skirt, shorts, suit, dress, tracksuit, hiking_wear, hanbok, school_uniform, swimsuit, jacket, coat, padded_jacket, vest, raincoat, dress_shoes, sneakers, boots, hiking_boots, slippers, socks, hat, tie, muffler, scarf, gloves, watch, bag).
 
@@ -330,10 +330,10 @@ RULES
 
 OUTPUT
 - public/images/clothing-game/prod/colored/<id>/<color>.webp — RGBA 256x256, WebP quality ~88, RGB=0 where alpha=0, alpha identical to the original icon.
-- Sources (1024px) and intermediate edits: content/reference/art-sources/clothing-game/colored/<id>/...
+- Sources (1024px) and intermediate edits: content/reference/art-sources/solomon-os/clothing-game/colored/<id>/...
 - generation-prompts.json with the exact prompts.
 
-SELF-CHECK (sheets in content/reference/art-sources/clothing-game/colored/)
+SELF-CHECK (sheets in content/reference/art-sources/solomon-os/clothing-game/colored/)
 - colors-<id>.png for every item: 12 colours in a row at 128px on #050a06 and on #f1ebdc — same shape, correct colour names, folds visible on dark colours, details untouched.
 - all-items.png: every item in red, navy and black at 72px.
 - Report any item where a detail got recoloured by mistake and was fixed.
@@ -343,7 +343,7 @@ SELF-CHECK (sheets in content/reference/art-sources/clothing-game/colored/)
 
 # Промпт ChatGPT — цветные варианты вещей (сетка 4×3 на одну вещь)
 
-Как пользоваться: в одном чате отправить первое сообщение ниже с приложенной иконкой вещи (`public/images/clothing-game/prod/icons/<id>.png`). Для следующих вещей — короткое сообщение «Next item: <id>» с новой иконкой. Готовые сетки сохранять как `<id>.png` в `content/reference/art-sources/clothing-game/colored/chatgpt/` — нарезку, выравнивание по оригиналу и экспорт в `public/.../colored/<id>/<color>.webp` делает Claude скриптом.
+Как пользоваться: в одном чате отправить первое сообщение ниже с приложенной иконкой вещи (`public/images/clothing-game/prod/icons/<id>.png`). Для следующих вещей — короткое сообщение «Next item: <id>» с новой иконкой. Готовые сетки сохранять как `<id>.png` в `content/reference/art-sources/solomon-os/clothing-game/colored/chatgpt/` — нарезку, выравнивание по оригиналу и экспорт в `public/.../colored/<id>/<color>.webp` делает Claude скриптом.
 
 ```text
 I attach a clothing icon from my game (white fabric with grey cel shading, bold black ink outline, thick white sticker border). Make ONE image that is a 4×3 grid of this SAME icon recoloured in 12 colours.
@@ -377,8 +377,8 @@ Task: pattern masks for clothing icons in a Korean-learning game. Repository: ko
 Why: the app currently overlays stripes/check/flowers/dots as a flat straight grid over the whole fabric mask. It looks wrong: the pattern lands on the inside of garments (jacket lining, inside of collar, inner back of a skirt/pants opening) and stays straight on sleeves, turned or folded parts. I need, for each item+pattern pair below, a mask of pattern marks that follows the garment's cut, folds and perspective and covers only the OUTER visible face of the fabric.
 
 Inputs per item <id>:
-- content/reference/art-sources/clothing-game/colored/<id>/reference-source.png — original 1024×1024 RGBA icon (white fabric, grey cel shading, bold black outline, white sticker border);
-- content/reference/art-sources/clothing-game/colored/<id>/fabric-mask-1024.png — fabric area (white = fabric);
+- content/reference/art-sources/solomon-os/clothing-game/colored/<id>/reference-source.png — original 1024×1024 RGBA icon (white fabric, grey cel shading, bold black outline, white sticker border);
+- content/reference/art-sources/solomon-os/clothing-game/colored/<id>/fabric-mask-1024.png — fabric area (white = fabric);
 - public/images/clothing-game/prod/icons/<id>.png — the same icon at 256×256 (final geometry).
 
 Pairs (43):
@@ -414,9 +414,9 @@ Method (same approach as the colour variants):
 1. For each pair, edit the reference-source image with the image generator: keep the illustration exactly (size, position, silhouette, folds, outlines, sticker border); fabric stays white; draw the pattern in pure black marks ONLY on the outer visible fabric. Never on: lining/inside surfaces, inside of collars and cuffs, inner openings, buttons, zips, buckles, soles, outlines, the sticker border. The pattern must follow the cut: separate pieces (sleeves, collar, lapels, pockets, waistband, folds of a skirt) have their own direction, stripes/check bend over folds and continue across seams naturally.
 2. Extract the marks: pixels inside fabric-mask-1024 where the edit is clearly darker than the reference (exclude the reference's own dark lines), clean small noise, soften edges by ~1 px.
 3. Export public/images/clothing-game/prod/patterns/<id>/<pattern>.png — 256×256 RGBA, RGB = white, alpha = mark coverage (0 outside marks), aligned pixel-exactly with prod/icons/<id>.png.
-4. Keep the edit image, the 1024 mask and the prompt in content/reference/art-sources/clothing-game/patterns/<id>/.
+4. Keep the edit image, the 1024 mask and the prompt in content/reference/art-sources/solomon-os/clothing-game/patterns/<id>/.
 
-Self-check (save as content/reference/art-sources/clothing-game/patterns/check-<id>.png and all-patterns.png): composite each mask on the coloured files prod/colored/<id>/{navy,red,yellow}.webp — marks light on navy/red, dark on yellow — and look at them yourself: no pattern on inner surfaces, correct direction on sleeves/legs/turned parts, no marks on outlines. Redo bad pairs. Report the list of files and anything you could not do.
+Self-check (save as content/reference/art-sources/solomon-os/clothing-game/patterns/check-<id>.png and all-patterns.png): composite each mask on the coloured files prod/colored/<id>/{navy,red,yellow}.webp — marks light on navy/red, dark on yellow — and look at them yourself: no pattern on inner surfaces, correct direction on sleeves/legs/turned parts, no marks on outlines. Redo bad pairs. Report the list of files and anything you could not do.
 ```
 
 # Промпт Codex — догенерировать цветные вещи (144 пары)
@@ -424,7 +424,7 @@ Self-check (save as content/reference/art-sources/clothing-game/patterns/check-<
 ```
 Task: finish the coloured clothing variants. Repository: korean-learning-app. Do not change app code.
 
-Context: content/reference/art-sources/clothing-game/colored/<id>/edits/<color>.png + <color>.json are real image-generator edits (197 pairs) — these go into the app as is. Do NOT tint, palette-transfer or recolour anything by script: build-assets.py tinting is not wanted anymore, and no "mask palette transfer" fallback is allowed. If the generator quota runs out, stop and report what is left.
+Context: content/reference/art-sources/solomon-os/clothing-game/colored/<id>/edits/<color>.png + <color>.json are real image-generator edits (197 pairs) — these go into the app as is. Do NOT tint, palette-transfer or recolour anything by script: build-assets.py tinting is not wanted anymore, and no "mask palette transfer" fallback is allowed. If the generator quota runs out, stop and report what is left.
 
 Generate the missing pairs, exactly like the existing edits (same prompt as in any edits/*.json, same references: public/images/clothing-game/prod/icons/<id>.png + <id>/edit-mask.png; square, transparent background; same illustration, only the fabric recoloured, shadows a darker shade of the same hue, dark colours keep visible folds; outlines, sticker border, soles, buckles, metal, watch case/face unchanged):
 
@@ -436,6 +436,6 @@ watch: gray brown orange yellow green blue purple pink
 Colours: black #2b2b2b, gray #9e9e9e, navy #2f4a8f, brown #8a5a3b, red #e53935, orange #fb8c00, yellow #fdd835, green #43a047, blue #1e88e5, purple #8e44ad, pink #f48fb1.
 
 Save each result as <id>/edits/<color>.png with a <color>.json receipt (same fields as the existing ones). Look at every result yourself and redo bad ones (redrawn shape, recoloured soles/metal, flat dark colours, green fringe). Then run:
-/usr/bin/python3 content/reference/art-sources/clothing-game/colored/use-generated.py
+/usr/bin/python3 content/reference/art-sources/solomon-os/clothing-game/colored/use-generated.py
 It fits the edits to the icon frame and writes public/images/clothing-game/prod/colored/<id>/<color>.webp plus generated-sheet.png (red cells = no generator image). Report the list of generated pairs and anything left.
 ```

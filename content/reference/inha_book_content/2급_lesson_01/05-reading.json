@@ -17,70 +17,54 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "일",
-              "title_ru": "Работа и торговля",
-              "items": [
-                {
-                  "ko": "무역회사",
-                  "translation_ru": "торговая компания"
-                },
-                {
-                  "ko": "경영하다",
-                  "translation_ru": "управлять, вести (бизнес)"
-                },
-                {
-                  "ko": "연결하다",
-                  "translation_ru": "соединять, связывать"
-                },
-                {
-                  "ko": "돕다",
-                  "translation_ru": "помогать"
-                },
-                {
-                  "ko": "번역",
-                  "translation_ru": "перевод"
-                }
-              ]
-            },
-            {
-              "title": "학교",
-              "title_ru": "Учёба и опыт",
-              "items": [
-                {
-                  "ko": "편입하다",
-                  "translation_ru": "переводиться в другой вуз"
-                },
-                {
-                  "ko": "졸업",
-                  "translation_ru": "окончание учёбы"
-                },
-                {
-                  "ko": "경험",
-                  "translation_ru": "опыт"
-                },
-                {
-                  "ko": "열심히",
-                  "translation_ru": "усердно"
-                }
-              ]
-            },
-            {
-              "title": "문학",
-              "title_ru": "Книги и случай",
-              "items": [
-                {
-                  "ko": "소설책",
-                  "translation_ru": "роман, художественная книга"
-                },
-                {
-                  "ko": "우연히",
-                  "translation_ru": "случайно"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "무역회사",
+                "translation_ru": "торговая компания"
+              },
+              {
+                "ko": "경영하다",
+                "translation_ru": "управлять, вести (бизнес)"
+              },
+              {
+                "ko": "연결하다",
+                "translation_ru": "соединять, связывать"
+              },
+              {
+                "ko": "돕다",
+                "translation_ru": "помогать"
+              },
+              {
+                "ko": "번역",
+                "translation_ru": "перевод"
+              },
+              {
+                "ko": "편입하다",
+                "translation_ru": "переводиться в другой вуз"
+              },
+              {
+                "ko": "졸업",
+                "translation_ru": "окончание учёбы"
+              },
+              {
+                "ko": "경험",
+                "translation_ru": "опыт"
+              },
+              {
+                "ko": "열심히",
+                "translation_ru": "усердно"
+              },
+              {
+                "ko": "소설책",
+                "translation_ru": "роман, художественная книга"
+              },
+              {
+                "ko": "우연히",
+                "translation_ru": "случайно"
+              }
+            ]
+          }
         },
         {
           "type": "text",

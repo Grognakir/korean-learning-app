@@ -9,6 +9,21 @@
       "source_photo": "IMG_1174",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-sseugi",
+          "toc_section": "쓰기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "추천하다",
+              "translation_ru": "рекомендовать"
+            }
+          ]
+        },
+        {
           "type": "writing_exercise",
           "id": "writing-healthy-habits",
           "toc_section": "쓰기",
@@ -54,21 +69,6 @@
           ],
           "manuscript_prompt": "위 개요를 바탕으로 글을 써 보십시오.",
           "manuscript_prompt_ru": "Напишите текст на основе плана выше."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-sseugi",
-          "toc_section": "쓰기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "추천하다",
-              "translation_ru": "рекомендовать"
-            }
-          ]
         }
       ]
     }

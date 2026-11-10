@@ -9,6 +9,21 @@
       "source_photo": "IMG_1559",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-parenting",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "대가족",
+              "translation_ru": "большая семья (несколько поколений вместе)"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-parenting",
           "toc_section": "문화 이해하기",
@@ -50,21 +65,6 @@
             {
               "text": "2) 여러분 나라의 가정교육은 어떻게 변했습니까? 이야기해 보십시오.",
               "translation_ru": "Как изменилось семейное воспитание в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-parenting",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "대가족",
-              "translation_ru": "большая семья (несколько поколений вместе)"
             }
           ]
         },

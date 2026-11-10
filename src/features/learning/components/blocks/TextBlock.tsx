@@ -1,12 +1,14 @@
+import type { ReactNode } from "react";
 import type {
   HintBlock,
   TextBlock as TextBlockType,
   TextLine,
 } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
-import { VocabChip } from "./VocabChip";
+import { HintSection } from "./HintSection";
 import { OpenTemplateDialogue } from "./OpenTemplateDialogue";
 import { speakerClassName } from "./speakerClassName";
+import { renderJamoMarkedLine } from "./JamoMarkedLine";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
@@ -26,86 +28,72 @@ function lineClassName(textKind: TextBlockType["text_kind"], lineKind: TextLine[
   return styles.line;
 }
 
-function LineText({
-  line,
-  vocabItems,
-  seenVocab,
-}: {
-  line: TextLine;
-  vocabItems?: VocabItem[];
-  seenVocab: Set<string>;
-}) {
+function renderLineText(
+  line: TextLine,
+  vocabItems: VocabItem[] | undefined,
+  seenVocab: Set<string>,
+) {
   return (
     <span className={`${styles.lineText} kr`}>
-      {highlightDialogueSpeakers(
-        line.text,
-        vocabItems,
-        "",
-        seenVocab,
-        line.emphasized ?? [],
-        styles.emphasized,
-      )}
+      {line.jamo_marks?.length
+        ? renderJamoMarkedLine({
+            line: line.text,
+            marks: line.jamo_marks,
+            vocabItems,
+            keyPrefix: "",
+            seen: seenVocab,
+            emphasized: line.emphasized ?? [],
+            emphasisClassName: styles.emphasized,
+          })
+        : highlightDialogueSpeakers(
+            line.text,
+            vocabItems,
+            "",
+            seenVocab,
+            line.emphasized ?? [],
+            styles.emphasized,
+          )}
     </span>
   );
 }
 
-function HintSection({ hint }: { hint: HintBlock }) {
-  const phrases = hint.items.filter((item) => item.kind === "phrase");
-  const patterns = hint.items.filter((item) => item.kind === "pattern");
-
-  if (phrases.length === 0 && patterns.length === 0) return null;
-
-  return (
-    <div className={styles.textHint}>
-      {phrases.length > 0 && (
-        <div className={styles.textHintGroup}>
-          <span className={styles.labelRow}>
-            <span className={`${styles.label} kr`}>표현</span>
-            <LabelInfo translation="Выражения" />
-          </span>
-          <div className={styles.vocabItems}>
-            {phrases.map((item) => (
-              <VocabChip
-                key={item.text}
-                text={item.text}
-                translation={item.translation_ru}
-              />
-            ))}
-          </div>
-        </div>
-      )}
-      {patterns.length > 0 && (
-        <div className={styles.textHintGroup}>
-          <span className={styles.labelRow}>
-            <span className={`${styles.label} kr`}>문형</span>
-            <LabelInfo translation="Конструкции" />
-          </span>
-          <div className={styles.vocabItems}>
-            {patterns.map((item) => (
-              <VocabChip
-                key={item.text}
-                text={item.text}
-                translation={item.translation_ru}
-              />
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
+/** Заголовок статьи и сразу следующая за ним строка-справка (например
+ * "ID : inha 0817") стоят в одной строке: заголовок слева, справка справа. */
+function renderArticleRows(
+  block: TextBlockType,
+  isArticle: boolean,
+  renderLine: (line: TextLine, index: number) => ReactNode,
+): ReactNode[] {
+  const rows: ReactNode[] = [];
+  for (let i = 0; i < block.lines.length; i++) {
+    const line = block.lines[i];
+    const next = block.lines[i + 1];
+    if (isArticle && line.line_kind === "heading" && next?.line_kind === "meta") {
+      rows.push(
+        <div key={i} className={styles.articleTitleRow}>
+          {renderLine(line, i)}
+          {renderLine(next, i + 1)}
+        </div>,
+      );
+      i++;
+    } else {
+      rows.push(renderLine(line, i));
+    }
+  }
+  return rows;
 }
 
 export function TextBlock({
   block,
   id,
   vocabItems,
-  relatedHint,
+  relatedHints,
   titleSuffix,
 }: {
   block: TextBlockType;
   id?: string;
   vocabItems?: VocabItem[];
-  relatedHint?: HintBlock;
+  relatedHints?: HintBlock[];
   /** См. GrammarExercise — тот же суффикс "-1"/"-2" для дополнительного
    * задания того же упражнения (exercise_title совпадает с соседним
    * grammar_exercise). */
@@ -156,12 +144,12 @@ export function TextBlock({
         <OpenTemplateDialogue lines={block.lines} count={block.practice_variants.count} />
       ) : (
         <div className={isArticle ? styles.articleCard : styles.textLines}>
-          {block.lines.map((line, i) => (
+          {renderArticleRows(block, isArticle, (line, i) => (
             <p key={i} className={lineClassName(block.text_kind, line.line_kind)}>
               {line.speaker && (
                 <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
               )}
-              <LineText line={line} vocabItems={vocabItems} seenVocab={seenVocab} />
+              {renderLineText(line, vocabItems, seenVocab)}
               {line.translation_ru && <LabelInfo translation={line.translation_ru} />}
             </p>
           ))}
@@ -193,7 +181,7 @@ export function TextBlock({
           </table>
         </div>
       )}
-      {relatedHint && <HintSection hint={relatedHint} />}
+      {relatedHints?.map((hint, i) => <HintSection key={hint.id ?? i} hint={hint} />)}
     </div>
   );
 }

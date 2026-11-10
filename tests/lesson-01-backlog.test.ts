@@ -10,6 +10,7 @@ type Block = {
   details_link?: { label: string; href: string | null };
   rules?: string[];
   items?: { ko: string; translation_ru: string }[];
+  extra_words?: Record<string, { ko: string; translation_ru: string }[]>;
   vocab?: { ko: string; translation_ru: string }[];
   example?: {
     dialogue?: string[];
@@ -66,37 +67,20 @@ it("выделяет грамматический каркас, а не целы
   ]);
 });
 
-it("хранит переводы примеров внутри соответствующих упражнений", () => {
-  expect(byId("exercise-2a").example?.vocab?.map((item) => item.ko)).toEqual([
-    "목소리",
-    "너무",
-    "작다",
-    "크다",
-    "건강",
-    "짜다",
-    "말다",
-  ]);
-  expect(byId("exercise-2b").example?.vocab?.map((item) => item.ko)).toEqual([
-    "머리",
-    "요즘",
-    "짧다",
-    "자르다",
-    "자를",
-    "더우",
-  ]);
-  expect(byId("grammar-2").vocab?.map((item) => item.ko)).toEqual([
-    "쉽다",
-    "설명하다",
-    "주셨",
-    "추우",
-    "옷",
-    "따뜻하다",
-    "입다",
-    "드",
-    "맛있다",
-    "드릴",
-    "차갑다",
-  ]);
+it("хранит переводы слов примеров в дополнительных словах vocab_list", () => {
+  const known = new Set(
+    blocks
+      .filter((block) => block.items && !block.rules)
+      .flatMap((block) => [
+        ...(block.items ?? []).map((item) => item.ko),
+        ...Object.values(block.extra_words ?? {}).flat().map((item) => item.ko),
+      ]),
+  );
+  for (const ko of ["목소리", "너무", "작다", "크다", "건강", "짜다", "말다", "머리", "요즘", "짧다", "자르다", "자를", "더우", "쉽다", "설명하다", "주셨", "추우", "옷", "따뜻하다", "입다", "드", "맛있다", "드릴", "차갑다"]) {
+    expect(known.has(ko), ko).toBe(true);
+  }
+  expect(byId("exercise-2a").example?.vocab).toBeUndefined();
+  expect(byId("grammar-2").vocab).toBeUndefined();
 });
 
 // Регресс: фрагмент "이라고 합니다" был скопирован в обе строки exercise-1a,

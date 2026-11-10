@@ -9,6 +9,123 @@
       "source_photo": "IMG_0661",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-rainy-food",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "파전",
+              "translation_ru": "паджон (блин с зелёным луком)"
+            },
+            {
+              "ko": "국수",
+              "translation_ru": "лапша"
+            },
+            {
+              "ko": "정확하다",
+              "translation_ru": "быть точным"
+            },
+            {
+              "ko": "이유",
+              "translation_ru": "причина"
+            },
+            {
+              "ko": "굽다",
+              "translation_ru": "жарить, печь"
+            },
+            {
+              "ko": "모양",
+              "translation_ru": "форма, вид"
+            },
+            {
+              "ko": "나누다",
+              "translation_ru": "делить(ся)"
+            },
+            {
+              "ko": "정",
+              "translation_ru": "тёплые чувства, привязанность"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "전",
+                "translation_ru": "блинчик (чон)"
+              },
+              {
+                "ko": "요리",
+                "translation_ru": "блюдо, готовка"
+              },
+              {
+                "ko": "가족",
+                "translation_ru": "семья"
+              },
+              {
+                "ko": "친구",
+                "translation_ru": "друг"
+              },
+              {
+                "ko": "행복하다",
+                "translation_ru": "счастливый"
+              },
+              {
+                "ko": "깊어지다",
+                "translation_ru": "углубляться"
+              },
+              {
+                "ko": "마음",
+                "translation_ru": "душа, сердце"
+              },
+              {
+                "ko": "소리",
+                "translation_ru": "звук"
+              },
+              {
+                "ko": "이야기",
+                "translation_ru": "рассказ, разговор"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "날",
+                "translation_ru": "день"
+              },
+              {
+                "ko": "생각나다",
+                "translation_ru": "приходить на ум, вспоминаться"
+              },
+              {
+                "ko": "정확한",
+                "translation_ru": "точный (форма от 정확하다)"
+              },
+              {
+                "ko": "비슷하다",
+                "translation_ru": "быть похожим"
+              },
+              {
+                "ko": "생기다",
+                "translation_ru": "появляться, возникать"
+              },
+              {
+                "ko": "내리다",
+                "translation_ru": "идти (об осадках), спускаться"
+              },
+              {
+                "ko": "서로",
+                "translation_ru": "друг друга, взаимно"
+              },
+              {
+                "ko": "깊다",
+                "translation_ru": "быть глубоким"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-rainy-food",
           "toc_section": "문화 이해하기",
@@ -35,153 +152,6 @@
             {
               "text": "2) 여러분 나라에는 날씨와 어울리는 음식이 있습니까? 이야기해 보십시오.",
               "translation_ru": "Есть ли в вашей стране еда, подходящая под погоду? Расскажите."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "날",
-              "translation_ru": "день"
-            },
-            {
-              "ko": "생각나다",
-              "translation_ru": "приходить на ум, вспоминаться"
-            },
-            {
-              "ko": "정확한",
-              "translation_ru": "точный (форма от 정확하다)"
-            },
-            {
-              "ko": "소리",
-              "translation_ru": "звук"
-            },
-            {
-              "ko": "비슷하다",
-              "translation_ru": "быть похожим"
-            },
-            {
-              "ko": "마음",
-              "translation_ru": "душа, настроение, чувство"
-            },
-            {
-              "ko": "생기다",
-              "translation_ru": "появляться, возникать"
-            },
-            {
-              "ko": "내리다",
-              "translation_ru": "идти (об осадках), спускаться"
-            },
-            {
-              "ko": "서로",
-              "translation_ru": "друг друга, взаимно"
-            },
-            {
-              "ko": "깊다",
-              "translation_ru": "быть глубоким"
-            },
-            {
-              "ko": "행복하다",
-              "translation_ru": "быть счастливым"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-rainy-food",
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "파전",
-              "translation_ru": "паджон (блин с зелёным луком)",
-              "group": "음식"
-            },
-            {
-              "ko": "국수",
-              "translation_ru": "лапша",
-              "group": "음식"
-            },
-            {
-              "ko": "정확하다",
-              "translation_ru": "быть точным",
-              "group": "마음"
-            },
-            {
-              "ko": "이유",
-              "translation_ru": "причина",
-              "group": "마음"
-            },
-            {
-              "ko": "굽다",
-              "translation_ru": "жарить, печь",
-              "group": "음식"
-            },
-            {
-              "ko": "모양",
-              "translation_ru": "форма, вид",
-              "group": "마음"
-            },
-            {
-              "ko": "나누다",
-              "translation_ru": "делить(ся)",
-              "group": "마음"
-            },
-            {
-              "ko": "정",
-              "translation_ru": "тёплые чувства, привязанность",
-              "group": "마음"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "음식",
-              "title_ru": "Еда",
-              "items": [
-                {
-                  "ko": "전",
-                  "translation_ru": "блинчик (чон)"
-                },
-                {
-                  "ko": "요리",
-                  "translation_ru": "блюдо, готовка"
-                },
-                {
-                  "ko": "가족",
-                  "translation_ru": "семья"
-                },
-                {
-                  "ko": "친구",
-                  "translation_ru": "друг"
-                }
-              ]
-            },
-            {
-              "title": "마음",
-              "title_ru": "Чувства",
-              "items": [
-                {
-                  "ko": "행복하다",
-                  "translation_ru": "счастливый"
-                },
-                {
-                  "ko": "깊어지다",
-                  "translation_ru": "углубляться"
-                },
-                {
-                  "ko": "마음",
-                  "translation_ru": "душа, сердце"
-                },
-                {
-                  "ko": "소리",
-                  "translation_ru": "звук"
-                },
-                {
-                  "ko": "이야기",
-                  "translation_ru": "рассказ, разговор"
-                }
-              ]
             }
           ]
         },

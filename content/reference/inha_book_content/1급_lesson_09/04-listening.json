@@ -9,6 +9,54 @@
       "source_photo": "IMG_1079",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-shopping",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "세일하다",
+              "translation_ru": "устраивать распродажу"
+            },
+            {
+              "ko": "짜리",
+              "translation_ru": "стоимостью, номиналом (суффикс)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "table-convenience-store",
+          "toc_section": "듣고 말하기",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "듣고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "〈편의점〉"
+            }
+          ],
+          "table": {
+            "columns": [
+              "콜라",
+              "양말",
+              "잡지"
+            ],
+            "rows": [
+              [
+                "1500원 / 1병",
+                "3000원 / 1켤레",
+                "2500원 / 1권"
+              ]
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-shopping",
           "toc_section": "듣고 말하기",
@@ -95,54 +143,6 @@
           ],
           "followup": "편의점입니다. 점원과 손님의 대화를 해 보십시오.",
           "followup_ru": "Вы в магазине у дома. Разыграйте диалог продавца и покупателя."
-        },
-        {
-          "type": "text",
-          "id": "table-convenience-store",
-          "toc_section": "듣고 말하기",
-          "illustration": null,
-          "text_kind": "passage",
-          "section": "듣고말하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "lines": [
-            {
-              "text": "〈편의점〉"
-            }
-          ],
-          "table": {
-            "columns": [
-              "콜라",
-              "양말",
-              "잡지"
-            ],
-            "rows": [
-              [
-                "1500원 / 1병",
-                "3000원 / 1켤레",
-                "2500원 / 1권"
-              ]
-            ]
-          }
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-shopping",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "세일하다",
-              "translation_ru": "устраивать распродажу"
-            },
-            {
-              "ko": "짜리",
-              "translation_ru": "стоимостью, номиналом (суффикс)"
-            }
-          ]
         }
       ]
     }

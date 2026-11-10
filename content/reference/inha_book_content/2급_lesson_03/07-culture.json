@@ -9,6 +9,85 @@
       "source_photo": "IMG_0627",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-university",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "정치",
+              "translation_ru": "политика"
+            },
+            {
+              "ko": "사회",
+              "translation_ru": "общество"
+            },
+            {
+              "ko": "자신",
+              "translation_ru": "сам, себя"
+            },
+            {
+              "ko": "장애인",
+              "translation_ru": "человек с инвалидностью"
+            },
+            {
+              "ko": "여유롭다",
+              "translation_ru": "быть в достатке, иметь свободное время"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "봉사 활동",
+                "translation_ru": "волонтёрская деятельность"
+              },
+              {
+                "ko": "고아원",
+                "translation_ru": "детский дом"
+              },
+              {
+                "ko": "노인",
+                "translation_ru": "пожилой человек"
+              },
+              {
+                "ko": "외롭다",
+                "translation_ru": "одинокий"
+              },
+              {
+                "ko": "도와주다",
+                "translation_ru": "помогать"
+              },
+              {
+                "ko": "가르치다",
+                "translation_ru": "учить"
+              },
+              {
+                "ko": "진로",
+                "translation_ru": "жизненный путь, профессия"
+              },
+              {
+                "ko": "취미",
+                "translation_ru": "хобби"
+              },
+              {
+                "ko": "인턴",
+                "translation_ru": "стажёр"
+              },
+              {
+                "ko": "미래",
+                "translation_ru": "будущее"
+              },
+              {
+                "ko": "대학생",
+                "translation_ru": "студент"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-university",
           "toc_section": "문화 이해하기",
@@ -34,100 +113,6 @@
             },
             {
               "text": "2) 여러분 나라의 대학생들은 어떤 것을 가지고 있습니까? 여러분 나라의 대학생들에 대해 이야기해 보십시오."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-university",
-          "source_note": "рукописный список на полях страницы",
-          "items": [
-            {
-              "ko": "정치",
-              "translation_ru": "политика",
-              "group": "관심"
-            },
-            {
-              "ko": "사회",
-              "translation_ru": "общество",
-              "group": "관심"
-            },
-            {
-              "ko": "자신",
-              "translation_ru": "сам, себя",
-              "group": "관심"
-            },
-            {
-              "ko": "장애인",
-              "translation_ru": "человек с инвалидностью",
-              "group": "봉사"
-            },
-            {
-              "ko": "여유롭다",
-              "translation_ru": "быть в достатке, иметь свободное время",
-              "group": "관심"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "봉사",
-              "title_ru": "Волонтёрство",
-              "items": [
-                {
-                  "ko": "봉사 활동",
-                  "translation_ru": "волонтёрская деятельность"
-                },
-                {
-                  "ko": "고아원",
-                  "translation_ru": "детский дом"
-                },
-                {
-                  "ko": "노인",
-                  "translation_ru": "пожилой человек"
-                },
-                {
-                  "ko": "외롭다",
-                  "translation_ru": "одинокий"
-                },
-                {
-                  "ko": "도와주다",
-                  "translation_ru": "помогать"
-                },
-                {
-                  "ko": "가르치다",
-                  "translation_ru": "учить"
-                }
-              ]
-            },
-            {
-              "title": "관심",
-              "title_ru": "Интересы и будущее",
-              "items": [
-                {
-                  "ko": "진로",
-                  "translation_ru": "жизненный путь, профессия"
-                },
-                {
-                  "ko": "취미",
-                  "translation_ru": "хобби"
-                },
-                {
-                  "ko": "인턴",
-                  "translation_ru": "стажёр"
-                },
-                {
-                  "ko": "미래",
-                  "translation_ru": "будущее"
-                },
-                {
-                  "ko": "대학생",
-                  "translation_ru": "студент"
-                }
-              ]
             }
           ]
         },

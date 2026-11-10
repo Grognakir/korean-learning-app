@@ -9,6 +9,79 @@
       "source_photo": "IMG_1018",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-class-info",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "요가",
+              "translation_ru": "йога"
+            },
+            {
+              "ko": "배드민턴",
+              "translation_ru": "бадминтон"
+            },
+            {
+              "ko": "탁구",
+              "translation_ru": "настольный теннис"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "program-sports-center",
+          "toc_section": "듣고 말하기",
+          "title": "3. 프로그램을 보고 친구와 대화를 해 보십시오.",
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "듣고말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
+            {
+              "text": "〈인하 스포츠센터 프로그램〉"
+            }
+          ],
+          "table": {
+            "columns": [
+              "수업",
+              "요일",
+              "시간",
+              "장소"
+            ],
+            "rows": [
+              [
+                "태권도",
+                "월, 수, 금",
+                "오전 8:00 ~ 8:50",
+                "4층"
+              ],
+              [
+                "탁구",
+                "화, 목",
+                "오전 11:00 ~ 11:50",
+                "3층"
+              ],
+              [
+                "테니스",
+                "월, 수, 금",
+                "오후 3:20 ~ 4:10",
+                "2층"
+              ],
+              [
+                "수영",
+                "월 ~ 금",
+                "오후 6:30 ~ 7:20",
+                "1층"
+              ]
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-class-info",
           "toc_section": "듣고 말하기",
@@ -91,79 +164,6 @@
                 "배드민턴 수업은 오후 5시에 시작합니다."
               ],
               "correct": 2
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "program-sports-center",
-          "toc_section": "듣고 말하기",
-          "title": "3. 프로그램을 보고 친구와 대화를 해 보십시오.",
-          "illustration": null,
-          "text_kind": "passage",
-          "section": "듣고말하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "lines": [
-            {
-              "text": "〈인하 스포츠센터 프로그램〉"
-            }
-          ],
-          "table": {
-            "columns": [
-              "수업",
-              "요일",
-              "시간",
-              "장소"
-            ],
-            "rows": [
-              [
-                "태권도",
-                "월, 수, 금",
-                "오전 8:00 ~ 8:50",
-                "4층"
-              ],
-              [
-                "탁구",
-                "화, 목",
-                "오전 11:00 ~ 11:50",
-                "3층"
-              ],
-              [
-                "테니스",
-                "월, 수, 금",
-                "오후 3:20 ~ 4:10",
-                "2층"
-              ],
-              [
-                "수영",
-                "월 ~ 금",
-                "오후 6:30 ~ 7:20",
-                "1층"
-              ]
-            ]
-          }
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-class-info",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "요가",
-              "translation_ru": "йога"
-            },
-            {
-              "ko": "배드민턴",
-              "translation_ru": "бадминтон"
-            },
-            {
-              "ko": "탁구",
-              "translation_ru": "настольный теннис"
             }
           ]
         }

@@ -17,64 +17,54 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "대학",
-              "title_ru": "Университет",
-              "items": [
-                {
-                  "ko": "언어교육원",
-                  "translation_ru": "языковой институт"
-                },
-                {
-                  "ko": "대학생",
-                  "translation_ru": "студент"
-                },
-                {
-                  "ko": "대학원",
-                  "translation_ru": "магистратура, аспирантура"
-                },
-                {
-                  "ko": "입학",
-                  "translation_ru": "поступление"
-                },
-                {
-                  "ko": "졸업하다",
-                  "translation_ru": "оканчивать (учёбу)"
-                },
-                {
-                  "ko": "전공하다",
-                  "translation_ru": "специализироваться"
-                },
-                {
-                  "ko": "준비하다",
-                  "translation_ru": "готовиться"
-                }
-              ]
-            },
-            {
-              "title": "대화",
-              "title_ru": "О чём говорят",
-              "items": [
-                {
-                  "ko": "문학",
-                  "translation_ru": "литература"
-                },
-                {
-                  "ko": "국제무역",
-                  "translation_ru": "международная торговля"
-                },
-                {
-                  "ko": "소개하다",
-                  "translation_ru": "представлять"
-                },
-                {
-                  "ko": "고향",
-                  "translation_ru": "родина, родные места"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "언어교육원",
+                "translation_ru": "языковой институт"
+              },
+              {
+                "ko": "대학생",
+                "translation_ru": "студент"
+              },
+              {
+                "ko": "대학원",
+                "translation_ru": "магистратура, аспирантура"
+              },
+              {
+                "ko": "입학",
+                "translation_ru": "поступление"
+              },
+              {
+                "ko": "졸업하다",
+                "translation_ru": "оканчивать (учёбу)"
+              },
+              {
+                "ko": "전공하다",
+                "translation_ru": "специализироваться"
+              },
+              {
+                "ko": "준비하다",
+                "translation_ru": "готовиться"
+              },
+              {
+                "ko": "문학",
+                "translation_ru": "литература"
+              },
+              {
+                "ko": "국제무역",
+                "translation_ru": "международная торговля"
+              },
+              {
+                "ko": "소개하다",
+                "translation_ru": "представлять"
+              },
+              {
+                "ko": "고향",
+                "translation_ru": "родина, родные места"
+              }
+            ]
+          }
         },
         {
           "type": "text",

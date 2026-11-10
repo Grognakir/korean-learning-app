@@ -9,6 +9,37 @@
       "source_photo": "IMG_1571",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "합창",
+              "translation_ru": "хор, хоровое пение"
+            },
+            {
+              "ko": "연습실",
+              "translation_ru": "репетиционная, комната для занятий"
+            },
+            {
+              "ko": "잠그다",
+              "translation_ru": "запирать, закрывать на замок"
+            },
+            {
+              "ko": "열쇠",
+              "translation_ru": "ключ"
+            },
+            {
+              "ko": "관리실",
+              "translation_ru": "управляющий офис (в доме/на предприятии)"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -90,37 +121,6 @@
             },
             {
               "text": "2) 그것을 하기 위해서 필요한 규칙이 무엇입니까?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "합창",
-              "translation_ru": "хор, хоровое пение"
-            },
-            {
-              "ko": "연습실",
-              "translation_ru": "репетиционная, комната для занятий"
-            },
-            {
-              "ko": "잠그다",
-              "translation_ru": "запирать, закрывать на замок"
-            },
-            {
-              "ko": "열쇠",
-              "translation_ru": "ключ"
-            },
-            {
-              "ko": "관리실",
-              "translation_ru": "управляющий офис (в доме/на предприятии)"
             }
           ]
         }

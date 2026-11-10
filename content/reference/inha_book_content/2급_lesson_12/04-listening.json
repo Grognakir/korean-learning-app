@@ -9,6 +9,61 @@
       "source_photo": "IMG_1441",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-reconcile",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "listening-reconcile",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "사과하다",
+              "translation_ru": "извиняться"
+            },
+            {
+              "ko": "사이",
+              "translation_ru": "между"
+            },
+            {
+              "ko": "멀어지다",
+              "translation_ru": "отдаляться"
+            },
+            {
+              "ko": "사이좋다",
+              "translation_ru": "быть в хороших отношениях, дружить"
+            },
+            {
+              "ko": "말조심하다",
+              "translation_ru": "следить за словами"
+            },
+            {
+              "ko": "사소하다",
+              "translation_ru": "пустяковый, незначительный"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "실수",
+                "translation_ru": "ошибка, промах"
+              },
+              {
+                "ko": "말실수",
+                "translation_ru": "оговорка, неосторожно сказанное слово"
+              },
+              {
+                "ko": "농담",
+                "translation_ru": "шутка"
+              },
+              {
+                "ko": "상처",
+                "translation_ru": "рана; душевная рана"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-reconcile",
           "toc_section": "듣고 말하기",
@@ -99,65 +154,6 @@
               "kind": "phrase",
               "text": "상처가 되다",
               "translation_ru": "ранить, стать душевной раной — «사소한 말이 다른 사람에게 상처가 될 수 있어요» (пустяковые слова могут ранить других)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-reconcile",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "listening-reconcile",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "사과하다",
-              "translation_ru": "извиняться"
-            },
-            {
-              "ko": "사이",
-              "translation_ru": "между"
-            },
-            {
-              "ko": "멀어지다",
-              "translation_ru": "отдаляться"
-            },
-            {
-              "ko": "사이좋다",
-              "translation_ru": "быть в хороших отношениях, дружить"
-            },
-            {
-              "ko": "말조심하다",
-              "translation_ru": "следить за словами"
-            },
-            {
-              "ko": "사소하다",
-              "translation_ru": "пустяковый, незначительный"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "실수",
-              "title_ru": "Ошибки и обиды",
-              "items": [
-                {
-                  "ko": "실수",
-                  "translation_ru": "ошибка, промах"
-                },
-                {
-                  "ko": "말실수",
-                  "translation_ru": "оговорка, неосторожно сказанное слово"
-                },
-                {
-                  "ko": "농담",
-                  "translation_ru": "шутка"
-                },
-                {
-                  "ko": "상처",
-                  "translation_ru": "рана; душевная рана"
-                }
-              ]
             }
           ]
         }

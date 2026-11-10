@@ -17,94 +17,78 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "꿈",
-              "title_ru": "Мечта и работа",
-              "items": [
-                {
-                  "ko": "수의사",
-                  "translation_ru": "ветеринар"
-                },
-                {
-                  "ko": "동물",
-                  "translation_ru": "животное"
-                },
-                {
-                  "ko": "동물 병원",
-                  "translation_ru": "ветеринарная клиника"
-                },
-                {
-                  "ko": "자원봉사",
-                  "translation_ru": "волонтёрство"
-                },
-                {
-                  "ko": "기회",
-                  "translation_ru": "шанс"
-                },
-                {
-                  "ko": "경영하다",
-                  "translation_ru": "управлять"
-                },
-                {
-                  "ko": "훌륭하다",
-                  "translation_ru": "превосходный"
-                },
-                {
-                  "ko": "사랑하다",
-                  "translation_ru": "любить"
-                }
-              ]
-            },
-            {
-              "title": "스포츠",
-              "title_ru": "Игра и результат",
-              "items": [
-                {
-                  "ko": "우승하다",
-                  "translation_ru": "стать чемпионом"
-                },
-                {
-                  "ko": "패배하다",
-                  "translation_ru": "проигрывать"
-                },
-                {
-                  "ko": "이기다",
-                  "translation_ru": "побеждать"
-                },
-                {
-                  "ko": "지다",
-                  "translation_ru": "проигрывать"
-                },
-                {
-                  "ko": "비기다",
-                  "translation_ru": "сыграть вничью"
-                },
-                {
-                  "ko": "스키",
-                  "translation_ru": "лыжи"
-                }
-              ]
-            },
-            {
-              "title": "나이",
-              "title_ru": "Возраст",
-              "items": [
-                {
-                  "ko": "연상",
-                  "translation_ru": "старший по возрасту"
-                },
-                {
-                  "ko": "연하",
-                  "translation_ru": "младший по возрасту"
-                },
-                {
-                  "ko": "어리다",
-                  "translation_ru": "быть юным, младше"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "수의사",
+                "translation_ru": "ветеринар"
+              },
+              {
+                "ko": "동물",
+                "translation_ru": "животное"
+              },
+              {
+                "ko": "동물 병원",
+                "translation_ru": "ветеринарная клиника"
+              },
+              {
+                "ko": "자원봉사",
+                "translation_ru": "волонтёрство"
+              },
+              {
+                "ko": "기회",
+                "translation_ru": "шанс"
+              },
+              {
+                "ko": "경영하다",
+                "translation_ru": "управлять"
+              },
+              {
+                "ko": "훌륭하다",
+                "translation_ru": "превосходный"
+              },
+              {
+                "ko": "사랑하다",
+                "translation_ru": "любить"
+              },
+              {
+                "ko": "우승하다",
+                "translation_ru": "стать чемпионом"
+              },
+              {
+                "ko": "패배하다",
+                "translation_ru": "проигрывать"
+              },
+              {
+                "ko": "이기다",
+                "translation_ru": "побеждать"
+              },
+              {
+                "ko": "지다",
+                "translation_ru": "проигрывать"
+              },
+              {
+                "ko": "비기다",
+                "translation_ru": "сыграть вничью"
+              },
+              {
+                "ko": "스키",
+                "translation_ru": "лыжи"
+              },
+              {
+                "ko": "연상",
+                "translation_ru": "старший по возрасту"
+              },
+              {
+                "ko": "연하",
+                "translation_ru": "младший по возрасту"
+              },
+              {
+                "ko": "어리다",
+                "translation_ru": "быть юным, младше"
+              }
+            ]
+          }
         },
         {
           "type": "comprehension_exercise",

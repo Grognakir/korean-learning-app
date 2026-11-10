@@ -17,60 +17,50 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "연극",
-              "title_ru": "Фестиваль",
-              "items": [
-                {
-                  "ko": "연극",
-                  "translation_ru": "спектакль"
-                },
-                {
-                  "ko": "축제",
-                  "translation_ru": "фестиваль"
-                },
-                {
-                  "ko": "감독",
-                  "translation_ru": "режиссёр"
-                },
-                {
-                  "ko": "감동",
-                  "translation_ru": "глубокое впечатление"
-                },
-                {
-                  "ko": "기쁘다",
-                  "translation_ru": "радостный"
-                },
-                {
-                  "ko": "다양하다",
-                  "translation_ru": "разнообразный"
-                }
-              ]
-            },
-            {
-              "title": "꿈",
-              "title_ru": "Мечта",
-              "items": [
-                {
-                  "ko": "꿈",
-                  "translation_ru": "мечта"
-                },
-                {
-                  "ko": "이루다",
-                  "translation_ru": "осуществлять"
-                },
-                {
-                  "ko": "준비하다",
-                  "translation_ru": "готовиться"
-                },
-                {
-                  "ko": "가지다",
-                  "translation_ru": "иметь"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "연극",
+                "translation_ru": "спектакль"
+              },
+              {
+                "ko": "축제",
+                "translation_ru": "фестиваль"
+              },
+              {
+                "ko": "감독",
+                "translation_ru": "режиссёр"
+              },
+              {
+                "ko": "감동",
+                "translation_ru": "глубокое впечатление"
+              },
+              {
+                "ko": "기쁘다",
+                "translation_ru": "радостный"
+              },
+              {
+                "ko": "다양하다",
+                "translation_ru": "разнообразный"
+              },
+              {
+                "ko": "꿈",
+                "translation_ru": "мечта"
+              },
+              {
+                "ko": "이루다",
+                "translation_ru": "осуществлять"
+              },
+              {
+                "ko": "준비하다",
+                "translation_ru": "готовиться"
+              },
+              {
+                "ko": "가지다",
+                "translation_ru": "иметь"
+              }
+            ]
+          }
         },
         {
           "type": "writing_exercise",

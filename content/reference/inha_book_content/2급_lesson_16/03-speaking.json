@@ -9,6 +9,33 @@
       "source_photo": "IMG_1600",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "실력",
+              "translation_ru": "уровень знаний, умение"
+            },
+            {
+              "ko": "성적",
+              "translation_ru": "оценки, успеваемость"
+            },
+            {
+              "ko": "우수상",
+              "translation_ru": "поощрительный приз, награда за отличие"
+            },
+            {
+              "ko": "포기하다",
+              "translation_ru": "отказываться, сдаваться"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -103,33 +130,6 @@
             },
             {
               "text": "3) 그 사람은 무엇을 도와 주었습니까?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "실력",
-              "translation_ru": "уровень знаний, умение"
-            },
-            {
-              "ko": "성적",
-              "translation_ru": "оценки, успеваемость"
-            },
-            {
-              "ko": "우수상",
-              "translation_ru": "поощрительный приз, награда за отличие"
-            },
-            {
-              "ko": "포기하다",
-              "translation_ru": "отказываться, сдаваться"
             }
           ]
         }

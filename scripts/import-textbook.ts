@@ -97,7 +97,14 @@ const LATE_LESSONS_2: Record<number, { path: string; audio: number[]; images: st
   11: {
     path: join(LESSON_DIR_2_11, "lesson-11.json"),
     audio: [241, 242, 243, 244],
-    images: [],
+    images: [
+      "illustration_1_phone_call_stadium_v5.png",
+      "illustration_2_route_map_v6.png",
+      "illustration_6_speaking_route.png",
+      "illustration_3_busan_views_v2.png",
+      "illustration_4_airplane_safety_v2.png",
+      "illustration_5_considerate_transport.png",
+    ],
   },
   12: {
     path: join(LESSON_DIR_2_12, "lesson-12.json"),

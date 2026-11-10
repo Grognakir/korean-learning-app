@@ -9,6 +9,65 @@
       "source_photo": "IMG_1177",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-family-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "무역 회사",
+              "translation_ru": "торговая (внешнеторговая) компания"
+            },
+            {
+              "ko": "그립다",
+              "translation_ru": "скучать (по кому-то), тосковать"
+            },
+            {
+              "ko": "다녀오다",
+              "translation_ru": "съездить и вернуться, сходить"
+            },
+            {
+              "ko": "기대하다",
+              "translation_ru": "ожидать с нетерпением"
+            },
+            {
+              "ko": "가족사진",
+              "translation_ru": "семейное фото"
+            },
+            {
+              "ko": "바지",
+              "translation_ru": "брюки"
+            },
+            {
+              "ko": "성격",
+              "translation_ru": "характер"
+            },
+            {
+              "ko": "학기",
+              "translation_ru": "семестр"
+            },
+            {
+              "ko": "곳",
+              "translation_ru": "место"
+            },
+            {
+              "ko": "성실하다",
+              "translation_ru": "быть усердным, добросовестным"
+            },
+            {
+              "ko": "얼굴",
+              "translation_ru": "лицо"
+            },
+            {
+              "ko": "싫어하다",
+              "translation_ru": "не любить, не нравиться"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-family-dialogue",
           "toc_section": "준비하기 1",
@@ -80,65 +139,6 @@
               "emphasized": [
                 "기대하고"
               ]
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-family-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "무역 회사",
-              "translation_ru": "торговая (внешнеторговая) компания"
-            },
-            {
-              "ko": "그립다",
-              "translation_ru": "скучать (по кому-то), тосковать"
-            },
-            {
-              "ko": "다녀오다",
-              "translation_ru": "съездить и вернуться, сходить"
-            },
-            {
-              "ko": "기대하다",
-              "translation_ru": "ожидать с нетерпением"
-            },
-            {
-              "ko": "가족사진",
-              "translation_ru": "семейное фото"
-            },
-            {
-              "ko": "바지",
-              "translation_ru": "брюки"
-            },
-            {
-              "ko": "성격",
-              "translation_ru": "характер"
-            },
-            {
-              "ko": "학기",
-              "translation_ru": "семестр"
-            },
-            {
-              "ko": "곳",
-              "translation_ru": "место"
-            },
-            {
-              "ko": "성실하다",
-              "translation_ru": "быть усердным, добросовестным"
-            },
-            {
-              "ko": "얼굴",
-              "translation_ru": "лицо"
-            },
-            {
-              "ko": "싫어하다",
-              "translation_ru": "не любить, не нравиться"
             }
           ]
         }

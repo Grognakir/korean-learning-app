@@ -9,54 +9,6 @@
       "source_photo": "IMG_1160",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-museums",
-          "toc_section": "문화 이해하기",
-          "title": "한국의 박물관과 민속촌",
-          "title_ru": "Музеи и этнографические деревни Кореи",
-          "illustration": {
-            "storage_path": "lesson_14/illustration_5_museum_folk_village.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
-          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
-          "lines": [
-            {
-              "text": "여러분은 한국에서 어떤 공공장소에 가 봤습니까? 한국에는 여러 공공장소가 있습니다. 한국의 역사와 전통을 알고 싶으면 박물관과 민속촌에 가 보십시오."
-            },
-            {
-              "text": "국립중앙박물관은 서울 용산에 있습니다. 이곳에서는 한국의 역사와 예술, 문화를 보고 배울 수 있습니다. 그리고 교육 프로그램이 있어서 한국 문화를 체험해 볼 수도 있습니다."
-            },
-            {
-              "text": "한국민속촌은 경기도 용인에 있습니다. 이곳에서 민속 마을과 전통 물건을 보면 한국의 과거 모습을 상상할 수 있을 겁니다. 그리고 다양한 전통 공연을 보고 전통 놀이를 직접 해 볼 수도 있습니다."
-            }
-          ]
-        },
-        {
-          "type": "comprehension_exercise",
-          "id": "reading-culture-museums",
-          "toc_section": "문화 이해하기",
-          "exercise_kind": "reading",
-          "title": "한국의 박물관과 민속촌",
-          "title_ru": "Музеи и этнографические деревни Кореи",
-          "questions": [
-            {
-              "kind": "open",
-              "prompt": "한국의 역사와 전통을 배우는 공공장소는 어디입니까?",
-              "prompt_ru": "Где в Корее можно узнать об истории и традициях страны?"
-            },
-            {
-              "kind": "open",
-              "prompt": "여러분 나라에는 어떤 공공장소가 있습니까? 이야기해 보십시오.",
-              "prompt_ru": "Какие общественные места есть в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -128,6 +80,54 @@
             {
               "ko": "직접",
               "translation_ru": "непосредственно, лично"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-museums",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 박물관과 민속촌",
+          "title_ru": "Музеи и этнографические деревни Кореи",
+          "illustration": {
+            "storage_path": "lesson_14/illustration_5_museum_folk_village.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "여러분은 한국에서 어떤 공공장소에 가 봤습니까? 한국에는 여러 공공장소가 있습니다. 한국의 역사와 전통을 알고 싶으면 박물관과 민속촌에 가 보십시오."
+            },
+            {
+              "text": "국립중앙박물관은 서울 용산에 있습니다. 이곳에서는 한국의 역사와 예술, 문화를 보고 배울 수 있습니다. 그리고 교육 프로그램이 있어서 한국 문화를 체험해 볼 수도 있습니다."
+            },
+            {
+              "text": "한국민속촌은 경기도 용인에 있습니다. 이곳에서 민속 마을과 전통 물건을 보면 한국의 과거 모습을 상상할 수 있을 겁니다. 그리고 다양한 전통 공연을 보고 전통 놀이를 직접 해 볼 수도 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-museums",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 박물관과 민속촌",
+          "title_ru": "Музеи и этнографические деревни Кореи",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국의 역사와 전통을 배우는 공공장소는 어디입니까?",
+              "prompt_ru": "Где в Корее можно узнать об истории и традициях страны?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라에는 어떤 공공장소가 있습니까? 이야기해 보십시오.",
+              "prompt_ru": "Какие общественные места есть в вашей стране? Расскажите."
             }
           ]
         },

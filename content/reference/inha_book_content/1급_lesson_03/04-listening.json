@@ -9,6 +9,29 @@
       "source_photo": "IMG_0988",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-phone-number",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "기다리다",
+              "translation_ru": "ждать"
+            },
+            {
+              "ko": "지금",
+              "translation_ru": "сейчас"
+            },
+            {
+              "ko": "사무실",
+              "translation_ru": "офис, кабинет"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-phone-number",
           "toc_section": "듣고 말하기",
@@ -95,29 +118,6 @@
           ],
           "followup": "반 친구들에게 전화번호를 물어 보십시오.",
           "followup_ru": "Спросите у одноклассников номера телефонов."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-phone-number",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "기다리다",
-              "translation_ru": "ждать"
-            },
-            {
-              "ko": "지금",
-              "translation_ru": "сейчас"
-            },
-            {
-              "ko": "사무실",
-              "translation_ru": "офис, кабинет"
-            }
-          ]
         }
       ]
     }

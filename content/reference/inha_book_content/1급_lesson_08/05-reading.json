@@ -9,6 +9,49 @@
       "source_photo": "IMG_1065",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-vacation-plan",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-vacation-plan",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "비행기",
+              "translation_ru": "самолёт"
+            },
+            {
+              "ko": "표",
+              "translation_ru": "билет"
+            },
+            {
+              "ko": "예매하다",
+              "translation_ru": "бронировать, покупать заранее (билет)"
+            },
+            {
+              "ko": "친척",
+              "translation_ru": "родственники, родня"
+            },
+            {
+              "ko": "돌아오다",
+              "translation_ru": "возвращаться (сюда)"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "돌아올",
+                "translation_ru": "форма от 돌아오다 (возвращаться)"
+              },
+              {
+                "ko": "돌아온",
+                "translation_ru": "форма от 돌아오다 (возвращаться)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-reading-vacation-plan",
           "toc_section": "읽고 말하기",
@@ -31,16 +74,6 @@
             },
             {
               "text": "그래서 저는 방학을 기다립니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "돌아올",
-              "translation_ru": "форма от 돌아오다 (возвращаться)"
-            },
-            {
-              "ko": "돌아온",
-              "translation_ru": "форма от 돌아오다 (возвращаться)"
             }
           ]
         },
@@ -80,37 +113,6 @@
               "kind": "open",
               "prompt": "여러분의 방학 계획을 이야기해 보십시오.",
               "prompt_ru": "Расскажите о своих планах на каникулы."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-vacation-plan",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-vacation-plan",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "비행기",
-              "translation_ru": "самолёт"
-            },
-            {
-              "ko": "표",
-              "translation_ru": "билет"
-            },
-            {
-              "ko": "예매하다",
-              "translation_ru": "бронировать, покупать заранее (билет)"
-            },
-            {
-              "ko": "친척",
-              "translation_ru": "родственники, родня"
-            },
-            {
-              "ko": "돌아오다",
-              "translation_ru": "возвращаться (сюда)"
             }
           ]
         }

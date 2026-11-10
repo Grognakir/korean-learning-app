@@ -9,6 +9,69 @@
       "source_photo": "IMG_1573",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-library",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-library",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "벌점",
+              "translation_ru": "штрафные баллы"
+            },
+            {
+              "ko": "플라스틱",
+              "translation_ru": "пластик"
+            },
+            {
+              "ko": "쓰레기통",
+              "translation_ru": "мусорное ведро, урна"
+            },
+            {
+              "ko": "무음",
+              "translation_ru": "беззвучный режим"
+            },
+            {
+              "ko": "피해",
+              "translation_ru": "ущерб, вред, неудобство"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "노키즈존",
+                "translation_ru": "«зона без детей» (заведение, куда детям вход запрещён)"
+              },
+              {
+                "ko": "차별",
+                "translation_ru": "дискриминация"
+              },
+              {
+                "ko": "논의",
+                "translation_ru": "обсуждение"
+              },
+              {
+                "ko": "기자",
+                "translation_ru": "журналист"
+              },
+              {
+                "ko": "떠들다",
+                "translation_ru": "шуметь, громко разговаривать"
+              },
+              {
+                "ko": "미끄러지다",
+                "translation_ru": "поскользнуться"
+              },
+              {
+                "ko": "바닥",
+                "translation_ru": "пол, дно"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-reading-library",
           "toc_section": "읽고 말하기",
@@ -81,73 +144,6 @@
               "kind": "open",
               "prompt": "여러분은 생활 규칙을 정해 본 적이 있습니까? 어떤 규칙을 정했습니까?",
               "prompt_ru": "Устанавливали ли вы когда-нибудь правила жизни? Какие правила вы установили?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-library",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-library",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "벌점",
-              "translation_ru": "штрафные баллы"
-            },
-            {
-              "ko": "플라스틱",
-              "translation_ru": "пластик"
-            },
-            {
-              "ko": "쓰레기통",
-              "translation_ru": "мусорное ведро, урна"
-            },
-            {
-              "ko": "무음",
-              "translation_ru": "беззвучный режим"
-            },
-            {
-              "ko": "피해",
-              "translation_ru": "ущерб, вред, неудобство"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "노 키즈 존",
-              "title_ru": "Общественные места и дети",
-              "items": [
-                {
-                  "ko": "노키즈존",
-                  "translation_ru": "«зона без детей» (заведение, куда детям вход запрещён)"
-                },
-                {
-                  "ko": "차별",
-                  "translation_ru": "дискриминация"
-                },
-                {
-                  "ko": "논의",
-                  "translation_ru": "обсуждение"
-                },
-                {
-                  "ko": "기자",
-                  "translation_ru": "журналист"
-                },
-                {
-                  "ko": "떠들다",
-                  "translation_ru": "шуметь, громко разговаривать"
-                },
-                {
-                  "ko": "미끄러지다",
-                  "translation_ru": "поскользнуться"
-                },
-                {
-                  "ko": "바닥",
-                  "translation_ru": "пол, дно"
-                }
-              ]
             }
           ]
         }

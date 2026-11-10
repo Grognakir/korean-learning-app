@@ -9,6 +9,33 @@
       "source_photo": "IMG_1033",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-trip",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "시내",
+              "translation_ru": "центр города"
+            },
+            {
+              "ko": "동생",
+              "translation_ru": "младший брат или сестра"
+            },
+            {
+              "ko": "맑다",
+              "translation_ru": "быть ясным, чистым (о воздухе, погоде)"
+            },
+            {
+              "ko": "참",
+              "translation_ru": "очень, действительно (разг.)"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-trip-experience",
           "toc_section": "듣고 말하기",
@@ -79,33 +106,6 @@
           ],
           "followup": "친구들에게 한국에서의 경험을 이야기해 보십시오.",
           "followup_ru": "Расскажите друзьям о своём опыте в Корее."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-trip",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "시내",
-              "translation_ru": "центр города"
-            },
-            {
-              "ko": "동생",
-              "translation_ru": "младший брат или сестра"
-            },
-            {
-              "ko": "맑다",
-              "translation_ru": "быть ясным, чистым (о воздухе, погоде)"
-            },
-            {
-              "ko": "참",
-              "translation_ru": "очень, действительно (разг.)"
-            }
-          ]
         }
       ]
     }

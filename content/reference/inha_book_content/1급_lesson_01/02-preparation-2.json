@@ -9,6 +9,53 @@
       "source_photo": "IMG_0953",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-introduction-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "선생님",
+              "translation_ru": "учитель"
+            },
+            {
+              "ko": "아니요",
+              "translation_ru": "нет"
+            },
+            {
+              "ko": "학생",
+              "translation_ru": "ученик, студент"
+            },
+            {
+              "ko": "의사",
+              "translation_ru": "врач"
+            },
+            {
+              "ko": "영어",
+              "translation_ru": "английский язык"
+            },
+            {
+              "ko": "회사원",
+              "translation_ru": "офисный сотрудник"
+            },
+            {
+              "ko": "기자",
+              "translation_ru": "журналист"
+            },
+            {
+              "ko": "요리사",
+              "translation_ru": "повар"
+            },
+            {
+              "ko": "간호사",
+              "translation_ru": "медсестра, медбрат"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-introduction-dialogue",
           "toc_section": "준비하기 2",
@@ -68,53 +115,6 @@
             {
               "speaker": "파하드",
               "text": "만나서 반갑습니다."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-introduction-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "선생님",
-              "translation_ru": "учитель"
-            },
-            {
-              "ko": "아니요",
-              "translation_ru": "нет"
-            },
-            {
-              "ko": "학생",
-              "translation_ru": "ученик, студент"
-            },
-            {
-              "ko": "의사",
-              "translation_ru": "врач"
-            },
-            {
-              "ko": "영어",
-              "translation_ru": "английский язык"
-            },
-            {
-              "ko": "회사원",
-              "translation_ru": "офисный сотрудник"
-            },
-            {
-              "ko": "기자",
-              "translation_ru": "журналист"
-            },
-            {
-              "ko": "요리사",
-              "translation_ru": "повар"
-            },
-            {
-              "ko": "간호사",
-              "translation_ru": "медсестра, медбрат"
             }
           ]
         }

@@ -9,6 +9,61 @@
       "source_photo": "IMG_1299",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-style",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "화사하다",
+              "translation_ru": "яркий, нарядный, сияющий"
+            },
+            {
+              "ko": "티셔츠",
+              "translation_ru": "футболка"
+            },
+            {
+              "ko": "체크무늬",
+              "translation_ru": "клетчатый узор"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "패션",
+                "translation_ru": "мода"
+              },
+              {
+                "ko": "디자인",
+                "translation_ru": "дизайн"
+              },
+              {
+                "ko": "인기",
+                "translation_ru": "популярность"
+              },
+              {
+                "ko": "유행하다",
+                "translation_ru": "быть модным"
+              },
+              {
+                "ko": "추천하다",
+                "translation_ru": "рекомендовать"
+              },
+              {
+                "ko": "고르다",
+                "translation_ru": "выбирать"
+              },
+              {
+                "ko": "발표",
+                "translation_ru": "доклад, презентация"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-style",
           "toc_section": "듣고 말하기",
@@ -101,72 +156,6 @@
           ],
           "followup": "여러분에게 어떤 스타일이 잘 어울립니까? 친구들과 이야기해 보십시오.",
           "followup_ru": "Какой стиль вам идёт? Расскажите друзьям."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-style",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "화사하다",
-              "translation_ru": "яркий, нарядный, сияющий",
-              "group": "스타일"
-            },
-            {
-              "ko": "티셔츠",
-              "translation_ru": "футболка"
-            },
-            {
-              "ko": "체크무늬",
-              "translation_ru": "клетчатый узор"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "스타일",
-              "title_ru": "Мода и стиль",
-              "items": [
-                {
-                  "ko": "패션",
-                  "translation_ru": "мода"
-                },
-                {
-                  "ko": "디자인",
-                  "translation_ru": "дизайн"
-                },
-                {
-                  "ko": "인기",
-                  "translation_ru": "популярность"
-                },
-                {
-                  "ko": "유행하다",
-                  "translation_ru": "быть модным"
-                }
-              ]
-            },
-            {
-              "title": "선택",
-              "title_ru": "Выбор и совет",
-              "items": [
-                {
-                  "ko": "추천하다",
-                  "translation_ru": "рекомендовать"
-                },
-                {
-                  "ko": "고르다",
-                  "translation_ru": "выбирать"
-                },
-                {
-                  "ko": "발표",
-                  "translation_ru": "доклад, презентация"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

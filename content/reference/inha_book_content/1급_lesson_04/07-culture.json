@@ -9,36 +9,6 @@
       "source_photo": "IMG_1006",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-greetings",
-          "toc_section": "문화 이해하기",
-          "title": "한국의 일상적인 인사말",
-          "title_ru": "Повседневные приветствия в Корее",
-          "illustration": {
-            "storage_path": "lesson_4/illustration_5_everyday_greetings_v2.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
-          "intro_prompt_ru": "Что делают эти люди? Расскажите.",
-          "lines": [
-            {
-              "text": "한국어에는 인사말이 많습니다.\n처음 만납니다. 인사합니다.\n“안녕하세요?”, “안녕하십니까?”, “안녕?”\n밥을 먹습니다. 인사합니다.\n“맛있게 드세요.”, “잘 먹겠습니다.”, “잘 먹었습니다.”\n아침에 일어납니다. 인사합니다.\n“안녕히 주무셨어요?”\n잠을 잡니다. 인사합니다.\n“안녕히 주무세요.”\n선생님과 헤어집니다. 인사합니다.\n“안녕히 계세요.”, “안녕히 가세요.”"
-            },
-            {
-              "text": "1) 한국의 인사말은 여러분 나라와 다릅니까?",
-              "translation_ru": "Отличаются ли корейские приветствия от приветствий в вашей стране?"
-            },
-            {
-              "text": "2) 여러분 나라에는 무슨 인사가 있습니까?",
-              "translation_ru": "Какие приветствия есть в вашей стране?"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -74,6 +44,36 @@
             {
               "ko": "헤어지다",
               "translation_ru": "расставаться"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-culture-greetings",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 일상적인 인사말",
+          "title_ru": "Повседневные приветствия в Корее",
+          "illustration": {
+            "storage_path": "lesson_4/illustration_5_everyday_greetings_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 합니까? 이야기해 보십시오.",
+          "intro_prompt_ru": "Что делают эти люди? Расскажите.",
+          "lines": [
+            {
+              "text": "한국어에는 인사말이 많습니다.\n처음 만납니다. 인사합니다.\n“안녕하세요?”, “안녕하십니까?”, “안녕?”\n밥을 먹습니다. 인사합니다.\n“맛있게 드세요.”, “잘 먹겠습니다.”, “잘 먹었습니다.”\n아침에 일어납니다. 인사합니다.\n“안녕히 주무셨어요?”\n잠을 잡니다. 인사합니다.\n“안녕히 주무세요.”\n선생님과 헤어집니다. 인사합니다.\n“안녕히 계세요.”, “안녕히 가세요.”"
+            },
+            {
+              "text": "1) 한국의 인사말은 여러분 나라와 다릅니까?",
+              "translation_ru": "Отличаются ли корейские приветствия от приветствий в вашей стране?"
+            },
+            {
+              "text": "2) 여러분 나라에는 무슨 인사가 있습니까?",
+              "translation_ru": "Какие приветствия есть в вашей стране?"
             }
           ]
         },

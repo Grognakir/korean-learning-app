@@ -9,6 +9,49 @@
       "source_photo": "IMG_1098",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-gimbap",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "김",
+              "translation_ru": "сушёные листы водорослей (нори)"
+            },
+            {
+              "ko": "야채",
+              "translation_ru": "овощи"
+            },
+            {
+              "ko": "단무지",
+              "translation_ru": "маринованная жёлтая редька (для кимбапа)"
+            },
+            {
+              "ko": "칼",
+              "translation_ru": "нож"
+            },
+            {
+              "ko": "접시",
+              "translation_ru": "тарелка"
+            },
+            {
+              "ko": "말다",
+              "translation_ru": "сворачивать, заворачивать (в рулет)"
+            },
+            {
+              "ko": "썰다",
+              "translation_ru": "резать, нарезать (ломтиками)"
+            },
+            {
+              "ko": "담다",
+              "translation_ru": "класть, укладывать (в посуду)"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-gimbap",
           "toc_section": "문화 이해하기",
@@ -79,49 +122,6 @@
               "kind": "open",
               "prompt": "여러분 나라의 음식은 어떻게 만듭니까? 이야기해 보십시오.",
               "prompt_ru": "Как готовят еду в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-gimbap",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "김",
-              "translation_ru": "сушёные листы водорослей (нори)"
-            },
-            {
-              "ko": "야채",
-              "translation_ru": "овощи"
-            },
-            {
-              "ko": "단무지",
-              "translation_ru": "маринованная жёлтая редька (для кимбапа)"
-            },
-            {
-              "ko": "칼",
-              "translation_ru": "нож"
-            },
-            {
-              "ko": "접시",
-              "translation_ru": "тарелка"
-            },
-            {
-              "ko": "말다",
-              "translation_ru": "сворачивать, заворачивать (в рулет)"
-            },
-            {
-              "ko": "썰다",
-              "translation_ru": "резать, нарезать (ломтиками)"
-            },
-            {
-              "ko": "담다",
-              "translation_ru": "класть, укладывать (в посуду)"
             }
           ]
         },

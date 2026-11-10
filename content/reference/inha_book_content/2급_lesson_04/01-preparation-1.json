@@ -9,6 +9,145 @@
       "source_photo": "IMG_0648",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-weather-forecast-dialogue",
+          "source_note": "рукописный список на полях страниц (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "시합",
+              "translation_ru": "матч, соревнование"
+            },
+            {
+              "ko": "연습하다",
+              "translation_ru": "тренироваться"
+            },
+            {
+              "ko": "황사",
+              "translation_ru": "жёлтая пыль (весенние песчаные бури из Азии)"
+            },
+            {
+              "ko": "심하다",
+              "translation_ru": "быть сильным, серьёзным (о явлении)"
+            },
+            {
+              "ko": "안개",
+              "translation_ru": "туман"
+            },
+            {
+              "ko": "끼다",
+              "translation_ru": "затянуть (о тумане, облаках)"
+            },
+            {
+              "ko": "젖다",
+              "translation_ru": "промокнуть"
+            },
+            {
+              "ko": "먼지",
+              "translation_ru": "пыль"
+            },
+            {
+              "ko": "가을비",
+              "translation_ru": "осенний дождь"
+            },
+            {
+              "ko": "쌀쌀하다",
+              "translation_ru": "быть прохладным, зябким"
+            },
+            {
+              "ko": "꽃샘추위",
+              "translation_ru": "весенние заморозки (\"холод, завидующий цветам\")"
+            },
+            {
+              "ko": "계단",
+              "translation_ru": "лестница"
+            },
+            {
+              "ko": "넘어지다",
+              "translation_ru": "упасть, споткнуться"
+            },
+            {
+              "ko": "외출",
+              "translation_ru": "выход из дома"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "폭설",
+                "translation_ru": "сильный снегопад"
+              },
+              {
+                "ko": "폭우",
+                "translation_ru": "ливень"
+              },
+              {
+                "ko": "흐리다",
+                "translation_ru": "быть пасмурным"
+              },
+              {
+                "ko": "개다",
+                "translation_ru": "проясняться"
+              },
+              {
+                "ko": "일기예보",
+                "translation_ru": "прогноз погоды"
+              },
+              {
+                "ko": "시원하다",
+                "translation_ru": "прохладный"
+              },
+              {
+                "ko": "맑다",
+                "translation_ru": "ясный"
+              },
+              {
+                "ko": "따뜻하다",
+                "translation_ru": "тёплый"
+              },
+              {
+                "ko": "감기",
+                "translation_ru": "простуда"
+              },
+              {
+                "ko": "씻다",
+                "translation_ru": "мыть"
+              },
+              {
+                "ko": "마스크",
+                "translation_ru": "маска"
+              },
+              {
+                "ko": "비",
+                "translation_ru": "дождь"
+              },
+              {
+                "ko": "바람",
+                "translation_ru": "ветер"
+              },
+              {
+                "ko": "선수",
+                "translation_ru": "спортсмен"
+              },
+              {
+                "ko": "농구",
+                "translation_ru": "баскетбол"
+              },
+              {
+                "ko": "벤치",
+                "translation_ru": "скамейка"
+              },
+              {
+                "ko": "중간시험",
+                "translation_ru": "промежуточный экзамен"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-weather-forecast-dialogue",
           "toc_section": "준비하기 1",
@@ -62,181 +201,6 @@
             {
               "speaker": "아멜리",
               "text": "좋아요. 내일 오후에 운동장에서 봐요."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-weather-forecast-dialogue",
-          "source_note": "рукописный список на полях страниц (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "시합",
-              "translation_ru": "матч, соревнование",
-              "group": "시합"
-            },
-            {
-              "ko": "연습하다",
-              "translation_ru": "тренироваться",
-              "group": "시합"
-            },
-            {
-              "ko": "황사",
-              "translation_ru": "жёлтая пыль (весенние песчаные бури из Азии)",
-              "group": "날씨"
-            },
-            {
-              "ko": "심하다",
-              "translation_ru": "быть сильным, серьёзным (о явлении)",
-              "group": "상태"
-            },
-            {
-              "ko": "안개",
-              "translation_ru": "туман",
-              "group": "날씨"
-            },
-            {
-              "ko": "끼다",
-              "translation_ru": "затянуть (о тумане, облаках)",
-              "group": "일상"
-            },
-            {
-              "ko": "젖다",
-              "translation_ru": "промокнуть",
-              "group": "일상"
-            },
-            {
-              "ko": "먼지",
-              "translation_ru": "пыль",
-              "group": "날씨"
-            },
-            {
-              "ko": "가을비",
-              "translation_ru": "осенний дождь",
-              "group": "날씨"
-            },
-            {
-              "ko": "쌀쌀하다",
-              "translation_ru": "быть прохладным, зябким",
-              "group": "상태"
-            },
-            {
-              "ko": "꽃샘추위",
-              "translation_ru": "весенние заморозки (\"холод, завидующий цветам\")",
-              "group": "날씨"
-            },
-            {
-              "ko": "계단",
-              "translation_ru": "лестница",
-              "group": "일상"
-            },
-            {
-              "ko": "넘어지다",
-              "translation_ru": "упасть, споткнуться",
-              "group": "일상"
-            },
-            {
-              "ko": "외출",
-              "translation_ru": "выход из дома",
-              "group": "일상"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "날씨",
-              "title_ru": "Погодные явления",
-              "items": [
-                {
-                  "ko": "폭설",
-                  "translation_ru": "сильный снегопад"
-                },
-                {
-                  "ko": "폭우",
-                  "translation_ru": "ливень"
-                },
-                {
-                  "ko": "흐리다",
-                  "translation_ru": "быть пасмурным"
-                },
-                {
-                  "ko": "개다",
-                  "translation_ru": "проясняться"
-                },
-                {
-                  "ko": "일기예보",
-                  "translation_ru": "прогноз погоды"
-                }
-              ]
-            },
-            {
-              "title": "상태",
-              "title_ru": "Состояние",
-              "items": [
-                {
-                  "ko": "시원하다",
-                  "translation_ru": "прохладный"
-                },
-                {
-                  "ko": "맑다",
-                  "translation_ru": "ясный"
-                },
-                {
-                  "ko": "따뜻하다",
-                  "translation_ru": "тёплый"
-                }
-              ]
-            },
-            {
-              "title": "일상",
-              "title_ru": "Быт и здоровье",
-              "items": [
-                {
-                  "ko": "감기",
-                  "translation_ru": "простуда"
-                },
-                {
-                  "ko": "씻다",
-                  "translation_ru": "мыть"
-                },
-                {
-                  "ko": "마스크",
-                  "translation_ru": "маска"
-                },
-                {
-                  "ko": "비",
-                  "translation_ru": "дождь"
-                },
-                {
-                  "ko": "바람",
-                  "translation_ru": "ветер"
-                }
-              ]
-            },
-            {
-              "title": "시합",
-              "title_ru": "Спорт",
-              "items": [
-                {
-                  "ko": "선수",
-                  "translation_ru": "спортсмен"
-                },
-                {
-                  "ko": "농구",
-                  "translation_ru": "баскетбол"
-                },
-                {
-                  "ko": "벤치",
-                  "translation_ru": "скамейка"
-                },
-                {
-                  "ko": "중간시험",
-                  "translation_ru": "промежуточный экзамен"
-                }
-              ]
             }
           ]
         }

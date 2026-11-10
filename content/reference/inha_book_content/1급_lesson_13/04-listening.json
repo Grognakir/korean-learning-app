@@ -9,6 +9,33 @@
       "source_photo": "IMG_1142",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-find-destination",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "대학로",
+              "translation_ru": "Тэхангно (район театров в Сеуле)"
+            },
+            {
+              "ko": "지하철",
+              "translation_ru": "метро"
+            },
+            {
+              "ko": "노선도",
+              "translation_ru": "схема линий (метро)"
+            },
+            {
+              "ko": "급행",
+              "translation_ru": "экспресс"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-find-destination",
           "toc_section": "듣고 말하기",
@@ -87,33 +114,6 @@
           ],
           "followup": "여러분은 어디에 가고 싶습니까? 친구들에게 이야기해 보십시오.",
           "followup_ru": "Куда вы хотите поехать? Расскажите друзьям."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-find-destination",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "대학로",
-              "translation_ru": "Тэхангно (район театров в Сеуле)"
-            },
-            {
-              "ko": "지하철",
-              "translation_ru": "метро"
-            },
-            {
-              "ko": "노선도",
-              "translation_ru": "схема линий (метро)"
-            },
-            {
-              "ko": "급행",
-              "translation_ru": "экспресс"
-            }
-          ]
         }
       ]
     }

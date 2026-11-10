@@ -9,78 +9,6 @@
       "source_photo": "IMG_1436",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-advice-dialogue",
-          "toc_section": "준비하기 2",
-          "title": "화해하는 방법을 조언하기",
-          "title_ru": "Советовать, как помириться",
-          "illustration": {
-            "storage_path": "lesson_12/illustration_2_reconciliation_advice_v2.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기2",
-          "exercise_ref": null,
-          "audio_id": "246",
-          "speakers": [
-            "자르갈",
-            "아멜리"
-          ],
-          "lines": [
-            {
-              "speaker": "자르갈",
-              "text": "아멜리 씨, 그 친구와 화해했어요?"
-            },
-            {
-              "speaker": "아멜리",
-              "text": "아……. 아직 못 했어요. 말을 건네면 더 싸울 것 같아서 겁이 나요."
-            },
-            {
-              "speaker": "자르갈",
-              "text": "맞아요. 싸우고 나서 사이가 어색해진 친구에게 말을 걸기가 쉽지 않죠?"
-            },
-            {
-              "speaker": "아멜리",
-              "text": "네, 제가 잘못했으면 먼저 사과했을 거예요. 하지만 제 잘못이 아니잖아요."
-            },
-            {
-              "speaker": "자르갈",
-              "text": "사람은 누구나 단점이 있어요. 아멜리 씨가 그 친구에게 솔직하게 얘기하지 않으면 그 친구는 자신의 단점을 모를 수도 있어요. 좋은 말만 하는 사람보다 단점에 대해서도 지적하고 조언과 충고를 해 주는 친구가 진정한 친구가 아닐까요?"
-            },
-            {
-              "speaker": "아멜리",
-              "text": "음……, 솔직하게 얘기하는 게 최선의 방법이겠지요?"
-            },
-            {
-              "speaker": "자르갈",
-              "text": "그럼요, 먼저 화해의 말을 전하는 용기 있는 사람이 되어 보세요."
-            },
-            {
-              "speaker": "아멜리",
-              "text": "네, 자르갈 씨가 충고해 준 덕분에 용기가 조금 생기네요. 정말 고마워요."
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-junbihagi2-expr",
-          "toc_section": "준비하기 2",
-          "hint_kind": "expression",
-          "related_text_ref": "text-advice-dialogue",
-          "items": [
-            {
-              "kind": "phrase",
-              "text": "말을 걸다",
-              "translation_ru": "заговорить (начать разговор) — «모르는 사람에게 말을 걸어요» (заговариваю с незнакомым человеком)"
-            },
-            {
-              "kind": "phrase",
-              "text": "말을 건네다",
-              "translation_ru": "обратиться со словом, заговорить — «공부하고 있는 친구에게 말을 건넸어요» (заговорил с занимающимся другом)"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi2",
           "toc_section": "준비하기 2",
@@ -158,90 +86,182 @@
               "translation_ru": "изделие, товар"
             }
           ],
-          "extra_groups": [
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "조언하다",
+                "translation_ru": "советовать"
+              },
+              {
+                "ko": "말을 걸다",
+                "translation_ru": "заговорить с кем-то"
+              },
+              {
+                "ko": "말을 건네다",
+                "translation_ru": "обратиться со словом, заговорить"
+              },
+              {
+                "ko": "말을 전하다",
+                "translation_ru": "передать слова"
+              },
+              {
+                "ko": "칭찬하다",
+                "translation_ru": "хвалить"
+              },
+              {
+                "ko": "지키다",
+                "translation_ru": "соблюдать, охранять"
+              },
+              {
+                "ko": "결정하다",
+                "translation_ru": "решать, принимать решение"
+              },
+              {
+                "ko": "전공하다",
+                "translation_ru": "изучать как основную специальность"
+              },
+              {
+                "ko": "경제학",
+                "translation_ru": "экономика (как специальность)"
+              },
+              {
+                "ko": "미래",
+                "translation_ru": "будущее"
+              },
+              {
+                "ko": "축하 인사",
+                "translation_ru": "поздравление"
+              },
+              {
+                "ko": "대신",
+                "translation_ru": "вместо; взамен"
+              },
+              {
+                "ko": "체육대회",
+                "translation_ru": "спортивный праздник, спартакиада"
+              },
+              {
+                "ko": "인기",
+                "translation_ru": "популярность"
+              },
+              {
+                "ko": "이삿짐",
+                "translation_ru": "вещи при переезде"
+              },
+              {
+                "ko": "정리하다",
+                "translation_ru": "приводить в порядок, упорядочивать"
+              },
+              {
+                "ko": "세일",
+                "translation_ru": "распродажа"
+              },
+              {
+                "ko": "가볍다",
+                "translation_ru": "лёгкий (по весу)"
+              }
+            ],
+            "grammar_vocab": [
+              {
+                "ko": "박물관",
+                "translation_ru": "музей"
+              },
+              {
+                "ko": "도움",
+                "translation_ru": "помощь"
+              },
+              {
+                "ko": "이사",
+                "translation_ru": "переезд"
+              },
+              {
+                "ko": "선물",
+                "translation_ru": "подарок"
+              },
+              {
+                "ko": "이메일",
+                "translation_ru": "электронная почта"
+              },
+              {
+                "ko": "답장",
+                "translation_ru": "ответное письмо"
+              },
+              {
+                "ko": "흐리다",
+                "translation_ru": "пасмурный, облачный (о погоде)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-advice-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "화해하는 방법을 조언하기",
+          "title_ru": "Советовать, как помириться",
+          "illustration": {
+            "storage_path": "lesson_12/illustration_2_reconciliation_advice_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "246",
+          "speakers": [
+            "자르갈",
+            "아멜리"
+          ],
+          "lines": [
             {
-              "title": "조언",
-              "title_ru": "Слова и советы",
-              "items": [
-                {
-                  "ko": "조언하다",
-                  "translation_ru": "советовать"
-                },
-                {
-                  "ko": "말을 걸다",
-                  "translation_ru": "заговорить с кем-то"
-                },
-                {
-                  "ko": "말을 건네다",
-                  "translation_ru": "обратиться со словом, заговорить"
-                },
-                {
-                  "ko": "말을 전하다",
-                  "translation_ru": "передать слова"
-                },
-                {
-                  "ko": "칭찬하다",
-                  "translation_ru": "хвалить"
-                },
-                {
-                  "ko": "지키다",
-                  "translation_ru": "соблюдать, охранять"
-                },
-                {
-                  "ko": "결정하다",
-                  "translation_ru": "решать, принимать решение"
-                },
-                {
-                  "ko": "전공하다",
-                  "translation_ru": "изучать как основную специальность"
-                }
-              ]
+              "speaker": "자르갈",
+              "text": "아멜리 씨, 그 친구와 화해했어요?"
             },
             {
-              "title": "연습",
-              "title_ru": "Из упражнений",
-              "items": [
-                {
-                  "ko": "경제학",
-                  "translation_ru": "экономика (как специальность)"
-                },
-                {
-                  "ko": "미래",
-                  "translation_ru": "будущее"
-                },
-                {
-                  "ko": "축하 인사",
-                  "translation_ru": "поздравление"
-                },
-                {
-                  "ko": "대신",
-                  "translation_ru": "вместо; взамен"
-                },
-                {
-                  "ko": "체육대회",
-                  "translation_ru": "спортивный праздник, спартакиада"
-                },
-                {
-                  "ko": "인기",
-                  "translation_ru": "популярность"
-                },
-                {
-                  "ko": "이삿짐",
-                  "translation_ru": "вещи при переезде"
-                },
-                {
-                  "ko": "정리하다",
-                  "translation_ru": "приводить в порядок, упорядочивать"
-                },
-                {
-                  "ko": "세일",
-                  "translation_ru": "распродажа"
-                },
-                {
-                  "ko": "가볍다",
-                  "translation_ru": "лёгкий (по весу)"
-                }
-              ]
+              "speaker": "아멜리",
+              "text": "아……. 아직 못 했어요. 말을 건네면 더 싸울 것 같아서 겁이 나요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "맞아요. 싸우고 나서 사이가 어색해진 친구에게 말을 걸기가 쉽지 않죠?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 제가 잘못했으면 먼저 사과했을 거예요. 하지만 제 잘못이 아니잖아요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "사람은 누구나 단점이 있어요. 아멜리 씨가 그 친구에게 솔직하게 얘기하지 않으면 그 친구는 자신의 단점을 모를 수도 있어요. 좋은 말만 하는 사람보다 단점에 대해서도 지적하고 조언과 충고를 해 주는 친구가 진정한 친구가 아닐까요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "음……, 솔직하게 얘기하는 게 최선의 방법이겠지요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "그럼요, 먼저 화해의 말을 전하는 용기 있는 사람이 되어 보세요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 자르갈 씨가 충고해 준 덕분에 용기가 조금 생기네요. 정말 고마워요."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-junbihagi2-expr",
+          "toc_section": "준비하기 2",
+          "hint_kind": "expression",
+          "related_text_ref": "text-advice-dialogue",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "말을 걸다",
+              "translation_ru": "заговорить (начать разговор) — «모르는 사람에게 말을 걸어요» (заговариваю с незнакомым человеком)"
+            },
+            {
+              "kind": "phrase",
+              "text": "말을 건네다",
+              "translation_ru": "обратиться со словом, заговорить — «공부하고 있는 친구에게 말을 건넸어요» (заговорил с занимающимся другом)"
             }
           ]
         }
@@ -264,28 +284,6 @@
             "친구가 도와준 덕분에 이사를 빨리 끝낼 수 있었어요.",
             "부모님께서 보내 주신 선물 덕분에 기분이 좋아졌어요.",
             "파하드 씨, 대학교 합격을 축하해요. — 감사합니다. 선생님께서 잘 가르쳐 주신 덕분이에요."
-          ],
-          "vocab": [
-            {
-              "ko": "박물관",
-              "translation_ru": "музей"
-            },
-            {
-              "ko": "안내원",
-              "translation_ru": "гид, распорядитель, служащий информационной стойки"
-            },
-            {
-              "ko": "도움",
-              "translation_ru": "помощь"
-            },
-            {
-              "ko": "이사",
-              "translation_ru": "переезд"
-            },
-            {
-              "ko": "선물",
-              "translation_ru": "подарок"
-            }
           ],
           "rules_table": {
             "head": [
@@ -344,20 +342,6 @@
             "날씨가 흐렸으면 여행을 가지 못 했을 거예요.",
             "공부를 열심히 했으면 이번 시험에 합격했을 거예요.",
             "제 잘못이었으면 먼저 사과했을 거예요."
-          ],
-          "vocab": [
-            {
-              "ko": "이메일",
-              "translation_ru": "электронная почта"
-            },
-            {
-              "ko": "답장",
-              "translation_ru": "ответное письмо"
-            },
-            {
-              "ko": "흐리다",
-              "translation_ru": "пасмурный, облачный (о погоде)"
-            }
           ],
           "rules_table": {
             "head": [

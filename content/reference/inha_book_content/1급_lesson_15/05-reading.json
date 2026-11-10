@@ -9,6 +9,49 @@
       "source_photo": "IMG_1173",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-medicine",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-medicine",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "식전",
+              "translation_ru": "перед едой"
+            },
+            {
+              "ko": "식후",
+              "translation_ru": "после еды"
+            },
+            {
+              "ko": "주의",
+              "translation_ru": "внимание, осторожность"
+            },
+            {
+              "ko": "임산부",
+              "translation_ru": "беременная женщина"
+            },
+            {
+              "ko": "게시판",
+              "translation_ru": "доска объявлений"
+            },
+            {
+              "ko": "습관",
+              "translation_ru": "привычка"
+            },
+            {
+              "ko": "봉투",
+              "translation_ru": "конверт, пакет"
+            },
+            {
+              "ko": "임신하다",
+              "translation_ru": "быть беременной"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-medicine",
           "toc_section": "읽고 말하기",
@@ -79,49 +122,6 @@
               "kind": "open",
               "prompt": "친구들에게 건강을 위한 좋은 습관을 이야기해 보십시오.",
               "prompt_ru": "Расскажите друзьям о полезных для здоровья привычках."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-medicine",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-medicine",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "식전",
-              "translation_ru": "перед едой"
-            },
-            {
-              "ko": "식후",
-              "translation_ru": "после еды"
-            },
-            {
-              "ko": "주의",
-              "translation_ru": "внимание, осторожность"
-            },
-            {
-              "ko": "임산부",
-              "translation_ru": "беременная женщина"
-            },
-            {
-              "ko": "게시판",
-              "translation_ru": "доска объявлений"
-            },
-            {
-              "ko": "습관",
-              "translation_ru": "привычка"
-            },
-            {
-              "ko": "봉투",
-              "translation_ru": "конверт, пакет"
-            },
-            {
-              "ko": "임신하다",
-              "translation_ru": "быть беременной"
             }
           ]
         }

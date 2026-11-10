@@ -9,6 +9,45 @@
       "source_photo": "IMG_1162",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-symptoms-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "목",
+              "translation_ru": "шея, горло"
+            },
+            {
+              "ko": "열",
+              "translation_ru": "температура, жар"
+            },
+            {
+              "ko": "더",
+              "translation_ru": "ещё, больше"
+            },
+            {
+              "ko": "기침",
+              "translation_ru": "кашель"
+            },
+            {
+              "ko": "콧물",
+              "translation_ru": "сопли, насморк"
+            },
+            {
+              "ko": "처방전",
+              "translation_ru": "рецепт (от врача)"
+            },
+            {
+              "ko": "푹",
+              "translation_ru": "крепко, как следует (об отдыхе, сне)"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-symptoms-dialogue",
           "toc_section": "준비하기 1",
@@ -84,45 +123,6 @@
               "text": "감사합니다."
             }
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-symptoms-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "목",
-              "translation_ru": "шея, горло"
-            },
-            {
-              "ko": "열",
-              "translation_ru": "температура, жар"
-            },
-            {
-              "ko": "더",
-              "translation_ru": "ещё, больше"
-            },
-            {
-              "ko": "기침",
-              "translation_ru": "кашель"
-            },
-            {
-              "ko": "콧물",
-              "translation_ru": "сопли, насморк"
-            },
-            {
-              "ko": "처방전",
-              "translation_ru": "рецепт (от врача)"
-            },
-            {
-              "ko": "푹",
-              "translation_ru": "крепко, как следует (об отдыхе, сне)"
-            }
-          ]
         }
       ]
     },
@@ -131,6 +131,33 @@
       "page_role": "content",
       "source_photo": "IMG_1163",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-grammar",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "배구",
+              "translation_ru": "волейбол"
+            },
+            {
+              "ko": "떨어지다",
+              "translation_ru": "падать; проваливаться (на экзамене)"
+            },
+            {
+              "ko": "목소리",
+              "translation_ru": "голос"
+            },
+            {
+              "ko": "멋있다",
+              "translation_ru": "быть классным, стильным"
+            }
+          ]
+        },
         {
           "type": "grammar_point",
           "id": "grammar-1",
@@ -256,33 +283,6 @@
           "rules": [
             "Работает с настоящим и прошедшим (현재, 과거)"
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-grammar",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "배구",
-              "translation_ru": "волейбол"
-            },
-            {
-              "ko": "떨어지다",
-              "translation_ru": "падать; проваливаться (на экзамене)"
-            },
-            {
-              "ko": "목소리",
-              "translation_ru": "голос"
-            },
-            {
-              "ko": "멋있다",
-              "translation_ru": "быть классным, стильным"
-            }
-          ]
         }
       ]
     },
@@ -291,6 +291,37 @@
       "page_role": "content",
       "source_photo": "IMG_1164",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "두껍다",
+              "translation_ru": "быть толстым (о предмете)"
+            },
+            {
+              "ko": "얇다",
+              "translation_ru": "быть тонким"
+            },
+            {
+              "ko": "높다",
+              "translation_ru": "быть высоким"
+            },
+            {
+              "ko": "낮다",
+              "translation_ru": "быть низким"
+            },
+            {
+              "ko": "빠르다",
+              "translation_ru": "быть быстрым"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-1a",
@@ -437,37 +468,6 @@
           "template": [
             "가: {0}. / {1}."
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "두껍다",
-              "translation_ru": "быть толстым (о предмете)"
-            },
-            {
-              "ko": "얇다",
-              "translation_ru": "быть тонким"
-            },
-            {
-              "ko": "높다",
-              "translation_ru": "быть высоким"
-            },
-            {
-              "ko": "낮다",
-              "translation_ru": "быть низким"
-            },
-            {
-              "ko": "빠르다",
-              "translation_ru": "быть быстрым"
-            }
-          ]
         }
       ]
     },
@@ -476,6 +476,41 @@
       "page_role": "content",
       "source_photo": "IMG_1165",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup2",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "호주",
+              "translation_ru": "Австралия"
+            },
+            {
+              "ko": "소고기",
+              "translation_ru": "говядина"
+            },
+            {
+              "ko": "돼지고기",
+              "translation_ru": "свинина"
+            },
+            {
+              "ko": "뜨겁다",
+              "translation_ru": "быть горячим (на ощупь)"
+            },
+            {
+              "ko": "배탈",
+              "translation_ru": "расстройство желудка"
+            },
+            {
+              "ko": "가지다",
+              "translation_ru": "иметь, держать"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-2a",
@@ -599,41 +634,6 @@
           "template": [
             "가: {0}."
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup2",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "호주",
-              "translation_ru": "Австралия"
-            },
-            {
-              "ko": "소고기",
-              "translation_ru": "говядина"
-            },
-            {
-              "ko": "돼지고기",
-              "translation_ru": "свинина"
-            },
-            {
-              "ko": "뜨겁다",
-              "translation_ru": "быть горячим (на ощупь)"
-            },
-            {
-              "ko": "배탈",
-              "translation_ru": "расстройство желудка"
-            },
-            {
-              "ko": "가지다",
-              "translation_ru": "иметь, держать"
-            }
-          ]
         }
       ]
     },
@@ -642,6 +642,33 @@
       "page_role": "content",
       "source_photo": "IMG_1166",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup3",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "깊다",
+              "translation_ru": "быть глубоким"
+            },
+            {
+              "ko": "시다",
+              "translation_ru": "быть кислым"
+            },
+            {
+              "ko": "무섭다",
+              "translation_ru": "быть страшным"
+            },
+            {
+              "ko": "색깔",
+              "translation_ru": "цвет"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-3a",
@@ -798,33 +825,6 @@
               "kind": "pattern",
               "text": "어떤 N",
               "translation_ru": "какой N — шаблон; «어떤 음식을 좋아해요?»"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup3",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "깊다",
-              "translation_ru": "быть глубоким"
-            },
-            {
-              "ko": "시다",
-              "translation_ru": "быть кислым"
-            },
-            {
-              "ko": "무섭다",
-              "translation_ru": "быть страшным"
-            },
-            {
-              "ko": "색깔",
-              "translation_ru": "цвет"
             }
           ]
         }

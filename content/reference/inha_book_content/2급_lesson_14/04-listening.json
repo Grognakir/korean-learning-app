@@ -9,6 +9,45 @@
       "source_photo": "IMG_1572",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-booking",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "listening-booking",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "확인하다",
+              "translation_ru": "проверять, подтверждать"
+            },
+            {
+              "ko": "입장하다",
+              "translation_ru": "входить, проходить (на мероприятие)"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "이어폰",
+                "translation_ru": "наушники (вкладыши)"
+              },
+              {
+                "ko": "휴대전화",
+                "translation_ru": "мобильный телефон"
+              },
+              {
+                "ko": "교통약자",
+                "translation_ru": "маломобильные граждане (пожилые, инвалиды, беременные)"
+              },
+              {
+                "ko": "예절",
+                "translation_ru": "этикет"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-booking",
           "toc_section": "듣고 말하기",
@@ -91,49 +130,6 @@
           ],
           "followup": "공연을 볼 때 지켜야 할 규칙은 무엇인지 이야기해 보십시오.",
           "followup_ru": "Расскажите, какие правила нужно соблюдать на представлении."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-booking",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "listening-booking",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "확인하다",
-              "translation_ru": "проверять, подтверждать"
-            },
-            {
-              "ko": "입장하다",
-              "translation_ru": "входить, проходить (на мероприятие)"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "예절",
-              "title_ru": "Этикет в метро",
-              "items": [
-                {
-                  "ko": "이어폰",
-                  "translation_ru": "наушники (вкладыши)"
-                },
-                {
-                  "ko": "휴대전화",
-                  "translation_ru": "мобильный телефон"
-                },
-                {
-                  "ko": "교통약자",
-                  "translation_ru": "маломобильные граждане (пожилые, инвалиды, беременные)"
-                },
-                {
-                  "ko": "예절",
-                  "translation_ru": "этикет"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

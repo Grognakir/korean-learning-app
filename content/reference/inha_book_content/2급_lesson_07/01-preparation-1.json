@@ -9,6 +9,203 @@
       "source_photo": "IMG_0754",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-shopping-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "쇼핑몰",
+              "translation_ru": "интернет-магазин; торговый центр"
+            },
+            {
+              "ko": "훨씬",
+              "translation_ru": "намного, гораздо"
+            },
+            {
+              "ko": "공짜",
+              "translation_ru": "бесплатно, даром"
+            },
+            {
+              "ko": "이따가",
+              "translation_ru": "чуть позже, попозже"
+            },
+            {
+              "ko": "비교하다",
+              "translation_ru": "сравнивать"
+            },
+            {
+              "ko": "구매",
+              "translation_ru": "покупка"
+            },
+            {
+              "ko": "후기",
+              "translation_ru": "отзыв, впечатления (после покупки или использования)"
+            },
+            {
+              "ko": "상품",
+              "translation_ru": "товар"
+            },
+            {
+              "ko": "풀다",
+              "translation_ru": "решать (задачу); развязывать"
+            },
+            {
+              "ko": "전부",
+              "translation_ru": "всё, целиком"
+            },
+            {
+              "ko": "가사",
+              "translation_ru": "слова песни"
+            },
+            {
+              "ko": "틀리다",
+              "translation_ru": "ошибаться, быть неверным"
+            },
+            {
+              "ko": "교환하다",
+              "translation_ru": "обменивать"
+            },
+            {
+              "ko": "사용법",
+              "translation_ru": "способ использования, инструкция"
+            },
+            {
+              "ko": "간단하다",
+              "translation_ru": "быть простым"
+            },
+            {
+              "ko": "봉투",
+              "translation_ru": "конверт; пакет"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "구매하다",
+                "translation_ru": "покупать"
+              },
+              {
+                "ko": "주문하다",
+                "translation_ru": "заказывать"
+              },
+              {
+                "ko": "결제하다",
+                "translation_ru": "оплачивать"
+              },
+              {
+                "ko": "배송하다",
+                "translation_ru": "доставлять"
+              },
+              {
+                "ko": "계산하다",
+                "translation_ru": "оплачивать"
+              },
+              {
+                "ko": "택배",
+                "translation_ru": "курьерская доставка"
+              },
+              {
+                "ko": "택배비",
+                "translation_ru": "плата за доставку"
+              },
+              {
+                "ko": "장바구니",
+                "translation_ru": "корзина"
+              },
+              {
+                "ko": "회원 가입",
+                "translation_ru": "регистрация"
+              },
+              {
+                "ko": "쿠폰",
+                "translation_ru": "купон"
+              },
+              {
+                "ko": "비밀번호",
+                "translation_ru": "пароль"
+              },
+              {
+                "ko": "로그인",
+                "translation_ru": "вход"
+              },
+              {
+                "ko": "품절",
+                "translation_ru": "нет в наличии"
+              },
+              {
+                "ko": "선불",
+                "translation_ru": "предоплата"
+              },
+              {
+                "ko": "착불",
+                "translation_ru": "оплата при получении"
+              },
+              {
+                "ko": "후불",
+                "translation_ru": "постоплата"
+              },
+              {
+                "ko": "현금",
+                "translation_ru": "наличные"
+              },
+              {
+                "ko": "카드",
+                "translation_ru": "карта"
+              },
+              {
+                "ko": "난방비",
+                "translation_ru": "плата за отопление"
+              },
+              {
+                "ko": "세일",
+                "translation_ru": "распродажа"
+              },
+              {
+                "ko": "가격",
+                "translation_ru": "цена"
+              },
+              {
+                "ko": "작성하다",
+                "translation_ru": "писать (отзыв)"
+              },
+              {
+                "ko": "별점",
+                "translation_ru": "оценка звёздами"
+              },
+              {
+                "ko": "교환",
+                "translation_ru": "обмен"
+              },
+              {
+                "ko": "환불",
+                "translation_ru": "возврат денег"
+              },
+              {
+                "ko": "반품",
+                "translation_ru": "возврат товара"
+              },
+              {
+                "ko": "사이즈",
+                "translation_ru": "размер"
+              }
+            ],
+            "exercise_vocab": [
+              {
+                "ko": "틀렸",
+                "translation_ru": "форма от 틀리다 (ошибаться, быть неверным)"
+              },
+              {
+                "ko": "간단했",
+                "translation_ru": "форма от 간단하다 (быть простым)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-shopping-dialogue",
           "toc_section": "준비하기 1",
@@ -63,225 +260,6 @@
               "text": "고맙기는요. 아, 그 물건을 산 사람들이 쓴 구매 후기도 보세요. 후기를 보면 정보를 더 많이 알 수 있을 거예요.",
               "emphasized": [
                 "기는요"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-shopping-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "쇼핑몰",
-              "translation_ru": "интернет-магазин; торговый центр",
-              "group": "인터넷 쇼핑"
-            },
-            {
-              "ko": "훨씬",
-              "translation_ru": "намного, гораздо",
-              "group": "비교"
-            },
-            {
-              "ko": "공짜",
-              "translation_ru": "бесплатно, даром",
-              "group": "가격"
-            },
-            {
-              "ko": "이따가",
-              "translation_ru": "чуть позже, попозже",
-              "group": "비교"
-            },
-            {
-              "ko": "비교하다",
-              "translation_ru": "сравнивать",
-              "group": "비교"
-            },
-            {
-              "ko": "구매",
-              "translation_ru": "покупка",
-              "group": "인터넷 쇼핑"
-            },
-            {
-              "ko": "후기",
-              "translation_ru": "отзыв, впечатления (после покупки или использования)",
-              "group": "인터넷 쇼핑"
-            },
-            {
-              "ko": "상품",
-              "translation_ru": "товар",
-              "group": "인터넷 쇼핑"
-            },
-            {
-              "ko": "풀다",
-              "translation_ru": "решать (задачу); развязывать",
-              "group": "비교"
-            },
-            {
-              "ko": "전부",
-              "translation_ru": "всё, целиком",
-              "group": "비교"
-            },
-            {
-              "ko": "가사",
-              "translation_ru": "слова песни",
-              "group": "비교"
-            },
-            {
-              "ko": "틀리다",
-              "translation_ru": "ошибаться, быть неверным",
-              "group": "비교"
-            },
-            {
-              "ko": "교환하다",
-              "translation_ru": "обменивать",
-              "group": "비교"
-            },
-            {
-              "ko": "사용법",
-              "translation_ru": "способ использования, инструкция",
-              "group": "비교"
-            },
-            {
-              "ko": "간단하다",
-              "translation_ru": "быть простым",
-              "group": "비교"
-            },
-            {
-              "ko": "봉투",
-              "translation_ru": "конверт; пакет",
-              "group": "비교"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "인터넷 쇼핑",
-              "title_ru": "Онлайн-покупки",
-              "items": [
-                {
-                  "ko": "구매하다",
-                  "translation_ru": "покупать"
-                },
-                {
-                  "ko": "주문하다",
-                  "translation_ru": "заказывать"
-                },
-                {
-                  "ko": "결제하다",
-                  "translation_ru": "оплачивать"
-                },
-                {
-                  "ko": "배송하다",
-                  "translation_ru": "доставлять"
-                },
-                {
-                  "ko": "계산하다",
-                  "translation_ru": "оплачивать"
-                },
-                {
-                  "ko": "택배",
-                  "translation_ru": "курьерская доставка"
-                },
-                {
-                  "ko": "택배비",
-                  "translation_ru": "плата за доставку"
-                },
-                {
-                  "ko": "장바구니",
-                  "translation_ru": "корзина"
-                },
-                {
-                  "ko": "회원 가입",
-                  "translation_ru": "регистрация"
-                },
-                {
-                  "ko": "쿠폰",
-                  "translation_ru": "купон"
-                },
-                {
-                  "ko": "비밀번호",
-                  "translation_ru": "пароль"
-                },
-                {
-                  "ko": "로그인",
-                  "translation_ru": "вход"
-                },
-                {
-                  "ko": "품절",
-                  "translation_ru": "нет в наличии"
-                }
-              ]
-            },
-            {
-              "title": "가격",
-              "title_ru": "Цена и оплата",
-              "items": [
-                {
-                  "ko": "선불",
-                  "translation_ru": "предоплата"
-                },
-                {
-                  "ko": "착불",
-                  "translation_ru": "оплата при получении"
-                },
-                {
-                  "ko": "후불",
-                  "translation_ru": "постоплата"
-                },
-                {
-                  "ko": "현금",
-                  "translation_ru": "наличные"
-                },
-                {
-                  "ko": "카드",
-                  "translation_ru": "карта"
-                },
-                {
-                  "ko": "난방비",
-                  "translation_ru": "плата за отопление"
-                },
-                {
-                  "ko": "세일",
-                  "translation_ru": "распродажа"
-                },
-                {
-                  "ko": "가격",
-                  "translation_ru": "цена"
-                }
-              ]
-            },
-            {
-              "title": "비교",
-              "title_ru": "Сравнение",
-              "items": [
-                {
-                  "ko": "작성하다",
-                  "translation_ru": "писать (отзыв)"
-                },
-                {
-                  "ko": "별점",
-                  "translation_ru": "оценка звёздами"
-                },
-                {
-                  "ko": "교환",
-                  "translation_ru": "обмен"
-                },
-                {
-                  "ko": "환불",
-                  "translation_ru": "возврат денег"
-                },
-                {
-                  "ko": "반품",
-                  "translation_ru": "возврат товара"
-                },
-                {
-                  "ko": "사이즈",
-                  "translation_ru": "размер"
-                }
               ]
             }
           ]
@@ -448,12 +426,6 @@
                 "기는요",
                 "어요"
               ]
-            ],
-            "vocab": [
-              {
-                "ko": "틀렸",
-                "translation_ru": "форма от 틀리다 (ошибаться, быть неверным)"
-              }
             ]
           },
           "items": [
@@ -617,12 +589,6 @@
                 "어 보니",
                 "어요"
               ]
-            ],
-            "vocab": [
-              {
-                "ko": "간단했",
-                "translation_ru": "форма от 간단하다 (быть простым)"
-              }
             ]
           },
           "items": [

@@ -9,6 +9,65 @@
       "source_photo": "IMG_0777",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "제안하다",
+              "translation_ru": "предлагать"
+            },
+            {
+              "ko": "답답하다",
+              "translation_ru": "быть томительно, тяжело на душе; душно"
+            },
+            {
+              "ko": "자신",
+              "translation_ru": "уверенность (в себе); сам"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "스터디",
+                "translation_ru": "учебная группа"
+              },
+              {
+                "ko": "모임",
+                "translation_ru": "встреча, клуб"
+              },
+              {
+                "ko": "포스터",
+                "translation_ru": "плакат"
+              },
+              {
+                "ko": "요리하다",
+                "translation_ru": "готовить"
+              },
+              {
+                "ko": "도움이 되다",
+                "translation_ru": "быть полезным"
+              },
+              {
+                "ko": "게다가",
+                "translation_ru": "к тому же"
+              },
+              {
+                "ko": "누구나",
+                "translation_ru": "любой"
+              },
+              {
+                "ko": "권유하다",
+                "translation_ru": "предлагать"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -22,12 +81,6 @@
           "lines": [
             {
               "text": "오위노와 파하드가 한국어 스터디 모임 포스터를 보고 이야기를 합니다. 오위노는 그 모임에 가입하려고 합니다. 그리고 파하드에게 한국어 스터디 모임의 가입을 제안하고 있습니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "제안하다",
-              "translation_ru": "предлагать"
             }
           ]
         },
@@ -108,72 +161,6 @@
             },
             {
               "text": "3) 친구에게 권유해 보십시오."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "제안하다",
-              "translation_ru": "предлагать",
-              "group": "스터디"
-            },
-            {
-              "ko": "답답하다",
-              "translation_ru": "быть томительно, тяжело на душе; душно",
-              "group": "스터디"
-            },
-            {
-              "ko": "자신",
-              "translation_ru": "уверенность (в себе); сам",
-              "group": "스터디"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "스터디",
-              "title_ru": "Учебные встречи",
-              "items": [
-                {
-                  "ko": "스터디",
-                  "translation_ru": "учебная группа"
-                },
-                {
-                  "ko": "모임",
-                  "translation_ru": "встреча, клуб"
-                },
-                {
-                  "ko": "포스터",
-                  "translation_ru": "плакат"
-                },
-                {
-                  "ko": "요리하다",
-                  "translation_ru": "готовить"
-                },
-                {
-                  "ko": "도움이 되다",
-                  "translation_ru": "быть полезным"
-                },
-                {
-                  "ko": "게다가",
-                  "translation_ru": "к тому же"
-                },
-                {
-                  "ko": "누구나",
-                  "translation_ru": "любой"
-                },
-                {
-                  "ko": "권유하다",
-                  "translation_ru": "предлагать"
-                }
-              ]
             }
           ]
         }

@@ -9,60 +9,6 @@
       "source_photo": "IMG_1082",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-markets",
-          "toc_section": "문화 이해하기",
-          "title": "한국의 시장",
-          "title_ru": "Рынки Кореи",
-          "illustration": {
-            "storage_path": "lesson_9/illustration_5_korean_markets.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "여기가 어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
-          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
-          "lines": [
-            {
-              "text": "한국의 시장은 물건도 좋고 가격도 쌉니다."
-            },
-            {
-              "text": "서울은 남대문 시장, 동대문 시장이 유명합니다. 남대문 시장과 동대문 시장은 옷, 가방, 음식을 팝니다. 가격이 싸고 교통도 편리합니다. 그래서 외국인 관광객들도 물건을 사러 많이 갑니다."
-            },
-            {
-              "text": "인천과 부산은 수산 시장이 유명합니다. 인천의 소래 포구 시장과 부산의 자갈치 시장은 생선, 조개, 오징어가 싱싱하고 쌉니다. 그래서 사람들이 수산물을 사러 많이 갑니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "팝",
-              "translation_ru": "форма от 팔다 (продавать)"
-            }
-          ]
-        },
-        {
-          "type": "comprehension_exercise",
-          "id": "reading-culture-markets",
-          "toc_section": "문화 이해하기",
-          "exercise_kind": "reading",
-          "title": "한국의 시장",
-          "title_ru": "Рынки Кореи",
-          "questions": [
-            {
-              "kind": "open",
-              "prompt": "동대문 시장과 남대문 시장은 무엇이 유명합니까? 그리고 수산 시장은 어디가 유명합니까?",
-              "prompt_ru": "Чем известны рынки Тондэмун и Намдэмун? А где знамениты рыбные рынки?"
-            },
-            {
-              "kind": "open",
-              "prompt": "여러분 나라의 유명한 시장을 친구들에게 소개해 보십시오.",
-              "prompt_ru": "Расскажите друзьям о знаменитом рынке в вашей стране."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -110,6 +56,62 @@
             {
               "ko": "팔다",
               "translation_ru": "продавать"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "팝",
+                "translation_ru": "форма от 팔다 (продавать)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-culture-markets",
+          "toc_section": "문화 이해하기",
+          "title": "한국의 시장",
+          "title_ru": "Рынки Кореи",
+          "illustration": {
+            "storage_path": "lesson_9/illustration_5_korean_markets.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "여기가 어디입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Где это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "한국의 시장은 물건도 좋고 가격도 쌉니다."
+            },
+            {
+              "text": "서울은 남대문 시장, 동대문 시장이 유명합니다. 남대문 시장과 동대문 시장은 옷, 가방, 음식을 팝니다. 가격이 싸고 교통도 편리합니다. 그래서 외국인 관광객들도 물건을 사러 많이 갑니다."
+            },
+            {
+              "text": "인천과 부산은 수산 시장이 유명합니다. 인천의 소래 포구 시장과 부산의 자갈치 시장은 생선, 조개, 오징어가 싱싱하고 쌉니다. 그래서 사람들이 수산물을 사러 많이 갑니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-markets",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "한국의 시장",
+          "title_ru": "Рынки Кореи",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "동대문 시장과 남대문 시장은 무엇이 유명합니까? 그리고 수산 시장은 어디가 유명합니까?",
+              "prompt_ru": "Чем известны рынки Тондэмун и Намдэмун? А где знамениты рыбные рынки?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 유명한 시장을 친구들에게 소개해 보십시오.",
+              "prompt_ru": "Расскажите друзьям о знаменитом рынке в вашей стране."
             }
           ]
         },

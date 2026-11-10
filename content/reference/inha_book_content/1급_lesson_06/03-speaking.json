@@ -9,6 +9,61 @@
       "source_photo": "IMG_1032",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "박물관",
+              "translation_ru": "музей"
+            },
+            {
+              "ko": "전통",
+              "translation_ru": "традиция"
+            },
+            {
+              "ko": "꽃",
+              "translation_ru": "цветок"
+            },
+            {
+              "ko": "사진",
+              "translation_ru": "фотография"
+            },
+            {
+              "ko": "찍다",
+              "translation_ru": "фотографировать, снимать"
+            },
+            {
+              "ko": "배",
+              "translation_ru": "корабль, лодка"
+            },
+            {
+              "ko": "닭갈비",
+              "translation_ru": "тхалькальби (острая курица с овощами)"
+            },
+            {
+              "ko": "공기",
+              "translation_ru": "воздух"
+            },
+            {
+              "ko": "시원하다",
+              "translation_ru": "быть прохладным, свежим"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "예뻤",
+                "translation_ru": "форма от 예쁘다 (быть красивым)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -102,12 +157,6 @@
                 "예뻤어요"
               ]
             }
-          ],
-          "vocab": [
-            {
-              "ko": "예뻤",
-              "translation_ru": "форма от 예쁘다 (быть красивым)"
-            }
           ]
         },
         {
@@ -170,53 +219,6 @@
               ]
             ]
           }
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "박물관",
-              "translation_ru": "музей"
-            },
-            {
-              "ko": "전통",
-              "translation_ru": "традиция"
-            },
-            {
-              "ko": "꽃",
-              "translation_ru": "цветок"
-            },
-            {
-              "ko": "사진",
-              "translation_ru": "фотография"
-            },
-            {
-              "ko": "찍다",
-              "translation_ru": "фотографировать, снимать"
-            },
-            {
-              "ko": "배",
-              "translation_ru": "корабль, лодка"
-            },
-            {
-              "ko": "닭갈비",
-              "translation_ru": "тхалькальби (острая курица с овощами)"
-            },
-            {
-              "ko": "공기",
-              "translation_ru": "воздух"
-            },
-            {
-              "ko": "시원하다",
-              "translation_ru": "быть прохладным, свежим"
-            }
-          ]
         }
       ]
     }

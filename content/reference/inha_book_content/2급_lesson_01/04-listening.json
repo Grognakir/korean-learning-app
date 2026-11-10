@@ -17,56 +17,46 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "직장",
-              "title_ru": "Работа и компании",
-              "items": [
-                {
-                  "ko": "무역회사",
-                  "translation_ru": "торговая компания"
-                },
-                {
-                  "ko": "자동차",
-                  "translation_ru": "автомобиль"
-                },
-                {
-                  "ko": "회사",
-                  "translation_ru": "компания"
-                },
-                {
-                  "ko": "일하다",
-                  "translation_ru": "работать"
-                }
-              ]
-            },
-            {
-              "title": "학교",
-              "title_ru": "Учёба и традиции",
-              "items": [
-                {
-                  "ko": "교실",
-                  "translation_ru": "классная комната"
-                },
-                {
-                  "ko": "대학교",
-                  "translation_ru": "университет"
-                },
-                {
-                  "ko": "전통",
-                  "translation_ru": "традиция"
-                },
-                {
-                  "ko": "의상",
-                  "translation_ru": "костюм, наряд"
-                },
-                {
-                  "ko": "일본",
-                  "translation_ru": "Япония"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "무역회사",
+                "translation_ru": "торговая компания"
+              },
+              {
+                "ko": "자동차",
+                "translation_ru": "автомобиль"
+              },
+              {
+                "ko": "회사",
+                "translation_ru": "компания"
+              },
+              {
+                "ko": "일하다",
+                "translation_ru": "работать"
+              },
+              {
+                "ko": "교실",
+                "translation_ru": "классная комната"
+              },
+              {
+                "ko": "대학교",
+                "translation_ru": "университет"
+              },
+              {
+                "ko": "전통",
+                "translation_ru": "традиция"
+              },
+              {
+                "ko": "의상",
+                "translation_ru": "костюм, наряд"
+              },
+              {
+                "ko": "일본",
+                "translation_ru": "Япония"
+              }
+            ]
+          }
         },
         {
           "type": "comprehension_exercise",

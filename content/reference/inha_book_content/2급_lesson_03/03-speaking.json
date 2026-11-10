@@ -17,56 +17,46 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "여행",
-              "title_ru": "Путешествие",
-              "items": [
-                {
-                  "ko": "스페인",
-                  "translation_ru": "Испания"
-                },
-                {
-                  "ko": "전체",
-                  "translation_ru": "весь, целиком"
-                },
-                {
-                  "ko": "기억나다",
-                  "translation_ru": "вспоминаться"
-                },
-                {
-                  "ko": "사귀다",
-                  "translation_ru": "подружиться"
-                },
-                {
-                  "ko": "일본",
-                  "translation_ru": "Япония"
-                }
-              ]
-            },
-            {
-              "title": "계획",
-              "title_ru": "Планы",
-              "items": [
-                {
-                  "ko": "계획",
-                  "translation_ru": "план"
-                },
-                {
-                  "ko": "약속",
-                  "translation_ru": "обещание, договорённость"
-                },
-                {
-                  "ko": "내년",
-                  "translation_ru": "следующий год"
-                },
-                {
-                  "ko": "다음에",
-                  "translation_ru": "в следующий раз"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "스페인",
+                "translation_ru": "Испания"
+              },
+              {
+                "ko": "전체",
+                "translation_ru": "весь, целиком"
+              },
+              {
+                "ko": "기억나다",
+                "translation_ru": "вспоминаться"
+              },
+              {
+                "ko": "사귀다",
+                "translation_ru": "подружиться"
+              },
+              {
+                "ko": "일본",
+                "translation_ru": "Япония"
+              },
+              {
+                "ko": "계획",
+                "translation_ru": "план"
+              },
+              {
+                "ko": "약속",
+                "translation_ru": "обещание, договорённость"
+              },
+              {
+                "ko": "내년",
+                "translation_ru": "следующий год"
+              },
+              {
+                "ko": "다음에",
+                "translation_ru": "в следующий раз"
+              }
+            ]
+          }
         },
         {
           "type": "text",

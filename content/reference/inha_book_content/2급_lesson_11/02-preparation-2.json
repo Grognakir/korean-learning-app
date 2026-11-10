@@ -9,90 +9,6 @@
       "source_photo": "IMG_1419",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-find-dialogue",
-          "toc_section": "준비하기 2",
-          "title": "길을 찾기",
-          "title_ru": "Искать дорогу",
-          "illustration": null,
-          "text_kind": "dialogue",
-          "section": "준비하기2",
-          "exercise_ref": null,
-          "audio_id": "242",
-          "speakers": [
-            "간호사",
-            "아멜리"
-          ],
-          "lines": [
-            {
-              "speaker": "간호사",
-              "text": "한마음 동물 병원입니다."
-            },
-            {
-              "speaker": "아멜리",
-              "text": "지금 병원에 가려고 하는데 어디에 있는지 잘 몰라서 여쭤 보려고요."
-            },
-            {
-              "speaker": "간호사",
-              "text": "지금 계시는 곳이 어디세요?"
-            },
-            {
-              "speaker": "아멜리",
-              "text": "인하로 30번 길에 있어요."
-            },
-            {
-              "speaker": "간호사",
-              "text": "인하로 30번 길에 계시면 꿈나무 유치원이 보여요?"
-            },
-            {
-              "speaker": "아멜리",
-              "text": "네, 유치원 앞에 서 있어요."
-            },
-            {
-              "speaker": "간호사",
-              "text": "유치원을 끼고 오른쪽으로 돌면 무지개 꽃집이 있을 겁니다."
-            },
-            {
-              "speaker": "아멜리",
-              "text": "네, 꽃집이 있어요."
-            },
-            {
-              "speaker": "간호사",
-              "text": "꽃집 앞에서 지하도를 건너세요. 그러면 소방서가 있습니다."
-            },
-            {
-              "speaker": "아멜리",
-              "text": "네, 소방서가 보여요."
-            },
-            {
-              "speaker": "간호사",
-              "text": "소방서에서 앞으로 쭉 오세요."
-            },
-            {
-              "speaker": "아멜리",
-              "text": "소방서에서 얼마만큼 가면 돼요?"
-            },
-            {
-              "speaker": "간호사",
-              "text": "약 50m쯤 오시면 병원이 있습니다."
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-junbihagi2-expr",
-          "toc_section": "준비하기 2",
-          "hint_kind": "expression",
-          "related_text_ref": "text-find-dialogue",
-          "items": [
-            {
-              "kind": "pattern",
-              "text": "N을/를 끼고 돌다",
-              "translation_ru": "повернуть, обогнув N (держась вдоль N) — «소방서를 끼고 돌아서 오세요» («обогнув пожарную часть, приходите»)"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi2",
           "toc_section": "준비하기 2",
@@ -198,108 +114,225 @@
               "translation_ru": "ходьба (как вид активности)"
             }
           ],
-          "extra_groups": [
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "오거리",
+                "translation_ru": "перекрёсток с пятью дорогами"
+              },
+              {
+                "ko": "육교",
+                "translation_ru": "надземный пешеходный переход"
+              },
+              {
+                "ko": "횡단보도",
+                "translation_ru": "пешеходный переход"
+              },
+              {
+                "ko": "차도",
+                "translation_ru": "проезжая часть"
+              },
+              {
+                "ko": "도로",
+                "translation_ru": "дорога, шоссе"
+              },
+              {
+                "ko": "건너다",
+                "translation_ru": "переходить (улицу, дорогу)"
+              },
+              {
+                "ko": "끼고 돌다",
+                "translation_ru": "повернуть, обогнув (держась вдоль чего-либо)"
+              },
+              {
+                "ko": "쭉 가다",
+                "translation_ru": "идти прямо, не сворачивая"
+              },
+              {
+                "ko": "터미널",
+                "translation_ru": "терминал, автовокзал"
+              },
+              {
+                "ko": "정류장",
+                "translation_ru": "остановка (транспорта)"
+              },
+              {
+                "ko": "자르다",
+                "translation_ru": "резать"
+              },
+              {
+                "ko": "빠르다",
+                "translation_ru": "быстрый"
+              },
+              {
+                "ko": "모르다",
+                "translation_ru": "не знать"
+              },
+              {
+                "ko": "부르다",
+                "translation_ru": "звать, вызывать (такси, человека)"
+              },
+              {
+                "ko": "게으르다",
+                "translation_ru": "ленивый"
+              },
+              {
+                "ko": "서투르다",
+                "translation_ru": "неумелый, неловкий"
+              },
+              {
+                "ko": "하늘",
+                "translation_ru": "небо"
+              },
+              {
+                "ko": "태산",
+                "translation_ru": "огромная гора; перен. огромное количество"
+              },
+              {
+                "ko": "보석",
+                "translation_ru": "драгоценный камень"
+              },
+              {
+                "ko": "다이아몬드",
+                "translation_ru": "алмаз, бриллиант"
+              },
+              {
+                "ko": "남편",
+                "translation_ru": "муж"
+              }
+            ],
+            "grammar_vocab": [
+              {
+                "ko": "벌써",
+                "translation_ru": "уже"
+              },
+              {
+                "ko": "약속",
+                "translation_ru": "обещание, договорённость, встреча (по договорённости)"
+              },
+              {
+                "ko": "앉다",
+                "translation_ru": "сидеть, садиться"
+              },
+              {
+                "ko": "서다",
+                "translation_ru": "стоять, встать"
+              },
+              {
+                "ko": "다르다",
+                "translation_ru": "другой, отличающийся"
+              },
+              {
+                "ko": "시장",
+                "translation_ru": "рынок; мэр (города)"
+              },
+              {
+                "ko": "가수",
+                "translation_ru": "певец, певица"
+              },
+              {
+                "ko": "바다",
+                "translation_ru": "море"
+              },
+              {
+                "ko": "넓다",
+                "translation_ru": "широкий, просторный"
+              },
+              {
+                "ko": "건강",
+                "translation_ru": "здоровье"
+              },
+              {
+                "ko": "중요하다",
+                "translation_ru": "важный"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-find-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "길을 찾기",
+          "title_ru": "Искать дорогу",
+          "illustration": {
+            "storage_path": "lesson_11/illustration_2_route_map_v6.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "242",
+          "speakers": [
+            "간호사",
+            "아멜리"
+          ],
+          "lines": [
             {
-              "title": "길",
-              "title_ru": "Дорога и переходы",
-              "items": [
-                {
-                  "ko": "오거리",
-                  "translation_ru": "перекрёсток с пятью дорогами"
-                },
-                {
-                  "ko": "육교",
-                  "translation_ru": "надземный пешеходный переход"
-                },
-                {
-                  "ko": "횡단보도",
-                  "translation_ru": "пешеходный переход"
-                },
-                {
-                  "ko": "차도",
-                  "translation_ru": "проезжая часть"
-                },
-                {
-                  "ko": "도로",
-                  "translation_ru": "дорога, шоссе"
-                },
-                {
-                  "ko": "건너다",
-                  "translation_ru": "переходить (улицу, дорогу)"
-                },
-                {
-                  "ko": "끼고 돌다",
-                  "translation_ru": "повернуть, обогнув (держась вдоль чего-либо)"
-                },
-                {
-                  "ko": "쭉 가다",
-                  "translation_ru": "идти прямо, не сворачивая"
-                },
-                {
-                  "ko": "터미널",
-                  "translation_ru": "терминал, автовокзал"
-                },
-                {
-                  "ko": "정류장",
-                  "translation_ru": "остановка (транспорта)"
-                }
-              ]
+              "speaker": "간호사",
+              "text": "한마음 동물 병원입니다."
             },
             {
-              "title": "르 동사",
-              "title_ru": "Глаголы на 르",
-              "items": [
-                {
-                  "ko": "자르다",
-                  "translation_ru": "резать"
-                },
-                {
-                  "ko": "빠르다",
-                  "translation_ru": "быстрый"
-                },
-                {
-                  "ko": "모르다",
-                  "translation_ru": "не знать"
-                },
-                {
-                  "ko": "부르다",
-                  "translation_ru": "звать, вызывать (такси, человека)"
-                },
-                {
-                  "ko": "게으르다",
-                  "translation_ru": "ленивый"
-                },
-                {
-                  "ko": "서투르다",
-                  "translation_ru": "неумелый, неловкий"
-                }
-              ]
+              "speaker": "아멜리",
+              "text": "지금 병원에 가려고 하는데 어디에 있는지 잘 몰라서 여쭤 보려고요."
             },
             {
-              "title": "비교",
-              "title_ru": "Сравнения (N만큼)",
-              "items": [
-                {
-                  "ko": "하늘",
-                  "translation_ru": "небо"
-                },
-                {
-                  "ko": "태산",
-                  "translation_ru": "огромная гора; перен. огромное количество"
-                },
-                {
-                  "ko": "보석",
-                  "translation_ru": "драгоценный камень"
-                },
-                {
-                  "ko": "다이아몬드",
-                  "translation_ru": "алмаз, бриллиант"
-                },
-                {
-                  "ko": "남편",
-                  "translation_ru": "муж"
-                }
-              ]
+              "speaker": "간호사",
+              "text": "지금 계시는 곳이 어디세요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "인하로 30번 길에 있어요."
+            },
+            {
+              "speaker": "간호사",
+              "text": "인하로 30번 길에 계시면 꿈나무 유치원이 보여요?"
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 유치원 앞에 서 있어요."
+            },
+            {
+              "speaker": "간호사",
+              "text": "유치원을 끼고 오른쪽으로 돌면 무지개 꽃집이 있을 겁니다."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 꽃집이 있어요."
+            },
+            {
+              "speaker": "간호사",
+              "text": "꽃집 앞에서 지하도를 건너세요. 그러면 소방서가 있습니다."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "네, 소방서가 보여요."
+            },
+            {
+              "speaker": "간호사",
+              "text": "소방서에서 앞으로 쭉 오세요."
+            },
+            {
+              "speaker": "아멜리",
+              "text": "소방서에서 얼마만큼 가면 돼요?"
+            },
+            {
+              "speaker": "간호사",
+              "text": "약 50m쯤 오시면 병원이 있습니다."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-junbihagi2-expr",
+          "toc_section": "준비하기 2",
+          "hint_kind": "expression",
+          "related_text_ref": "text-find-dialogue",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "N을/를 끼고 돌다",
+              "translation_ru": "повернуть, обогнув N (держась вдоль N) — «소방서를 끼고 돌아서 오세요» («обогнув пожарную часть, приходите»)"
             }
           ]
         }
@@ -321,24 +354,6 @@
             "왕루 씨가 벌써 약속 장소에 와 있어요.",
             "할머니께서 의자에 앉아 계십니다.",
             "자르갈 씨가 커피숍 앞에 서 있었어요."
-          ],
-          "vocab": [
-            {
-              "ko": "벌써",
-              "translation_ru": "уже"
-            },
-            {
-              "ko": "약속",
-              "translation_ru": "обещание, договорённость, встреча (по договорённости)"
-            },
-            {
-              "ko": "앉다",
-              "translation_ru": "сидеть, садиться"
-            },
-            {
-              "ko": "서다",
-              "translation_ru": "стоять, встать"
-            }
           ],
           "rules_table": {
             "head": [
@@ -385,24 +400,6 @@
             "동대문 시장에 가서 예쁜 옷을 많이 골랐어요.",
             "한국 노래를 잘 부르려면 많이 따라 불러야 돼요."
           ],
-          "vocab": [
-            {
-              "ko": "다르다",
-              "translation_ru": "другой, отличающийся"
-            },
-            {
-              "ko": "고르다",
-              "translation_ru": "выбирать"
-            },
-            {
-              "ko": "부르다",
-              "translation_ru": "звать, вызывать (такси, человека)"
-            },
-            {
-              "ko": "시장",
-              "translation_ru": "рынок; мэр (города)"
-            }
-          ],
           "rules": [
             "Почти все слова на 르 неправильные",
             "Перед -아/어, если перед 르 стоит ㅏ/ㅗ → ㄹ라 (모르다 → 몰라요, 다르다 → 달라요)",
@@ -448,28 +445,6 @@
             "제 동생은 가수만큼 노래를 잘 해요.",
             "부모님의 사랑은 바다만큼 넓어요.",
             "세상에 건강만큼 중요한 것은 없다."
-          ],
-          "vocab": [
-            {
-              "ko": "가수",
-              "translation_ru": "певец, певица"
-            },
-            {
-              "ko": "바다",
-              "translation_ru": "море"
-            },
-            {
-              "ko": "넓다",
-              "translation_ru": "широкий, просторный"
-            },
-            {
-              "ko": "건강",
-              "translation_ru": "здоровье"
-            },
-            {
-              "ko": "중요하다",
-              "translation_ru": "важный"
-            }
           ],
           "rules": [
             "받침 не важен → N + 만큼",

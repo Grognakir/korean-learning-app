@@ -9,6 +9,61 @@
       "source_photo": "IMG_1147",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-bank-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "고객",
+              "translation_ru": "клиент"
+            },
+            {
+              "ko": "통장",
+              "translation_ru": "банковская книжка, счёт"
+            },
+            {
+              "ko": "외국인 등록증",
+              "translation_ru": "удостоверение иностранца (регистрационная карта)"
+            },
+            {
+              "ko": "여권",
+              "translation_ru": "паспорт (загранпаспорт)"
+            },
+            {
+              "ko": "현금카드",
+              "translation_ru": "дебетовая карта"
+            },
+            {
+              "ko": "바로",
+              "translation_ru": "сразу, немедленно"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "만드실",
+                "translation_ru": "форма от 만들다 (делать) — почтительная"
+              },
+              {
+                "ko": "만드시",
+                "translation_ru": "форма от 만들다 (делать) — почтительная"
+              },
+              {
+                "ko": "주시",
+                "translation_ru": "форма от 주다 (давать) — почтительная"
+              },
+              {
+                "ko": "오셨",
+                "translation_ru": "форма от 오다 (приходить) — почтительная"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-bank-dialogue",
           "toc_section": "준비하기 1",
@@ -71,24 +126,6 @@
               "speaker": "자르갈",
               "text": "네, 현금카드도 만들어 주세요."
             }
-          ],
-          "vocab": [
-            {
-              "ko": "만드실",
-              "translation_ru": "форма от 만들다 (делать) — почтительная"
-            },
-            {
-              "ko": "만드시",
-              "translation_ru": "форма от 만들다 (делать) — почтительная"
-            },
-            {
-              "ko": "주시",
-              "translation_ru": "форма от 주다 (давать) — почтительная"
-            },
-            {
-              "ko": "오셨",
-              "translation_ru": "форма от 오다 (приходить) — почтительная"
-            }
           ]
         },
         {
@@ -104,41 +141,6 @@
               "translation_ru": "Чем могу помочь? (букв.: «Как вы пришли?» — с чем пришли)"
             }
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-bank-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "고객",
-              "translation_ru": "клиент"
-            },
-            {
-              "ko": "통장",
-              "translation_ru": "банковская книжка, счёт"
-            },
-            {
-              "ko": "외국인 등록증",
-              "translation_ru": "удостоверение иностранца (регистрационная карта)"
-            },
-            {
-              "ko": "여권",
-              "translation_ru": "паспорт (загранпаспорт)"
-            },
-            {
-              "ko": "현금카드",
-              "translation_ru": "дебетовая карта"
-            },
-            {
-              "ko": "바로",
-              "translation_ru": "сразу, немедленно"
-            }
-          ]
         }
       ]
     },
@@ -147,6 +149,21 @@
       "page_role": "content",
       "source_photo": "IMG_1148",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-grammar",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "조용히",
+              "translation_ru": "тихо, спокойно"
+            }
+          ]
+        },
         {
           "type": "grammar_point",
           "id": "grammar-1",
@@ -283,21 +300,6 @@
               ]
             ]
           }
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-grammar",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "조용히",
-              "translation_ru": "тихо, спокойно"
-            }
-          ]
         }
       ]
     },
@@ -306,6 +308,29 @@
       "page_role": "content",
       "source_photo": "IMG_1149",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "취직하다",
+              "translation_ru": "устраиваться на работу"
+            },
+            {
+              "ko": "뮤지컬",
+              "translation_ru": "мюзикл"
+            },
+            {
+              "ko": "경제",
+              "translation_ru": "экономика"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-1a",
@@ -439,29 +464,6 @@
           "template": [
             "가: {0}?",
             "나: {1}."
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "취직하다",
-              "translation_ru": "устраиваться на работу"
-            },
-            {
-              "ko": "뮤지컬",
-              "translation_ru": "мюзикл"
-            },
-            {
-              "ko": "경제",
-              "translation_ru": "экономика"
-            }
           ]
         }
       ]
@@ -601,6 +603,41 @@
       "page_role": "content",
       "source_photo": "IMG_1151",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup3",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "소포",
+              "translation_ru": "посылка"
+            },
+            {
+              "ko": "진지",
+              "translation_ru": "еда, трапеза (уважительно)"
+            },
+            {
+              "ko": "생신",
+              "translation_ru": "день рождения (уважительно)"
+            },
+            {
+              "ko": "연세",
+              "translation_ru": "возраст (уважительно)"
+            },
+            {
+              "ko": "댁",
+              "translation_ru": "дом (уважительно)"
+            },
+            {
+              "ko": "말씀",
+              "translation_ru": "слова, речь (уважительно)"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-3a",
@@ -749,41 +786,6 @@
           ],
           "template": [
             "{0}."
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup3",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "소포",
-              "translation_ru": "посылка"
-            },
-            {
-              "ko": "진지",
-              "translation_ru": "еда, трапеза (уважительно)"
-            },
-            {
-              "ko": "생신",
-              "translation_ru": "день рождения (уважительно)"
-            },
-            {
-              "ko": "연세",
-              "translation_ru": "возраст (уважительно)"
-            },
-            {
-              "ko": "댁",
-              "translation_ru": "дом (уважительно)"
-            },
-            {
-              "ko": "말씀",
-              "translation_ru": "слова, речь (уважительно)"
-            }
           ]
         }
       ]

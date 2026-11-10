@@ -17,68 +17,58 @@
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
           "items": [],
-          "extra_groups": [
-            {
-              "title": "이사",
-              "title_ru": "Переезд",
-              "items": [
-                {
-                  "ko": "도와주다",
-                  "translation_ru": "помогать"
-                },
-                {
-                  "ko": "마치다",
-                  "translation_ru": "заканчивать"
-                },
-                {
-                  "ko": "신기하다",
-                  "translation_ru": "удивительный"
-                },
-                {
-                  "ko": "짜장면",
-                  "translation_ru": "чачжанмён"
-                }
-              ]
-            },
-            {
-              "title": "경험",
-              "title_ru": "Опыт в Корее",
-              "items": [
-                {
-                  "ko": "특별하다",
-                  "translation_ru": "особенный"
-                },
-                {
-                  "ko": "변하다",
-                  "translation_ru": "меняться"
-                },
-                {
-                  "ko": "관찰하다",
-                  "translation_ru": "наблюдать"
-                },
-                {
-                  "ko": "등산하다",
-                  "translation_ru": "ходить в горы"
-                },
-                {
-                  "ko": "자연",
-                  "translation_ru": "природа"
-                },
-                {
-                  "ko": "산",
-                  "translation_ru": "гора"
-                },
-                {
-                  "ko": "문화",
-                  "translation_ru": "культура"
-                },
-                {
-                  "ko": "경험",
-                  "translation_ru": "опыт"
-                }
-              ]
-            }
-          ]
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "도와주다",
+                "translation_ru": "помогать"
+              },
+              {
+                "ko": "마치다",
+                "translation_ru": "заканчивать"
+              },
+              {
+                "ko": "신기하다",
+                "translation_ru": "удивительный"
+              },
+              {
+                "ko": "짜장면",
+                "translation_ru": "чачжанмён"
+              },
+              {
+                "ko": "특별하다",
+                "translation_ru": "особенный"
+              },
+              {
+                "ko": "변하다",
+                "translation_ru": "меняться"
+              },
+              {
+                "ko": "관찰하다",
+                "translation_ru": "наблюдать"
+              },
+              {
+                "ko": "등산하다",
+                "translation_ru": "ходить в горы"
+              },
+              {
+                "ko": "자연",
+                "translation_ru": "природа"
+              },
+              {
+                "ko": "산",
+                "translation_ru": "гора"
+              },
+              {
+                "ko": "문화",
+                "translation_ru": "культура"
+              },
+              {
+                "ko": "경험",
+                "translation_ru": "опыт"
+              }
+            ]
+          }
         },
         {
           "type": "writing_exercise",

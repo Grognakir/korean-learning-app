@@ -9,77 +9,6 @@
       "source_photo": "IMG_0967",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-facilities-dialogue",
-          "toc_section": "준비하기 2",
-          "title": "학교 시설물의 위치를 설명하기",
-          "title_ru": "Объяснять расположение мест в университете",
-          "illustration": {
-            "storage_path": "lesson_2/illustration_2_campus_directions_v2.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기2",
-          "exercise_ref": null,
-          "audio_id": "106",
-          "speakers": [
-            "아멜리",
-            "파하드"
-          ],
-          "lines": [
-            {
-              "speaker": "아멜리",
-              "text": "파하드 씨, 안녕하세요?"
-            },
-            {
-              "speaker": "파하드",
-              "text": "네, 아멜리 씨, 안녕하세요? 학교에 은행이 있습니까?",
-              "emphasized": [
-                "에 은행이 있습니까"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "예, 학교에 은행이 있습니다.",
-              "emphasized": [
-                "에 은행이 있습니다"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "은행이 어디에 있습니까?",
-              "emphasized": [
-                "어디에 있습니까"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "이 건물 옆에 있습니다.",
-              "emphasized": [
-                "옆에 있습니다"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "도서관은 어디에 있습니까?",
-              "emphasized": [
-                "어디에 있습니까"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "도서관은 운동장 앞에 있습니다.",
-              "emphasized": [
-                "앞에 있습니다"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "아멜리 씨, 고맙습니다."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi2",
           "toc_section": "준비하기 2",
@@ -171,6 +100,77 @@
             {
               "ko": "집",
               "translation_ru": "дом"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-facilities-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "학교 시설물의 위치를 설명하기",
+          "title_ru": "Объяснять расположение мест в университете",
+          "illustration": {
+            "storage_path": "lesson_2/illustration_2_campus_directions_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "106",
+          "speakers": [
+            "아멜리",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "아멜리",
+              "text": "파하드 씨, 안녕하세요?"
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 아멜리 씨, 안녕하세요? 학교에 은행이 있습니까?",
+              "emphasized": [
+                "에 은행이 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "예, 학교에 은행이 있습니다.",
+              "emphasized": [
+                "에 은행이 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "은행이 어디에 있습니까?",
+              "emphasized": [
+                "어디에 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "이 건물 옆에 있습니다.",
+              "emphasized": [
+                "옆에 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "도서관은 어디에 있습니까?",
+              "emphasized": [
+                "어디에 있습니까"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "도서관은 운동장 앞에 있습니다.",
+              "emphasized": [
+                "앞에 있습니다"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "아멜리 씨, 고맙습니다."
             }
           ]
         }

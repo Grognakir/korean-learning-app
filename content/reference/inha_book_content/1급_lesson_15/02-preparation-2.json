@@ -9,6 +9,41 @@
       "source_photo": "IMG_1167",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-pharmacy-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "물약",
+              "translation_ru": "жидкое лекарство"
+            },
+            {
+              "ko": "알약",
+              "translation_ru": "таблетка"
+            },
+            {
+              "ko": "간단하다",
+              "translation_ru": "быть простым"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "드셔",
+                "translation_ru": "форма от 드시다 (есть, пить — уважительно)"
+              },
+              {
+                "ko": "드시",
+                "translation_ru": "форма от 드시다 (есть, пить — уважительно)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-pharmacy-dialogue",
           "toc_section": "준비하기 2",
@@ -77,16 +112,6 @@
               "speaker": "왕루",
               "text": "네, 알겠습니다."
             }
-          ],
-          "vocab": [
-            {
-              "ko": "드셔",
-              "translation_ru": "форма от 드시다 (есть, пить — уважительно)"
-            },
-            {
-              "ko": "드시",
-              "translation_ru": "форма от 드시다 (есть, пить — уважительно)"
-            }
           ]
         },
         {
@@ -105,29 +130,6 @@
               "kind": "pattern",
               "text": "N씩",
               "translation_ru": "по N — шаблон; «이 문장을 한 번씩 쓰세요.», «두 명씩 대화하세요.», «1시간마다 10분씩 쉽니다.»"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-pharmacy-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "물약",
-              "translation_ru": "жидкое лекарство"
-            },
-            {
-              "ko": "알약",
-              "translation_ru": "таблетка"
-            },
-            {
-              "ko": "간단하다",
-              "translation_ru": "быть простым"
             }
           ]
         }
@@ -234,6 +236,29 @@
       "page_role": "content",
       "source_photo": "IMG_1169",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup4",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "경기장",
+              "translation_ru": "стадион, спортивная арена"
+            },
+            {
+              "ko": "그릇",
+              "translation_ru": "миска, посуда"
+            },
+            {
+              "ko": "진찰",
+              "translation_ru": "осмотр врача"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-4a",
@@ -366,29 +391,6 @@
             "가: {0}?",
             "나: 네, {1}."
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup4",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "경기장",
-              "translation_ru": "стадион, спортивная арена"
-            },
-            {
-              "ko": "그릇",
-              "translation_ru": "миска, посуда"
-            },
-            {
-              "ko": "진찰",
-              "translation_ru": "осмотр врача"
-            }
-          ]
         }
       ]
     },
@@ -397,6 +399,21 @@
       "page_role": "content",
       "source_photo": "IMG_1170",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup5",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "술",
+              "translation_ru": "алкоголь, спиртное"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-5a",
@@ -538,21 +555,6 @@
           "template": [
             "가: {0}?",
             "나: {1}."
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup5",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "술",
-              "translation_ru": "алкоголь, спиртное"
-            }
           ]
         }
       ]

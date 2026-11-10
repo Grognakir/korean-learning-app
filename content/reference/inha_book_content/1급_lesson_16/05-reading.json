@@ -9,6 +9,33 @@
       "source_photo": "IMG_1189",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-letter",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-letter",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "가장",
+              "translation_ru": "самый, наиболее"
+            },
+            {
+              "ko": "맛보다",
+              "translation_ru": "пробовать на вкус"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "맛볼",
+                "translation_ru": "форма от 맛보다 (пробовать на вкус)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-reading-letter",
           "toc_section": "읽고 말하기",
@@ -44,12 +71,6 @@
             {
               "text": "왕루 드림",
               "line_kind": "signature"
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "맛볼",
-              "translation_ru": "форма от 맛보다 (пробовать на вкус)"
             }
           ]
         },
@@ -89,25 +110,6 @@
               "kind": "open",
               "prompt": "여러분은 부모님께 편지를 써 봤습니까? 편지로 무슨 이야기를 전하고 싶습니까?",
               "prompt_ru": "Писали ли вы родителям письмо? О чём вы хотели бы рассказать в письме?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-letter",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-letter",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "가장",
-              "translation_ru": "самый, наиболее"
-            },
-            {
-              "ko": "맛보다",
-              "translation_ru": "пробовать на вкус"
             }
           ]
         }

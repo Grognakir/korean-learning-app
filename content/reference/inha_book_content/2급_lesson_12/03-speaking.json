@@ -9,6 +9,29 @@
       "source_photo": "IMG_1440",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "룸메이트",
+              "translation_ru": "сосед по комнате"
+            },
+            {
+              "ko": "함부로",
+              "translation_ru": "как попало, без спроса, бесцеремонно"
+            },
+            {
+              "ko": "제자리",
+              "translation_ru": "своё место"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -101,29 +124,6 @@
             },
             {
               "text": "3) 싸웠을 때 어떻게 하면 좋습니까?"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "룸메이트",
-              "translation_ru": "сосед по комнате"
-            },
-            {
-              "ko": "함부로",
-              "translation_ru": "как попало, без спроса, бесцеремонно"
-            },
-            {
-              "ko": "제자리",
-              "translation_ru": "своё место"
             }
           ]
         }

@@ -9,6 +9,49 @@
       "source_photo": "IMG_1024",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-weekend-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "작년",
+              "translation_ru": "прошлый год"
+            },
+            {
+              "ko": "방학",
+              "translation_ru": "каникулы (школьные/университетские)"
+            },
+            {
+              "ko": "산책하다",
+              "translation_ru": "гулять, прогуливаться"
+            },
+            {
+              "ko": "음식",
+              "translation_ru": "еда, пища"
+            },
+            {
+              "ko": "좋다",
+              "translation_ru": "быть хорошим"
+            },
+            {
+              "ko": "여행",
+              "translation_ru": "путешествие"
+            },
+            {
+              "ko": "노래하다",
+              "translation_ru": "петь"
+            },
+            {
+              "ko": "운동",
+              "translation_ru": "спорт, физическая активность"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-weekend-dialogue",
           "toc_section": "준비하기 1",
@@ -66,49 +109,6 @@
                 "하고",
                 "했어요"
               ]
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-weekend-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "작년",
-              "translation_ru": "прошлый год"
-            },
-            {
-              "ko": "방학",
-              "translation_ru": "каникулы (школьные/университетские)"
-            },
-            {
-              "ko": "산책하다",
-              "translation_ru": "гулять, прогуливаться"
-            },
-            {
-              "ko": "음식",
-              "translation_ru": "еда, пища"
-            },
-            {
-              "ko": "좋다",
-              "translation_ru": "быть хорошим"
-            },
-            {
-              "ko": "여행",
-              "translation_ru": "путешествие"
-            },
-            {
-              "ko": "노래하다",
-              "translation_ru": "петь"
-            },
-            {
-              "ko": "운동",
-              "translation_ru": "спорт, физическая активность"
             }
           ]
         }

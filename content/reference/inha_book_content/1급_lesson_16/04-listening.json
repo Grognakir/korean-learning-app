@@ -9,6 +9,41 @@
       "source_photo": "IMG_1188",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-hometown",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "경치",
+              "translation_ru": "пейзаж, вид"
+            },
+            {
+              "ko": "관광",
+              "translation_ru": "туризм"
+            },
+            {
+              "ko": "명소",
+              "translation_ru": "достопримечательность"
+            },
+            {
+              "ko": "섬",
+              "translation_ru": "остров"
+            },
+            {
+              "ko": "해산물",
+              "translation_ru": "морепродукты"
+            },
+            {
+              "ko": "흑돼지",
+              "translation_ru": "чёрная свинья (чеджуская порода)"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-hometown",
           "toc_section": "듣고 말하기",
@@ -87,41 +122,6 @@
           ],
           "followup": "반 친구들에게 여러분의 고향을 소개해 보십시오.",
           "followup_ru": "Расскажите одноклассникам о своём родном крае."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-hometown",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "경치",
-              "translation_ru": "пейзаж, вид"
-            },
-            {
-              "ko": "관광",
-              "translation_ru": "туризм"
-            },
-            {
-              "ko": "명소",
-              "translation_ru": "достопримечательность"
-            },
-            {
-              "ko": "섬",
-              "translation_ru": "остров"
-            },
-            {
-              "ko": "해산물",
-              "translation_ru": "морепродукты"
-            },
-            {
-              "ko": "흑돼지",
-              "translation_ru": "чёрная свинья (чеджуская порода)"
-            }
-          ]
         }
       ]
     }

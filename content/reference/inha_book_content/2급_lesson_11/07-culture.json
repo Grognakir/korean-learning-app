@@ -9,12 +9,46 @@
       "source_photo": "IMG_1429",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-traffic",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "교통약자석",
+              "translation_ru": "место для маломобильных пассажиров (льготное сиденье)"
+            },
+            {
+              "ko": "장애",
+              "translation_ru": "инвалидность; препятствие"
+            },
+            {
+              "ko": "임신하다",
+              "translation_ru": "быть беременной"
+            },
+            {
+              "ko": "전용도로",
+              "translation_ru": "выделенная дорога (для определённого вида транспорта)"
+            },
+            {
+              "ko": "배려하다",
+              "translation_ru": "проявлять заботу, быть внимательным к другим"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-traffic",
           "toc_section": "문화 이해하기",
           "title": "교통약자석과 자전거 전용도로",
           "title_ru": "Места для маломобильных пассажиров и велодорожки",
-          "illustration": null,
+          "illustration": {
+            "storage_path": "lesson_11/illustration_5_considerate_transport.png",
+            "original_kind": "illustration"
+          },
           "text_kind": "article",
           "section": "문화이해하기",
           "exercise_ref": null,
@@ -50,37 +84,6 @@
             {
               "text": "2) 여러분 나라에는 다른 사람을 배려하는 규칙이 무엇이 있습니까? 이야기해 보십시오.",
               "translation_ru": "Какие правила заботы о других есть в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-traffic",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "교통약자석",
-              "translation_ru": "место для маломобильных пассажиров (льготное сиденье)"
-            },
-            {
-              "ko": "장애",
-              "translation_ru": "инвалидность; препятствие"
-            },
-            {
-              "ko": "임신하다",
-              "translation_ru": "быть беременной"
-            },
-            {
-              "ko": "전용도로",
-              "translation_ru": "выделенная дорога (для определённого вида транспорта)"
-            },
-            {
-              "ko": "배려하다",
-              "translation_ru": "проявлять заботу, быть внимательным к другим"
             }
           ]
         },

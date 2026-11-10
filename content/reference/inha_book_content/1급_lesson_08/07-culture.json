@@ -9,58 +9,6 @@
       "source_photo": "IMG_1067",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-new-year",
-          "toc_section": "문화 이해하기",
-          "title": "새해 계획",
-          "title_ru": "Планы на Новый год",
-          "illustration": {
-            "storage_path": "lesson_8/illustration_5_new_year_goals.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "무엇입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
-          "intro_prompt_ru": "Что это? Расскажите. Прочитайте и обсудите.",
-          "lines": [
-            {
-              "text": "한국 사람들은 새해에 계획을 세웁니다.\n\n“매일 열심히 공부를 할 거예요.”\n“날마다 열심히 일을 할 거예요.”\n“날마다 운동을 할 거예요.”\n“돈을 많이 벌 거예요.”\n“꼭 담배를 끊을 거예요.”\n“꼭 결혼을 할 거예요.”\n\n한국 사람들은 날마다 새해 계획을 생각하고 열심히 노력합니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "세웁",
-              "translation_ru": "форма от 세우다 (ставить; составлять (план))"
-            },
-            {
-              "ko": "벌",
-              "translation_ru": "форма от 벌다 (зарабатывать)"
-            }
-          ]
-        },
-        {
-          "type": "comprehension_exercise",
-          "id": "reading-culture-new-year",
-          "toc_section": "문화 이해하기",
-          "exercise_kind": "reading",
-          "title": "새해 계획",
-          "title_ru": "Планы на Новый год",
-          "questions": [
-            {
-              "kind": "open",
-              "prompt": "한국 사람들은 새해에 무엇을 합니까?",
-              "prompt_ru": "Что корейцы делают в Новый год?"
-            },
-            {
-              "kind": "open",
-              "prompt": "여러분 나라의 사람들은 새해에 무엇을 계획합니까? 이야기해 보십시오.",
-              "prompt_ru": "Что планируют люди в вашей стране на Новый год? Расскажите."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -100,6 +48,60 @@
             {
               "ko": "노력하다",
               "translation_ru": "стараться, прилагать усилия"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "세웁",
+                "translation_ru": "форма от 세우다 (ставить; составлять (план))"
+              },
+              {
+                "ko": "벌",
+                "translation_ru": "форма от 벌다 (зарабатывать)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-culture-new-year",
+          "toc_section": "문화 이해하기",
+          "title": "새해 계획",
+          "title_ru": "Планы на Новый год",
+          "illustration": {
+            "storage_path": "lesson_8/illustration_5_new_year_goals.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇입니까? 이야기해 보십시오. 다음을 읽고 이야기해 보십시오.",
+          "intro_prompt_ru": "Что это? Расскажите. Прочитайте и обсудите.",
+          "lines": [
+            {
+              "text": "한국 사람들은 새해에 계획을 세웁니다.\n\n“매일 열심히 공부를 할 거예요.”\n“날마다 열심히 일을 할 거예요.”\n“날마다 운동을 할 거예요.”\n“돈을 많이 벌 거예요.”\n“꼭 담배를 끊을 거예요.”\n“꼭 결혼을 할 거예요.”\n\n한국 사람들은 날마다 새해 계획을 생각하고 열심히 노력합니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-new-year",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "새해 계획",
+          "title_ru": "Планы на Новый год",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국 사람들은 새해에 무엇을 합니까?",
+              "prompt_ru": "Что корейцы делают в Новый год?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라의 사람들은 새해에 무엇을 계획합니까? 이야기해 보십시오.",
+              "prompt_ru": "Что планируют люди в вашей стране на Новый год? Расскажите."
             }
           ]
         },

@@ -9,107 +9,6 @@
       "source_photo": "IMG_1100",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-call-dialogue",
-          "toc_section": "준비하기 1",
-          "title": "전화를 걸고 받기",
-          "title_ru": "Звонить и отвечать на звонок",
-          "illustration": {
-            "storage_path": "lesson_11/illustration_1_homework_phone.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기1",
-          "exercise_ref": null,
-          "audio_id": "141",
-          "speakers": [
-            "왕루",
-            "파하드"
-          ],
-          "lines": [
-            {
-              "speaker": "왕루",
-              "text": "여보세요? 파하드 씨지요?",
-              "emphasized": [
-                "지요"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "네, 전데요."
-            },
-            {
-              "speaker": "왕루",
-              "text": "파하드 씨, 저 왕루예요. 파하드 씨는 숙제를 다 했어요?",
-              "emphasized": [
-                "다 했어요"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "네, 다 했어요. 무슨 일이 있어요?"
-            },
-            {
-              "speaker": "왕루",
-              "text": "문법 숙제가 어려워요. 파하드 씨가 문법을 좀 가르쳐 주세요. 지금 시간이 괜찮아요?",
-              "emphasized": [
-                "가르쳐 주세요"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "미안해요. 지금 청소랑 빨래를 하고 있어요."
-            },
-            {
-              "speaker": "왕루",
-              "text": "아, 바쁘겠어요.",
-              "emphasized": [
-                "바쁘겠어요"
-              ]
-            },
-            {
-              "speaker": "파하드",
-              "text": "괜찮아요. 곧 끝나요. 한 시간 후에 도서관에서 만납시다.",
-              "emphasized": [
-                "후에"
-              ]
-            },
-            {
-              "speaker": "왕루",
-              "text": "네, 고마워요. 파하드 씨."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "어려워",
-              "translation_ru": "форма от 어렵다 (быть трудным)"
-            },
-            {
-              "ko": "가르쳐",
-              "translation_ru": "форма от 가르치다 (учить)"
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-junbihagi1-expr",
-          "toc_section": "준비하기 1",
-          "hint_kind": "expression",
-          "related_text_ref": "text-call-dialogue",
-          "items": [
-            {
-              "kind": "phrase",
-              "text": "여보세요?",
-              "translation_ru": "Алло? (при телефонном звонке)"
-            },
-            {
-              "kind": "phrase",
-              "text": "전데요.",
-              "translation_ru": "Это я. (отвечая на вопрос «Это N?» по телефону)"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi1",
           "toc_section": "준비하기 1",
@@ -197,6 +96,109 @@
             {
               "ko": "지갑",
               "translation_ru": "кошелёк"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "어려워",
+                "translation_ru": "форма от 어렵다 (быть трудным)"
+              },
+              {
+                "ko": "가르쳐",
+                "translation_ru": "форма от 가르치다 (учить)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-call-dialogue",
+          "toc_section": "준비하기 1",
+          "title": "전화를 걸고 받기",
+          "title_ru": "Звонить и отвечать на звонок",
+          "illustration": {
+            "storage_path": "lesson_11/illustration_1_homework_phone.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "141",
+          "speakers": [
+            "왕루",
+            "파하드"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "여보세요? 파하드 씨지요?",
+              "emphasized": [
+                "지요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 전데요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "파하드 씨, 저 왕루예요. 파하드 씨는 숙제를 다 했어요?",
+              "emphasized": [
+                "다 했어요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "네, 다 했어요. 무슨 일이 있어요?"
+            },
+            {
+              "speaker": "왕루",
+              "text": "문법 숙제가 어려워요. 파하드 씨가 문법을 좀 가르쳐 주세요. 지금 시간이 괜찮아요?",
+              "emphasized": [
+                "가르쳐 주세요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "미안해요. 지금 청소랑 빨래를 하고 있어요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "아, 바쁘겠어요.",
+              "emphasized": [
+                "바쁘겠어요"
+              ]
+            },
+            {
+              "speaker": "파하드",
+              "text": "괜찮아요. 곧 끝나요. 한 시간 후에 도서관에서 만납시다.",
+              "emphasized": [
+                "후에"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "네, 고마워요. 파하드 씨."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-junbihagi1-expr",
+          "toc_section": "준비하기 1",
+          "hint_kind": "expression",
+          "related_text_ref": "text-call-dialogue",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "여보세요?",
+              "translation_ru": "Алло? (при телефонном звонке)"
+            },
+            {
+              "kind": "phrase",
+              "text": "전데요.",
+              "translation_ru": "Это я. (отвечая на вопрос «Это N?» по телефону)"
             }
           ]
         }

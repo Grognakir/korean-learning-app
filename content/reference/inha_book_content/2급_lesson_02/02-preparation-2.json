@@ -9,6 +9,137 @@
       "source_photo": "photo_18",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-junbihagi2-dialogue",
+          "source_note": "рукописный список на полях страницы (без перевода в оригинале — перевод добавлен при авторстве)",
+          "items": [
+            {
+              "ko": "이사",
+              "translation_ru": "переезд"
+            },
+            {
+              "ko": "구하다",
+              "translation_ru": "искать, найти (здесь: жильё)"
+            },
+            {
+              "ko": "아직",
+              "translation_ru": "ещё (не)"
+            },
+            {
+              "ko": "전세",
+              "translation_ru": "чонсе (аренда с крупным залогом, без ежемесячной платы)"
+            },
+            {
+              "ko": "월세",
+              "translation_ru": "вольсе (аренда с ежемесячной платой)"
+            },
+            {
+              "ko": "차이",
+              "translation_ru": "разница"
+            },
+            {
+              "ko": "보증금",
+              "translation_ru": "залог, депозит"
+            },
+            {
+              "ko": "내다",
+              "translation_ru": "платить, вносить"
+            },
+            {
+              "ko": "궁금하다",
+              "translation_ru": "интересно, хочется узнать"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "부동산 중개사 사무소",
+                "translation_ru": "агентство недвижимости"
+              },
+              {
+                "ko": "계약하다",
+                "translation_ru": "заключать договор"
+              },
+              {
+                "ko": "계약서",
+                "translation_ru": "договор"
+              },
+              {
+                "ko": "주차",
+                "translation_ru": "парковка"
+              },
+              {
+                "ko": "기숙사",
+                "translation_ru": "общежитие"
+              },
+              {
+                "ko": "근처",
+                "translation_ru": "поблизости"
+              },
+              {
+                "ko": "방값",
+                "translation_ru": "плата за комнату"
+              },
+              {
+                "ko": "관리비",
+                "translation_ru": "коммунальные платежи"
+              },
+              {
+                "ko": "가격",
+                "translation_ru": "цена"
+              },
+              {
+                "ko": "값",
+                "translation_ru": "цена, стоимость"
+              },
+              {
+                "ko": "저렴하다",
+                "translation_ru": "недорогой"
+              },
+              {
+                "ko": "매월",
+                "translation_ru": "каждый месяц"
+              },
+              {
+                "ko": "매달",
+                "translation_ru": "каждый месяц"
+              },
+              {
+                "ko": "이미",
+                "translation_ru": "уже"
+              },
+              {
+                "ko": "벌써",
+                "translation_ru": "уже, раньше ожидаемого"
+              },
+              {
+                "ko": "연세",
+                "translation_ru": "возраст (о старших)"
+              },
+              {
+                "ko": "성능",
+                "translation_ru": "характеристики, мощность"
+              },
+              {
+                "ko": "품질",
+                "translation_ru": "качество"
+              },
+              {
+                "ko": "결과",
+                "translation_ru": "результат"
+              },
+              {
+                "ko": "건강하다",
+                "translation_ru": "здоровый"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-junbihagi2-dialogue",
           "toc_section": "준비하기 2",
@@ -75,168 +206,6 @@
             {
               "speaker": "박지성",
               "text": "궁금하면 또 물어보세요."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-junbihagi2-dialogue",
-          "source_note": "рукописный список на полях страницы (без перевода в оригинале — перевод добавлен при авторстве)",
-          "items": [
-            {
-              "ko": "이사",
-              "translation_ru": "переезд",
-              "group": "집"
-            },
-            {
-              "ko": "구하다",
-              "translation_ru": "искать, найти (здесь: жильё)",
-              "group": "집"
-            },
-            {
-              "ko": "아직",
-              "translation_ru": "ещё (не)",
-              "group": "시간"
-            },
-            {
-              "ko": "전세",
-              "translation_ru": "чонсе (аренда с крупным залогом, без ежемесячной платы)",
-              "group": "집"
-            },
-            {
-              "ko": "월세",
-              "translation_ru": "вольсе (аренда с ежемесячной платой)",
-              "group": "집"
-            },
-            {
-              "ko": "차이",
-              "translation_ru": "разница",
-              "group": "비교"
-            },
-            {
-              "ko": "보증금",
-              "translation_ru": "залог, депозит",
-              "group": "집"
-            },
-            {
-              "ko": "내다",
-              "translation_ru": "платить, вносить",
-              "group": "비용"
-            },
-            {
-              "ko": "궁금하다",
-              "translation_ru": "интересно, хочется узнать",
-              "group": "비교"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "집",
-              "title_ru": "Жильё",
-              "items": [
-                {
-                  "ko": "부동산 중개사 사무소",
-                  "translation_ru": "агентство недвижимости"
-                },
-                {
-                  "ko": "계약하다",
-                  "translation_ru": "заключать договор"
-                },
-                {
-                  "ko": "계약서",
-                  "translation_ru": "договор"
-                },
-                {
-                  "ko": "주차",
-                  "translation_ru": "парковка"
-                },
-                {
-                  "ko": "기숙사",
-                  "translation_ru": "общежитие"
-                },
-                {
-                  "ko": "근처",
-                  "translation_ru": "поблизости"
-                }
-              ]
-            },
-            {
-              "title": "비용",
-              "title_ru": "Расходы",
-              "items": [
-                {
-                  "ko": "방값",
-                  "translation_ru": "плата за комнату"
-                },
-                {
-                  "ko": "관리비",
-                  "translation_ru": "коммунальные платежи"
-                },
-                {
-                  "ko": "가격",
-                  "translation_ru": "цена"
-                },
-                {
-                  "ko": "값",
-                  "translation_ru": "цена, стоимость"
-                },
-                {
-                  "ko": "저렴하다",
-                  "translation_ru": "недорогой"
-                },
-                {
-                  "ko": "매월",
-                  "translation_ru": "каждый месяц"
-                },
-                {
-                  "ko": "매달",
-                  "translation_ru": "каждый месяц"
-                }
-              ]
-            },
-            {
-              "title": "시간",
-              "title_ru": "Уже или ещё нет",
-              "items": [
-                {
-                  "ko": "이미",
-                  "translation_ru": "уже"
-                },
-                {
-                  "ko": "벌써",
-                  "translation_ru": "уже, раньше ожидаемого"
-                }
-              ]
-            },
-            {
-              "title": "비교",
-              "title_ru": "Сравнение",
-              "items": [
-                {
-                  "ko": "연세",
-                  "translation_ru": "возраст (о старших)"
-                },
-                {
-                  "ko": "성능",
-                  "translation_ru": "характеристики, мощность"
-                },
-                {
-                  "ko": "품질",
-                  "translation_ru": "качество"
-                },
-                {
-                  "ko": "결과",
-                  "translation_ru": "результат"
-                },
-                {
-                  "ko": "건강하다",
-                  "translation_ru": "здоровый"
-                }
-              ]
             }
           ]
         }

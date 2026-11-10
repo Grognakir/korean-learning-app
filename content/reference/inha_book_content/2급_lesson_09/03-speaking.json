@@ -9,6 +9,75 @@
       "source_photo": "IMG_0925",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "여드름",
+              "translation_ru": "прыщи, акне"
+            },
+            {
+              "ko": "피부과",
+              "translation_ru": "дерматология"
+            },
+            {
+              "ko": "연고",
+              "translation_ru": "мазь"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "피부",
+                "translation_ru": "кожа"
+              },
+              {
+                "ko": "세수하다",
+                "translation_ru": "умываться"
+              },
+              {
+                "ko": "세수",
+                "translation_ru": "умывание"
+              },
+              {
+                "ko": "처방전",
+                "translation_ru": "рецепт"
+              },
+              {
+                "ko": "진찰",
+                "translation_ru": "осмотр"
+              },
+              {
+                "ko": "스트레스",
+                "translation_ru": "стресс"
+              },
+              {
+                "ko": "약국",
+                "translation_ru": "аптека"
+              },
+              {
+                "ko": "약",
+                "translation_ru": "лекарство"
+              },
+              {
+                "ko": "낫다",
+                "translation_ru": "выздоравливать"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "나으",
+                "translation_ru": "форма от 낫다 (выздоравливать, проходить)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -103,16 +172,6 @@
                 "면서"
               ]
             }
-          ],
-          "vocab": [
-            {
-              "ko": "스트레스",
-              "translation_ru": "стресс"
-            },
-            {
-              "ko": "나으",
-              "translation_ru": "форма от 낫다 (выздоравливать, проходить)"
-            }
           ]
         },
         {
@@ -134,76 +193,6 @@
             },
             {
               "text": "3) 친구와 대화해 봅시다."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
-          "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "여드름",
-              "translation_ru": "прыщи, акне",
-              "group": "피부"
-            },
-            {
-              "ko": "피부과",
-              "translation_ru": "дерматология",
-              "group": "피부"
-            },
-            {
-              "ko": "연고",
-              "translation_ru": "мазь",
-              "group": "피부"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "피부",
-              "title_ru": "Кожа и лечение",
-              "items": [
-                {
-                  "ko": "피부",
-                  "translation_ru": "кожа"
-                },
-                {
-                  "ko": "세수하다",
-                  "translation_ru": "умываться"
-                },
-                {
-                  "ko": "세수",
-                  "translation_ru": "умывание"
-                },
-                {
-                  "ko": "처방전",
-                  "translation_ru": "рецепт"
-                },
-                {
-                  "ko": "진찰",
-                  "translation_ru": "осмотр"
-                },
-                {
-                  "ko": "스트레스",
-                  "translation_ru": "стресс"
-                },
-                {
-                  "ko": "약국",
-                  "translation_ru": "аптека"
-                },
-                {
-                  "ko": "약",
-                  "translation_ru": "лекарство"
-                },
-                {
-                  "ko": "낫다",
-                  "translation_ru": "выздоравливать"
-                }
-              ]
             }
           ]
         }

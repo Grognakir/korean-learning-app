@@ -9,6 +9,49 @@
       "source_photo": "IMG_0983",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-greeting-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "가다",
+              "translation_ru": "идти, ехать"
+            },
+            {
+              "ko": "층",
+              "translation_ru": "этаж"
+            },
+            {
+              "ko": "호",
+              "translation_ru": "номер (комнаты)"
+            },
+            {
+              "ko": "다니다",
+              "translation_ru": "ходить регулярно (на учёбу, работу)"
+            },
+            {
+              "ko": "가게",
+              "translation_ru": "магазин, лавка"
+            },
+            {
+              "ko": "편의점",
+              "translation_ru": "магазин у дома"
+            },
+            {
+              "ko": "회사",
+              "translation_ru": "компания, фирма"
+            },
+            {
+              "ko": "대학교",
+              "translation_ru": "университет"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-greeting-dialogue",
           "toc_section": "준비하기 2",
@@ -82,49 +125,6 @@
               "kind": "pattern",
               "text": "몇 N",
               "translation_ru": "сколько / какой по счёту N — шаблон; пример «몇 호입니까?» = «Какой номер (комнаты)?»"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-greeting-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "가다",
-              "translation_ru": "идти, ехать"
-            },
-            {
-              "ko": "층",
-              "translation_ru": "этаж"
-            },
-            {
-              "ko": "호",
-              "translation_ru": "номер (комнаты)"
-            },
-            {
-              "ko": "다니다",
-              "translation_ru": "ходить регулярно (на учёбу, работу)"
-            },
-            {
-              "ko": "가게",
-              "translation_ru": "магазин, лавка"
-            },
-            {
-              "ko": "편의점",
-              "translation_ru": "магазин у дома"
-            },
-            {
-              "ko": "회사",
-              "translation_ru": "компания, фирма"
-            },
-            {
-              "ko": "대학교",
-              "translation_ru": "университет"
             }
           ]
         }

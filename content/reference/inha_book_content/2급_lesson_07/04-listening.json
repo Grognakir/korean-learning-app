@@ -9,6 +9,57 @@
       "source_photo": "IMG_0764",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-delivery",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "기사",
+              "translation_ru": "водитель; курьер (택배 기사)"
+            },
+            {
+              "ko": "매번",
+              "translation_ru": "каждый раз"
+            },
+            {
+              "ko": "얼른",
+              "translation_ru": "быстро, поскорее"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "앞집",
+                "translation_ru": "соседний дом напротив"
+              },
+              {
+                "ko": "아주머니",
+                "translation_ru": "тётя, женщина среднего возраста"
+              },
+              {
+                "ko": "혹시",
+                "translation_ru": "вдруг, случайно"
+              },
+              {
+                "ko": "나중에",
+                "translation_ru": "потом"
+              },
+              {
+                "ko": "죄송하다",
+                "translation_ru": "извините"
+              },
+              {
+                "ko": "냉장고",
+                "translation_ru": "холодильник"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-delivery",
           "toc_section": "듣고 말하기",
@@ -103,64 +154,6 @@
           ],
           "followup": "택배를 주문하고 받은 경험에 대해 이야기해 보십시오.",
           "followup_ru": "Расскажите о своём опыте заказа и получения посылки."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-delivery",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "기사",
-              "translation_ru": "водитель; курьер (택배 기사)",
-              "group": "택배"
-            },
-            {
-              "ko": "매번",
-              "translation_ru": "каждый раз",
-              "group": "택배"
-            },
-            {
-              "ko": "얼른",
-              "translation_ru": "быстро, поскорее",
-              "group": "택배"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "택배",
-              "title_ru": "Курьерская доставка",
-              "items": [
-                {
-                  "ko": "앞집",
-                  "translation_ru": "соседний дом напротив"
-                },
-                {
-                  "ko": "아주머니",
-                  "translation_ru": "тётя, женщина среднего возраста"
-                },
-                {
-                  "ko": "혹시",
-                  "translation_ru": "вдруг, случайно"
-                },
-                {
-                  "ko": "나중에",
-                  "translation_ru": "потом"
-                },
-                {
-                  "ko": "죄송하다",
-                  "translation_ru": "извините"
-                },
-                {
-                  "ko": "냉장고",
-                  "translation_ru": "холодильник"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

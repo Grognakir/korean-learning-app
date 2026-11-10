@@ -9,6 +9,117 @@
       "source_photo": "photo_32",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-housing",
+          "source_note": "рукописный список на полях страницы",
+          "items": [
+            {
+              "ko": "대부분",
+              "translation_ru": "большинство"
+            },
+            {
+              "ko": "다르다",
+              "translation_ru": "отличаться"
+            },
+            {
+              "ko": "하숙집",
+              "translation_ru": "пансион (комната с питанием от хозяина)"
+            },
+            {
+              "ko": "자취방",
+              "translation_ru": "съёмная комната для самостоятельного проживания"
+            },
+            {
+              "ko": "등",
+              "translation_ru": "и т. д."
+            },
+            {
+              "ko": "집주인",
+              "translation_ru": "хозяин дома"
+            },
+            {
+              "ko": "모이다",
+              "translation_ru": "собираться"
+            },
+            {
+              "ko": "모든",
+              "translation_ru": "все, каждый"
+            },
+            {
+              "ko": "스스로",
+              "translation_ru": "самостоятельно"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "기숙사",
+                "translation_ru": "общежитие"
+              },
+              {
+                "ko": "층",
+                "translation_ru": "этаж"
+              },
+              {
+                "ko": "화장실",
+                "translation_ru": "туалет"
+              },
+              {
+                "ko": "근처",
+                "translation_ru": "поблизости"
+              },
+              {
+                "ko": "생활",
+                "translation_ru": "жизнь, быт"
+              },
+              {
+                "ko": "요리",
+                "translation_ru": "готовка"
+              },
+              {
+                "ko": "빨래",
+                "translation_ru": "стирка"
+              },
+              {
+                "ko": "혼자",
+                "translation_ru": "один, самостоятельно"
+              },
+              {
+                "ko": "직접",
+                "translation_ru": "лично"
+              },
+              {
+                "ko": "함께",
+                "translation_ru": "вместе"
+              },
+              {
+                "ko": "부모님",
+                "translation_ru": "родители"
+              },
+              {
+                "ko": "가깝다",
+                "translation_ru": "близкий"
+              },
+              {
+                "ko": "멀다",
+                "translation_ru": "далёкий"
+              },
+              {
+                "ko": "깨끗하다",
+                "translation_ru": "чистый"
+              },
+              {
+                "ko": "싸다",
+                "translation_ru": "дешёвый"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-housing",
           "toc_section": "문화 이해하기",
@@ -34,137 +145,6 @@
             },
             {
               "text": "2) 여러분 나라의 대학생들은 주로 어디에서 삽니까? 이야기해 보십시오."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-housing",
-          "source_note": "рукописный список на полях страницы",
-          "items": [
-            {
-              "ko": "대부분",
-              "translation_ru": "большинство"
-            },
-            {
-              "ko": "다르다",
-              "translation_ru": "отличаться"
-            },
-            {
-              "ko": "하숙집",
-              "translation_ru": "пансион (комната с питанием от хозяина)",
-              "group": "집"
-            },
-            {
-              "ko": "자취방",
-              "translation_ru": "съёмная комната для самостоятельного проживания",
-              "group": "집"
-            },
-            {
-              "ko": "등",
-              "translation_ru": "и т. д."
-            },
-            {
-              "ko": "집주인",
-              "translation_ru": "хозяин дома",
-              "group": "집"
-            },
-            {
-              "ko": "모이다",
-              "translation_ru": "собираться"
-            },
-            {
-              "ko": "모든",
-              "translation_ru": "все, каждый"
-            },
-            {
-              "ko": "스스로",
-              "translation_ru": "самостоятельно",
-              "group": "생활"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "집",
-              "title_ru": "Жильё студентов",
-              "items": [
-                {
-                  "ko": "기숙사",
-                  "translation_ru": "общежитие"
-                },
-                {
-                  "ko": "층",
-                  "translation_ru": "этаж"
-                },
-                {
-                  "ko": "화장실",
-                  "translation_ru": "туалет"
-                },
-                {
-                  "ko": "근처",
-                  "translation_ru": "поблизости"
-                }
-              ]
-            },
-            {
-              "title": "생활",
-              "title_ru": "Быт",
-              "items": [
-                {
-                  "ko": "생활",
-                  "translation_ru": "жизнь, быт"
-                },
-                {
-                  "ko": "요리",
-                  "translation_ru": "готовка"
-                },
-                {
-                  "ko": "빨래",
-                  "translation_ru": "стирка"
-                },
-                {
-                  "ko": "혼자",
-                  "translation_ru": "один, самостоятельно"
-                },
-                {
-                  "ko": "직접",
-                  "translation_ru": "лично"
-                },
-                {
-                  "ko": "함께",
-                  "translation_ru": "вместе"
-                },
-                {
-                  "ko": "부모님",
-                  "translation_ru": "родители"
-                }
-              ]
-            },
-            {
-              "title": "특징",
-              "title_ru": "Расстояние и цена",
-              "items": [
-                {
-                  "ko": "가깝다",
-                  "translation_ru": "близкий"
-                },
-                {
-                  "ko": "멀다",
-                  "translation_ru": "далёкий"
-                },
-                {
-                  "ko": "깨끗하다",
-                  "translation_ru": "чистый"
-                },
-                {
-                  "ko": "싸다",
-                  "translation_ru": "дешёвый"
-                }
-              ]
             }
           ]
         },

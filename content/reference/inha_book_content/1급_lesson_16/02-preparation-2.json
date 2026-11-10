@@ -9,6 +9,33 @@
       "source_photo": "IMG_1182",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-visit-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "고민",
+              "translation_ru": "тревога, раздумья"
+            },
+            {
+              "ko": "감사",
+              "translation_ru": "благодарность"
+            },
+            {
+              "ko": "생각",
+              "translation_ru": "мысль, идея"
+            },
+            {
+              "ko": "고치다",
+              "translation_ru": "чинить, исправлять"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-visit-dialogue",
           "toc_section": "준비하기 2",
@@ -88,33 +115,6 @@
               "kind": "pattern",
               "text": "AV-는 게 어때요? (= AV-는 것이 어때요?)",
               "translation_ru": "Как насчёт того, чтобы …? — шаблон; «한국 음식을 만드는 게 어때요?»"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-visit-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "고민",
-              "translation_ru": "тревога, раздумья"
-            },
-            {
-              "ko": "감사",
-              "translation_ru": "благодарность"
-            },
-            {
-              "ko": "생각",
-              "translation_ru": "мысль, идея"
-            },
-            {
-              "ko": "고치다",
-              "translation_ru": "чинить, исправлять"
             }
           ]
         }

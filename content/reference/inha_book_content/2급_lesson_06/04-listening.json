@@ -9,6 +9,69 @@
       "source_photo": "IMG_0716",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-birthday",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "낳다",
+              "translation_ru": "рожать (ребёнка)"
+            },
+            {
+              "ko": "볶음밥",
+              "translation_ru": "жареный рис"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "미역국",
+                "translation_ru": "суп из ламинарии"
+              },
+              {
+                "ko": "간장",
+                "translation_ru": "соевый соус"
+              },
+              {
+                "ko": "의미",
+                "translation_ru": "значение"
+              },
+              {
+                "ko": "생일",
+                "translation_ru": "день рождения"
+              },
+              {
+                "ko": "명절",
+                "translation_ru": "праздник"
+              },
+              {
+                "ko": "소고기",
+                "translation_ru": "говядина"
+              },
+              {
+                "ko": "떡볶이",
+                "translation_ru": "ттокпокки"
+              },
+              {
+                "ko": "양파",
+                "translation_ru": "лук"
+              },
+              {
+                "ko": "깨",
+                "translation_ru": "кунжут"
+              },
+              {
+                "ko": "불",
+                "translation_ru": "огонь"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-birthday-food",
           "toc_section": "듣고 말하기",
@@ -91,81 +154,6 @@
           ],
           "followup": "여러분 나라에서는 생일날에 어떤 음식을 먹습니까? 이야기해 보십시오.",
           "followup_ru": "А в вашей стране что едят на день рождения? Расскажите."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-birthday",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "낳다",
-              "translation_ru": "рожать (ребёнка)",
-              "group": "생일"
-            },
-            {
-              "ko": "볶음밥",
-              "translation_ru": "жареный рис",
-              "group": "생일"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "생일",
-              "title_ru": "День рождения",
-              "items": [
-                {
-                  "ko": "미역국",
-                  "translation_ru": "суп из ламинарии"
-                },
-                {
-                  "ko": "간장",
-                  "translation_ru": "соевый соус"
-                },
-                {
-                  "ko": "의미",
-                  "translation_ru": "значение"
-                },
-                {
-                  "ko": "생일",
-                  "translation_ru": "день рождения"
-                }
-              ]
-            },
-            {
-              "title": "명절",
-              "title_ru": "Праздничная еда",
-              "items": [
-                {
-                  "ko": "명절",
-                  "translation_ru": "праздник"
-                },
-                {
-                  "ko": "소고기",
-                  "translation_ru": "говядина"
-                },
-                {
-                  "ko": "떡볶이",
-                  "translation_ru": "ттокпокки"
-                },
-                {
-                  "ko": "양파",
-                  "translation_ru": "лук"
-                },
-                {
-                  "ko": "깨",
-                  "translation_ru": "кунжут"
-                },
-                {
-                  "ko": "불",
-                  "translation_ru": "огонь"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

@@ -9,6 +9,49 @@
       "source_photo": "IMG_0989",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-school-life",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-school-life",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "친절하다",
+              "translation_ru": "быть любезным"
+            },
+            {
+              "ko": "똑똑하다",
+              "translation_ru": "быть умным"
+            },
+            {
+              "ko": "열심히",
+              "translation_ru": "усердно"
+            },
+            {
+              "ko": "수업",
+              "translation_ru": "урок, занятие"
+            },
+            {
+              "ko": "끝나다",
+              "translation_ru": "заканчиваться"
+            },
+            {
+              "ko": "그리고",
+              "translation_ru": "и, а также"
+            },
+            {
+              "ko": "매우",
+              "translation_ru": "очень"
+            },
+            {
+              "ko": "즐겁다",
+              "translation_ru": "быть весёлым, приятным"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-school-life",
           "toc_section": "읽고 말하기",
@@ -70,49 +113,6 @@
               "kind": "open",
               "prompt": "여러분의 학교생활을 말해 보십시오.",
               "prompt_ru": "Расскажите о своей школьной жизни."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-school-life",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-school-life",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "친절하다",
-              "translation_ru": "быть любезным"
-            },
-            {
-              "ko": "똑똑하다",
-              "translation_ru": "быть умным"
-            },
-            {
-              "ko": "열심히",
-              "translation_ru": "усердно"
-            },
-            {
-              "ko": "수업",
-              "translation_ru": "урок, занятие"
-            },
-            {
-              "ko": "끝나다",
-              "translation_ru": "заканчиваться"
-            },
-            {
-              "ko": "그리고",
-              "translation_ru": "и, а также"
-            },
-            {
-              "ko": "매우",
-              "translation_ru": "очень"
-            },
-            {
-              "ko": "즐겁다",
-              "translation_ru": "быть весёлым, приятным"
             }
           ]
         }

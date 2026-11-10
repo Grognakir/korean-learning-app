@@ -9,6 +9,37 @@
       "source_photo": "IMG_0961",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-bow",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "눈",
+              "translation_ru": "глаз"
+            },
+            {
+              "ko": "보다",
+              "translation_ru": "смотреть, видеть"
+            },
+            {
+              "ko": "인사하다",
+              "translation_ru": "здороваться, приветствовать"
+            },
+            {
+              "ko": "머리",
+              "translation_ru": "голова"
+            },
+            {
+              "ko": "숙이다",
+              "translation_ru": "наклонять (голову)"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-culture-bow",
           "toc_section": "문화 이해하기",
@@ -39,37 +70,6 @@
             {
               "text": "3) 여러분 나라에서는 어떻게 인사합니까? 이야기해 보십시오.",
               "translation_ru": "Как здороваются в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-bow",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "눈",
-              "translation_ru": "глаз"
-            },
-            {
-              "ko": "보다",
-              "translation_ru": "смотреть, видеть"
-            },
-            {
-              "ko": "인사하다",
-              "translation_ru": "здороваться, приветствовать"
-            },
-            {
-              "ko": "머리",
-              "translation_ru": "голова"
-            },
-            {
-              "ko": "숙이다",
-              "translation_ru": "наклонять (голову)"
             }
           ]
         },

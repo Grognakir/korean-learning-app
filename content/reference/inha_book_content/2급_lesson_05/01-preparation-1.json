@@ -9,6 +9,161 @@
       "source_photo": "IMG_0685",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-party-planning-dialogue",
+          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
+          "items": [
+            {
+              "ko": "깜짝",
+              "translation_ru": "внезапно, неожиданно (깜짝 파티 — вечеринка-сюрприз)"
+            },
+            {
+              "ko": "몰래",
+              "translation_ru": "тайком, украдкой"
+            },
+            {
+              "ko": "미역국",
+              "translation_ru": "суп из морской капусты (традиционно едят в день рождения)"
+            },
+            {
+              "ko": "양초",
+              "translation_ru": "свеча"
+            },
+            {
+              "ko": "풍선",
+              "translation_ru": "воздушный шарик"
+            },
+            {
+              "ko": "싸우다",
+              "translation_ru": "ссориться, драться"
+            },
+            {
+              "ko": "다이어트",
+              "translation_ru": "диета"
+            },
+            {
+              "ko": "영화감독",
+              "translation_ru": "кинорежиссёр"
+            },
+            {
+              "ko": "우산",
+              "translation_ru": "зонт"
+            },
+            {
+              "ko": "장마",
+              "translation_ru": "сезон дождей"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "깜빡",
+                "translation_ru": "на миг, совсем (забыть)"
+              },
+              {
+                "ko": "잠깐",
+                "translation_ru": "ненадолго"
+              },
+              {
+                "ko": "케이크",
+                "translation_ru": "торт"
+              },
+              {
+                "ko": "파티",
+                "translation_ru": "вечеринка"
+              },
+              {
+                "ko": "생일",
+                "translation_ru": "день рождения"
+              },
+              {
+                "ko": "어버이날",
+                "translation_ru": "День родителей"
+              },
+              {
+                "ko": "선물",
+                "translation_ru": "подарок"
+              },
+              {
+                "ko": "이불",
+                "translation_ru": "одеяло"
+              },
+              {
+                "ko": "덮다",
+                "translation_ru": "накрывать"
+              },
+              {
+                "ko": "늦다",
+                "translation_ru": "опаздывать"
+              },
+              {
+                "ko": "시험 기간",
+                "translation_ru": "период экзаменов"
+              },
+              {
+                "ko": "빈자리",
+                "translation_ru": "свободное место"
+              },
+              {
+                "ko": "열람실",
+                "translation_ru": "читальный зал"
+              },
+              {
+                "ko": "카메라",
+                "translation_ru": "фотоаппарат"
+              }
+            ],
+            "text_vocab": [
+              {
+                "ko": "첫",
+                "translation_ru": "первый (перед существительным)"
+              },
+              {
+                "ko": "번째",
+                "translation_ru": "порядковый суффикс (-й/-я): 첫 번째 — первый"
+              },
+              {
+                "ko": "때문",
+                "translation_ru": "причина, из-за (в конструкции N/V-기 때문에)"
+              },
+              {
+                "ko": "특별한",
+                "translation_ru": "особенный, особый (форма от 특별하다)"
+              },
+              {
+                "ko": "그럼",
+                "translation_ru": "тогда, в таком случае"
+              },
+              {
+                "ko": "자신",
+                "translation_ru": "сам, себя; свой"
+              },
+              {
+                "ko": "일찍",
+                "translation_ru": "рано"
+              },
+              {
+                "ko": "도와주",
+                "translation_ru": "форма от 도와주다 (помогать)"
+              }
+            ],
+            "grammar_vocab": [
+              {
+                "ko": "모임",
+                "translation_ru": "собрание, встреча, группа"
+              },
+              {
+                "ko": "축구할",
+                "translation_ru": "форма от 축구하다 (играть в футбол)"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-party-planning-dialogue",
           "toc_section": "준비하기 1",
@@ -74,177 +229,6 @@
               "speaker": "최수지",
               "text": "알겠어요. 그럼 금요일에 만나요."
             }
-          ],
-          "vocab": [
-            {
-              "ko": "첫",
-              "translation_ru": "первый (перед существительным)"
-            },
-            {
-              "ko": "번째",
-              "translation_ru": "порядковый суффикс (-й/-я): 첫 번째 — первый"
-            },
-            {
-              "ko": "때문",
-              "translation_ru": "причина, из-за (в конструкции N/V-기 때문에)"
-            },
-            {
-              "ko": "특별한",
-              "translation_ru": "особенный, особый (форма от 특별하다)"
-            },
-            {
-              "ko": "그럼",
-              "translation_ru": "тогда, в таком случае"
-            },
-            {
-              "ko": "자신",
-              "translation_ru": "сам, себя; свой"
-            },
-            {
-              "ko": "일찍",
-              "translation_ru": "рано"
-            },
-            {
-              "ko": "도와주",
-              "translation_ru": "форма от 도와주다 (помогать)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-party-planning-dialogue",
-          "source_note": "рукописный список на полях страницы (перевод, добавленный студентом), а не печатный текст оригинала",
-          "items": [
-            {
-              "ko": "깜짝",
-              "translation_ru": "внезапно, неожиданно (깜짝 파티 — вечеринка-сюрприз)",
-              "group": "부사"
-            },
-            {
-              "ko": "몰래",
-              "translation_ru": "тайком, украдкой",
-              "group": "부사"
-            },
-            {
-              "ko": "미역국",
-              "translation_ru": "суп из морской капусты (традиционно едят в день рождения)",
-              "group": "생일"
-            },
-            {
-              "ko": "양초",
-              "translation_ru": "свеча",
-              "group": "생일"
-            },
-            {
-              "ko": "풍선",
-              "translation_ru": "воздушный шарик",
-              "group": "생일"
-            },
-            {
-              "ko": "싸우다",
-              "translation_ru": "ссориться, драться",
-              "group": "이유"
-            },
-            {
-              "ko": "다이어트",
-              "translation_ru": "диета",
-              "group": "이유"
-            },
-            {
-              "ko": "영화감독",
-              "translation_ru": "кинорежиссёр",
-              "group": "이유"
-            },
-            {
-              "ko": "우산",
-              "translation_ru": "зонт",
-              "group": "이유"
-            },
-            {
-              "ko": "장마",
-              "translation_ru": "сезон дождей",
-              "group": "이유"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "부사",
-              "title_ru": "Наречия",
-              "items": [
-                {
-                  "ko": "깜빡",
-                  "translation_ru": "на миг, совсем (забыть)"
-                },
-                {
-                  "ko": "잠깐",
-                  "translation_ru": "ненадолго"
-                }
-              ]
-            },
-            {
-              "title": "생일",
-              "title_ru": "Вечеринка",
-              "items": [
-                {
-                  "ko": "케이크",
-                  "translation_ru": "торт"
-                },
-                {
-                  "ko": "파티",
-                  "translation_ru": "вечеринка"
-                },
-                {
-                  "ko": "생일",
-                  "translation_ru": "день рождения"
-                },
-                {
-                  "ko": "어버이날",
-                  "translation_ru": "День родителей"
-                },
-                {
-                  "ko": "선물",
-                  "translation_ru": "подарок"
-                }
-              ]
-            },
-            {
-              "title": "이유",
-              "title_ru": "Причины",
-              "items": [
-                {
-                  "ko": "이불",
-                  "translation_ru": "одеяло"
-                },
-                {
-                  "ko": "덮다",
-                  "translation_ru": "накрывать"
-                },
-                {
-                  "ko": "늦다",
-                  "translation_ru": "опаздывать"
-                },
-                {
-                  "ko": "시험 기간",
-                  "translation_ru": "период экзаменов"
-                },
-                {
-                  "ko": "빈자리",
-                  "translation_ru": "свободное место"
-                },
-                {
-                  "ko": "열람실",
-                  "translation_ru": "читальный зал"
-                },
-                {
-                  "ko": "카메라",
-                  "translation_ru": "фотоаппарат"
-                }
-              ]
-            }
           ]
         }
       ]
@@ -265,16 +249,6 @@
             "가: 왕루 씨, 뭐 먹을래요?\n나: 저는 비빔밥을 먹을래요.",
             "가: 흐엉 씨, 수업이 끝나고 친구들과 밥을 먹기로 했는데 같이 갈래요?\n나: 네, 좋아요. 저도 같이 갈래요.",
             "가: 자르갈 씨, 주말에 축구 모임이 있는데 같이 축구할래요?\n나: 아니요, 저는 다음 주에 시험이 있어서 도서관에서 공부할래요."
-          ],
-          "vocab": [
-            {
-              "ko": "모임",
-              "translation_ru": "собрание, встреча, группа"
-            },
-            {
-              "ko": "축구할",
-              "translation_ru": "форма от 축구하다 (играть в футбол)"
-            }
           ],
           "rules": [
             "Нет 받침 → -ㄹ래요\n**가다 → 갈래요**",

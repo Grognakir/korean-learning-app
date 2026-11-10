@@ -9,6 +9,61 @@
       "source_photo": "IMG_0974",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-hometown-house",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-hometown-house",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "이층집",
+              "translation_ru": "двухэтажный дом"
+            },
+            {
+              "ko": "거실",
+              "translation_ru": "гостиная"
+            },
+            {
+              "ko": "부엌",
+              "translation_ru": "кухня"
+            },
+            {
+              "ko": "아래층",
+              "translation_ru": "нижний этаж"
+            },
+            {
+              "ko": "화장실",
+              "translation_ru": "туалет, ванная"
+            },
+            {
+              "ko": "부모님",
+              "translation_ru": "родители"
+            },
+            {
+              "ko": "텔레비전",
+              "translation_ru": "телевизор"
+            },
+            {
+              "ko": "소파",
+              "translation_ru": "диван"
+            },
+            {
+              "ko": "식탁",
+              "translation_ru": "обеденный стол"
+            },
+            {
+              "ko": "옷장",
+              "translation_ru": "шкаф для одежды"
+            },
+            {
+              "ko": "위층",
+              "translation_ru": "верхний этаж"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-hometown-house",
           "toc_section": "읽고 말하기",
@@ -82,61 +137,6 @@
               "kind": "open",
               "prompt": "여러분의 고향집을 소개해 보십시오.",
               "prompt_ru": "Расскажите о своём доме на родине."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-hometown-house",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-hometown-house",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "이층집",
-              "translation_ru": "двухэтажный дом"
-            },
-            {
-              "ko": "거실",
-              "translation_ru": "гостиная"
-            },
-            {
-              "ko": "부엌",
-              "translation_ru": "кухня"
-            },
-            {
-              "ko": "아래층",
-              "translation_ru": "нижний этаж"
-            },
-            {
-              "ko": "화장실",
-              "translation_ru": "туалет, ванная"
-            },
-            {
-              "ko": "부모님",
-              "translation_ru": "родители"
-            },
-            {
-              "ko": "텔레비전",
-              "translation_ru": "телевизор"
-            },
-            {
-              "ko": "소파",
-              "translation_ru": "диван"
-            },
-            {
-              "ko": "식탁",
-              "translation_ru": "обеденный стол"
-            },
-            {
-              "ko": "옷장",
-              "translation_ru": "шкаф для одежды"
-            },
-            {
-              "ko": "위층",
-              "translation_ru": "верхний этаж"
             }
           ]
         }

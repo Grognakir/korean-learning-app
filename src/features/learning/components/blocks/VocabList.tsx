@@ -5,6 +5,7 @@ import { Modal } from "@/components/ui/Modal";
 import type { VocabListBlock } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
 import { VocabChip } from "./VocabChip";
+import { isKnown, useVocabProgress } from "@/features/learning/vocabProgress";
 import { VocabTrainer } from "./VocabTrainer";
 import styles from "./blocks.module.css";
 
@@ -43,48 +44,32 @@ export function VocabList({
   block: VocabListBlock;
   id?: string;
 }) {
-  const groups = block.extra_groups ?? [];
+  const mainKeys = new Set(block.items.map((item) => item.ko));
+  // Дополнительные слова — одним списком из всех групп extra_words, без
+  // повторов и без слов, которые уже есть среди основных.
+  const extraItems = Object.values(block.extra_words ?? {})
+    .flat()
+    .filter(
+      (item, index, all) =>
+        !mainKeys.has(item.ko) &&
+        all.findIndex((other) => other.ko === item.ko) === index,
+    );
   // Блок без основных слов (раздел, где в учебнике нет списка слов) — только
   // дополнительные: вкладок нет.
-  const onlyExtra = block.items.length === 0 && groups.length > 0;
+  const onlyExtra = block.items.length === 0 && extraItems.length > 0;
   const [pickedTab, setTab] = useState<Tab>("main");
   const tab: Tab = onlyExtra ? "extra" : pickedTab;
   const [open, setOpen] = useState(false);
 
-  const extraItems = groups.flatMap((group) => group.items);
   const itemsByTab: Record<Tab, Item[]> = {
     main: block.items,
     extra: extraItems,
     all: [...block.items, ...extraItems],
   };
-  const sections = groups.map((group) => ({
-    title: group.title,
-    label: group.title_ru ?? group.title,
-    main: block.items.filter((item) => item.group === group.title),
-    extra: group.items,
-  }));
-  const groupedTitles = new Set(groups.map((group) => group.title));
-  const ungrouped = block.items.filter(
-    (item) => !item.group || !groupedTitles.has(item.group),
-  );
-  if (ungrouped.length > 0) {
-    sections.push({
-      title: "other",
-      label: "Другие",
-      main: ungrouped,
-      extra: [],
-    });
-  }
-  const shownGroups = sections
-    .map((section) => ({
-      title: section.title,
-      label: section.label,
-      items:
-        tab === "all" ? [...section.main, ...section.extra] : section.extra,
-    }))
-    .filter((group) => group.items.length > 0);
   const current = itemsByTab[tab];
   const total = current.length;
+  const progress = useVocabProgress();
+  const knownCount = current.filter((item) => isKnown(progress[item.ko])).length;
 
   // Пока идёт тренировка, слова на странице за окном размываются
   // (правило `data-word-trainer` в blocks.module.css).
@@ -106,7 +91,7 @@ export function VocabList({
             <LabelInfo translation={block.title_ru} />
           )}
         </span>
-        {groups.length > 0 && !onlyExtra && (
+        {extraItems.length > 0 && !onlyExtra && (
           <div
             className={styles.segTabs}
             role="tablist"
@@ -126,17 +111,7 @@ export function VocabList({
           </div>
         )}
       </div>
-      {tab === "main" && <Chips items={block.items} />}
-      {tab !== "main" && (
-        <div className={styles.extraGroups}>
-          {shownGroups.map((group) => (
-            <div key={group.title} className={styles.extraSubGroup}>
-              <span className={styles.extraGroupTitle}>{group.label}</span>
-              <Chips items={group.items} />
-            </div>
-          ))}
-        </div>
-      )}
+      <Chips items={current} />
       {total > 0 && (
         <>
           <button
@@ -144,7 +119,10 @@ export function VocabList({
             className={styles.trainRow}
             onClick={() => setOpen(true)}
           >
-            <span>Тренировать слова ({total})</span>
+            <span>
+              Тренировать слова ({total})
+              {knownCount > 0 && ` · выучено ${knownCount}`}
+            </span>
             <span aria-hidden="true">→</span>
           </button>
           <Modal

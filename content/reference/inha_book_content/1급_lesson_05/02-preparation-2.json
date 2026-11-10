@@ -9,68 +9,6 @@
       "source_photo": "IMG_1013",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-time-dialogue",
-          "toc_section": "준비하기 2",
-          "title": "시간 정보를 묻기",
-          "title_ru": "Спрашивать о времени",
-          "illustration": {
-            "storage_path": "lesson_5/illustration_2_swimming_reception_v2.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기2",
-          "exercise_ref": null,
-          "audio_id": "118",
-          "speakers": [
-            "왕루",
-            "직원"
-          ],
-          "lines": [
-            {
-              "speaker": "왕루",
-              "text": "수영 수업이 언제부터 시작해요?",
-              "emphasized": [
-                "부터"
-              ]
-            },
-            {
-              "speaker": "직원",
-              "text": "수영 수업은 다음 주 월요일부터 시작합니다.",
-              "emphasized": [
-                "부터"
-              ]
-            },
-            {
-              "speaker": "왕루",
-              "text": "몇 시부터 몇 시까지 해요?",
-              "emphasized": [
-                "부터",
-                "까지"
-              ]
-            },
-            {
-              "speaker": "직원",
-              "text": "오후 7시부터 7시 50분까지 합니다.",
-              "emphasized": [
-                "부터",
-                "까지"
-              ]
-            },
-            {
-              "speaker": "왕루",
-              "text": "토요일에도 해요?"
-            },
-            {
-              "speaker": "직원",
-              "text": "아니요, 주말에는 안 합니다.",
-              "emphasized": [
-                "안 합니다"
-              ]
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi2",
           "toc_section": "준비하기 2",
@@ -150,6 +88,68 @@
             {
               "ko": "조용하다",
               "translation_ru": "быть тихим"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "text-time-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "시간 정보를 묻기",
+          "title_ru": "Спрашивать о времени",
+          "illustration": {
+            "storage_path": "lesson_5/illustration_2_swimming_reception_v2.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "118",
+          "speakers": [
+            "왕루",
+            "직원"
+          ],
+          "lines": [
+            {
+              "speaker": "왕루",
+              "text": "수영 수업이 언제부터 시작해요?",
+              "emphasized": [
+                "부터"
+              ]
+            },
+            {
+              "speaker": "직원",
+              "text": "수영 수업은 다음 주 월요일부터 시작합니다.",
+              "emphasized": [
+                "부터"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "몇 시부터 몇 시까지 해요?",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "직원",
+              "text": "오후 7시부터 7시 50분까지 합니다.",
+              "emphasized": [
+                "부터",
+                "까지"
+              ]
+            },
+            {
+              "speaker": "왕루",
+              "text": "토요일에도 해요?"
+            },
+            {
+              "speaker": "직원",
+              "text": "아니요, 주말에는 안 합니다.",
+              "emphasized": [
+                "안 합니다"
+              ]
             }
           ]
         }

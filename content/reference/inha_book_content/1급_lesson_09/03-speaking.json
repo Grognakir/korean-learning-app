@@ -9,6 +9,29 @@
       "source_photo": "IMG_1078",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-malhagi",
+          "toc_section": "말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-speaking-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "넥타이",
+              "translation_ru": "галстук"
+            },
+            {
+              "ko": "손수건",
+              "translation_ru": "носовой платок"
+            },
+            {
+              "ko": "운동화",
+              "translation_ru": "кроссовки, спортивная обувь"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-speaking-summary",
           "toc_section": "말하기",
@@ -125,36 +148,6 @@
         },
         {
           "type": "text",
-          "id": "text-speaking-questions-1",
-          "toc_section": "말하기",
-          "illustration": null,
-          "text_kind": "passage",
-          "section": "말하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "lines": [
-            {
-              "text": "1) 입학 선물"
-            }
-          ],
-          "table": {
-            "columns": [
-              "누구에게 줍니까?",
-              "무엇을 삽니까?",
-              "얼마입니까?"
-            ],
-            "rows": [
-              [
-                "동생",
-                "가방 / 운동화",
-                "가방: 3만 5천 원, 운동화: 6만 원"
-              ]
-            ]
-          },
-          "exercise_title": "2. 친구들과 함께 대화해 보십시오"
-        },
-        {
-          "type": "text",
           "id": "text-speaking-questions-2",
           "toc_section": "말하기",
           "illustration": null,
@@ -183,27 +176,34 @@
           }
         },
         {
-          "type": "vocab_list",
-          "id": "vocab-malhagi",
+          "type": "text",
+          "id": "text-speaking-questions-1",
           "toc_section": "말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-speaking-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
+          "illustration": null,
+          "text_kind": "passage",
+          "section": "말하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "lines": [
             {
-              "ko": "넥타이",
-              "translation_ru": "галстук"
-            },
-            {
-              "ko": "손수건",
-              "translation_ru": "носовой платок"
-            },
-            {
-              "ko": "운동화",
-              "translation_ru": "кроссовки, спортивная обувь"
+              "text": "1) 입학 선물"
             }
-          ]
+          ],
+          "table": {
+            "columns": [
+              "누구에게 줍니까?",
+              "무엇을 삽니까?",
+              "얼마입니까?"
+            ],
+            "rows": [
+              [
+                "동생",
+                "가방 / 운동화",
+                "가방: 3만 5천 원, 운동화: 6만 원"
+              ]
+            ]
+          },
+          "exercise_title": "2. 친구들과 함께 대화해 보십시오"
         }
       ]
     }

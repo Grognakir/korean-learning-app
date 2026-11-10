@@ -9,73 +9,6 @@
       "source_photo": "IMG_1028",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-experience-dialogue",
-          "toc_section": "준비하기 2",
-          "title": "경험을 말하기",
-          "title_ru": "Говорить об опыте",
-          "illustration": {
-            "storage_path": "lesson_6/illustration_2_hanok_visit.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기2",
-          "exercise_ref": null,
-          "audio_id": "122",
-          "speakers": [
-            "자르갈",
-            "아멜리"
-          ],
-          "lines": [
-            {
-              "speaker": "자르갈",
-              "text": "아멜리 씨는 지난 주말에 무엇을 했어요?",
-              "emphasized": [
-                "했어요"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "저는 지난 주말에 언니와 같이 한옥 마을에 갔어요. 한옥 마을에서 한옥도 구경하고 한국 사람들과 이야기도 했어요. 자르갈 씨는 한옥 마을에 가 봤어요?",
-              "emphasized": [
-                "갔어요",
-                "구경하고",
-                "했어요",
-                "가 봤어요"
-              ]
-            },
-            {
-              "speaker": "자르갈",
-              "text": "아니요, 한옥 마을에 안 가 봤어요.",
-              "emphasized": [
-                "안 가 봤어요"
-              ]
-            },
-            {
-              "speaker": "아멜리",
-              "text": "그러면 지난 주말에 뭐 했어요?",
-              "emphasized": [
-                "했어요"
-              ]
-            },
-            {
-              "speaker": "자르갈",
-              "text": "저는 지난 주말에 친구와 같이 인사동에 갔어요. 인사동에서 한복을 입어 봤어요. 한복이 아주 예뻤어요.",
-              "emphasized": [
-                "갔어요",
-                "입어 봤어요",
-                "예뻤어요"
-              ]
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "예뻤",
-              "translation_ru": "форма от 예쁘다 (быть красивым)"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi2",
           "toc_section": "준비하기 2",
@@ -175,6 +108,75 @@
             {
               "ko": "눈",
               "translation_ru": "глаз"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "예뻤",
+                "translation_ru": "форма от 예쁘다 (быть красивым)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-experience-dialogue",
+          "toc_section": "준비하기 2",
+          "title": "경험을 말하기",
+          "title_ru": "Говорить об опыте",
+          "illustration": {
+            "storage_path": "lesson_6/illustration_2_hanok_visit.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기2",
+          "exercise_ref": null,
+          "audio_id": "122",
+          "speakers": [
+            "자르갈",
+            "아멜리"
+          ],
+          "lines": [
+            {
+              "speaker": "자르갈",
+              "text": "아멜리 씨는 지난 주말에 무엇을 했어요?",
+              "emphasized": [
+                "했어요"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "저는 지난 주말에 언니와 같이 한옥 마을에 갔어요. 한옥 마을에서 한옥도 구경하고 한국 사람들과 이야기도 했어요. 자르갈 씨는 한옥 마을에 가 봤어요?",
+              "emphasized": [
+                "갔어요",
+                "구경하고",
+                "했어요",
+                "가 봤어요"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "아니요, 한옥 마을에 안 가 봤어요.",
+              "emphasized": [
+                "안 가 봤어요"
+              ]
+            },
+            {
+              "speaker": "아멜리",
+              "text": "그러면 지난 주말에 뭐 했어요?",
+              "emphasized": [
+                "했어요"
+              ]
+            },
+            {
+              "speaker": "자르갈",
+              "text": "저는 지난 주말에 친구와 같이 인사동에 갔어요. 인사동에서 한복을 입어 봤어요. 한복이 아주 예뻤어요.",
+              "emphasized": [
+                "갔어요",
+                "입어 봤어요",
+                "예뻤어요"
+              ]
             }
           ]
         },

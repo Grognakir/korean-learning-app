@@ -18,7 +18,7 @@ import styles from "./StoryGame.module.css";
 /** Окно-примерочная для вещи с полки: затемнённая сцена, крупное превью в
  * выбранном цвете, палитра, узоры и «… 주세요». Прежний вариант с
  * цветовым колесом (6.3) сохранён в
- * content/reference/art-sources/dialogue/palette-6.3-wheel/. */
+ * content/reference/art-sources/solomon-os/dialogue/palette-6.3-wheel/. */
 export function Palette({
   id,
   onBuy,

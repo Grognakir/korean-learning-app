@@ -9,6 +9,29 @@
       "source_photo": "IMG_1004",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-daily-life",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-daily-life",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "물건",
+              "translation_ru": "вещь, товар"
+            },
+            {
+              "ko": "같이",
+              "translation_ru": "вместе"
+            },
+            {
+              "ko": "좋아하다",
+              "translation_ru": "любить, нравиться"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-daily-life",
           "toc_section": "읽고 말하기",
@@ -67,29 +90,6 @@
               "kind": "open",
               "prompt": "여러분의 일상생활을 이야기해 보십시오.",
               "prompt_ru": "Расскажите о своей повседневной жизни."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-daily-life",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-daily-life",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "물건",
-              "translation_ru": "вещь, товар"
-            },
-            {
-              "ko": "같이",
-              "translation_ru": "вместе"
-            },
-            {
-              "ko": "좋아하다",
-              "translation_ru": "любить, нравиться"
             }
           ]
         }

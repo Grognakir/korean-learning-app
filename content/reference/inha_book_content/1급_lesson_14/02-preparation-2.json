@@ -9,6 +9,29 @@
       "source_photo": "IMG_1152",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-post-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "오랜만",
+              "translation_ru": "давно не виделись"
+            },
+            {
+              "ko": "상자",
+              "translation_ru": "коробка, ящик"
+            },
+            {
+              "ko": "부치다",
+              "translation_ru": "отправлять (посылку, письмо)"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-post-dialogue",
           "toc_section": "준비하기 2",
@@ -85,29 +108,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-post-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "오랜만",
-              "translation_ru": "давно не виделись"
-            },
-            {
-              "ko": "상자",
-              "translation_ru": "коробка, ящик"
-            },
-            {
-              "ko": "부치다",
-              "translation_ru": "отправлять (посылку, письмо)"
-            }
-          ]
         }
       ]
     },
@@ -116,6 +116,21 @@
       "page_role": "content",
       "source_photo": "IMG_1153",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-grammar2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "가볍다",
+              "translation_ru": "быть лёгким (по весу)"
+            }
+          ]
+        },
         {
           "type": "grammar_point",
           "id": "grammar-4",
@@ -228,21 +243,6 @@
           "rules": [
             "Работает только с настоящим (현재)"
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-grammar2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "가볍다",
-              "translation_ru": "быть лёгким (по весу)"
-            }
-          ]
         }
       ]
     },
@@ -251,6 +251,53 @@
       "page_role": "content",
       "source_photo": "IMG_1154",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup4",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "등산화",
+              "translation_ru": "горные ботинки, треккинговая обувь"
+            },
+            {
+              "ko": "신다",
+              "translation_ru": "обувать, надевать (обувь)"
+            },
+            {
+              "ko": "아이스크림",
+              "translation_ru": "мороженое"
+            },
+            {
+              "ko": "차갑다",
+              "translation_ru": "быть холодным (на ощупь)"
+            },
+            {
+              "ko": "전자사전",
+              "translation_ru": "электронный словарь"
+            },
+            {
+              "ko": "걱정",
+              "translation_ru": "беспокойство, тревога"
+            },
+            {
+              "ko": "살",
+              "translation_ru": "тело, плоть; жир (살이 찌다 — поправляться)"
+            },
+            {
+              "ko": "찌다",
+              "translation_ru": "полнеть (살이 찌다)"
+            },
+            {
+              "ko": "스트레스",
+              "translation_ru": "стресс"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-4a",
@@ -445,53 +492,6 @@
             "가: {0}서 걱정이에요.",
             "나: {1}. / {2}."
           ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup4",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "등산화",
-              "translation_ru": "горные ботинки, треккинговая обувь"
-            },
-            {
-              "ko": "신다",
-              "translation_ru": "обувать, надевать (обувь)"
-            },
-            {
-              "ko": "아이스크림",
-              "translation_ru": "мороженое"
-            },
-            {
-              "ko": "차갑다",
-              "translation_ru": "быть холодным (на ощупь)"
-            },
-            {
-              "ko": "전자사전",
-              "translation_ru": "электронный словарь"
-            },
-            {
-              "ko": "걱정",
-              "translation_ru": "беспокойство, тревога"
-            },
-            {
-              "ko": "살",
-              "translation_ru": "тело, плоть; жир (살이 찌다 — поправляться)"
-            },
-            {
-              "ko": "찌다",
-              "translation_ru": "полнеть (살이 찌다)"
-            },
-            {
-              "ko": "스트레스",
-              "translation_ru": "стресс"
-            }
-          ]
         }
       ]
     },
@@ -500,6 +500,37 @@
       "page_role": "content",
       "source_photo": "IMG_1155",
       "blocks": [
+        {
+          "type": "vocab_list",
+          "id": "vocab-yeonseup5",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "피우다",
+              "translation_ru": "курить; зажигать"
+            },
+            {
+              "ko": "발표하다",
+              "translation_ru": "делать доклад, выступать"
+            },
+            {
+              "ko": "서다",
+              "translation_ru": "стоять, вставать"
+            },
+            {
+              "ko": "쓰레기",
+              "translation_ru": "мусор"
+            },
+            {
+              "ko": "버리다",
+              "translation_ru": "выбрасывать"
+            }
+          ]
+        },
         {
           "type": "grammar_exercise",
           "id": "exercise-5a",
@@ -704,37 +735,6 @@
           "template": [
             "가: {0}고 싶어요. 괜찮아요?",
             "나: 아니요, {1}야 해요. {2}지 마세요."
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-yeonseup5",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "피우다",
-              "translation_ru": "курить; зажигать"
-            },
-            {
-              "ko": "발표하다",
-              "translation_ru": "делать доклад, выступать"
-            },
-            {
-              "ko": "서다",
-              "translation_ru": "стоять, вставать"
-            },
-            {
-              "ko": "쓰레기",
-              "translation_ru": "мусор"
-            },
-            {
-              "ko": "버리다",
-              "translation_ru": "выбрасывать"
-            }
           ]
         }
       ]

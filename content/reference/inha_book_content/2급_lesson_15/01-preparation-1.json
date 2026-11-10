@@ -9,69 +9,6 @@
       "source_photo": "IMG_1577",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-trip-dialogue",
-          "toc_section": "준비하기 1",
-          "title": "여행을 계획하기",
-          "title_ru": "Планировать поездку",
-          "illustration": {
-            "storage_path": "lesson_15/illustration_1_plan_gyeongju.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "dialogue",
-          "section": "준비하기1",
-          "exercise_ref": null,
-          "audio_id": "257",
-          "speakers": [
-            "자르갈",
-            "왕루"
-          ],
-          "lines": [
-            {
-              "speaker": "자르갈",
-              "text": "왕루 씨, 우리 이번 방학에 오위노 씨와 함께 여행을 가기로 했잖아요. 오위노 씨는 경주에 가고 싶어 하는데 왕루 씨는 어때요?"
-            },
-            {
-              "speaker": "왕루",
-              "text": "아, 저도 좋아요. 경주에 꼭 한번 가 보고 싶었어요."
-            },
-            {
-              "speaker": "자르갈",
-              "text": "그래요? 그럼 우리 경주로 가요. 버스를 타고 가면 4시간 정도가 걸리는 반면에 KTX를 타고 가면 2시간 정도밖에 안 걸려요."
-            },
-            {
-              "speaker": "왕루",
-              "text": "그럼 KTX로 가는 게 더 좋겠네요. 경주에는 관광지와 유적지가 많이 있으니까 2박 3일로 가는 게 좋겠지요?"
-            },
-            {
-              "speaker": "자르갈",
-              "text": "1박 2일도 좋지만 방학이니까 2박 3일이 더 괜찮을 것 같아요."
-            },
-            {
-              "speaker": "왕루",
-              "text": "그럼 여행사에 문의해서 정보를 얻고 좋은 상품이 있으면 선택해 봅시다."
-            },
-            {
-              "speaker": "자르갈",
-              "text": "아, 그게 좋겠네요. 그리고 한국 역사에 대한 설명도 들어야 하니까 가이드 안내에 대해서도 알아봐야겠어요. 제가 집에 가는 길에 여행사에 들러서 문의해 볼게요."
-            }
-          ]
-        },
-        {
-          "type": "hint",
-          "id": "hint-junbihagi1-expr",
-          "toc_section": "준비하기 1",
-          "hint_kind": "expression",
-          "related_text_ref": "text-trip-dialogue",
-          "items": [
-            {
-              "kind": "pattern",
-              "text": "N박 N일",
-              "translation_ru": "поездка на N ночей (и N+1 дней): «1박 2일» — с одной ночёвкой, «2박 3일» — с двумя ночёвками"
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-junbihagi1",
           "toc_section": "준비하기 1",
@@ -137,62 +74,157 @@
               "translation_ru": "расходы, стоимость"
             }
           ],
-          "extra_groups": [
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "남대문",
+                "translation_ru": "Намдэмун (Южные ворота Сеула)"
+              },
+              {
+                "ko": "동대문",
+                "translation_ru": "Тондэмун (Восточные ворота Сеула)"
+              },
+              {
+                "ko": "덕수궁",
+                "translation_ru": "Токсугун (дворец в Сеуле)"
+              },
+              {
+                "ko": "독립문",
+                "translation_ru": "Тоннимун (Ворота независимости в Сеуле)"
+              },
+              {
+                "ko": "경복궁",
+                "translation_ru": "дворец Кёнбоккун"
+              },
+              {
+                "ko": "예약하다",
+                "translation_ru": "резервировать, бронировать (столик, номер)"
+              },
+              {
+                "ko": "무료",
+                "translation_ru": "бесплатно"
+              },
+              {
+                "ko": "한식",
+                "translation_ru": "корейская кухня, корейская еда"
+              },
+              {
+                "ko": "양식",
+                "translation_ru": "европейская кухня"
+              },
+              {
+                "ko": "계획을 세우다",
+                "translation_ru": "составлять план"
+              },
+              {
+                "ko": "호텔",
+                "translation_ru": "отель"
+              }
+            ],
+            "grammar_vocab": [
+              {
+                "ko": "박물관",
+                "translation_ru": "музей"
+              },
+              {
+                "ko": "의상",
+                "translation_ru": "костюм, наряд (здесь — традиционный костюм)"
+              },
+              {
+                "ko": "종류",
+                "translation_ru": "вид, тип"
+              },
+              {
+                "ko": "가격",
+                "translation_ru": "цена"
+              },
+              {
+                "ko": "농구",
+                "translation_ru": "баскетбол"
+              },
+              {
+                "ko": "서점",
+                "translation_ru": "книжный магазин"
+              },
+              {
+                "ko": "출근하다",
+                "translation_ru": "идти/приходить на работу"
+              },
+              {
+                "ko": "편의점",
+                "translation_ru": "магазин у дома (convenience store)"
+              },
+              {
+                "ko": "사무실",
+                "translation_ru": "офис, кабинет"
+              },
+              {
+                "ko": "서류",
+                "translation_ru": "документы, бумаги (деловые)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-trip-dialogue",
+          "toc_section": "준비하기 1",
+          "title": "여행을 계획하기",
+          "title_ru": "Планировать поездку",
+          "illustration": {
+            "storage_path": "lesson_15/illustration_1_plan_gyeongju.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "dialogue",
+          "section": "준비하기1",
+          "exercise_ref": null,
+          "audio_id": "257",
+          "speakers": [
+            "자르갈",
+            "왕루"
+          ],
+          "lines": [
             {
-              "title": "관광",
-              "title_ru": "Достопримечательности",
-              "items": [
-                {
-                  "ko": "남대문",
-                  "translation_ru": "Намдэмун (Южные ворота Сеула)"
-                },
-                {
-                  "ko": "동대문",
-                  "translation_ru": "Тондэмун (Восточные ворота Сеула)"
-                },
-                {
-                  "ko": "덕수궁",
-                  "translation_ru": "Токсугун (дворец в Сеуле)"
-                },
-                {
-                  "ko": "독립문",
-                  "translation_ru": "Тоннимун (Ворота независимости в Сеуле)"
-                },
-                {
-                  "ko": "경복궁",
-                  "translation_ru": "дворец Кёнбоккун"
-                }
-              ]
+              "speaker": "자르갈",
+              "text": "왕루 씨, 우리 이번 방학에 오위노 씨와 함께 여행을 가기로 했잖아요. 오위노 씨는 경주에 가고 싶어 하는데 왕루 씨는 어때요?"
             },
             {
-              "title": "예약",
-              "title_ru": "Бронирование",
-              "items": [
-                {
-                  "ko": "예약하다",
-                  "translation_ru": "резервировать, бронировать (столик, номер)"
-                },
-                {
-                  "ko": "무료",
-                  "translation_ru": "бесплатно"
-                },
-                {
-                  "ko": "한식",
-                  "translation_ru": "корейская кухня, корейская еда"
-                },
-                {
-                  "ko": "양식",
-                  "translation_ru": "европейская кухня"
-                },
-                {
-                  "ko": "계획을 세우다",
-                  "translation_ru": "составлять план"
-                },
-                {
-                  "ko": "호텔",
-                  "translation_ru": "отель"
-                }
-              ]
+              "speaker": "왕루",
+              "text": "아, 저도 좋아요. 경주에 꼭 한번 가 보고 싶었어요."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "그래요? 그럼 우리 경주로 가요. 버스를 타고 가면 4시간 정도가 걸리는 반면에 KTX를 타고 가면 2시간 정도밖에 안 걸려요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "그럼 KTX로 가는 게 더 좋겠네요. 경주에는 관광지와 유적지가 많이 있으니까 2박 3일로 가는 게 좋겠지요?"
+            },
+            {
+              "speaker": "자르갈",
+              "text": "1박 2일도 좋지만 방학이니까 2박 3일이 더 괜찮을 것 같아요."
+            },
+            {
+              "speaker": "왕루",
+              "text": "그럼 여행사에 문의해서 정보를 얻고 좋은 상품이 있으면 선택해 봅시다."
+            },
+            {
+              "speaker": "자르갈",
+              "text": "아, 그게 좋겠네요. 그리고 한국 역사에 대한 설명도 들어야 하니까 가이드 안내에 대해서도 알아봐야겠어요. 제가 집에 가는 길에 여행사에 들러서 문의해 볼게요."
+            }
+          ]
+        },
+        {
+          "type": "hint",
+          "id": "hint-junbihagi1-expr",
+          "toc_section": "준비하기 1",
+          "hint_kind": "expression",
+          "related_text_ref": "text-trip-dialogue",
+          "items": [
+            {
+              "kind": "pattern",
+              "text": "N박 N일",
+              "translation_ru": "поездка на N ночей (и N+1 дней): «1박 2일» — с одной ночёвкой, «2박 3일» — с двумя ночёвками"
             }
           ]
         }
@@ -219,32 +251,6 @@
             "나: 의상 박물관은 유물이 많은 반면에 음식 박물관은 유물이 적습니다.",
             "가: 인하 식당에 가려고 하는데 어떤가요?",
             "나: 그 식당은 가격이 싼 반면에 음식 종류가 많지 않습니다."
-          ],
-          "vocab": [
-            {
-              "ko": "유물",
-              "translation_ru": "реликвия, исторический артефакт"
-            },
-            {
-              "ko": "박물관",
-              "translation_ru": "музей"
-            },
-            {
-              "ko": "의상",
-              "translation_ru": "костюм, наряд (здесь — традиционный костюм)"
-            },
-            {
-              "ko": "종류",
-              "translation_ru": "вид, тип"
-            },
-            {
-              "ko": "가격",
-              "translation_ru": "цена"
-            },
-            {
-              "ko": "농구",
-              "translation_ru": "баскетбол"
-            }
           ],
           "rules_table": {
             "head": [
@@ -306,28 +312,6 @@
             "집에 가는 길에 서점에 들러서 책을 한 권 샀어요.",
             "저는 출근하는 길에 편의점에서 빵과 우유를 사요.",
             "사무실에 가는 길이면 제 서류도 제출해 줄 수 있어요?"
-          ],
-          "vocab": [
-            {
-              "ko": "서점",
-              "translation_ru": "книжный магазин"
-            },
-            {
-              "ko": "출근하다",
-              "translation_ru": "идти/приходить на работу"
-            },
-            {
-              "ko": "편의점",
-              "translation_ru": "магазин у дома (convenience store)"
-            },
-            {
-              "ko": "사무실",
-              "translation_ru": "офис, кабинет"
-            },
-            {
-              "ko": "서류",
-              "translation_ru": "документы, бумаги (деловые)"
-            }
           ],
           "rules": [
             "받침 не важен → AV + 는 길이다\n**가다 → 가는 길이다**",

@@ -9,6 +9,117 @@
       "source_photo": "IMG_0758",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi2",
+          "toc_section": "준비하기 2",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-exchange-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "사이즈",
+              "translation_ru": "размер"
+            },
+            {
+              "ko": "맞다",
+              "translation_ru": "подходить, быть впору; быть верным"
+            },
+            {
+              "ko": "영수증",
+              "translation_ru": "чек, квитанция"
+            },
+            {
+              "ko": "확인",
+              "translation_ru": "проверка, подтверждение"
+            },
+            {
+              "ko": "하늘색",
+              "translation_ru": "голубой цвет"
+            },
+            {
+              "ko": "대신",
+              "translation_ru": "вместо, взамен"
+            },
+            {
+              "ko": "흰색",
+              "translation_ru": "белый цвет"
+            },
+            {
+              "ko": "설탕",
+              "translation_ru": "сахар"
+            },
+            {
+              "ko": "흔들다",
+              "translation_ru": "встряхивать; махать"
+            },
+            {
+              "ko": "화",
+              "translation_ru": "гнев, злость (화가 나다 — рассердиться)"
+            },
+            {
+              "ko": "새벽",
+              "translation_ru": "рассвет, предрассветное время"
+            },
+            {
+              "ko": "클래식",
+              "translation_ru": "классическая музыка"
+            },
+            {
+              "ko": "가요",
+              "translation_ru": "корейская эстрадная песня"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "교환",
+                "translation_ru": "обмен"
+              },
+              {
+                "ko": "환불하다",
+                "translation_ru": "возвращать деньги"
+              },
+              {
+                "ko": "반품",
+                "translation_ru": "возврат"
+              },
+              {
+                "ko": "신발 가게",
+                "translation_ru": "магазин обуви"
+              },
+              {
+                "ko": "색깔",
+                "translation_ru": "цвет"
+              },
+              {
+                "ko": "가볍다",
+                "translation_ru": "лёгкий"
+              },
+              {
+                "ko": "무겁다",
+                "translation_ru": "тяжёлый"
+              },
+              {
+                "ko": "튼튼하다",
+                "translation_ru": "прочный"
+              },
+              {
+                "ko": "불편하다",
+                "translation_ru": "неудобный"
+              },
+              {
+                "ko": "오래되다",
+                "translation_ru": "старый, давний"
+              },
+              {
+                "ko": "노트북",
+                "translation_ru": "ноутбук"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-exchange-dialogue",
           "toc_section": "준비하기 2",
@@ -73,146 +184,6 @@
             {
               "speaker": "점원",
               "text": "잠시만 기다려 주세요."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "교환",
-              "translation_ru": "форма от 교환하다 (обменивать)"
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi2",
-          "toc_section": "준비하기 2",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-exchange-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "사이즈",
-              "translation_ru": "размер",
-              "group": "환불"
-            },
-            {
-              "ko": "맞다",
-              "translation_ru": "подходить, быть впору; быть верным",
-              "group": "환불"
-            },
-            {
-              "ko": "영수증",
-              "translation_ru": "чек, квитанция",
-              "group": "환불"
-            },
-            {
-              "ko": "확인",
-              "translation_ru": "проверка, подтверждение",
-              "group": "환불"
-            },
-            {
-              "ko": "하늘색",
-              "translation_ru": "голубой цвет",
-              "group": "환불"
-            },
-            {
-              "ko": "대신",
-              "translation_ru": "вместо, взамен",
-              "group": "묘사"
-            },
-            {
-              "ko": "흰색",
-              "translation_ru": "белый цвет",
-              "group": "환불"
-            },
-            {
-              "ko": "설탕",
-              "translation_ru": "сахар",
-              "group": "묘사"
-            },
-            {
-              "ko": "흔들다",
-              "translation_ru": "встряхивать; махать",
-              "group": "묘사"
-            },
-            {
-              "ko": "화",
-              "translation_ru": "гнев, злость (화가 나다 — рассердиться)",
-              "group": "묘사"
-            },
-            {
-              "ko": "새벽",
-              "translation_ru": "рассвет, предрассветное время",
-              "group": "묘사"
-            },
-            {
-              "ko": "클래식",
-              "translation_ru": "классическая музыка",
-              "group": "묘사"
-            },
-            {
-              "ko": "가요",
-              "translation_ru": "корейская эстрадная песня",
-              "group": "묘사"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "환불",
-              "title_ru": "Обмен и возврат",
-              "items": [
-                {
-                  "ko": "교환",
-                  "translation_ru": "обмен"
-                },
-                {
-                  "ko": "환불하다",
-                  "translation_ru": "возвращать деньги"
-                },
-                {
-                  "ko": "반품",
-                  "translation_ru": "возврат"
-                },
-                {
-                  "ko": "신발 가게",
-                  "translation_ru": "магазин обуви"
-                },
-                {
-                  "ko": "색깔",
-                  "translation_ru": "цвет"
-                }
-              ]
-            },
-            {
-              "title": "묘사",
-              "title_ru": "Описание вещей",
-              "items": [
-                {
-                  "ko": "가볍다",
-                  "translation_ru": "лёгкий"
-                },
-                {
-                  "ko": "무겁다",
-                  "translation_ru": "тяжёлый"
-                },
-                {
-                  "ko": "튼튼하다",
-                  "translation_ru": "прочный"
-                },
-                {
-                  "ko": "불편하다",
-                  "translation_ru": "неудобный"
-                },
-                {
-                  "ko": "오래되다",
-                  "translation_ru": "старый, давний"
-                },
-                {
-                  "ko": "노트북",
-                  "translation_ru": "ноутбук"
-                }
-              ]
             }
           ]
         }

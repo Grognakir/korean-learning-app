@@ -9,6 +9,37 @@
       "source_photo": "IMG_1054",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-junbihagi1",
+          "toc_section": "준비하기 1",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-plan-dialogue",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "외우다",
+              "translation_ru": "запоминать наизусть"
+            },
+            {
+              "ko": "꼭",
+              "translation_ru": "обязательно, непременно"
+            },
+            {
+              "ko": "입학하다",
+              "translation_ru": "поступать (в школу/университет)"
+            },
+            {
+              "ko": "합격하다",
+              "translation_ru": "сдать (экзамен), пройти отбор"
+            },
+            {
+              "ko": "놀다",
+              "translation_ru": "играть, гулять, проводить время (отдыхая)"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-plan-dialogue",
           "toc_section": "준비하기 1",
@@ -65,37 +96,6 @@
               "emphasized": [
                 "살 거예요"
               ]
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-junbihagi1",
-          "toc_section": "준비하기 1",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-plan-dialogue",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "외우다",
-              "translation_ru": "запоминать наизусть"
-            },
-            {
-              "ko": "꼭",
-              "translation_ru": "обязательно, непременно"
-            },
-            {
-              "ko": "입학하다",
-              "translation_ru": "поступать (в школу/университет)"
-            },
-            {
-              "ko": "합격하다",
-              "translation_ru": "сдать (экзамен), пройти отбор"
-            },
-            {
-              "ko": "놀다",
-              "translation_ru": "играть, гулять, проводить время (отдыхая)"
             }
           ]
         }

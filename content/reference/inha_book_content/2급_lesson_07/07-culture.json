@@ -9,6 +9,81 @@
       "source_photo": "IMG_0767",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-days",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "성",
+              "translation_ru": "святой (перед именем)"
+            },
+            {
+              "ko": "기념하다",
+              "translation_ru": "отмечать (событие), чтить память"
+            },
+            {
+              "ko": "초콜릿",
+              "translation_ru": "шоколад"
+            },
+            {
+              "ko": "사탕",
+              "translation_ru": "конфета, леденец"
+            },
+            {
+              "ko": "닭고기",
+              "translation_ru": "курица (мясо)"
+            },
+            {
+              "ko": "오이",
+              "translation_ru": "огурец"
+            },
+            {
+              "ko": "막대",
+              "translation_ru": "палочка, брусок"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "밸런타인데이",
+                "translation_ru": "День Валентина"
+              },
+              {
+                "ko": "화이트데이",
+                "translation_ru": "Белый день"
+              },
+              {
+                "ko": "삼겹살데이",
+                "translation_ru": "День самгепсаля"
+              },
+              {
+                "ko": "빼빼로데이",
+                "translation_ru": "День Пепперо"
+              },
+              {
+                "ko": "돼지고기",
+                "translation_ru": "свинина"
+              },
+              {
+                "ko": "과자",
+                "translation_ru": "печенье, снэки"
+              },
+              {
+                "ko": "모양",
+                "translation_ru": "форма"
+              },
+              {
+                "ko": "숫자",
+                "translation_ru": "цифра"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-days",
           "toc_section": "문화 이해하기",
@@ -35,92 +110,6 @@
             {
               "text": "2) 여러분 나라에도 재미있는 ‘데이’가 있습니까? 친구들에게 소개해 보십시오.",
               "translation_ru": "А в вашей стране есть весёлые «дни»? Расскажите друзьям."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-days",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "성",
-              "translation_ru": "святой (перед именем)",
-              "group": "데이"
-            },
-            {
-              "ko": "기념하다",
-              "translation_ru": "отмечать (событие), чтить память",
-              "group": "데이"
-            },
-            {
-              "ko": "초콜릿",
-              "translation_ru": "шоколад",
-              "group": "데이"
-            },
-            {
-              "ko": "사탕",
-              "translation_ru": "конфета, леденец",
-              "group": "데이"
-            },
-            {
-              "ko": "닭고기",
-              "translation_ru": "курица (мясо)",
-              "group": "데이"
-            },
-            {
-              "ko": "오이",
-              "translation_ru": "огурец",
-              "group": "데이"
-            },
-            {
-              "ko": "막대",
-              "translation_ru": "палочка, брусок",
-              "group": "데이"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "데이",
-              "title_ru": "Особые дни",
-              "items": [
-                {
-                  "ko": "밸런타인데이",
-                  "translation_ru": "День Валентина"
-                },
-                {
-                  "ko": "화이트데이",
-                  "translation_ru": "Белый день"
-                },
-                {
-                  "ko": "삼겹살데이",
-                  "translation_ru": "День самгепсаля"
-                },
-                {
-                  "ko": "빼빼로데이",
-                  "translation_ru": "День Пепперо"
-                },
-                {
-                  "ko": "돼지고기",
-                  "translation_ru": "свинина"
-                },
-                {
-                  "ko": "과자",
-                  "translation_ru": "печенье, снэки"
-                },
-                {
-                  "ko": "모양",
-                  "translation_ru": "форма"
-                },
-                {
-                  "ko": "숫자",
-                  "translation_ru": "цифра"
-                }
-              ]
             }
           ]
         },

@@ -9,54 +9,6 @@
       "source_photo": "IMG_1113",
       "blocks": [
         {
-          "type": "text",
-          "id": "text-culture-phone-etiquette",
-          "toc_section": "문화 이해하기",
-          "title": "전화 예절",
-          "title_ru": "Телефонный этикет",
-          "illustration": {
-            "storage_path": "lesson_11/illustration_5_phone_etiquette.png",
-            "original_kind": "illustration"
-          },
-          "text_kind": "passage",
-          "section": "문화이해하기",
-          "exercise_ref": null,
-          "audio_id": null,
-          "intro_prompt": "무엇을 하고 있습니까? 이야기해 보십시오. 다음을 읽고 물음에 답하십시오.",
-          "intro_prompt_ru": "Что они делают? Расскажите. Прочитайте и ответьте на вопросы.",
-          "lines": [
-            {
-              "text": "한국 사람들은 전화를 할 때 예의를 지킵니다.\n\n한국 사람들은 윗사람에게 전화를 걸면 먼저\n“안녕하세요. 저는 최수지입니다.”\n인사를 하고 이름을 말합니다.\n\n그리고 통화가 끝나면\n“안녕히 계세요.”\n인사를 합니다. 그리고 기다립니다.\n윗사람이 먼저 전화를 끊으면 아랫사람이 전화를 끊습니다."
-            }
-          ],
-          "vocab": [
-            {
-              "ko": "지킵",
-              "translation_ru": "форма от 지키다 (соблюдать)"
-            }
-          ]
-        },
-        {
-          "type": "comprehension_exercise",
-          "id": "reading-culture-phone-etiquette",
-          "toc_section": "문화 이해하기",
-          "exercise_kind": "reading",
-          "title": "전화 예절",
-          "title_ru": "Телефонный этикет",
-          "questions": [
-            {
-              "kind": "open",
-              "prompt": "한국 사람들은 어떻게 전화합니까?",
-              "prompt_ru": "Как корейцы разговаривают по телефону?"
-            },
-            {
-              "kind": "open",
-              "prompt": "여러분 나라 사람들은 윗사람에게 어떻게 전화합니까? 이야기해 보십시오.",
-              "prompt_ru": "Как люди в вашей стране звонят старшим? Расскажите."
-            }
-          ]
-        },
-        {
           "type": "vocab_list",
           "id": "vocab-munhwa-ihaehagi",
           "toc_section": "문화 이해하기",
@@ -88,6 +40,56 @@
             {
               "ko": "아랫사람",
               "translation_ru": "человек более низкого статуса/возраста"
+            }
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "지킵",
+                "translation_ru": "форма от 지키다 (соблюдать)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "id": "text-culture-phone-etiquette",
+          "toc_section": "문화 이해하기",
+          "title": "전화 예절",
+          "title_ru": "Телефонный этикет",
+          "illustration": {
+            "storage_path": "lesson_11/illustration_5_phone_etiquette.png",
+            "original_kind": "illustration"
+          },
+          "text_kind": "passage",
+          "section": "문화이해하기",
+          "exercise_ref": null,
+          "audio_id": null,
+          "intro_prompt": "무엇을 하고 있습니까? 이야기해 보십시오. 다음을 읽고 물음에 답하십시오.",
+          "intro_prompt_ru": "Что они делают? Расскажите. Прочитайте и ответьте на вопросы.",
+          "lines": [
+            {
+              "text": "한국 사람들은 전화를 할 때 예의를 지킵니다.\n\n한국 사람들은 윗사람에게 전화를 걸면 먼저\n“안녕하세요. 저는 최수지입니다.”\n인사를 하고 이름을 말합니다.\n\n그리고 통화가 끝나면\n“안녕히 계세요.”\n인사를 합니다. 그리고 기다립니다.\n윗사람이 먼저 전화를 끊으면 아랫사람이 전화를 끊습니다."
+            }
+          ]
+        },
+        {
+          "type": "comprehension_exercise",
+          "id": "reading-culture-phone-etiquette",
+          "toc_section": "문화 이해하기",
+          "exercise_kind": "reading",
+          "title": "전화 예절",
+          "title_ru": "Телефонный этикет",
+          "questions": [
+            {
+              "kind": "open",
+              "prompt": "한국 사람들은 어떻게 전화합니까?",
+              "prompt_ru": "Как корейцы разговаривают по телефону?"
+            },
+            {
+              "kind": "open",
+              "prompt": "여러분 나라 사람들은 윗사람에게 어떻게 전화합니까? 이야기해 보십시오.",
+              "prompt_ru": "Как люди в вашей стране звонят старшим? Расскажите."
             }
           ]
         },

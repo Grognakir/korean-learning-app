@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { GrammarExerciseBlock } from "@/features/learning/types";
-import { JamoMarkedLine } from "./JamoMarkedLine";
+import { renderJamoMarkedLine } from "./JamoMarkedLine";
 import { LabelInfo } from "./LabelInfo";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
@@ -301,15 +301,14 @@ export function GrammarExercise({
           return (
             <p key={i} className="kr">
               {mark ? (
-                <JamoMarkedLine
-                  line={line}
-                  text={mark.text}
-                  jamo={mark.jamo}
-                  vocabItems={vocabItems}
-                  keyPrefix={`ex-${i}-`}
-                  seen={seenVocab}
-                  emphasized={exampleEmphasis?.[i]}
-                />
+                renderJamoMarkedLine({
+                  line,
+                  marks: [{ text: mark.text, jamo: mark.jamo }],
+                  vocabItems,
+                  keyPrefix: `ex-${i}-`,
+                  seen: seenVocab,
+                  emphasized: exampleEmphasis?.[i],
+                })
               ) : (
                 highlightDialogueSpeakers(
                   line,

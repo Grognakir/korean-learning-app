@@ -9,6 +9,29 @@
       "source_photo": "IMG_1003",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-daily-life",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "아주",
+              "translation_ru": "очень"
+            },
+            {
+              "ko": "스포츠센터",
+              "translation_ru": "спортивный центр"
+            },
+            {
+              "ko": "태권도",
+              "translation_ru": "тхэквондо"
+            }
+          ]
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-daily-life",
           "toc_section": "듣고 말하기",
@@ -83,29 +106,6 @@
           ],
           "followup": "반 친구들에게 여러분의 일상생활을 이야기해 보십시오.",
           "followup_ru": "Расскажите одноклассникам о своей повседневной жизни."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-daily-life",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "아주",
-              "translation_ru": "очень"
-            },
-            {
-              "ko": "스포츠센터",
-              "translation_ru": "спортивный центр"
-            },
-            {
-              "ko": "태권도",
-              "translation_ru": "тхэквондо"
-            }
-          ]
         }
       ]
     }

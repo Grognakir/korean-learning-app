@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
-ART = ROOT / 'content/reference/art-sources/clothing-game'
+ART = ROOT / 'content/reference/art-sources/solomon-os/clothing-game'
 OUT = ROOT / 'public/images/clothing-game/prod'
 RESAMPLE = Image.Resampling.LANCZOS
 

@@ -9,6 +9,89 @@
       "source_photo": "IMG_0778",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-club",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "사물놀이",
+              "translation_ru": "самульнори (традиционная музыка на ударных)"
+            },
+            {
+              "ko": "회장",
+              "translation_ru": "председатель (клуба)"
+            },
+            {
+              "ko": "악기",
+              "translation_ru": "музыкальный инструмент"
+            },
+            {
+              "ko": "북",
+              "translation_ru": "барабан (пук)"
+            },
+            {
+              "ko": "장구",
+              "translation_ru": "чангу (барабан-«песочные часы»)"
+            },
+            {
+              "ko": "징",
+              "translation_ru": "чин (большой гонг)"
+            },
+            {
+              "ko": "꽹과리",
+              "translation_ru": "кввэнгвари (малый гонг)"
+            },
+            {
+              "ko": "연주하다",
+              "translation_ru": "исполнять (на инструменте)"
+            },
+            {
+              "ko": "참가하다",
+              "translation_ru": "участвовать"
+            },
+            {
+              "ko": "끝",
+              "translation_ru": "конец"
+            },
+            {
+              "ko": "방법",
+              "translation_ru": "способ, метод"
+            },
+            {
+              "ko": "신청서",
+              "translation_ru": "заявление, анкета"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "전통 악기",
+                "translation_ru": "традиционные инструменты"
+              },
+              {
+                "ko": "체험하다",
+                "translation_ru": "испытывать на себе"
+              },
+              {
+                "ko": "끝으로",
+                "translation_ru": "в заключение"
+              },
+              {
+                "ko": "참석하다",
+                "translation_ru": "присутствовать"
+              },
+              {
+                "ko": "축제",
+                "translation_ru": "фестиваль"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-club-broadcast",
           "toc_section": "듣고 말하기",
@@ -91,105 +174,6 @@
           ],
           "followup": "여러분은 어떤 동아리를 알고 있습니까? 이야기해 보십시오.",
           "followup_ru": "О каких клубах знаете вы? Расскажите."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-club",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "사물놀이",
-              "translation_ru": "самульнори (традиционная музыка на ударных)",
-              "group": "연주"
-            },
-            {
-              "ko": "회장",
-              "translation_ru": "председатель (клуба)",
-              "group": "연주"
-            },
-            {
-              "ko": "악기",
-              "translation_ru": "музыкальный инструмент",
-              "group": "연주"
-            },
-            {
-              "ko": "북",
-              "translation_ru": "барабан (пук)",
-              "group": "연주"
-            },
-            {
-              "ko": "장구",
-              "translation_ru": "чангу (барабан-«песочные часы»)",
-              "group": "연주"
-            },
-            {
-              "ko": "징",
-              "translation_ru": "чин (большой гонг)",
-              "group": "연주"
-            },
-            {
-              "ko": "꽹과리",
-              "translation_ru": "кввэнгвари (малый гонг)",
-              "group": "연주"
-            },
-            {
-              "ko": "연주하다",
-              "translation_ru": "исполнять (на инструменте)",
-              "group": "연주"
-            },
-            {
-              "ko": "참가하다",
-              "translation_ru": "участвовать",
-              "group": "연주"
-            },
-            {
-              "ko": "끝",
-              "translation_ru": "конец",
-              "group": "연주"
-            },
-            {
-              "ko": "방법",
-              "translation_ru": "способ, метод",
-              "group": "연주"
-            },
-            {
-              "ko": "신청서",
-              "translation_ru": "заявление, анкета",
-              "group": "연주"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "연주",
-              "title_ru": "Игра на инструментах",
-              "items": [
-                {
-                  "ko": "전통 악기",
-                  "translation_ru": "традиционные инструменты"
-                },
-                {
-                  "ko": "체험하다",
-                  "translation_ru": "испытывать на себе"
-                },
-                {
-                  "ko": "끝으로",
-                  "translation_ru": "в заключение"
-                },
-                {
-                  "ko": "참석하다",
-                  "translation_ru": "присутствовать"
-                },
-                {
-                  "ko": "축제",
-                  "translation_ru": "фестиваль"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

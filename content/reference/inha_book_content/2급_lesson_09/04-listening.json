@@ -9,6 +9,77 @@
       "source_photo": "IMG_0926",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-listening-pharmacy",
+          "toc_section": "듣고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": null,
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "종합",
+              "translation_ru": "комплексный, сводный"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "알약",
+                "translation_ru": "таблетка"
+              },
+              {
+                "ko": "가루약",
+                "translation_ru": "порошок"
+              },
+              {
+                "ko": "물약",
+                "translation_ru": "жидкое лекарство"
+              },
+              {
+                "ko": "파스",
+                "translation_ru": "пластырь-компресс"
+              },
+              {
+                "ko": "반창고",
+                "translation_ru": "пластырь"
+              },
+              {
+                "ko": "붕대",
+                "translation_ru": "бинт"
+              },
+              {
+                "ko": "연고",
+                "translation_ru": "мазь"
+              },
+              {
+                "ko": "열",
+                "translation_ru": "жар"
+              },
+              {
+                "ko": "기침",
+                "translation_ru": "кашель"
+              },
+              {
+                "ko": "콧물",
+                "translation_ru": "насморк"
+              },
+              {
+                "ko": "두통",
+                "translation_ru": "головная боль"
+              },
+              {
+                "ko": "복통",
+                "translation_ru": "боль в животе"
+              },
+              {
+                "ko": "설사",
+                "translation_ru": "диарея"
+              }
+            ]
+          }
+        },
+        {
           "type": "comprehension_exercise",
           "id": "listening-pharmacy",
           "toc_section": "듣고 말하기",
@@ -107,88 +178,6 @@
           ],
           "followup": "여러분은 약국에서 약을 산 적이 있습니까? 친구들과 이야기해 보십시오.",
           "followup_ru": "Вам приходилось покупать лекарства в аптеке? Расскажите друзьям."
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-listening-pharmacy",
-          "toc_section": "듣고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": null,
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "종합",
-              "translation_ru": "комплексный, сводный",
-              "group": "약"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "약",
-              "title_ru": "Лекарства",
-              "items": [
-                {
-                  "ko": "알약",
-                  "translation_ru": "таблетка"
-                },
-                {
-                  "ko": "가루약",
-                  "translation_ru": "порошок"
-                },
-                {
-                  "ko": "물약",
-                  "translation_ru": "жидкое лекарство"
-                },
-                {
-                  "ko": "파스",
-                  "translation_ru": "пластырь-компресс"
-                },
-                {
-                  "ko": "반창고",
-                  "translation_ru": "пластырь"
-                },
-                {
-                  "ko": "붕대",
-                  "translation_ru": "бинт"
-                },
-                {
-                  "ko": "연고",
-                  "translation_ru": "мазь"
-                }
-              ]
-            },
-            {
-              "title": "증상",
-              "title_ru": "Что болит",
-              "items": [
-                {
-                  "ko": "열",
-                  "translation_ru": "жар"
-                },
-                {
-                  "ko": "기침",
-                  "translation_ru": "кашель"
-                },
-                {
-                  "ko": "콧물",
-                  "translation_ru": "насморк"
-                },
-                {
-                  "ko": "두통",
-                  "translation_ru": "головная боль"
-                },
-                {
-                  "ko": "복통",
-                  "translation_ru": "боль в животе"
-                },
-                {
-                  "ko": "설사",
-                  "translation_ru": "диарея"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

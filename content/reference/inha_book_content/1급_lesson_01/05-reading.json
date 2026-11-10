@@ -9,6 +9,33 @@
       "source_photo": "IMG_0959",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-reading-friends",
+          "toc_section": "읽고 말하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-reading-friends",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "친구",
+              "translation_ru": "друг, подруга"
+            },
+            {
+              "ko": "모두",
+              "translation_ru": "все, всё"
+            },
+            {
+              "ko": "우리",
+              "translation_ru": "мы; наш"
+            },
+            {
+              "ko": "반",
+              "translation_ru": "класс, группа"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "text-reading-friends",
           "toc_section": "읽고 말하기",
@@ -70,33 +97,6 @@
               "kind": "open",
               "prompt": "여러분의 친구를 소개해 보십시오.",
               "prompt_ru": "Представьте своих друзей."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-reading-friends",
-          "toc_section": "읽고 말하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-reading-friends",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "친구",
-              "translation_ru": "друг, подруга"
-            },
-            {
-              "ko": "모두",
-              "translation_ru": "все, всё"
-            },
-            {
-              "ko": "우리",
-              "translation_ru": "мы; наш"
-            },
-            {
-              "ko": "반",
-              "translation_ru": "класс, группа"
             }
           ]
         }

@@ -9,6 +9,105 @@
       "source_photo": "IMG_0781",
       "blocks": [
         {
+          "type": "vocab_list",
+          "id": "vocab-munhwa-ihaehagi",
+          "toc_section": "문화 이해하기",
+          "title": "단어",
+          "title_ru": "Слова",
+          "related_text_ref": "text-culture-leisure-life",
+          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
+          "items": [
+            {
+              "ko": "늘다",
+              "translation_ru": "увеличиваться, расти"
+            },
+            {
+              "ko": "직장인",
+              "translation_ru": "работающий человек, служащий"
+            },
+            {
+              "ko": "즐기다",
+              "translation_ru": "наслаждаться, увлекаться"
+            }
+          ],
+          "extra_words": {
+            "topic_vocab": [
+              {
+                "ko": "독서",
+                "translation_ru": "чтение"
+              },
+              {
+                "ko": "음악 감상",
+                "translation_ru": "музыка"
+              },
+              {
+                "ko": "컴퓨터 게임",
+                "translation_ru": "компьютерные игры"
+              },
+              {
+                "ko": "헬스",
+                "translation_ru": "фитнес"
+              },
+              {
+                "ko": "운동",
+                "translation_ru": "спорт"
+              },
+              {
+                "ko": "등산",
+                "translation_ru": "альпинизм"
+              },
+              {
+                "ko": "주말",
+                "translation_ru": "выходные"
+              },
+              {
+                "ko": "산책",
+                "translation_ru": "прогулка"
+              },
+              {
+                "ko": "그래프",
+                "translation_ru": "график"
+              },
+              {
+                "ko": "응답",
+                "translation_ru": "ответ"
+              },
+              {
+                "ko": "공을 차다",
+                "translation_ru": "бить по мячу"
+              },
+              {
+                "ko": "축구",
+                "translation_ru": "футбол"
+              },
+              {
+                "ko": "야구",
+                "translation_ru": "бейсбол"
+              },
+              {
+                "ko": "농구",
+                "translation_ru": "баскетбол"
+              },
+              {
+                "ko": "배구",
+                "translation_ru": "волейбол"
+              },
+              {
+                "ko": "수영",
+                "translation_ru": "плавание"
+              },
+              {
+                "ko": "캠핑",
+                "translation_ru": "кемпинг"
+              },
+              {
+                "ko": "낚시",
+                "translation_ru": "рыбалка"
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "id": "text-culture-leisure-graph",
           "toc_section": "문화 이해하기",
@@ -54,118 +153,6 @@
             {
               "text": "2) 여러분 나라 사람들이 가장 좋아하는 여가 활동은 무엇입니까? 이야기해 보십시오.",
               "translation_ru": "Какой вид досуга больше всего любят в вашей стране? Расскажите."
-            }
-          ]
-        },
-        {
-          "type": "vocab_list",
-          "id": "vocab-munhwa-ihaehagi",
-          "toc_section": "문화 이해하기",
-          "title": "단어",
-          "title_ru": "Слова",
-          "related_text_ref": "text-culture-leisure-life",
-          "source_note": "список слов на полях страниц (корейские слова напечатаны в учебнике); русские переводы добавлены при переносе, в книге их нет",
-          "items": [
-            {
-              "ko": "늘다",
-              "translation_ru": "увеличиваться, расти",
-              "group": "여가"
-            },
-            {
-              "ko": "직장인",
-              "translation_ru": "работающий человек, служащий",
-              "group": "여가"
-            },
-            {
-              "ko": "즐기다",
-              "translation_ru": "наслаждаться, увлекаться",
-              "group": "여가"
-            }
-          ],
-          "extra_groups": [
-            {
-              "title": "여가",
-              "title_ru": "Свободное время",
-              "items": [
-                {
-                  "ko": "독서",
-                  "translation_ru": "чтение"
-                },
-                {
-                  "ko": "음악 감상",
-                  "translation_ru": "музыка"
-                },
-                {
-                  "ko": "컴퓨터 게임",
-                  "translation_ru": "компьютерные игры"
-                },
-                {
-                  "ko": "헬스",
-                  "translation_ru": "фитнес"
-                },
-                {
-                  "ko": "운동",
-                  "translation_ru": "спорт"
-                },
-                {
-                  "ko": "등산",
-                  "translation_ru": "альпинизм"
-                },
-                {
-                  "ko": "주말",
-                  "translation_ru": "выходные"
-                },
-                {
-                  "ko": "산책",
-                  "translation_ru": "прогулка"
-                },
-                {
-                  "ko": "그래프",
-                  "translation_ru": "график"
-                },
-                {
-                  "ko": "응답",
-                  "translation_ru": "ответ"
-                }
-              ]
-            },
-            {
-              "title": "스포츠",
-              "title_ru": "Спорт и хобби",
-              "items": [
-                {
-                  "ko": "공을 차다",
-                  "translation_ru": "бить по мячу"
-                },
-                {
-                  "ko": "축구",
-                  "translation_ru": "футбол"
-                },
-                {
-                  "ko": "야구",
-                  "translation_ru": "бейсбол"
-                },
-                {
-                  "ko": "농구",
-                  "translation_ru": "баскетбол"
-                },
-                {
-                  "ko": "배구",
-                  "translation_ru": "волейбол"
-                },
-                {
-                  "ko": "수영",
-                  "translation_ru": "плавание"
-                },
-                {
-                  "ko": "캠핑",
-                  "translation_ru": "кемпинг"
-                },
-                {
-                  "ko": "낚시",
-                  "translation_ru": "рыбалка"
-                }
-              ]
             }
           ]
         },
