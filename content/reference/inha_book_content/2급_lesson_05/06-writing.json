@@ -20,52 +20,8 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "말하기 대회",
-                "translation_ru": "конкурс по говорению"
-              },
-              {
-                "ko": "대강당",
-                "translation_ru": "большой актовый зал"
-              },
-              {
-                "ko": "본관",
-                "translation_ru": "главный корпус"
-              },
-              {
-                "ko": "준비되다",
-                "translation_ru": "быть подготовленным"
-              },
-              {
-                "ko": "개최하다",
-                "translation_ru": "проводить (мероприятие)"
-              },
-              {
-                "ko": "날짜",
-                "translation_ru": "дата"
-              },
-              {
-                "ko": "장소",
-                "translation_ru": "место"
-              },
-              {
                 "ko": "초대하다",
                 "translation_ru": "приглашать"
-              },
-              {
-                "ko": "참석하다",
-                "translation_ru": "присутствовать"
-              },
-              {
-                "ko": "바쁘다",
-                "translation_ru": "занятый"
-              },
-              {
-                "ko": "빛내다",
-                "translation_ru": "украшать собой"
-              },
-              {
-                "ko": "감사드리다",
-                "translation_ru": "выражать благодарность"
               }
             ]
           }

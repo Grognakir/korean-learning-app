@@ -36,10 +36,6 @@
                 "translation_ru": "вождение"
               },
               {
-                "ko": "연습하다",
-                "translation_ru": "тренироваться"
-              },
-              {
                 "ko": "목소리",
                 "translation_ru": "голос"
               },
@@ -50,42 +46,6 @@
               {
                 "ko": "이루다",
                 "translation_ru": "осуществлять (мечту)"
-              },
-              {
-                "ko": "영화제",
-                "translation_ru": "кинофестиваль"
-              },
-              {
-                "ko": "바닷가",
-                "translation_ru": "морской берег"
-              },
-              {
-                "ko": "인도",
-                "translation_ru": "Индия"
-              },
-              {
-                "ko": "극장",
-                "translation_ru": "кинотеатр"
-              },
-              {
-                "ko": "영화감독",
-                "translation_ru": "кинорежиссёр"
-              },
-              {
-                "ko": "질문",
-                "translation_ru": "вопрос"
-              },
-              {
-                "ko": "아쉽다",
-                "translation_ru": "жаль"
-              },
-              {
-                "ko": "이메일",
-                "translation_ru": "электронная почта"
-              },
-              {
-                "ko": "보내다",
-                "translation_ru": "отправлять"
               }
             ]
           }

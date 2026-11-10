@@ -20,10 +20,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "자기소개서",
-                "translation_ru": "самопредставление"
-              },
-              {
                 "ko": "개요",
                 "translation_ru": "план, краткое содержание"
               },
@@ -38,22 +34,6 @@
               {
                 "ko": "끝",
                 "translation_ru": "конец"
-              },
-              {
-                "ko": "소개하다",
-                "translation_ru": "представлять"
-              },
-              {
-                "ko": "고향",
-                "translation_ru": "родина, родные места"
-              },
-              {
-                "ko": "돌아가다",
-                "translation_ru": "возвращаться"
-              },
-              {
-                "ko": "계획",
-                "translation_ru": "план"
               }
             ]
           }

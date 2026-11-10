@@ -56,32 +56,8 @@
                 "translation_ru": "кастрюля"
               },
               {
-                "ko": "순서",
-                "translation_ru": "порядок"
-              },
-              {
-                "ko": "발표",
-                "translation_ru": "презентация"
-              },
-              {
-                "ko": "이유",
-                "translation_ru": "причина"
-              },
-              {
-                "ko": "샤슬릭",
-                "translation_ru": "шашлык"
-              },
-              {
-                "ko": "모닥불",
-                "translation_ru": "костёр"
-              },
-              {
                 "ko": "재료",
                 "translation_ru": "ингредиенты"
-              },
-              {
-                "ko": "맛",
-                "translation_ru": "вкус"
               }
             ]
           }

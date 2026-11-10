@@ -83,30 +83,6 @@
               {
                 "ko": "대강당",
                 "translation_ru": "большой актовый зал"
-              },
-              {
-                "ko": "소강당",
-                "translation_ru": "малый актовый зал"
-              },
-              {
-                "ko": "입학생",
-                "translation_ru": "поступивший"
-              },
-              {
-                "ko": "본관",
-                "translation_ru": "главный корпус"
-              },
-              {
-                "ko": "축제",
-                "translation_ru": "фестиваль"
-              },
-              {
-                "ko": "공연",
-                "translation_ru": "выступление"
-              },
-              {
-                "ko": "올해",
-                "translation_ru": "в этом году"
               }
             ],
             "text_vocab": [

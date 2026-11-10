@@ -93,18 +93,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "생머리",
-                "translation_ru": "прямые волосы (без завивки)"
-              },
-              {
-                "ko": "파마머리",
-                "translation_ru": "завитые волосы"
-              },
-              {
-                "ko": "파마",
-                "translation_ru": "перманент, химзавивка"
-              },
-              {
                 "ko": "자르다",
                 "translation_ru": "стричь, резать"
               },
@@ -113,52 +101,16 @@
                 "translation_ru": "отращивать, растить"
               },
               {
-                "ko": "달걀형 얼굴",
-                "translation_ru": "овальное лицо"
-              },
-              {
-                "ko": "동그랗다",
-                "translation_ru": "круглый"
-              },
-              {
                 "ko": "눈",
                 "translation_ru": "глаз"
-              },
-              {
-                "ko": "눈썹",
-                "translation_ru": "брови"
-              },
-              {
-                "ko": "짙다",
-                "translation_ru": "густой, тёмный, насыщенный"
-              },
-              {
-                "ko": "코",
-                "translation_ru": "нос"
-              },
-              {
-                "ko": "높다",
-                "translation_ru": "высокий"
               },
               {
                 "ko": "귀엽다",
                 "translation_ru": "милый, симпатичный"
               },
               {
-                "ko": "강하다",
-                "translation_ru": "сильный, резкий, жёсткий"
-              },
-              {
                 "ko": "마르다",
                 "translation_ru": "худой"
-              },
-              {
-                "ko": "서양인",
-                "translation_ru": "европеец, человек с Запада"
-              },
-              {
-                "ko": "비슷하다",
-                "translation_ru": "быть похожим"
               },
               {
                 "ko": "생기다",

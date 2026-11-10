@@ -37,64 +37,16 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "방송하다",
-                "translation_ru": "транслировать"
-              },
-              {
-                "ko": "유행하다",
-                "translation_ru": "быть в моде"
-              },
-              {
-                "ko": "인기",
-                "translation_ru": "популярность"
-              },
-              {
-                "ko": "코미디",
-                "translation_ru": "комедия"
-              },
-              {
-                "ko": "공연",
-                "translation_ru": "представление, концерт"
-              },
-              {
-                "ko": "여행하다",
-                "translation_ru": "путешествовать"
-              },
-              {
-                "ko": "구경하다",
-                "translation_ru": "осматривать"
-              },
-              {
                 "ko": "부산",
                 "translation_ru": "Пусан"
-              },
-              {
-                "ko": "제주도",
-                "translation_ru": "остров Чеджу"
-              },
-              {
-                "ko": "경복궁",
-                "translation_ru": "дворец Кёнбоккун"
               },
               {
                 "ko": "한복",
                 "translation_ru": "ханбок"
               },
               {
-                "ko": "삼계탕",
-                "translation_ru": "самгетхан"
-              },
-              {
                 "ko": "김밥",
                 "translation_ru": "кимбап"
-              },
-              {
-                "ko": "베트남어",
-                "translation_ru": "вьетнамский язык"
-              },
-              {
-                "ko": "소설책",
-                "translation_ru": "роман"
               }
             ]
           }

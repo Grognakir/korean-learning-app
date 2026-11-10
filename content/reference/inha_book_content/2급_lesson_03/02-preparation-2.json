@@ -81,40 +81,8 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "면접",
-                "translation_ru": "собеседование"
-              },
-              {
                 "ko": "상담",
                 "translation_ru": "консультация"
-              },
-              {
-                "ko": "학기",
-                "translation_ru": "семестр"
-              },
-              {
-                "ko": "취직",
-                "translation_ru": "трудоустройство"
-              },
-              {
-                "ko": "새해",
-                "translation_ru": "Новый год"
-              },
-              {
-                "ko": "결정하다",
-                "translation_ru": "решать"
-              },
-              {
-                "ko": "결심하다",
-                "translation_ru": "решать (твёрдо)"
-              },
-              {
-                "ko": "약속하다",
-                "translation_ru": "обещать"
-              },
-              {
-                "ko": "정하다",
-                "translation_ru": "определять"
               },
               {
                 "ko": "세우다",
@@ -125,36 +93,8 @@
                 "translation_ru": "бросать (привычку)"
               },
               {
-                "ko": "쉬다",
-                "translation_ru": "отдыхать"
-              },
-              {
                 "ko": "산책하다",
                 "translation_ru": "гулять"
-              },
-              {
-                "ko": "잡지",
-                "translation_ru": "журнал"
-              },
-              {
-                "ko": "사용하다",
-                "translation_ru": "использовать"
-              },
-              {
-                "ko": "경고하다",
-                "translation_ru": "предупреждать"
-              },
-              {
-                "ko": "카카오톡",
-                "translation_ru": "KakaoTalk"
-              },
-              {
-                "ko": "이틀",
-                "translation_ru": "два дня"
-              },
-              {
-                "ko": "며칠",
-                "translation_ru": "несколько дней"
               }
             ]
           }

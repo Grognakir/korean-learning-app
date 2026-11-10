@@ -45,28 +45,8 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "취직",
-                "translation_ru": "трудоустройство"
-              },
-              {
-                "ko": "휴가",
-                "translation_ru": "отпуск"
-              },
-              {
-                "ko": "발음",
-                "translation_ru": "произношение"
-              },
-              {
                 "ko": "병원",
                 "translation_ru": "больница"
-              },
-              {
-                "ko": "연락하다",
-                "translation_ru": "связываться, выходить на связь"
-              },
-              {
-                "ko": "실망하다",
-                "translation_ru": "разочаровываться"
               }
             ]
           }

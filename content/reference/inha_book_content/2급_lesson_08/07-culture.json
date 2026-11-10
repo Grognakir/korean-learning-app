@@ -37,14 +37,6 @@
                 "translation_ru": "чтение"
               },
               {
-                "ko": "음악 감상",
-                "translation_ru": "музыка"
-              },
-              {
-                "ko": "컴퓨터 게임",
-                "translation_ru": "компьютерные игры"
-              },
-              {
                 "ko": "헬스",
                 "translation_ru": "фитнес"
               },
@@ -61,48 +53,8 @@
                 "translation_ru": "выходные"
               },
               {
-                "ko": "산책",
-                "translation_ru": "прогулка"
-              },
-              {
                 "ko": "그래프",
                 "translation_ru": "график"
-              },
-              {
-                "ko": "응답",
-                "translation_ru": "ответ"
-              },
-              {
-                "ko": "공을 차다",
-                "translation_ru": "бить по мячу"
-              },
-              {
-                "ko": "축구",
-                "translation_ru": "футбол"
-              },
-              {
-                "ko": "야구",
-                "translation_ru": "бейсбол"
-              },
-              {
-                "ko": "농구",
-                "translation_ru": "баскетбол"
-              },
-              {
-                "ko": "배구",
-                "translation_ru": "волейбол"
-              },
-              {
-                "ko": "수영",
-                "translation_ru": "плавание"
-              },
-              {
-                "ko": "캠핑",
-                "translation_ru": "кемпинг"
-              },
-              {
-                "ko": "낚시",
-                "translation_ru": "рыбалка"
               }
             ]
           }

@@ -65,10 +65,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "한의원",
-                "translation_ru": "клиника восточной медицины"
-              },
-              {
                 "ko": "약",
                 "translation_ru": "лекарство"
               },
@@ -87,18 +83,6 @@
               {
                 "ko": "감기에 걸리다",
                 "translation_ru": "простудиться"
-              },
-              {
-                "ko": "차",
-                "translation_ru": "чай"
-              },
-              {
-                "ko": "열",
-                "translation_ru": "жар"
-              },
-              {
-                "ko": "기침",
-                "translation_ru": "кашель"
               }
             ]
           }

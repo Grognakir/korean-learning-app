@@ -25,27 +25,7 @@
               "ko": "입장하다",
               "translation_ru": "входить, проходить (на мероприятие)"
             }
-          ],
-          "extra_words": {
-            "topic_vocab": [
-              {
-                "ko": "이어폰",
-                "translation_ru": "наушники (вкладыши)"
-              },
-              {
-                "ko": "휴대전화",
-                "translation_ru": "мобильный телефон"
-              },
-              {
-                "ko": "교통약자",
-                "translation_ru": "маломобильные граждане (пожилые, инвалиды, беременные)"
-              },
-              {
-                "ko": "예절",
-                "translation_ru": "этикет"
-              }
-            ]
-          }
+          ]
         },
         {
           "type": "comprehension_exercise",

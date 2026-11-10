@@ -20,80 +20,8 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "반찬",
-                "translation_ru": "закуска к рису"
-              },
-              {
-                "ko": "국",
-                "translation_ru": "суп"
-              },
-              {
-                "ko": "찌개",
-                "translation_ru": "густой суп"
-              },
-              {
-                "ko": "면",
-                "translation_ru": "лапша"
-              },
-              {
-                "ko": "한식",
-                "translation_ru": "корейская кухня"
-              },
-              {
-                "ko": "양식",
-                "translation_ru": "европейская кухня"
-              },
-              {
-                "ko": "중식",
-                "translation_ru": "китайская кухня"
-              },
-              {
-                "ko": "일식",
-                "translation_ru": "японская кухня"
-              },
-              {
-                "ko": "비빔밥",
-                "translation_ru": "бибимбап"
-              },
-              {
-                "ko": "김밥",
-                "translation_ru": "кимбап"
-              },
-              {
-                "ko": "불고기",
-                "translation_ru": "пулькоги"
-              },
-              {
-                "ko": "잡채",
-                "translation_ru": "чапчхэ"
-              },
-              {
-                "ko": "냉면",
-                "translation_ru": "холодная лапша"
-              },
-              {
                 "ko": "재료",
                 "translation_ru": "ингредиенты"
-              },
-              {
-                "ko": "썰다",
-                "translation_ru": "резать"
-              },
-              {
-                "ko": "섞다",
-                "translation_ru": "перемешивать"
-              },
-              {
-                "ko": "끓이다",
-                "translation_ru": "варить"
-              },
-              {
-                "ko": "굽다",
-                "translation_ru": "жарить"
-              },
-              {
-                "ko": "순서",
-                "translation_ru": "порядок"
               },
               {
                 "ko": "맛있다",

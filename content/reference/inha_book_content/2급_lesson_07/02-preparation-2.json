@@ -77,44 +77,8 @@
                 "translation_ru": "обмен"
               },
               {
-                "ko": "환불하다",
-                "translation_ru": "возвращать деньги"
-              },
-              {
-                "ko": "반품",
-                "translation_ru": "возврат"
-              },
-              {
-                "ko": "신발 가게",
-                "translation_ru": "магазин обуви"
-              },
-              {
                 "ko": "색깔",
                 "translation_ru": "цвет"
-              },
-              {
-                "ko": "가볍다",
-                "translation_ru": "лёгкий"
-              },
-              {
-                "ko": "무겁다",
-                "translation_ru": "тяжёлый"
-              },
-              {
-                "ko": "튼튼하다",
-                "translation_ru": "прочный"
-              },
-              {
-                "ko": "불편하다",
-                "translation_ru": "неудобный"
-              },
-              {
-                "ko": "오래되다",
-                "translation_ru": "старый, давний"
-              },
-              {
-                "ko": "노트북",
-                "translation_ru": "ноутбук"
               }
             ]
           }

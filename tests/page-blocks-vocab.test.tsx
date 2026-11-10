@@ -299,6 +299,15 @@ it("переводит слово в задании на аудирование 
   expect(container.querySelector("details")?.contains(chips[0])).toBe(true);
 });
 
+it("находит определительную форму -한 у глаголов на -하다 (상하다 → 상한)", () => {
+  expect(
+    vocabKeysInText("상한 우유를 마시다", [{ ko: "상하다", translation_ru: "портиться" }]),
+  ).toEqual(["상하다"]);
+  expect(
+    vocabKeysInText("중요한 일이 있어요", [{ ko: "중요하다", translation_ru: "быть важным" }]),
+  ).toEqual(["중요하다"]);
+});
+
 it("находит словарные формы в реальных примерах упражнений", () => {
   expect(
     vocabKeysInText("목소리가 너무 작으니까 크게 이야기하세요.", [

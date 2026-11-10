@@ -37,30 +37,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "전학",
-                "translation_ru": "перевод в другую школу"
-              },
-              {
-                "ko": "입학",
-                "translation_ru": "поступление"
-              },
-              {
-                "ko": "합격하다",
-                "translation_ru": "сдать экзамен"
-              },
-              {
-                "ko": "집중하다",
-                "translation_ru": "сосредоточиться"
-              },
-              {
-                "ko": "스트레칭",
-                "translation_ru": "растяжка"
-              },
-              {
-                "ko": "전공",
-                "translation_ru": "специальность"
-              },
-              {
                 "ko": "피곤하다",
                 "translation_ru": "уставший"
               },
@@ -79,34 +55,6 @@
               {
                 "ko": "여가 활동",
                 "translation_ru": "досуг"
-              },
-              {
-                "ko": "취미 활동",
-                "translation_ru": "хобби"
-              },
-              {
-                "ko": "독서",
-                "translation_ru": "чтение"
-              },
-              {
-                "ko": "음악 감상",
-                "translation_ru": "музыка"
-              },
-              {
-                "ko": "영화 감상",
-                "translation_ru": "фильмы"
-              },
-              {
-                "ko": "컴퓨터 게임",
-                "translation_ru": "компьютерные игры"
-              },
-              {
-                "ko": "캠핑",
-                "translation_ru": "кемпинг"
-              },
-              {
-                "ko": "낚시",
-                "translation_ru": "рыбалка"
               }
             ],
             "text_vocab": [

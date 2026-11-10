@@ -41,56 +41,20 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "여권",
-                "translation_ru": "загранпаспорт"
-              },
-              {
-                "ko": "비자",
-                "translation_ru": "виза"
-              },
-              {
-                "ko": "학생증",
-                "translation_ru": "студенческий билет"
-              },
-              {
                 "ko": "외국인 등록증",
                 "translation_ru": "карта иностранца"
-              },
-              {
-                "ko": "통장",
-                "translation_ru": "банковская книжка"
               },
               {
                 "ko": "교통 카드",
                 "translation_ru": "транспортная карта"
               },
               {
-                "ko": "할인",
-                "translation_ru": "скидка"
-              },
-              {
-                "ko": "충분하다",
-                "translation_ru": "достаточный"
-              },
-              {
-                "ko": "모자라다",
-                "translation_ru": "не хватать"
-              },
-              {
                 "ko": "적응하다",
                 "translation_ru": "привыкать, адаптироваться"
               },
               {
-                "ko": "잊어버리다",
-                "translation_ru": "забыть"
-              },
-              {
                 "ko": "묻다",
                 "translation_ru": "спрашивать"
-              },
-              {
-                "ko": "질문하다",
-                "translation_ru": "задавать вопрос"
               },
               {
                 "ko": "정류장",

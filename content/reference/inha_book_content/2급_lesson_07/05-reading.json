@@ -41,14 +41,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "구매하다",
-                "translation_ru": "покупать"
-              },
-              {
-                "ko": "후회하다",
-                "translation_ru": "сожалеть"
-              },
-              {
                 "ko": "식탁",
                 "translation_ru": "обеденный стол"
               },
@@ -67,42 +59,6 @@
               {
                 "ko": "추천하다",
                 "translation_ru": "рекомендовать"
-              },
-              {
-                "ko": "이용하다",
-                "translation_ru": "пользоваться"
-              },
-              {
-                "ko": "충동구매",
-                "translation_ru": "импульсивная покупка"
-              },
-              {
-                "ko": "신중하다",
-                "translation_ru": "осторожный"
-              },
-              {
-                "ko": "목록",
-                "translation_ru": "список"
-              },
-              {
-                "ko": "예산",
-                "translation_ru": "бюджет"
-              },
-              {
-                "ko": "지출",
-                "translation_ru": "расход"
-              },
-              {
-                "ko": "절약하다",
-                "translation_ru": "экономить"
-              },
-              {
-                "ko": "낭비하다",
-                "translation_ru": "тратить зря"
-              },
-              {
-                "ko": "쉽게",
-                "translation_ru": "легко"
               }
             ],
             "text_vocab": [

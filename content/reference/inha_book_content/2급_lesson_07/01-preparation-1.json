@@ -85,24 +85,8 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "구매하다",
-                "translation_ru": "покупать"
-              },
-              {
                 "ko": "주문하다",
                 "translation_ru": "заказывать"
-              },
-              {
-                "ko": "결제하다",
-                "translation_ru": "оплачивать"
-              },
-              {
-                "ko": "배송하다",
-                "translation_ru": "доставлять"
-              },
-              {
-                "ko": "계산하다",
-                "translation_ru": "оплачивать"
               },
               {
                 "ko": "택배",
@@ -111,86 +95,6 @@
               {
                 "ko": "택배비",
                 "translation_ru": "плата за доставку"
-              },
-              {
-                "ko": "장바구니",
-                "translation_ru": "корзина"
-              },
-              {
-                "ko": "회원 가입",
-                "translation_ru": "регистрация"
-              },
-              {
-                "ko": "쿠폰",
-                "translation_ru": "купон"
-              },
-              {
-                "ko": "비밀번호",
-                "translation_ru": "пароль"
-              },
-              {
-                "ko": "로그인",
-                "translation_ru": "вход"
-              },
-              {
-                "ko": "품절",
-                "translation_ru": "нет в наличии"
-              },
-              {
-                "ko": "선불",
-                "translation_ru": "предоплата"
-              },
-              {
-                "ko": "착불",
-                "translation_ru": "оплата при получении"
-              },
-              {
-                "ko": "후불",
-                "translation_ru": "постоплата"
-              },
-              {
-                "ko": "현금",
-                "translation_ru": "наличные"
-              },
-              {
-                "ko": "카드",
-                "translation_ru": "карта"
-              },
-              {
-                "ko": "난방비",
-                "translation_ru": "плата за отопление"
-              },
-              {
-                "ko": "세일",
-                "translation_ru": "распродажа"
-              },
-              {
-                "ko": "가격",
-                "translation_ru": "цена"
-              },
-              {
-                "ko": "작성하다",
-                "translation_ru": "писать (отзыв)"
-              },
-              {
-                "ko": "별점",
-                "translation_ru": "оценка звёздами"
-              },
-              {
-                "ko": "교환",
-                "translation_ru": "обмен"
-              },
-              {
-                "ko": "환불",
-                "translation_ru": "возврат денег"
-              },
-              {
-                "ko": "반품",
-                "translation_ru": "возврат товара"
-              },
-              {
-                "ko": "사이즈",
-                "translation_ru": "размер"
               }
             ],
             "exercise_vocab": [

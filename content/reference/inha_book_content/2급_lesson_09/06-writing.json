@@ -16,63 +16,7 @@
           "title_ru": "Слова",
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
-          "items": [],
-          "extra_words": {
-            "topic_vocab": [
-              {
-                "ko": "다치다",
-                "translation_ru": "получить травму"
-              },
-              {
-                "ko": "부러지다",
-                "translation_ru": "ломаться"
-              },
-              {
-                "ko": "수술",
-                "translation_ru": "операция"
-              },
-              {
-                "ko": "입원하다",
-                "translation_ru": "ложиться в больницу"
-              },
-              {
-                "ko": "퇴원하다",
-                "translation_ru": "выписываться"
-              },
-              {
-                "ko": "치료",
-                "translation_ru": "лечение"
-              },
-              {
-                "ko": "조심하다",
-                "translation_ru": "быть осторожным"
-              },
-              {
-                "ko": "예방",
-                "translation_ru": "профилактика"
-              },
-              {
-                "ko": "넘어지다",
-                "translation_ru": "упасть"
-              },
-              {
-                "ko": "미끄러지다",
-                "translation_ru": "поскользнуться"
-              },
-              {
-                "ko": "부주의",
-                "translation_ru": "неосторожность"
-              },
-              {
-                "ko": "스키",
-                "translation_ru": "лыжи"
-              },
-              {
-                "ko": "운동",
-                "translation_ru": "спорт"
-              }
-            ]
-          }
+          "items": []
         },
         {
           "type": "writing_exercise",

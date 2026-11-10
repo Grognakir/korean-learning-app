@@ -93,80 +93,8 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "성형외과",
-                "translation_ru": "пластическая хирургия"
-              },
-              {
-                "ko": "정형외과",
-                "translation_ru": "травматология"
-              },
-              {
-                "ko": "피부과",
-                "translation_ru": "дерматология"
-              },
-              {
-                "ko": "소아청소년과",
-                "translation_ru": "педиатрия"
-              },
-              {
-                "ko": "비뇨기과",
-                "translation_ru": "урология"
-              },
-              {
-                "ko": "신경과",
-                "translation_ru": "неврология"
-              },
-              {
-                "ko": "정신과",
-                "translation_ru": "психиатрия"
-              },
-              {
-                "ko": "종합병원",
-                "translation_ru": "многопрофильная больница"
-              },
-              {
                 "ko": "병원",
                 "translation_ru": "больница"
-              },
-              {
-                "ko": "약국",
-                "translation_ru": "аптека"
-              },
-              {
-                "ko": "진찰받다",
-                "translation_ru": "проходить осмотр"
-              },
-              {
-                "ko": "입원하다",
-                "translation_ru": "ложиться в больницу"
-              },
-              {
-                "ko": "퇴원하다",
-                "translation_ru": "выписываться"
-              },
-              {
-                "ko": "수술",
-                "translation_ru": "операция"
-              },
-              {
-                "ko": "주사",
-                "translation_ru": "укол"
-              },
-              {
-                "ko": "여권",
-                "translation_ru": "загранпаспорт"
-              },
-              {
-                "ko": "비행기 표",
-                "translation_ru": "авиабилет"
-              },
-              {
-                "ko": "휴가",
-                "translation_ru": "отпуск"
-              },
-              {
-                "ko": "예매하다",
-                "translation_ru": "покупать заранее"
               }
             ],
             "text_vocab": [

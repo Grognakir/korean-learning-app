@@ -25,32 +25,8 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "알약",
-                "translation_ru": "таблетка"
-              },
-              {
-                "ko": "가루약",
-                "translation_ru": "порошок"
-              },
-              {
                 "ko": "물약",
                 "translation_ru": "жидкое лекарство"
-              },
-              {
-                "ko": "파스",
-                "translation_ru": "пластырь-компресс"
-              },
-              {
-                "ko": "반창고",
-                "translation_ru": "пластырь"
-              },
-              {
-                "ko": "붕대",
-                "translation_ru": "бинт"
-              },
-              {
-                "ko": "연고",
-                "translation_ru": "мазь"
               },
               {
                 "ko": "열",
@@ -63,18 +39,6 @@
               {
                 "ko": "콧물",
                 "translation_ru": "насморк"
-              },
-              {
-                "ko": "두통",
-                "translation_ru": "головная боль"
-              },
-              {
-                "ko": "복통",
-                "translation_ru": "боль в животе"
-              },
-              {
-                "ko": "설사",
-                "translation_ru": "диарея"
               }
             ]
           }

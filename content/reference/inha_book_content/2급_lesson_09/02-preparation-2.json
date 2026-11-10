@@ -93,64 +93,12 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "열",
-                "translation_ru": "температура, жар"
-              },
-              {
-                "ko": "기침",
-                "translation_ru": "кашель"
-              },
-              {
-                "ko": "콧물",
-                "translation_ru": "насморк"
-              },
-              {
-                "ko": "재채기",
-                "translation_ru": "чихание"
-              },
-              {
-                "ko": "두통",
-                "translation_ru": "головная боль"
-              },
-              {
-                "ko": "복통",
-                "translation_ru": "боль в животе"
-              },
-              {
-                "ko": "설사",
-                "translation_ru": "диарея"
-              },
-              {
-                "ko": "배탈",
-                "translation_ru": "расстройство желудка"
-              },
-              {
-                "ko": "소화불량",
-                "translation_ru": "расстройство желудка"
-              },
-              {
-                "ko": "토하다",
-                "translation_ru": "тошнить"
-              },
-              {
-                "ko": "쑤시다",
-                "translation_ru": "ныть (о боли)"
-              },
-              {
                 "ko": "의사",
                 "translation_ru": "врач"
               },
               {
                 "ko": "간호사",
                 "translation_ru": "медсестра"
-              },
-              {
-                "ko": "약사",
-                "translation_ru": "фармацевт"
-              },
-              {
-                "ko": "처방전",
-                "translation_ru": "рецепт"
               },
               {
                 "ko": "진찰",
@@ -161,48 +109,8 @@
                 "translation_ru": "лечение"
               },
               {
-                "ko": "수술",
-                "translation_ru": "операция"
-              },
-              {
-                "ko": "입원하다",
-                "translation_ru": "ложиться в больницу"
-              },
-              {
-                "ko": "부러지다",
-                "translation_ru": "ломаться"
-              },
-              {
-                "ko": "다치다",
-                "translation_ru": "получить травму"
-              },
-              {
-                "ko": "뼈",
-                "translation_ru": "кость"
-              },
-              {
-                "ko": "근육",
-                "translation_ru": "мышца"
-              },
-              {
-                "ko": "심장",
-                "translation_ru": "сердце"
-              },
-              {
-                "ko": "피부",
-                "translation_ru": "кожа"
-              },
-              {
                 "ko": "심해지다",
                 "translation_ru": "усугубляться"
-              },
-              {
-                "ko": "담임선생님",
-                "translation_ru": "классный руководитель"
-              },
-              {
-                "ko": "종합",
-                "translation_ru": "комплекс, общий"
               }
             ]
           }

@@ -16,71 +16,7 @@
           "title_ru": "Слова",
           "related_text_ref": null,
           "source_note": "дополнительные слова по теме раздела",
-          "items": [],
-          "extra_words": {
-            "topic_vocab": [
-              {
-                "ko": "마케팅",
-                "translation_ru": "маркетинг"
-              },
-              {
-                "ko": "날씨 정보",
-                "translation_ru": "информация о погоде"
-              },
-              {
-                "ko": "사고팔다",
-                "translation_ru": "покупать и продавать"
-              },
-              {
-                "ko": "팔다",
-                "translation_ru": "продавать"
-              },
-              {
-                "ko": "물건",
-                "translation_ru": "вещь, товар"
-              },
-              {
-                "ko": "슈퍼컴퓨터",
-                "translation_ru": "суперкомпьютер"
-              },
-              {
-                "ko": "회사",
-                "translation_ru": "компания"
-              },
-              {
-                "ko": "편리하다",
-                "translation_ru": "удобный"
-              },
-              {
-                "ko": "미리",
-                "translation_ru": "заранее"
-              },
-              {
-                "ko": "직접",
-                "translation_ru": "лично"
-              },
-              {
-                "ko": "과학",
-                "translation_ru": "наука"
-              },
-              {
-                "ko": "기후",
-                "translation_ru": "климат"
-              },
-              {
-                "ko": "장마",
-                "translation_ru": "сезон дождей"
-              },
-              {
-                "ko": "눈",
-                "translation_ru": "снег"
-              },
-              {
-                "ko": "우산",
-                "translation_ru": "зонт"
-              }
-            ]
-          }
+          "items": []
         },
         {
           "type": "writing_exercise",

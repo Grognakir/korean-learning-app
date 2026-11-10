@@ -41,34 +41,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "맵다",
-                "translation_ru": "острый"
-              },
-              {
-                "ko": "짜다",
-                "translation_ru": "солёный"
-              },
-              {
-                "ko": "달다",
-                "translation_ru": "сладкий"
-              },
-              {
-                "ko": "싱겁다",
-                "translation_ru": "пресный"
-              },
-              {
-                "ko": "시다",
-                "translation_ru": "кислый"
-              },
-              {
-                "ko": "김치찌개",
-                "translation_ru": "суп с кимчи"
-              },
-              {
-                "ko": "불고기",
-                "translation_ru": "пулькоги"
-              },
-              {
                 "ko": "된장찌개",
                 "translation_ru": "суп с пастой твенджан"
               },
@@ -77,28 +49,12 @@
                 "translation_ru": "ресторан, столовая"
               },
               {
-                "ko": "주문하다",
-                "translation_ru": "заказывать"
-              },
-              {
                 "ko": "음식",
                 "translation_ru": "еда"
               },
               {
                 "ko": "맛",
                 "translation_ru": "вкус"
-              },
-              {
-                "ko": "땀",
-                "translation_ru": "пот"
-              },
-              {
-                "ko": "이마",
-                "translation_ru": "лоб"
-              },
-              {
-                "ko": "싫어하다",
-                "translation_ru": "не любить"
               }
             ]
           }

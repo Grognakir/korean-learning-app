@@ -20,38 +20,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "광고",
-                "translation_ru": "реклама"
-              },
-              {
-                "ko": "행사",
-                "translation_ru": "акция, мероприятие"
-              },
-              {
-                "ko": "기간",
-                "translation_ru": "срок, период"
-              },
-              {
-                "ko": "끝나다",
-                "translation_ru": "заканчиваться"
-              },
-              {
-                "ko": "여름옷",
-                "translation_ru": "летняя одежда"
-              },
-              {
-                "ko": "가을옷",
-                "translation_ru": "осенняя одежда"
-              },
-              {
-                "ko": "벌",
-                "translation_ru": "комплект (счётное слово для одежды)"
-              },
-              {
-                "ko": "공인중개사",
-                "translation_ru": "риелтор"
-              },
-              {
                 "ko": "침대",
                 "translation_ru": "кровать"
               },

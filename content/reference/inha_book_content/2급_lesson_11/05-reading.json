@@ -69,56 +69,8 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "자동차",
-                "translation_ru": "автомобиль, машина"
-              },
-              {
-                "ko": "오른쪽",
-                "translation_ru": "правая сторона"
-              },
-              {
-                "ko": "부딪치다",
-                "translation_ru": "сталкиваться, натыкаться"
-              },
-              {
-                "ko": "에스컬레이터",
-                "translation_ru": "эскалатор"
-              },
-              {
-                "ko": "손잡이",
-                "translation_ru": "ручка, рукоятка"
-              },
-              {
-                "ko": "줄",
-                "translation_ru": "очередь, ряд (людей)"
-              },
-              {
-                "ko": "질서",
-                "translation_ru": "порядок"
-              },
-              {
                 "ko": "규칙",
                 "translation_ru": "правило"
-              },
-              {
-                "ko": "이동",
-                "translation_ru": "передвижение, перемещение"
-              },
-              {
-                "ko": "습관",
-                "translation_ru": "привычка"
-              },
-              {
-                "ko": "예절",
-                "translation_ru": "этикет"
-              },
-              {
-                "ko": "기다리다",
-                "translation_ru": "ждать, ожидать"
-              },
-              {
-                "ko": "내리다",
-                "translation_ru": "выходить (из транспорта), спускаться"
               }
             ]
           }

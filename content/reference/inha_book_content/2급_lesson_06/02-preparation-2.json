@@ -105,10 +105,6 @@
                 "translation_ru": "порция"
               },
               {
-                "ko": "영수증",
-                "translation_ru": "чек"
-              },
-              {
                 "ko": "택배",
                 "translation_ru": "курьерская доставка"
               },
@@ -149,18 +145,6 @@
                 "translation_ru": "оставлять"
               },
               {
-                "ko": "저장하다",
-                "translation_ru": "сохранять"
-              },
-              {
-                "ko": "켜다",
-                "translation_ru": "включать"
-              },
-              {
-                "ko": "끄다",
-                "translation_ru": "выключать"
-              },
-              {
                 "ko": "열다",
                 "translation_ru": "открывать"
               },
@@ -169,36 +153,8 @@
                 "translation_ru": "закрывать"
               },
               {
-                "ko": "밑줄",
-                "translation_ru": "подчёркивание"
-              },
-              {
-                "ko": "외우다",
-                "translation_ru": "заучивать"
-              },
-              {
-                "ko": "몸살",
-                "translation_ru": "ломота в теле"
-              },
-              {
                 "ko": "감기",
                 "translation_ru": "простуда"
-              },
-              {
-                "ko": "칼국수",
-                "translation_ru": "калгуксу"
-              },
-              {
-                "ko": "세탁기",
-                "translation_ru": "стиральная машина"
-              },
-              {
-                "ko": "가스레인지",
-                "translation_ru": "газовая плита"
-              },
-              {
-                "ko": "청소",
-                "translation_ru": "уборка"
               }
             ],
             "text_vocab": [

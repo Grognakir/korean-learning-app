@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { VocabChip } from "./VocabChip";
+import { conjugatedForms, type ConjugatedForm } from "./koConjugation";
 import styles from "./blocks.module.css";
 
 export type VocabItem = { ko: string; translation_ru: string };
@@ -21,7 +22,7 @@ function vocabNeedles(ko: string): string[] {
     // заготовки это не догадка, а формальное правило корейского.
     if (stem.endsWith("하")) {
       const base = stem.slice(0, -1);
-      needles.push(`${base}해`, `${base}합`, `${base}했`, `${base}할`);
+      needles.push(`${base}해`, `${base}합`, `${base}했`, `${base}할`, `${base}한`);
     }
   }
   return needles.sort((a, b) => b.length - a.length);
@@ -59,6 +60,20 @@ function chipEnd(text: string, start: number, needle: string, item: VocabItem): 
   const next = text[matchEnd];
   if (next === undefined || isVerbLike(item) || !HADA_FORMS.test(next)) return matchEnd;
   return matchEnd + 1;
+}
+
+const HANGUL = /[가-힣]/;
+
+// После слитого -ㄴ/-ㄹ допускаются типичные окончания: 큰데, 어려운지, 갈까요, 갈게요, 간다.
+const AFTER_ADNOMINAL = /^(?:데|지|가요|까|게|래|걸|다)/;
+// После стяжённой формы -아/어: 봐요, 봐서, 봐도, 봐야, 예뻐졌어요, 예뻐하다.
+const AFTER_CONTRACTED = /^[요서도야라지져졌하]/;
+
+function conjugationFits(text: string, start: number, form: ConjugatedForm): boolean {
+  if (form.wordStart && start > 0 && HANGUL.test(text[start - 1])) return false;
+  const rest = text.slice(start + form.text.length);
+  if (form.after === "any" || rest === "" || !HANGUL.test(rest[0])) return true;
+  return form.after === "ending" ? AFTER_CONTRACTED.test(rest) : AFTER_ADNOMINAL.test(rest);
 }
 
 function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
@@ -105,6 +120,20 @@ function findVocabMatches(text: string, vocabItems: VocabItem[]): TextMatch[] {
           ko: item.ko,
         });
         from = start + 1;
+      }
+    }
+  }
+
+  for (const item of vocabItems) {
+    for (const form of conjugatedForms(item.ko)) {
+      for (let from = text.indexOf(form.text); from !== -1; from = text.indexOf(form.text, from + 1)) {
+        if (!conjugationFits(text, from, form)) continue;
+        candidates.push({
+          start: from,
+          end: from + form.chip,
+          translation: item.translation_ru,
+          ko: item.ko,
+        });
       }
     }
   }

@@ -33,35 +33,7 @@
               "ko": "우편물",
               "translation_ru": "почтовое отправление, корреспонденция"
             }
-          ],
-          "extra_words": {
-            "topic_vocab": [
-              {
-                "ko": "초대",
-                "translation_ru": "приглашение"
-              },
-              {
-                "ko": "안부",
-                "translation_ru": "весть о благополучии"
-              },
-              {
-                "ko": "문의",
-                "translation_ru": "запрос, обращение с вопросом"
-              },
-              {
-                "ko": "편입하다",
-                "translation_ru": "переводиться (в другой вуз, на старший курс)"
-              },
-              {
-                "ko": "유학",
-                "translation_ru": "учёба за границей"
-              },
-              {
-                "ko": "장학금",
-                "translation_ru": "стипендия"
-              }
-            ]
-          }
+          ]
         },
         {
           "type": "comprehension_exercise",

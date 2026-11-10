@@ -33,32 +33,12 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "패션",
-                "translation_ru": "мода"
-              },
-              {
-                "ko": "디자인",
-                "translation_ru": "дизайн"
-              },
-              {
-                "ko": "인기",
-                "translation_ru": "популярность"
-              },
-              {
-                "ko": "유행하다",
-                "translation_ru": "быть модным"
-              },
-              {
                 "ko": "추천하다",
                 "translation_ru": "рекомендовать"
               },
               {
                 "ko": "고르다",
                 "translation_ru": "выбирать"
-              },
-              {
-                "ko": "발표",
-                "translation_ru": "доклад, презентация"
               }
             ]
           }

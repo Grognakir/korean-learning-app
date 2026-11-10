@@ -57,38 +57,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "부동산 중개사 사무소",
-                "translation_ru": "агентство недвижимости"
-              },
-              {
-                "ko": "계약하다",
-                "translation_ru": "заключать договор"
-              },
-              {
-                "ko": "계약서",
-                "translation_ru": "договор"
-              },
-              {
-                "ko": "주차",
-                "translation_ru": "парковка"
-              },
-              {
-                "ko": "기숙사",
-                "translation_ru": "общежитие"
-              },
-              {
-                "ko": "근처",
-                "translation_ru": "поблизости"
-              },
-              {
-                "ko": "방값",
-                "translation_ru": "плата за комнату"
-              },
-              {
-                "ko": "관리비",
-                "translation_ru": "коммунальные платежи"
-              },
-              {
                 "ko": "가격",
                 "translation_ru": "цена"
               },
@@ -97,24 +65,8 @@
                 "translation_ru": "цена, стоимость"
               },
               {
-                "ko": "저렴하다",
-                "translation_ru": "недорогой"
-              },
-              {
                 "ko": "매월",
                 "translation_ru": "каждый месяц"
-              },
-              {
-                "ko": "매달",
-                "translation_ru": "каждый месяц"
-              },
-              {
-                "ko": "이미",
-                "translation_ru": "уже"
-              },
-              {
-                "ko": "벌써",
-                "translation_ru": "уже, раньше ожидаемого"
               },
               {
                 "ko": "연세",
@@ -127,10 +79,6 @@
               {
                 "ko": "품질",
                 "translation_ru": "качество"
-              },
-              {
-                "ko": "결과",
-                "translation_ru": "результат"
               },
               {
                 "ko": "건강하다",

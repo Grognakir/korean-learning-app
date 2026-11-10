@@ -97,14 +97,6 @@
                 "translation_ru": "помощь"
               },
               {
-                "ko": "놀다",
-                "translation_ru": "гулять, веселиться"
-              },
-              {
-                "ko": "집들이",
-                "translation_ru": "новоселье"
-              },
-              {
                 "ko": "선물",
                 "translation_ru": "подарок"
               },
@@ -113,72 +105,8 @@
                 "translation_ru": "привыкать"
               },
               {
-                "ko": "쳐다보다",
-                "translation_ru": "смотреть на"
-              },
-              {
-                "ko": "기쁘다",
-                "translation_ru": "радостный"
-              },
-              {
-                "ko": "걱정하다",
-                "translation_ru": "беспокоиться"
-              },
-              {
-                "ko": "연락하다",
-                "translation_ru": "связываться"
-              },
-              {
-                "ko": "소개받다",
-                "translation_ru": "быть представленным"
-              },
-              {
-                "ko": "동호회",
-                "translation_ru": "клуб по интересам"
-              },
-              {
-                "ko": "기타",
-                "translation_ru": "гитара"
-              },
-              {
-                "ko": "악보",
-                "translation_ru": "ноты"
-              },
-              {
-                "ko": "연주하다",
-                "translation_ru": "играть (на инструменте)"
-              },
-              {
-                "ko": "빌려주다",
-                "translation_ru": "одалживать"
-              },
-              {
-                "ko": "가수",
-                "translation_ru": "певец"
-              },
-              {
-                "ko": "공연",
-                "translation_ru": "выступление"
-              },
-              {
-                "ko": "경기",
-                "translation_ru": "матч, игра"
-              },
-              {
-                "ko": "중고차",
-                "translation_ru": "подержанный автомобиль"
-              },
-              {
                 "ko": "번",
                 "translation_ru": "раз"
-              },
-              {
-                "ko": "병",
-                "translation_ru": "бутылка"
-              },
-              {
-                "ko": "권",
-                "translation_ru": "том, книга (счётное)"
               },
               {
                 "ko": "잔",
@@ -187,10 +115,6 @@
               {
                 "ko": "시간",
                 "translation_ru": "час"
-              },
-              {
-                "ko": "며칠",
-                "translation_ru": "несколько дней"
               }
             ],
             "text_vocab": [

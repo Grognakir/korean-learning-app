@@ -121,228 +121,32 @@
                 "translation_ru": "овощи"
               },
               {
-                "ko": "야채",
-                "translation_ru": "овощи"
-              },
-              {
-                "ko": "소고기",
-                "translation_ru": "говядина"
-              },
-              {
-                "ko": "양파",
-                "translation_ru": "лук"
-              },
-              {
-                "ko": "마늘",
-                "translation_ru": "чеснок"
-              },
-              {
-                "ko": "간장",
-                "translation_ru": "соевый соус"
-              },
-              {
-                "ko": "깨",
-                "translation_ru": "кунжут"
-              },
-              {
-                "ko": "참깨",
-                "translation_ru": "белый кунжут"
-              },
-              {
-                "ko": "계란",
-                "translation_ru": "яйцо"
-              },
-              {
                 "ko": "밀가루",
                 "translation_ru": "мука"
-              },
-              {
-                "ko": "반죽",
-                "translation_ru": "тесто"
-              },
-              {
-                "ko": "두부",
-                "translation_ru": "тофу"
-              },
-              {
-                "ko": "썰다",
-                "translation_ru": "резать"
               },
               {
                 "ko": "끓이다",
                 "translation_ru": "кипятить, варить"
               },
               {
-                "ko": "섞다",
-                "translation_ru": "перемешивать"
-              },
-              {
                 "ko": "굽다",
                 "translation_ru": "жарить на огне"
-              },
-              {
-                "ko": "담다",
-                "translation_ru": "класть в посуду"
-              },
-              {
-                "ko": "펴다",
-                "translation_ru": "раскатывать"
-              },
-              {
-                "ko": "담백하다",
-                "translation_ru": "нежирный, лёгкий"
-              },
-              {
-                "ko": "느끼하다",
-                "translation_ru": "жирный, приторный"
-              },
-              {
-                "ko": "맵다",
-                "translation_ru": "острый"
-              },
-              {
-                "ko": "짜다",
-                "translation_ru": "солёный"
-              },
-              {
-                "ko": "달다",
-                "translation_ru": "сладкий"
-              },
-              {
-                "ko": "싱겁다",
-                "translation_ru": "пресный"
-              },
-              {
-                "ko": "숟가락",
-                "translation_ru": "ложка"
               },
               {
                 "ko": "젓가락",
                 "translation_ru": "палочки"
               },
               {
-                "ko": "포크",
-                "translation_ru": "вилка"
-              },
-              {
-                "ko": "주걱",
-                "translation_ru": "лопатка для риса"
-              },
-              {
-                "ko": "국자",
-                "translation_ru": "половник"
-              },
-              {
-                "ko": "집게",
-                "translation_ru": "щипцы"
-              },
-              {
-                "ko": "가위",
-                "translation_ru": "ножницы"
-              },
-              {
-                "ko": "도마",
-                "translation_ru": "разделочная доска"
-              },
-              {
-                "ko": "칼",
-                "translation_ru": "нож"
-              },
-              {
-                "ko": "접시",
-                "translation_ru": "тарелка"
-              },
-              {
-                "ko": "오븐",
-                "translation_ru": "духовка"
-              },
-              {
-                "ko": "전기밥솥",
-                "translation_ru": "рисоварка"
-              },
-              {
                 "ko": "김치찌개",
                 "translation_ru": "суп с кимчи"
-              },
-              {
-                "ko": "칼국수",
-                "translation_ru": "калгуксу"
-              },
-              {
-                "ko": "김치전",
-                "translation_ru": "кимчи-чон"
-              },
-              {
-                "ko": "잡채",
-                "translation_ru": "чапчхэ"
-              },
-              {
-                "ko": "국",
-                "translation_ru": "суп"
               },
               {
                 "ko": "찌개",
                 "translation_ru": "густой суп"
               },
               {
-                "ko": "반찬",
-                "translation_ru": "закуска к рису"
-              },
-              {
-                "ko": "꽂다",
-                "translation_ru": "вставлять, ставить"
-              },
-              {
-                "ko": "책꽂이",
-                "translation_ru": "книжная полка"
-              },
-              {
-                "ko": "탁자",
-                "translation_ru": "столик"
-              },
-              {
-                "ko": "바르다",
-                "translation_ru": "намазывать"
-              },
-              {
-                "ko": "두다",
-                "translation_ru": "класть, оставлять"
-              },
-              {
                 "ko": "놓다",
                 "translation_ru": "ставить"
-              },
-              {
-                "ko": "붙이다",
-                "translation_ru": "клеить"
-              },
-              {
-                "ko": "버리다",
-                "translation_ru": "выбрасывать"
-              },
-              {
-                "ko": "재활용",
-                "translation_ru": "переработка"
-              },
-              {
-                "ko": "상자",
-                "translation_ru": "коробка"
-              },
-              {
-                "ko": "소주",
-                "translation_ru": "соджу"
-              },
-              {
-                "ko": "막걸리",
-                "translation_ru": "макколи"
-              },
-              {
-                "ko": "맥주",
-                "translation_ru": "пиво"
-              },
-              {
-                "ko": "외국어",
-                "translation_ru": "иностранный язык"
               },
               {
                 "ko": "한국어",

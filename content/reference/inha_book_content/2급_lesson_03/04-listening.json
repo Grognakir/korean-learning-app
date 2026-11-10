@@ -50,42 +50,6 @@
               {
                 "ko": "사랑하다",
                 "translation_ru": "любить"
-              },
-              {
-                "ko": "우승하다",
-                "translation_ru": "стать чемпионом"
-              },
-              {
-                "ko": "패배하다",
-                "translation_ru": "проигрывать"
-              },
-              {
-                "ko": "이기다",
-                "translation_ru": "побеждать"
-              },
-              {
-                "ko": "지다",
-                "translation_ru": "проигрывать"
-              },
-              {
-                "ko": "비기다",
-                "translation_ru": "сыграть вничью"
-              },
-              {
-                "ko": "스키",
-                "translation_ru": "лыжи"
-              },
-              {
-                "ko": "연상",
-                "translation_ru": "старший по возрасту"
-              },
-              {
-                "ko": "연하",
-                "translation_ru": "младший по возрасту"
-              },
-              {
-                "ko": "어리다",
-                "translation_ru": "быть юным, младше"
               }
             ]
           }

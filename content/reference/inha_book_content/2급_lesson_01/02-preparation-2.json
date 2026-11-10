@@ -81,64 +81,12 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "문학",
-                "translation_ru": "литература"
-              },
-              {
-                "ko": "과학",
-                "translation_ru": "наука"
-              },
-              {
-                "ko": "정치",
-                "translation_ru": "политика"
-              },
-              {
-                "ko": "사회",
-                "translation_ru": "общество"
-              },
-              {
-                "ko": "경영",
-                "translation_ru": "управление, бизнес"
-              },
-              {
-                "ko": "환경",
-                "translation_ru": "окружающая среда"
-              },
-              {
                 "ko": "무역",
                 "translation_ru": "торговля"
               },
               {
-                "ko": "꿈",
-                "translation_ru": "мечта"
-              },
-              {
-                "ko": "영화감독",
-                "translation_ru": "кинорежиссёр"
-              },
-              {
                 "ko": "기자",
                 "translation_ru": "журналист"
-              },
-              {
-                "ko": "과학자",
-                "translation_ru": "учёный"
-              },
-              {
-                "ko": "디자이너",
-                "translation_ru": "дизайнер"
-              },
-              {
-                "ko": "번역가",
-                "translation_ru": "переводчик"
-              },
-              {
-                "ko": "취직",
-                "translation_ru": "трудоустройство"
-              },
-              {
-                "ko": "CEO",
-                "translation_ru": "генеральный директор"
               },
               {
                 "ko": "찾다",
@@ -149,56 +97,12 @@
                 "translation_ru": "собирать"
               },
               {
-                "ko": "초대하다",
-                "translation_ru": "приглашать"
-              },
-              {
                 "ko": "예매하다",
                 "translation_ru": "заказывать заранее"
               },
               {
-                "ko": "이사하다",
-                "translation_ru": "переезжать"
-              },
-              {
-                "ko": "정리하다",
-                "translation_ru": "приводить в порядок"
-              },
-              {
-                "ko": "주문하다",
-                "translation_ru": "заказывать"
-              },
-              {
-                "ko": "청소하다",
-                "translation_ru": "убирать"
-              },
-              {
-                "ko": "서점",
-                "translation_ru": "книжный магазин"
-              },
-              {
                 "ko": "최신",
                 "translation_ru": "новейший"
-              },
-              {
-                "ko": "경험",
-                "translation_ru": "опыт"
-              },
-              {
-                "ko": "소식",
-                "translation_ru": "новость"
-              },
-              {
-                "ko": "전하다",
-                "translation_ru": "передавать"
-              },
-              {
-                "ko": "인정받다",
-                "translation_ru": "получать признание"
-              },
-              {
-                "ko": "국적",
-                "translation_ru": "гражданство"
               }
             ]
           }

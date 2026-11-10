@@ -109,44 +109,12 @@
                 "translation_ru": "вся страна"
               },
               {
-                "ko": "경기도",
-                "translation_ru": "Кёнги"
-              },
-              {
-                "ko": "충청도",
-                "translation_ru": "Чхунчхон"
-              },
-              {
-                "ko": "강원도",
-                "translation_ru": "Канвон"
-              },
-              {
-                "ko": "전라도",
-                "translation_ru": "Чолла"
-              },
-              {
-                "ko": "경상도",
-                "translation_ru": "Кёнсан"
-              },
-              {
                 "ko": "제주도",
                 "translation_ru": "Чеджу"
               },
               {
-                "ko": "북",
-                "translation_ru": "север"
-              },
-              {
                 "ko": "남",
                 "translation_ru": "юг"
-              },
-              {
-                "ko": "동",
-                "translation_ru": "восток"
-              },
-              {
-                "ko": "서",
-                "translation_ru": "запад"
               },
               {
                 "ko": "기온",
@@ -161,20 +129,8 @@
                 "translation_ru": "минимальная температура"
               },
               {
-                "ko": "영하",
-                "translation_ru": "ниже нуля"
-              },
-              {
                 "ko": "단풍",
                 "translation_ru": "осенняя листва"
-              },
-              {
-                "ko": "경치",
-                "translation_ru": "пейзаж"
-              },
-              {
-                "ko": "설악산",
-                "translation_ru": "гора Сораксан"
               },
               {
                 "ko": "바람",
@@ -189,48 +145,16 @@
                 "translation_ru": "здоровый"
               },
               {
-                "ko": "달러",
-                "translation_ru": "доллар"
-              },
-              {
                 "ko": "바꾸다",
                 "translation_ru": "менять"
-              },
-              {
-                "ko": "환전하다",
-                "translation_ru": "обменивать валюту"
               },
               {
                 "ko": "바뀌다",
                 "translation_ru": "меняться"
               },
               {
-                "ko": "자라다",
-                "translation_ru": "расти"
-              },
-              {
                 "ko": "계절",
                 "translation_ru": "сезон"
-              },
-              {
-                "ko": "공기",
-                "translation_ru": "воздух"
-              },
-              {
-                "ko": "도시",
-                "translation_ru": "город"
-              },
-              {
-                "ko": "실력",
-                "translation_ru": "уровень знаний"
-              },
-              {
-                "ko": "병아리",
-                "translation_ru": "цыплёнок"
-              },
-              {
-                "ko": "닭",
-                "translation_ru": "курица"
               }
             ],
             "text_vocab": [

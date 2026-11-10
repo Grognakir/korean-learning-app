@@ -77,72 +77,24 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "폭설",
-                "translation_ru": "сильный снегопад"
-              },
-              {
-                "ko": "폭우",
-                "translation_ru": "ливень"
-              },
-              {
                 "ko": "흐리다",
                 "translation_ru": "быть пасмурным"
-              },
-              {
-                "ko": "개다",
-                "translation_ru": "проясняться"
-              },
-              {
-                "ko": "일기예보",
-                "translation_ru": "прогноз погоды"
-              },
-              {
-                "ko": "시원하다",
-                "translation_ru": "прохладный"
               },
               {
                 "ko": "맑다",
                 "translation_ru": "ясный"
               },
               {
-                "ko": "따뜻하다",
-                "translation_ru": "тёплый"
-              },
-              {
                 "ko": "감기",
                 "translation_ru": "простуда"
-              },
-              {
-                "ko": "씻다",
-                "translation_ru": "мыть"
-              },
-              {
-                "ko": "마스크",
-                "translation_ru": "маска"
               },
               {
                 "ko": "비",
                 "translation_ru": "дождь"
               },
               {
-                "ko": "바람",
-                "translation_ru": "ветер"
-              },
-              {
-                "ko": "선수",
-                "translation_ru": "спортсмен"
-              },
-              {
                 "ko": "농구",
                 "translation_ru": "баскетбол"
-              },
-              {
-                "ko": "벤치",
-                "translation_ru": "скамейка"
-              },
-              {
-                "ko": "중간시험",
-                "translation_ru": "промежуточный экзамен"
               }
             ]
           }

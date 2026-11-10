@@ -61,14 +61,6 @@
           "extra_words": {
             "topic_vocab": [
               {
-                "ko": "깜빡",
-                "translation_ru": "на миг, совсем (забыть)"
-              },
-              {
-                "ko": "잠깐",
-                "translation_ru": "ненадолго"
-              },
-              {
                 "ko": "케이크",
                 "translation_ru": "торт"
               },
@@ -81,40 +73,12 @@
                 "translation_ru": "день рождения"
               },
               {
-                "ko": "어버이날",
-                "translation_ru": "День родителей"
-              },
-              {
-                "ko": "선물",
-                "translation_ru": "подарок"
-              },
-              {
-                "ko": "이불",
-                "translation_ru": "одеяло"
-              },
-              {
-                "ko": "덮다",
-                "translation_ru": "накрывать"
-              },
-              {
                 "ko": "늦다",
                 "translation_ru": "опаздывать"
               },
               {
                 "ko": "시험 기간",
                 "translation_ru": "период экзаменов"
-              },
-              {
-                "ko": "빈자리",
-                "translation_ru": "свободное место"
-              },
-              {
-                "ko": "열람실",
-                "translation_ru": "читальный зал"
-              },
-              {
-                "ko": "카메라",
-                "translation_ru": "фотоаппарат"
               }
             ],
             "text_vocab": [
