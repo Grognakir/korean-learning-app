@@ -2390,7 +2390,15 @@
       "related": [
         {
           "label": "антоним",
-          "value": "입다 / 신다 / 쓰다 (надевать)"
+          "value": "입다 (надевать)"
+        },
+        {
+          "label": "антоним",
+          "value": "신다 (обувать)"
+        },
+        {
+          "label": "антоним",
+          "value": "쓰다 (писать)"
         }
       ]
     },
@@ -19554,10 +19562,6 @@
         {
           "label": "синоним",
           "value": "어머니 (мать - формально)"
-        },
-        {
-          "label": "синоним",
-          "value": "맘 («мам» - разговорное сокращение)"
         }
       ]
     },
@@ -60393,7 +60397,11 @@
       "related": [
         {
           "label": "синоним",
-          "value": "모두 / 전부 (все, целиком)"
+          "value": "모두 (все)"
+        },
+        {
+          "label": "синоним",
+          "value": "전부 (всё)"
         }
       ]
     },
@@ -80111,6 +80119,8989 @@
           "value": "나오다 (выходить сюда)"
         }
       ]
+    },
+    {
+      "external_id": "word-환승역",
+      "headword": "환승역",
+      "reading": "hwanseungyeok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "пересадочная станция"
+      ],
+      "examples": [
+        {
+          "kr": "다음 역은 환승역입니다.",
+          "ru": "Следующая станция — пересадочная."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "пересадка",
+          "value": "환승"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "갈아타다 (пересаживаться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-수리하다",
+      "headword": "수리하다",
+      "reading": "surihada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "ремонтировать, чинить"
+      ],
+      "examples": [
+        {
+          "kr": "고장 난 컴퓨터를 수리했어요.",
+          "ru": "Починил сломавшийся компьютер."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "ремонт",
+          "value": "수리"
+        },
+        {
+          "label": "стоимость ремонта",
+          "value": "수리비"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "고치다 (чинить)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-관두다",
+      "headword": "관두다",
+      "reading": "gwanduda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "бросать, уходить (с работы, учёбы)"
+      ],
+      "examples": [
+        {
+          "kr": "회사를 관두고 싶어요.",
+          "ru": "Хочу уволиться из компании."
+        }
+      ],
+      "notes": [
+        "разговорная форма от 그만두다"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "그만두다 (бросать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-방해하다",
+      "headword": "방해하다",
+      "reading": "banghaehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "мешать, препятствовать"
+      ],
+      "examples": [
+        {
+          "kr": "공부를 방해하지 마세요.",
+          "ru": "Не мешайте учиться."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "помеха",
+          "value": "방해"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "돕다 (помогать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-국밥",
+      "headword": "국밥",
+      "reading": "gukbap",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "куккпап (горячий суп с рисом)"
+      ],
+      "examples": [
+        {
+          "kr": "겨울에는 따뜻한 국밥이 먹고 싶어요.",
+          "ru": "Зимой хочется горячего куккпап."
+        }
+      ],
+      "notes": [
+        "состоит из следующих слов - 국 (суп) + 밥 (рис)"
+      ],
+      "forms": [
+        {
+          "label": "суп с рисом и свининой",
+          "value": "돼지국밥"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "말다 (сворачивать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-망치다",
+      "headword": "망치다",
+      "reading": "mangchida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "портить, губить, проваливать (дело)"
+      ],
+      "examples": [
+        {
+          "kr": "실수로 시험을 망쳤어요.",
+          "ru": "Из-за ошибки провалил экзамен."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "망가뜨리다 (ломать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-부수다",
+      "headword": "부수다",
+      "reading": "busuda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "ломать, разбивать, крушить"
+      ],
+      "examples": [
+        {
+          "kr": "아이가 장난감을 부쉈어요.",
+          "ru": "Ребёнок сломал игрушку."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "ломаться, разбиваться",
+          "value": "부서지다"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "망가뜨리다 (ломать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-수집하다",
+      "headword": "수집하다",
+      "reading": "sujiphada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "собирать, коллекционировать"
+      ],
+      "examples": [
+        {
+          "kr": "저는 우표를 수집해요.",
+          "ru": "Я коллекционирую марки."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "сбор, коллекция",
+          "value": "수집"
+        },
+        {
+          "label": "коллекционер",
+          "value": "수집가"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "모으다 (собирать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-살이 빠지다",
+      "headword": "살이 빠지다",
+      "reading": "salippajida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "худеть, терять вес"
+      ],
+      "examples": [
+        {
+          "kr": "운동을 했더니 살이 빠졌어요.",
+          "ru": "После тренировок я похудел."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "살찌다 (толстеть)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-개시되다",
+      "headword": "개시되다",
+      "reading": "gaesidoeda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "начинаться, открываться (официально)"
+      ],
+      "examples": [
+        {
+          "kr": "다음 달부터 서비스가 개시돼요.",
+          "ru": "Со следующего месяца начнёт работать сервис."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "시작되다 (начинаться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-암기하다",
+      "headword": "암기하다",
+      "reading": "amgihada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "заучивать, запоминать наизусть"
+      ],
+      "examples": [
+        {
+          "kr": "영어 단어를 암기했어요.",
+          "ru": "Заучил английские слова."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "заучивание",
+          "value": "암기"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "외우다 (заучивать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-얘기하다",
+      "headword": "얘기하다",
+      "reading": "yaegihada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "разговаривать, рассказывать"
+      ],
+      "examples": [
+        {
+          "kr": "친구와 오랫동안 얘기했어요.",
+          "ru": "Долго разговаривал с другом."
+        }
+      ],
+      "notes": [
+        "разговорное сокращение от 이야기하다"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "이야기하다 (разговаривать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-오해하다",
+      "headword": "오해하다",
+      "reading": "ohaehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "неправильно понимать"
+      ],
+      "examples": [
+        {
+          "kr": "제 말을 오해하지 마세요.",
+          "ru": "Не поймите мои слова неправильно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "이해하다 (понимать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-출산하다",
+      "headword": "출산하다",
+      "reading": "chulsanhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "рожать"
+      ],
+      "examples": [
+        {
+          "kr": "언니가 지난주에 아기를 출산했어요.",
+          "ru": "Сестра на прошлой неделе родила ребёнка."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "роды",
+          "value": "출산"
+        },
+        {
+          "label": "рождаемость",
+          "value": "출산율"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "임신하다 (забеременеть)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-좌회전",
+      "headword": "좌회전",
+      "reading": "jwahoejeon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "поворот налево"
+      ],
+      "examples": [
+        {
+          "kr": "다음 신호등에서 좌회전하세요.",
+          "ru": "На следующем светофоре поверните налево."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "поворачивать налево",
+          "value": "좌회전하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "직진하다 (идти или ехать прямо)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-우회전",
+      "headword": "우회전",
+      "reading": "uhoejeon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "поворот направо"
+      ],
+      "examples": [
+        {
+          "kr": "앞에서 우회전하세요.",
+          "ru": "Впереди поверните направо."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "поворачивать направо",
+          "value": "우회전하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "직진하다 (идти или ехать прямо)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-경험하다",
+      "headword": "경험하다",
+      "reading": "gyeongheomhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "испытывать, переживать, узнавать на опыте"
+      ],
+      "examples": [
+        {
+          "kr": "한국에서 많은 것을 경험했어요.",
+          "ru": "В Корее я многое пережил."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "체험하다 (испытать на собственном опыте)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-나타내다",
+      "headword": "나타내다",
+      "reading": "natanaeda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "показывать, выражать, проявлять"
+      ],
+      "examples": [
+        {
+          "kr": "감사의 마음을 나타냈어요.",
+          "ru": "Выразил благодарность."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "появляться",
+          "value": "나타나다"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "표현하다 (выражать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-시험하다",
+      "headword": "시험하다",
+      "reading": "siheomhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "испытывать, проверять"
+      ],
+      "examples": [
+        {
+          "kr": "새 기계를 시험해 봤어요.",
+          "ru": "Испытал новую машину."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "테스트하다 (тестировать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-점검하다",
+      "headword": "점검하다",
+      "reading": "jeomgeomhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "проверять, осматривать, инспектировать"
+      ],
+      "examples": [
+        {
+          "kr": "정비소에서 차를 점검했어요.",
+          "ru": "В автосервисе осмотрели машину."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "проверка, осмотр",
+          "value": "점검"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "테스트하다 (тестировать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-비난하다",
+      "headword": "비난하다",
+      "reading": "binanhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "критиковать, осуждать"
+      ],
+      "examples": [
+        {
+          "kr": "이유 없이 사람을 비난하지 마세요.",
+          "ru": "Не осуждайте людей без причины."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "осуждение, критика",
+          "value": "비난"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "칭찬하다 (хвалить)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-찾아가다",
+      "headword": "찾아가다",
+      "reading": "chatagada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "навещать, заходить (к кому-то), приходить"
+      ],
+      "examples": [
+        {
+          "kr": "주말에 선생님을 찾아갔어요.",
+          "ru": "На выходных навестил учителя."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "приходить (к кому-то)",
+          "value": "찾아오다"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "방문하다 (посещать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-필기하다",
+      "headword": "필기하다",
+      "reading": "pilgihada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "записывать, конспектировать"
+      ],
+      "examples": [
+        {
+          "kr": "수업 시간에 열심히 필기해요.",
+          "ru": "На уроке усердно конспектирую."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "конспект, записи",
+          "value": "필기"
+        },
+        {
+          "label": "письменный экзамен",
+          "value": "필기시험"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "메모하다 (делать заметку)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-퇴직하다",
+      "headword": "퇴직하다",
+      "reading": "toejikhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "уходить с работы, увольняться, выходить на пенсию"
+      ],
+      "examples": [
+        {
+          "kr": "아버지는 작년에 퇴직하셨어요.",
+          "ru": "Отец в прошлом году вышел на пенсию."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "увольнение, выход на пенсию",
+          "value": "퇴직"
+        },
+        {
+          "label": "выходное пособие",
+          "value": "퇴직금"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "취직하다 (устраиваться на работу)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-요청하다",
+      "headword": "요청하다",
+      "reading": "yocheonghada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "просить, запрашивать (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "직원에게 도움을 요청했어요.",
+          "ru": "Попросил сотрудника о помощи."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "부탁하다 (просить)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-택하다",
+      "headword": "택하다",
+      "reading": "taekhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "выбирать (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "둘 중 하나를 택하세요.",
+          "ru": "Выберите одно из двух."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "선택하다 (выбирать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-이혼하다",
+      "headword": "이혼하다",
+      "reading": "ihonhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "разводиться"
+      ],
+      "examples": [
+        {
+          "kr": "그 부부는 작년에 이혼했어요.",
+          "ru": "Эта пара развелась в прошлом году."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "развод",
+          "value": "이혼"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "결혼하다 (жениться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-미혼",
+      "headword": "미혼",
+      "reading": "mihon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "холост, не замужем"
+      ],
+      "examples": [
+        {
+          "kr": "저는 아직 미혼이에요.",
+          "ru": "Я пока не женат (не замужем)."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "결혼하다 (жениться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-기혼",
+      "headword": "기혼",
+      "reading": "gihon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "женат, замужем"
+      ],
+      "examples": [
+        {
+          "kr": "그분은 기혼이에요.",
+          "ru": "Он женат."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "결혼하다 (жениться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-포옹하다",
+      "headword": "포옹하다",
+      "reading": "poonghada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "обнимать, обниматься"
+      ],
+      "examples": [
+        {
+          "kr": "공항에서 가족과 포옹했어요.",
+          "ru": "В аэропорту обнялся с семьёй."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "объятие",
+          "value": "포옹"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "안다 (обнимать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-참여하다",
+      "headword": "참여하다",
+      "reading": "chamyeohada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "участвовать, принимать участие"
+      ],
+      "examples": [
+        {
+          "kr": "학생들이 행사에 참여했어요.",
+          "ru": "Студенты приняли участие в мероприятии."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "участие",
+          "value": "참여"
+        },
+        {
+          "label": "участник",
+          "value": "참여자"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "참가하다 (участвовать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-식목일",
+      "headword": "식목일",
+      "reading": "sikmokil",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "День посадки деревьев (5 апреля)"
+      ],
+      "examples": [
+        {
+          "kr": "식목일에 가족과 나무를 심었어요.",
+          "ru": "В День посадки деревьев мы с семьёй сажали деревья."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "심다 (сажать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-제외하다",
+      "headword": "제외하다",
+      "reading": "jeoehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "исключать, не включать"
+      ],
+      "examples": [
+        {
+          "kr": "이 항목은 제외해 주세요.",
+          "ru": "Исключите, пожалуйста, этот пункт."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "исключение",
+          "value": "제외"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "포함하다 (включать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-늘리다",
+      "headword": "늘리다",
+      "reading": "neulrida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "увеличивать, расширять"
+      ],
+      "examples": [
+        {
+          "kr": "운동 시간을 늘렸어요.",
+          "ru": "Увеличил время тренировок."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "줄이다 (уменьшать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-접다",
+      "headword": "접다",
+      "reading": "jeopda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "складывать (бумагу, зонт, одежду)"
+      ],
+      "examples": [
+        {
+          "kr": "종이를 반으로 접었어요.",
+          "ru": "Сложил бумагу пополам."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "펴다 (раскрывать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-펼치다",
+      "headword": "펼치다",
+      "reading": "pyeolchida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "раскрывать, разворачивать, расправлять"
+      ],
+      "examples": [
+        {
+          "kr": "책을 펼치세요.",
+          "ru": "Откройте книгу."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "펴다 (раскрывать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-보살피다",
+      "headword": "보살피다",
+      "reading": "bosalpida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "заботиться, ухаживать, присматривать"
+      ],
+      "examples": [
+        {
+          "kr": "할머니가 손자를 보살펴요.",
+          "ru": "Бабушка присматривает за внуком."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "돌보다 (заботиться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-쓰이다",
+      "headword": "쓰이다",
+      "reading": "sseuida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "использоваться, применяться",
+        "быть написанным"
+      ],
+      "examples": [
+        {
+          "kr": "이 단어는 일상에서 자주 쓰여요.",
+          "ru": "Это слово часто используется в повседневной речи."
+        },
+        {
+          "kr": "칠판에 글씨가 쓰여 있어요.",
+          "ru": "На доске что-то написано."
+        }
+      ],
+      "notes": [
+        "страдательная форма от 쓰다"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "사용되다 (использоваться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-침착하다",
+      "headword": "침착하다",
+      "reading": "chimchakhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "спокойный, хладнокровный"
+      ],
+      "examples": [
+        {
+          "kr": "위험할 때는 침착하게 행동하세요.",
+          "ru": "В опасной ситуации действуйте спокойно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "긴장하다 (нервничать)"
+        },
+        {
+          "label": "антоним",
+          "value": "당황하다 (растеряться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-닫히다",
+      "headword": "닫히다",
+      "reading": "dathida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "закрываться (о двери, окне)"
+      ],
+      "examples": [
+        {
+          "kr": "문이 저절로 닫혔어요.",
+          "ru": "Дверь сама закрылась."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "열리다 (проводиться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-목욕하다",
+      "headword": "목욕하다",
+      "reading": "mokyokhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "принимать ванну, мыться"
+      ],
+      "examples": [
+        {
+          "kr": "저녁에 목욕해요.",
+          "ru": "Вечером принимаю ванну."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "купание, ванна",
+          "value": "목욕"
+        },
+        {
+          "label": "баня",
+          "value": "목욕탕"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "샤워하다 (принимать душ)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-주의하다",
+      "headword": "주의하다",
+      "reading": "juuihada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "остерегаться, быть внимательным"
+      ],
+      "examples": [
+        {
+          "kr": "길이 미끄러우니 주의하세요.",
+          "ru": "Дорога скользкая, будьте осторожны."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "внимание, осторожность",
+          "value": "주의"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "조심하다 (беречься)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-냉동하다",
+      "headword": "냉동하다",
+      "reading": "naengdonghada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "замораживать"
+      ],
+      "examples": [
+        {
+          "kr": "남은 고기를 냉동했어요.",
+          "ru": "Заморозил оставшееся мясо."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "заморозка",
+          "value": "냉동"
+        },
+        {
+          "label": "замороженные продукты",
+          "value": "냉동식품"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "얼리다 (замораживать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-냉동실",
+      "headword": "냉동실",
+      "reading": "naengdongsil",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "морозилка, морозильная камера"
+      ],
+      "examples": [
+        {
+          "kr": "아이스크림은 냉동실에 있어요.",
+          "ru": "Мороженое лежит в морозилке."
+        }
+      ],
+      "notes": [
+        "состоит из следующих слов - 냉동 (заморозка) + 실 (отделение, комната)"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "얼리다 (замораживать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-깨우다",
+      "headword": "깨우다",
+      "reading": "kkaeuda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "будить"
+      ],
+      "examples": [
+        {
+          "kr": "엄마가 저를 일곱 시에 깨워요.",
+          "ru": "Мама будит меня в семь часов."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "просыпаться",
+          "value": "깨다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "재우다 (укладывать спать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-사라지다",
+      "headword": "사라지다",
+      "reading": "sarajida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "исчезать, пропадать"
+      ],
+      "examples": [
+        {
+          "kr": "가방이 갑자기 사라졌어요.",
+          "ru": "Сумка вдруг пропала."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "나타나다 (появляться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-각양각색",
+      "headword": "각양각색",
+      "reading": "gakyanggaksaek",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "разнообразие, всевозможные (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "시장에는 각양각색의 물건이 있어요.",
+          "ru": "На рынке есть товары на любой вкус."
+        }
+      ],
+      "notes": [
+        "обычно с -의: 각양각색의 + N"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "다양하다 (разнообразный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-갈증",
+      "headword": "갈증",
+      "reading": "galjeung",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "жажда"
+      ],
+      "examples": [
+        {
+          "kr": "운동한 후에 갈증이 나요.",
+          "ru": "После тренировки хочется пить."
+        }
+      ],
+      "notes": [
+        "갈증이 나다 — хотеть пить"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "목마르다 (жаждущий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-시들다",
+      "headword": "시들다",
+      "reading": "sideulda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "увядать, вянуть"
+      ],
+      "examples": [
+        {
+          "kr": "물을 안 줘서 꽃이 시들었어요.",
+          "ru": "Цветы завяли без воды."
+        }
+      ],
+      "notes": [
+        "ㄹ-основа: ㄹ выпадает перед ㄴ, ㅂ, ㅅ:\n> 시들다 → 시든"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "싱싱하다 (свежий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-무명",
+      "headword": "무명",
+      "reading": "mumyeong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "безвестность, неизвестность"
+      ],
+      "examples": [
+        {
+          "kr": "그는 오랫동안 무명 가수였어요.",
+          "ru": "Он долго был безвестным певцом."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "유명하다 (известный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-낯설다",
+      "headword": "낯설다",
+      "reading": "natseolda",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "незнакомый, непривычный, чужой"
+      ],
+      "examples": [
+        {
+          "kr": "처음 온 곳이라서 모든 것이 낯설어요.",
+          "ru": "Я здесь впервые, и всё непривычно."
+        }
+      ],
+      "notes": [
+        "ㄹ-основа: ㄹ выпадает перед ㄴ, ㅂ, ㅅ:\n> 낯설다 → 낯선"
+      ],
+      "forms": [
+        {
+          "label": "чувствовать себя чужим",
+          "value": "낯설어하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "익숙하다 (привычный)"
+        },
+        {
+          "label": "антоним",
+          "value": "익숙해지다 (привыкать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-창피하다",
+      "headword": "창피하다",
+      "reading": "changpihada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "стыдно, неловко (из-за чужих глаз)"
+      ],
+      "examples": [
+        {
+          "kr": "사람들 앞에서 넘어져서 창피했어요.",
+          "ru": "Упал при людях, и было стыдно."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "позор, стыд",
+          "value": "창피"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "부끄럽다 (стеснительный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-불행하다",
+      "headword": "불행하다",
+      "reading": "bulhaenghada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "несчастливый"
+      ],
+      "examples": [
+        {
+          "kr": "그는 불행한 시간을 보냈어요.",
+          "ru": "Он пережил несчастливое время."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "행복하다 (счастливый)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-멋지다",
+      "headword": "멋지다",
+      "reading": "meotjida",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "классный, великолепный, шикарный"
+      ],
+      "examples": [
+        {
+          "kr": "그 사람은 정말 멋져요.",
+          "ru": "Он просто классный."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "멋있다 (классный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-구속",
+      "headword": "구속",
+      "reading": "gusok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "стеснение, ограничение (свободы)",
+        "арест, задержание"
+      ],
+      "examples": [
+        {
+          "kr": "구속 없이 자유롭게 살고 싶어요.",
+          "ru": "Хочу жить свободно, без ограничений."
+        },
+        {
+          "kr": "용의자가 구속됐어요.",
+          "ru": "Подозреваемого арестовали."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "стеснять; арестовывать",
+          "value": "구속하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "자유롭다 (свободный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-송구하다",
+      "headword": "송구하다",
+      "reading": "songguhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "чувствовать вину, сожалеть (очень формально)"
+      ],
+      "examples": [
+        {
+          "kr": "폐를 끼쳐서 송구합니다.",
+          "ru": "Приношу извинения за беспокойство."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "죄송하다 (виноватый)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-긴급",
+      "headword": "긴급",
+      "reading": "gingeup",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "срочность, экстренность"
+      ],
+      "examples": [
+        {
+          "kr": "긴급 상황이 생겼어요.",
+          "ru": "Возникла экстренная ситуация."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "срочный, экстренный",
+          "value": "긴급하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "급하다 (срочный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-딱딱하다",
+      "headword": "딱딱하다",
+      "reading": "ttakttakhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "твёрдый, жёсткий",
+        "скованный, чопорный"
+      ],
+      "examples": [
+        {
+          "kr": "빵이 딱딱해요.",
+          "ru": "Хлеб твёрдый."
+        },
+        {
+          "kr": "회의 분위기가 딱딱해요.",
+          "ru": "Атмосфера на совещании скованная."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "부드럽다 (мягкий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-잘리다",
+      "headword": "잘리다",
+      "reading": "jalrida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "быть отрезанным",
+        "быть уволенным (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "나무가 잘려서 쓰러졌어요.",
+          "ru": "Дерево срубили, и оно упало."
+        },
+        {
+          "kr": "회사에서 잘렸어요.",
+          "ru": "Меня уволили из компании."
+        }
+      ],
+      "notes": [
+        "страдательная форма от 자르다"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "자르다 (резать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-걔",
+      "headword": "걔",
+      "reading": "gyae",
+      "part_of_speech": "pronoun",
+      "level_tag": null,
+      "categories": [
+        "Местоимения"
+      ],
+      "translations": [
+        "он, она, тот парень (о знакомом, разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "걔는 내 친구야.",
+          "ru": "Он (она) — мой друг."
+        }
+      ],
+      "notes": [
+        "сокращение от 그 아이; 걔가, 걔는, 걔를 → 걔를"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "그녀 (она)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-이곳",
+      "headword": "이곳",
+      "reading": "igot",
+      "part_of_speech": "pronoun",
+      "level_tag": null,
+      "categories": [
+        "Местоимения"
+      ],
+      "translations": [
+        "это место, здесь"
+      ],
+      "examples": [
+        {
+          "kr": "이곳은 정말 조용해요.",
+          "ru": "Здесь очень тихо."
+        }
+      ],
+      "notes": [
+        "ряд: 이곳 / 그곳 / 저곳"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "여기 (здесь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-치아",
+      "headword": "치아",
+      "reading": "chia",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Части тела"
+      ],
+      "translations": [
+        "зубы (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "치아 건강이 중요해요.",
+          "ru": "Здоровье зубов важно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "이 (этот)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-김장",
+      "headword": "김장",
+      "reading": "gimjang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "заготовка кимчи на зиму"
+      ],
+      "examples": [
+        {
+          "kr": "가족이 모여서 김장을 했어요.",
+          "ru": "Семья собралась и заготовила кимчи на зиму."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "сезон заготовки кимчи",
+          "value": "김장철"
+        },
+        {
+          "label": "кимчи, заготовленное на зиму",
+          "value": "김장김치"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "배추 (пекинская капуста)"
+        },
+        {
+          "label": "полезное слово",
+          "value": "김치 (кимчи)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-쌈",
+      "headword": "쌈",
+      "reading": "ssam",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "еда, завёрнутая в листья; листья для заворачивания"
+      ],
+      "examples": [
+        {
+          "kr": "상추에 고기를 싸서 쌈을 먹어요.",
+          "ru": "Заворачиваю мясо в салат и ем."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "густой соус для зелени (ссамджан)",
+          "value": "쌈장"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "상추 (листовой салат)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-대파",
+      "headword": "대파",
+      "reading": "daepa",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "зелёный лук-порей"
+      ],
+      "examples": [
+        {
+          "kr": "국에 대파를 넣어요.",
+          "ru": "Добавляю лук-порей в суп."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "양파 (репчатый лук)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-깍두기",
+      "headword": "깍두기",
+      "reading": "kkakdugi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "ккакдуги (кимчи из кубиков дайкона)"
+      ],
+      "examples": [
+        {
+          "kr": "설렁탕에는 깍두기가 잘 어울려요.",
+          "ru": "К сорнонтхану отлично подходит ккакдуги."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "김치 (кимчи)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-가래떡",
+      "headword": "가래떡",
+      "reading": "garaetteok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "длинные рисовые палочки (для ттоккук и токпокки)"
+      ],
+      "examples": [
+        {
+          "kr": "설날에는 가래떡으로 떡국을 끓여요.",
+          "ru": "На Новый год варят ттоккук из длинных рисовых палочек."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "떡국 (ттоккук)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-치맥",
+      "headword": "치맥",
+      "reading": "chimaek",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "курица с пивом"
+      ],
+      "examples": [
+        {
+          "kr": "주말에 친구와 치맥을 먹었어요.",
+          "ru": "На выходных ели курицу с пивом с другом."
+        }
+      ],
+      "notes": [
+        "состоит из следующих слов - 치킨 (курица) + 맥주 (пиво)"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "맥주 (пиво)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-복날",
+      "headword": "복날",
+      "reading": "boknal",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "бокналь (самые жаркие дни лета)"
+      ],
+      "examples": [
+        {
+          "kr": "복날에는 삼계탕을 먹어요.",
+          "ru": "В бокналь едят самгетан."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "삼계탕 (самгетан)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-쇠고기",
+      "headword": "쇠고기",
+      "reading": "soegogi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "говядина"
+      ],
+      "examples": [
+        {
+          "kr": "쇠고기를 구워 먹었어요.",
+          "ru": "Жарили и ели говядину."
+        }
+      ],
+      "notes": [
+        "вариант слова 소고기"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "소고기 (говядина)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-노트",
+      "headword": "노트",
+      "reading": "noteu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "тетрадь, блокнот"
+      ],
+      "examples": [
+        {
+          "kr": "노트에 새 단어를 써요.",
+          "ru": "Записываю новые слова в тетрадь."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "공책 (тетрадь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-수저",
+      "headword": "수저",
+      "reading": "sujeo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "ложка и палочки (столовый прибор)"
+      ],
+      "examples": [
+        {
+          "kr": "식탁에 수저를 놓아요.",
+          "ru": "Кладу на стол ложку и палочки."
+        }
+      ],
+      "notes": [
+        "состоит из следующих слов - 숟가락 (ложка) + 젓가락 (палочки)"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "숟가락 (ложка)"
+        },
+        {
+          "label": "полезное слово",
+          "value": "젓가락 (палочки для еды)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-접착제",
+      "headword": "접착제",
+      "reading": "jeopchakje",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "клей (тюбик, универсальный)"
+      ],
+      "examples": [
+        {
+          "kr": "접착제로 신발을 붙였어요.",
+          "ru": "Приклеил обувь клеем."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "풀 (клей)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-창",
+      "headword": "창",
+      "reading": "chang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "окно",
+        "копьё"
+      ],
+      "examples": [
+        {
+          "kr": "창을 열어서 환기해요.",
+          "ru": "Открываю окно, чтобы проветрить."
+        },
+        {
+          "kr": "옛날 군인은 창으로 싸웠어요.",
+          "ru": "В старину воины сражались копьями."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "место у окна",
+          "value": "창가"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "창문 (окно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-헤드폰",
+      "headword": "헤드폰",
+      "reading": "hedeupon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Электроника"
+      ],
+      "translations": [
+        "наушники (большие, накладные)"
+      ],
+      "examples": [
+        {
+          "kr": "헤드폰으로 음악을 들어요.",
+          "ru": "Слушаю музыку в наушниках."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "이어폰 (наушники)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-티비",
+      "headword": "티비",
+      "reading": "tibi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Электроника"
+      ],
+      "translations": [
+        "телевизор (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "저녁에 티비를 봐요.",
+          "ru": "Вечером смотрю телевизор."
+        }
+      ],
+      "notes": [
+        "вариант написания слова TV — 티브이"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "텔레비전 (телевизор)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-핸드폰",
+      "headword": "핸드폰",
+      "reading": "haendeupon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Электроника"
+      ],
+      "translations": [
+        "мобильный телефон (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "핸드폰을 잃어버렸어요.",
+          "ru": "Потерял мобильный телефон."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "휴대폰 (мобильный телефон)"
+        },
+        {
+          "label": "синоним",
+          "value": "휴대전화 (мобильный телефон)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-식구",
+      "headword": "식구",
+      "reading": "sikgu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "член семьи, домочадец"
+      ],
+      "examples": [
+        {
+          "kr": "우리 식구는 모두 다섯 명이에요.",
+          "ru": "В нашей семье всего пять человек."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "가족 (семья)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-남친",
+      "headword": "남친",
+      "reading": "namchin",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "парень (разг., сокращение 남자친구)"
+      ],
+      "examples": [
+        {
+          "kr": "남친이 생겼어요.",
+          "ru": "У меня появился парень."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "남자 친구 (молодой человек)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-누님",
+      "headword": "누님",
+      "reading": "nunim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "старшая сестра (почтительно, мужчина о сестре)"
+      ],
+      "examples": [
+        {
+          "kr": "누님은 회사에 다니세요.",
+          "ru": "Старшая сестра работает в компании."
+        }
+      ],
+      "notes": [
+        "используется мужчинами; также как почтительное обращение к женщине старше"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "누나 (старшая сестра)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-따님",
+      "headword": "따님",
+      "reading": "ttanim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "дочь (почтительно о чужой)"
+      ],
+      "examples": [
+        {
+          "kr": "따님이 정말 예쁘시네요.",
+          "ru": "Ваша дочь очень красивая."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "딸 (дочь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-자녀",
+      "headword": "자녀",
+      "reading": "janyeo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "дети (сыновья и дочери)"
+      ],
+      "examples": [
+        {
+          "kr": "자녀가 몇 명 있으세요?",
+          "ru": "Сколько у вас детей?"
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "딸 (дочь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-와이프",
+      "headword": "와이프",
+      "reading": "waipeu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "жена (разг., заимствование)"
+      ],
+      "examples": [
+        {
+          "kr": "와이프가 요리를 잘해요.",
+          "ru": "Жена хорошо готовит."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "아내 (жена)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-아드님",
+      "headword": "아드님",
+      "reading": "adeunim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "сын (почтительно о чужом)"
+      ],
+      "examples": [
+        {
+          "kr": "아드님이 몇 살이에요?",
+          "ru": "Сколько лет вашему сыну?"
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "아들 (сын)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-아버님",
+      "headword": "아버님",
+      "reading": "abeonim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "отец (почтительно: чужой отец или отец супруга)"
+      ],
+      "examples": [
+        {
+          "kr": "아버님, 안녕히 주무세요.",
+          "ru": "Отец, спокойной ночи."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "아버지 (отец)"
+        },
+        {
+          "label": "синоним",
+          "value": "아빠 (папа)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-아줌마",
+      "headword": "아줌마",
+      "reading": "ajumma",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "тётя, женщина среднего возраста (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "아줌마, 여기 물 좀 주세요.",
+          "ru": "Тётенька, дайте, пожалуйста, воды."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "아주머니 (тётя)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-어머님",
+      "headword": "어머님",
+      "reading": "eomeonim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "мать (почтительно о чужой), свекровь, тёща"
+      ],
+      "examples": [
+        {
+          "kr": "어머님, 식사하셨어요?",
+          "ru": "Вы уже обедали?"
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "어머니 (мать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-여친",
+      "headword": "여친",
+      "reading": "yeochin",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "девушка (разг., сокращение 여자친구)"
+      ],
+      "examples": [
+        {
+          "kr": "여친과 영화를 봤어요.",
+          "ru": "Смотрел фильм с девушкой."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "여자 친구 (девушка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-할머님",
+      "headword": "할머님",
+      "reading": "halmeonim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "бабушка (почтительно)"
+      ],
+      "examples": [
+        {
+          "kr": "할머님, 건강하세요.",
+          "ru": "Бабушка, будьте здоровы."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "할머니 (бабушка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-할아버님",
+      "headword": "할아버님",
+      "reading": "halabeonim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "дедушка (почтительно)"
+      ],
+      "examples": [
+        {
+          "kr": "할아버님, 식사하세요.",
+          "ru": "Дедушка, кушайте."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "할아버지 (дедушка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-존함",
+      "headword": "존함",
+      "reading": "jonham",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "имя (высшая степень почтительности, о старших)"
+      ],
+      "examples": [
+        {
+          "kr": "선생님, 존함이 어떻게 되세요?",
+          "ru": "Учитель, как вас зовут?"
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "성함 (имя)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-별세하다",
+      "headword": "별세하다",
+      "reading": "byeolsehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "скончаться (книжное, почтительно)"
+      ],
+      "examples": [
+        {
+          "kr": "할아버지께서 별세하셨습니다.",
+          "ru": "Дедушка скончался."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "돌아가시다 (скончаться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-선생",
+      "headword": "선생",
+      "reading": "seonsaeng",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "учитель (менее почтительно), господин (обращение)"
+      ],
+      "examples": [
+        {
+          "kr": "김 선생은 수학을 가르쳐요.",
+          "ru": "Учитель Ким преподаёт математику."
+        }
+      ],
+      "notes": [
+        "без -님 менее почтительно; к самому учителю обращаются 선생님"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "선생님 (учитель)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-기사님",
+      "headword": "기사님",
+      "reading": "gisanim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "водитель (обращение, почтительно)"
+      ],
+      "examples": [
+        {
+          "kr": "기사님, 여기서 세워 주세요.",
+          "ru": "Водитель, остановите здесь, пожалуйста."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "운전기사 (водитель)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-알바",
+      "headword": "알바",
+      "reading": "alba",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "подработка (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "방학에 알바를 해요.",
+          "ru": "На каникулах подрабатываю."
+        }
+      ],
+      "notes": [
+        "сокращение от 아르바이트"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "아르바이트 (подработка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-사적인 공간",
+      "headword": "사적인 공간",
+      "reading": "sajeokingonggan",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "личное пространство"
+      ],
+      "examples": [
+        {
+          "kr": "다른 사람의 사적인 공간을 존중해 주세요.",
+          "ru": "Уважайте чужое личное пространство."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "공공장소 (общественное место)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-문방구",
+      "headword": "문방구",
+      "reading": "munbanggu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "магазин канцтоваров (разг.), канцтовары"
+      ],
+      "examples": [
+        {
+          "kr": "문방구에서 공책을 샀어요.",
+          "ru": "Купил тетрадь в канцелярском магазине."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "문구점 (магазин канцтоваров)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-제과점",
+      "headword": "제과점",
+      "reading": "jegwajeom",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "кондитерская, пекарня"
+      ],
+      "examples": [
+        {
+          "kr": "제과점에서 케이크를 샀어요.",
+          "ru": "Купил торт в кондитерской."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "빵집 (пекарня)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-책방",
+      "headword": "책방",
+      "reading": "chaekbang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "книжный магазин (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "동네 책방에서 책을 샀어요.",
+          "ru": "Купил книгу в районном книжном."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "서점 (книжный магазин)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-지상",
+      "headword": "지상",
+      "reading": "jisang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "поверхность земли, надземный уровень",
+        "земной мир"
+      ],
+      "examples": [
+        {
+          "kr": "주차장은 지상 2층에 있어요.",
+          "ru": "Парковка на втором наземном этаже."
+        },
+        {
+          "kr": "이 세상은 지상의 낙원이에요.",
+          "ru": "Этот мир — рай на земле."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "지하 (подземное пространство)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-체중",
+      "headword": "체중",
+      "reading": "chejung",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Части тела"
+      ],
+      "translations": [
+        "вес тела (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "체중이 많이 줄었어요.",
+          "ru": "Вес сильно уменьшился."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "весы",
+          "value": "체중계"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "몸무게 (вес тела)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-궁둥이",
+      "headword": "궁둥이",
+      "reading": "gungdungi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Части тела"
+      ],
+      "translations": [
+        "зад, ягодицы (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "아이가 궁둥이를 흔들며 춤을 춰요.",
+          "ru": "Ребёнок танцует, виляя попой."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "엉덩이 (ягодицы)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-전신",
+      "headword": "전신",
+      "reading": "jeonsin",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Части тела"
+      ],
+      "translations": [
+        "всё тело (книжно)"
+      ],
+      "examples": [
+        {
+          "kr": "전신 마사지를 받았어요.",
+          "ru": "Сделал массаж всего тела."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "온몸 (всё тело)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-철",
+      "headword": "철",
+      "reading": "cheol",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "сезон, пора (разг.)",
+        "разум, зрелость"
+      ],
+      "examples": [
+        {
+          "kr": "요즘은 딸기 철이에요.",
+          "ru": "Сейчас клубничный сезон."
+        },
+        {
+          "kr": "그는 아직 철이 없어요.",
+          "ru": "Он ещё не повзрослел (по-детски несерьёзен)."
+        }
+      ],
+      "notes": [
+        "철이 들다 — взрослеть, умнеть; 철이 없다 — быть незрелым"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "계절 (время года)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-완행",
+      "headword": "완행",
+      "reading": "wanhaeng",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "обычный (с остановками) поезд или автобус"
+      ],
+      "examples": [
+        {
+          "kr": "완행열차는 모든 역에 서요.",
+          "ru": "Обычный поезд останавливается на всех станциях."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "поезд с остановками",
+          "value": "완행열차"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "급행 (экспресс)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-국가",
+      "headword": "국가",
+      "reading": "gukga",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "государство, страна"
+      ],
+      "examples": [
+        {
+          "kr": "한국은 아시아에 있는 국가예요.",
+          "ru": "Корея — государство в Азии."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "национальная сборная",
+          "value": "국가대표"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "나라 (страна)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-흡연",
+      "headword": "흡연",
+      "reading": "heupyeon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "курение"
+      ],
+      "examples": [
+        {
+          "kr": "실내 흡연은 금지돼요.",
+          "ru": "Курение в помещении запрещено."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "курящий",
+          "value": "흡연자"
+        },
+        {
+          "label": "курилка",
+          "value": "흡연실"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "담배 (сигарета)"
+        },
+        {
+          "label": "антоним",
+          "value": "금연 (запрет на курение)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-답신",
+      "headword": "답신",
+      "reading": "dapsin",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "ответное письмо или сообщение (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "이메일에 답신을 보냈어요.",
+          "ru": "Отправил ответ на письмо."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "답장 (ответное письмо)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-자가용",
+      "headword": "자가용",
+      "reading": "jagayong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "личный автомобиль"
+      ],
+      "examples": [
+        {
+          "kr": "자가용으로 출근해요.",
+          "ru": "Езжу на работу на личной машине."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "대중교통 (общественный транспорт)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-카톡",
+      "headword": "카톡",
+      "reading": "katok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Электроника"
+      ],
+      "translations": [
+        "KakaoTalk (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "카톡으로 연락할게요.",
+          "ru": "Свяжусь через KakaoTalk."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "문자 메시지 (текстовое сообщение)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-문자",
+      "headword": "문자",
+      "reading": "munja",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "текстовое сообщение (SMS)",
+        "буква, знак, письменность"
+      ],
+      "examples": [
+        {
+          "kr": "친구에게 문자를 보냈어요.",
+          "ru": "Отправил другу сообщение."
+        },
+        {
+          "kr": "한글은 한국의 문자예요.",
+          "ru": "Хангыль — корейская письменность."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "текстовое сообщение",
+          "value": "문자 메시지"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "문자 메시지 (текстовое сообщение)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-주방",
+      "headword": "주방",
+      "reading": "jubang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "кухня (помещение, формально)"
+      ],
+      "examples": [
+        {
+          "kr": "식당 주방은 아주 깨끗해요.",
+          "ru": "Кухня ресторана очень чистая."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "부엌 (кухня)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-교차로",
+      "headword": "교차로",
+      "reading": "gyocharo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "перекрёсток"
+      ],
+      "examples": [
+        {
+          "kr": "교차로에서는 천천히 가세요.",
+          "ru": "На перекрёстке езжайте медленно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "사거리 (перекрёсток)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-박스",
+      "headword": "박스",
+      "reading": "bakseu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "коробка, ящик (заимствование)"
+      ],
+      "examples": [
+        {
+          "kr": "박스에 책을 담았어요.",
+          "ru": "Сложил книги в коробку."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "상자 (коробка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-신년",
+      "headword": "신년",
+      "reading": "sinnyeon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "Новый год (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "신년 계획을 세웠어요.",
+          "ru": "Составил план на Новый год."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "새해 (Новый год)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-버릇",
+      "headword": "버릇",
+      "reading": "beoreut",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "привычка (чаще дурная), манера"
+      ],
+      "examples": [
+        {
+          "kr": "손톱을 깨무는 버릇이 있어요.",
+          "ru": "У меня привычка грызть ногти."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "привычка в речи",
+          "value": "말버릇"
+        },
+        {
+          "label": "невоспитанный",
+          "value": "버릇없다"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "습관 (привычка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-본래",
+      "headword": "본래",
+      "reading": "bonrae",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "изначально, по природе"
+      ],
+      "examples": [
+        {
+          "kr": "그는 본래 조용한 사람이에요.",
+          "ru": "Он по натуре тихий человек."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "원래 (изначально)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-계좌",
+      "headword": "계좌",
+      "reading": "gyejwa",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "банковский счёт"
+      ],
+      "examples": [
+        {
+          "kr": "은행에서 계좌를 만들었어요.",
+          "ru": "Открыл счёт в банке."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "номер счёта",
+          "value": "계좌번호"
+        },
+        {
+          "label": "перевод на счёт",
+          "value": "계좌 이체"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "통장 (банковская книжка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-존칭",
+      "headword": "존칭",
+      "reading": "jonching",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "почтительное обращение, почтительная форма"
+      ],
+      "examples": [
+        {
+          "kr": "선생님께는 존칭을 써요.",
+          "ru": "С учителем используют почтительные формы."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "호칭 (форма обращения)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-거짓",
+      "headword": "거짓",
+      "reading": "geojit",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "ложь, неправда"
+      ],
+      "examples": [
+        {
+          "kr": "그 말은 거짓이었어요.",
+          "ru": "Эти слова были ложью."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "ложь (слова)",
+          "value": "거짓말"
+        },
+        {
+          "label": "лжец",
+          "value": "거짓말쟁이"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "진실 (правда)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-티",
+      "headword": "티",
+      "reading": "ti",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "футболка (разг. сокращение)",
+        "признак, вид"
+      ],
+      "examples": [
+        {
+          "kr": "흰 티를 입었어요.",
+          "ru": "Надел белую футболку."
+        },
+        {
+          "kr": "피곤한 티가 났어요.",
+          "ru": "Было видно, что он устал."
+        }
+      ],
+      "notes": [
+        "티가 나다 — быть заметным"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "티셔츠 (футболка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-애",
+      "headword": "애",
+      "reading": "ae",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "ребёнок (разг., сокращение 아이)",
+        "усилие, старание"
+      ],
+      "examples": [
+        {
+          "kr": "애가 울고 있어요.",
+          "ru": "Ребёнок плачет."
+        },
+        {
+          "kr": "시험 준비하느라 애를 썼어요.",
+          "ru": "Очень старался, готовясь к экзамену."
+        }
+      ],
+      "notes": [
+        "애를 쓰다 — прилагать усилия"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "아이 (ребёнок)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-슬픔",
+      "headword": "슬픔",
+      "reading": "seulpeum",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "грусть, печаль"
+      ],
+      "examples": [
+        {
+          "kr": "그는 슬픔을 숨기지 못했어요.",
+          "ru": "Он не смог скрыть грусть."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "기쁨 (радость)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-뒷자리",
+      "headword": "뒷자리",
+      "reading": "dwitjari",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "задние места"
+      ],
+      "examples": [
+        {
+          "kr": "뒷자리에 앉아도 잘 보여요.",
+          "ru": "Даже на задних местах хорошо видно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "앞자리 (переднее место)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-실외",
+      "headword": "실외",
+      "reading": "siloe",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "на открытом воздухе, вне помещения"
+      ],
+      "examples": [
+        {
+          "kr": "실외 수영장이 열렸어요.",
+          "ru": "Открылся открытый бассейн."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "실내 (помещение)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-국내",
+      "headword": "국내",
+      "reading": "guknae",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "внутри страны"
+      ],
+      "examples": [
+        {
+          "kr": "올해는 국내 여행을 하고 싶어요.",
+          "ru": "В этом году хочу попутешествовать по стране."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "внутренние рейсы",
+          "value": "국내선"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "국제 (международный)"
+        },
+        {
+          "label": "антоним",
+          "value": "외국 (иностранное государство)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-서명",
+      "headword": "서명",
+      "reading": "seomyeong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "подпись"
+      ],
+      "examples": [
+        {
+          "kr": "계약서에 서명했어요.",
+          "ru": "Подписал договор."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "подписывать",
+          "value": "서명하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "사인 (автограф)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-어르신",
+      "headword": "어르신",
+      "reading": "eoreusin",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "старший человек, пожилой (почтительное обращение)"
+      ],
+      "examples": [
+        {
+          "kr": "어르신, 여기 앉으세요.",
+          "ru": "Присаживайтесь, пожалуйста."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "노인 (пожилой человек)"
+        },
+        {
+          "label": "синоним",
+          "value": "어른 (взрослый)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-화병",
+      "headword": "화병",
+      "reading": "hwabyeong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "ваза (для цветов)",
+        "хвабён (болезнь от подавленного гнева)"
+      ],
+      "examples": [
+        {
+          "kr": "화병에 장미를 꽂았어요.",
+          "ru": "Поставил розы в вазу."
+        },
+        {
+          "kr": "오랫동안 참다가 화병이 생겼어요.",
+          "ru": "Долго терпел и заработал хвабён."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "꽃병 (ваза для цветов)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-가난하다",
+      "headword": "가난하다",
+      "reading": "gananhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "бедный"
+      ],
+      "examples": [
+        {
+          "kr": "어릴 때 집이 가난했어요.",
+          "ru": "В детстве наша семья была бедной."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "бедность",
+          "value": "가난"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "부자 (богач)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-불행",
+      "headword": "불행",
+      "reading": "bulhaeng",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "несчастье, невезение"
+      ],
+      "examples": [
+        {
+          "kr": "그 가족은 큰 불행을 겪었어요.",
+          "ru": "Эта семья пережила большое несчастье."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "행복 (счастье)"
+        },
+        {
+          "label": "антоним",
+          "value": "다행 (удача)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-불금",
+      "headword": "불금",
+      "reading": "bulgeum",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "«огненная пятница» (разг.: пятничный вечер перед выходными)"
+      ],
+      "examples": [
+        {
+          "kr": "불금에는 친구들과 놀아요.",
+          "ru": "В «огненную пятницу» гуляю с друзьями."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "금요일 (пятница)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-금년",
+      "headword": "금년",
+      "reading": "geumnyeon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "этот год (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "금년에는 계획이 많아요.",
+          "ru": "В этом году у меня много планов."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "올해 (этот год)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-내후년",
+      "headword": "내후년",
+      "reading": "naehunyeon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "через два года (год после следующего)"
+      ],
+      "examples": [
+        {
+          "kr": "내후년에 졸업할 거예요.",
+          "ru": "Закончу учёбу через два года."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "후년 (через два года)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-때때로",
+      "headword": "때때로",
+      "reading": "ttaettaero",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "порой, временами (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "때때로 옛날 생각이 나요.",
+          "ru": "Порой вспоминаю старые времена."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "가끔 (иногда)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-마침내",
+      "headword": "마침내",
+      "reading": "machimnae",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "наконец, в конце концов"
+      ],
+      "examples": [
+        {
+          "kr": "마침내 시험에 합격했어요.",
+          "ru": "Наконец-то сдал экзамен."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "드디어 (наконец)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-사전에",
+      "headword": "사전에",
+      "reading": "sajeone",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "заранее, предварительно (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "사전에 예약해 주세요.",
+          "ru": "Пожалуйста, бронируйте заранее."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "미리 (заранее)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-요새",
+      "headword": "요새",
+      "reading": "yosae",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "в последнее время, нынче (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "요새 날씨가 좋아요.",
+          "ru": "Последнее время хорошая погода."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "요즘 (в последнее время)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-일찌감치",
+      "headword": "일찌감치",
+      "reading": "iljjigamchi",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "загодя, пораньше"
+      ],
+      "examples": [
+        {
+          "kr": "일찌감치 준비를 시작했어요.",
+          "ru": "Начал готовиться заранее."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "일찍 (рано)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-마지막",
+      "headword": "마지막",
+      "reading": "majimak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "последний, конец"
+      ],
+      "examples": [
+        {
+          "kr": "이번이 마지막 기회예요.",
+          "ru": "Это последний шанс."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "처음 (сначала)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-결코",
+      "headword": "결코",
+      "reading": "gyeolko",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "никогда, ни за что (с отрицанием; книжно)"
+      ],
+      "examples": [
+        {
+          "kr": "그 일은 결코 잊을 수 없어요.",
+          "ru": "Этого я никогда не смогу забыть."
+        }
+      ],
+      "notes": [
+        "결코 + отрицание"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "절대 (абсолютно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-진짜",
+      "headword": "진짜",
+      "reading": "jinjja",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "настоящий, правда",
+        "очень, действительно (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "이 가방은 진짜 가죽이에요.",
+          "ru": "Эта сумка из настоящей кожи."
+        },
+        {
+          "kr": "오늘 진짜 덥네요.",
+          "ru": "Сегодня и правда жарко."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "정말 (правда)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-간접",
+      "headword": "간접",
+      "reading": "ganjeop",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "косвенный, непрямой"
+      ],
+      "examples": [
+        {
+          "kr": "간접적으로 말하면 더 부드러워요.",
+          "ru": "Если сказать косвенно, получится мягче."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "косвенный",
+          "value": "간접적"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "직접 (непосредственно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-문득",
+      "headword": "문득",
+      "reading": "mundeuk",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "вдруг, внезапно (о мысли, воспоминании)"
+      ],
+      "examples": [
+        {
+          "kr": "문득 고향 생각이 났어요.",
+          "ru": "Вдруг вспомнил родину."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "갑자기 (внезапно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-그렇다면",
+      "headword": "그렇다면",
+      "reading": "geureotdamyeon",
+      "part_of_speech": "conjunction",
+      "level_tag": null,
+      "categories": [
+        "Союзы и связки"
+      ],
+      "translations": [
+        "если так, в таком случае"
+      ],
+      "examples": [
+        {
+          "kr": "그렇다면 제가 도와드릴게요.",
+          "ru": "Если так, я вам помогу."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "그러면 (если так)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-근데",
+      "headword": "근데",
+      "reading": "geunde",
+      "part_of_speech": "conjunction",
+      "level_tag": null,
+      "categories": [
+        "Союзы и связки"
+      ],
+      "translations": [
+        "но, кстати (разг., сокращение 그런데)"
+      ],
+      "examples": [
+        {
+          "kr": "근데 너 어디 가?",
+          "ru": "А ты куда идёшь?"
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "그런데 (но)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-다만",
+      "headword": "다만",
+      "reading": "daman",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "только, лишь; но (оговорка, книжно)"
+      ],
+      "examples": [
+        {
+          "kr": "가격은 좋아요. 다만 너무 멀어요.",
+          "ru": "Цена хорошая. Вот только далеко."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "단 (но)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-아울러",
+      "headword": "아울러",
+      "reading": "aulreo",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "а также, вместе с тем (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "회의 일정과 아울러 장소도 알려 드리겠습니다.",
+          "ru": "Сообщу время совещания, а также место."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "또한 (также)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-존대",
+      "headword": "존대",
+      "reading": "jondae",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "почтительное отношение, вежливая речь"
+      ],
+      "examples": [
+        {
+          "kr": "어른에게는 존대를 해야 해요.",
+          "ru": "Со старшими нужно говорить почтительно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "존댓말 (вежливая речь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-밴드",
+      "headword": "밴드",
+      "reading": "baendeu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "пластырь (разг.)",
+        "музыкальная группа"
+      ],
+      "examples": [
+        {
+          "kr": "손가락에 밴드를 붙였어요.",
+          "ru": "Наклеил пластырь на палец."
+        },
+        {
+          "kr": "저는 밴드에서 기타를 쳐요.",
+          "ru": "Играю на гитаре в группе."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "반창고 (пластырь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-술주정",
+      "headword": "술주정",
+      "reading": "suljujeong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "пьяные выходки"
+      ],
+      "examples": [
+        {
+          "kr": "그는 술주정이 심해요.",
+          "ru": "Он сильно буянит спьяну."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "주사 (укол)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-아니",
+      "headword": "아니",
+      "reading": "ani",
+      "part_of_speech": "interjection",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "нет (неформально)",
+        "что? (удивление)"
+      ],
+      "examples": [
+        {
+          "kr": "아니, 나는 안 갔어.",
+          "ru": "Нет, я не ходил."
+        },
+        {
+          "kr": "아니, 이게 뭐야?",
+          "ru": "Что это такое?!"
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "아니요 (нет)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-아닙니다",
+      "headword": "아닙니다",
+      "reading": "anipnida",
+      "part_of_speech": "interjection",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "нет, не так (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "아닙니다, 괜찮습니다.",
+          "ru": "Нет, всё в порядке."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "아니요 (нет)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-이케아",
+      "headword": "이케아",
+      "reading": "ikea",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "IKEA"
+      ],
+      "examples": [
+        {
+          "kr": "이케아에서 가구를 샀어요.",
+          "ru": "Купил мебель в IKEA."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "가구점 (мебельный магазин)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-붉은색",
+      "headword": "붉은색",
+      "reading": "bukeunsaek",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Цвета"
+      ],
+      "translations": [
+        "красный цвет (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "붉은색 노을이 아름다워요.",
+          "ru": "Красный закат прекрасен."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "빨간색 (красный цвет)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-내",
+      "headword": "내",
+      "reading": "nae",
+      "part_of_speech": "determiner",
+      "level_tag": null,
+      "categories": [
+        "Местоимения"
+      ],
+      "translations": [
+        "мой (неформально, сокращение 나의)"
+      ],
+      "examples": [
+        {
+          "kr": "내 친구를 소개할게.",
+          "ru": "Познакомлю тебя с моим другом."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "제 (мой)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-안녕하세요",
+      "headword": "안녕하세요",
+      "reading": "annyeonghaseyo",
+      "part_of_speech": "interjection",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "здравствуйте"
+      ],
+      "examples": [
+        {
+          "kr": "안녕하세요? 처음 뵙겠습니다.",
+          "ru": "Здравствуйте! Рад познакомиться."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "안녕하십니까 (здравствуйте)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-안녕",
+      "headword": "안녕",
+      "reading": "annyeong",
+      "part_of_speech": "interjection",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "привет; пока (неформально)"
+      ],
+      "examples": [
+        {
+          "kr": "안녕, 내일 또 보자.",
+          "ru": "Пока, до завтра."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "안녕하십니까 (здравствуйте)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-분실",
+      "headword": "분실",
+      "reading": "bunsil",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "потеря, утрата (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "카드를 분실했을 때는 신고하세요.",
+          "ru": "Если потеряли карту, сообщите об этом."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "потерянная вещь",
+          "value": "분실물"
+        }
+      ],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "잃어버리다 (терять)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-일부",
+      "headword": "일부",
+      "reading": "ilbu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "часть, некоторые"
+      ],
+      "examples": [
+        {
+          "kr": "일부 학생은 늦게 왔어요.",
+          "ru": "Некоторые студенты пришли поздно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "대부분 (большинство)"
+        },
+        {
+          "label": "антоним",
+          "value": "전체 (целое)"
+        },
+        {
+          "label": "антоним",
+          "value": "전부 (всё)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-찬성하다",
+      "headword": "찬성하다",
+      "reading": "chanseonghada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "соглашаться, поддерживать, быть за"
+      ],
+      "examples": [
+        {
+          "kr": "저는 그 계획에 찬성해요.",
+          "ru": "Я поддерживаю этот план."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "согласие, поддержка",
+          "value": "찬성"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "반대하다 (быть против)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-거",
+      "headword": "거",
+      "reading": "geo",
+      "part_of_speech": "pronoun",
+      "level_tag": null,
+      "categories": [
+        "Местоимения"
+      ],
+      "translations": [
+        "вещь, то (разг., сокращение 것)"
+      ],
+      "examples": [
+        {
+          "kr": "이거 뭐예요?",
+          "ru": "Что это?"
+        }
+      ],
+      "notes": [
+        "이거 / 그거 / 저거 — разговорные формы 이것 / 그것 / 저것"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "것 (вещь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-부침개",
+      "headword": "부침개",
+      "reading": "buchimgae",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "пучимгэ (жареные оладьи)"
+      ],
+      "examples": [
+        {
+          "kr": "비 오는 날에는 부침개가 생각나요.",
+          "ru": "В дождливый день вспоминаются пучимгэ."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "전 (до)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-적게",
+      "headword": "적게",
+      "reading": "jeokge",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "мало, в небольшом количестве"
+      ],
+      "examples": [
+        {
+          "kr": "야식은 적게 드세요.",
+          "ru": "Ночью ешьте поменьше."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "많이 (много)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-쭉",
+      "headword": "쭉",
+      "reading": "jjuk",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "прямо, всё время; одним махом"
+      ],
+      "examples": [
+        {
+          "kr": "이 길로 쭉 가세요.",
+          "ru": "Идите по этой дороге прямо."
+        },
+        {
+          "kr": "저는 쭉 한국에서 살았어요.",
+          "ru": "Я всё время жил в Корее."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "계속 (продолжая)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-점차",
+      "headword": "점차",
+      "reading": "jeomcha",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "постепенно (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "날씨가 점차 따뜻해져요.",
+          "ru": "Погода постепенно теплеет."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "점점 (постепенно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-제일",
+      "headword": "제일",
+      "reading": "jeil",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "самый, больше всего"
+      ],
+      "examples": [
+        {
+          "kr": "이 음식이 제일 맛있어요.",
+          "ru": "Эта еда самая вкусная."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "가장 (самый)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-구태여",
+      "headword": "구태여",
+      "reading": "gutaeyeo",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "незачем, без необходимости (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "구태여 갈 필요는 없어요.",
+          "ru": "Незачем идти."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "굳이 (незачем)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-상호",
+      "headword": "상호",
+      "reading": "sangho",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "взаимный, друг друга (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "상호 이해가 중요해요.",
+          "ru": "Взаимопонимание важно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "서로 (друг друга)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-한국말",
+      "headword": "한국말",
+      "reading": "hangukmal",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "корейский язык, корейская речь (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "한국말을 열심히 공부해요.",
+          "ru": "Усердно учу корейский."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "한국어 (корейский язык)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-중국말",
+      "headword": "중국말",
+      "reading": "junggukmal",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "китайский язык, китайская речь (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "중국말을 조금 해요.",
+          "ru": "Немного говорю по-китайски."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "중국어 (китайский язык)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-초",
+      "headword": "초",
+      "reading": "cho",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "начало (периода)",
+        "секунда"
+      ],
+      "examples": [
+        {
+          "kr": "이번 달 초에 이사했어요.",
+          "ru": "В начале этого месяца переехал."
+        },
+        {
+          "kr": "십 초만 기다려 주세요.",
+          "ru": "Подождите всего десять секунд."
+        }
+      ],
+      "notes": [
+        "в значении «секунда» — счётное слово с китайско-корейскими числами"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "말 (слово)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-단체",
+      "headword": "단체",
+      "reading": "danche",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "группа, организация, коллектив"
+      ],
+      "examples": [
+        {
+          "kr": "단체 여행을 신청했어요.",
+          "ru": "Записался на групповую поездку."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "개인 (отдельный человек)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-관하여",
+      "headword": "관하여",
+      "reading": "gwanhayeo",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "касательно, относительно (-에 관하여)"
+      ],
+      "examples": [
+        {
+          "kr": "환경에 관하여 이야기했어요.",
+          "ru": "Говорили об окружающей среде."
+        }
+      ],
+      "notes": [
+        "-에 관하여 / -에 관한 + N"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "대하다 (относиться к)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-회화",
+      "headword": "회화",
+      "reading": "hoehwa",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "разговорная речь, диалог"
+      ],
+      "examples": [
+        {
+          "kr": "한국어 회화 수업을 들어요.",
+          "ru": "Хожу на уроки разговорного корейского."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "대화하다 (разговаривать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-달성하다",
+      "headword": "달성하다",
+      "reading": "dalseonghada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "достигать (цели, результата)"
+      ],
+      "examples": [
+        {
+          "kr": "목표를 달성했어요.",
+          "ru": "Достиг цели."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "достижение",
+          "value": "달성"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "이루다 (достигать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-떼다",
+      "headword": "떼다",
+      "reading": "tteda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "отрывать, снимать, отклеивать",
+        "закончить, освоить (한글을 떼다)"
+      ],
+      "examples": [
+        {
+          "kr": "벽에서 포스터를 뗐어요.",
+          "ru": "Снял со стены постер."
+        },
+        {
+          "kr": "아이가 한글을 뗐어요.",
+          "ru": "Ребёнок выучил хангыль."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "붙이다 (прикреплять)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-곧다",
+      "headword": "곧다",
+      "reading": "gotda",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "прямой, не согнутый"
+      ],
+      "examples": [
+        {
+          "kr": "그 나무는 곧게 자랐어요.",
+          "ru": "Это дерево выросло прямым."
+        }
+      ],
+      "notes": [
+        "곧은 / 곧게 — формы определения и наречия"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "굽다 (жарить)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-얕다",
+      "headword": "얕다",
+      "reading": "yatda",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "мелкий, неглубокий"
+      ],
+      "examples": [
+        {
+          "kr": "이 강은 얕아서 건널 수 있어요.",
+          "ru": "Эта река мелкая, её можно перейти."
+        }
+      ],
+      "notes": [
+        "произносится [얄따]"
+      ],
+      "forms": [
+        {
+          "label": "мелеть",
+          "value": "얕아지다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "깊다 (глубокий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-상세하다",
+      "headword": "상세하다",
+      "reading": "sangsehada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "подробный (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "상세한 설명을 부탁드립니다.",
+          "ru": "Прошу подробное объяснение."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "подробно, в деталях",
+          "value": "상세히"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "자세하다 (подробный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-습하다",
+      "headword": "습하다",
+      "reading": "seuphada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "влажный (о воздухе, погоде)"
+      ],
+      "examples": [
+        {
+          "kr": "여름에는 날씨가 습해요.",
+          "ru": "Летом погода влажная."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "влажность",
+          "value": "습도"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "건조하다 (сухой)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-부정확하다",
+      "headword": "부정확하다",
+      "reading": "bujeonghwakhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "неточный"
+      ],
+      "examples": [
+        {
+          "kr": "이 정보는 부정확해요.",
+          "ru": "Эта информация неточна."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "정확하다 (точный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-일출",
+      "headword": "일출",
+      "reading": "ilchul",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "восход солнца (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "일출을 보려고 일찍 일어났어요.",
+          "ru": "Встал рано, чтобы увидеть восход."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "해돋이 (восход солнца)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-일몰",
+      "headword": "일몰",
+      "reading": "ilmol",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "закат (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "바닷가에서 일몰을 봤어요.",
+          "ru": "Смотрел закат на берегу моря."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "해돋이 (восход солнца)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-토지",
+      "headword": "토지",
+      "reading": "toji",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "земля, земельный участок (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "이 토지는 값이 비싸요.",
+          "ru": "Этот земельный участок дорогой."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "땅 (земля)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-세게",
+      "headword": "세게",
+      "reading": "sege",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "сильно, крепко"
+      ],
+      "examples": [
+        {
+          "kr": "문을 세게 닫지 마세요.",
+          "ru": "Не закрывайте дверь сильно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "살살 (осторожно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-중앙",
+      "headword": "중앙",
+      "reading": "jungang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "центр, середина (книжно)"
+      ],
+      "examples": [
+        {
+          "kr": "광장 중앙에 분수가 있어요.",
+          "ru": "В центре площади есть фонтан."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "가운데 (середина)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-재직하다",
+      "headword": "재직하다",
+      "reading": "jaejikhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "состоять на службе, работать (в организации; формально)"
+      ],
+      "examples": [
+        {
+          "kr": "그는 이 학교에 재직하고 있어요.",
+          "ru": "Он работает в этой школе."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "служба, работа",
+          "value": "재직"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "근무하다 (работать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-수락하다",
+      "headword": "수락하다",
+      "reading": "surakhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "принимать, соглашаться (предложение)"
+      ],
+      "examples": [
+        {
+          "kr": "그의 제안을 수락했어요.",
+          "ru": "Принял его предложение."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "거절하다 (отказывать(ся))"
+        }
+      ]
+    },
+    {
+      "external_id": "word-화장지",
+      "headword": "화장지",
+      "reading": "hwajangji",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "туалетная бумага"
+      ],
+      "examples": [
+        {
+          "kr": "화장지가 다 떨어졌어요.",
+          "ru": "Туалетная бумага закончилась."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "휴지 (туалетная бумага)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-불참하다",
+      "headword": "불참하다",
+      "reading": "bulchamhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "не присутствовать, не участвовать"
+      ],
+      "examples": [
+        {
+          "kr": "아파서 회의에 불참했어요.",
+          "ru": "Из-за болезни не присутствовал на совещании."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "неучастие, отсутствие",
+          "value": "불참"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "참석하다 (присутствовать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-구입",
+      "headword": "구입",
+      "reading": "guip",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "приобретение, покупка"
+      ],
+      "examples": [
+        {
+          "kr": "컴퓨터 구입을 고민하고 있어요.",
+          "ru": "Думаю о покупке компьютера."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "приобретать",
+          "value": "구입하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "구매 (покупка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-판매",
+      "headword": "판매",
+      "reading": "panmae",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "продажа"
+      ],
+      "examples": [
+        {
+          "kr": "이 상품은 판매가 끝났어요.",
+          "ru": "Этот товар снят с продажи."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "продавать",
+          "value": "판매하다"
+        },
+        {
+          "label": "продавец",
+          "value": "판매원"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "구매 (покупка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-전기",
+      "headword": "전기",
+      "reading": "jeongi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "электричество",
+        "ранний период",
+        "биография"
+      ],
+      "examples": [
+        {
+          "kr": "전기를 아껴 써요.",
+          "ru": "Экономлю электричество."
+        },
+        {
+          "kr": "조선 전기에 만들어진 그림이에요.",
+          "ru": "Эта картина создана в ранний период Чосон."
+        },
+        {
+          "kr": "위인의 전기를 읽었어요.",
+          "ru": "Прочитал биографию великого человека."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "электрическая рисоварка",
+          "value": "전기밥솥"
+        },
+        {
+          "label": "плата за электричество",
+          "value": "전기료"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "후기 (отзыв)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-배송비",
+      "headword": "배송비",
+      "reading": "baesongbi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "стоимость доставки"
+      ],
+      "examples": [
+        {
+          "kr": "배송비는 무료예요.",
+          "ru": "Доставка бесплатная."
+        }
+      ],
+      "notes": [
+        "состоит из следующих слов - 배송 (доставка) + 비 (расходы)"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "택배비 (плата за курьерскую доставку)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-경력직",
+      "headword": "경력직",
+      "reading": "gyeongryeokjik",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "сотрудник с опытом работы"
+      ],
+      "examples": [
+        {
+          "kr": "이 회사는 경력직을 뽑아요.",
+          "ru": "Эта компания набирает сотрудников с опытом."
+        }
+      ],
+      "notes": [
+        "состоит из следующих слов - 경력 (опыт работы) + 직 (должность)"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "신입 (новичок)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-숙련자",
+      "headword": "숙련자",
+      "reading": "sukryeonja",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "опытный человек, мастер"
+      ],
+      "examples": [
+        {
+          "kr": "숙련자도 가끔 실수를 해요.",
+          "ru": "Даже опытные люди иногда ошибаются."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "초보자 (новичок)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-식욕",
+      "headword": "식욕",
+      "reading": "sikyok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "аппетит (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "더워서 식욕이 없어요.",
+          "ru": "Из-за жары нет аппетита."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "입맛 (аппетит)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-불가능하다",
+      "headword": "불가능하다",
+      "reading": "bulganeunghada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "невозможный"
+      ],
+      "examples": [
+        {
+          "kr": "혼자서는 불가능해요.",
+          "ru": "В одиночку это невозможно."
+        }
+      ],
+      "notes": [
+        "состоит из следующих слов - 불 (не-) + 가능하다 (возможный)"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "가능하다 (возможно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-진료실",
+      "headword": "진료실",
+      "reading": "jinryosil",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Больница и отделения"
+      ],
+      "translations": [
+        "кабинет приёма, кабинет врача"
+      ],
+      "examples": [
+        {
+          "kr": "진료실에 들어가세요.",
+          "ru": "Проходите в кабинет врача."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "진찰실 (кабинет врача)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-분석",
+      "headword": "분석",
+      "reading": "bunseok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "анализ"
+      ],
+      "examples": [
+        {
+          "kr": "자료를 분석했어요.",
+          "ru": "Проанализировал данные."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "анализировать",
+          "value": "분석하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "종합 (комплексный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-잃다",
+      "headword": "잃다",
+      "reading": "ilda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "терять, лишаться"
+      ],
+      "examples": [
+        {
+          "kr": "길에서 지갑을 잃었어요.",
+          "ru": "Потерял кошелёк на улице."
+        }
+      ],
+      "notes": [
+        "произносится [일타]; 잃어요 [이러요]"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "되찾다 (вернуть)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-시외",
+      "headword": "시외",
+      "reading": "sioe",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "пригород, вне города"
+      ],
+      "examples": [
+        {
+          "kr": "시외버스를 타고 갔어요.",
+          "ru": "Поехал пригородным автобусом."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "междугородный автобус",
+          "value": "시외버스"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "시내 (центр города)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-한식집",
+      "headword": "한식집",
+      "reading": "hansikjip",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "ресторан корейской кухни (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "한식집에서 점심을 먹었어요.",
+          "ru": "Пообедал в ресторане корейской кухни."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "한식당 (ресторан корейской кухни)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-양력",
+      "headword": "양력",
+      "reading": "yangryeok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "солнечный календарь"
+      ],
+      "examples": [
+        {
+          "kr": "제 생일은 양력 3월 5일이에요.",
+          "ru": "Мой день рождения — 5 марта по солнечному календарю."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "음력 (лунный календарь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-산소",
+      "headword": "산소",
+      "reading": "sanso",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "кислород",
+        "могила (почтительно)"
+      ],
+      "examples": [
+        {
+          "kr": "높은 산에는 산소가 부족해요.",
+          "ru": "На высоких горах не хватает кислорода."
+        },
+        {
+          "kr": "추석에 조상의 산소에 갔어요.",
+          "ru": "На Чхусок ходили на могилы предков."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "성묘 (посещение могил предков)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-발신인",
+      "headword": "발신인",
+      "reading": "balsinin",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "отправитель (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "봉투에 발신인 이름을 쓰세요.",
+          "ru": "Напишите на конверте имя отправителя."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "보내는 사람 (отправитель)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-수신인",
+      "headword": "수신인",
+      "reading": "susinin",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "адресат, получатель (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "수신인 주소를 확인하세요.",
+          "ru": "Проверьте адрес получателя."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "받는 사람 (получатель)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-건강하시다",
+      "headword": "건강하시다",
+      "reading": "geonganghasida",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "здоровый (почтительно)"
+      ],
+      "examples": [
+        {
+          "kr": "할아버지는 늘 건강하세요.",
+          "ru": "Дедушка всегда здоров."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "편찮으시다 (болеть)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-병환",
+      "headword": "병환",
+      "reading": "byeonghwan",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "болезнь (почтительно)"
+      ],
+      "examples": [
+        {
+          "kr": "할머니의 병환이 깊으세요.",
+          "ru": "Бабушка тяжело больна."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "полезное слово",
+          "value": "편찮으시다 (болеть)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-신장",
+      "headword": "신장",
+      "reading": "sinjang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Части тела"
+      ],
+      "translations": [
+        "рост (формально)",
+        "почка"
+      ],
+      "examples": [
+        {
+          "kr": "신장과 체중을 재요.",
+          "ru": "Измеряют рост и вес."
+        },
+        {
+          "kr": "신장이 안 좋아서 병원에 다녀요.",
+          "ru": "У меня проблемы с почками, хожу в больницу."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "키 (рост)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-악마",
+      "headword": "악마",
+      "reading": "akma",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "демон, дьявол"
+      ],
+      "examples": [
+        {
+          "kr": "영화에 악마가 나와요.",
+          "ru": "В фильме появляется демон."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "천사 (ангел)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-붉다",
+      "headword": "붉다",
+      "reading": "bukda",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "красный (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "노을이 붉게 물들었어요.",
+          "ru": "Закат окрасился в красный цвет."
+        }
+      ],
+      "notes": [
+        "붉은 / 붉게 — формы определения и наречия"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "빨갛다 (красный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-명주",
+      "headword": "명주",
+      "reading": "myeongju",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "шёлк (шёлковая ткань)"
+      ],
+      "examples": [
+        {
+          "kr": "명주로 만든 한복이에요.",
+          "ru": "Это ханбок из шёлка."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "비단 (шёлк)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-소박하다",
+      "headword": "소박하다",
+      "reading": "sobakhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "скромный, простой"
+      ],
+      "examples": [
+        {
+          "kr": "소박한 식사를 했어요.",
+          "ru": "Скромно поужинал."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "화려하다 (яркий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-푸르다",
+      "headword": "푸르다",
+      "reading": "pureuda",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "синий, зелёный (о небе, траве, море)"
+      ],
+      "examples": [
+        {
+          "kr": "하늘이 푸르고 맑아요.",
+          "ru": "Небо синее и ясное."
+        }
+      ],
+      "notes": [
+        "러-неправильный: перед 어 добавляется 러:\n> 푸르다 → 푸르러요"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "파랗다 (синий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-남방",
+      "headword": "남방",
+      "reading": "nambang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "повседневная рубашка (разг.)",
+        "юг (南方)"
+      ],
+      "examples": [
+        {
+          "kr": "남방을 입고 출근했어요.",
+          "ru": "Пошёл на работу в рубашке."
+        },
+        {
+          "kr": "남방 지역은 날씨가 따뜻해요.",
+          "ru": "В южных районах тёплая погода."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "셔츠 (рубашка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-칙칙하다",
+      "headword": "칙칙하다",
+      "reading": "chikchikhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "тусклый, мрачный (о цвете)"
+      ],
+      "examples": [
+        {
+          "kr": "이 옷은 색이 너무 칙칙해요.",
+          "ru": "У этой одежды слишком тусклый цвет."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "화사하다 (яркий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-속",
+      "headword": "속",
+      "reading": "sok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "внутренняя часть, нутро",
+        "суть, душа"
+      ],
+      "examples": [
+        {
+          "kr": "가방 속에 지갑이 있어요.",
+          "ru": "Кошелёк внутри сумки."
+        },
+        {
+          "kr": "속으로는 걱정했어요.",
+          "ru": "В душе я беспокоился."
+        }
+      ],
+      "notes": [
+        "속이 상하다 — расстраиваться"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "겉 (внешняя сторона)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-평상시",
+      "headword": "평상시",
+      "reading": "pyeongsangsi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "обычное время, повседневность"
+      ],
+      "examples": [
+        {
+          "kr": "평상시에는 운동화를 신어요.",
+          "ru": "Обычно ношу кроссовки."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "평소 (обычно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-사복",
+      "headword": "사복",
+      "reading": "sabok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "гражданская одежда (не форма)"
+      ],
+      "examples": [
+        {
+          "kr": "주말에는 사복을 입어요.",
+          "ru": "По выходным ношу обычную одежду."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "교복 (школьная форма)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-우비",
+      "headword": "우비",
+      "reading": "ubi",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Одежда и внешний вид"
+      ],
+      "translations": [
+        "дождевик"
+      ],
+      "examples": [
+        {
+          "kr": "비가 와서 우비를 입었어요.",
+          "ru": "Пошёл дождь, и я надел дождевик."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "비옷 (дождевик)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-녹색",
+      "headword": "녹색",
+      "reading": "noksaek",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Цвета"
+      ],
+      "translations": [
+        "зелёный цвет (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "교통 신호가 녹색으로 바뀌었어요.",
+          "ru": "Сигнал светофора сменился на зелёный."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "초록색 (зелёный цвет)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-푸른색",
+      "headword": "푸른색",
+      "reading": "pureunsaek",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Цвета"
+      ],
+      "translations": [
+        "синий, зелёный (книжное, о цвете неба и травы)"
+      ],
+      "examples": [
+        {
+          "kr": "푸른색 바다가 보여요.",
+          "ru": "Видно синее море."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "파란색 (синий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-연하다",
+      "headword": "연하다",
+      "reading": "yeonhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "светлый, нежный, слабый (о цвете, вкусе)"
+      ],
+      "examples": [
+        {
+          "kr": "연한 분홍색이 잘 어울려요.",
+          "ru": "Светло-розовый вам очень идёт."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "짙다 (густой)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-결혼식장",
+      "headword": "결혼식장",
+      "reading": "gyeolhonsikjang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "место проведения свадьбы"
+      ],
+      "examples": [
+        {
+          "kr": "결혼식장에는 하객이 많았어요.",
+          "ru": "В зале на свадьбе было много гостей."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "예식장 (зал для свадебных церемоний)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-덕택에",
+      "headword": "덕택에",
+      "reading": "deoktaeke",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "благодаря (кому-то, книжнее 덕분에)"
+      ],
+      "examples": [
+        {
+          "kr": "선생님 덕택에 합격했어요.",
+          "ru": "Благодаря учителю сдал экзамен."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "덕분 (благодаря)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-회갑",
+      "headword": "회갑",
+      "reading": "hoegap",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Дни недели и даты"
+      ],
+      "translations": [
+        "60-летие (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "아버지의 회갑을 축하했어요.",
+          "ru": "Отметили 60-летие отца."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "환갑잔치 (празднование 60-летия)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-식물",
+      "headword": "식물",
+      "reading": "sikmul",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "растение"
+      ],
+      "examples": [
+        {
+          "kr": "집에서 식물을 키워요.",
+          "ru": "Выращиваю растения дома."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "ботанический сад",
+          "value": "식물원"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "동물 (животное)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-보도",
+      "headword": "보도",
+      "reading": "bodo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "тротуар",
+        "репортаж, сообщение в СМИ"
+      ],
+      "examples": [
+        {
+          "kr": "보도로 걸어가세요.",
+          "ru": "Идите по тротуару."
+        },
+        {
+          "kr": "그 사건은 신문에 보도됐어요.",
+          "ru": "Об этом случае написали в газете."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "сообщать (в СМИ)",
+          "value": "보도하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "인도 (Индия)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-호우",
+      "headword": "호우",
+      "reading": "hou",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "сильный дождь, ливень (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "전국에 호우 경보가 내려졌어요.",
+          "ru": "По всей стране объявлено штормовое предупреждение о ливнях."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "폭우 (ливень)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-타인",
+      "headword": "타인",
+      "reading": "tain",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "другой человек, посторонний (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "타인을 배려하는 마음이 중요해요.",
+          "ru": "Важно уважать других."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "남 (юг)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-강해지다",
+      "headword": "강해지다",
+      "reading": "ganghaejida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "усиливаться, становиться сильнее"
+      ],
+      "examples": [
+        {
+          "kr": "바람이 점점 강해져요.",
+          "ru": "Ветер всё усиливается."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "약해지다 (слабеть)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-얕아지다",
+      "headword": "얕아지다",
+      "reading": "yatajida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "мелеть, становиться мельче"
+      ],
+      "examples": [
+        {
+          "kr": "가뭄에 강물이 얕아졌어요.",
+          "ru": "Из-за засухи река обмелела."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "깊어지다 (становиться глубже)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-매매하다",
+      "headword": "매매하다",
+      "reading": "maemaehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "торговать, покупать и продавать (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "부동산을 매매했어요.",
+          "ru": "Совершил сделку с недвижимостью."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "купля-продажа",
+          "value": "매매"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "사고팔다 (покупать и продавать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-대여하다",
+      "headword": "대여하다",
+      "reading": "daeyeohada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "давать напрокат, одалживать (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "자전거를 대여했어요.",
+          "ru": "Взял велосипед напрокат."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "прокат",
+          "value": "대여"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "빌려주다 (одалживать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-권하다",
+      "headword": "권하다",
+      "reading": "gwonhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "предлагать, советовать, настойчиво предлагать"
+      ],
+      "examples": [
+        {
+          "kr": "의사가 운동을 권했어요.",
+          "ru": "Врач посоветовал заниматься спортом."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "권유하다 (предлагать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-빼다",
+      "headword": "빼다",
+      "reading": "ppaeda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "вынимать, вытаскивать",
+        "вычитать",
+        "сбрасывать (вес)"
+      ],
+      "examples": [
+        {
+          "kr": "주머니에서 손을 빼세요.",
+          "ru": "Выньте руки из карманов."
+        },
+        {
+          "kr": "십에서 삼을 빼면 칠이에요.",
+          "ru": "Десять минус три — семь."
+        },
+        {
+          "kr": "살을 빼려고 운동해요.",
+          "ru": "Занимаюсь, чтобы похудеть."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "꽂다 (вставлять)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-삭제하다",
+      "headword": "삭제하다",
+      "reading": "sakjehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "удалять, стирать"
+      ],
+      "examples": [
+        {
+          "kr": "필요 없는 파일을 삭제했어요.",
+          "ru": "Удалил ненужные файлы."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "удаление",
+          "value": "삭제"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "저장하다 (сохранять)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-차례",
+      "headword": "차례",
+      "reading": "charye",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "очередь, порядок",
+        "обряд поминовения предков в праздник"
+      ],
+      "examples": [
+        {
+          "kr": "제 차례가 오면 말할게요.",
+          "ru": "Когда придёт моя очередь, скажу."
+        },
+        {
+          "kr": "설날 아침에 차례를 지내요.",
+          "ru": "Утром на Новый год совершают обряд поминовения."
+        }
+      ],
+      "notes": [
+        "차례를 지내다 — совершать обряд поминовения"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "순서 (порядок)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-구입하다",
+      "headword": "구입하다",
+      "reading": "guiphada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "приобретать, покупать (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "노트북을 구입했어요.",
+          "ru": "Приобрёл ноутбук."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "구매하다 (покупать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-판매하다",
+      "headword": "판매하다",
+      "reading": "panmaehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "продавать"
+      ],
+      "examples": [
+        {
+          "kr": "이 가게는 신선한 채소를 판매해요.",
+          "ru": "Этот магазин продаёт свежие овощи."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "구매하다 (покупать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-면적",
+      "headword": "면적",
+      "reading": "myeonjeok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "площадь (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "이 집은 면적이 넓어요.",
+          "ru": "У этого дома большая площадь."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "넓이 (площадь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-어렵게",
+      "headword": "어렵게",
+      "reading": "eoryeopge",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "с трудом, трудно"
+      ],
+      "examples": [
+        {
+          "kr": "어렵게 설명하지 마세요.",
+          "ru": "Не объясняйте сложно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "쉽게 (легко)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-쉬이",
+      "headword": "쉬이",
+      "reading": "swii",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "легко (книжно)"
+      ],
+      "examples": [
+        {
+          "kr": "그 일은 쉬이 끝나지 않을 거예요.",
+          "ru": "Это дело быстро не закончится."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "쉽게 (легко)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-유익하다",
+      "headword": "유익하다",
+      "reading": "yuikhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "полезный (книжное)"
+      ],
+      "examples": [
+        {
+          "kr": "유익한 시간을 보냈어요.",
+          "ru": "Провёл время с пользой."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "도움이 되다 (быть полезным)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-더욱이",
+      "headword": "더욱이",
+      "reading": "deouki",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "более того, к тому же (книжно)"
+      ],
+      "examples": [
+        {
+          "kr": "날씨가 춥다. 더욱이 비까지 온다.",
+          "ru": "Холодно. К тому же ещё и дождь идёт."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "게다가 (к тому же)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-뺨",
+      "headword": "뺨",
+      "reading": "ppyam",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Части тела"
+      ],
+      "translations": [
+        "щека"
+      ],
+      "examples": [
+        {
+          "kr": "아기의 뺨이 부드러워요.",
+          "ru": "Щёчки малыша мягкие."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "볼 (щека)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-나아지다",
+      "headword": "나아지다",
+      "reading": "naajida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "улучшаться, становиться лучше"
+      ],
+      "examples": [
+        {
+          "kr": "건강이 많이 나아졌어요.",
+          "ru": "Здоровье сильно улучшилось."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "심해지다 (усугубляться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-항공권",
+      "headword": "항공권",
+      "reading": "hanggonggwon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "авиабилет (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "항공권을 예약했어요.",
+          "ru": "Забронировал авиабилет."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "비행기 표 (авиабилет)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-산만하다",
+      "headword": "산만하다",
+      "reading": "sanmanhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "рассеянный, неорганизованный"
+      ],
+      "examples": [
+        {
+          "kr": "아이가 산만해서 집중을 못 해요.",
+          "ru": "Ребёнок рассеянный и не может сосредоточиться."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "집중 (концентрация)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-출발",
+      "headword": "출발",
+      "reading": "chulbal",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "отправление, выезд"
+      ],
+      "examples": [
+        {
+          "kr": "기차의 출발 시간은 아홉 시예요.",
+          "ru": "Время отправления поезда — девять часов."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "отправляться",
+          "value": "출발하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "도착 (прибытие)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-초인종",
+      "headword": "초인종",
+      "reading": "choinjong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бытовые предметы"
+      ],
+      "translations": [
+        "дверной звонок"
+      ],
+      "examples": [
+        {
+          "kr": "초인종을 눌렀어요.",
+          "ru": "Нажал на дверной звонок."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "벨 (звонок)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-외제차",
+      "headword": "외제차",
+      "reading": "oejecha",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "иномарка (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "외제차를 타고 다녀요.",
+          "ru": "Езжу на иномарке."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "수입차 (импортный автомобиль)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-위험",
+      "headword": "위험",
+      "reading": "wiheom",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "опасность"
+      ],
+      "examples": [
+        {
+          "kr": "위험을 느끼면 바로 알려 주세요.",
+          "ru": "Если почувствуете опасность, сразу сообщите."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "опасный",
+          "value": "위험하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "안전 (безопасность)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-분쟁",
+      "headword": "분쟁",
+      "reading": "bunjaeng",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "конфликт, спор (книжно)"
+      ],
+      "examples": [
+        {
+          "kr": "두 회사 사이에 분쟁이 생겼어요.",
+          "ru": "Между двумя компаниями возник спор."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "다툼 (ссора)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-가까워지다",
+      "headword": "가까워지다",
+      "reading": "gakkawojida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "становиться ближе, сближаться"
+      ],
+      "examples": [
+        {
+          "kr": "그와 점점 가까워졌어요.",
+          "ru": "С ним мы постепенно сблизились."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "멀어지다 (отдаляться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-만족",
+      "headword": "만족",
+      "reading": "manjok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "удовлетворённость, удовольствие"
+      ],
+      "examples": [
+        {
+          "kr": "서비스에 만족해요.",
+          "ru": "Доволен обслуживанием."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "быть довольным",
+          "value": "만족하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "불만 (недовольство)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-서운하다",
+      "headword": "서운하다",
+      "reading": "seounhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "обидно, грустно (из-за невнимания)"
+      ],
+      "examples": [
+        {
+          "kr": "친구가 안 와서 서운했어요.",
+          "ru": "Было обидно, что друг не пришёл."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "섭섭하다 (обидно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-철저하다",
+      "headword": "철저하다",
+      "reading": "cheoljeohada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "тщательный, скрупулёзный"
+      ],
+      "examples": [
+        {
+          "kr": "그는 일을 철저하게 해요.",
+          "ru": "Он работает тщательно."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "тщательно",
+          "value": "철저히"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "소홀하다 (небрежный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-위반하다",
+      "headword": "위반하다",
+      "reading": "wibanhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "нарушать (правила, закон; формально)"
+      ],
+      "examples": [
+        {
+          "kr": "교통 법규를 위반했어요.",
+          "ru": "Нарушил правила дорожного движения."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "нарушение",
+          "value": "위반"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "어기다 (нарушать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-자연스럽다",
+      "headword": "자연스럽다",
+      "reading": "jayeonseureopda",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "естественный, непринуждённый"
+      ],
+      "examples": [
+        {
+          "kr": "그는 자연스럽게 행동했어요.",
+          "ru": "Он вёл себя естественно."
+        }
+      ],
+      "notes": [
+        "ㅂ-неправильный: перед гласной ㅂ → 우:\n> 자연스럽다 → 자연스러워요"
+      ],
+      "forms": [
+        {
+          "label": "естественно",
+          "value": "자연스럽게"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "어색하다 (неловкий)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-이해",
+      "headword": "이해",
+      "reading": "ihae",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "понимание"
+      ],
+      "examples": [
+        {
+          "kr": "이해가 안 돼요.",
+          "ru": "Не понимаю."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "понимать",
+          "value": "이해하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "오해 (недоразумение)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-육식",
+      "headword": "육식",
+      "reading": "yuksik",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "мясоедение, питание мясом"
+      ],
+      "examples": [
+        {
+          "kr": "고양이는 육식 동물이에요.",
+          "ru": "Кошка — хищное (мясоядное) животное."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "채식 (вегетарианское питание)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-조심스럽게",
+      "headword": "조심스럽게",
+      "reading": "josimseureopge",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "осторожно, бережно"
+      ],
+      "examples": [
+        {
+          "kr": "상자를 조심스럽게 옮겼어요.",
+          "ru": "Осторожно перенёс коробку."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "함부로 (как попало)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-뒷담화",
+      "headword": "뒷담화",
+      "reading": "dwitdamhwa",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "сплетни за спиной (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "친구의 뒷담화를 하지 마세요.",
+          "ru": "Не сплетничайте о друге за спиной."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "험담 (злословие)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-칭찬",
+      "headword": "칭찬",
+      "reading": "chingchan",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "похвала"
+      ],
+      "examples": [
+        {
+          "kr": "선생님께 칭찬을 받았어요.",
+          "ru": "Получил похвалу от учителя."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "хвалить",
+          "value": "칭찬하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "험담 (злословие)"
+        },
+        {
+          "label": "антоним",
+          "value": "꾸중 (выговор)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-능숙하다",
+      "headword": "능숙하다",
+      "reading": "neungsukhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "искусный, умелый"
+      ],
+      "examples": [
+        {
+          "kr": "그는 한국어를 능숙하게 해요.",
+          "ru": "Он свободно говорит по-корейски."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "서투르다 (неумелый)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-충돌하다",
+      "headword": "충돌하다",
+      "reading": "chungdolhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "сталкиваться, сталкиваться лбами (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "두 차가 교차로에서 충돌했어요.",
+          "ru": "Две машины столкнулись на перекрёстке."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "столкновение",
+          "value": "충돌"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "부딪치다 (сталкиваться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-고의로",
+      "headword": "고의로",
+      "reading": "gouiro",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "умышленно (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "그는 고의로 그렇게 했어요.",
+          "ru": "Он сделал это умышленно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "일부러 (нарочно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-전달하다",
+      "headword": "전달하다",
+      "reading": "jeondalhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "передавать, доводить (сообщение, вещь)"
+      ],
+      "examples": [
+        {
+          "kr": "이 편지를 선생님께 전달해 주세요.",
+          "ru": "Передайте, пожалуйста, это письмо учителю."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "передача",
+          "value": "전달"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "말을 전하다 (передать слова)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-실언",
+      "headword": "실언",
+      "reading": "sileon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "неосторожное высказывание, оговорка (книжно)"
+      ],
+      "examples": [
+        {
+          "kr": "그는 회의에서 실언을 했어요.",
+          "ru": "Он на совещании допустил неосторожное высказывание."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "말실수 (оговорка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-핵가족",
+      "headword": "핵가족",
+      "reading": "haekgajok",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Семья и обращения"
+      ],
+      "translations": [
+        "нуклеарная семья (родители с детьми)"
+      ],
+      "examples": [
+        {
+          "kr": "요즘은 핵가족이 많아요.",
+          "ru": "Сейчас много нуклеарных семей."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "대가족 (большая семья)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-안정되다",
+      "headword": "안정되다",
+      "reading": "anjeongdoeda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "стабилизироваться, становиться стабильным"
+      ],
+      "examples": [
+        {
+          "kr": "물가가 안정됐어요.",
+          "ru": "Цены стабилизировались."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "стабильность",
+          "value": "안정"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "불안하다 (тревожный)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-피고",
+      "headword": "피고",
+      "reading": "pigo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "ответчик, подсудимый"
+      ],
+      "examples": [
+        {
+          "kr": "피고는 재판에서 무죄를 주장했어요.",
+          "ru": "Подсудимый в суде настаивал на невиновности."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "원고 (рукопись)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-야단맞다",
+      "headword": "야단맞다",
+      "reading": "yadanmatda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "получить нагоняй (разг.)"
+      ],
+      "examples": [
+        {
+          "kr": "숙제를 안 해서 야단맞았어요.",
+          "ru": "Получил нагоняй за невыполненное домашнее задание."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "꾸중 (выговор)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-모어",
+      "headword": "모어",
+      "reading": "moeo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "родной язык (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "모어를 잊지 마세요.",
+          "ru": "Не забывайте родной язык."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "모국어 (родной язык)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-당기다",
+      "headword": "당기다",
+      "reading": "danggida",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "тянуть, притягивать"
+      ],
+      "examples": [
+        {
+          "kr": "문을 당겨서 여세요.",
+          "ru": "Откройте дверь, потянув на себя."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "밀다 (толкать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-상점",
+      "headword": "상점",
+      "reading": "sangjeom",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Магазины"
+      ],
+      "translations": [
+        "магазин, лавка",
+        "поощрительные баллы"
+      ],
+      "examples": [
+        {
+          "kr": "시장에는 작은 상점이 많아요.",
+          "ru": "На рынке много маленьких лавок."
+        },
+        {
+          "kr": "착한 일을 하면 상점을 받아요.",
+          "ru": "За хорошие поступки получают поощрительные баллы."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "벌점 (штрафные баллы)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-조리법",
+      "headword": "조리법",
+      "reading": "joribeop",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Продукты и еда"
+      ],
+      "translations": [
+        "способ приготовления, рецепт (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "조리법을 알려 주세요.",
+          "ru": "Скажите, пожалуйста, способ приготовления."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "요리법 (рецепт)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-양성",
+      "headword": "양성",
+      "reading": "yangseong",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "положительный результат (теста)",
+        "подготовка, воспитание (кадров)"
+      ],
+      "examples": [
+        {
+          "kr": "검사 결과가 양성이에요.",
+          "ru": "Результат теста положительный."
+        },
+        {
+          "kr": "전문가를 양성하는 학교예요.",
+          "ru": "Это школа, где готовят специалистов."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "음성 (голос)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-출구",
+      "headword": "출구",
+      "reading": "chulgu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "выход"
+      ],
+      "examples": [
+        {
+          "kr": "지하철 3번 출구에서 만나요.",
+          "ru": "Встретимся у выхода №3 метро."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "입구 (вход)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-퇴장하다",
+      "headword": "퇴장하다",
+      "reading": "toejanghada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "выходить, покидать (сцену, зал)"
+      ],
+      "examples": [
+        {
+          "kr": "선수들이 경기장에서 퇴장했어요.",
+          "ru": "Игроки покинули стадион."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "уход, удаление",
+          "value": "퇴장"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "입장하다 (входить)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-가해자",
+      "headword": "가해자",
+      "reading": "gahaeja",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "виновник, обидчик"
+      ],
+      "examples": [
+        {
+          "kr": "가해자는 피해자에게 사과했어요.",
+          "ru": "Виновник извинился перед пострадавшим."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "피해 (ущерб)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-독창",
+      "headword": "독창",
+      "reading": "dokchang",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "сольное пение",
+        "оригинальность (獨創)"
+      ],
+      "examples": [
+        {
+          "kr": "학교 대회에서 독창을 했어요.",
+          "ru": "На школьном конкурсе исполнил сольную песню."
+        },
+        {
+          "kr": "그의 그림은 독창이 있어요.",
+          "ru": "В его картинах есть оригинальность."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "оригинальный",
+          "value": "독창적"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "합창 (хор)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-올려다보다",
+      "headword": "올려다보다",
+      "reading": "olryeodaboda",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "смотреть вверх, смотреть снизу вверх"
+      ],
+      "examples": [
+        {
+          "kr": "하늘을 올려다봤어요.",
+          "ru": "Посмотрел на небо."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "내려다보다 (смотреть сверху вниз)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-주저하다",
+      "headword": "주저하다",
+      "reading": "jujeohada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "колебаться (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "주저하지 말고 질문하세요.",
+          "ru": "Не колеблясь, задавайте вопросы."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "망설이다 (колебаться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-부처님",
+      "headword": "부처님",
+      "reading": "bucheonim",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "Будда (почтительно)"
+      ],
+      "examples": [
+        {
+          "kr": "절에서 부처님께 절을 했어요.",
+          "ru": "В храме поклонился Будде."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "부처상 (статуя Будды)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-의논하다",
+      "headword": "의논하다",
+      "reading": "uinonhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "обсуждать, советоваться"
+      ],
+      "examples": [
+        {
+          "kr": "가족과 의논해서 결정했어요.",
+          "ru": "Посоветовался с семьёй и решил."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "обсуждение",
+          "value": "의논"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "상의하다 (советоваться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-새",
+      "headword": "새",
+      "reading": "sae",
+      "part_of_speech": "determiner",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "новый (перед существительным)"
+      ],
+      "examples": [
+        {
+          "kr": "새 신발을 샀어요.",
+          "ru": "Купил новую обувь."
+        }
+      ],
+      "notes": [
+        "используется только перед существительными"
+      ],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "옛 (старый)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-상세히",
+      "headword": "상세히",
+      "reading": "sangsehi",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "подробно, в деталях (формально)"
+      ],
+      "examples": [
+        {
+          "kr": "상세히 설명해 주세요.",
+          "ru": "Объясните подробно."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "자세히 (подробно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-대충",
+      "headword": "대충",
+      "reading": "daechung",
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Наречия (образа действия)"
+      ],
+      "translations": [
+        "кое-как, приблизительно, в общих чертах"
+      ],
+      "examples": [
+        {
+          "kr": "대충 알아요.",
+          "ru": "Знаю в общих чертах."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "자세히 (подробно)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-사유",
+      "headword": "사유",
+      "reading": "sayu",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "причина (формально)",
+        "размышление"
+      ],
+      "examples": [
+        {
+          "kr": "결석 사유를 적어 주세요.",
+          "ru": "Укажите причину отсутствия."
+        },
+        {
+          "kr": "그는 깊은 사유에 빠졌어요.",
+          "ru": "Он погрузился в глубокие размышления."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "사유서 (объяснительная записка)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-인색하다",
+      "headword": "인색하다",
+      "reading": "insaekhada",
+      "part_of_speech": "adjective",
+      "level_tag": null,
+      "categories": [
+        "Прилагательные"
+      ],
+      "translations": [
+        "скупой"
+      ],
+      "examples": [
+        {
+          "kr": "그는 돈에 인색해요.",
+          "ru": "Он скупой на деньги."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "아낌없다 (щедрый)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-구어",
+      "headword": "구어",
+      "reading": "gueo",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "разговорная речь"
+      ],
+      "examples": [
+        {
+          "kr": "이 표현은 구어에서만 써요.",
+          "ru": "Это выражение употребляют только в разговорной речи."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "음성언어 (устная речь)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-출국",
+      "headword": "출국",
+      "reading": "chulguk",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "выезд из страны"
+      ],
+      "examples": [
+        {
+          "kr": "출국 날짜가 정해졌어요.",
+          "ru": "Назначена дата выезда из страны."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "выезжать из страны",
+          "value": "출국하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "입국 (въезд в страну)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-키즈카페",
+      "headword": "키즈카페",
+      "reading": "kijeukape",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "детское кафе"
+      ],
+      "examples": [
+        {
+          "kr": "주말에 아이와 키즈카페에 갔어요.",
+          "ru": "На выходных ходил с ребёнком в детское кафе."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "노키즈존 («зона без детей»)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-의논",
+      "headword": "의논",
+      "reading": "uinon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "обсуждение, совет"
+      ],
+      "examples": [
+        {
+          "kr": "부모님과 의논이 필요해요.",
+          "ru": "Нужно посоветоваться с родителями."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "논의 (обсуждение)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-퇴근",
+      "headword": "퇴근",
+      "reading": "toegeun",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "уход с работы"
+      ],
+      "examples": [
+        {
+          "kr": "퇴근 시간에는 길이 막혀요.",
+          "ru": "В час пик пробки."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "уходить с работы",
+          "value": "퇴근하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "출근 (выход на работу)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-금지하다",
+      "headword": "금지하다",
+      "reading": "geumjihada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "запрещать"
+      ],
+      "examples": [
+        {
+          "kr": "이곳에서는 흡연을 금지해요.",
+          "ru": "Здесь курение запрещено."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "허락하다 (разрешать)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-서운해하다",
+      "headword": "서운해하다",
+      "reading": "seounhaehada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "обижаться, огорчаться"
+      ],
+      "examples": [
+        {
+          "kr": "친구가 서운해했어요.",
+          "ru": "Друг огорчился."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "섭섭해하다 (обижаться)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-승낙",
+      "headword": "승낙",
+      "reading": "seungnak",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "согласие, разрешение"
+      ],
+      "examples": [
+        {
+          "kr": "부모님의 승낙을 받았어요.",
+          "ru": "Получил согласие родителей."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "соглашаться, давать согласие",
+          "value": "승낙하다"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "거절 (отказ)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-수입",
+      "headword": "수입",
+      "reading": "suip",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Бизнес и экономика"
+      ],
+      "translations": [
+        "доход, заработок",
+        "импорт"
+      ],
+      "examples": [
+        {
+          "kr": "이번 달 수입이 줄었어요.",
+          "ru": "В этом месяце доходы сократились."
+        },
+        {
+          "kr": "한국은 석유를 수입해요.",
+          "ru": "Корея импортирует нефть."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "импортировать",
+          "value": "수입하다"
+        },
+        {
+          "label": "импортный автомобиль",
+          "value": "수입차"
+        }
+      ],
+      "related": [
+        {
+          "label": "антоним",
+          "value": "지출 (расход)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-할인하다",
+      "headword": "할인하다",
+      "reading": "halinhada",
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "давать скидку, снижать цену"
+      ],
+      "examples": [
+        {
+          "kr": "이번 주에는 모든 옷을 할인해요.",
+          "ru": "На этой неделе вся одежда со скидкой."
+        }
+      ],
+      "notes": [],
+      "forms": [
+        {
+          "label": "скидка",
+          "value": "할인"
+        }
+      ],
+      "related": [
+        {
+          "label": "синоним",
+          "value": "세일하다 (устраивать распродажу)"
+        }
+      ]
+    },
+    {
+      "external_id": "word-지난번",
+      "headword": "지난번",
+      "reading": "jinanbeon",
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Временные наречия"
+      ],
+      "translations": [
+        "прошлый раз, в прошлый раз"
+      ],
+      "examples": [
+        {
+          "kr": "지난번에 만났던 친구를 오늘 또 만났어요.",
+          "ru": "Сегодня снова встретил друга, с которым виделся в прошлый раз."
+        }
+      ],
+      "notes": [
+        "состоит из следующих слов - 지난 (прошлый) + 번 (раз)"
+      ],
+      "forms": [],
+      "related": []
     }
   ]
 }
