@@ -116,7 +116,7 @@ const POS_DUPLICATE_CATEGORIES = new Set([
   "Прилагательные",
 ]);
 
-const RELATION_LABELS = new Set(["антоним", "синоним"]);
+const RELATION_LABELS = new Set(["антоним", "синоним", "полезное слово"]);
 
 function WordCard({
   word,
@@ -142,6 +142,7 @@ function WordCard({
   const reading = word.reading ? formatReading(word.reading) : "";
   const antonyms = word.word_forms.filter((f) => f.label === "антоним");
   const synonyms = word.word_forms.filter((f) => f.label === "синоним");
+  const usefulWords = word.word_forms.filter((f) => f.label === "полезное слово");
   const realForms = word.word_forms.filter(
     (f) => !RELATION_LABELS.has(f.label ?? ""),
   );
@@ -158,12 +159,20 @@ function WordCard({
               glossIndex === -1 ? rel.value : rel.value.slice(0, glossIndex);
             const gloss =
               glossIndex === -1 ? "" : rel.value.slice(glossIndex + 2, -1);
+            if (symbol === "") {
+              return (
+                <li key={i}>
+                  <span className="kr">{relWord}</span>
+                  {gloss && ` — ${gloss}`}
+                </li>
+              );
+            }
             return (
               <li key={i}>
                 <span className="kr">{word.headword}</span>
                 {headGloss && ` (${headGloss})`} {symbol}{" "}
                 <span className="kr">{relWord}</span>
-                {gloss && ` — ${gloss}`}
+                {gloss && ` (${gloss})`}
               </li>
             );
           })}
@@ -178,6 +187,7 @@ function WordCard({
     realForms.length > 0 ||
     antonyms.length > 0 ||
     synonyms.length > 0 ||
+    usefulWords.length > 0 ||
     visibleCategoryNames.length > 0 ||
     Boolean(posLabel);
 
@@ -243,13 +253,26 @@ function WordCard({
       )}
       {relationSection("Антонимы", antonyms, "↔")}
       {relationSection("Синонимы", synonyms, "=")}
+      {relationSection("Полезные слова", usefulWords, "")}
       {word.word_notes.length > 0 && (
         <div className={styles.detailSection}>
           <span className={styles.detailLabel}>Примечания</span>
-          <ul className={styles.notes}>
-            {word.word_notes.map((note, i) => (
-              <li key={i}>{note.text}</li>
-            ))}
+          <ul className={styles.noteList}>
+            {word.word_notes.map((note, i) => {
+              const [main, ...subs] = note.text.split("\n- ");
+              return (
+                <li key={i}>
+                  {main}
+                  {subs.length > 0 && (
+                    <ul className={styles.subNotes}>
+                      {subs.map((sub, j) => (
+                        <li key={j}>{sub}</li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

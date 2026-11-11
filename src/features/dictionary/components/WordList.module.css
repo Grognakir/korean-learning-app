@@ -343,6 +343,26 @@ div.cardHeader {
   line-height: 1.4;
 }
 
+.noteList {
+  list-style: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--kr-font-md);
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+.subNotes {
+  list-style: circle;
+  padding-left: 20px;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .notes,
 .forms {
   list-style: none;

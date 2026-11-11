@@ -205,3 +205,37 @@ it("показывает разделы «Формы», «Антонимы», «
   expect(screen.queryByText("Синонимы")).toBeNull();
   expect(screen.queryByText("Примечания")).toBeNull();
 });
+
+it("показывает примечания маркированным списком с подсписком и «Полезные слова»", async () => {
+  const words: Word[] = [
+    {
+      id: "1", headword: "가구점", reading: null,
+      part_of_speech: "noun", owner_user_id: null,
+      translations: [{ text: "мебельный магазин" }],
+      word_categories: [], word_examples: [],
+      word_notes: [{ text: "ㄷ-неправильный: 걸어요\n- перед согласной без изменений: 걷고" }],
+      word_forms: [{ label: "полезное слово", value: "이케아 (IKEA)" }],
+    },
+  ];
+  createClient.mockImplementation(() => ({
+    from: () => {
+      const query = {
+        select: () => query, eq: () => query, ilike: () => query, order: () => query,
+        range: () => query, or: () => query, is: () => query, limit: () => query,
+        then: (resolve: (value: unknown) => void) =>
+          Promise.resolve({ data: words, count: words.length, error: null }).then(resolve),
+      };
+      return query;
+    },
+  }));
+  render(
+    <DictionaryCacheProvider>
+      <WordList categories={[]} userId={null} onWordChanged={() => {}} />
+    </DictionaryCacheProvider>,
+  );
+  await waitFor(() => expect(screen.getByText("가구점")).toBeDefined());
+  fireEvent.click(screen.getByText("가구점"));
+  expect(screen.getByText("Полезные слова")).toBeDefined();
+  expect(screen.getByText("이케아")).toBeDefined();
+  expect(screen.getByText("перед согласной без изменений: 걷고")).toBeDefined();
+});
