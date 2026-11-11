@@ -332,6 +332,16 @@ div.cardHeader {
   font-size: 13px;
 }
 
+.meanings {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--kr-font-md);
+  color: var(--ink);
+  line-height: 1.4;
+}
+
 .notes,
 .forms {
   list-style: none;

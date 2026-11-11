@@ -107,3 +107,54 @@ it("возвращается на доступную страницу после
   expect(screen.getByRole("button", { name: "1" }).getAttribute("aria-current")).toBe("page");
   expect(screen.queryByText("word-11")).toBeNull();
 });
+
+it("показывает раздел «Значения» только у слов с несколькими значениями", async () => {
+  const words: Word[] = [
+    {
+      id: "1", headword: "부르다", reading: null,
+      part_of_speech: "verb", owner_user_id: null,
+      translations: [{ text: "звать, вызывать" }, { text: "петь" }],
+      word_categories: [], word_examples: [], word_notes: [], word_forms: [],
+    },
+    {
+      id: "2", headword: "가상", reading: null,
+      part_of_speech: "noun", owner_user_id: null,
+      translations: [{ text: "вымысел, воображаемое, виртуальное" }],
+      word_categories: [], word_examples: [{ kr: "이건 가상현실이에요.", ru: "Это виртуальная реальность." }],
+      word_notes: [], word_forms: [],
+    },
+  ];
+  createClient.mockImplementation(() => ({
+    from: () => {
+      const query = {
+        select: () => query,
+        eq: () => query,
+        ilike: () => query,
+        order: () => query,
+        range: () => query,
+        or: () => query,
+        is: () => query,
+        limit: () => query,
+        then: (resolve: (value: unknown) => void) =>
+          Promise.resolve({ data: words, count: words.length, error: null }).then(resolve),
+      };
+      return query;
+    },
+  }));
+
+  render(
+    <DictionaryCacheProvider>
+      <WordList categories={[]} userId={null} onWordChanged={() => {}} />
+    </DictionaryCacheProvider>,
+  );
+  await waitFor(() => expect(screen.getByText("부르다")).toBeDefined());
+  expect(screen.getByText("звать, вызывать; петь")).toBeDefined();
+
+  fireEvent.click(screen.getByText("부르다"));
+  expect(screen.getAllByText("Значения")).toHaveLength(1);
+  expect(screen.getAllByText("петь")).toHaveLength(1);
+
+  fireEvent.click(screen.getByText("가상"));
+  expect(screen.queryAllByText("Значения")).toHaveLength(0);
+  expect(screen.getByText("Примеры")).toBeDefined();
+});

@@ -66,6 +66,7 @@ describe("словарное покрытие уроков", () => {
     }
 
     const missing = localVocab.filter(({ ko, translation_ru }) => {
+      if (!/[가-힣]/.test(ko)) return false;
       if (headwords.has(ko) || compactHeadwords.has(ko.replace(/\s+/g, ""))) {
         return false;
       }

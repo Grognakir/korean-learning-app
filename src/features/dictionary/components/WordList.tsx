@@ -129,7 +129,8 @@ function WordCard({
   onToggle: () => void;
   onEdit: (() => void) | null;
 }) {
-  const translations = word.translations.map((t) => t.text).join(", ");
+  const meanings = word.translations.map((t) => t.text);
+  const translations = meanings.join("; ");
   const categoryNames = word.word_categories
     .map((wc) => wc.categories?.name)
     .filter(Boolean) as string[];
@@ -156,6 +157,7 @@ function WordCard({
   }, [expanded, showNotesDivider, word.id]);
 
   const hasDetails =
+    meanings.length > 1 ||
     word.word_examples.length > 0 ||
     word.word_notes.length > 0 ||
     realForms.length > 0 ||
@@ -183,6 +185,16 @@ function WordCard({
               {name}
             </span>
           ))}
+        </div>
+      )}
+      {meanings.length > 1 && (
+        <div className={styles.detailSection}>
+          <span className={styles.detailLabel}>Значения</span>
+          <ul className={styles.meanings}>
+            {meanings.map((meaning, i) => (
+              <li key={i}>{meaning}</li>
+            ))}
+          </ul>
         </div>
       )}
       {word.word_examples.length > 0 && (
@@ -450,6 +462,7 @@ export function WordList({
       )
       .order("headword", { ascending: sortDir === "asc" })
       .order("id", { ascending: true })
+      .order("external_id", { referencedTable: "translations", ascending: true })
       .range((page - 1) * pageSize, page * pageSize - 1);
 
     if (debouncedQuery) {

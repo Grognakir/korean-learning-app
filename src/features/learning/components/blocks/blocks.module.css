@@ -282,6 +282,11 @@
   white-space: pre-line;
 }
 
+.struckText {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
 .emphasized {
   color: var(--blue);
   font-weight: 700;

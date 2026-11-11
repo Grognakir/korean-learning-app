@@ -27,6 +27,32 @@ type SourceWord = {
 };
 type SourceFile = { categories: string[]; words: SourceWord[] };
 
+// Удаляет строки слова с external_id вида `<префикс>N`, которых нет в новом
+// наборе: иначе после сокращения числа значений/примеров/примечаний в
+// базе остаются старые строки. Строки без external_id (добавленные
+// пользователем вручную) не трогаем — они не подходят под like.
+async function pruneStale(
+  table: "translations" | "word_examples" | "word_notes" | "word_forms",
+  wordId: string,
+  prefix: string,
+  keep: string[],
+) {
+  let request = supabase
+    .from(table)
+    .delete()
+    .eq("word_id", wordId)
+    .like("external_id", `${prefix}%`);
+  if (keep.length > 0) {
+    request = request.not(
+      "external_id",
+      "in",
+      `(${keep.map((id) => `"${id.replaceAll('"', '\\"')}"`).join(",")})`,
+    );
+  }
+  const { error } = await request;
+  if (error) throw error;
+}
+
 async function main() {
   const filePath = process.argv[2];
   if (!filePath) {
@@ -48,14 +74,15 @@ async function main() {
       .split(",")
       .map((s) => s.trim())
       .filter(Boolean);
-    const byHeadword = new Map(source.words.map((w) => [w.headword, w]));
-    const notFound = requested.filter((h) => !byHeadword.has(h));
+    const known = new Set(source.words.map((w) => w.headword));
+    const notFound = requested.filter((h) => !known.has(h));
     if (notFound.length > 0) {
       throw new Error(
         `--only: не найдены в ${filePath}: ${notFound.join(", ")} (опечатка? слово ещё не добавлено в файл?)`,
       );
     }
-    words = requested.map((h) => byHeadword.get(h)!);
+    const wanted = new Set(requested);
+    words = source.words.filter((w) => wanted.has(w.headword));
   }
 
   console.log(
@@ -133,6 +160,12 @@ async function main() {
       );
       if (error) throw error;
     }
+    await pruneStale(
+      "translations",
+      wordRow.id,
+      `${word.external_id}-tr-`,
+      word.translations.map((_, i) => `${word.external_id}-tr-${i}`),
+    );
 
     if (word.examples.length > 0) {
       const { error } = await supabase.from("word_examples").upsert(
@@ -146,6 +179,12 @@ async function main() {
       );
       if (error) throw error;
     }
+    await pruneStale(
+      "word_examples",
+      wordRow.id,
+      `${word.external_id}-ex-`,
+      word.examples.map((_, i) => `${word.external_id}-ex-${i}`),
+    );
 
     if (word.notes.length > 0) {
       const { error } = await supabase.from("word_notes").upsert(
@@ -158,6 +197,12 @@ async function main() {
       );
       if (error) throw error;
     }
+    await pruneStale(
+      "word_notes",
+      wordRow.id,
+      `${word.external_id}-note-`,
+      word.notes.map((_, i) => `${word.external_id}-note-${i}`),
+    );
 
     // related (антонимы/синонимы) хранится в той же таблице, что и формы
     // словоизменения (общая гибкая структура label/value), но это не
@@ -179,6 +224,12 @@ async function main() {
       );
       if (error) throw error;
     }
+    await pruneStale(
+      "word_forms",
+      wordRow.id,
+      `${word.external_id}-form-`,
+      forms.map((_, i) => `${word.external_id}-form-${i}`),
+    );
   }
 
   console.log(`Готово: ${words.length} слов импортировано.`);

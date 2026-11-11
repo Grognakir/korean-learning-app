@@ -43,6 +43,26 @@
               {
                 "ko": "규칙",
                 "translation_ru": "правило"
+              },
+              {
+                "ko": "설명",
+                "translation_ru": "объяснение, пояснение, описание"
+              },
+              {
+                "ko": "이해하다",
+                "translation_ru": "понимать, постигать, входить в положение"
+              },
+              {
+                "ko": "싫다",
+                "translation_ru": "не нравится, не хочу"
+              },
+              {
+                "ko": "싫다",
+                "translation_ru": "не нравится, не хочу"
+              },
+              {
+                "ko": "묻다",
+                "translation_ru": "спрашивать, узнавать"
               }
             ],
             "grammar_vocab": [
@@ -131,22 +151,6 @@
           ]
         },
         {
-          "id": "hint-lesson-14-preparation-2",
-          "toc_section": "준비하기 2",
-          "type": "hint",
-          "hint_kind": "expression",
-          "related_text_ref": "text-consult-dialogue",
-          "label_ko": "표현",
-          "label_ru": "Выражения",
-          "items": [
-            {
-              "kind": "phrase",
-              "text": "약속을 지키다",
-              "translation_ru": "держать слово, выполнять обещание"
-            }
-          ]
-        },
-        {
           "type": "text",
           "id": "text-class-rules",
           "toc_section": "준비하기 2",
@@ -173,7 +177,9 @@
             },
             {
               "text": "3. 교실에서 한국어만 쓴다. ⇒ 수업 시간에 한국어로만 말한다.",
-              "translation_ru": "В книге первая часть («교실에서 한국어만 쓴다») зачёркнута и заменена на вторую.",
+              "struck": [
+                "교실에서 한국어만 쓴다."
+              ],
               "emphasized": [
                 "쓴다",
                 "한다"
@@ -184,6 +190,27 @@
               "emphasized": [
                 "둔다"
               ]
+            }
+          ]
+        },
+        {
+          "id": "hint-lesson-14-preparation-2",
+          "toc_section": "준비하기 2",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-rule-dialogue",
+          "label_ko": "표현",
+          "label_ru": "Выражения",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "약속을 지키다",
+              "translation_ru": "держать слово, выполнять обещание"
+            },
+            {
+              "kind": "phrase",
+              "text": "어떻게 하면 좋겠습니까?",
+              "translation_ru": "В таком случае как нам лучше поступить?"
             }
           ]
         }

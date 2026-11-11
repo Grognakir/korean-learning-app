@@ -32,15 +32,39 @@ function renderLineText(
   vocabItems: VocabItem[] | undefined,
   seenVocab: Set<string>,
 ) {
+  const render = (text: string, keyPrefix: string) =>
+    highlightDialogueSpeakers(
+      text,
+      vocabItems,
+      keyPrefix,
+      seenVocab,
+      line.emphasized ?? [],
+      styles.emphasized,
+    );
+  const struck = line.struck?.filter((fragment) => line.text.includes(fragment)) ?? [];
+  if (!struck.length) {
+    return <span className={`${styles.lineText} kr`}>{render(line.text, "")}</span>;
+  }
+  const parts: { text: string; struck: boolean }[] = [];
+  let from = 0;
+  for (const fragment of struck) {
+    const at = line.text.indexOf(fragment, from);
+    if (at === -1) continue;
+    if (at > from) parts.push({ text: line.text.slice(from, at), struck: false });
+    parts.push({ text: fragment, struck: true });
+    from = at + fragment.length;
+  }
+  if (from < line.text.length) parts.push({ text: line.text.slice(from), struck: false });
   return (
     <span className={`${styles.lineText} kr`}>
-      {highlightDialogueSpeakers(
-        line.text,
-        vocabItems,
-        "",
-        seenVocab,
-        line.emphasized ?? [],
-        styles.emphasized,
+      {parts.map((part, i) =>
+        part.struck ? (
+          <s key={i} className={styles.struckText}>
+            {render(part.text, `s${i}-`)}
+          </s>
+        ) : (
+          <span key={i}>{render(part.text, `s${i}-`)}</span>
+        ),
       )}
     </span>
   );
