@@ -213,7 +213,7 @@ it("показывает примечания маркированным спи�
       part_of_speech: "noun", owner_user_id: null,
       translations: [{ text: "мебельный магазин" }],
       word_categories: [], word_examples: [],
-      word_notes: [{ text: "ㄷ-неправильный: 걸어요\n- перед согласной без изменений: 걷고" }],
+      word_notes: [{ text: "ㄷ-неправильный:\n> 걷다 → 걸어요\n- перед согласной без изменений: 걷고" }],
       word_forms: [{ label: "полезное слово", value: "이케아 (IKEA)" }],
     },
   ];
@@ -238,4 +238,5 @@ it("показывает примечания маркированным спи�
   expect(screen.getByText("Полезные слова")).toBeDefined();
   expect(screen.getByText("이케아")).toBeDefined();
   expect(screen.getByText("перед согласной без изменений: 걷고")).toBeDefined();
+  expect(screen.getByText("걷다 → 걸어요")).toBeDefined();
 });

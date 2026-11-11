@@ -259,14 +259,25 @@ function WordCard({
           <span className={styles.detailLabel}>Примечания</span>
           <ul className={styles.noteList}>
             {word.word_notes.map((note, i) => {
-              const [main, ...subs] = note.text.split("\n- ");
+              const [main, ...rest] = note.text.split("\n");
+              const samples = rest.filter((line) => line.startsWith("> "));
+              const subs = rest.filter((line) => line.startsWith("- "));
               return (
                 <li key={i}>
                   {main}
+                  {samples.length > 0 && (
+                    <div className={styles.noteSamples}>
+                      {samples.map((line, j) => (
+                        <span key={j} className={`${styles.noteSample} kr`}>
+                          {line.slice(2)}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   {subs.length > 0 && (
                     <ul className={styles.subNotes}>
                       {subs.map((sub, j) => (
-                        <li key={j}>{sub}</li>
+                        <li key={j}>{sub.slice(2)}</li>
                       ))}
                     </ul>
                   )}

@@ -354,6 +354,21 @@ div.cardHeader {
   line-height: 1.4;
 }
 
+.noteSamples {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+  list-style: none;
+}
+
+.noteSample {
+  font-size: var(--kr-font-md);
+  color: var(--ink);
+  padding-left: 10px;
+  border-left: 2px solid var(--line);
+}
+
 .subNotes {
   list-style: circle;
   padding-left: 20px;
