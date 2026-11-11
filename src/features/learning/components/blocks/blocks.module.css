@@ -276,6 +276,17 @@
   color: var(--blue);
 }
 
+/* Текст и значок «i» — один инлайн-поток: при переносе строки значок стоит
+   сразу после последнего слова, а не у правого края карточки. */
+.lineBody {
+  min-width: 0;
+}
+
+.lineBody .labelInfo {
+  margin-left: 1px;
+  vertical-align: -1px;
+}
+
 .lineText {
   font-size: var(--kr-font-md);
   line-height: 1.5;

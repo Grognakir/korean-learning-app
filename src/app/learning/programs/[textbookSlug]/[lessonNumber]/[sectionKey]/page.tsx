@@ -7,6 +7,7 @@ import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
 import { buildLessonNav, findLessonToc } from "@/features/learning/lessonNav";
 import { LessonSticker } from "@/features/lessonSticker/LessonSticker";
 import { resolveBlockAssets, textbookAssetPrefix } from "@/features/learning/resolveBlockAssets";
+import { resolveBlockVocab } from "@/features/learning/resolveBlockVocab";
 import type { Block, TextbookPageRow } from "@/features/learning/types";
 import styles from "../lesson.module.css";
 import { SectionNav } from "./SectionNav";
@@ -118,7 +119,10 @@ export default async function LessonSectionPage({
     );
   }
 
-  const blocks = await resolveBlockAssets(orderedBlocks, textbookAssetPrefix(textbookSlug));
+  const blocks = await resolveBlockVocab(
+    supabase,
+    await resolveBlockAssets(orderedBlocks, textbookAssetPrefix(textbookSlug)),
+  );
 
   return (
     <div className={styles.pageShell}>

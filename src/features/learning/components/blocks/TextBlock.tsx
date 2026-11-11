@@ -163,8 +163,10 @@ export function TextBlock({
               {line.speaker && (
                 <span className={`${speakerClassName(line.speaker)} kr`}>{line.speaker}:</span>
               )}
-              {renderLineText(line, vocabItems, seenVocab)}
-              {line.translation_ru && <LabelInfo translation={line.translation_ru} />}
+              <span className={styles.lineBody}>
+                {renderLineText(line, vocabItems, seenVocab)}
+                {line.translation_ru && <LabelInfo translation={line.translation_ru} />}
+              </span>
             </p>
           ))}
         </div>
