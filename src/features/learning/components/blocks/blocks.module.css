@@ -2114,3 +2114,38 @@
   text-underline-offset: 2px;
   text-decoration-color: color-mix(in srgb, var(--stone) 70%, transparent);
 }
+
+/* 〈 〉: узкая шевронная скобка вместо полноширинного глифа шрифта; сам
+   символ скрыт за границей, но остаётся в тексте (копирование, поиск). */
+.angleBracket {
+  position: relative;
+  display: inline-block;
+  width: 0.42em;
+  height: 0.9em;
+  vertical-align: -0.12em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: -9999px;
+}
+
+.angleBracket::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.3em;
+  height: 0.3em;
+  box-sizing: border-box;
+}
+
+.angleOpen::before {
+  border-left: 1.4px solid currentColor;
+  border-bottom: 1.4px solid currentColor;
+  transform: translate(-30%, -50%) rotate(45deg);
+}
+
+.angleClose::before {
+  border-right: 1.4px solid currentColor;
+  border-top: 1.4px solid currentColor;
+  transform: translate(-70%, -50%) rotate(45deg);
+}

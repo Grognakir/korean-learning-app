@@ -7,6 +7,7 @@ import type {
 import { LabelInfo } from "./LabelInfo";
 import { HintSection } from "./HintSection";
 import { OpenTemplateDialogue } from "./OpenTemplateDialogue";
+import { renderAngleBrackets } from "./angleBrackets";
 import { speakerClassName } from "./speakerClassName";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
@@ -131,7 +132,7 @@ export function TextBlock({
           <span
             className={`${block.exercise_title ? styles.prompt : styles.dialogueTitle} ${isInvitation ? styles.invitationTitle : ""} kr`}
           >
-            {block.title}
+            {renderAngleBrackets(block.title)}
           </span>
           {block.title_ru && <LabelInfo translation={block.title_ru} />}
         </span>
