@@ -146,6 +146,12 @@
 - Canonical img/ и art-sources/inha-lessons/lesson-13/illustrations/04-listening.png синхронизированы; промпт, хеш, проверки и превью обновлены без лишних версий. Общая проверка ресурсов: issues:[]. Правка ждёт оценки пользователя.
 - Локальное Storage textbook-assets/inha_book_2/lesson_13/illustration_3_asking_back_clothes.png обновлено; скачивание побайтово совпадает. Ссылка раздела не менялась. Код, production, коммит и публикация не затрагивались.
 
+### 2026-11-11 — Выкладка: слова 14과 и подсказка «약속을 지키다» (после подтягивания свежей ветки)
+
+- Локальная `main` отставала на 8 коммитов (облачная сессия: подсветка грамматики в диалогах 2급, записи журнала и `5-pending-edits.md`). Подтянуто `git pull --ff-only`; правки пользователя в 2급 14과 `01-preparation-1.json` и `02-preparation-2.json` сохранены через `git stash` / `pop` без конфликтов.
+- Правки пользователя: в `vocab_list` 14과 добавлены `넣다`, `계획표`, `강`, `잡다`, `지나다`, `주차하다`, `다양하다`, `변하다`, `성격`; в объяснении `grammar-2` («N에 따라(서)») подробные переводы слов-подсказок и новые `차이가 있다`, `바뀌다`, `다양하다`; в `02-preparation-2.json` блок `topic_vocab` → `text_vocab` и подсказка `hint-lesson-14-preparation-2` («약속을 지키다» — «держать слово, выполнять обещание»).
+- В `words.json` добавлены `계획표` и `주차하다` (тест покрытия словаря). Локально импортированы слова и 14과.
+
 ### 2026-11-11 — Выкладка: чистые шаблоны, варианты ответов, выделение слога целиком
 
 - **Коммит** `236bb2c` запушен в `origin/main`. **Vercel:** статус GitHub `Vercel`: success; `https://korean-learning-gray.vercel.app/login` — 200, `/` — 307. В коммит вошли: правки упражнений подготовки 1급 1–14 и 2급 1–16, удаление `jamo_marks`/`JamoMarkedLine`/`.jamoChip`, тесты (`grammar-exercise-templates.test.tsx`, обновлены `lesson-04-illustrations`, `strict-mode-vocab`), `복도` в `words.json`, записи журнала. Не вошли: `content/reference/art-sources/`, `inha_workbook_photo/`, `illustration_1_background_v4.png`, `docs/dev_docs/design/solomon-os/ref/`, `public/images/solomon-os/apps/generation-prompts.json`, `scripts/__pycache__/`.

@@ -61426,6 +61426,40 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-계획표",
+      "headword": "계획표",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Учёба"
+      ],
+      "translations": [
+        "план-таблица, график, расписание планов"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-주차하다",
+      "headword": "주차하다",
+      "reading": null,
+      "part_of_speech": "verb",
+      "level_tag": null,
+      "categories": [
+        "Глаголы"
+      ],
+      "translations": [
+        "парковать (машину), парковаться"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }

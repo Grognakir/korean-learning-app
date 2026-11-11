@@ -31,7 +31,7 @@
             }
           ],
           "extra_words": {
-            "topic_vocab": [
+            "text_vocab": [
               {
                 "ko": "약속하다",
                 "translation_ru": "обещать, договариваться"
@@ -127,6 +127,22 @@
             {
               "speaker": "자르갈",
               "text": "좋아요. 수업 시간에는 한국말을 사용하고 쉬는 시간에 모국어를 사용하기로 합시다."
+            }
+          ]
+        },
+        {
+          "id": "hint-lesson-14-preparation-2",
+          "toc_section": "준비하기 2",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-consult-dialogue",
+          "label_ko": "표현",
+          "label_ru": "Выражения",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "약속을 지키다",
+              "translation_ru": "держать слово, выполнять обещание"
             }
           ]
         },
