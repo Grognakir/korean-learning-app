@@ -82,19 +82,19 @@ it("оставляет неизменяемые слова снаружи, а ч
   const exercise3b = blocks.find((item) => item.id === "exercise-3b");
   const exercise3c = blocks.find((item) => item.id === "exercise-3c");
 
-  expect(exercise3a?.template).toEqual(["가: {0} {1}보다 {2}."]);
-  expect(exercise3a?.items?.[0].answers).toEqual(["자동차가", "작년", "많아졌어요"]);
+  expect(exercise3a?.template).toEqual(["가: {0} {1} {2}."]);
+  expect(exercise3a?.items?.[0].answers).toEqual(["자동차가", "작년보다", "많아졌어요"]);
 
-  expect(exercise3b?.template).toEqual(["가: {0} 어때요?", "나: {1} 점점 {2}."]);
+  expect(exercise3b?.template).toEqual(["가: {0}?", "나: {1} {2}."]);
   expect(exercise3b?.items?.[1].answers).toEqual([
-    "하늘에 구름이",
-    "하늘에 구름이",
+    "하늘에 구름이 어때요",
+    "하늘에 구름이 점점",
     "많아지고 있어요",
   ]);
 
-  expect(exercise3c?.template).toEqual(["가: {0} 걱정이에요.", "나: {1} {2}."]);
+  expect(exercise3c?.template).toEqual(["가: {0}.", "나: {1} {2}."]);
   expect(exercise3c?.items?.[2].answers).toEqual([
-    "한국어가 어려워져서",
+    "한국어가 어려워져서 걱정이에요",
     "연습을 많이 하면",
     "쉬워질 거예요",
   ]);

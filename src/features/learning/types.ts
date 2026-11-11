@@ -33,8 +33,6 @@ export type TextLine = {
   speaker?: string;
   text: string;
   emphasized?: string[];
-  /** Рамка с буквой после слога, в который слилась 받침-буква окончания (질 + ㄹ). */
-  jamo_marks?: { text: string; jamo: string }[];
   /** Перевод именно этой строки (например пронумерованный вопрос "1)
    * ...") через значок "i" — отдельно от TextBlock.vocab (переводы
    * отдельных слов) и TextBlock.title_ru (перевод заголовка). */
@@ -314,9 +312,6 @@ export type GrammarExerciseBlock = ContentBlockBase & {
     dialogue: string[];
     emphasis?: string[][];
     vocab?: { ko: string; translation_ru: string }[];
-    /** 받침, которое нельзя подкрасить внутри слога (큰 → ㄴ): после слога
-     * text в строке line диалога ставится маленькая рамка с буквой jamo. */
-    jamo_marks?: { line: number; text: string; jamo: string }[];
   };
   // Те же строки, что и example.dialogue, но со вставками {0},{1}... на
   // месте пропусков — явный шаблон вместо угадывания места пропуска

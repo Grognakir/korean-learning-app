@@ -61409,6 +61409,23 @@
       "notes": [],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-복도",
+      "headword": "복도",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Места"
+      ],
+      "translations": [
+        "коридор (в здании)"
+      ],
+      "examples": [],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }

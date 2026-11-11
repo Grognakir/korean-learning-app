@@ -1013,19 +1013,6 @@
   font-weight: 700;
 }
 
-.jamoChip {
-  display: inline-block;
-  margin: 0 3px 0 2px;
-  padding: 0 4px;
-  border: 2px solid var(--blue);
-  border-radius: 5px;
-  background: #e7eef8;
-  color: var(--blue);
-  font-size: 0.9em;
-  font-weight: 800;
-  line-height: 1.15;
-}
-
 .exerciseAttempt {
   display: flex;
   flex-direction: column;

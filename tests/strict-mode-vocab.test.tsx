@@ -4,7 +4,7 @@ import { expect, it } from "vitest";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
 import type { Block } from "@/features/learning/types";
 
-it("в строгом режиме React подсказки слов не пропадают в строках текста и с рамкой буквы", () => {
+it("в строгом режиме React подсказки слов не пропадают в строках текста и при выделении слога целиком", () => {
   const blocks = [
     {
       type: "text",
@@ -24,8 +24,7 @@ it("в строгом режиме React подсказки слов не про
       example: {
         given: ["x"],
         dialogue: ["가: 이 약을 먹고 나면 건강해질 거예요."],
-        emphasis: [["고 나면", "거예요"]],
-        jamo_marks: [{ line: 0, text: "질", jamo: "ㄹ" }],
+        emphasis: [["고 나면", "질 거예요"]],
         vocab: [{ ko: "건강해질", translation_ru: "становиться здоровым" }],
       },
     },
@@ -38,5 +37,8 @@ it("в строгом режиме React подсказки слов не про
   const tips = [...container.querySelectorAll("[role=tooltip]")].map((el) => el.textContent);
   expect(tips).toContain("оставаться");
   expect(tips).toContain("становиться здоровым");
-  expect(container.querySelector("[class*='jamoChip']")?.textContent).toBe("ㄹ");
+  const emphasized = [...container.querySelectorAll("[class*='exerciseEmphasis']")].map(
+    (el) => el.textContent,
+  );
+  expect(emphasized.join("")).toContain("질");
 });

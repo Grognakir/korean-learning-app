@@ -8,7 +8,6 @@ import { LabelInfo } from "./LabelInfo";
 import { HintSection } from "./HintSection";
 import { OpenTemplateDialogue } from "./OpenTemplateDialogue";
 import { speakerClassName } from "./speakerClassName";
-import { renderJamoMarkedLine } from "./JamoMarkedLine";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
 
@@ -35,24 +34,14 @@ function renderLineText(
 ) {
   return (
     <span className={`${styles.lineText} kr`}>
-      {line.jamo_marks?.length
-        ? renderJamoMarkedLine({
-            line: line.text,
-            marks: line.jamo_marks,
-            vocabItems,
-            keyPrefix: "",
-            seen: seenVocab,
-            emphasized: line.emphasized ?? [],
-            emphasisClassName: styles.emphasized,
-          })
-        : highlightDialogueSpeakers(
-            line.text,
-            vocabItems,
-            "",
-            seenVocab,
-            line.emphasized ?? [],
-            styles.emphasized,
-          )}
+      {highlightDialogueSpeakers(
+        line.text,
+        vocabItems,
+        "",
+        seenVocab,
+        line.emphasized ?? [],
+        styles.emphasized,
+      )}
     </span>
   );
 }
