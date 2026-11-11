@@ -158,3 +158,50 @@ it("показывает раздел «Значения» только у сл�
   expect(screen.queryAllByText("Значения")).toHaveLength(0);
   expect(screen.getByText("Примеры")).toBeDefined();
 });
+
+it("показывает разделы «Формы», «Антонимы», «Синонимы» и «Примечания» только когда они есть", async () => {
+  const words: Word[] = [
+    {
+      id: "1", headword: "가능하다", reading: null,
+      part_of_speech: "adjective", owner_user_id: null,
+      translations: [{ text: "быть возможным, возможно, можно" }],
+      word_categories: [], word_examples: [], word_notes: [],
+      word_forms: [
+        { label: "возможность, вероятность", value: "가능성" },
+        { label: "антоним", value: "불가능하다 (невозможно)" },
+      ],
+    },
+    {
+      id: "2", headword: "가상", reading: null,
+      part_of_speech: "noun", owner_user_id: null,
+      translations: [{ text: "вымысел" }],
+      word_categories: [], word_examples: [{ kr: "이건 가상이에요.", ru: "Это вымысел." }],
+      word_notes: [], word_forms: [],
+    },
+  ];
+  createClient.mockImplementation(() => ({
+    from: () => {
+      const query = {
+        select: () => query, eq: () => query, ilike: () => query, order: () => query,
+        range: () => query, or: () => query, is: () => query, limit: () => query,
+        then: (resolve: (value: unknown) => void) =>
+          Promise.resolve({ data: words, count: words.length, error: null }).then(resolve),
+      };
+      return query;
+    },
+  }));
+
+  render(
+    <DictionaryCacheProvider>
+      <WordList categories={[]} userId={null} onWordChanged={() => {}} />
+    </DictionaryCacheProvider>,
+  );
+  await waitFor(() => expect(screen.getByText("가능하다")).toBeDefined());
+  fireEvent.click(screen.getByText("가능하다"));
+  expect(screen.getByText("Формы")).toBeDefined();
+  expect(screen.getByText("가능성")).toBeDefined();
+  expect(screen.getByText("Антонимы")).toBeDefined();
+  expect(screen.getByText("불가능하다")).toBeDefined();
+  expect(screen.queryByText("Синонимы")).toBeNull();
+  expect(screen.queryByText("Примечания")).toBeNull();
+});

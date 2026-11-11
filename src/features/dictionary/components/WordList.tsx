@@ -140,28 +140,44 @@ function WordCard({
   const posLabel = partOfSpeechLabel(word.part_of_speech);
   const posVariant = partOfSpeechVariant(word.part_of_speech);
   const reading = word.reading ? formatReading(word.reading) : "";
-  const relatedWords = word.word_forms.filter((f) =>
-    RELATION_LABELS.has(f.label ?? ""),
-  );
+  const antonyms = word.word_forms.filter((f) => f.label === "антоним");
+  const synonyms = word.word_forms.filter((f) => f.label === "синоним");
   const realForms = word.word_forms.filter(
     (f) => !RELATION_LABELS.has(f.label ?? ""),
   );
-  const showNotesDivider = word.word_notes.length > 0 && relatedWords.length > 0;
-  const lastNoteRef = useRef<HTMLSpanElement>(null);
-  const [dividerWidth, setDividerWidth] = useState<number | null>(null);
+  const headGloss = (meanings[0] ?? "").split(/[,;(]/)[0].trim();
 
-  useLayoutEffect(() => {
-    if (expanded && showNotesDivider && lastNoteRef.current) {
-      setDividerWidth(lastNoteRef.current.getBoundingClientRect().width);
-    }
-  }, [expanded, showNotesDivider, word.id]);
+  const relationSection = (title: string, items: typeof antonyms, symbol: string) =>
+    items.length > 0 && (
+      <div className={styles.detailSection}>
+        <span className={styles.detailLabel}>{title}</span>
+        <ul className={styles.notes}>
+          {items.map((rel, i) => {
+            const glossIndex = rel.value.indexOf(" (");
+            const relWord =
+              glossIndex === -1 ? rel.value : rel.value.slice(0, glossIndex);
+            const gloss =
+              glossIndex === -1 ? "" : rel.value.slice(glossIndex + 2, -1);
+            return (
+              <li key={i}>
+                <span className="kr">{word.headword}</span>
+                {headGloss && ` (${headGloss})`} {symbol}{" "}
+                <span className="kr">{relWord}</span>
+                {gloss && ` — ${gloss}`}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
 
   const hasDetails =
     meanings.length > 1 ||
     word.word_examples.length > 0 ||
     word.word_notes.length > 0 ||
     realForms.length > 0 ||
-    relatedWords.length > 0 ||
+    antonyms.length > 0 ||
+    synonyms.length > 0 ||
     visibleCategoryNames.length > 0 ||
     Boolean(posLabel);
 
@@ -212,65 +228,27 @@ function WordCard({
           </ul>
         </div>
       )}
-      {(word.word_notes.length > 0 || relatedWords.length > 0) && (
-        <div className={styles.detailSection}>
-          <span className={styles.detailLabel}>Примечания</span>
-          <ul className={styles.notes}>
-            {word.word_notes.map((note, i) => {
-              const isLast = i === word.word_notes.length - 1;
-              return (
-                <li key={i}>
-                  {isLast && showNotesDivider ? (
-                    <span ref={lastNoteRef}>{note.text}</span>
-                  ) : (
-                    note.text
-                  )}
-                </li>
-              );
-            })}
-            {showNotesDivider && (
-              <li className={styles.notesDivider} aria-hidden="true">
-                <span
-                  className={styles.notesDividerLine}
-                  style={dividerWidth ? { width: `${dividerWidth}px` } : undefined}
-                />
-              </li>
-            )}
-            {relatedWords.map((rel, i) => {
-              const glossIndex = rel.value.indexOf(" (");
-              const relWord =
-                glossIndex === -1 ? rel.value : rel.value.slice(0, glossIndex);
-              const gloss =
-                glossIndex === -1 ? "" : rel.value.slice(glossIndex + 1);
-              return (
-                <li key={`rel-${i}`}>
-                  <span className="kr">
-                    {word.headword}
-                  </span>{" "}
-                  {rel.label === "антоним" ? "↔" : "="}{" "}
-                  <span className="kr">
-                    {relWord}
-                  </span>
-                  {gloss && ` ${gloss}`}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
       {realForms.length > 0 && (
         <div className={styles.detailSection}>
           <span className={styles.detailLabel}>Формы</span>
           <ul className={styles.forms}>
             {realForms.map((form, i) => (
               <li key={i}>
-                {form.label && <span>{form.label}: </span>}
-                <span
-                  className={`${styles.formValue} kr`}
-                >
-                  {form.value}
-                </span>
+                <span className={`${styles.formValue} kr`}>{form.value}</span>
+                {form.label && ` — ${form.label}`}
               </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {relationSection("Антонимы", antonyms, "↔")}
+      {relationSection("Синонимы", synonyms, "=")}
+      {word.word_notes.length > 0 && (
+        <div className={styles.detailSection}>
+          <span className={styles.detailLabel}>Примечания</span>
+          <ul className={styles.notes}>
+            {word.word_notes.map((note, i) => (
+              <li key={i}>{note.text}</li>
             ))}
           </ul>
         </div>
