@@ -8,6 +8,7 @@ vi.mock("@/features/auth/getLearningContext", () => ({ getLearningContext }));
 vi.mock("@/features/trainers/flashcards/buildQueue", () => ({ buildFlashcardQueueWithStats }));
 vi.mock("@/lib/supabase/fetchAll", () => ({ fetchAllRows }));
 vi.mock("@/features/trainers/flashcards/actions", () => ({ recordReview: vi.fn() }));
+vi.mock("next/navigation", () => ({ useRouter: () => ({ refresh: vi.fn() }) }));
 vi.mock("@/components/layout/GuestHeader", () => ({ GuestHeader: () => null }));
 vi.mock("@/components/layout/AppHeader", () => ({ AppHeader: () => null }));
 vi.mock("@/components/ui/BottomTabBar", () => ({ BottomTabBar: () => null }));

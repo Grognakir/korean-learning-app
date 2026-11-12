@@ -7,7 +7,7 @@ import styles from "./AuthForm.module.css";
 
 type State = { error?: string } | undefined;
 
-export function LoginForm({ notice }: { notice?: string }) {
+export function LoginForm({ notice, next }: { notice?: string; next?: string }) {
   const [state, formAction, pending] = useActionState<State, FormData>(
     async (_prevState, formData) => signIn(formData),
     undefined,
@@ -18,6 +18,7 @@ export function LoginForm({ notice }: { notice?: string }) {
       <h1 className={styles.title}>Вход</h1>
       {notice && <p className={styles.error}>{notice}</p>}
       <form action={formAction} className={styles.form}>
+        {next && <input type="hidden" name="next" value={next} />}
         <label className={styles.field}>
           <span>Email</span>
           <input type="email" name="email" required autoComplete="email" />

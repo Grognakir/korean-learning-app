@@ -1,6 +1,6 @@
 import { shuffle } from "../wordTrainer/quiz";
 import { trainableWords, type DictionaryData, type DictionaryEntry } from "./entries";
-import { answerText, cardChoices, checkKoreanAnswer, type CardMode } from "./answers";
+import { answerText, cardChoices, checkKoreanAnswer, hasWrongChoice, questionGroup, type CardMode } from "./answers";
 
 export type CardScope = "all" | "hard";
 export type CardSession = {
@@ -12,16 +12,22 @@ export function scopedWords(data: DictionaryData, scope: CardScope) {
   return trainableWords(data).filter((word) => scope !== "hard" || word.fail > word.ok);
 }
 export const minimumWords = (mode: CardMode) => mode === "typing" ? 1 : 2;
+// В режимах с выбором вопрос без единого неверного варианта (все остальные
+// записи — синонимы с тем же ответом) пропускается: ответ был бы очевиден.
+export const playableWords = (words: DictionaryEntry[], mode: CardMode, pool = words) =>
+  mode === "typing" ? words : words.filter((word) => hasWrongChoice(pool, word, mode));
 export function startCards(words: DictionaryEntry[], mode: CardMode, random = Math.random, pool = words): CardSession | null {
   if (!words.length || pool.length < minimumWords(mode)) return null;
-  const ordered = shuffle(words.map((word) => ({ ...word })), random);
+  const playable = playableWords(words, mode, pool);
+  if (!playable.length) return null;
+  const ordered = shuffle(playable.map((word) => ({ ...word })), random);
   const copiedPool = pool.map((word) => ({ ...word }));
   return { mode, words: ordered, pool: copiedPool, position: 0, correct: 0, answered: 0, errors: [], phase: "question", choices: cardChoices(copiedPool, ordered[0], mode, random), input: "" };
 }
 export function answerCard(session: CardSession, input: string): CardSession {
   if (session.phase !== "question" || !input.trim() || session.mode !== "typing" && !session.choices.includes(input)) return session;
   const word = session.words[session.position];
-  const right = session.mode === "typing" ? checkKoreanAnswer(word, input) : input === answerText(word, session.mode);
+  const right = session.mode === "typing" ? checkKoreanAnswer(word, input, questionGroup(session.pool, word, "typing")) : input === answerText(word, session.mode);
   return { ...session, phase: "feedback", input, right, answered: session.answered + 1, correct: session.correct + Number(right), errors: right ? session.errors : [...session.errors, word.id] };
 }
 export function nextCard(session: CardSession, random = Math.random): CardSession {

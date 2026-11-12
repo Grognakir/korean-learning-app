@@ -1,16 +1,18 @@
 "use client";
 
 import { useCallback, useSyncExternalStore } from "react";
+import { readWithLegacy, scopedKey } from "./legacyStorage";
+import { useStorageUserId } from "./StorageUser";
 
 const memory = new Map<string, string>();
 const failed = new Set<string>();
 const EVENT = "learning-draft";
+const OWNER_KEY = "drafts:legacy-owner";
 
-function read(key: string | undefined) {
-  if (!key) return "";
+function read(key: string, legacyKey: string, userId: string | undefined) {
   if (failed.has(key)) return memory.get(key) ?? "";
   try {
-    return window.localStorage.getItem(key) ?? "";
+    return readWithLegacy(key, legacyKey, OWNER_KEY, userId) ?? "";
   } catch {
     return memory.get(key) ?? "";
   }
@@ -25,8 +27,13 @@ function subscribe(callback: () => void) {
   };
 }
 
-export function useDraft(key: string) {
-  const value = useSyncExternalStore(subscribe, () => read(key), () => "");
+// Ключ получает префикс аккаунта здесь, в единственном месте: вызывающие
+// передают «чистый» ключ, поэтому двойного префикса не бывает. Черновики,
+// записанные до разделения по аккаунтам, достаются первому вошедшему.
+export function useDraft(baseKey: string) {
+  const userId = useStorageUserId();
+  const key = scopedKey(baseKey, userId);
+  const value = useSyncExternalStore(subscribe, () => read(key, baseKey, userId), () => "");
   const update = useCallback((next: string) => {
     memory.set(key, next);
     try {

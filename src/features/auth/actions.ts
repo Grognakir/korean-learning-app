@@ -4,6 +4,9 @@ import { redirect } from "next/navigation";
 import { headers } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 import { registerSchema, loginSchema } from "./schemas";
+import { authErrorMessage } from "./errorMessages";
+import { safeNextPath } from "./safeNext";
+import { siteOrigin } from "./siteUrl";
 
 export async function signUp(formData: FormData) {
   const parsed = registerSchema.safeParse({
@@ -15,9 +18,7 @@ export async function signUp(formData: FormData) {
     return { error: parsed.error.issues[0].message };
   }
 
-  const headersList = await headers();
-  const origin =
-    headersList.get("origin") ?? `http://${headersList.get("host")}`;
+  const origin = siteOrigin(await headers());
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signUp({
@@ -28,7 +29,7 @@ export async function signUp(formData: FormData) {
       emailRedirectTo: `${origin}/confirm`,
     },
   });
-  if (error) return { error: error.message };
+  if (error) return { error: authErrorMessage(error) };
 
   return { success: true as const };
 }
@@ -44,9 +45,9 @@ export async function signIn(formData: FormData) {
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signInWithPassword(parsed.data);
-  if (error) return { error: error.message };
+  if (error) return { error: authErrorMessage(error) };
 
-  redirect("/");
+  redirect(safeNextPath(formData.get("next")));
 }
 
 export async function devSignIn() {

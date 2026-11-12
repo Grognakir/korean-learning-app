@@ -5,7 +5,8 @@ import { Modal } from "@/components/ui/Modal";
 import type { VocabListBlock } from "@/features/learning/types";
 import { LabelInfo } from "./LabelInfo";
 import { VocabChip } from "./VocabChip";
-import { isKnown, useVocabProgress } from "@/features/learning/vocabProgress";
+import { isKnown, useVocabProgress, VOCAB_PROGRESS_KEY } from "@/features/learning/vocabProgress";
+import { useUserStorageKey } from "@/lib/StorageUser";
 import { VocabTrainer } from "./VocabTrainer";
 import styles from "./blocks.module.css";
 
@@ -68,7 +69,7 @@ export function VocabList({
   };
   const current = itemsByTab[tab];
   const total = current.length;
-  const progress = useVocabProgress();
+  const progress = useVocabProgress(useUserStorageKey(VOCAB_PROGRESS_KEY));
   const knownCount = current.filter((item) => isKnown(progress[item.ko])).length;
 
   // Пока идёт тренировка, слова на странице за окном размываются

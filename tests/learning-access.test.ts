@@ -18,7 +18,14 @@ it.each([
 
 it.each(["/learning/programs", "/learning/programs/1", "/learning/programs/1/grammar", "/settings"])("сохраняет защиту %s", async (path) => {
   const response = await updateSession(new NextRequest(`http://localhost${path}`));
-  expect(response.headers.get("location")).toBe("http://localhost/login");
+  expect(response.headers.get("location")).toBe(`http://localhost/login?next=${encodeURIComponent(path)}`);
+});
+
+it("сохраняет query в адресе возврата", async () => {
+  const response = await updateSession(new NextRequest("http://localhost/learning/programs/inha-2/14?a=1"));
+  const location = new URL(response.headers.get("location")!);
+  expect(location.pathname).toBe("/login");
+  expect(location.searchParams.get("next")).toBe("/learning/programs/inha-2/14?a=1");
 });
 
 it("пропускает авторизованного пользователя к программам", async () => {

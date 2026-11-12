@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { GrammarExerciseBlock } from "@/features/learning/types";
+import { readWithLegacy, scopedKey } from "@/lib/legacyStorage";
+import { useStorageUserId } from "@/lib/StorageUser";
 import { LabelInfo } from "./LabelInfo";
 import { highlightDialogueSpeakers, type VocabItem } from "./vocabHighlight";
 import styles from "./blocks.module.css";
@@ -158,7 +160,9 @@ export function GrammarExercise({
   const exampleEmphasis =
     block.example.emphasis ??
     EXAMPLE_EMPHASIS_FALLBACK[block.example.dialogue.join("\n")];
-  const key = storageKey(block.id, textbookSlug, lessonNumber);
+  const baseKey = storageKey(block.id, textbookSlug, lessonNumber);
+  const userId = useStorageUserId();
+  const key = baseKey ? scopedKey(baseKey, userId) : null;
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [inputs, setInputs] = useState<Record<number, string[]>>({});
@@ -171,7 +175,7 @@ export function GrammarExercise({
   useEffect(() => {
     if (!key) return;
     try {
-      const raw = window.localStorage.getItem(key);
+      const raw = readWithLegacy(key, baseKey!, "grammar-exercise:legacy-owner", userId);
       if (raw) {
         const saved = JSON.parse(raw) as SavedState;
         // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -181,7 +185,7 @@ export function GrammarExercise({
     } catch {
       // приватный режим/квота — тренажёр просто не восстановит прошлый ввод
     }
-  }, [key]);
+  }, [key, baseKey, userId]);
 
   function persist(
     nextInputs: Record<number, string[]>,

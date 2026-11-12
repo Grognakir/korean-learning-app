@@ -1,4 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { safeNextPath } from "@/features/auth/safeNext";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET(request: NextRequest) {
@@ -18,5 +19,5 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(`${origin}/login?error=confirm`);
   }
 
-  return NextResponse.redirect(`${origin}/`);
+  return NextResponse.redirect(`${origin}${safeNextPath(searchParams.get("next"))}`);
 }

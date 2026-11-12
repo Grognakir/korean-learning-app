@@ -129,3 +129,16 @@ it("возвращает выученные слова в очередь, ког
   expect(priorityOf({ rating: "easy", at: now - 8 * day, reviews: 1 }, now)).toBe(2);
   expect(priorityOf({ rating: "hard", at: now, reviews: 1 }, now)).toBe(1);
 });
+
+it("Enter во время ввода корейского (IME) не проверяет ответ", () => {
+  render(<VocabTrainer items={[{ ko: "참다", translation_ru: "терпеть" }]} />);
+  fireEvent.click(screen.getByRole("button", { name: "Корейское написание" }));
+  const input = screen.getByRole("textbox");
+  fireEvent.change(input, { target: { value: "참" } });
+  fireEvent.keyDown(input, { key: "Enter", keyCode: 229, isComposing: true });
+  expect(input.className).toContain("trainerInput");
+  expect(input.className).not.toContain("Correct");
+  expect(input.className).not.toContain("Incorrect");
+  fireEvent.keyDown(input, { key: "Enter", keyCode: 13 });
+  expect(input.className).toMatch(/Incorrect/);
+});

@@ -361,6 +361,7 @@ export function ShopScene({
                   value={input}
                   onChange={(e) => setInput(e.target.value.replace(/\n/g, ""))}
                   onKeyDown={(e) => {
+                    if (e.nativeEvent.isComposing || e.keyCode === 229) return;
                     if (e.key === "Escape") {
                       e.preventDefault();
                       setTyping(false);

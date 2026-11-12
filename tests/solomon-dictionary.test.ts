@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { createOsStore } from "@/features/solomonOs/store";
 import { deleteEntry, emptyDictionary, findDuplicate, koreanVariants, MAX_WORDS, normalizeKorean, putEntry, readDictionary, recordAnswer, russianVariants, saveAnswer, searchWords, subscribeDictionary, trainableWords, writeDictionary, type DictionaryData, type DictionaryEntry } from "@/features/solomonOs/dictionary/entries";
 import { answerText, cardChoices, checkKoreanAnswer, type CardMode } from "@/features/solomonOs/dictionary/answers";
-import { answerCard, nextCard, repeatCards, scopedWords, startCards, stopCards } from "@/features/solomonOs/dictionary/session";
+import { answerCard, nextCard, playableWords, repeatCards, scopedWords, startCards, stopCards } from "@/features/solomonOs/dictionary/session";
 import { dictionaryTopic } from "@/features/solomonOs/dictionary/topic";
 import { checkAnswer } from "@/features/solomonOs/wordTrainer/quiz";
 import { APPS } from "@/features/solomonOs/apps";
@@ -142,3 +142,40 @@ it("новая иконка словаря не сдвигает сохранё�
   expect(next.dict).toBeTruthy();
   expect(APPS.find((app) => app.id === "dict")).toMatchObject({ w: 860, h: 640, minW: 360, minH: 440 });
 });
+
+describe("записи с одним ответом (синонимы)", () => {
+    const study = entry("s1", "공부하다", "учиться"), learn = entry("s2", "배우다", "учиться; изучать"), other = entry("s3", "집", "дом"), third = entry("s4", "물", "вода");
+    const pool = [study, learn, other, third];
+
+    it("ru-ko: синоним с тем же вопросом не попадает в отвлекающие варианты", () => {
+      const choices = cardChoices(pool, study, "ru-ko", () => .2);
+      expect(choices).toContain("공부하다");
+      expect(choices).not.toContain("배우다");
+    });
+    it("ko-ru: чужой вариант, совпадающий со вторым переводом слова, не предлагается как неверный", () => {
+      const choices = cardChoices([learn, entry("s5", "연구하다", "изучать"), other, third], learn, "ko-ru", () => .2);
+      expect(choices).toContain("учиться");
+      expect(choices).not.toContain("изучать");
+    });
+    it("ввод: принимается корейский вариант любой записи группы", () => {
+      const session = startCards([study], "typing", () => .2, pool)!;
+      expect(answerCard(session, "배우다")).toMatchObject({ right: true, correct: 1 });
+      expect(answerCard(session, "집")).toMatchObject({ right: false });
+    });
+    it("набор из двух синонимов не запускается в режиме выбора, но запускается во вводе", () => {
+      const synonyms = [study, entry("s6", "학습하다", "учиться")];
+      expect(playableWords(synonyms, "ru-ko")).toEqual([]);
+      expect(startCards(synonyms, "ru-ko")).toBeNull();
+      expect(startCards(synonyms, "typing")).toBeTruthy();
+    });
+    it("синонимы не мешают остальным вопросам, если есть другой неверный вариант", () => {
+      const mixed = [study, entry("s6", "학습하다", "учиться"), other];
+      const session = startCards(mixed, "ru-ko", () => .2)!;
+      expect(session.words.map((w) => w.id).sort()).toEqual(["s1", "s3", "s6"]);
+      expect(session.choices.length).toBeGreaterThan(1);
+    });
+    it("слово, у которого в наборе нет неверного варианта, не запускается", () => {
+      const synonyms = [study, entry("s6", "학습하다", "учиться")];
+      expect(startCards([study], "ru-ko", () => .2, synonyms)).toBeNull();
+    });
+  });

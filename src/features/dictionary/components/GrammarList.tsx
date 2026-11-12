@@ -1,5 +1,6 @@
 "use client";
 
+import { listPageKey } from "@/features/dictionary/queries";
 import { useCallback, useMemo, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { escapeLike } from "@/lib/supabase/escapeLike";
@@ -86,7 +87,7 @@ export function GrammarList({
   const cache = useDictionaryPageCache<GrammarPoint>();
 
   const fetchKey = useMemo(
-    () => JSON.stringify({ section: "grammar", debouncedQuery, category, page }),
+    () => listPageKey("grammar", debouncedQuery, category, page),
     [debouncedQuery, category, page],
   );
 

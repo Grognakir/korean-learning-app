@@ -89184,6 +89184,94 @@
       ],
       "forms": [],
       "related": []
+    },
+    {
+      "external_id": "word-박",
+      "headword": "박",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "ночь (при подсчете ночевок)"
+      ],
+      "examples": [
+        {
+          "kr": "2박 3일 동안 여행했어요.",
+          "ru": "Мы путешествовали два ночлега и три дня."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-터키",
+      "headword": "터키",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "Турция"
+      ],
+      "examples": [
+        {
+          "kr": "터키에 여행을 가고 싶어요.",
+          "ru": "Хочу съездить в Турцию."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-거의",
+      "headword": "거의",
+      "reading": null,
+      "part_of_speech": "adverb",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "почти"
+      ],
+      "examples": [
+        {
+          "kr": "숙제를 거의 다 했어요.",
+          "ru": "Я почти доделал домашнее задание."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
+    },
+    {
+      "external_id": "word-신청",
+      "headword": "신청",
+      "reading": null,
+      "part_of_speech": "noun",
+      "level_tag": null,
+      "categories": [
+        "Прочее"
+      ],
+      "translations": [
+        "заявка, подача заявления, запись"
+      ],
+      "examples": [
+        {
+          "kr": "수업 신청은 오늘까지예요.",
+          "ru": "Запись на занятие — до сегодняшнего дня."
+        }
+      ],
+      "notes": [],
+      "forms": [],
+      "related": []
     }
   ]
 }

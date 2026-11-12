@@ -4,11 +4,13 @@ import { displayName, getProfileRow, requireUser } from "@/features/auth/require
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
+import { fetchLessonPages } from "@/features/learning/fetchLessonPages";
+import { decodeSectionKey, isKnownLesson, isKnownSection } from "@/features/learning/lessonRegistry";
 import { buildLessonNav, findLessonToc } from "@/features/learning/lessonNav";
 import { LessonSticker } from "@/features/lessonSticker/LessonSticker";
 import { resolveBlockAssets, textbookAssetPrefix } from "@/features/learning/resolveBlockAssets";
 import { resolveBlockVocab } from "@/features/learning/resolveBlockVocab";
-import type { Block, TextbookPageRow } from "@/features/learning/types";
+import type { Block } from "@/features/learning/types";
 import styles from "../lesson.module.css";
 import { SectionNav } from "./SectionNav";
 import { ProgramBreadcrumbs } from "../../../ProgramBreadcrumbs";
@@ -26,34 +28,25 @@ export default async function LessonSectionPage({
   const lessonNumber = Number(lessonNumberParam);
 
   // Number("abc") — NaN: без проверки страница рендерила «Урок NaN».
-  if (!Number.isInteger(lessonNumber) || lessonNumber < 1) {
+  const sectionKey = decodeSectionKey(sectionKeyParam);
+  if (!isKnownLesson(textbookSlug, lessonNumber) || sectionKey === null || !isKnownSection(sectionKey)) {
     notFound();
   }
-  const sectionKey = decodeURIComponent(sectionKeyParam);
 
   const { supabase, user } = await requireUser();
 
-  const [profile, { data: rawPages }, { data: lesson }] =
-    await Promise.all([
-      getProfileRow(user.id),
-      supabase
-        .from("textbook_pages")
-        .select(
-          "id, page_index, page_number, lesson_number, content, textbooks!inner(slug)",
-        )
-        .eq("textbooks.slug", textbookSlug)
-        .eq("lesson_number", lessonNumber)
-        .order("page_index"),
-      supabase
-        .from("lessons")
-        .select("title, textbooks!inner(slug)")
-        .eq("textbooks.slug", textbookSlug)
-        .eq("lesson_number", lessonNumber)
-        .maybeSingle(),
-    ]);
+  const [profile, pages, { data: lesson }] = await Promise.all([
+    getProfileRow(user.id),
+    fetchLessonPages(supabase, textbookSlug, lessonNumber),
+    supabase
+      .from("lessons")
+      .select("title, textbooks!inner(slug)")
+      .eq("textbooks.slug", textbookSlug)
+      .eq("lesson_number", lessonNumber)
+      .maybeSingle(),
+  ]);
 
   const username = displayName(profile, user);
-  const pages = (rawPages ?? []) as TextbookPageRow[];
   const lessonTitle = lesson?.title ?? null;
 
   const sectionBlocks: Block[] = [];

@@ -1,19 +1,23 @@
 import { useSyncExternalStore } from "react";
+import { readWithLegacy } from "@/lib/legacyStorage";
 
 export type Rating = "again" | "hard" | "good" | "easy";
 
 export type WordProgress = { rating: Rating; at: number; reviews: number };
 export type VocabProgress = Record<string, WordProgress>;
 
-const STORAGE_KEY = "vocab-progress:v1";
+export const VOCAB_PROGRESS_KEY = "vocab-progress:v1";
+const OWNER_KEY = "vocab-progress:legacy-owner";
 const EVENT = "vocab-progress";
 const DAY = 24 * 60 * 60 * 1000;
 const EMPTY: VocabProgress = {};
 const RATINGS: Rating[] = ["again", "hard", "good", "easy"];
 
-let cachedRaw: string | null = null;
-let cachedValue: VocabProgress = EMPTY;
-const memory: { value: VocabProgress | null } = { value: null };
+// Кэш, резервная копия в памяти и признак неудачной записи ведутся по
+// каждому ключу хранилища отдельно: у каждого аккаунта свой ключ.
+const caches = new Map<string, { raw: string | null; value: VocabProgress }>();
+const memory = new Map<string, VocabProgress>();
+const failed = new Set<string>();
 
 function parse(raw: string | null): VocabProgress {
   if (!raw) return EMPTY;
@@ -40,32 +44,50 @@ function parse(raw: string | null): VocabProgress {
 }
 
 /** Результаты оценок слов (по написанию `ko`) — общие для всех разделов и
- * сохраняются в браузере между тренировками и сессиями. */
-export function loadProgress(): VocabProgress {
+ * сохраняются в браузере между тренировками и сессиями. Ключ хранилища —
+ * свой у каждого аккаунта (см. useUserStorageKey). */
+export function loadProgress(storageKey: string = VOCAB_PROGRESS_KEY): VocabProgress {
   if (typeof window === "undefined") return EMPTY;
+  // После неудачной записи в localStorage остаётся прежнее значение, а
+  // актуальное — только в памяти.
+  if (failed.has(storageKey)) return memory.get(storageKey) ?? EMPTY;
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (raw !== cachedRaw) {
-      cachedRaw = raw;
-      cachedValue = parse(raw);
-    }
-    return cachedValue;
+    const scoped = /^user:([^:]+):(.+)$/.exec(storageKey);
+    const raw = readWithLegacy(
+      storageKey,
+      scoped ? scoped[2] : storageKey,
+      OWNER_KEY,
+      scoped?.[1],
+    );
+    const cached = caches.get(storageKey);
+    if (cached && cached.raw === raw) return cached.value;
+    const value = parse(raw);
+    caches.set(storageKey, { raw, value });
+    return value;
   } catch {
-    return memory.value ?? EMPTY;
+    return memory.get(storageKey) ?? EMPTY;
   }
 }
 
-export function recordRating(ko: string, rating: Rating, now = Date.now()) {
-  const current = loadProgress();
+export function recordRating(
+  ko: string,
+  rating: Rating,
+  now = Date.now(),
+  storageKey: string = VOCAB_PROGRESS_KEY,
+) {
+  const current = loadProgress(storageKey);
   const next: VocabProgress = {
     ...current,
     [ko]: { rating, at: now, reviews: (current[ko]?.reviews ?? 0) + 1 },
   };
-  memory.value = next;
+  memory.set(storageKey, next);
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    window.localStorage.setItem(storageKey, JSON.stringify(next));
+    failed.delete(storageKey);
   } catch {
-    // Хранилище недоступно — оценки живут до перезагрузки страницы.
+    // Хранилище недоступно или переполнено — оценки живут в памяти до
+    // перезагрузки страницы, а чтение берёт их оттуда.
+    failed.add(storageKey);
   }
   window.dispatchEvent(new Event(EVENT));
 }
@@ -79,8 +101,8 @@ function subscribe(callback: () => void) {
   };
 }
 
-export function useVocabProgress(): VocabProgress {
-  return useSyncExternalStore(subscribe, loadProgress, () => EMPTY);
+export function useVocabProgress(storageKey: string = VOCAB_PROGRESS_KEY): VocabProgress {
+  return useSyncExternalStore(subscribe, () => loadProgress(storageKey), () => EMPTY);
 }
 
 /** Чем меньше число, тем раньше слово в тренировке: не знал и не помнил —

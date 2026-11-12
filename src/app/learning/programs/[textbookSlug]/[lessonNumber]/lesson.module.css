@@ -10,7 +10,7 @@
   width: 100%;
   max-width: var(--content-wide);
   margin: 0 auto;
-  padding: 28px 20px 96px;
+  padding: 28px var(--page-gutter) 96px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -19,9 +19,8 @@
 @media (--to-compact) {
   .wrap {
     gap: 14px;
-    /* ~в 2,5 раза меньше базовых 28px/20px — на телефоне край экрана и
-       так съедает место, крупные поля сверху/по бокам ни к чему. */
-    padding: 11px 8px 116px;
+    /* Сверху поля меньше базовых 28px; по бокам — общий отступ страниц. */
+    padding: 11px var(--page-gutter) 116px;
   }
 }
 

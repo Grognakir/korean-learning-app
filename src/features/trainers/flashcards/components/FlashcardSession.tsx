@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { formatReading } from "@/features/dictionary/formatReading";
 import type { Word } from "@/features/dictionary/types";
 import { SessionProgress } from "@/features/trainers/components/SessionProgress";
 import { plural } from "@/lib/plural";
 import { recordReview } from "../actions";
-import type { Sm2Rating } from "../sm2";
+import { isFailingRating, type SrsRating } from "../srs";
 import styles from "./FlashcardSession.module.css";
 
 type Props = {
@@ -15,7 +16,7 @@ type Props = {
   queue: { word: Word; isNew: boolean }[];
 };
 
-const RATINGS: { rating: Sm2Rating; label: string; className: string }[] = [
+const RATINGS: { rating: SrsRating; label: string; className: string }[] = [
   { rating: "again", label: "Забыл", className: styles.again },
   { rating: "hard", label: "Трудно", className: styles.hard },
   { rating: "good", label: "Хорошо", className: styles.good },
@@ -63,6 +64,23 @@ export function FlashcardSession({ queue, guest = false }: Props) {
   const savingRef = useRef(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
+  // Итоги считаются по очереди на старте: после router.refresh() пропс
+  // queue приходит новый (уже без повторённых слов), а итог не должен
+  // меняться.
+  const [initialStats] = useState(() => ({
+    total: queue.length,
+    newCount: queue.filter((item) => item.isNew).length,
+  }));
+  // Слова, чей ответ в этой сессии уже записан: SRS продвигается один раз
+  // за сессию, повторный показ слова (в другой паре или после «Забыл»)
+  // записывается только при «Забыл»/«Трудно».
+  const savedWordsRef = useRef(new Set<string>());
+  const finished = items.length > 0 && index >= items.length;
+
+  useEffect(() => {
+    if (finished && !guest) router.refresh();
+  }, [finished, guest, router]);
 
   if (items.length === 0) {
     return (
@@ -75,14 +93,13 @@ export function FlashcardSession({ queue, guest = false }: Props) {
   }
 
   if (index >= items.length) {
-    const newCount = queue.filter((item) => item.isNew).length;
     return (
       <div className={styles.done}>
         <span className={styles.eyebrow}>Хорошая работа</span>
         <h2 className={styles.doneTitle}>Сессия завершена</h2>
         <p className={styles.resultNumber}>{index}<span> {plural(index, guest ? ["ответ", "ответа", "ответов"] : ["ответ сохранён", "ответа сохранено", "ответов сохранено"])}</span></p>
         <p className={styles.doneText}>
-          Карточек: {queue.length}, из них новых: {newCount}.
+          Карточек: {initialStats.total}, из них новых: {initialStats.newCount}.
         </p>
         <Link href="/learning/trainers" className={styles.backLink}>
           К тренажёрам →
@@ -96,20 +113,23 @@ export function FlashcardSession({ queue, guest = false }: Props) {
   const translations = (word.translations ?? []).map((item) => item.text).filter(Boolean).join(", ");
   const reverse = direction === "reverse" && Boolean(translations);
 
-  async function rate(rating: Sm2Rating) {
+  async function rate(rating: SrsRating) {
     if (savingRef.current) return;
     savingRef.current = true;
     setSaving(true);
     setError(null);
 
     try {
-      const result = guest ? { ok: true } : await recordReview(word.id, rating);
+      const failing = isFailingRating(rating);
+      const skipWrite = guest || (!failing && savedWordsRef.current.has(word.id));
+      const result = skipWrite ? { ok: true } : await recordReview(word.id, rating);
       if ("error" in result && result.error) {
         setError("Оценка не сохранена. Попробуйте нажать её ещё раз.");
         return;
       }
+      savedWordsRef.current.add(word.id);
 
-      if (rating === "again") {
+      if (failing) {
         setItems((prev) => {
           const current = { ...prev[index], isNew: false };
           const rest = prev.slice(index + 1);

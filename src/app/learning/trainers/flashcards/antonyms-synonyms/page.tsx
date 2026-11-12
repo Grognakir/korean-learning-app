@@ -23,10 +23,11 @@ export default async function FlashcardsRelatedPage() {
         <TrainerWorkspace>
           <TrainerHeader href="/learning/trainers" title="Карточки слов" backLabel="К тренажёрам" />
           <div className={styles.column}>
-            <SessionSettings summary={`Антонимы/синонимы · ${newCardsLimit} новых`}>
+            <SessionSettings summary={`Антонимы/синонимы · ${newCardsLimit} новых пар`}>
               <FlashcardsHeader
                 active="antonyms-synonyms"
                 newCardsLimit={newCardsLimit}
+                unit="pairs"
               />
             </SessionSettings>
             <FlashcardSession guest={!user} key={`${user?.id ?? null}:${newCardsLimit}`} queue={queue} />

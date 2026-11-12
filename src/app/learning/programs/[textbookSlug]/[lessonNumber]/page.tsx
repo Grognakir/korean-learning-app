@@ -3,6 +3,8 @@ import { displayName, getProfileRow, requireUser } from "@/features/auth/require
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BottomTabBar } from "@/components/ui/BottomTabBar";
 import { PageBlocks } from "@/features/learning/components/blocks/PageBlocks";
+import { fetchLessonPages } from "@/features/learning/fetchLessonPages";
+import { isKnownLesson } from "@/features/learning/lessonRegistry";
 import { findLessonToc } from "@/features/learning/lessonNav";
 import { ProgramBreadcrumbs } from "../../ProgramBreadcrumbs";
 import type { Block, TextbookPageRow } from "@/features/learning/types";
@@ -31,33 +33,24 @@ export default async function LessonPage({
   const lessonNumber = Number(lessonNumberParam);
 
   // Number("abc") — NaN: без проверки страница рендерила «Урок NaN».
-  if (!Number.isInteger(lessonNumber) || lessonNumber < 1) {
+  if (!isKnownLesson(textbookSlug, lessonNumber)) {
     notFound();
   }
 
   const { supabase, user } = await requireUser();
 
-  const [profile, { data: rawPages }, { data: lesson }] =
-    await Promise.all([
-      getProfileRow(user.id),
-      supabase
-        .from("textbook_pages")
-        .select(
-          "id, page_index, page_number, lesson_number, content, textbooks!inner(slug)",
-        )
-        .eq("textbooks.slug", textbookSlug)
-        .eq("lesson_number", lessonNumber)
-        .order("page_index"),
-      supabase
-        .from("lessons")
-        .select("title, textbooks!inner(slug)")
-        .eq("textbooks.slug", textbookSlug)
-        .eq("lesson_number", lessonNumber)
-        .maybeSingle(),
-    ]);
+  const [profile, pages, { data: lesson }] = await Promise.all([
+    getProfileRow(user.id),
+    fetchLessonPages(supabase, textbookSlug, lessonNumber),
+    supabase
+      .from("lessons")
+      .select("title, textbooks!inner(slug)")
+      .eq("textbooks.slug", textbookSlug)
+      .eq("lesson_number", lessonNumber)
+      .maybeSingle(),
+  ]);
 
   const username = displayName(profile, user);
-  const pages = (rawPages ?? []) as TextbookPageRow[];
   const lessonTitle = lesson?.title ?? null;
 
   if (pages.length === 0) {

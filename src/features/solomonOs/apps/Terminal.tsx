@@ -68,7 +68,7 @@ export function Terminal({ phone }: { phone: boolean }) {
           ref={input}
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && run()}
+          onKeyDown={(e) => { if (e.nativeEvent.isComposing || e.keyCode === 229) return; if (e.key === "Enter") run(); }}
           autoComplete="off"
           spellCheck={false}
           aria-label="Команда"

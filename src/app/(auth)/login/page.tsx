@@ -1,4 +1,5 @@
 import { LoginForm } from "@/features/auth/components/LoginForm";
+import { safeNextPath } from "@/features/auth/safeNext";
 import { BackHomeLink } from "../BackHomeLink";
 import styles from "../auth-layout.module.css";
 
@@ -10,14 +11,14 @@ const NOTICES: Record<string, string> = {
 export default async function LoginPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; next?: string }>;
 }) {
-  const { error } = await searchParams;
+  const { error, next } = await searchParams;
 
   return (
     <main className={styles.wrap}>
       <BackHomeLink />
-      <LoginForm notice={error ? NOTICES[error] : undefined} />
+      <LoginForm notice={error ? NOTICES[error] : undefined} next={safeNextPath(next) === "/" ? undefined : safeNextPath(next)} />
     </main>
   );
 }

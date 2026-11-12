@@ -1,5 +1,6 @@
 "use client";
 
+import { listPageKey } from "@/features/dictionary/queries";
 import { useCallback, useMemo, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { escapeLike } from "@/lib/supabase/escapeLike";
@@ -43,7 +44,7 @@ export function PhraseList({ categories }: { categories: string[] }) {
   const cache = useDictionaryPageCache<Phrase>();
 
   const fetchKey = useMemo(
-    () => JSON.stringify({ section: "phrases", debouncedQuery, category, page }),
+    () => listPageKey("phrases", debouncedQuery, category, page),
     [debouncedQuery, category, page],
   );
 

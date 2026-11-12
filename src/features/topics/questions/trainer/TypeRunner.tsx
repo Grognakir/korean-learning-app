@@ -142,6 +142,7 @@ export function TypeRunner({
           placeholder="한국어…"
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => {
+            if (e.nativeEvent.isComposing || e.keyCode === 229) return;
             if (e.key === "Enter") check();
           }}
         />

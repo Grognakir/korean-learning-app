@@ -1,5 +1,6 @@
 "use client";
 
+import { MAX_DRAFT_INPUT_LENGTH } from "@/features/dictionary/draftLimits";
 import { useState } from "react";
 import { Modal } from "@/components/ui/Modal";
 import { Button } from "@/components/ui/Button";
@@ -93,10 +94,12 @@ export function AddWordModal({
           <div className={styles.aiRow}>
             <input
               className={styles.aiInput}
+              maxLength={MAX_DRAFT_INPUT_LENGTH}
               placeholder="Слово на корейском или по-русски"
               value={aiInput}
               onChange={(e) => setAiInput(e.target.value)}
               onKeyDown={(e) => {
+                if (e.nativeEvent.isComposing || e.keyCode === 229) return;
                 if (e.key === "Enter") {
                   e.preventDefault();
                   void handleGenerate();

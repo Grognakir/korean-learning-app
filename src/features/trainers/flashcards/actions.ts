@@ -4,9 +4,12 @@ import { cookies } from "next/headers";
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
-import { applySm2, type Sm2Rating } from "./sm2";
+import { applySrs, type SrsRating } from "./srs";
 
-export async function recordReview(wordId: string, rating: Sm2Rating) {
+const MAX_WRITE_ATTEMPTS = 3;
+const UNIQUE_VIOLATION = "23505";
+
+export async function recordReview(wordId: string, rating: SrsRating) {
   const parsed = z.object({
     wordId: z.uuid(),
     rating: z.enum(["again", "hard", "good", "easy"]),
@@ -19,44 +22,56 @@ export async function recordReview(wordId: string, rating: Sm2Rating) {
   } = await supabase.auth.getUser();
   if (!user) return { error: "Нужно войти" };
 
-  const { data: existing, error: readError } = await supabase
-    .from("word_progress")
-    .select("ease_factor, interval_days, repetitions")
-    .eq("user_id", user.id)
-    .eq("word_id", wordId)
-    .maybeSingle();
+  // Условная запись по version: параллельный ответ по тому же слову не
+  // затирается, а перечитывает состояние и считает от него.
+  for (let attempt = 0; attempt < MAX_WRITE_ATTEMPTS; attempt++) {
+    const { data: existing, error: readError } = await supabase
+      .from("word_progress")
+      .select("interval_days, repetitions, version")
+      .eq("user_id", user.id)
+      .eq("word_id", wordId)
+      .maybeSingle();
 
-  if (readError) return { error: readError.message };
+    if (readError) return { error: readError.message };
 
-  const now = new Date();
-  const result = applySm2(
-    existing
-      ? {
-          easeFactor: existing.ease_factor,
-          intervalDays: existing.interval_days,
-          repetitions: existing.repetitions,
-        }
-      : { easeFactor: 2.5, intervalDays: 0, repetitions: 0 },
-    rating,
-    now,
-  );
-
-  const { error } = await supabase.from("word_progress").upsert(
-    {
-      user_id: user.id,
-      word_id: wordId,
-      ease_factor: result.easeFactor,
+    const now = new Date();
+    const result = applySrs(
+      existing
+        ? { intervalDays: existing.interval_days, repetitions: existing.repetitions }
+        : { intervalDays: 0, repetitions: 0 },
+      rating,
+      now,
+    );
+    const values = {
       interval_days: result.intervalDays,
       repetitions: result.repetitions,
       due_at: result.dueAt.toISOString(),
       last_reviewed_at: now.toISOString(),
       last_rating: rating,
-    },
-    { onConflict: "user_id,word_id" },
-  );
-  if (error) return { error: error.message };
-  revalidatePath("/");
-  return { ok: true };
+      updated_at: now.toISOString(),
+    };
+
+    if (existing) {
+      const { data: updated, error } = await supabase
+        .from("word_progress")
+        .update({ ...values, version: existing.version + 1 })
+        .eq("user_id", user.id)
+        .eq("word_id", wordId)
+        .eq("version", existing.version)
+        .select("id");
+      if (error) return { error: error.message };
+      if (updated && updated.length > 0) return { ok: true };
+      continue;
+    }
+
+    const { error } = await supabase
+      .from("word_progress")
+      .insert({ user_id: user.id, word_id: wordId, ...values });
+    if (!error) return { ok: true };
+    if (error.code !== UNIQUE_VIOLATION) return { error: error.message };
+  }
+
+  return { error: "Не удалось сохранить ответ, повторите" };
 }
 
 export async function updateNewCardsLimit(limit: number) {

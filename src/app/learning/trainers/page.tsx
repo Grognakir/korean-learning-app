@@ -20,8 +20,10 @@ export default async function TrainersPage() {
           <Link href="/learning/trainers/flashcards" className={styles.modeCard}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/learning/trainers/flashcards.png"
+              src="/images/learning/trainers/flashcards.webp"
               alt=""
+              width={800}
+              height={450}
               className={styles.modeCardImage}
             />
             <div className={styles.modeCardBody}>
@@ -34,19 +36,21 @@ export default async function TrainersPage() {
           </Link>
           <Link href="/learning/trainers/pairs" className={styles.modeCard}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/learning/trainers/pairs.png" alt="" className={styles.modeCardImage} />
+            <img src="/images/learning/trainers/pairs.webp" alt="" loading="lazy" width={800} height={450} className={styles.modeCardImage} />
             <div className={styles.modeCardBody}><span className={styles.modeCardTitle}>Найди пары</span><p className={styles.modeCardDescription}>Соединяйте слова с переводами: 3 раунда по 4 пары.</p></div>
           </Link>
           <Link href="/learning/trainers/spelling" className={styles.modeCard}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/learning/trainers/spelling.png" alt="" className={styles.modeCardImage} />
+            <img src="/images/learning/trainers/spelling.webp" alt="" loading="lazy" width={800} height={450} className={styles.modeCardImage} />
             <div className={styles.modeCardBody}><span className={styles.modeCardTitle}>Собери слово</span><p className={styles.modeCardDescription}>Составляйте слова из букв или слогов. Подсказки и повтор сложных слов.</p></div>
           </Link>
           <Link href="/learning/trainers/grammar" className={styles.modeCard}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/learning/trainers/grammar.png"
+              src="/images/learning/trainers/grammar.webp"
               alt=""
+              loading="lazy" width={800}
+              height={450}
               className={styles.modeCardImage}
             />
             <div className={styles.modeCardBody}>
@@ -59,8 +63,10 @@ export default async function TrainersPage() {
           <Link href="/learning/trainers/topics" className={styles.modeCard}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/learning/trainers/topics.png"
+              src="/images/learning/trainers/topics.webp"
               alt=""
+              loading="lazy" width={800}
+              height={450}
               className={styles.modeCardImage}
             />
             <div className={styles.modeCardBody}>

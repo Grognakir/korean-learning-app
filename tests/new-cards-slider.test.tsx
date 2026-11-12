@@ -22,3 +22,9 @@ it("показывает ноль и отключает регулятор, ко
   expect(slider.getAttribute("aria-valuenow")).toBe("0");
   expect(slider.getAttribute("aria-disabled")).toBe("true");
 });
+
+it("в парном режиме называет лимит парами", () => {
+  render(<NewCardsSlider initialValue={10} unit="pairs" />);
+  expect(screen.getByRole("slider", { name: "Новых пар за сессию" })).toBeDefined();
+  expect(screen.getByText("Новых пар за сессию")).toBeDefined();
+});

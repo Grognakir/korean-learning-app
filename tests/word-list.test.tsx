@@ -14,20 +14,16 @@ afterEach(() => {
 
 it("ищет переводы только с двух символов", async () => {
   const tables: string[] = [];
-  const translationSelects: string[] = [];
+  const rpcCalls: unknown[][] = [];
   const words: Word[] = [{
     id: "1", headword: "학교", reading: null,
     part_of_speech: null, owner_user_id: null, translations: [{ text: "школа" }],
     word_categories: [], word_examples: [], word_notes: [], word_forms: [],
   }];
-  createClient.mockImplementation(() => ({
-    from: (table: string) => {
+  const makeQuery = (table: string) => {
       tables.push(table);
       const query = {
-        select: (cols?: string) => {
-          if (table === "translations" && cols) translationSelects.push(cols);
-          return query;
-        },
+        select: () => query,
         eq: () => query,
         ilike: () => query,
         order: () => query,
@@ -37,13 +33,16 @@ it("ищет переводы только с двух символов", async 
         limit: () => query,
         then: (resolve: (value: unknown) => void) =>
           Promise.resolve({
-            data: table === "translations" ? [] : words,
-            count: table === "translations" ? 0 : words.length,
+            data: words,
+            count: words.length,
             error: null,
           }).then(resolve),
       };
       return query;
-    },
+  };
+  createClient.mockImplementation(() => ({
+    from: makeQuery,
+    rpc: (...args: unknown[]) => { rpcCalls.push(args); return makeQuery("rpc"); },
   }));
 
   render(
@@ -62,17 +61,18 @@ it("ищет переводы только с двух символов", async 
   vi.useRealTimers();
   await waitFor(() => expect(tables.length).toBeGreaterThan(0));
   expect(tables).not.toContain("translations");
+  expect(rpcCalls).toEqual([]);
 
   tables.length = 0;
-  translationSelects.length = 0;
   vi.useFakeTimers();
   fireEvent.change(screen.getByRole("searchbox"), { target: { value: "на" } });
   await act(async () => {
     vi.advanceTimersByTime(300);
   });
   vi.useRealTimers();
-  await waitFor(() => expect(tables).toContain("translations"));
-  expect(translationSelects).toContain("word_id");
+  await waitFor(() => expect(rpcCalls.length).toBeGreaterThan(0));
+  expect(rpcCalls[0]).toEqual(["search_words", { q: "на" }, { count: "exact", get: true }]);
+  expect(tables).not.toContain("translations");
 });
 
 it("возвращается на доступную страницу после удаления её последнего слова", async () => {

@@ -6,10 +6,12 @@ export function FlashcardsHeader({
   active,
   newCardsLimit,
   availableNewCount,
+  unit,
 }: {
   active: FlashcardsMode;
   newCardsLimit: number;
   availableNewCount?: number;
+  unit?: "cards" | "pairs";
 }) {
   return (
     <div className={styles.root}>
@@ -18,6 +20,7 @@ export function FlashcardsHeader({
         key={`${newCardsLimit}:${availableNewCount ?? "default"}`}
         initialValue={newCardsLimit}
         availableCount={availableNewCount}
+        unit={unit}
       />
     </div>
   );

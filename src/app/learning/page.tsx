@@ -10,13 +10,13 @@ const MODES = [
     href: "/learning/programs",
     title: "Программы",
     description: "Учебники и уроки по программе обучения — шаг за шагом.",
-    image: "/images/learning/programs.png",
+    image: "/images/learning/programs.webp",
   },
   {
     href: "/learning/trainers",
     title: "Тренажёры",
     description: "Отработка и повторение — тренировки без привязки к уроку.",
-    image: "/images/learning/trainers.png",
+    image: "/images/learning/trainers.webp",
   },
 ];
 
@@ -32,7 +32,7 @@ export default async function LearningPage() {
           {MODES.map((mode) => (
             <Link key={mode.href} href={mode.href === "/learning/programs" && username === null ? "/login" : mode.href} className={styles.modeCard}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={mode.image} alt="" className={styles.modeCardImage} />
+              <img src={mode.image} alt="" width={800} height={450} className={styles.modeCardImage} />
               <div className={styles.modeCardBody}>
                 <span className={`${styles.modeCardTitle} kr`}>{mode.title}</span>
                 <p className={styles.modeCardDescription}>{mode.description}{mode.href === "/learning/programs" && username === null ? " Доступно после входа." : ""}</p>

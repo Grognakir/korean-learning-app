@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { answerText, questionText, type CardMode } from "./answers";
 import { entryKind, groupNames, type DictionaryData } from "./entries";
-import { answerCard, minimumWords, nextCard, repeatCards, scopedWords, startCards, stopCards, type CardScope, type CardSession } from "./session";
+import { answerCard, minimumWords, nextCard, playableWords, repeatCards, scopedWords, startCards, stopCards, type CardScope, type CardSession } from "./session";
 import { OsSelect } from "../controls/OsSelect";
 import styles from "./Dictionary.module.css";
 
@@ -26,7 +26,7 @@ export function Flashcards({ data, onAnswer }: { data: DictionaryData; onAnswer:
     onAnswer(before.words[before.position].id, after.right!);
   };
   const words = scopedWords(data, scope).filter((word) => (!group || word.groups?.includes(group)) && (kind === "all" || entryKind(word) === kind));
-  const enough = words.length >= minimumWords(mode);
+  const enough = words.length >= minimumWords(mode) && playableWords(words, mode).length > 0;
   if (!session) return <div className={styles.training}>
     <div className={styles.modes} role="group" aria-label="Режим карточек">{MODES.map((item) => <button key={item.id} type="button" aria-pressed={mode === item.id} onClick={() => setMode(item.id)}><b className="kr">{item.ko}</b><small>{item.ru}</small></button>)}</div>
     <div className={styles.actions} role="group" aria-label="Охват слов"><button type="button" aria-pressed={scope === "all"} onClick={() => setScope("all")}>전체 · Все слова</button><button type="button" aria-pressed={scope === "hard"} onClick={() => setScope("hard")}>어려운 단어 · Только сложные</button></div>

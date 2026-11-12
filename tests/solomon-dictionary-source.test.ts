@@ -1,8 +1,8 @@
 import { beforeEach, expect, it, vi } from "vitest";
 import { loadLibrary } from "@/features/solomonOs/dictionary/loadLibrary";
 
-const { from, requests, rows } = vi.hoisted(() => ({ from: vi.fn(), requests: [] as { table: string; calls: [string, unknown[]][] }[], rows: {} as Record<string, { data: unknown[]; count?: number; error?: { message: string } }> }));
-vi.mock("@/lib/supabase/client", () => ({ createClient: () => ({ from }) }));
+const { from, rpc, requests, rows } = vi.hoisted(() => ({ from: vi.fn(), rpc: vi.fn(), requests: [] as { table: string; calls: [string, unknown[]][] }[], rows: {} as Record<string, { data: unknown[]; count?: number; error?: { message: string } }> }));
+vi.mock("@/lib/supabase/client", () => ({ createClient: () => ({ from, rpc }) }));
 beforeEach(() => {
   requests.length = 0;
   Object.keys(rows).forEach((key) => delete rows[key]);
@@ -11,6 +11,13 @@ beforeEach(() => {
     const query: Record<string, unknown> = {};
     for (const method of ["select", "is", "order", "range", "eq", "ilike", "or", "limit"]) query[method] = (...args: unknown[]) => { request.calls.push([method, args]); return query; };
     query.then = (resolve: (value: unknown) => unknown, reject: (error: unknown) => unknown) => Promise.resolve(rows[table] ?? { data: [], count: 0 }).then(resolve, reject);
+    return query;
+  });
+  rpc.mockImplementation((fn: string, args: unknown, options: unknown) => {
+    const request = { table: `rpc:${fn}`, calls: [["rpc", [fn, args, options]]] as [string, unknown[]][] }; requests.push(request);
+    const query: Record<string, unknown> = {};
+    for (const method of ["select", "is", "order", "range", "eq"]) query[method] = (...a: unknown[]) => { request.calls.push([method, a]); return query; };
+    query.then = (resolve: (value: unknown) => unknown, reject: (error: unknown) => unknown) => Promise.resolve(rows.words ?? { data: [], count: 0 }).then(resolve, reject);
     return query;
   });
 });
@@ -30,14 +37,14 @@ it("читает конкретный источник по id, не ищет п
   expect(result.records[0].sections[0]).toEqual({ title: "Сноска", blocks: [{ type: "text", text: "Текст" }] });
   expect(requests).toHaveLength(1);
 });
-it("ищет слова по корейскому и переводу с экранированием, обрабатывает ошибки", async () => {
-  rows.translations = { data: [{ word_id: "00000000-0000-0000-0000-000000000001" }] };
+it("ищет слова по корейскому и переводу функцией search_words, обрабатывает ошибки", async () => {
   await loadLibrary("word", "а,(б)%", 1);
-  expect(requests.map((r) => r.table)).toEqual(["translations", "words"]);
-  const filter = requests[1].calls.find(([method]) => method === "or")?.[1][0] as string;
-  expect(filter).toContain('headword.ilike."');
-  expect(filter).toContain('id.in.(00000000-0000-0000-0000-000000000001)');
-  expect(filter).toContain('\\\\%');
+  expect(requests.map((r) => r.table)).toEqual(["rpc:search_words"]);
+  expect(requests[0].calls[0]).toEqual(["rpc", ["search_words", { q: "а,(б)%" }, { count: "exact", get: true }]]);
+  expect(requests[0].calls).toContainEqual(["is", ["owner_user_id", null]]);
+  await loadLibrary("word", "а", 1);
+  expect(requests[1].table).toBe("words");
+  expect(requests[1].calls).toContainEqual(["ilike", ["headword", "%а%"]]);
   rows.phrases = { data: [], error: { message: "offline" } };
   await expect(loadLibrary("phrase", "привет", 1)).rejects.toMatchObject({ message: "offline" });
 });

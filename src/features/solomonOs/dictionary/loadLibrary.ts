@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/client";
 import { escapeLike, quoteForOrFilter } from "@/lib/supabase/escapeLike";
+import { wordsSource } from "@/features/dictionary/wordSearch";
 import { GRAMMAR_COLUMNS } from "@/features/dictionary/grammarColumns";
 import type { GrammarPoint, Phrase, Word } from "@/features/dictionary/types";
 import { fromGrammar, fromPhrase, fromWord, type EntryKind, type LibraryRecord } from "./reference";
@@ -10,17 +11,11 @@ export async function loadLibrary(kind: EntryKind, search: string, page: number,
   const pattern = `%${escapeLike(search.trim())}%`;
   const range = [(page - 1) * LIBRARY_PAGE_SIZE, page * LIBRARY_PAGE_SIZE - 1] as const;
   if (kind === "word") {
-    let translatedIds: string[] = [];
-    if (!sourceId && !exact && search.trim().length >= 2) {
-      const result = await client.from("translations").select("word_id").ilike("text", pattern).limit(500);
-      if (result.error) throw result.error;
-      translatedIds = [...new Set((result.data ?? []).map((row) => row.word_id as string))];
-    }
-    let request = client.from("words").select("id, headword, reading, part_of_speech, owner_user_id, translations(text), word_categories(categories(id, name)), word_examples(kr, ru), word_notes(text), word_forms(label, value)", { count: "exact" })
+    const select = "id, headword, reading, part_of_speech, owner_user_id, translations(text), word_categories(categories(id, name)), word_examples(kr, ru), word_notes(text), word_forms(label, value)";
+    let request = (sourceId || exact ? client.from("words").select(select, { count: "exact" }) : wordsSource(client, select, search))
       .is("owner_user_id", null).order("headword").order("id").range(...range);
     if (sourceId) request = request.eq("id", sourceId);
     else if (exact) request = request.eq("headword", search.trim().normalize("NFC"));
-    else if (search.trim()) request = translatedIds.length ? request.or(`headword.ilike.${quoteForOrFilter(pattern)},id.in.(${translatedIds.join(",")})`) : request.ilike("headword", pattern);
     const result = await request;
     if (result.error) throw result.error;
     return { records: (result.data as unknown as Word[] ?? []).map(fromWord), count: result.count ?? 0 };

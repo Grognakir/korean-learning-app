@@ -22,17 +22,21 @@ ${categories.map((c) => `- ${c}`).join("\n")}
 В examples — минимум один пример уровня TOPIK I.`;
 }
 
-async function callGemini(system: string, user: string): Promise<string> {
+type Call = (system: string, user: string, signal: AbortSignal) => Promise<string>;
+
+async function callGemini(system: string, user: string, signal: AbortSignal): Promise<string> {
   const res = await fetch(
     "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent",
     {
       method: "POST",
+      signal,
       headers: {
         "Content-Type": "application/json",
         "X-goog-api-key": process.env.GEMINI_API_KEY!,
       },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: `${system}\n\n${user}` }] }],
+        systemInstruction: { parts: [{ text: system }] },
+        contents: [{ parts: [{ text: user }] }],
       }),
     },
   );
@@ -41,9 +45,10 @@ async function callGemini(system: string, user: string): Promise<string> {
   return json.candidates[0].content.parts[0].text;
 }
 
-async function callGroq(system: string, user: string): Promise<string> {
+async function callGroq(system: string, user: string, signal: AbortSignal): Promise<string> {
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
+    signal,
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
@@ -62,9 +67,10 @@ async function callGroq(system: string, user: string): Promise<string> {
   return json.choices[0].message.content;
 }
 
-async function callOpenRouter(system: string, user: string): Promise<string> {
+async function callOpenRouter(system: string, user: string, signal: AbortSignal): Promise<string> {
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
+    signal,
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
@@ -82,7 +88,7 @@ async function callOpenRouter(system: string, user: string): Promise<string> {
   return json.choices[0].message.content;
 }
 
-const PROVIDERS: { key: string; call: typeof callGemini }[] = [
+const PROVIDERS: { key: string; call: Call }[] = [
   { key: "GEMINI_API_KEY", call: callGemini },
   { key: "GROQ_API_KEY", call: callGroq },
   { key: "OPENROUTER_API_KEY", call: callOpenRouter },
@@ -119,6 +125,10 @@ function parseDraft(text: string, input: string): WordDraft {
   return draft;
 }
 
+// Общий срок на всё действие: провайдеры опрашиваются по очереди, и три
+// ответа по 10 секунд держали бы кнопку полминуты.
+export const DRAFT_DEADLINE_MS = 15_000;
+
 export async function generateWordDraft(
   input: string,
   categories: string[],
@@ -131,14 +141,16 @@ export async function generateWordDraft(
   }
   const system = buildSystemPrompt(categories);
   const user = `Слово или значение: ${input}`;
+  const signal = AbortSignal.timeout(DRAFT_DEADLINE_MS);
   let lastError: Error | null = null;
   for (const provider of available) {
+    if (signal.aborted) break;
     try {
-      const text = await provider.call(system, user);
+      const text = await provider.call(system, user, signal);
       return parseDraft(text, input);
     } catch (e) {
       lastError = e as Error;
     }
   }
-  throw new Error(`Все провайдеры недоступны: ${lastError?.message}`);
+  throw new Error(`Все провайдеры недоступны: ${lastError?.message ?? "истёк общий срок"}`);
 }

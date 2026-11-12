@@ -27,10 +27,13 @@ function applySnap(n: number, min: number, max: number) {
 export function NewCardsSlider({
   initialValue,
   availableCount,
+  unit = "cards",
 }: {
   initialValue: number;
   availableCount?: number;
+  unit?: "cards" | "pairs";
 }) {
+  const label = unit === "pairs" ? "Новых пар за сессию" : "Новых карт за сессию";
   const max = availableCount === undefined
     ? DEFAULT_MAX
     : Math.min(DEFAULT_MAX, Math.max(0, availableCount));
@@ -105,7 +108,7 @@ export function NewCardsSlider({
   return (
     <div className={styles.root}>
       <div className={styles.headerRow}>
-        <span className={styles.label}>Новых карт за сессию</span>
+        <span className={styles.label}>{label}</span>
         <span className={styles.value}>{value}</span>
       </div>
       {availableCount !== undefined && (
@@ -124,7 +127,7 @@ export function NewCardsSlider({
         aria-valuemax={max}
         aria-valuenow={value}
         aria-disabled={max === 0}
-        aria-label="Новых карт за сессию"
+        aria-label={label}
         onKeyDown={handleKeyDown}
       >
         <div className={styles.fill} style={{ width: `${percent}%` }} />

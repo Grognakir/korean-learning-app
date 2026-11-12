@@ -7,8 +7,10 @@ import {
   priorityOrder,
   recordRating,
   useVocabProgress,
+  VOCAB_PROGRESS_KEY,
   type Rating,
 } from "@/features/learning/vocabProgress";
+import { useUserStorageKey } from "@/lib/StorageUser";
 import styles from "./blocks.module.css";
 
 type Mode = "kr-ru" | "ru-kr" | "type";
@@ -56,10 +58,10 @@ export function queueAfterRating(
 
 // Новая тренировка начинается с тех слов, которые раньше не знал или не
 // помнил, затем новые, затем выученные (когда подошёл срок повторения).
-function startOrder(items: { ko: string }[]): number[] {
+function startOrder(items: { ko: string }[], storageKey: string): number[] {
   return priorityOrder(
     items.map((item) => item.ko),
-    loadProgress(),
+    loadProgress(storageKey),
   );
 }
 
@@ -209,14 +211,15 @@ function backSize(text: string): string | undefined {
 
 export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
   const total = items.length;
+  const storageKey = useUserStorageKey(VOCAB_PROGRESS_KEY);
   const [mode, setMode] = useState<Mode>("kr-ru");
-  const [order, setOrder] = useState(() => startOrder(items));
+  const [order, setOrder] = useState(() => startOrder(items, storageKey));
   const [index, setIndex] = useState(0);
   const [learned, setLearned] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [answer, setAnswer] = useState("");
   const [correct, setCorrect] = useState<boolean | null>(null);
-  const progress = useVocabProgress();
+  const progress = useVocabProgress(storageKey);
   const queueLength = order.length;
   const item = items[order[index]];
 
@@ -227,7 +230,7 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
   }
 
   function restart() {
-    setOrder(startOrder(items));
+    setOrder(startOrder(items, storageKey));
     setIndex(0);
     setLearned(0);
     clearAttempt();
@@ -242,7 +245,7 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
   function rate(rating: Rating) {
     const { reinsertAfter } = RATINGS.find((r) => r.rating === rating)!;
     const next = queueAfterRating(order, index, reinsertAfter);
-    recordRating(item.ko, rating);
+    recordRating(item.ko, rating, undefined, storageKey);
     if (reinsertAfter === 0) setLearned((value) => value + 1);
     setOrder(next);
     setIndex(next.length === 0 ? 0 : Math.min(index, next.length - 1));
@@ -388,6 +391,7 @@ export function VocabTrainer({ items }: { items: VocabListBlock["items"] }) {
                     setCorrect(null);
                   }}
                   onKeyDown={(e) => {
+                    if (e.nativeEvent.isComposing || e.keyCode === 229) return;
                     if (e.key !== "Enter") return;
                     if (correct === null) check();
                     else go(1);

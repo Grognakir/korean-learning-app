@@ -18,13 +18,25 @@ export async function resolveBlockVocab(supabase: Supabase, blocks: Block[]): Pr
   const headwords = Array.from(collectVocabKeys(blocks));
   if (headwords.length === 0) return blocks;
 
+  const chunks: string[][] = [];
+  for (let i = 0; i < headwords.length; i += CHUNK) chunks.push(headwords.slice(i, i + CHUNK));
+
+  // Чанки запрашиваются параллельно. Ошибка запроса не должна тихо
+  // возвращать переводы из JSON урока: пользователь увидел бы устаревший
+  // перевод вместо словарного, поэтому ошибка пробрасывается.
+  const results = await Promise.all(
+    chunks.map((chunk) =>
+      supabase
+        .from("words")
+        .select("headword, translations(external_id, text)")
+        .is("owner_user_id", null)
+        .in("headword", chunk),
+    ),
+  );
+
   const dictionary: DictionaryTranslations = new Map();
-  for (let i = 0; i < headwords.length; i += CHUNK) {
-    const { data } = await supabase
-      .from("words")
-      .select("headword, translations(external_id, text)")
-      .is("owner_user_id", null)
-      .in("headword", headwords.slice(i, i + CHUNK));
+  for (const { data, error } of results) {
+    if (error) throw new Error(`words: ${error.message}`);
     for (const row of data ?? []) {
       const text = joinDictionaryTranslations(
         (row.translations ?? []) as { external_id?: string | null; text: string }[],

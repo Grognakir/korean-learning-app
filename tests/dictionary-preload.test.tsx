@@ -7,7 +7,8 @@ import type { PageResult } from "@/features/dictionary/pageCache";
 
 const { from, router } = vi.hoisted(() => ({ from: vi.fn(), router: { prefetch: vi.fn() } }));
 vi.mock("@/lib/supabase/client", () => ({ createClient: () => ({ from }) }));
-vi.mock("next/navigation", () => ({ useRouter: () => router }));
+const nav = vi.hoisted(() => ({ pathname: "/learning" }));
+vi.mock("next/navigation", () => ({ useRouter: () => router, usePathname: () => nav.pathname }));
 
 const requests: { table: string; resolve: (result: PageResult) => void; reject: (error: Error) => void }[] = [];
 const wordsKey = JSON.stringify({ debouncedQuery: "", sortDir: "asc", pageSize: 10, page: 1, partOfSpeech: "", categoryId: "", ownership: "all", userId: null });
@@ -20,6 +21,7 @@ function Section({ cacheKey }: { cacheKey: string }) {
 }
 
 beforeEach(() => {
+  nav.pathname = "/learning";
   requests.length = 0;
   from.mockReset();
   router.prefetch.mockClear();
@@ -74,4 +76,26 @@ it("после ухода не запускает следующие разде�
   await complete(0, "word");
   expect(from).toHaveBeenCalledTimes(1);
   expect(router.prefetch).not.toHaveBeenCalled();
+});
+
+it("не запускается на входе и внутри Solomon OS", async () => {
+  for (const pathname of ["/login", "/register", "/os", "/os/map"]) {
+    nav.pathname = pathname;
+    const { unmount } = render(<DictionaryCacheProvider><DictionaryPreload userId={null} /></DictionaryCacheProvider>);
+    await act(async () => { await new Promise((r) => setTimeout(r, 300)); });
+    unmount();
+  }
+  expect(from).not.toHaveBeenCalled();
+});
+
+it("откладывает запуск до простоя браузера и отменяет его при уходе", async () => {
+  const idle: (() => void)[] = [];
+  const cancel = vi.fn();
+  vi.stubGlobal("requestIdleCallback", (task: () => void) => { idle.push(task); return idle.length; });
+  vi.stubGlobal("cancelIdleCallback", cancel);
+  const { unmount } = render(<DictionaryCacheProvider><DictionaryPreload userId={null} /></DictionaryCacheProvider>);
+  expect(from).not.toHaveBeenCalled();
+  unmount();
+  expect(cancel).toHaveBeenCalledWith(1);
+  vi.unstubAllGlobals();
 });
