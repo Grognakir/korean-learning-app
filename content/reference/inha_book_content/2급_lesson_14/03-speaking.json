@@ -37,7 +37,69 @@
               "ko": "관리실",
               "translation_ru": "управляющий офис (в доме/на предприятии)"
             }
-          ]
+          ],
+          "extra_words": {
+            "text_vocab": [
+              {
+                "ko": "대회",
+                "translation_ru": "конкурс, соревнование"
+              },
+              {
+                "ko": "나가다",
+                "translation_ru": "выходить, выступать, участвовать"
+              },
+              {
+                "ko": "빌리다",
+                "translation_ru": "взять в займы, одолжить, арендовать"
+              },
+              {
+                "ko": "정하다",
+                "translation_ru": "решать, определять, назначать"
+              },
+              {
+                "ko": "각",
+                "translation_ru": "каждый"
+              },
+              {
+                "ko": "지난번",
+                "translation_ru": "в прошлый раз"
+              },
+              {
+                "ko": "냄새",
+                "translation_ru": "запах"
+              },
+              {
+                "ko": "계속",
+                "translation_ru": "продолжать, постоянно, всё время"
+              },
+              {
+                "ko": "나다",
+                "translation_ru": "появляться, возникать, исходить"
+              },
+              {
+                "ko": "불",
+                "translation_ru": "огонь, свет"
+              },
+              {
+                "ko": "잊다",
+                "translation_ru": "забывать"
+              },
+              {
+                "ko": "가지다",
+                "translation_ru": "иметь, держать"
+              },
+              {
+                "ko": "반납하다",
+                "translation_ru": "возвращать, сдавать обратно"
+              }
+            ],
+            "exercise_vocab": [
+              {
+                "ko": "필요하다",
+                "translation_ru": "быть нужным, быть необходимым"
+              }
+            ]
+          }
         },
         {
           "type": "text",
@@ -121,6 +183,22 @@
             },
             {
               "text": "2) 그것을 하기 위해서 필요한 규칙이 무엇입니까?"
+            }
+          ]
+        },
+        {
+          "id": "hint-lesson-14-speaking",
+          "toc_section": "말하기",
+          "type": "hint",
+          "hint_kind": "expression",
+          "related_text_ref": "text-speaking-dialogue",
+          "label_ko": "표현",
+          "label_ru": "Выражения",
+          "items": [
+            {
+              "kind": "phrase",
+              "text": "냄새가 나다",
+              "translation_ru": "пахнуть, ощущается/появляется запах"
             }
           ]
         }
