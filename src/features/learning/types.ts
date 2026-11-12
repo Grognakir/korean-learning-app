@@ -271,6 +271,33 @@ export type WritingExerciseBlock = ContentBlockBase & {
   manuscript_prompt_ru?: string;
 };
 
+/**
+ * Раздел 쓰기 — короткий текст (짧은 글, 140–200 знаков) по данным графика или
+ * таблицы: сравнение/описание изменения. Задание из книги не берётся — это
+ * практика с занятий; образцов нет, студент пишет сам в 원고지.
+ */
+export type ShortWritingTask = {
+  /** "다음을 보고 '…'에 대해서 비교하는 글을 140~200자로 쓰십시오." */
+  prompt: string;
+  prompt_ru?: string;
+  /** Данные графика/диаграммы/таблицы; rows[i][0] — подпись строки. */
+  table: { head: string[]; rows: string[][] };
+  /** Список причин («증가한 이유»), если в задании он есть. */
+  reasons?: { label: string; items: string[] };
+};
+
+export type ShortWritingExerciseBlock = ContentBlockBase & {
+  type: "short_writing_exercise";
+  title: string;
+  title_ru?: string;
+  /** Слова для текста; перевод подтягивается из словаря (resolveBlockVocab). */
+  expressions?: { ko: string; translation_ru: string }[];
+  /** Сворачиваемая подсказка под словами: строки русского текста с корейскими
+   * словами из expressions (подсвечиваются, перевод при наведении). Не шаблон. */
+  hints?: string[];
+  tasks: ShortWritingTask[];
+};
+
 /** Раздел 발음 — правило чтения (например 구개음화) и слова-примеры. */
 export type PronunciationBlock = ContentBlockBase & {
   type: "pronunciation";
@@ -349,6 +376,7 @@ export type Block =
   | GrammarExerciseBlock
   | ComprehensionExerciseBlock
   | WritingExerciseBlock
+  | ShortWritingExerciseBlock
   | PronunciationBlock;
 
 export type PageContent = {

@@ -16,6 +16,7 @@ import { GrammarPoint } from "./GrammarPoint";
 import { GrammarExercise } from "./GrammarExercise";
 import { ComprehensionExercise } from "./ComprehensionExercise";
 import { WritingExercise } from "./WritingExercise";
+import { ShortWritingExercise } from "./ShortWritingExercise";
 import { Pronunciation } from "./Pronunciation";
 
 function textIdsOnPage(blocks: Block[]): Set<string> {
@@ -303,6 +304,8 @@ export function PageBlocks({
             );
           case "writing_exercise":
             return <WritingExercise key={i} id={block.id} block={block} textbookSlug={textbookSlug} lessonNumber={lessonNumber} />;
+          case "short_writing_exercise":
+            return <ShortWritingExercise key={i} id={block.id} block={block} textbookSlug={textbookSlug} lessonNumber={lessonNumber} />;
           case "pronunciation":
             return <Pronunciation key={i} id={block.id} block={block} />;
           default:

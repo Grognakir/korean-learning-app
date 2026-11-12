@@ -283,7 +283,7 @@
 }
 
 .lineBody .labelInfo {
-  margin-left: 1px;
+  margin-left: 2px;
   vertical-align: -1px;
 }
 
@@ -1478,7 +1478,10 @@
 
 /* Значок перевода внутри абзаца задания: vertical-align: middle ставит его
    ниже середины корейской строки. */
-.prompt .labelInfo {
+.prompt .labelInfo,
+.writingStep .labelInfo,
+.shortWritingHints .labelInfo {
+  margin-left: 2px;
   vertical-align: -1px;
 }
 
@@ -1756,6 +1759,53 @@
   color: var(--ink-soft);
   font-variant-numeric: tabular-nums;
   pointer-events: none;
+}
+
+/* short_writing_exercise */
+.shortWritingTask {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+/* Без overflow-x: подсказки слов внутри ячеек выходят за таблицу и иначе
+   порождают горизонтальную прокрутку; ячейки переносят текст сами. */
+.shortWritingTableWrap {
+  overflow: visible;
+}
+
+.comprehensionTable.shortWritingTable th,
+.comprehensionTable.shortWritingTable td {
+  white-space: normal;
+  min-width: 0;
+  padding: 6px 8px;
+  overflow-wrap: anywhere;
+}
+
+.shortWritingHints {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: var(--kr-font-sm);
+}
+
+.comprehensionTable.shortWritingTable td:first-child {
+  font-weight: 600;
+  background: var(--paper-2);
+}
+
+.shortWritingReasons {
+  font-size: var(--kr-font-sm);
+}
+
+.shortWritingReasons ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
 }
 
 @media (--to-compact) {

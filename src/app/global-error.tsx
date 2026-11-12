@@ -16,10 +16,10 @@ import { useEffect } from "react";
 // --radius-control из src/styles/tokens.css), а не var(...).
 export default function GlobalError({
   error,
-  reset,
+  retry,
 }: {
   error: Error & { digest?: string };
-  reset: () => void;
+  retry: () => void;
 }) {
   useEffect(() => {
     console.error(error);
@@ -49,7 +49,7 @@ export default function GlobalError({
           </p>
           <button
             type="button"
-            onClick={() => reset()}
+            onClick={() => retry()}
             style={{
               border: "none",
               borderRadius: 12,
