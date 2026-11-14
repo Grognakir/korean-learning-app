@@ -61,6 +61,9 @@
 
 .modeCardImage {
   width: 100%;
+  /* Атрибуты width/height у <img> заданы для резервирования места, но
+     без height: auto они растягивали картинку до 450px. */
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
